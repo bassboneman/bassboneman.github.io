@@ -1,0 +1,10 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" 
+  data-target="{% if include.error %}
+    #modal-signup-error
+  {% else %}
+    #modal-signup
+  {% endif %}
+  ">
+  Signup {% if include.error %}with Error{% endif %}
+</button>

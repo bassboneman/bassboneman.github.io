@@ -1,0 +1,66 @@
+<section class="detail-wrap detail-sidebar">
+  {% include _atoms/text/detail-heading.html detailLabel='Order Summary' %}
+  <div class="detail">
+    <div class="row">
+      <div class="col-xs-2">
+        {% include _atoms/images/product-thumbs.html %}
+      </div>
+      <div class="col-xs-7">
+        {% include _molecules/blocks/dl-wrap.html %}
+      </div>
+      <div class="col-xs-3 text-right">
+        <span class="detail-price">$129.99</span>
+        <p><a href="">Edit</a> | <a href="">Remove</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="detail detail-highlight">
+    <div class="row">
+      <div class="col-xs-9 col-sm-8">
+        <strong class="text-uppercase">Item Subtotal</strong>
+      </div>
+      <div class="col-xs-3 col-sm-4 text-right">
+        <strong class="text-uppercase">$129.99</strong>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-9 col-sm-8">
+        Shipping
+      </div>
+      <div class="col-xs-3 col-sm-4 text-right">
+        $5.95
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-9 col-sm-8">
+        Sales Tax
+      </div>
+      <div class="col-xs-3 col-sm-4 text-right">
+        $8.71
+      </div>
+    </div>
+  </div>
+  <div class="detail">
+    <div class="row">
+      <div class="col-xs-9 col-sm-8">
+        <strong class="text-uppercase">Estimated Total (Before Tax)</strong>
+      </div>
+      <div class="col-xs-3 col-sm-4 text-right">
+        <strong class="text-uppercase">$144.65</strong>
+      </div>
+    </div>
+  </div>
+  <div class="detail detail-highlight">
+    <form action="">
+      <label for="promo-code">Promotion Code</label>
+      <div class="form-inline">
+        <div class="form-group">
+          <input type="text" id="promo-code" class="form-control input-sm" placeholder="Enter promo">
+        </div>
+        <div class="form-group">
+          {% include _atoms/buttons/button.html btnClass='btn-default btn-sm' btnLabel='Apply' %}
+        </div>
+      </div>
+    </form>
+  </div>
+</section><!-- .detail-wrap -->

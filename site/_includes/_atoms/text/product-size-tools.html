@@ -1,0 +1,20 @@
+<div class="product-size-tools">
+  {% comment %}
+  We're no longer showing the fit predictor tools, just the size chart modal. Remove this and the CSS once complete.
+  <svg class="fit-icon">
+    <use xlink:href="#fit-icon"></use>
+  </svg>
+  <span>Fit Predictor</span>
+  <a href="#" data-toggle="modal" data-target="#modal-size-calculator">Calculate Your Size</a>
+  {% endcomment %}
+  <svg class="fit-icon">
+    <use xlink:href="#icon-ruler"></use>
+  </svg>
+  <a href="#" data-toggle="modal" data-target="#modal-size">
+    {% if page.brand == 'soma' %}
+      Size Chart
+    {% else %}
+      Our Size Chart
+    {% endif %}
+  </a>
+</div>

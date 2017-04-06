@@ -1,0 +1,30 @@
+// modules taken from Chicos proper
+.module-blog {
+  text-align: center;
+  img {
+    margin-bottom: 1.5rem;
+  }
+  .svg-logo {
+    width: 20rem; 
+    height: 4.8rem;
+  }
+  h2 {
+    margin: 2rem 0 0 0;
+  }
+  h3 {
+    line-height: 1.1;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  @media screen and (max-width: 991px) {
+    .story {
+      max-width: 400px;
+      margin: 0 auto 30px auto;
+    }
+  }
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+}

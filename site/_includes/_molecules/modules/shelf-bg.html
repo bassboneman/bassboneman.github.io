@@ -1,0 +1,18 @@
+<section class="module {{ include.moduleClass }}">
+  <div class="module-sh module-sh-bg {{ include.moduleLayout }}" style="background-image: url({{ include.moduleImage }})">
+    <div class="module-inner">
+      <div class="module-sh-copy">
+        {% if include.moduleHeading %}
+          {% if include.moduleFirst %}
+            <h1 class="{{ include.moduleHeadingClass }}">{{ include.moduleHeading }}</h1>
+          {% else %}
+            <h2 class="{{ include.moduleHeadingClass }}">{{ include.moduleHeading }}</h2>
+          {% endif %}
+        {% endif %}
+        {% if include.moduleCopy %}
+          {{ include.moduleCopy }}
+        {% endif %}
+      </div><!-- .module-sh-copy -->
+    </div>
+  </div>
+</section><!-- .module -->

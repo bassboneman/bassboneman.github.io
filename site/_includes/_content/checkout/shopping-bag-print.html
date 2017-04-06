@@ -1,0 +1,83 @@
+<p>Thank you for shopping at 
+  {% if page.brand == 'whbm' %}
+    White House Black Market
+  {% elsif page.brand == 'soma' %}
+    Soma
+  {% else %}
+    Chico’s
+  {% endif %}
+  . We’re looking forward to seeing you soon.</p>
+<hr>
+<h2>
+  {% if page.brand == 'whbm' %}
+    White House Black Market
+  {% elsif page.brand == 'soma' %}
+    Soma
+  {% else %}
+    Chico’s
+  {% endif %}
+  Stores Near Me
+</h2>
+<div class="row">
+  <div class="col-xs-4">
+    <address>
+      <strong>Store #: 561</strong><br>
+      275 Cedar Sage Drive <br>
+      Garland, TX 75040<br>
+      Phone: 972-496-0400<br>
+    </address>
+  </div>
+  <div class="col-xs-4">
+    <address>
+      <strong>Store #: 1243</strong><br>
+      1037 E. Interstate 30 Suite #104<br>
+      Rockwall, TX 75087<br>
+      Phone: (972) 961-9813<br>
+    </address>
+  </div>
+  <div class="col-xs-4">
+    <address>
+      <strong>Store #: 565</strong><br>
+      8687 North Central Expressway Suite 1120<br>
+      Dallas, TX 75225-4425<br>
+      Phone: 214-890-7657<br>
+    </address>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col-xs-7">
+    <h1>My Shopping List</h1>
+  </div>
+  <div class="col-xs-5">
+    <p class="text-right">{{ site.time | date: '%B %d, %Y' }}</p>
+  </div>
+</div>
+
+{% include _molecules/blocks/product-details.html quantitySelect='yes' %}
+{% include _molecules/blocks/product-details.html quantitySelect='yes' %}
+
+<div class="row">
+  <div class="col-xs-6">
+    <div class="well">
+      <h3>Need Help</h3>
+      <p>Speak to one of our friendly stylists at 1 (888) 855-4986</p>
+    </div>
+  </div>
+  <div class="col-xs-6">
+    <div class="well">
+      {% if page.brand == 'soma' %}
+        <h3>Return Policy</h3>
+        <p>Return items by mail or bring them in to a store within 60 days.</p>
+      {% else %}
+        <h3>No Hassle Return Policy</h3>
+        <p>It's easy; return items by mail or bring them in to a store within 60 days.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<p>We cannot guarantee store price or inventory availability. Inventory can change quickly throughout the day. Call store prior to arriving to confirm availability. Prices subject to change.</p>
+
+{% include _molecules/modals/modal-print-shopping-bag.html %}

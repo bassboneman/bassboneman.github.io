@@ -1,0 +1,115 @@
+<h2 class="pageName" id="top">edit_profile.jsp</h2>
+<section>
+    <div class="sectionContent">
+        <div class="sectionHead">
+            <p class="issue">Form elements must have labels</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Low Vision</li>
+                <li>Mobility/Dexterity</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+                <li>Section 508: MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.3.1 Info and Relationships</li>
+                <li>3.3.2 Labels or Instructions</li>
+                <li>4.1.2 Name, Role, Value</li>
+            </ul>
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+                <li>1194.22 (n) Information required to complete electronic forms online</li>
+                <li>1194.21 (l) Form fields, directions, and cues</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;input id=&quot;firstName&quot; maxlength=&quot;20&quot; placeholder=&quot;&quot; name=&quot;firstName&quot; value=&quot;H&quot; tabindex=&quot;1&quot; class=&quot;single form-control checkRequired&quot; type=&quot;text&quot;&gt;</span> <span class="code">&lt;input id=&quot;lastName&quot; maxlength=&quot;40&quot; placeholder=&quot;&quot; name=&quot;lastName&quot; value=&quot;GAINES&quot; tabindex=&quot;2&quot; class=&quot;single form-control checkRequired&quot; type=&quot;text&quot;&gt;</span> <span class="code">&lt;input id=&quot;pAddress1&quot; maxlength=&quot;40&quot; placeholder=&quot;&quot; name=&quot;pAddress1&quot; value=&quot;123 HERE&quot; tabindex=&quot;4&quot; class=&quot;single form-control checkRequired&quot; type=&quot;text&quot;&gt;</span> <span class="code">&lt;input id=&quot;pAddress2&quot; maxlength=&quot;40&quot; placeholder=&quot;&quot; name=&quot;pAddress2&quot; value=&quot;&quot; tabindex=&quot;5&quot; class=&quot;single form-control&quot; type=&quot;text&quot;&gt;</span> <span class="code">&lt;input id=&quot;pCity&quot; maxlength=&quot;30&quot; placeholder=&quot;&quot; name=&quot;pCity&quot; value=&quot;FORT MYERS&quot; tabindex=&quot;6&quot; class=&quot;single form-control checkRequired&quot; type=&quot;text&quot;&gt;</span> <span class="code">&lt;input id=&quot;pPostalCode&quot; maxlength=&quot;10&quot; placeholder=&quot;&quot; name=&quot;pPostalCode&quot; value=&quot;33912&quot; tabindex=&quot;8&quot; class=&quot;form-control checkRequired&quot; type=&quot;text&quot; size=&quot;10&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;3&quot; id=&quot;phone1&quot; name=&quot;co-editprofile-phone1&quot; class=&quot;co-formFields co-formPhone frmPhone1 form-control number checkRequired&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('phone','copyPhoneIntoMobileSpan','phoneCopyCheckbox',true);&quot; tabindex=&quot;9&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;3&quot; id=&quot;phone2&quot; name=&quot;co-editprofile-phone2&quot; class=&quot;co-formFields co-formPhone frmPhone2 form-control number checkRequired&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('phone','copyPhoneIntoMobileSpan','phoneCopyCheckbox',true);&quot; tabindex=&quot;10&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;4&quot; id=&quot;phone3&quot; name=&quot;co-editprofile-phone3&quot; class=&quot;co-formFields co-formPhone frmPhone3 form-control number checkRequired&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('phone','copyPhoneIntoMobileSpan','phoneCopyCheckbox',true);&quot; tabindex=&quot;11&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;3&quot; id=&quot;co-editprofile-mobile1&quot; class=&quot;form-control number co-formPhone frmPhone1&quot; name=&quot;co-editprofile-mobile1&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('co-editprofile-mobile','copyMobileIntoPhoneSpan','mobileCopyCheckbox',true); toggleTextMessagingOptIn();&quot; tabindex=&quot;16&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;3&quot; id=&quot;co-editprofile-mobile2&quot; class=&quot;form-control number co-formPhone frmPhone2&quot; name=&quot;co-editprofile-mobile2&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('co-editprofile-mobile','copyMobileIntoPhoneSpan','mobileCopyCheckbox',true); toggleTextMessagingOptIn();&quot; tabindex=&quot;17&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;4&quot; id=&quot;co-editprofile-mobile3&quot; class=&quot;form-control number co-formPhone frmPhone3&quot; name=&quot;co-editprofile-mobile3&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('co-editprofile-mobile','copyMobileIntoPhoneSpan','mobileCopyCheckbox',true); toggleTextMessagingOptIn();&quot; tabindex=&quot;18&quot;&gt;</span> <span class="code">&lt;input id=&quot;login&quot; maxlength=&quot;60&quot; placeholder=&quot;&quot; name=&quot;login&quot; value=&quot;homer.gaines@chicos.com&quot; tabindex=&quot;24&quot; class=&quot;single form-control checkRequired&quot; onclick=&quot;toggleEmailLoginCopyCheckBox('login','copyLoginIntoEmailSpan','loginCopyCheckbox');&quot; type=&quot;text&quot; onchange=&quot;toggleEmailLoginCopyCheckBox('login','copyLoginIntoEmailSpan','loginCopyCheckbox');&quot;&gt;</span> <span class="code">&lt;input id=&quot;updatePassword&quot; maxlength=&quot;15&quot; name=&quot;updatePassword&quot; value=&quot;1234&quot; tabindex=&quot;27&quot; class=&quot;single form-control checkRequired&quot; onfocus=&quot;clearText(this);&quot; type=&quot;password&quot; size=&quot;20&quot;&gt;</span> <span class="code">&lt;input id=&quot;confirmPassword&quot; maxlength=&quot;15&quot; name=&quot;confirmPassword&quot; value=&quot;1234&quot; tabindex=&quot;28&quot; class=&quot;single form-control checkRequired&quot; onfocus=&quot;clearText(this);&quot; type=&quot;password&quot; size=&quot;20&quot;&gt;</span> <span class="code">&lt;input name=&quot;email&quot; id=&quot;chicos_footer&quot; class=&quot;form-control checkRequired&quot; type=&quot;email&quot; placeholder=&quot;Enter email address&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p><span class="code"></span></p>
+            <ul>
+                <li>aria-label attribute does not exist or is empty</li>
+                <li>aria-labelledby attribute does not exist, references elements that do not exist or references</li>
+                <li>elements that are empty or not visible</li>
+                <li>Form element does not have an implicit (wrapped) &lt;label&gt;</li>
+                <li>Form element does not have an explicit &lt;label&gt;</li>
+                <li>Element has no title attribute or the title attribute is empty</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;input name=&quot;receivePhoneCall&quot; value=&quot;true&quot; tabindex=&quot;15&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&gt;</span> <span class="code">&lt;input name=&quot;receiveRecordedMsgs&quot; value=&quot;true&quot; tabindex=&quot;16&quot; type=&quot;checkbox&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Form element has multiple &lt;label&gt; elements</p>
+        </div>
+        <div class="sectionHead">
+            <p class="issue">Links must have discernible text</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Mobility/Dexterity</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.1.1 Non-text Content</li>
+                <li>4.1.2 Name, Role, Value</li>
+            </ul>
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+                <li>1194.22 (a) Text equivalent for non-text elements</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;a title=&quot;&quot; data-placement=&quot;top&quot; data-toggle=&quot;tooltip&quot; href=&quot;javascript://&quot; data-original-title=&quot;This number helps us track your eligibility for Passport Rewards&quot;&gt;&lt;i class=&quot;fa fa-question-circle fa-lg&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span> <span class="code">&lt;a title=&quot;&quot; data-placement=&quot;top&quot; data-toggle=&quot;tooltip&quot; href=&quot;javascript://&quot; data-original-title=&quot;We may use this to contact you about the status of your order. Please provide your primary number (even if a mobile phone).&quot;&gt;&lt;i class=&quot;fa fa-question-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span> <span class="code">&lt;a title=&quot;&quot; data-placement=&quot;top&quot; data-toggle=&quot;tooltip&quot; href=&quot;javascript://&quot; data-original-title=&quot;This number allows us to offer you mobile-based services.&quot;&gt;&lt;i class=&quot;fa fa-question-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;</span> <span class="code">&lt;a title=&quot;&quot; data-placement=&quot;top&quot; data-toggle=&quot;tooltip&quot; href=&quot;javascript://&quot; data-original-title=&quot;Your password must begin with a letter, contain at least one number or special character, and may not contain your name, email address, or the word 'password'.&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <ul>
+                <li>Element does not have text that is visible to screen readers</li>
+                <li>aria-label attribute does not exist or is empty</li>
+                <li>aria-labelledby attribute does not exist, references elements that do not exist or references </li>
+                <li>elements that are empty or not visible</li>
+                <li>Element's default semantics were not overridden with role="presentation"</li>
+                <li>Element's default semantics were not overridden with role="none"</li>
+            </ul>
+            <h3>Fix any of the following:</h3>
+            <p>Element is in tab order and does not have accessible text</p>
+        </div>
+        <div class="sectionHead">
+            <p class="issue">Elements should not have tabindex greater than zero</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Mobility/Dexterity</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>2.4.3 Focus Order</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"> <a href="http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html" target="_blank">http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html</a> </p><span class="code">&lt;input id=&quot;firstName&quot; maxlength=&quot;20&quot; placeholder=&quot;&quot; name=&quot;firstName&quot; value=&quot;H&quot; tabindex=&quot;1&quot; class=&quot;single form-control checkRequired&quot; type=&quot;text&quot;&gt;</span> <span class="code">&lt;input id=&quot;lastName&quot; maxlength=&quot;40&quot; placeholder=&quot;&quot; name=&quot;lastName&quot; value=&quot;GAINES&quot; tabindex=&quot;2&quot; class=&quot;single form-control checkRequired&quot; type=&quot;text&quot;&gt;</span> <span class="code">&lt;button type=&quot;button&quot; class=&quot;btn dropdown-toggle selectpicker btn-default&quot; data-toggle=&quot;dropdown&quot; data-id=&quot;pCountry&quot; tabindex=&quot;3&quot; title=&quot;UNITED STATES&quot;&gt;&lt;span class=&quot;filter-option pull-left&quot;&gt;UNITED STATES&lt;/span&gt;&amp;nbsp;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;</span> <span class="code">&lt;input id=&quot;pAddress1&quot; maxlength=&quot;40&quot; placeholder=&quot;&quot; name=&quot;pAddress1&quot; value=&quot;123 HERE&quot; tabindex=&quot;4&quot; class=&quot;single form-control checkRequired&quot; type=&quot;text&quot;&gt;</span> <span class="code">&lt;input id=&quot;pAddress2&quot; maxlength=&quot;40&quot; placeholder=&quot;&quot; name=&quot;pAddress2&quot; value=&quot;&quot; tabindex=&quot;5&quot; class=&quot;single form-control&quot; type=&quot;text&quot;&gt;</span> <span class="code">&lt;input id=&quot;pCity&quot; maxlength=&quot;30&quot; placeholder=&quot;&quot; name=&quot;pCity&quot; value=&quot;FORT MYERS&quot; tabindex=&quot;6&quot; class=&quot;single form-control checkRequired&quot; type=&quot;text&quot;&gt;</span> <span class="code">&lt;button type=&quot;button&quot; class=&quot;btn dropdown-toggle selectpicker btn-default&quot; data-toggle=&quot;dropdown&quot; data-id=&quot;pState&quot; tabindex=&quot;7&quot; title=&quot;Florida&amp;amp;lt;!-- --&amp;amp;gt;&quot;&gt;</span> <span class="code">&lt;input id=&quot;pPostalCode&quot; maxlength=&quot;10&quot; placeholder=&quot;&quot; name=&quot;pPostalCode&quot; value=&quot;33912&quot; tabindex=&quot;8&quot; class=&quot;form-control checkRequired&quot; type=&quot;text&quot; size=&quot;10&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;3&quot; id=&quot;phone1&quot; name=&quot;co-editprofile-phone1&quot; class=&quot;co-formFields co-formPhone frmPhone1 form-control number checkRequired&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('phone','copyPhoneIntoMobileSpan','phoneCopyCheckbox',true);&quot; tabindex=&quot;9&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;3&quot; id=&quot;phone2&quot; name=&quot;co-editprofile-phone2&quot; class=&quot;co-formFields co-formPhone frmPhone2 form-control number checkRequired&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('phone','copyPhoneIntoMobileSpan','phoneCopyCheckbox',true);&quot; tabindex=&quot;10&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;4&quot; id=&quot;phone3&quot; name=&quot;co-editprofile-phone3&quot; class=&quot;co-formFields co-formPhone frmPhone3 form-control number checkRequired&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('phone','copyPhoneIntoMobileSpan','phoneCopyCheckbox',true);&quot; tabindex=&quot;11&quot;&gt;</span> <span class="code">&lt;input type=&quot;checkbox&quot; id=&quot;phoneCopyCheckbox&quot; name=&quot;phoneCopyCheckbox&quot; onclick=&quot;copyPhoneOrMobile(true, 'phone', 'co-editprofile-mobile', 'pPhoneNumber', 'pPhoneText', true);&quot; tabindex=&quot;14&quot;&gt;</span> <span class="code">&lt;input name=&quot;receivePhoneCall&quot; value=&quot;true&quot; tabindex=&quot;15&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&gt;</span> <span class="code">&lt;input name=&quot;receiveRecordedMsgs&quot; value=&quot;true&quot; tabindex=&quot;16&quot; type=&quot;checkbox&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;3&quot; id=&quot;co-editprofile-mobile1&quot; class=&quot;form-control number co-formPhone frmPhone1&quot; name=&quot;co-editprofile-mobile1&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('co-editprofile-mobile','copyMobileIntoPhoneSpan','mobileCopyCheckbox',true); toggleTextMessagingOptIn();&quot; tabindex=&quot;16&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;3&quot; id=&quot;co-editprofile-mobile2&quot; class=&quot;form-control number co-formPhone frmPhone2&quot; name=&quot;co-editprofile-mobile2&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('co-editprofile-mobile','copyMobileIntoPhoneSpan','mobileCopyCheckbox',true); toggleTextMessagingOptIn();&quot; tabindex=&quot;17&quot;&gt;</span> <span class="code">&lt;input type=&quot;text&quot; maxlength=&quot;4&quot; id=&quot;co-editprofile-mobile3&quot; class=&quot;form-control number co-formPhone frmPhone3&quot; name=&quot;co-editprofile-mobile3&quot; onchange=&quot;togglePhoneMobileCopyCheckBox('co-editprofile-mobile','copyMobileIntoPhoneSpan','mobileCopyCheckbox',true); toggleTextMessagingOptIn();&quot; tabindex=&quot;18&quot;&gt;</span> <span class="code">&lt;input id=&quot;email&quot; maxlength=&quot;60&quot; name=&quot;email&quot; value=&quot;homer.gaines@chicos.com&quot; tabindex=&quot;20&quot; class=&quot;single form-control checkRequired&quot; onclick=&quot;toggleEmailLoginCopyCheckBox('email','copyEmailIntoLoginSpan','emailCopyCheckbox');&quot; type=&quot;text&quot; onchange=&quot;toggleEmailLoginCopyCheckBox('email','copyEmailIntoLoginSpan','emailCopyCheckbox');&quot; size=&quot;20&quot;&gt;</span> <span class="code">&lt;button type=&quot;button&quot; class=&quot;btn dropdown-toggle selectpicker btn-default&quot; data-toggle=&quot;dropdown&quot; data-id=&quot;emailOptInPreference&quot; tabindex=&quot;23&quot; title=&quot;Receive all&quot;&gt;&lt;span class=&quot;filter-option pull-left&quot;&gt;Receive all&lt;/span&gt;&amp;nbsp;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;</span> <span class="code">&lt;input name=&quot;uiCheckBox1&quot; id=&quot;uiCheckBox1&quot; type=&quot;checkbox&quot; tabindex=&quot;26&quot; onclick=&quot;changeAllOfTheAbove(this.name);&quot; size=&quot;1&quot; value=&quot;int100001&quot;&gt;</span> <span class="code">&amp;lt;input name=&amp;quot;uiCheckBox1&amp;quot; id=&amp;quot;uiCheckBox1&amp;quot; type=&amp;quot;checkbox&amp;quot; tabindex=&amp;quot;26&amp;quot; onclick=&amp;quot;changeAllOfTheAbove(this.name);&amp;quot; size=&amp;quot;1&amp;quot; value=&amp;quot;int100001&amp;quot;&amp;gt;</span> <span class="code">&lt;input name=&quot;uiCheckBox3&quot; id=&quot;uiCheckBox3&quot; type=&quot;checkbox&quot; tabindex=&quot;26&quot; onclick=&quot;changeAllOfTheAbove(this.name);&quot; size=&quot;1&quot; value=&quot;int100003&quot;&gt;</span> <span class="code">&lt;input name=&quot;uiCheckBox4&quot; id=&quot;uiCheckBox4&quot; type=&quot;checkbox&quot; tabindex=&quot;26&quot; onclick=&quot;changeAllOfTheAbove(this.name);&quot; size=&quot;1&quot; value=&quot;int100004&quot;&gt;</span> <span class="code">&lt;input name=&quot;uiCheckBox5&quot; id=&quot;uiCheckBox5&quot; type=&quot;checkbox&quot; tabindex=&quot;26&quot; onclick=&quot;changeAllOfTheAbove(this.name);&quot; size=&quot;1&quot; value=&quot;int100005&quot;&gt;</span> <span class="code">&lt;input name=&quot;uiCheckBoxAll&quot; id=&quot;uiCheckBoxAll&quot; onclick=&quot;allOfTheAbove('6');&quot; type=&quot;checkbox&quot; tabindex=&quot;26&quot; size=&quot;1&quot;&gt;</span> <span class="code">&lt;input id=&quot;unsubscribeCheckBox&quot; name=&quot;unsubscribeCheckBox&quot; value=&quot;true&quot; tabindex=&quot;29&quot; type=&quot;checkbox&quot; onchange=&quot;toggleUnsubscribe();&quot;&gt;</span> <span class="code">&lt;input id=&quot;login&quot; maxlength=&quot;60&quot; placeholder=&quot;&quot; name=&quot;login&quot; value=&quot;homer.gaines@chicos.com&quot; tabindex=&quot;24&quot; class=&quot;single form-control checkRequired&quot; onclick=&quot;toggleEmailLoginCopyCheckBox('login','copyLoginIntoEmailSpan','loginCopyCheckbox');&quot; type=&quot;text&quot; onchange=&quot;toggleEmailLoginCopyCheckBox('login','copyLoginIntoEmailSpan','loginCopyCheckbox');&quot;&gt;</span> <span class="code">&lt;input type=&quot;checkbox&quot; id=&quot;loginCopyCheckbox&quot; name=&quot;loginCopyCheckbox&quot; tabindex=&quot;25&quot; onclick=&quot;copyEmailOrLogin('login', 'email');&quot;&gt;</span> <span class="code">&lt;input id=&quot;updatePassword&quot; maxlength=&quot;15&quot; name=&quot;updatePassword&quot; value=&quot;1234&quot; tabindex=&quot;27&quot; class=&quot;single form-control checkRequired&quot; onfocus=&quot;clearText(this);&quot; type=&quot;password&quot; size=&quot;20&quot;&gt;</span> <span class="code">&lt;input id=&quot;confirmPassword&quot; maxlength=&quot;15&quot; name=&quot;confirmPassword&quot; value=&quot;1234&quot; tabindex=&quot;28&quot; class=&quot;single form-control checkRequired&quot; onfocus=&quot;clearText(this);&quot; type=&quot;password&quot; size=&quot;20&quot;&gt;</span> <span class="code">&lt;input name=&quot;/atg/userprofiling/ProfileFormHandler.update&quot; value=&quot;Save&quot; tabindex=&quot;30&quot; class=&quot;saveButton btn btn-primary&quot; type=&quot;submit&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Element has a tabindex greater than 0</p>
+        </div>
+    </div>
+</section>

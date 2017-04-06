@@ -1,0 +1,60 @@
+{% if page.brand == 'soma' %}
+{% else %}
+<div class="content content-wide">
+  <div class="container-fluid">
+    {% if include.shText %}
+      {% include _molecules/modules/shelf-header-text.html %}
+    {% else %}
+      {% include _molecules/carousels/jumbo.html carouselImage='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+3360x1200&w=3360&h=1200' carouselImageMobile='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+767x767&w=767&h=767' carouselHeading='Zenergy<sup>&reg;</sup>' carouselCopy='<p>Activewear that goes anywhere.</p>' btnLabel='Shop Now' btnClass='btn-primary' btnLink='#' btnExtra='' %}
+    {% endif %}
+  </div><!-- .container-fluid -->
+</div><!-- .content.content-wide -->
+{% endif %}
+
+{% comment %}
+<div class="hero-img">
+  <a href="">
+    <img class="img-responsive" src="http://placehold.it/1800x600/ccc/999&text=Collection Lead" alt="Collection">
+  </a>
+</div>
+{% endcomment %}
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-xs-12">
+        {% include _molecules/navigation/breadcrumb.html breadLvl2='Clothing' breadLvl3='Dresses &amp; Skirts' %}
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        {% include _molecules/navigation/product-count.html %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include _molecules/navigation/filters.html %}
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="collection">
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-curated.html promoType="carouselPromo" %}
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-curated.html promoType="singlePromo" %}
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-curated.html promoType="singlePromo" promoLayout="promo-right" %}
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-curated.html promoType="contentModuleTwoBy" %}
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-curated.html promoType="carouselPromoLarge" %}
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-all.html promoType="promoSmall" %}
+    </div><!-- .collection -->
+  </div><!-- .container-fluid -->
+</div><!-- .content -->
+
+
+
+{% include _molecules/modals/modal-quick-view.html %}
+{% include _molecules/modals/modal-gallery.html %}
+{% include _molecules/navigation/top-link.html %}

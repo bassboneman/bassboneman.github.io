@@ -1,0 +1,107 @@
+{% comment %}
+BLOG MODULE
+  associated classes: module-social
+
+moduleTitle:
+  accepts: text or HTML
+  associated class: none, use `.module-social h2` or something of the sort
+  if no input: element doesn't show
+  wrapper tag: h2
+moduleImage1, moduleImage2, moduleImage3, moduleImage4:
+  accepts: URL for image source
+  if no input: falls back to preset image
+  notes: alt tag pulls from corresponding moduleLabel, see notes there
+moduleLabel1, moduleLabel2, moduleLabel3, moduleLabel4:
+  accepts: text or HTML
+  associated class: none, use `.module-social h3` or something of the sort
+  if no input: element doesn't show, no alt text for corresponding moduleImage
+  wrapper tag: h3
+  notes: contents of this are placed as alt text with HTML stripped out. If you're passing HTML through, double-check alt text formatting.
+
+Example:
+
+```
+{% include _molecules/modules/social.html moduleTitle='Social Header' moduleLabel1='Social Label' moduleLabel2='Social Label' moduleLabel3='Social Label' moduleLabel4='Social Label' %}
+```
+
+{% endcomment %}
+
+<section class="module {{ include.moduleClass }}">
+  <div class="module-4-across module-social">
+    <div class="module-inner">
+      {% if include.moduleTitle %}
+      <h2>{{ include.moduleTitle }}</h2>
+      {% endif %}
+      {% comment %}<h3><span>Follow Us</span></h3>{% endcomment %}
+      {% if include.hideRule %}
+      {% else %}
+      <hr>
+      {% endif %}
+      <div class="row">
+        <div class="col-md-3 col-xs-6">
+          <article class="story">
+            <a href="{{ include.moduleLink1 }}" target="_blank">
+              {% if page.brand == 'soma' %}
+                <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=Connect+Image&w=480&h=480" alt="Social Image" class="img-responsive">
+              {% else %}
+                <img src="{% if include.moduleImage1 %}{{ include.moduleImage1 }}{% else %}{{ site.baseurl }}/web_assets/imgs/modules/social1.jpg{% endif %}" class="img-responsive" alt="{% if include.moduleLabel1 %}{{ include.moduleLabel1 | strip_html }}{% endif %}">
+              {% endif %}
+              {% if include.moduleLabel1 %}
+              <h3>{{ include.moduleLabel1 }}</h3>
+              {% endif %}
+            </a>
+          </article>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <article class="story">
+            <a href="{{ include.moduleLink2 }}" target="_blank">
+              {% if page.brand == 'soma' %}
+                <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=Connect+Image&w=480&h=480" alt="Social Image" class="img-responsive">
+              {% else %}
+                <img src="{% if include.moduleImage2 %}{{ include.moduleImage2 }}{% else %}{{ site.baseurl }}/web_assets/imgs/modules/social2.jpg{% endif %}" class="img-responsive" alt="{% if include.moduleLabel2 %}{{ include.moduleLabel2 | strip_html }}{% endif %}">
+              {% endif %}
+              {% if include.moduleLabel2 %}
+              <h3>{{ include.moduleLabel2 }}</h3>
+              {% endif %}
+            </a>
+          </article>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <article class="story">
+            <a href="{{ include.moduleLink3 }}" target="_blank">
+              {% if page.brand == 'soma' %}
+                <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=Connect+Image&w=480&h=480" alt="Social Image" class="img-responsive">
+              {% else %}
+                <img src="{% if include.moduleImage3 %}{{ include.moduleImage3 }}{% else %}{{ site.baseurl }}/web_assets/imgs/modules/social3.jpg{% endif %}" class="img-responsive" alt="{% if include.moduleLabel3 %}{{ include.moduleLabel3 | strip_html }}{% endif %}">
+              {% endif %}
+              {% if include.moduleLabel3 %}
+              <h3>{{ include.moduleLabel3 }}</h3>
+              {% endif %}
+            </a>
+          </article>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <article class="story">
+            <a href="{{ include.moduleLink4 }}" target="_blank">
+              {% if page.brand == 'soma' %}
+                <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=Connect+Image&w=480&h=480" alt="Social Image" class="img-responsive">
+              {% else %}
+                <img src="{% if include.moduleImage4 %}{{ include.moduleImage4 }}{% else %}{{ site.baseurl }}/web_assets/imgs/modules/social4.jpg{% endif %}" class="img-responsive" alt="{% if include.moduleLabel4 %}{{ include.moduleLabel4 | strip_html }}{% endif %}">
+              {% endif %}
+              {% if include.moduleLabel4 %}
+              <h3>{{ include.moduleLabel4 }}</h3>
+              {% endif %}
+            </a>
+          </article>
+        </div>
+      </div>
+      {% if include.moduleCaption %}
+        <p class="caption">{{ include.moduleCaption }}</p>    
+      {% endif %}
+    </div>
+  </div>
+</section><!-- .module -->
+{% if include.horizRule == 'no' %}
+{% else %}
+<hr class="hr-mobile">
+{% endif %}

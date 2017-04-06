@@ -1,0 +1,24 @@
+<div class="radio {{ include.radioClass }}">
+  <label>
+    <input type="radio" name="{{ include.radioGroup }}" id="{{ include.radioID }}" value="{{ include.radioValue }}" {{ include.checked }} {{ include.radioExtra }}>
+    {% if include.styled %}<span class="input-styled">{% endif %}
+    {% if include.labelHidden %}<span class="sr-only">{% endif %}
+    {% if include.radioID == 'paypal' %}
+      <span class="sr-only">Paypal</span>
+      <svg class="icon-paypal"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-paypal"></use></svg>
+    {% else %}
+      {% if include.radioID == 'creditcard' %}
+        <span class="label-heading">
+        {% endif %}
+          {{include.labelName}}
+        {% if include.radioID == 'creditcard' %}
+        </span>
+      {% endif %}
+      {% if include.tooltip %}
+        <a class="label-icon" href="javascript://" data-toggle="tooltip" data-placement="bottom" title="" data-html="true" data-original-title="{{ include.tooltip }}"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-question"></use></svg></a>
+      {% endif %}
+    {% endif %}
+    {% if include.labelHidden %}</span>{% endif %}
+    {% if include.styled %}</span><!-- .input-styled -->{% endif %}
+  </label>
+</div><!-- .radio -->

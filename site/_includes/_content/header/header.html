@@ -1,0 +1,24 @@
+{% include _molecules/components/header-promo.html %}
+<div id="header-wrap">
+  <header id="header">
+    <div id="header-inner">
+      {% include _content/header/logo.html %}
+      {% include _content/header/menu-utility.html %}
+    </div>
+    {% if page.brand == "whbm" %}
+      {% include _content/header/nav-whbm.html %}
+    {% elsif page.brand == "chicos" and page.top-nav == "final" %}
+      {% include _content/header/nav-chicos-final-sale.html %}
+    {% elsif page.brand == "chicos" %}
+      {% include _content/header/nav-chicos.html %}
+    {% elsif page.brand == "soma" %}
+      {% include _content/header/nav-soma.html %}
+    {% endif %}
+    {% if page.brand == "chicos" and page.top-nav == "final" %}
+      {% include _content/header/menu-utility-mobile-final-sale.html %}
+    {% else %}
+    {% include _content/header/menu-utility-mobile.html %}
+    {% endif %}
+    {% include _content/header/search-new.html %}
+  </header>
+</div>

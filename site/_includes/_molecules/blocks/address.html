@@ -1,0 +1,83 @@
+{% if page.brand == 'soma' %}
+  {% capture default_address %}Preferred Address{% endcapture %}
+  {% capture make_default %}Make This My Preferred Address{% endcapture %}
+{% else %}
+  {% capture default_address %}My Default{% endcapture %}
+  {% capture make_default %}Make this my default{% endcapture %}
+{% endif %}
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="account-detail default">
+      <h4><i class="fa fa-fw fa-check-circle"></i> {{ default_address }}</h4>
+      <dl>
+        <dt>Liz Hamilton</dt>
+        <dd>
+          123 Main Street<br>
+          Somewhere, VA 22222<br>
+          505-258-4975
+        </dd>
+      </dl>
+      <p>
+        <strong><a href="#" data-toggle="modal" data-target="#modal-address">Edit</a></strong> | <strong><a href="">Delete</a></strong>
+        </p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="account-detail">
+      <h4><a href="">{{ make_default }}</a></h4>
+      <dl>
+        <dt>Liz Hamilton</dt>
+        <dd>
+          456 Elm Street<br>
+          Somewhere, VA 22222<br>
+          505-999-1234
+        </dd>
+      </dl>
+      <p>
+        <strong><a href="#" data-toggle="modal" data-target="#modal-address">Edit</a></strong> | <strong><a href="">Delete</a></strong>
+      </p>
+    </div>
+  </div>
+{% if page.brand == 'soma' %}
+  <div class="col-md-4">
+    <div class="account-detail">
+      <h4><a href="">{{ make_default }}</a></h4>
+      <dl>
+        <dt>Liz Hamilton</dt>
+        <dd>
+          456 Elm Street<br>
+          Somewhere, VA 22222<br>
+          505-999-1234
+        </dd>
+      </dl>
+      <p>
+        <strong><a href="#" data-toggle="modal" data-target="#modal-address">Edit</a></strong> | <strong><a href="">Delete</a></strong>
+      </p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="account-detail">
+      <h4><a href="">{{ make_default }}</a></h4>
+      <dl>
+        <dt>Liz Hamilton</dt>
+        <dd>
+          456 Elm Street<br>
+          Somewhere, VA 22222<br>
+          505-999-1234
+        </dd>
+      </dl>
+      <p>
+        <strong><a href="#" data-toggle="modal" data-target="#modal-address">Edit</a></strong> | <strong><a href="">Delete</a></strong>
+      </p>
+    </div>
+  </div>
+</div><!-- .row -->
+<p><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal-address">Add a New Address</a></p>
+{% else %}
+  <div class="col-md-4">
+    <p class="small"><a href="#" data-toggle="modal" data-target="#modal-address">+Create a new address</a></p>
+  </div>
+</div>
+{% endif %}
+{% include _molecules/modals/modal-address.html %}

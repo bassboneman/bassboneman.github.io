@@ -1,0 +1,13 @@
+// set global variables
+@import "modules/config";
+
+// set brand-specific variables
+@import "themes/chicos/config";
+@import "themes/chicos/fonts";
+
+// global styles
+@import "application"; 
+
+// brand styles
+@import "themes/chicos/overrides";
+@import "partials/shelfless";

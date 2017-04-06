@@ -1,0 +1,61 @@
+<section id="checkout-shipping-address" class="checkout-block {% if page.type == 'registered' %}complete{% else %}first editing{% endif %}">
+  <header>
+    {% if page.type == 'registered' %}
+      <a href="#" class="checkout-btn-change" data-toggle="modal" data-target="#modal-address-multi-select">Change</a>  
+    {% else %}
+      <a href="#" class="checkout-btn-change" data-toggle="checkout-edit">Change</a>
+    {% endif %}
+    <h2>1. Shipping Address</h2>
+  </header>
+  <div class="checkout-block-body">
+    {% if page.type == 'unregistered' %}
+      <div class="checkout-section-form">
+        <div class="row row-tight">
+          <div class="col-sm-6">
+            <p>
+              {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-alt btn-lg btn-block btn-has-arrow btn-width' btnLabel='Ship to Multiple Addresses' %}
+            </p>
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+        <h3>Ship To:</h3>
+        {% include _molecules/checkout/forms/address.html %}      
+        <div class="row row-tight">
+          <div class="col-sm-6">
+            {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-primary btn-lg btn-block btn-checkout btn-width' btnLabel='Save &amp; Continue' btnExtra='data-checkout="shipping-options"' %}
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+      </div><!-- .checkout-section-form -->
+    {% endif %}
+
+    <div class="checkout-section-entry">
+      <h3>Ship to:</h3>
+      <div>
+        Liz Hamilton <br>
+        456 Elm Street, Somewhere, VA 22222<br>
+        505-258-4975
+      </div>
+    </div><!-- .checkout-section-entry -->
+
+{% comment %}
+    {% if page.type == 'registered' %}
+      <h3>Ship To:</h3>
+      <div class="radio-media-list">
+        {% include _molecules/checkout/radios/address.html radioSet='address-options' radioID='address-option-1' checked='yes' %}
+        {% include _molecules/checkout/radios/address.html radioSet='address-options' radioID='address-option-2' %}
+        {% include _molecules/checkout/radios/address.html radioSet='address-options' radioID='address-option-3' %}
+        {% include _molecules/checkout/radios/address.html radioSet='address-options' radioID='address-option-4' %}
+      </div><!-- .radio-media-list -->
+      <div class="row row-tight">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="p">
+            {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-alt btn-lg btn-block btn-has-plus' btnLabel='Add a New Address' btnExtra='data-toggle="modal" data-target="#modal-address"' %}
+            <!-- Button trigger modal -->
+          </div>
+          <div class="text-center"><a href="#" class="btn btn-link">Cancel</a></div>
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->
+    {% endif %}
+{% endcomment %}
+
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->

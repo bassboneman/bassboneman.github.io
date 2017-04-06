@@ -1,0 +1,16 @@
+<div class="row row-tight">
+  <div class="col-xs-6">
+    {% include _atoms/forms/select.html labelName='Color' labelID='color' selectOptions='<option value="">Mint Green</option><option value="">Burgundy</option><option value="">Gold</option>' %}
+  </div>
+  <div class="col-xs-6">
+    {% include _atoms/forms/select.html labelName='Size' labelID='size' selectOptions='<option value="">One Size</option>' %}
+  </div>
+</div>
+<div class="row row-tight">
+  <div class="col-xs-12">
+    <div class="form-group">
+      <label for="color">Zip Code *</label>
+      <input type="text" class="form-control" id="zip" placeholder="">
+    </div>
+  </div>
+</div>

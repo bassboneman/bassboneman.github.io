@@ -1,0 +1,71 @@
+<div class="product-details">
+  <div class="row row-tight">
+    <div class="col-sm-2 col-xs-3">
+      <img class="img-responsive" src="http://placehold.it/200x250&amp;text=Product" alt="Product Image">  
+    </div><!-- .col-xs-3 -->
+    <div class="col-sm-10 col-xs-9">
+      {% if include.status != 'message-entered' %}
+        <h4>Product Name</h4>
+      {% endif %}
+      <div class="row">
+
+        {% if include.placement == 'review-order' or include.placement == 'gifting' %}
+          <div class="col-sm-9">  
+        {% else %}
+          <div class="col-sm-6">  
+        {% endif %}
+
+        {% if include.status == 'message-entered' %}
+          <div class="gift-message">
+            <h4>Gift Message Only - Free </h4>
+            <p>
+              Gift receipt included. <br>
+              To: Kelly &nbsp;|&nbsp; From: Teresa <br>
+              Message Card: “Lorem Ipsum...”
+            </p>
+          </div>
+          <!-- <p class="edit-remove text-left"><a href="#">Change</a> | <a href="#">Remove</a></p> -->
+        {% else %}
+          <dl class="dl-horizontal meta-list">
+            <dt>Size:</dt>
+            <dd>Size 000 (0, XXS)</dd>
+            <dt>Color:</dt>
+            <dd>
+              {% if include.color %}
+                {{ include.color | Captilize }}
+              {% else %}
+                Natural Cream
+              {% endif %}
+            </dd>
+            <dt>Total Price:</dt>
+            <dd><span class="strikethrough pad-right-10">$99.00</span> $74.00</dd>
+            <dt>QTY:</dt>
+            <dd>1</dd>
+          </dl>
+        {% endif %}
+
+        {% if include.placement == 'review-order' or include.placement == 'gifting' %}
+          </div><!-- .col-sm-9 -->
+          {% if page.checkoutPage != 'confirmation' %}
+            <div class="col-sm-3">
+              {% if include.noEdit or include.modal %}
+              {% else %}
+                <div class="edit-remove"><a href="#">Change</a> | <a href="#">Remove</a></div>          
+              {% endif %}
+            </div><!-- .col-sm-3 -->
+          {% endif %}
+        {% else %}
+          </div><!-- .col-sm-6 -->
+          <div class="col-sm-6">
+            {% if include.addressSet == 'true' %}
+              {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-alt btn-lg btn-block btn-has-arrow btn-has-address' btnLabel='Liz Hamilton <br>456 Elm Street, Somewhere, VA 22222' btnExtra='data-toggle="modal" data-target="#modal-address-multi-select"' %}            
+            {% else %}
+              {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-alt btn-lg btn-block btn-has-arrow' btnLabel='Add a New Address' btnExtra='data-toggle="modal" data-target="#modal-address-multi"' %}
+            {% endif %}
+          </div><!-- .col-sm-6 -->
+        {% endif %}
+
+      </div><!-- .row -->
+    </div><!-- .col-xs-9 -->
+  </div><!-- .row -->
+</div><!-- .product-details -->

@@ -1,0 +1,28 @@
+  <footer id="footer-checkout">
+    <span class="copyright">&copy; Copyright 2017 Chico’s Distribution Services, LLC. All Rights Reserved.</span>
+    <span class="footer-links">
+      <span><a href="#">Terms &amp; Conditions</a></span>
+      <span><a href="#">Privacy Policy</a></span>
+    </span>
+  </footer>
+</div><!-- #page-wrap -->
+
+{% include _molecules/modals/modal-disclaimer.html %}
+
+{% comment %}Modals{% endcomment %}
+{% include _molecules/checkout/modals/address.html %}
+{% include _molecules/checkout/modals/address-multi.html %}
+{% include _molecules/checkout/modals/address-multi-select.html %}
+{% include _molecules/checkout/modals/address-no-billing.html %}
+{% include _molecules/checkout/modals/cc.html %}
+{% include _molecules/checkout/modals/payment-options.html %}
+{% include _molecules/checkout/modals/shipping-options.html %}
+{% include _molecules/checkout/modals/gift-message-individual.html %}
+{% include _molecules/checkout/modals/gift-message-together.html %}
+{% include _molecules/checkout/modals/gift-wrap-together.html %}
+{% include _molecules/checkout/modals/gift-wrap-individual.html %}
+
+{% include _templates/foot.html %}
+
+</body>
+</html>

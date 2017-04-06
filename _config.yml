@@ -1,0 +1,10 @@
+# Server
+source:           site
+# host:           0.0.0.0
+port:             5001
+# url:            http://chicosdev
+encoding:         UTF-8
+highlighter:      rouge
+baseurl:          
+
+exclude: [node_modules]

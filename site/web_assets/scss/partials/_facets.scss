@@ -1,0 +1,143 @@
+// used to show swatches and toggle tools to refine search results
+.swatch-wrap {
+  margin-bottom: $dimension-small;
+  font-size: 0;
+  @include swatch;
+  .swatch {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 12px 12px 0;
+    border: 1px solid transparent;
+    width: 3rem;
+    height: 3rem;
+    img {
+      display: block;
+      width: 2.8rem;
+      height: 2.8rem;
+      margin: 0;
+      font-size: 0;
+      cursor: pointer;
+      border: 1px solid $color-border-dark;
+    }
+    &.selected,
+    &:hover {
+      // border-width: 2px;
+      border-color: $color-black;
+      img {
+        border-color: transparent;
+        // border-width: 2px;
+        // width: 2.6rem;
+        // height: 2.6rem;
+      }
+    }
+  }
+  .swatch-more {
+    float: left;
+    font-size: $font-size-small;
+  }
+}
+.collection {
+  .swatch-wrap {
+    margin-top: 1.2rem;
+    .swatch {
+      width: 2.6rem;
+      height: 2.6rem;
+      margin: 0 .6rem 1.2rem .6rem;
+      @media screen and (max-width: $break-xs-max) {
+        margin: 0 .4rem 1.2rem .4rem;
+      }
+    }
+    img {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    .icon-plus {
+      margin: .7rem 0 0 .5rem;
+    }
+
+  }
+}
+
+.product-wrap {
+  .swatch-more {
+    display: none;
+  }
+}
+.facet-label {
+  margin-bottom: $dimension-small;
+  @include facet-label;
+}
+
+// this element can be used on category pages and in related product blocks
+// .product-listing {
+//   .swatch-wrap {
+//     .swatch {
+//       margin: 0 .4rem .4rem 0;
+//     }
+//     img {
+//       width: 1.3rem;
+//       height: 1.3rem;
+//     }
+//   }
+// }
+
+// facets used in search results
+.facet-heading {
+  margin-bottom: $dimension-small;
+  padding-top: $dimension-small;
+  border-top: 1px solid $color-border-light;
+  @include facet-heading;
+}
+
+.facet-wrap {
+  margin-bottom: $dimension-small;
+  padding-top: $dimension-small;
+  border-top: 1px solid $color-border-light;
+  @include clearfix();
+  .facet-inner {
+    margin-left: -3px;
+  }
+  .facet {
+    float: left;
+    width: 25%;
+    a {
+      display: block;
+      height: 26px;
+      margin: 0 0 3px 3px;
+      overflow: hidden;
+      font-size: $font-size-small;
+      line-height: 26px;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid $color-border-dark;
+      @include transition(border-color);
+    }
+    a:hover {
+      text-decoration: none;
+      border: 1px solid $color-border-black;
+    }
+    &.selected a,
+    &.selected a:hover {
+      color: #fff;
+      background: $color-gray;
+      border-color: $color-gray;
+    }
+  }
+  &.facet-wrap-3 {
+    .facet {
+      width: 33.3%;
+    }
+  }
+  .facet-reset {
+    float: right;
+    font-size: $font-size-xxsmall;
+  }
+}
+
+.facet-swatch {
+  .facet.selected a,
+  .facet.selected a:hover {
+    background: none;
+    border-color: $color-border-black;
+  }
+}

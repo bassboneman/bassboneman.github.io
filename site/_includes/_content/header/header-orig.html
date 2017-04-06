@@ -1,0 +1,268 @@
+{% include _molecules/components/header-promo.html %}
+
+<div id="header-wrap">
+  <header id="header" role="banner">
+    <div id="header-inner">
+      <a id="logo" href="#">
+        <svg>
+          {% if page.brand == "whbm" %}
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-whbm"></use>
+            <span class="sr-only">White House Black Market</span>
+          {% elsif page.brand == "soma" %}
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-soma"></use>
+            <span class="sr-only">Soma</span>
+          {% else %}
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo"></use>
+            <span class="sr-only">Chicos</span>
+          {% endif %}
+        </svg>
+      </a>
+      <div id="menu-utility">
+        <ul>
+          <li>
+            <a href="#" class="menu-toggle" data-toggle="offcanvas">
+              <svg class="icon-menu">
+                <use xlink:href="#icon-menu"></use>
+              </svg>
+              <!-- <span class="menu-label">Menu</span> -->
+              <span class="mobile-label">Menu</span>
+            </a>
+          </li>
+          <li class="dropdown menu-signin">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Sign In
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-utility dropdown-signin">
+              <div class="dropdown-inner">
+                <h3>Welcome Back, Jenny!</h3>
+                <p>You are a (Introductory) Passport Member</p>
+                <hr>
+                <ul>
+                  {% if page.brand == "soma" %}
+                  <li><a href="#">My Account</a></li>
+                  <li><a href="#">My Orders</a></li>
+                  <li><a href="#">About Love Soma Rewards</a></li>
+                  {% else %}
+                  <li><a href="#">Your Account</a></li>
+                  <li><a href="#">Your Orders</a></li>
+                  <li><a href="#">Payment Info</a></li>
+                  <li><a href="#">Loyalty Program</a></li>
+                  {% endif %}                  
+                </ul>
+                <hr>
+                <p>
+                  {% include _atoms/buttons/button-link.html btnLabel='Sign Out' btnClass='btn-primary' %}
+                </p>
+                <img class="img-responsive" src="http://placehold.it/300x125&text=Promo+Image" alt="">
+              </div>
+            </div>
+          </li>
+          {% if page.brand == 'soma' %}
+            <li class="hidden-xs hidden-sm">
+              <a href="#">Register</a>
+            </li>              
+          {% endif %}
+          <li class="dropdown menu-find">
+            <a href="#">
+              <svg class="icon-map">
+                <use xlink:href="#icon-map"></use>
+              </svg>
+            <span>Find a Boutique</span>
+            <span class="mobile-label">Stores</span>
+          </a>
+          </li>
+          <li class="dropdown menu-search">
+            <a href="#" class="search-toggle" data-toggle="search" aria-controls="search-wrap" aria-expanded="false">
+              <svg class="icon-search">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+              <span class="sr-only">Search</span>
+              <span class="mobile-label">Search</span>
+            </a>
+          </li>
+          <li class="dropdown menu-bag">
+            <a href="{{ site.baseurl }}/pages/chicos/pdp/default.html">
+              <span class="bag-wrap">
+                <svg class="icon-bag">
+                  {% if page.brand == "whbm" %}
+                    <use xlink:href="#icon-bag-whbm"></use>
+                  {% elsif page.brand == 'soma' %}
+                    <use xlink:href="#icon-bag-soma"></use>                    
+                  {% else %}
+                    <use xlink:href="#icon-bag"></use>
+                  {% endif %}                  
+                </svg>
+                <span class="bag-number">3</span>
+              </span>
+              <span class="mobile-label">Bag</span>
+            </a>
+            <div id="persistent-cart" class="dropdown-menu dropdown-menu-right dropdown-utility dropdown-bag-count">
+              <div class="dropdown-inner">
+                <a href="#" data-toggle="close-cart">
+                  <svg class="icon-close">
+                    <use xlink:href="#icon-close"></use>
+                  </svg>
+                  <span class="sr-only">Close</span>
+                </a>
+                <h3>My Shopping Bag (3)</h3>
+                <div class="product-details-wrap">
+                  <div class="product-details">
+                    <div class="row row-tight">
+                      <div class="col-xs-3">
+                        <img class="img-responsive" src="http://placehold.it/200x250&amp;text=Product" alt="">
+                      </div>
+                      <div class="col-xs-9">
+                        <table class="table table-bag">
+                          <tbody>
+                            <tr>
+                              <td>Product Name</td>
+                              <td class="text-right"><span class="strikethrough">$140.00</span></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span>Color:</span> Black<br>
+                                <span>Size:</span> 2 (4/6, XS)<br>
+                                <span>Quantity:</span> 1<br>
+                              </td>
+                              <td class="text-right cell-bottom">
+                                <a href="#" class="text-uppercase">Edit</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-details">
+                    <div class="row row-tight">
+                      <div class="col-xs-3">
+                        <img class="img-responsive" src="http://placehold.it/200x250&amp;text=Product" alt="">
+                      </div>
+                      <div class="col-xs-9">
+                        <table class="table table-bag">
+                          <tbody>
+                            <tr>
+                              <td>Product Name</td>
+                              <td class="text-right">$140.00</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span>Color:</span> Black<br>
+                                <span>Size:</span> 2 (4/6, XS)<br>
+                                <span>Quantity:</span> 1<br>
+                              </td>
+                              <td class="text-right cell-bottom">
+                                <a href="#" class="text-uppercase">Edit</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-details">
+                    <div class="row row-tight">
+                      <div class="col-xs-3">
+                        <img class="img-responsive" src="http://placehold.it/200x250&amp;text=Product" alt="">
+                      </div>
+                      <div class="col-xs-9">
+                        <table class="table table-bag">
+                          <tbody>
+                            <tr>
+                              <td>Product Name</td>
+                              <td class="text-right">$140.00</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span>Color:</span> Black<br>
+                                <span>Size:</span> 2 (4/6, XS)<br>
+                                <span>Quantity:</span> 1<br>
+                              </td>
+                              <td class="text-right cell-bottom">
+                                <a href="#" class="text-uppercase">Edit</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% comment %}<hr>{% endcomment %}
+                <div class="hidden-xs">
+                  <h3>Order Summary</h3>
+                  <div class="row">
+                    <div class="col-xs-8">Item Subtotal</div>
+                    <div class="col-xs-4 text-right">$140.00</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-8">Estimated Total (before tax)</div>
+                    <div class="col-xs-4 text-right">$140.00</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-8">25% off full-priced Jackets</div>
+                    <div class="col-xs-4 text-right">-$40.00</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-8">Additional Discount</div>
+                    <div class="col-xs-4 text-right">-$40.00</div>
+                  </div>
+                  <hr>
+                </div>
+                <div class="row">
+                  <div class="col-xs-7">
+                    <div class="cart-links">
+                      <a href="#">View my bag</a><br>
+                      <a href="#">Continue Shopping</a>
+                    </div>
+                  </div>
+                  <div class="col-xs-5">
+                    {% include _atoms/buttons/button-link.html btnLabel='Check Out' btnClass='btn-primary btn-lg btn-block' %}
+                  </div>
+                </div>
+                <div class="bag-promo-img hidden-xs">
+                  <a href="#"><img class="img-responsive" src="http://placehold.it/348x90&text=Promo+Image" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- #header-inner -->
+
+    {% if page.brand == "whbm" %}
+      {% include _content/header/nav-whbm.html %}
+    {% elsif page.brand == "soma" %}
+      {% include _content/header/nav-soma.html %}
+    {% else %}
+      {% include _content/header/nav-chicos.html %}
+    {% endif %}
+
+    <div id="search-wrap">
+      <div id="search">
+        <svg class="icon-search">
+          <use xlink:href="#icon-search"></use>
+        </svg>
+        <div id="search-inner">
+          <div class="search-form">
+            <div class="input-group">
+              <input type="text" class="form-control typeahead" placeholder="Start typing to search" autofocus="autofocus">
+              <span class="input-group-btn">
+                <button class="btn btn-primary hidden-xs" type="button">Search</button>
+                <a href="#" class="btn search-close" data-toggle="search" aria-controls="search-wrap" aria-expanded="false">
+                  <svg class="icon-close">
+                    <use xlink:href="#icon-close"></use>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </header><!-- #header -->
+</div><!-- #header-wrap -->
+

@@ -1,0 +1,12 @@
+<div class="{{ include.moduleLayout }}">
+  {% if include.moduleLayout == 'shelfless-promo-2x' or include.moduleLayout == 'shelfless-promo-4x' %}
+    <img src="{{ include.moduleImage }}" alt="" class="img-responsive">
+  {% endif %}
+  {% if include.moduleHeading != "" or include.moduleCopy != "" or include.moduleCTA != "" %}
+  <div class="shelfless-promo-text">
+    <h3>{{ include.moduleHeading }}</h3>
+    <p>{{ include.moduleCopy }}</p>
+    <a href="{{ include.moduleLink }}">{{ include.moduleCTA }}</a>
+  </div>
+  {% endif %}
+</div>

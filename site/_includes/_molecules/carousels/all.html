@@ -1,0 +1,96 @@
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-default">Carousel</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/carousels/default.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/carousels/default.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-jumnb">Jumbo</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/carousels/jumbo.html carouselImage='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+3360x1200&w=3360&h=1200' carouselImageMobile='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+767x767&w=767&h=767' carouselHeading='Zenergy<sup>&reg;</sup>' carouselCopy='<p>Activewear that goes anywhere.</p>' btnLabel='Shop Now' btnClass='btn-primary' btnLink='#' btnExtra='' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/carousels/jumbo.html carouselImage='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+3360x1200&w=3360&h=1200' carouselImageMobile='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+767x767&w=767&h=767' carouselHeading='Zenergy<sup>&reg;</sup>' carouselCopy='<p>Activewear that goes anywhere.</p>' btnLabel='Shop Now' btnClass='btn-primary' btnLink='#' btnExtra='' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-related">Related Products (viewable on mobile PDP)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-xs-6">
+          {% include _molecules/carousels/related.html %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/carousels/related.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-collection-promo">Collection Promo</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-xs-6">
+          {% include _molecules/carousels/collection-promo.html promoType="carouselPromo" %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+          {% include _molecules/carousels/collection-promo.html promoType="carouselPromo" %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-collection-promo-single">Collection Promo (Single Element)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-xs-6">
+          {% include _molecules/carousels/collection-promo.html promoType="singleCarouselPromo" %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+          {% include _molecules/carousels/collection-promo.html promoType="singleCarouselPromo" %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>

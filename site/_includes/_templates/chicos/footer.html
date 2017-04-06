@@ -1,0 +1,94 @@
+<footer id="footer" role="contentinfo">
+  <div id="footer-inner">
+    <div class="mobile-contact">
+      <div><a href="tel:8888554986"><span>Call Us </span>888-855-4986</a></div>
+      <div><a href="mailto:something@chicos.com">Email Us</a></div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="footer-menu-block visible-sm visible-xs">
+            <div class="footer-heading"><a href="#">Find a Boutique</a></div>
+          </div>
+          <div class="footer-menu-block visible-sm visible-xs">
+            <div class="footer-heading"><a href="#">Gift Cards</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-12">
+          <div class="footer-menu-block">
+            <div class="footer-heading footer-menu-toggle">More Ways to Shop</div>
+            <ul>
+              <li class="hidden-xs hidden-sm"><a href="#">Find a Boutique</a></li>
+              <li class="hidden-xs hidden-sm"><a href="#">Gift Cards</a></li>
+              <li><a href="#">Passport Program</a></li>
+              <li><a href="#">Online Catalog</a></li>
+              <li><a href="#">Outlet Locator TBD</a></li>
+              <li><a href="#">Style by Appointment</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <div class="footer-menu-block">
+            <div class="footer-heading footer-menu-toggle">Support</div>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="tel:+8888554986">888.855.4986</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Payment &amp; Shipping Info</a></li>
+              <li><a href="#">Returns &amp; Exchanges</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <div class="footer-menu-block">
+            <div class="footer-heading footer-menu-toggle">About Chicos</div>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Charity</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <div class="footer-newsletter">
+            <div class="footer-heading">Stay Connected</div>
+            <label for="newsletter-signup"><span class="text-uppercase">Get it first</span> - Sign up and receive 10% off</label>
+            <div class="input-group">
+              <input type="text" id="newsletter-signup" class="form-control" placeholder="Enter email address">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">Submit</button>
+              </span>
+            </div>
+          </div>
+          {% comment %}make the above a molecule{% endcomment %}
+          {% include _molecules/components/social-footer.html %}
+        </div>
+      </div>
+      <div id="footer-bot">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="copyright">
+              <span class="copy">&copy; Copyright 2015 Chico's Distribution Services, LLC. All rights reserved.</span>
+              <span class="terms"><a href="#">Terms &amp; Conditions</a></span>
+              <span class="policy"><a href="#">Privacy Policy</a></span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ship-to">
+              Ship to: <a href="#"><img src="{{ site.baseurl }}/web_assets/imgs/flags/usa.png" alt="USA"></a>
+            </div>        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="offcanvas-overlay"></div>

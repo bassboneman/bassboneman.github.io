@@ -1,0 +1,35 @@
+<div id="mobile-menu-utility">
+  <div>
+    <a href="#" class="menu-toggle" data-toggle="offcanvas">
+      <svg class="icon-menu">
+        <use xlink:href="#icon-menu"></use>
+      </svg>
+      <span class="mobile-label">Menu</span>
+    </a>
+    <a href="#" class="menu-stores">
+      <svg class="icon-map">
+        <use xlink:href="#icon-map"></use>
+      </svg>
+      <span class="mobile-label">Stores</span>
+    </a>
+    <a href="#" class="menu-search" data-toggle="search">
+      <svg class="icon-search">
+        <use xlink:href="#icon-search"></use>
+      </svg>
+      <span class="mobile-label">Search</span>
+    </a>
+    <div class="menu-bag">
+      <a href="{{ site.baseurl }}/{{ page.brand }}/pages/checkout/shopping-bag.html">
+        <span class="bag-wrap">
+          <svg class="icon-bag">
+            <use xlink:href="#icon-bag"></use>
+          </svg>
+          <span class="bag-number">3</span>
+        </span>
+        <span class="mobile-label">Bag</span>
+      </a>
+      {% include _content/header/cart-final-sale.html %}
+    </div>
+
+  </div>
+</div>

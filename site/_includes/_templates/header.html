@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include _templates/head.html %}
+  {% comment %}{% include head.html %}{% endcomment %}
+</head>
+<body 
+  mobile-experience="desktop" 
+  class="offcanvas-closed {{ page.bodyClass }}
+    {% if page.layout == 'frameless' %}frameless{% endif %}
+    {% if page.layout == 'print' %}print-page{% endif %}
+    {% if page.promo == 'footer' %}page-has-promo{% endif %}
+    
+  "
+  {% if page.layout == "print" %}onload="window.print()"{% endif %}
+>
+  
+  {% include _assets/svg-defs.html %}
+
+  <div id="page-wrap">
+    {% if page.layout == "frameless" %}
+    {% elsif page.layout == "print" %}
+      <header class="text-center" role="banner">
+        <svg>
+          {% if page.brand == "whbm" %}
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-whbm"></use>
+          {% elsif page.brand == "soma" %}
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-soma"></use>
+          {% else %}
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo"></use>
+          {% endif %}
+        </svg>
+      </header>
+    {% else %}
+      {% if page.header == "orig" %}
+        {% include _content/header/header-orig.html %}  
+      {% else %}
+        {% include _content/header/header.html %}
+      {% endif %}
+    {% endif %}

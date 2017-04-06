@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/ec2-user/deploy
+sudo jekyll build --destination /var/www/html --no-watch
+sudo service httpd start

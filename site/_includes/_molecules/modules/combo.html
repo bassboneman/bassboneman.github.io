@@ -1,0 +1,71 @@
+{% if page.brand == 'whbm' %}
+{% capture arrowLeft %}<use xlink:href="#icon-promo-left"></use>{% endcapture %}
+{% capture arrowRight %}<use xlink:href="#icon-promo-right"></use>{% endcapture %}
+{% else %}
+{% capture arrowLeft %}<use xlink:href="#icon-arrow-left"></use>{% endcapture %}
+{% capture arrowRight %}<use xlink:href="#icon-arrow-right"></use>{% endcapture %}
+{% endif %}
+
+<section class="module {{ include.moduleClass }}">
+  <div class="module-combo">
+    <div class="module-inner">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="module-combo-img">
+            <img src="{{include.moduleComboImg}}" class="img-responsive" alt="">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="module-combo-carousel">
+            <div class="module-combo-copy">
+              {% if include.moduleCollection %}
+                {% include _atoms/text/heading-collection.html %}
+              {% endif %}
+              <h3>{{include.moduleComboHeading}}</h3>
+              {% if include.moduleComboButton %}
+                <a href="#" class="{% if include.moduleComboButtonClass %}{{ include.moduleComboButtonClass }}{% else %}btn btn-primary btn-responsive{% endif %}">{{include.moduleComboButton}}</a>            
+              {% endif %}
+            </div>
+            <div id="{% if include.carouselID %}{{include.carouselID}}{% else %}carousel-combo{% endif %}" class="carousel slide" data-ride="carousel" data-interval="false" aria-live="polite" {% if include.carouselAttr %}{{ include.carouselAttr }}{% endif %}>
+              <ol class="carousel-indicators">
+                <li data-target="#{% if include.carouselID %}{{include.carouselID}}{% else %}carousel-combo{% endif %}" data-slide-to="0" class="active"></li>
+                <li data-target="#{% if include.carouselID %}{{include.carouselID}}{% else %}carousel-combo{% endif %}" data-slide-to="1" class=""></li>
+                <li data-target="#{% if include.carouselID %}{{include.carouselID}}{% else %}carousel-combo{% endif %}" data-slide-to="2" class=""></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="{{include.moduleComboCarouselImg1}}" alt="">
+                  <div class="carousel-caption">
+                    {{include.moduleComboCarouselCaption1}}
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="{{include.moduleComboCarouselImg2}}" alt="">
+                  <div class="carousel-caption">
+                    {{include.moduleComboCarouselCaption2}}
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="{{include.moduleComboCarouselImg3}}" alt="">
+                  <div class="carousel-caption">
+                    {{include.moduleComboCarouselCaption3}}
+                  </div>
+                </div>
+              </div>
+              <a class="left carousel-control" href="#{% if include.carouselID %}{{include.carouselID}}{% else %}carousel-combo{% endif %}" data-slide="prev" aria-label="previous">
+                <svg class="icon-arrow-left" role="presentation">
+                  {{ arrowLeft }}
+                </svg>
+              </a>
+              <a class="right carousel-control" href="#{% if include.carouselID %}{{include.carouselID}}{% else %}carousel-combo{% endif %}" data-slide="next" aria-label="next">
+                <svg class="icon-arrow-right" role="presentation">
+                  {{ arrowRight }}
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- .module -->

@@ -1,0 +1,179 @@
+// this includes styles for persistent cart and login dropdowns
+.menu-bag,
+.menu-signin {
+  position: relative; // getting the cart to show up where it should
+}
+.dropdown-signin {
+  margin-top: 3rem;
+}
+
+// persistent and signin panels
+.dropdown-signin,
+#persistent-cart {
+  width: 32rem;
+  display: block !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  background: #fff;
+  border: 1px solid $color-black;
+  border-top-width: 3px;
+  border-radius: 0;
+  @include box-shadow-none;
+  @include transition(all, .4s);
+  h3 {
+    margin: 0 0 1rem 0;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  .dropdown-inner {
+    // width: 32rem;
+    text-align: center;
+    @include dropdown-signin;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      li {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  span {
+    display: inline !important;
+  }
+  .icon-close {
+    float: right;
+    color: $color-black;
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-top: -.4rem;
+    cursor: pointer;
+  }
+  hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+#persistent-cart {
+  text-align: left;
+  top: 100%;
+  @media screen and (min-width: 992px) {
+    margin-top: 1.2rem;  
+  }
+  width: 37rem;
+  .cart-inner {
+    .customer-links {
+      font-size: 1.3rem;
+      text-align: center;
+      text-transform: uppercase;
+      a {
+        margin: 0 .8rem;
+      }
+    }
+  }
+  .product-details-wrap {
+    max-height: 20rem;
+    margin: 0 0 1.5rem 0;
+    overflow-y: scroll;
+    overflow-x: hidden; // needed thanks to bootstrap rows
+    border-bottom: .2rem solid $color-border;
+  }
+  .bag-promo-img {
+    margin: 0 -1rem -1rem -1rem;
+  }
+  // @media screen and (max-width: 767px) {
+  //   // margin-top: 0;
+  //   position: fixed;
+  //   width: calc(100% - 3rem);
+  //   top: 1.5rem;
+  //   right: 1.5rem;
+  //   // .sticky & {
+  //   //   top: 9.9rem;
+  //   //   height: calc(100% - 9.9rem);
+  //   // }
+  // }
+}
+
+.cart-links {
+  margin-bottom: 1.5rem;
+  line-height: 1.7rem;
+  a {
+    display: inline-block;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: $break-xs-max) {
+    margin: 0;
+  }
+}
+
+.menu-bag > a {
+  display: block;
+  z-index: 1000;
+}
+
+@mixin header-dropdown-open {
+  visibility: visible;
+  opacity: 1;
+  @include transition(all, .4s);
+}
+
+// we need two different classes (open and hover) because this element can be triggered two different ways:
+// 1. on "add to bag" click
+// 2. hovering over the icon (on desktop)
+// I would love to simplify the way we show this and have it happen on click always, but I digress.
+// reveal the cart on add to bag click
+.menu-bag.hover #persistent-cart,
+#persistent-cart.open,
+.menu-signin.open .dropdown-menu {
+  @include header-dropdown-open;
+}
+
+#persistent-mobile {
+  font-size: 1.6rem;
+  text-align: left;
+  .modal-dialog {
+    width: auto !important;
+    margin: 1.5rem !important;
+  }
+  .close {
+    font-size: 4rem;
+    text-shadow: none;
+    @include opacity(1.0);
+  }
+  h3 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .bag-list {
+    max-height: calc(100vh - 28.3rem);
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    overflow: auto;
+    border-bottom: .1rem solid $color-border;
+    .media + .media {
+      padding-top: 1.5rem;
+      border-top: .1rem solid $color-border;
+    }
+  }
+  .p-type {
+    display: block;
+    font-weight: 400;
+  }
+  .media-object {
+    width: 8.6rem;
+  }
+}

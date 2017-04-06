@@ -1,0 +1,14 @@
+.cta-wrap {
+  margin-bottom: 3rem;
+  .cta-wrap-inner {
+    padding-top: $dimension-small;
+    padding-bottom: $dimension-small;
+    *:last-child {
+      margin-bottom: $dimension-none;
+    }
+    h3 {
+      margin-bottom: $dimension-small;
+    }
+  }
+  @include cta-wrap;
+}

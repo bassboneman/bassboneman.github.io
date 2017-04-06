@@ -1,0 +1,196 @@
+{% if page.brand == 'soma' %}
+{% capture footnote1 %}*{% endcapture %}
+{% capture footnote2 %}†{% endcapture %}
+{% capture footnote3 %}‡{% endcapture %}
+{% capture footnote4 %}§{% endcapture %}
+{% capture footnote5 %}||{% endcapture %}
+{% else %}
+{% capture footnote1 %}*{% endcapture %}
+{% capture footnote2 %}**{% endcapture %}
+{% capture footnote3 %}***{% endcapture %}
+{% capture footnote4 %}****{% endcapture %}
+{% capture footnote5 %}†{% endcapture %}
+{% endif %}
+
+{% if page.brand == 'whbm' %}
+
+  <div class="well">
+    <h2 class="red">2016 Holiday Shipping Schedule</h2>
+    <p>(Orders placed Monday-Friday)</p>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td class="red" style="width: 25%;"><strong>December 18</strong></td>
+          <td>Last day for Standard orders to deliver by Saturday, December 24 (Orders placed by 2:00pm EST).</td>
+        </tr>
+        <tr>
+          <td class="red"><strong>December 20</strong></td>
+          <td>Last day for Express and Two-Day orders to deliver by Saturday, December 24 (Orders placed by 2:00pm EST).</td>
+        </tr>
+        <tr>
+          <td class="red"><strong>December 21</strong></td>
+          <td>Last day for Next Day orders to deliver by Saturday, December 24 (Orders placed by 2:00pm EST).</td>
+        </tr>
+      </tbody>
+    </table>
+    <dl>
+      <dt>Expedited APO/FPO</dt>
+      <dd>Order by 2:00pm EST on December 8 for delivery by Saturday, December 24.</dd>
+      <dt>International
+      <dd>December 1 - Last day for Standard orders to deliver by Saturday, December 24 (Orders placed by 2:00pm EST).</dd>
+    </dl>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Shipping Options</th>
+        <th>Shipping Rates<sup>{{ footnote5 }}</sup></th>
+        <th>Rewards Members</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="attention">Standard</span> *<br>
+          6-9 Business Days
+        </td>
+        <td>$5.95</td>
+        <td>Free</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="attention">Express</span> **<br>
+          2-5 Business Days
+        </td>
+        <td>$9.95</td>
+        <td>$7.95</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="attention">Two Day</span> ***<br>
+          2 Business Days
+        </td>
+        <td>$16.95</td>
+        <td>$14.95</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="attention">Next Day</span> ***<br>
+          Next Business Day<br>
+          <strong>Signature Required</strong>
+        </td>
+        <td>$25.00</td>
+        <td>$25.00</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="attention">International</span> ****<br>
+          10-14 days
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="text-center">Information based on orders placed by 2pm ET Monday through Friday</p>
+  <p>{{ footnote1 }} Standard delivery is available for all U.S. addresses. APO/FPO military address deliveries arrive within 6-9 business days via USPS.</p>
+  <p>{{ footnote2 }} Express delivery is not available for U.S. territories, Alaska, and Hawaii.</p>
+  <p>{{ footnote3 }} Two Day and Next Day deliveries are not available for P.O. Boxes, APO/FPO military addresses, and other certain areas FedEx cannot reach.</p>
+  <p>{{ footnote4 }} International delivery is not available for international P.O. boxes. If your country isn't listed on our drop-down country box, we're currently unable to ship there.</p>
+  <p><strong>Please note:</strong> "Business day" refers to Monday through Friday, excluding holidays. Next Day requested on Fridays is not available for Saturday arrival.</p>
+  <p><sup>†</sup> Non-WHBM Rewards members and current WHBM Rewards members who have not yet reached Platinum, Gold or Silver status will receive these shipping rates.</p>
+  <h4>Need it in a hurry?</h4>
+  <p>Express delivery is twice-as-fast.</p>
+  <h4>Order Tracking</h4>
+  <p>For online orders, just click on the link in your confirmation email. If you placed a phone order, please call our Customer Service Team. Unfortunately tracking is not available for international delivery.</p>
+  <h4>Sales Tax</h4>
+  <p>Taxes are based on the order's "Ship To" address.</p>
+  <h4>International</h4>
+  <p>If you're shipping to a country outside the U.S., your order may be subject to import duties and taxes, which are levied once your package reaches your country. For more information regarding custom policies, please contact your country's local customs office.</p>
+  <p class="back-top"><a href="#top">Back to top</a></p>
+
+{% else %}
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th colspan="2">
+            <strong>Shipping Options</strong>
+            {% if page.brand == 'chicos' %}<br>
+            (Orders placed by 2pm ET Monday-Friday){% endif %}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="attention">Standard</span> {{ footnote1 }}</td>
+          {% if page.brand == 'soma' %}
+            <td>6-9 Business Days</td>
+          {% else %}
+            <td>7-10 days</td>
+          {% endif %}
+        </tr>
+        <tr>
+          <td><span class="attention">Express</span> {{ footnote2 }}</td>
+          {% if page.brand == 'soma' %}
+            <td>2-5 Business Days</td>
+          {% else %}
+            <td>3-5 days</td>
+          {% endif %}
+        </tr>
+        <tr>
+          <td><span class="attention">Two Day</span> {{ footnote3 }}</td>
+          {% if page.brand == 'soma' %}
+            <td>2 Business Days</td>
+          {% else %}
+            <td>2 days</td>
+          {% endif %}
+        </tr>
+        <tr>
+          <td>
+            <span class="attention">Next Day</span> {{ footnote3 }}<br>
+            <small>Signature Required</small>
+          </td>
+          <td>Next Business Day</td>
+        </tr>
+        <tr>
+          <td><span class="attention">International</span> {{footnote4}}</td>
+          {% if page.brand == 'soma' %}
+            <td>10-14 Business Days</td>
+          {% else %}
+            <td>10-14 days</td>
+          {% endif %}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  {% if page.brand == 'soma' %}
+    <p class="text-center">Information based on orders placed by 2pm ET Monday through Friday</p>
+    <p>{{ footnote1 }} Standard delivery is available for all U.S. addresses. APO/FPO military address deliveries arrive within 7-10 days via USPS.</p>
+    <p>{{ footnote2 }} Express delivery is not available for U.S. territories, Alaska, and Hawaii.</p>
+    <p>{{ footnote3 }} Two Day and Next Day deliveries are not available for P.O. Boxes, APO/FPO military addresses, and other certain areas FedEx cannot reach.</p>
+    <p>{{ footnote4 }} International delivery is not available for international P.O. boxes. If your country isn't listed on our drop-down country box, we're currently unable to ship there.</p>
+    <p><strong>Please note:</strong> "Business day" refers to Monday through Friday, excluding holidays. Next Day requested on Fridays is not available for Saturday arrival.</p>
+  {% else %}
+    <p class="small">
+      {{ footnote1 }} Standard delivery is available for all U.S. addresses. APO/FPO military address deliveries arrive within 7-10 days via USPS.<br>
+      {{ footnote2 }} Express delivery is not available for U.S. territories, Alaska, and Hawaii.<br>
+      {{ footnote3 }} Two Day and Next Day deliveries are not available for P.O. Boxes, APO/FPO military addresses, and other certain areas FedEx cannot reach.<br>
+      {{ footnote4 }} International delivery is not available for international P.O. boxes. If your country isn't listed on our drop-down country box, we're currently unable to ship there.<br>
+      <strong>Please note:</strong> "Business day" refers to Monday through Friday, excluding holidays. Next Day requested on Fridays is not available for Saturday arrival.
+    </p>
+  {% endif %}
+  <h4>Need it in a hurry?</h4>
+  <p>Express delivery is twice-as-fast.</p>
+  <h4>Order Tracking</h4>
+  <p>For online orders, just click on the link in your confirmation email. If you placed a phone order, please call our Customer Service Team. Unfortunately tracking is not available for international delivery.</p>
+  <h4>Sales Tax</h4>
+  <p>Taxes are based on the order's "ship to" address.</p>
+  <h4>International</h4>
+  <p>If you're shipping to a country outside the U.S., your order may be subject to import duties and taxes, which are levied once your package reaches your country. For more information regarding custom policies, please contact your country's local customs office.</p>
+  <p class="back-top"><a href="#top">Back to top</a></p>
+
+
+{% endif %}

@@ -1,0 +1,133 @@
+// NEW SEARCH UI for FLX-3189
+#search-wrap.flex-search-ui {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  // I had to add this to make it work. not sure why.
+  .typeahead-wrapper {
+    margin-top: -4.5rem;
+    @media screen and (max-width: 991px) {
+      margin-top: -4.6rem;
+    }
+  }
+  .search-container {
+    position: relative;
+    padding: .5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #search {
+    position: relative;
+    padding: 0;
+    width: 100%;
+  }
+  input.typeahead {
+    margin: .7rem 0 .5rem 0;
+    padding: 0 2rem;
+    position: absolute;
+  }
+  .icon-search {
+    position: absolute;
+    width: 1.9rem;
+    height: 1.9rem;
+    margin: 1.1rem 0 0 0.9rem;
+    z-index: 3;
+  }
+  .input-group-btn {
+    vertical-align: top;
+  }
+  .header-search-button {
+    padding: 10px;
+    background-color: #e0e0e0;
+    &:hover {
+      background-color: #d6d6d5;
+    }
+  }
+  .search-close .icon-close,
+  .flex-search-ui .search-close .icon-close:hover {
+    color: #fff;
+    fill: #fff;
+    width: 1.8rem;
+    height: 1.5rem;
+  }
+  .search-close {
+    padding: 0 1rem 0 1.4rem;
+  }
+  .input-group .form-control.tt-input {
+    float: none;
+    font-weight: 500;
+    color: #000;
+  }
+  .input-group input.form-control.placeholder {
+    @include search-placeholder;
+  }
+  .form-control {
+    padding: 0;
+  }
+  .endeca-typeahead {
+    position: relative; // added dynamically by script on alpha
+    display: inline-block; // added dynamically by script on alpha
+    width: 100%; // added dynamically by script on alpha
+    padding-left: 1rem;
+    background-color: #fff;
+  }
+  .tt-menu {
+    top: 4.8rem !important;
+    background: #fff !important;
+    font-size: 1.7rem;
+    color: #515151;
+    padding-bottom: .7rem;
+  }
+  .tt-menu .tt-suggestion {
+    padding: .5rem 1.5rem;
+    color: #515151;
+  }
+  .tt-menu .tt-suggestion.tt-cursor {
+    background: #eee;
+  }
+}
+// small
+@media (max-width: 991px) {
+  #search-wrap .form-control {
+    font-size: 1.6rem;
+  }
+}
+// medium and larger
+@media (min-width: 992px) {
+  #search-wrap.flex-search-ui {
+    .search-container {
+      padding: 1.5rem .5rem;
+    }
+    #search {
+      width: 50.4rem;
+      margin: 0 0 0 auto;
+    }
+    .header-search-button {
+      padding: 0.97rem;
+    }
+    input.typeahead {
+      margin-bottom: .4rem;
+    }
+  }
+}
+// Search: Support for legacy search UI
+#search-wrap:not(.flex-search-ui) {
+  .header-search-button {
+    display: inline-block;
+    color: #fff;
+    background-color: #000;
+    border-color: transparent;
+    padding: .6rem 3rem;
+    font-size: 1.4rem;
+    &:after {
+      content: "Search";
+      display: block;
+    }
+  }
+  .search-btn-label {
+    display: none;
+  }
+}
+#search-inner,
+#search-wrap.flex-search-ui .input-group {
+  width: 100%;
+}

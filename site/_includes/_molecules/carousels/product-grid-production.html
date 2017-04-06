@@ -1,0 +1,32 @@
+{% comment %}
+This is the actual code that needs to be used in production. Adding it here so devs can easily access this for future projects.
+{% endcomment %}
+
+<section class="module module-product-grid">
+  <div class="module-inner">
+    {% if include.moduleTitle %}
+      <h2>{{ include.moduleTitle }}</h2>
+    {% endif %}
+    <div id="carousel-product-grid" class="carousel slide {{ include.carouselClass }}" data-ride="carousel" data-interval="false" aria-live="polite">
+      <div class="carousel-inner" data-dp-category="{{ include.moduleDpCategory }}"></div>
+
+      <div class="carousel-control-wrap">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-product-grid" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-product-grid" data-slide-to="1" class=""></li>
+          <li data-target="#carousel-product-grid" data-slide-to="2" class=""></li>
+        </ol>
+        <a class="left carousel-control" href="#carousel-product-grid" data-slide="prev" aria-label="previous">
+          <svg class="icon-arrow-left" role="presentation">
+            <use xlink:href="#icon-arrow-left"></use>
+          </svg>
+        </a>
+        <a class="right carousel-control" href="#carousel-product-grid" data-slide="next" aria-label="next">
+          <svg class="icon-arrow-right" role="presentation">
+            <use xlink:href="#icon-arrow-right"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

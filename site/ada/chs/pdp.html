@@ -1,0 +1,201 @@
+<h2 class="pageName" id="top">Product Description Page</h2>
+<section>
+    <div class="sectionContent">
+        <div class="sectionHead">
+            <p class="issue">Elements must have sufficient color contrast</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Low Vision</li>
+                <li>Color-blindness</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (AA): MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.4.3 Contrast (Minimum)</li>
+            </ul>
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+                <li>1194.21 (j) Color and contrast range</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment">Footer</p><span class="code">&lt;label for=&quot;&quot;&gt;&lt;span class=&quot;text-uppercase&quot;&gt;Get it first&lt;/span&gt; - Sign up and receive 20% off&lt;/label&gt;</span> <span class="code">&lt;span class=&quot;copy&quot;&gt;&Acirc;&copy; Copyright 2016 Chico's Distribution Services, LLC. All rights reserved.&lt;/span&gt;</span> <span class="code">&lt;div class=&quot;ship-to location-store-switch&quot;&gt; Ship to: &lt;a href=&quot;#&quot; id=&quot;contextSelectorLink&quot;&gt;&lt;img src=&quot;/store/ibf/images/flags/USA.jpg&quot; alt=&quot;USA&quot;&gt;&lt;/a&gt; &lt;span id=&quot;ibf-countryName&quot; style=&quot;display:none;&quot;&gt; UNITED STATES&lt;/span&gt; &lt;/div&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Element has insufficient color contrast of 3.53 <span class="code">(foreground color: #898888, background color: #ffffff, font size: 7.5pt, font weight: bold)</span></p>
+        </div>
+        <div class="sectionHead">
+            <p class="issue">Documents must have &lt;title&gt; element to aid in navigation</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Mobility/Dexterity</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>2.4.2 Page Titled</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment">Google Tage Manager : 3rd Party</p><span class="code">&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;</span> <span class="code">&lt;html&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document does not have a non-empty &lt;title&gt; element</p>
+        </div>
+        <div class="sectionHead">
+            <p class="issue">ID attribute value must be unique</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>4.1.1 Parsing</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;form id=&quot;frmAddToBag&quot; name=&quot;frmAddToBag&quot; action=&quot;https://www.chicos.com/store/common/json/cart.jsp?_DARGS=/store/common/flex/browse/product_detail/form/product_details_form.jsp&quot; class=&quot;product-form&quot; method=&quot;post&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: frmAddToBag</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;div id=&quot;product-options&quot; class=&quot;product-options pdp-selects&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: product-options</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment">3rd Party</p><span class="code">&lt;div id=&quot;fit-predictor-wrapper&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: fit-predictor-wrapper</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment">3rd Party</p><span class="code">&lt;div id=&quot;fit-predictor&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: fit-predictor</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;div id=&quot;size-chart&quot; class=&quot;product-size-link&quot;&gt; &lt;a href=&quot;/web_assets/sizechart/size_chart.html?sizeOld=false&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-size&quot; data-title=&quot;Size Charts&quot;&gt;Our Size Chart&lt;/a&gt; &lt;/div&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: size-chart</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;div id=&quot;product-preorder&quot;&gt; &lt;p class=&quot;preorder-message product-msg&quot;&gt; &lt;/p&gt; &lt;/div&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: product-preorder</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;div id=&quot;primary-controls&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: primary-controls</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;input id=&quot;add-to-bag&quot; name=&quot;/atg/commerce/order/purchase/CartModifierFormHandler.addMultipleItemsToOrder&quot; value=&quot;Add To Bag&quot; class=&quot;add-to-bag btn btn-buy btn-lg btn-block&quot; type=&quot;submit&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: add-to-bag</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;div id=&quot;secondary-controls&quot; class=&quot;product-controls-secondary product-form-secondary&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: secondary-controls</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;span id=&quot;add-to-wishlist-modal&quot; class=&quot;btn btn-wrapped&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-add-wishlist&quot;&gt; &lt;span class=&quot;btn-txt&quot;&gt;Add To Wish List&lt;/span&gt;&lt;/span&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: add-to-wishlist-modal</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;span id=&quot;find-in-store&quot; class=&quot;btn btn-wrapped&quot;&gt;Find in Store&lt;/span&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: find-in-store</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;div id=&quot;componentDiv&quot; gigid=&quot;showShareBarUI&quot; style=&quot;visibility: visible;&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: componentDiv</p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;h3 id=&quot;related-items-header&quot; class=&quot;heading-styled&quot;&gt;You May Also Love...&lt;/h3&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: related-items-header</p>
+        </div>
+        <div class="sectionHead">
+            <p class="issue">Images must have alt text</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+                <li>Section 508: MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.1.1 Non-text Content</li>
+            </ul>
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+                <li>1194.22 (a) Text equivalent for non-text elements</li>
+                <li>1194.21 (a) Programmatically-discernable text</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;img src=&quot;/Product_Images/570163530ext1.jpg&quot; class=&quot;thumbnail-img img-responsive thumbnail-img&quot; data-alt-image-large=&quot;/Product_Images/570163530ext1_large.jpg&quot;&gt;</span> <span class="code">&lt;img src=&quot;/Product_Images/570163530ext2.jpg&quot; class=&quot;thumbnail-img img-responsive thumbnail-img&quot; data-alt-image-large=&quot;/Product_Images/570163530ext2_large.jpg&quot;&gt;</span> <span class="code">&lt;img src=&quot;/Product_Images/570163530ext3.jpg&quot; class=&quot;thumbnail-img img-responsive thumbnail-img&quot; data-alt-image-large=&quot;/Product_Images/570163530ext3_large.jpg&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p><span class="code"></span></p>
+            <ul>
+                <li>Element does not have an alt attribute</li>
+                <li>aria-label attribute does not exist or is empty</li>
+                <li>aria-labelledby attribute does not exist, references elements that do not exist or references </li>
+                <li>elements that are empty or not visible</li>
+                <li>Element has no title attribute or the title attribute is empty</li>
+                <li>Element's default semantics were not overridden with role="presentation"</li>
+                <li>Element's default semantics were not overridden with role="none"</li>
+            </ul>
+        </div>
+    </div>
+</section>

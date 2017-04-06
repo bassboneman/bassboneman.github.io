@@ -1,0 +1,273 @@
+{% comment %} This template is also shared by the registration success page. Comments below. {% endcomment %}
+
+{% if page.brand == 'whbm' %}
+
+  <div class="rewards-block">
+    <h2 class="rewards-heading-alt">Richard's Welcome Status</h2>
+    <p class="rewards-status">Member #7AD2013958PCD</p>
+    <h3 class="rewards-heading-alt">
+      Spend $500 to unlock Gold!
+    </h3>
+    <div class="rewards-chart">
+      <div class="rewards-chart-item">
+        <span class="rewards-chart-total" style="width: 100%;"></span>
+        <span class="rewards-chart-label">Welcome!</span>
+      </div>
+      <div class="rewards-chart-item">
+        <span class="rewards-chart-total" style="width: 25%;"></span>
+        <span class="rewards-chart-label">Silver</span>
+      </div>
+      <div class="rewards-chart-item">
+        <span class="rewards-chart-total"></span>
+        <span class="rewards-chart-label">Gold</span>
+      </div>
+      <div class="rewards-chart-item">
+        <span class="rewards-chart-total"></span>
+        <span class="rewards-chart-label">Platinum</span>
+      </div>
+    </div>
+  </div>
+  <h2 class="rewards-heading-alt text-center">Your Benefits</h2>
+  <div class="rewards-benefits-wrap">
+    <div class="rewards-benefits-row">
+      <div class="rewards-benefits-level">
+        <h3>Silver</h3>
+      </div>
+      <div class="rewards-benefits-items">
+        <ul class="list-unstyled">
+          <li>5% off every purchase</li>
+          <li>Free standard shipping discounted expedited shipping - New</li>
+          <li>$10 birthday reward</li>
+          <li>Access to a personal stylist - New</li>
+          <li>Exclusive Silver offers</li>
+        </ul>
+        <p>Unlock Silver status by spending $500 or more annually. Plus, once you've achieved Silver status, you'll never lose it! There's no need to requalify.</p>
+      </div>
+    </div>
+    <div class="rewards-benefits-row rewards-locked">
+      <div class="rewards-benefits-level">
+        <h3>
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-lock"></use>
+          </svg>
+          Gold
+          <small>$500 to go!</small>
+        </h3>
+      </div>
+      <div class="rewards-benefits-items">
+        <ul class="list-unstyled">
+          <li>All Silver benefits, plus:</li>
+          <li>Upgrade to a $15 birthday reward</li>
+          <li>$25 reward twice a year</li>
+          <li>Exclusive pre-orders of new collections - New</li>
+          <li>Exclusive gold offers</li>
+        </ul>
+        <p>Unlock Gold status by spending $1,000 or more annually.</p>
+      </div>
+    </div>
+    <div class="rewards-benefits-row rewards-locked">
+      <div class="rewards-benefits-level">
+        <h3>
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-lock"></use>
+          </svg>
+          Platinum
+        </h3>
+      </div>
+      <div class="rewards-benefits-items">
+        <ul class="list-unstyled">
+          <li>Gold benefits, plus:</li>
+          <li>Upgrade to a $20 birthday reward</li>
+          <li>Upgrade to a $50 reward twice a year</li>
+          <li>Exclusive platinum customer service phone number – New<br>
+            <span class="normal">(find it on your 'my account' page)</span></li>
+          <li>Exclusive platinum offers</li>
+        </ul>
+        <p>Unlock Platinum status by spending $2,000 or more annually.</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-center">
+    <a class="btn btn-link" href="#" data-toggle="modal" data-target="#modal-rewards-faq">FAQs</a>
+    <a class="btn btn-link" href="#" data-toggle="modal" data-target="#modal-rewards-terms">Terms</a>
+  </p>
+  {% include _molecules/modals/modal-whbm-rewards-faq.html %}
+  {% include _molecules/modals/modal-whbm-rewards-terms.html %}
+
+{% elsif page.brand == 'soma' %}
+
+
+  <div class="rewards-login-header">
+    <div class="row">
+      <div class="col-md-6">
+        <h1><img src="{{ site.baseurl }}/web_assets/svg/soma/love-soma-rewards.svg" alt="Love Soma Rewards" class="login-logo"></h1>
+      </div>
+      <div class="col-md-6 text-right-lg">
+        <h3>Hi, Jenny</h3>
+        <p>Member No. 8774608283 | Since 2012</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr-tall">
+
+  <div class="rewards-block rewards-status">
+    <h2>Preferred Status</h2>
+    <h3>Spend $125 more to reach Gold Status</h3>
+    <div class="rewards-graph">
+      <span class="rewards-target">$250</span>
+      <span class="rewards-bar preferred" style="width: 50%;">$125</span>
+    </div>
+    <!--<div class="rewards-block rewards-status">
+      <h2>Gold Status</h2>
+      <h3>Spend $125 more to reach Platinum Status</h3>
+      <div class="rewards-graph">
+        <span class="rewards-bar gold" style="width: 20%;">$275</span>
+      </div>
+    </div>
+    <div class="rewards-block rewards-status">
+      <h2>Platinum Status</h2>
+      <h3>What message goes here?</h3>
+      <div class="rewards-graph">
+        <span class="rewards-bar platinum" style="width: 75%;">$500</span>
+      </div>
+    </div>-->
+    <div class="toggle-wrap">
+      <p class="text-right">
+        <a href="#" class="toggle-link" data-toggle="generic">
+          <span>View</span> Your Benefits 
+          <svg class="icon-arrow-down">
+            <use xlink:href="#icon-arrow-down"></use>
+          </svg>
+        </a>
+      </p>
+      <div class="toggle-item" style="display: none;">
+        {% include _molecules/tables/soma-rewards.html tableClass='table-preferred' %}
+      </div><!-- .toggle-item -->
+    </div><!-- .toggle-wrap -->
+  </div><!-- .rewards-block.rewards-status -->
+
+  <hr class="hr-tall">
+
+  <div class="rewards-block rewards-history">
+    <h3>Points History</h3>
+    <h2>50 Points until your next Reward</h2>
+
+    <div class="toggle-wrap">
+      <p class="text-right">
+        <a href="#" class="toggle-link" data-toggle="generic">
+          <span>View</span> Your History 
+          <svg class="icon-arrow-down">
+            <use xlink:href="#icon-arrow-down"></use>
+          </svg>
+        </a>
+      </p>
+      <div class="toggle-item" style="display: none;">
+        <div class="table-responsive">
+          <table class="table {% if page.brand == 'soma' %}table-striped{% endif %}">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Points</th>
+                <th>Expiration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>02/14/16</td>
+                <td>Online Purchase <a href="javascript://" data-toggle="tooltip" data-placement="top" data-html="true" title="<table class='table'><tr><td>Vanishing Black Bra</td><td>75 points</td></tr><tr><td><strong><em>Double Points on Bras!!</em></strong></td><td>75 points</td></tr></table>"><i class="fa fa-info-circle fa-lg"></i></a></td>
+                <td>150</td>
+                <td>08/14/17</td>
+              </tr>
+              <tr>
+                <td>02/14/16</td>
+                <td>Online Purchase <a href="javascript://" data-toggle="tooltip" data-placement="top" data-html="true" title="<table class='table'><tr><td>Vanishing Black Bra</td><td>75 points</td></tr><tr><td><strong><em>Double Points on Bras!!</em></strong></td><td>75 points</td></tr></table>"><i class="fa fa-info-circle fa-lg"></i></a></td>
+                <td>150</td>
+                <td>08/14/17</td>
+              </tr>
+              <tr>
+                <td>02/14/16</td>
+                <td>Online Purchase <a href="javascript://" data-toggle="tooltip" data-placement="top" data-html="true" title="<table class='table'><tr><td>Vanishing Black Bra</td><td>75 points</td></tr><tr><td><strong><em>Double Points on Bras!!</em></strong></td><td>75 points</td></tr></table>"><i class="fa fa-info-circle fa-lg"></i></a></td>
+                <td>150</td>
+                <td>08/14/17</td>
+              </tr>
+              <tr>
+                <td>02/14/16</td>
+                <td>Online Purchase <a href="javascript://" data-toggle="tooltip" data-placement="top" data-html="true" title="<table class='table'><tr><td>Vanishing Black Bra</td><td>75 points</td></tr><tr><td><strong><em>Double Points on Bras!!</em></strong></td><td>75 points</td></tr></table>"><i class="fa fa-info-circle fa-lg"></i></a></td>
+                <td>150</td>
+                <td>08/14/17</td>
+              </tr>
+              <tr>
+                <td>02/14/16</td>
+                <td>Online Purchase <a href="javascript://" data-toggle="tooltip" data-placement="top" data-html="true" title="<table class='table'><tr><td>Vanishing Black Bra</td><td>75 points</td></tr><tr><td><strong><em>Double Points on Bras!!</em></strong></td><td>75 points</td></tr></table>"><i class="fa fa-info-circle fa-lg"></i></a></td>
+                <td>150</td>
+                <td>08/14/17</td>
+              </tr>
+              <tr>
+                <td>02/14/16</td>
+                <td>Online Purchase <a href="javascript://" data-toggle="tooltip" data-placement="top" data-html="true" title="<table class='table'><tr><td>Vanishing Black Bra</td><td>75 points</td></tr><tr><td><strong><em>Double Points on Bras!!</em></strong></td><td>75 points</td></tr></table>"><i class="fa fa-info-circle fa-lg"></i></a></td>
+                <td>150</td>
+                <td>08/14/17</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- .table-responsive -->
+
+
+        <p class="text-center">
+          <a href="#" class="btn btn-primary">Load More</a>
+          <a href="#" class="btn btn-primary">View All</a>
+        </p>
+        <p>Online &amp; phone orders only appear after they ship. See our <a href="#">FAQs</a>. Are you <a href="#">missing purchases</a>?</p>
+
+      </div><!-- .toggle-item -->
+    </div><!-- .toggle-wrap -->
+
+  </div>
+
+  <hr class="hr-tall">
+
+  {% include _molecules/components/accordion-rewards.html %}
+
+  <p class="text-center">
+    <a href="#" class="btn btn-primary">Earn More Points</a>
+  </p>
+  <p class="text-center">
+    <a href="#" class="btn btn-link">Refer Friends</a>
+  </p>
+  <p class="text-center">
+    <a href="#" class="btn btn-link">Terms</a>
+    <a href="#" class="btn btn-link">FAQs</a>
+  </p>
+  <p>Love Soma Rewards is Soma's customer loyalty program. Love Soma Rewards is open to U.S. and International residents, excluding Canadian residents. Unfortunately, Canadian residents are not eligible for Love Soma Rewards. If you are a Canadian resident, you may create an online account, but you will not be enrolled in our loyalty program.</p>
+  <p>By registering as an associate you agree to adhere to the Chico's FAS policy regarding associate discounts.</p>
+  <p>When shopping online you will not be asked for your Associate ID - we already have it!</p>
+
+{% else %}
+
+  <div class="row">
+    <div class="col-md-8">
+      <p>Your member number is 8775486108. Remember this number because you will want to provide it when shopping in our U.S. stores or by phone. When shopping online you will not be asked for your member number-we already have it!</p>
+      <p><a href="">U.S. Residents:</a> If you are a current Passport member and the website issues you a new account number, the numbers should merge within 72 hours and your original number is the one that will remain active. Any purchases you make on the temporary number will be transferred to your original account once merged. In the meantime, if this interferes with your discounts and benefits, just contact us at 888.855.4986 with your order information and we will make the adjustments for you.</p>
+      <p>As an Introductory Passport Member, earning your way to Passport membership status, your merchandise purchases online will be added to your accumulated purchases amount. When your merchandise purchases reach $500 you will become a Passport member.**</p>
+      <p>For more information on our Passport Program, <a href="passport-program.html">click here</a>.</p>
+      <p class="small">** Chico's Passport is a U.S.-based loyalty program, and is not currently available to customers residing outside of the U.S. Non-U.S. customers may create an online account, but will not be enrolled in our loyalty program. Chico's reserves the right to modify or eliminate benefits without prior notice.</p>
+      <p class="hidden-sm hidden-xs"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#modal-print-passport">Print Your Card</a></p>
+      <hr>
+      <h2>My Account Benefits:</h2>
+      <h3>Track Orders</h3>
+      <p>Review past orders and check status of purchases made online or by phone.</p>
+      <p><a href="my-orders.html" class="btn btn-default">Order Inquiry</a></p>
+      <hr>
+      <h3>Hint, Hint, Hint</h3>
+      <p>Create and manage your Wish List to share with family and friends.</p>
+      <p><a href="" class="btn btn-default">Create Wish List</a></p>
+    </div>
+    <div class="col-md-4 hidden-sm hidden-xs">
+      <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Login+Image&w=300&h=450" alt="">
+    </div>
+  </div>
+  {% include _molecules/modals/modal-print-passport.html %}
+
+{% endif %}

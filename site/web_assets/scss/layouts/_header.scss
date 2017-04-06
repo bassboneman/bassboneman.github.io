@@ -1,0 +1,614 @@
+// Header dimensions for Chicos and WHBM are identical. Soma is 10px taller.
+
+#header-wrap {
+  width: 100%;
+  height: $height-header;
+}
+#header {
+  position: relative;
+  z-index: 500;
+  height: $height-header;
+  background-color: #fff;
+  border-bottom: .1rem solid $color-border;
+  .sticky & {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  #header-inner {
+    position: relative;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+}
+
+.sticky {
+  #header {
+    #header-inner {
+      height: $height-header;
+      @media screen and (max-width: 991px) {
+        height: $height-header-inner-mobile;        
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #header-wrap,
+  #header {
+    height: $height-header-mobile;
+  }  
+}
+
+#menu-utility {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  list-style: none;
+  margin: 0;
+  @include menu-utility;
+  > li {
+    display: inline-block;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+    a {
+      text-decoration: none;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}
+#header-inner {
+  height: $height-header-inner;
+  @media screen and (max-width: 991px) {
+    height: $height-header-inner-mobile;
+  }
+}
+
+// menu
+#menu {
+  position: relative;
+  height: $height-menu;
+  @include clearfix;
+  .sticky & {
+    position: absolute;
+    top: $height-header-inner;
+    left: 0;
+    height: $height-menu;
+    width: 100%;
+  }
+  > ul {
+    max-width: $max-width;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0 1.5rem;
+    > li {
+      float: left;
+      > a {
+        cursor: pointer;
+        display: block;
+        line-height: $height-menu;
+        text-decoration: none;
+        padding: 0 2.9rem;
+        @include transition(all, 0.2s);
+        @media screen and (max-width: 1240px) {
+          padding: 0 2.4rem;          
+        }
+        @media screen and (max-width: 1140px) {
+          padding: 0 1.5rem;          
+        }
+        span {
+          display: block;
+          @include transition(all, 0.2s);
+        }
+        &:hover {
+          color: $color-black;
+        }
+        > h2 {
+          margin: 0;
+          line-height: 4rem;
+          @include menu-li-h2;
+        }
+        &.menu-sale {
+          color: $color-red;
+        }
+      }
+      &:first-child {
+        > a {
+          padding-left: 0;
+        }
+      }
+      &.search-toggle-wrap {
+        float: right;
+        margin-right: 4.2rem;
+        a {
+          display: block;
+          &:hover {
+            border-bottom-color: transparent;
+          }
+        }
+        .icon-search {
+          position: relative;
+          top: .2rem;
+          width: 1.2rem;
+          height: 1.2rem;
+          margin-left: .5rem;
+        }
+        @media screen and (max-width: $break-sm-max) {
+          display: none;
+        }
+      }
+    }
+  }
+  .dropdown {
+    position: static;
+  }
+  .dropdown .dropdown-menu {
+    margin: 0;
+    border: 0;
+    left: 0;
+    right: 0;
+    @include radius(0);
+    @include menu-dropdown;
+    // @include box-shadow-none;
+    &.dropdown-menu-search {
+      padding: 0;
+    }
+    @media screen and (max-width: $break-sm-max) {
+      [class*='col-'] {
+        margin-bottom: 3rem;
+        padding: 1rem 0 0 4rem;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      padding-bottom: 4rem;
+    }
+    @include dropdown-nav-panels;
+  }
+
+  .dropdown-inner {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: $break-sm-max) {
+    .dropdown-menu {
+      position: static;
+      float: none;
+      width: 100%;
+      padding: .5rem 0;
+      border: 0;
+      @include box-shadow-none;
+    }
+    // .col-border {
+    //   border-right: 0;
+    // }
+    .ship-to {
+      margin: 0;
+      line-height: 1.5;
+      color: $color-black;
+      border-bottom: .1rem solid $color-border;
+      @include ship-to-mobile;
+      img {
+        vertical-align: baseline;
+      }
+    }
+  }
+  @media screen and (min-width: $break-md-min) {
+    .dropdown {
+      .dropdown-menu {
+        display: block; // override bootstrap style
+        visibility: hidden;
+        @include opacity(0.0);
+        transition: visibility linear 0.25s, opacity 0.25s linear;
+      } 
+    }
+  }
+
+  // WHBM triangles under menu items
+  > ul {
+    > li.open {
+      @include menu-triangles;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    > ul {
+      .dropdown {
+        > a {
+          > h2 {
+            font-size: $mobile-menu-h2-font-size;
+          }
+          &:first-child {
+            @include mobile-menu-heading;
+            padding: 1.6rem 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  // add .hover to #menu to delay dropdowns
+  &.hover {
+    > ul {
+      > li {
+        &.menu-inactive {
+          > a > h2 {
+            @include menu-inactive;
+          }
+        }
+        // &.open {
+        //   span {
+        //     // @include menu-open-item; makes it 500 weight
+        //   }
+        // }
+        @media screen and (min-width: $break-md-min) {
+          &.open {
+            .dropdown-menu {
+              visibility: visible;
+              @include opacity(1.0);
+              transition: visibility linear 0s, opacity 0.25s linear;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-toggle {
+  display: none;
+  @media screen and (max-width: 991px) {
+    display: block;
+  }
+}
+
+#menu {
+  @media screen and (max-width: $break-sm-max) {
+    > ul {
+      padding: 0;
+      .dropdown {
+        width: 100%;
+        display: block;
+        float: none;
+        border-bottom: .1rem solid $color-border;
+        > a {
+          > h2 {
+            line-height: 1.5;
+            > span {
+              border-bottom: 0;
+              &:after {
+                display: block;
+                float: right;
+                // margin-top: .7rem;
+                font-size: 0;
+                line-height: 0;
+                // width: 1.3rem;
+                // height: 1.3rem;
+                content: url('../svg/close-large.svg');
+                @include opacity(0.8);
+                -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                -webkit-transform-origin: 50% 50%;
+                    -ms-transform-origin: 50% 50%;
+                        transform-origin: 50% 50%;
+                @include transition(all, 0.5s);
+                @include mobile-cat-toggle;
+              }
+            }
+          }
+        }
+        &.dropdown.active {
+          > a {
+            > h2 {
+              > span {
+                border-bottom: 0;
+                &:after {
+                  -webkit-transform: rotate(0deg);
+                      -ms-transform: rotate(0deg);
+                          transform: rotate(0deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .dropdown-menu {
+      position: static;
+      float: none;
+      width: 100%;
+      padding: .5rem 0;
+      border: 0;
+      @include box-shadow-none;
+    }
+    .ship-to {
+      margin: 0;
+      line-height: 1.5;
+      color: $color-black;
+      border-bottom: .1rem solid $color-border;
+      @include ship-to-mobile;
+      img {
+        vertical-align: baseline;
+      }
+    }
+  }
+}
+
+// offcanvas
+html.offcanvas-open,
+body.offcanvas-open {
+  width: 100%;
+  height: 100%;
+  #header { // this allows the smooth menu toggles work on mobile
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+.offcanvas-open {
+  #page-wrap {
+    overflow: hidden !important;
+  }
+}
+
+@media screen and (max-width: $break-sm-max) {
+  #page-wrap {
+    position: relative;
+    @include transition(all, .5s);
+    #menu {
+      -webkit-overflow-scrolling: touch; // makes for smooth scrolling
+      position: fixed;
+      z-index: 2050;
+      top: 0;
+      left: 0;
+      left: -100%;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      padding-bottom: 3rem;
+      background: #fff;
+      @include opacity(0);
+      @include transition(opacity, .5s);
+    }
+  }
+  .offcanvas-open #page-wrap {
+    #menu {
+      left: 0;
+      @include opacity(1.0);
+    }
+  }
+}
+
+.frameless-header {
+  margin: 0 -1.5rem 2rem -1.5rem;
+  padding: 1rem 1.5rem;
+  background: $color-bg-light;
+  h3 {
+    margin: 0;
+  }
+}
+
+// search
+.search-toggle-open {
+  @include search-toggle-open;
+  @media screen and (max-width: $break-sm-max) {
+    background: #fff;
+  }
+}
+
+#search-wrap {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 500;
+  background: $color-search-wrap-bg;
+  @include search-wrap;
+  #search {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+  }
+  .icon-search {
+    float: left;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-top: .7rem;
+    // fill: $color-search-close;
+    fill: #838383;
+  }
+  .form-control {
+    @include search-form-control;
+    font-weight: 400;
+    background: transparent;
+    border-color: transparent;
+    @include box-shadow-none;
+  }
+  .btn-primary {
+    @include search-btn;
+  }
+  .search-close {
+    display: inline-block;
+    padding: 0 0 0 1.4rem;
+    height: 3.4rem;
+    border: 0;
+    .icon-close {
+      display: block;
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-top: .9rem;
+      fill: $color-search-close;
+      @include transition(fill);
+    }
+    &:hover {
+      .icon-close {
+        fill: $color-search-close-hover;
+      }
+    }
+  }
+  .offcanvas-open & {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .menu-toggle,
+  .menu-stores,
+  .menu-search {
+    display: none;
+  }
+}
+
+#mobile-menu-utility {
+  position: relative;
+  max-width: $max-width;
+  margin: 0 auto;
+  > div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  @media screen and (max-width: 991px) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $height-menu-mobile;
+    border-top: .1rem solid $color-mobile-utility-border;
+    > div {
+      width: 100%;
+      left: 0;
+    }
+    .menu-toggle,
+    .menu-stores,
+    .menu-search,
+    .menu-bag {
+      position: relative;
+      display: block;
+      float: left;
+      width: 25%;
+      height: 5.5rem;
+      padding-top: .8rem;
+      text-align: center;
+      text-decoration: none;
+      background: $color-mobile-utility-bg;
+    }
+    .menu-stores,
+    .menu-search,
+    .menu-bag {
+      border-left: .1rem solid $color-mobile-utility-border;
+    }
+  }
+  .mobile-label {
+    display: none;
+  }
+
+  .menu-bag {
+    .bag-wrap {
+      position: relative;
+      display: block;
+      width: 2.5rem;
+      height: 2.2rem;
+      margin: 0 auto;
+      text-align: center;
+      .icon-bag {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.2rem;
+        @include transition(fill);
+      }
+    }
+    .bag-number {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      text-align: center;
+      color: #fff;
+      width: 2.5rem;
+      height: 1.6rem;
+      line-height: 1.6rem;
+      text-align: center;
+      font-size: 1.2rem;
+      @include bag-number;
+    }
+    @media screen and (min-width: 992px) {
+      position: absolute;
+      @include menu-bag-placement;
+    }
+  }
+  .icon-menu,
+  .icon-search {
+    width: 2rem;
+    height: 2rem;
+  }
+  .icon-map {
+    width: 1.4rem;
+    height: 2.2rem;
+  }
+  span {
+    display: block;
+  }
+  @media screen and (max-width: 991px) {
+    .mobile-label {
+      display: block;
+      position: absolute;
+      bottom: .4rem;
+      width: 100%;
+      font-size: 1.1rem;
+      line-height: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// this element holds customer login and details content
+.menu-header-mobile {
+  display: none;
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  font-size: 1.3rem;
+  color: #fff;
+  background: $color-black;
+  @include menu-header-mobile;
+  h3 {
+    margin: 0 0 .5rem 0;
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+  a {
+    color: #fff;
+  }
+  .icon-close {
+    width: 2rem;
+    height: 2rem;
+    fill: #fff;
+  }
+  .customer-links {
+    @include customer-links;
+    a + a {
+      margin-left: .8rem;
+    }
+  }
+  @media screen and (max-width: $break-sm-max) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) { 
+  .sub-nav-split {
+    @include clearfix;
+    li {
+      float: left;
+      width: 50%;
+      &:nth-child(odd) {
+        clear: left;
+      }
+    }
+  }
+}

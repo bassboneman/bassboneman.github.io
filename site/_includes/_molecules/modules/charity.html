@@ -1,0 +1,17 @@
+<section class="module">
+  <div class="module-charity">
+    <div class="module-inner">
+      <img src="{{ site.baseurl }}/web_assets/imgs/charity/{{ include.charityLogo }}" class="img-responsive" alt="{{ include.charityCopy }}">
+      <h2>{{ include.charityHeading }}</h2>
+      <p class="module-charity-copy">{{ include.charityCopy }}</p>
+      <p>
+        <a href="#" class="btn btn-primary btn-responsive">Learn More</a>
+      </p>
+      {% if include.charityExtra %}
+        <p class="module-charity-extra">
+          <a href="#">{{ include.charityExtra }}</a>
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</section><!-- .module -->

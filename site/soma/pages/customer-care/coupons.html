@@ -1,0 +1,13 @@
+---
+layout: page-customer
+title: Soma Coupons and Promotional Codes
+top-link: pages
+brand: soma
+nav: coupons
+---
+
+{% include _content/customer-care/coupons.html %}
+
+{% if page.brand == 'soma' %}
+  {% include _molecules/navigation/top-link.html %}
+{% endif %}

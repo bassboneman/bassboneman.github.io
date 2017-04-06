@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="frameless-header">
+    <div class="row">
+      <div class="col-xs-8">
+        <h3>Wish List: Resend Invitations</h3>
+      </div>
+      <div class="col-xs-4 text-right">
+        <a href="" onclick="window.close();">Close Window <i class="fa fa-times-circle"></i></a>
+      </div>
+    </div>
+  </div>
+  <h1>Authorized Viewers</h1>
+  <p>Resend invitations to the following checked contacts:</p>
+  <form action="">
+    {% include _atoms/forms/checkbox.html checkValue='check-1' labelName="Groot - i.am.groot@gmail.com" %}
+    {% include _atoms/forms/checkbox.html checkValue='check-2' labelName="Peter Quill - starlord@gmail.com" %}
+    {% include _atoms/forms/textarea.html labelID='note' labelName='Note' %}
+    {% include _atoms/buttons/button.html btnClass='btn-default' btnLabel='Send' %}
+  </form>
+</div><!-- .container-fluid -->

@@ -1,0 +1,14 @@
+{% comment %}For the sake of brevity, this molecule is not included in the atomic inventory. It's an abbreviated variation of "options-all".{% endcomment %}
+<div class="product-options">
+  <div class="pdp-selects">
+    <div class="row row-tight">
+      <div class="col-sm-8">
+        {% include _atoms/forms/select-donation-amount.html %}
+      </div>
+      <div class="col-sm-4">
+        {% include _atoms/forms/select-product-total.html %}
+      </div>
+    </div>
+    {% include _atoms/text/buy-more.html %}
+  </div><!-- .pdp-selects -->
+</div>

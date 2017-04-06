@@ -1,0 +1,77 @@
+<div class="checkout-gift-card">
+  <div class="row">
+    <div class="col-xs-6">
+      <h3 class="margin-bot-none">
+        <svg class="icon-square-lg icon-left"><use xlink:href="#icon-gift-card"></use></svg>
+        Gift Card
+      </h3>
+    </div><!-- .col-xs-6 -->
+    <div class="col-xs-6 text-right">
+      <a href="#" class="checkout-link" data-action="toggle" data-target="giftcard-1" data-label="Close">Apply<span class="hidden-xs hidden-sm"> Gift Card</span></a>
+    </div><!-- .col-xs-6 -->
+  </div><!-- .row -->
+
+  <div class="giftcard-applied-content">
+    <div class="row">
+      <div class="col-xs-8">
+        <div class="media">
+          <div class="media-left">
+            <svg class="icon-left checkmark"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use></svg>
+          </div>
+          <div class="media-body">
+            Gift Card ending in 9901<br>
+            Applied: $75.00 | Balance: $0.00<br>
+          </div><!-- .media-body -->
+        </div><!-- .media -->
+      </div><!-- .col -->
+      <div class="col-xs-4 text-right">
+        <a href="#" class="checkout-link link-toggled" data-toggle="giftcard-remove">Remove</a>
+      </div><!-- .col -->
+    </div><!-- .row -->
+  </div><!-- .giftcard-applied-content -->
+
+
+  <div id="giftcard-1" class="checkout-hidden">
+    <div class="giftcard-form">
+      <div class="row row-tight">
+        <div class="col-sm-6">
+          <div class="field-wrap">
+            {% include _atoms/forms/input.html class="input-lg" labelName='Gift Card Number' labelID='gift-card-number' inputType='text' extra='pattern="\d*"' %}
+          </div><!-- .field-wrap -->
+        </div><!-- .col -->
+        <div class="col-sm-6">
+          <div class="field-wrap">
+            {% include _atoms/forms/input.html class="input-lg" labelName='PIN' labelID='gift-card-pin' inputType='text'  tooltip='Lorem ipsum dolor sit amet' extra='pattern="\d*"' %}
+          </div><!-- .field-wrap -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .checkout-section-form -->
+
+    <div class="giftcard-balance">
+      <div class="row">
+        <div class="col-sm-3">
+          <p>
+            Gift Card Number<br>
+            &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;9901
+          </p>
+        </div><!-- .col -->
+        <div class="col-sm-3">
+          <p>
+            Card Balance<br>
+            $75.00
+          </p>
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .gift-entry-balance -->
+
+    <p class="giftcard-buttons">
+      {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-alt btn-lg' btnLabel='Check Balance' btnExtra='data-toggle="giftcard-balance"' %}
+      {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-alt btn-lg' btnLabel='Check Another' btnExtra='data-toggle="giftcard-another"' %}
+      {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-primary btn-lg' btnLabel='Apply' btnExtra='data-toggle="giftcard-apply"' %}
+    </p>
+ 
+
+  </div><!-- .checkout-hidden -->
+</div><!-- .checkout-gift-card -->
+
+<hr class="hr-dark">

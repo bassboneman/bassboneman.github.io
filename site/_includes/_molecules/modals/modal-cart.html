@@ -1,0 +1,49 @@
+<div class="modal fade" id="modal-cart" tabindex="-1" role="dialog" aria-labelledby="modal-cart" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-header">
+        <h3 class="modal-title">New to Your Order</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-7">
+            {% include _molecules/blocks/product-details.html giftItem='yes' %}
+            {% include _molecules/blocks/product-details.html %}
+            {% include _molecules/blocks/product-details.html %}
+            {% include _molecules/blocks/product-details.html %}
+            {% include _molecules/blocks/product-details.html %}
+            <div class="row clear">
+              <div class="col-xs-6">
+                <p><a href="" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-cart">Checkout</a></p>
+              </div>
+              <div class="col-xs-6 text-right">
+                <p>
+                  {% include _atoms/buttons/button-link.html href='#' btnClass='btn-default btn-sm' btnLabel='Keep Shopping' btnExtra='data-dismiss="modal"' %}
+                </p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-sm-5">
+            <div class="detail-summary">
+              <div class="detail detail-highlight">
+                <h4>Order Summary</h4>
+                <div class="row">
+                  <div class="col-xs-8">Item Subtotal</div>
+                  <div class="col-xs-4 text-right">$121.99</div>
+                </div>
+              </div>
+              <div class="detail">
+                <div class="row">
+                  <div class="col-xs-8">Estimated Total (before tax):</div>
+                  <div class="col-xs-4 text-right">$121.99</div>
+                </div>
+              </div>
+              <p><a href=""><img class="img-responsive" src="http://placehold.it/400x150&text=Promo+Slot" alt="Promo Slot"></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

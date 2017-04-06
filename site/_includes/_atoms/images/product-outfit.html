@@ -1,0 +1,28 @@
+<div id="carousel-outfit-{{include.carouselID}}" class="carousel carousel-outfit slide" data-ride="carousel" data-interval="false" aria-live="polite">
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img class="img-responsive img-swap" src="{{ site.baseurl }}/web_assets/imgs/temp/gray.png" alt="Product Name">
+    </div>
+    <div class="item">
+      <img class="img-responsive img-swap" src="{{ site.baseurl }}/web_assets/imgs/temp/gray.png" alt="Product Name">
+    </div>
+    <div class="item">
+      <img class="img-responsive img-swap" src="{{ site.baseurl }}/web_assets/imgs/temp/gray.png" alt="Product Name">
+    </div>
+  </div>
+  <a class="left carousel-control" href="#carousel-outfit-{{include.carouselID}}" data-slide="prev" aria-label="previous">
+    <svg class="icon-arrow-left" role="presentation">
+      <use xlink:href="#icon-arrow-big-left"></use>
+    </svg>
+  </a>
+  <a class="right carousel-control" href="#carousel-outfit-{{include.carouselID}}" data-slide="next" aria-label="next">
+    <svg class="icon-arrow-right" role="presentation">
+      <use xlink:href="#icon-arrow-big-right"></use>
+    </svg>
+  </a>
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-outfit-{{include.carouselID}}" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-outfit-{{include.carouselID}}" data-slide-to="1"></li>
+    <li data-target="#carousel-outfit-{{include.carouselID}}" data-slide-to="2"></li>
+  </ol>
+</div>

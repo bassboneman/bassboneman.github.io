@@ -1,0 +1,47 @@
+{% include _molecules/navigation/back-link.html linkLabel='Continue Shopping' %}
+<div class="row">
+  <div class="col-md-8">
+    <h1>Your Shopping Bag</h1>
+    <div>
+      <a href="#" class="has-icon">
+        <svg class="icon-square icon-left">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-envelope"></use>
+        </svg>
+        Email
+      </a>
+      <a href="#" class="has-icon" data-toggle="modal" data-target="#modal-print-shopping-bag">
+        <svg class="icon-square icon-left">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-printer"></use>
+        </svg>
+        Print
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="margin-top-lg">{% include _atoms/buttons/button.html btnClass='btn-primary' btnLabel='Checkout Now' %}</div>     
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-md-8">
+    {% include _molecules/blocks/product-details.html quantitySelect='yes' finalSale='yes' %}
+    {% include _molecules/blocks/product-details.html quantitySelect='yes' alertMsg='yes' %}
+    <div class="text-right bag-button">
+      <hr>
+      {% include _atoms/buttons/button.html btnClass='btn-primary' btnLabel='Checkout Now' %}
+    </div>
+    {% include _molecules/blocks/mbox-gift-card-balance.html moduleClass='hidden-xs hidden-sm' %}
+  </div>
+  <div class="col-md-4">
+    {% include _molecules/blocks/order-summary.html %}
+    <p>
+      <a href="#">
+        <img src="https://placeholdit.imgix.net/~text?txtsize=60&txt=Promo+Slot&w=400&h=200" alt="" class="img-responsive">
+      </a>
+    </p>
+    {% include _molecules/blocks/mbox-gift-card-balance.html moduleClass='visible-xs visible-sm' %}
+    {% include _molecules/blocks/sidebar.html %}
+  </div>
+</div>
+{% include _molecules/products/related-all.html relatedHeading="yes" relatedBotBorder="no" %}
+{% include _molecules/modals/modal-print-shopping-bag.html %}

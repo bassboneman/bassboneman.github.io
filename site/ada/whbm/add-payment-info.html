@@ -1,0 +1,93 @@
+<!-- Parent Section Begin -->
+
+<h2 class="pageName" id="top">Add Payment Info : add_edit_credit_card_form.jsp</h2>
+
+<section>
+
+    <!-- Individual Issue Section Begin -->
+
+    <div class="sectionContent">
+
+        <div class="sectionHead">
+
+            <p class="issue">Form elements must have labels</p>
+
+            <p class="issueHeader">Disabilities Affected:</p>
+
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Low Vision</li>
+                <li>Mobility/Dexterity</li>
+            </ul>
+
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+                <li>Section 508: MUST</li>
+            </ul>
+
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.3.1 Info and Relationships</li>
+                <li>3.3.2 Labels or Instructions</li>
+                <li>4.1.2 Name, Role, Value</li>
+            </ul>
+
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+                <li>1194.22 (n) Information required to complete electronic forms online</li>
+                <li>1194.21 (l) Form fields, directions, and cues</li>
+            </ul>
+
+        </div>
+
+        <!-- begin sample code -->
+        <div class="sampleHTML">
+
+            <h3>HTML:</h3>
+
+            <p class="comment"></p>
+
+            <span class="code">&lt;input id=&quot;pCreditCardNum&quot; maxlength=&quot;20&quot; name=&quot;/atg/userprofiling/ProfileFormHandler.editValue.creditCardNumber&quot; value=&quot;&quot; class=&quot;co-formFields&quot; type=&quot;text&quot; size=&quot;19&quot;&gt;</span>
+            <span class="code">&lt;select id=&quot;pCreditCardType&quot; name=&quot;pCreditCardType&quot; class=&quot;co-formFields-nw co-formField-select&quot;&gt;</span>
+            <span class="code">&lt;select id=&quot;pCreditCardExpMonth&quot; name=&quot;pCreditCardExpMonth&quot; class=&quot;co-formFields-small co-formField-select&quot;&gt;</span>
+            <span class="code">&lt;select id=&quot;pCreditCardExpYear&quot; name=&quot;pCreditCardExpYear&quot; class=&quot;co-formFields-small co-formField-select&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;firstName&quot; maxlength=&quot;30&quot; name=&quot;/atg/userprofiling/ProfileFormHandler.editValue.firstName&quot; value=&quot;&quot; class=&quot;co-formFields &quot; type=&quot;text&quot; size=&quot;30&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;lastName&quot; maxlength=&quot;30&quot; name=&quot;/atg/userprofiling/ProfileFormHandler.editValue.lastName&quot; value=&quot;&quot; class=&quot;co-formFields &quot; type=&quot;text&quot; size=&quot;30&quot;&gt;</span>
+            <span class="code">&lt;select id=&quot;pCountry&quot; name=&quot;/atg/userprofiling/ProfileFormHandler.editValue.country&quot; class=&quot;co-formFields co-formField-select&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;pAddress1&quot; maxlength=&quot;40&quot; name=&quot;/atg/userprofiling/ProfileFormHandler.editValue.address1&quot; value=&quot;&quot; class=&quot;co-formFields &quot; type=&quot;text&quot; size=&quot;45&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;pAddress2&quot; maxlength=&quot;40&quot; name=&quot;/atg/userprofiling/ProfileFormHandler.editValue.address2&quot; value=&quot;&quot; class=&quot;co-formFields &quot; type=&quot;text&quot; size=&quot;45&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;pPostalCode&quot; maxlength=&quot;10&quot; name=&quot;/atg/userprofiling/ProfileFormHandler.editValue.postalCode&quot; value=&quot;&quot; class=&quot;co-formFields-small&quot; type=&quot;text&quot; size=&quot;15&quot;&gt;</span>
+            <span class="code">&lt;input name=&quot;coBillToPhone1&quot; class=&quot;co-formFields co-formPhone frmPhone1&quot; maxlength=&quot;3&quot; type=&quot;text&quot; value=&quot;&quot;&gt;</span>
+            <span class="code">&lt;input name=&quot;coBillToPhone2&quot; class=&quot;co-formFields co-formPhone frmPhone2&quot; maxlength=&quot;3&quot; type=&quot;text&quot; value=&quot;&quot;&gt;</span>
+            <span class="code">&lt;input name=&quot;coBillToPhone3&quot; class=&quot;co-formFields co-formPhone frmPhone3&quot; maxlength=&quot;4&quot; type=&quot;text&quot; value=&quot;&quot;&gt;</span>
+
+        </div>
+        <!-- end smaple code -->
+
+        <!-- begin solution -->
+        <div class="proposedSolution">
+
+            <h3>Fix any of the following:</h3>
+            <p><span class="code"></span></p>
+
+            <ul>
+
+                <li>aria-label attribute does not exist or is empty</li>
+                <li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty or not visible</li>
+                <li>Form element does not have an implicit (wrapped) &lt;label&gt;</li>
+                <li>Element has no title attribute or the title attribute is empty</li>
+
+            </ul>
+
+
+        </div>
+        <!-- end solution -->
+
+    </div>
+
+    <!-- End Individual Issue Section -->
+
+</section>
+<!-- End Parent Section  -->

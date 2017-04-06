@@ -1,0 +1,6 @@
+#!/bin/bash
+cd /home/ec2-user
+sudo rm -rf deploy
+sudo mkdir deploy
+sudo pkill -f jekyll
+sudo service httpd stop

@@ -1,0 +1,95 @@
+{% comment %}
+IMAGE MODULE
+  associated class: module-img
+
+moduleClass:
+  accepts: CSS class(es)
+  if no input: nothing happens
+  notes: Custom class in wrapper to apply specific styling inside module
+moduleImage:
+  accepts: URL for image source
+  if no input: broken image tag
+  notes: alt tag pulls from moduleImgName, see notes there
+moduleCollection:
+  accepts: text or HTML
+  associated class: collection-name
+  if no input: element doesn't show
+  wrapper tag: span
+moduleHeading:
+  accepts: text or HTML
+  associated class: none, use `.module-img h3` or something of the sort
+  wrapper tag: h3
+  if no input: element doesn't show, no alt text for moduleImage
+  notes: contents of this are placed as alt text with HTML stripped out. If you're passing HTML through, double-check alt text formatting.
+moduleSubCopy:
+  accepts: text or HTML
+  associated class: none
+  if no input: element doesn't show
+  wrapper tag: none
+moduleLink:
+  accepts: text (HTML can be used but is a less likely use case)
+  associated class: shop-now
+  if no input: element doesn't show
+  wrapper tag: a
+  notes: This is the text that goes inside a CTA (Call to Action)
+
+Example:
+
+```
+{% include _molecules/modules/img.html moduleClass='' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleImgName='Our Best Tops' moduleSubCopy='<p>Lorem Ipsum dolor sit amet.</p>' moduleCta='Shop Now' %}
+```
+
+{% endcomment %}
+
+
+<section class="module {{ include.moduleClass }}">
+  <div class="module-img">
+    <div class="module-inner">
+      {% if include.moduleLink %}
+        <a href="{{ include.moduleLinkUrl }}" class="module-link-wrap" {{ include.moduleExtra }}>
+      {% endif %}
+
+      {% comment %}This will create a video player icon centered over the image{% endcomment %}
+      {% if include.moduleVideo %}
+        <div class="module-img-video">
+          <svg class="play-icon">
+            {% if include.playIcon %}
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play-icon-alt"></use>  
+            {% else %}
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play-icon"></use>
+            {% endif %}
+          </svg>
+      {% endif %}
+
+      <img src="{{ include.moduleImage }}" class="img-responsive" alt="{% if include.moduleHeading %}{{ include.moduleHeading | strip_html }}{% endif %}">
+      
+      {% if include.moduleVideo %}
+        </div><!-- .module-img-video -->
+      {% endif %}
+
+      {% if include.moduleCollection %}
+        <h2 class="collection-name">
+          {{ include.moduleCollection }}
+        </h2>
+      {% endif %}
+      {% if include.moduleHeading %}
+        <h2>{{ include.moduleHeading }}</h2>
+      {% endif %}
+      {% if include.moduleCopy %}
+        <div class="module-copy">{{ include.moduleCopy }}</div>
+      {% endif %}
+      {% if include.moduleLink %}
+        <span class="shop-now">{{ include.moduleLink }}</span>
+      {% endif %}
+
+      {% if include.moduleLink %}
+        </a>
+      {% endif %}
+      {% comment %}
+      {% if include.moduleExtra %}
+        {{ include.moduleExtra }}
+      {% endif %}
+      {% endcomment %}
+    </div>
+  </div>
+</section><!-- .module -->

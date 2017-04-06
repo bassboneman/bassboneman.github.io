@@ -1,0 +1,304 @@
+<section class="example-wrap">
+  <header>
+    <h2 id="products-listing-single">Product Listing (single)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-xs-3">
+          {% include _molecules/products/listing-single.html productPrice='yes' quickView='yes' productRating='yes' productSwatches='yes' productMsg='yes' %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+          {% include _molecules/products/listing-single.html productPrice='yes' quickView='yes' productRating='yes' productSwatches='yes' productMsg='yes' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-listing-all">Product Listing (row)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="collection">
+      {% include _molecules/products/listing-all.html %}
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/listing-all.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-related-single">Related Products (single)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-xs-3">
+          {% include _molecules/products/listing-single.html quickView='yes' %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/listing-single.html quickView='yes' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-related-all">Related Products (all)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/related-all.html quickView='yes' relatedHeading='yes' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/related-all.html quickView='yes' relatedHeading='yes' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-related-all-no-heading">Related Products (all, no heading)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/related-all.html quickView='yes' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/related-all.html quickView='yes' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-heading">Heading</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="product-wrap">
+        {% include _molecules/products/heading.html %}
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/heading.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-controls">Controls</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/controls.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/controls.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-options">Options (all)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/options-all.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/options-all.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-description">Description</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/description.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/description.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-no-inventory">Product Inventory Message</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/product-no-inventory.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/product-no-inventory.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-images">Images</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/images.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/images.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-rating">Rating on PDP (placeholder)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/rating-pdp.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/rating-pdp.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-rating">Rating on Collection (placeholder)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/rating-collection.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/rating-collection.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-fieldset">Fieldset (all)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="product-wrap">
+        {% include _molecules/products/fieldset.html %}
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/fieldset.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-complete">Complete Details</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/complete.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/complete.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="products-outfit">Outfit Template</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/outfit.html outfitLayout='yes' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/outfit.html outfitLayout='yes' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+{% if page.brand == 'soma' %}
+<section class="example-wrap">
+  <header>
+    <h2 id="products-complete-look">Complete the Look</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/products/complete-look.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/products/complete-look.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -1,0 +1,101 @@
+<section class="module {{ include.moduleClass }}">
+  <div class="module-sh {% if include.collapseGrid %}module-collapsible{% endif %} {{ include.moduleLayout }} {% if include.hotspotCarousel %}module-carousel{% endif %}">
+    <div class="module-inner">
+      {% if include.hotspotCarousel %}
+        <div id="carousel-hotspot{% if include.darkCarousel %}-dark{% endif %}" class="carousel slide module-sh-img" data-ride="carousel" data-interval="false" aria-live="polite">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-hotspot{% if include.darkCarousel %}-dark{% endif %}" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-hotspot{% if include.darkCarousel %}-dark{% endif %}" data-slide-to="1" class=""></li>
+            <li data-target="#carousel-hotspot{% if include.darkCarousel %}-dark{% endif %}" data-slide-to="2" class=""></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+      {% else %}{% comment %} not hotspotCarousel{% endcomment %}
+        <div class="module-sh-img">
+      {% endif %}{% comment %} /if hotspotCarousel{% endcomment %}
+        <img src="{{ include.moduleImage }}" alt="Collection Name" class="img-responsive {% if include.moduleImageMobile %}hidden-xs{% endif %}">
+        {% if include.moduleImageMobile %}
+          <img src="{{ include.moduleImageMobile }}" alt="{{ include.moduleHeading }}" class="img-responsive visible-xs">            
+        {% endif %}
+        <div class="hot-spots">
+          {% if include.tooltips %}
+            {% include _molecules/modules/hotspot-tooltips.html %}        
+          {% endif %}
+          {% if include.hotspots %}
+            {% include _molecules/modules/hotspot-default.html %}
+          {% endif %}
+        </div><!-- .hotspots -->
+        {% if include.hotspotCarousel %}
+            </div><!-- .item.active -->
+            <div class="item">
+              <img src="{{ include.moduleImage }}" alt="Collection Name" class="img-responsive {% if include.moduleImageMobile %}hidden-xs{% endif %}">
+              {% if include.moduleImageMobile %}
+                <img src="{{ include.moduleImageMobile }}" alt="{{ include.moduleHeading }}" class="img-responsive visible-xs">            
+              {% endif %}
+              <div class="hot-spots">
+                {% if include.tooltips %}
+                  {% include _molecules/modules/hotspot-tooltips.html %}        
+                {% endif %}
+                {% if include.hotspots %}
+                  {% include _molecules/modules/hotspot-default.html %}
+                {% endif %}
+              </div><!-- .hotspots -->
+            </div><!-- .item -->
+            <div class="item">
+              <img src="{{ include.moduleImage }}" alt="Collection Name" class="img-responsive {% if include.moduleImageMobile %}hidden-xs{% endif %}">
+              {% if include.moduleImageMobile %}
+                <img src="{{ include.moduleImageMobile }}" alt="{{ include.moduleHeading }}" class="img-responsive visible-xs">            
+              {% endif %}
+              <div class="hot-spots">
+                {% if include.tooltips %}
+                  {% include _molecules/modules/hotspot-tooltips.html %}        
+                {% endif %}
+                {% if include.hotspots %}
+                  {% include _molecules/modules/hotspot-default.html %}
+                {% endif %}
+              </div><!-- .hotspots -->
+            </div><!-- .item -->
+          </div><!-- .carousel-inner -->
+          {% if include.promoType != "singleCarouselPromo" %}
+            <a class="left carousel-control" href="#carousel-hotspot{% if include.darkCarousel %}-dark{% endif %}" data-slide="prev" aria-label="previous">
+              <svg class="icon-arrow-left" role="presentation">
+                <use xlink:href="#icon-promo-left"></use>
+              </svg>
+            </a>
+            <a class="right carousel-control" href="#carousel-hotspot{% if include.darkCarousel %}-dark{% endif %}" data-slide="next" aria-label="next">
+              <svg class="icon-arrow-right" role="presentation">
+                <use xlink:href="#icon-promo-right"></use>
+              </svg>
+            </a>
+          {% endif %}
+        {% endif %}{% comment %} /if hotspotCarousel{% endcomment %}
+      </div><!-- .module-sh-img or .carousel -->
+      {% if include.collapseGrid %}
+        <div class="module-sh-copy">
+          <h3>
+            <span class="number">{{ include.collectionNum }}</span>
+            {{ include.collectionTitle }}
+          </h3>
+          <p>{{ include.collectionCopy }}</p>
+        </div>
+        <a href="#" class="btn grid-trigger {% if include.collectionVisible %}expanded{% endif %}" data-toggle="collection-grid" data-grid="#collection-grid-1">
+          <span class="open-text">
+            {% if include.collectionCta %}
+              {{ include.collectionCta }}
+            {% else %}
+              More {{ include.collectionTitle }}
+            {% endif %}
+          </span>
+          <span class="closed-text">Collapse</span>
+          <svg class="icon-arrow-down">
+            <use xlink:href="#icon-arrow-down"></use>
+          </svg>
+        </a>
+      {% endif %}
+      {% comment %} /if collapseGrid {% endcomment %}
+      {% if include.hotspotTitle %}
+        <h2>{{ include.hotspotTitle }}</h2>
+      {% endif %}
+    </div><!-- .module-inner -->
+  </div><!-- .module-sh -->
+</section><!-- .module -->

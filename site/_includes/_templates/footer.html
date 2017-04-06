@@ -1,0 +1,25 @@
+  {% if page.layout == "frameless" %}
+    <div id="copyright">
+      {% if page.brand == 'chicos' %}
+      Chico's and Chico's Passport are registered trademarks of Chico's Brands Investments, Inc.<br>
+      {% endif %}
+      &copy; 2016 Chico's Distribution Services, LLC. All Rights Reserved.
+    </div>      
+  {% else %}
+    {% if page.brand == "chicos" %}
+      {% include _templates/chicos/footer.html %}
+    {% elsif page.brand == "soma" %}
+      {% include _templates/soma/footer.html %}
+    {% elsif page.brand == "whbm" %}
+      {% include _templates/whbm/footer.html %}
+    {% endif %}
+  {% endif %}
+</div><!-- #page-wrap -->
+
+{% include _molecules/components/footer-chat.html %}
+{% include _molecules/components/footer-promo.html %}
+{% include _molecules/modals/modal-disclaimer.html %}
+{% include _templates/foot.html %}
+
+</body>
+</html>

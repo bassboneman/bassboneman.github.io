@@ -1,0 +1,261 @@
+<style>
+  h2 {
+    margin-bottom: 5px;
+  }
+  section {
+    margin: 0;
+    /*padding-bottom: 20px;*/
+  }
+  section ul {
+    margin: 0;
+  }
+  .new-template {
+  }
+  .new-template:before {
+    font-family: 'FontAwesome';
+    display: block;
+    width: 16px;
+    content: "\f06a";
+    float: left;
+    color: green;
+  }
+</style>
+
+<p><span class="new-template"></span> = New Template</p>
+
+<div class="row">
+  <div class="col-sm-6">
+    <section>
+      <h2>Customer Care</h2>
+      <p>The following use the "page-customer" template</p>
+      <ul class="list-unstyled">
+        <li><a href="customer-care/contact-us.html">Contact Us</a></li>
+        <li><a href="customer-care/faq.html">FAQ's</a></li>
+        <li><a href="customer-care/size-charts.html">Size Charts</a></li>
+        <li><a href="customer-care/shipping-handling.html">Shipping &amp; Handling</a></li>
+        <li><a href="customer-care/returns.html">Returns</a></li>
+        <li><a href="customer-care/sales-tax.html">Sales Tax</a></li>
+        <li><a href="customer-care/about-us.html">About Us</a></li>
+        <li><a href="customer-care/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="customer-care/terms.html">Terms of Use</a></li>
+        <li><a href="customer-care/coupons.html">Coupons &amp; Promotions</a></li>
+        <li><a href="customer-care/giving.html">Charitable Giving</a></li>
+      </ul>
+    </section>
+    <hr>
+    <section>
+      <h2>Account</h2>
+      <ul class="list-unstyled">
+        <li><a href="account/register.html">Register</a></li>
+        <li><a href="account/register-associate.html">Register (Associates)</a></li>
+        <li><a href="account/login.html">Login</a></li>
+        <li><a href="account/login-success.html">Login Success</a></li>
+        <li><a href="account/reset-password.html">Reset Password</a></li>
+        <li><a href="account/profile-preferences.html">Profile Preferences</a></li>
+        <li><a href="account/my-orders.html">My Orders</a></li>
+        <li class="new-template"><a href="account/my-orders-none.html">My Orders (without orders)</a></li>
+        <li><a href="account/my-orders-detail.html">My Orders Detail</a> (template shows two states: with and without orders)</li>
+        <li><a href="account/address-book.html">Address Book</a></li>
+        <li><a href="account/saved-payment.html">Saved Payment</a></li>
+        <li><a href="account/my-wish-list.html">My Wish List</a></li>
+        <li><a href="account/my-wish-list-items.html">My Wish List Items</a></li>
+        <li><a href="account/create-wish-list.html">Create Wish List</a></li>
+        <li><a href="account/grant-wish-list.html">Grant Wish List</a></li>
+        <li><a href="account/wish-list-friend.html">Friend's Wish List</a></li>
+        <li><a href="#" data-toggle="popup-invitations" data-brand="{% if page.brand == 'chicos' %}chicos{% elsif page.brand == 'soma' %}soma{% else %}whbm{% endif %}">Wish List Invitations (Popup)</a></li>
+        {% if page.brand == 'whbm' %}
+          <li><a href="account/whbm-rewards.html">WHBM Rewards</a></li>
+          <li><a href="account/whbm-rewards-platinum.html">WHBM Rewards: Platinum Level</a> <a href="javascript://" data-toggle="tooltip" data-placement="top" title="This uses the login success template -- not the single column template of 'WHBM Rewards'."><i class="fa fa-info-circle"></i></a></li>
+        {% elsif page.brand == 'soma' %}
+          <li><a href="account/love-soma-rewards.html">Love Soma Rewards</a></li>
+          <li class="new-template"><a href="account/refer-friends.html">Refer Friends</a></li>
+        {% else %}
+          <li><a href="account/passport-program.html">Passport Program</a></li>
+        {% endif %}
+      </ul>
+    </section>
+    <hr>
+    <section>
+      <h2>Home</h2>
+      <ul class="list-unstyled">
+        <li><a href="home.html">Home</a></li>
+      </ul>
+    </section>
+    <hr>
+    {% if page.brand == 'whbm' %}
+    <section>
+      <h2>Sale Shop By</h2>
+      <ul class="list-unstyled">
+        <li><a href="shopby/l1.html">Level 1</a></li>
+        <li><a href="shopby/l2.html">Level 2</a></li>
+        <li><a href="shopby/l3.html">Level 3</a></li>
+      </ul>
+    </section>
+    <hr>
+    {% endif %}
+
+{% if page.brand == 'chicos' %}
+    <section>
+      <h2>Final Sale</h2>
+      <ul class="list-unstyled">
+        <li><a href="collection-final-sale-update.html">Final Sale - Collection + PDP + Quickview + Persistent Cart</a></li>
+        <li><a href="/chicos/pages/checkout/shopping-bag.html">Finale Sale - Shopping Bag + Tool Tip</a></li>
+        <li><a href="/chicos/pages/checkout/checkout-order-summary.html">Checkout (Order Summary)</a></li>
+        <li><a href="/chicos/pages/checkout/checkout-order-review.html">Checkout (Order Review)</a></li>
+        <li><a href="/chicos/pages/checkout/checkout-order-confirmation.html">Checkout Order Confirmation (No Final Sale)</a></li>
+        <li><a href="/chicos/pages/checkout/checkout-order-confirmation-email.html">Cheetah Order Confirmation/Shipping Confirmation Email</a></li>
+        <!--<li><a href="#">Cheetah Shipping Confirmation Email</a></li>-->
+      </ul>
+    </section>
+    <hr>
+    {% endif %}
+
+  </div>
+  <div class="col-sm-6">
+    {% if page.brand == 'whbm' %}
+      <section>
+        <h2>About</h2>
+        <ul class="list-unstyled">
+          <li class="new-template"><a href="about/default.html">About</a></li>
+          <li class="new-template"><a href="about/charity.html">Charity</a></li>
+          <li class="new-template"><a href="about/lbbc.html">Living Beyond Breast Cancer (LBBC)</a></li>
+        </ul>
+      </section>
+      <hr>
+    {% endif %}
+
+
+    <section>
+      <h2>Standalone</h2>
+      <ul class="list-unstyled">
+        <li><a href="appt.html">Style by Appointment</a> (includes footer promo)</li>
+        <li><a href="special-features.html">Special Features</a> (active chat, promo opens on page load)</li>
+        {% if page.brand == "chicos" %}
+          <li><a href="header-orig.html">Original header (pre-markup updates)</a></li>      
+        {% endif %}
+        {% if page.brand == "whbm" %}
+          <li><a href="olapic.html">Olapic</a></li>
+          <li><a href="shop-by-look.html">Shop By Look</a></li>
+          <li><a href="safety-recall.html">Safety Recall</a></li>
+        {% elsif page.brand == 'soma' %}
+          <li class="new-template"><a href="standalone/bra-fit-guide.html">Bra Fit Guide</a></li>
+          <li class="new-template"><a href="standalone/donation.html">Donation</a> (still in dev)</li>
+          <li class="new-template"><a href="standalone/find-bra.html">Find a Bra</a></li>
+          <li class="new-template"><a href="standalone/find-bra-category.html">Find a Bra (Category)</a></li>
+          <li class="new-template"><a href="standalone/glossary.html">Glossary</a></li>
+          <li class="new-template"><a href="standalone/share-rewards.html">Share Rewards</a></li>
+        {% endif %}
+        <li><a href="content-modules.html">Content Modules</a></li>
+      </ul>
+    </section>
+    <hr>
+    {% if page.brand == 'chicos' %}
+      <section>
+        <h2>Cheetahmail</h2>
+        <ul class="list-unstyled">
+          <li><a href="/cheetahmail/chicos/501-register.html">Email-Only Registration Form</a></li>
+          <li><a href="/cheetahmail/chicos/501-thankyou.html">Email-Only Thank You</a></li>
+          <li><a href="/cheetahmail/chicos/509-register.html">Footer Registration Form</a></li>
+          <li><a href="/cheetahmail/chicos/509-thankyou.html">Footer Thank You</a></li>
+          <li><a href="/cheetahmail/chicos/flyover-register.html">Flyover Registration Form</a></li>
+          <li><a href="/cheetahmail/chicos/flyover-thankyou.html">Flyover Thank You</a></li>
+        </ul>
+      </section>
+      <hr>
+    {% elsif page.brand == 'whbm' %}
+      <section>
+        <h2>Cheetahmail</h2>
+        <ul class="list-unstyled">
+          <li><a href="/cheetahmail/whbm/501-register.html">Email-Only Registration Form</a></li>
+          <li><a href="/cheetahmail/whbm/501-thankyou.html">Email-Only Thank You</a></li>
+          <li><a href="/cheetahmail/whbm/509-register.html">Footer Registration Form</a></li>
+          <li><a href="/cheetahmail/whbm/509-thankyou.html">Footer Thank You</a></li>
+        </ul>
+      </section>
+      <hr>
+    {% endif %}
+
+    <section>
+      <h2>PDP <a href="javascript://" data-toggle="tooltip" data-placement="top" title="The default PDP page has a few elements that may or may not be visible. Rather than create page templates for every possible variation, all elements are visible in the first link below. Comments have been added to the markup showing where conditionals should be placed once the html is added to production."><i class="fa fa-info-circle"></i></a></h2>
+
+      <div class="alert alert-info">The video PDP is no longer a separate template. Simply click the video thumbnail in any of the PDP templates to view the video.</div>
+
+      <ul class="list-unstyled">
+        <li><a href="pdp/default.html">Default</a></li>
+        <li><a href="pdp/default-sale.html">Default with Sale</a></li>
+        <li><a href="pdp/default-final-sale.html">Default with Final Sale</a></li>
+        {% comment %}
+        <li><a href="pdp/default-video.html">Default with Video (only plays once)</a></li>
+        {% endcomment %}
+        <li><a href="pdp/default-fieldsets.html">Default with Two Fieldsets</a></li>
+        <li><a href="pdp/default-complete.html">Default with Complete the Look</a></li>
+        <li><a href="pdp/default-error.html">Default with Error</a></li>
+        <li><a href="pdp/no-inventory.html">Not in Inventory</a></li>
+        <li><a href="pdp/single-size.html">Single Size</a></li>
+        <li><a href="pdp/donations.html">Donations</a></li>
+        <li><a href="pdp/gift-card-landing.html">Gift Card Landing</a> (uses collection page layout)</li>
+        <li><a href="pdp/gift-card.html">Gift Card</a></li>
+        <li><a href="pdp/e-gift-card.html">e-Gift Card</a></li>
+        <li><a href="pdp/gift-card-check-balance.html">Check Gift Card Balance</a></li>
+        <li><a href="#" data-toggle="popup-store" data-brand="{% if page.brand == 'chicos' %}chicos{% elsif page.brand == 'soma' %}soma{% else %}whbm{% endif %}">Find in Store (Popup)</a></li>
+      </ul>
+    </section>
+    <hr>
+    <section>
+      <h2>Collection</h2>
+      <ul class="list-unstyled">
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="collection-sale.html">Collection with Sale</a></li>
+        <li><a href="collection-final-sale.html">Collection with Final Sale</a> <a href="javascript://" data-toggle="tooltip" data-placement="top" title="Final Sale pricing info will not appear in persistent cart on this page, just on the PDP."><i class="fa fa-info-circle"></i></a>
+        </li>
+        <li><a href="collection-final-sale-cad.html">Collection with Final Sale (Canadian)</a></li>
+        {% if page.brand == 'whbm' or page.brand == 'soma' %}
+          <li {% if page.brand == 'soma' %}class="new-template"{% endif %}><a href="collection-special-price.html">Collection with Special Price</a></li>
+        {% endif %}
+        <li><a href="collection-search.html">Collection with Search Messaging</a></li>
+        <li><a href="collection-none.html">Collection with No Results</a></li>
+        {% if page.brand == "chicos" %}
+          <li><a href="collection-sh-text.html">Collection with Text Shelf Header</a></li>
+          <li><a href="collection-sh-text-short.html">Collection with Text Shelf Header (short)</a></li>      
+        {% endif %}
+        <li><a href="collection-curated.html">Curated Collection with 1x promo</a></li>
+        <li><a href="collection-curated-2by.html">Curated Collection with 2x promo</a></li>
+        <li {% if page.brand == 'soma' %}class="new-template"{% endif %}><a href="collection-shelfless-1x.html">Collection, Shelfless Promo 1x</a></li>
+        {% if page.brand == "whbm" or page.brand == 'soma' %}
+          <li {% if page.brand == 'soma' %}class="new-template"{% endif %}><a href="collection-shelfless-2x.html">Collection, Shelfless Promo 2x</a></li>
+          <li {% if page.brand == 'soma' %}class="new-template"{% endif %}><a href="collection-shelfless-4x.html">Collection, Shelfless Promo 4x</a></li>
+        {% endif %}
+        <li><a href="collection-charity.html">Collection with Charity Modules</a></li>
+        <li><a href="collection-special.html">Special Collection A</a></li>
+          <li {% if page.brand == 'soma' %}class="new-template"{% endif %}><a href="collection-hotspot.html">Collapsible Curated Grid (Hot Spot Collection)</a></li>
+        {% if page.brand == 'whbm' or page.brand == 'soma' %}
+          <li {% if page.brand == 'soma' %}class="new-template"{% endif %}><a href="collection-shelfless-hotspot-2by.html">Hotspot in 2x layout</a></li>
+        {% endif %}
+      </ul>
+    </section>
+    <hr>
+    <section>
+      <h2>Checkout &amp; Shopping Bag</h2>
+      <ul class="list-unstyled">
+        {% if page.brand == 'soma' %}
+          <li class="new-template"><a href="checkout/index.html">Checkout: all states</a></li>
+          <li class="new-template"><a href="checkout/checkout-registered.html">Checkout: registered user</a></li>
+          <li class="new-template"><a href="checkout/checkout-unregistered.html">Checkout: unregistered user</a></li>
+          <li class="new-template"><a href="checkout/checkout-confirmation.html">Order confirmation</a></li>
+          <li class="new-template"><a href="checkout/flows/1/index.html">Flow 1</a></li>
+          <li class="new-template"><a href="checkout/flows/2/index.html">Flow 2</a></li>
+          <li class="new-template"><a href="checkout/flows/3/index.html">Flow 3</a></li>
+        {% endif %}
+        <li><a href="checkout/shopping-bag.html">Shopping Bag</a></li>
+        <li><a href="checkout/shopping-bag-print.html">Shopping Bag: Print</a> (this template can also be found by clicking the print icon in the template above)</li>
+      </ul>
+    </section>
+    <hr>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-2 col-sm-offset-5">
+    <a href="http://chicos.coreyweb.com/bestPageEver/"><img class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/best-page-ever.png" alt=""></a>
+  </div>
+</div>

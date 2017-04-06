@@ -1,0 +1,62 @@
+<section class="module {{ include.moduleClass }}">
+  <div class="module-sh-text {{ include.moduleLayout }}">
+    <div class="module-inner">
+      {% if include.moduleHeading %}
+        {% if include.moduleFirst %}
+          <h1 class="module-heading">{{ include.moduleHeading }}</h1>
+        {% else %}
+          <h2 class="module-heading">{{ include.moduleHeading }}</h2>
+        {% endif %} 
+      {% endif %}
+      {% if include.moduleCopy %}
+        {% if include.moduleLayout == 'sh-text-lg' %}
+          <hr>
+        {% endif %}
+        <div class="module-copy">{{ include.moduleCopy }}</div>
+      {% endif %}
+      {% if include.buttonLabel %}
+        <div class="module-button">
+          <a href="{{ include.moduleLinkUrl }}" class="btn btn-primary {{ include.buttonClass }}">{{ include.buttonLabel }}</a>
+        </div>
+      {% endif %}
+      {% if include.moduleExtra %}
+        <div class="module-extra">{{ include.moduleExtra }}</div>    
+      {% endif %}
+    </div>
+  </div>
+</section><!-- .module -->
+
+
+
+{% comment %} ADD THIS LATER! CREATE VARIATIONS ON THE SHELF TEXT MODULE
+<section class="module {{ include.moduleClass }}">
+  <div class="module-sh-text {{ include.moduleLayout }}">
+    <div class="module-inner">
+      {% if include.moduleHeading %}
+        {% if include.moduleFirst %}
+          <h1>{{ include.moduleHeading }}</h1>
+        {% else %}
+          <h2>{{ include.moduleHeading }}</h2>
+        {% endif %} 
+      {% endif %}
+      {% if include.moduleCopy %}
+        {% if include.moduleLayout == 'sh-text-lg' %}
+          <hr>
+        {% endif %}
+        <div class="module-copy">{{ include.moduleCopy }}</div>
+      {% endif %}
+      {% if include.moduleSubCopy %}
+        <div class="module-subcopy">{{ include.moduleSubCopy }}</div>
+      {% endif %}
+      {% if include.moduleCTA %}
+        <div class="module-cta">{{ include.moduleCTA }}</div>
+      {% endif %}
+      {% if include.buttonLabel %}
+        <div class="module-button">
+          <a href="#" class="btn btn-primary {{ include.buttonClass }}">{{ include.buttonLabel }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section><!-- .module -->
+{% endcomment %}

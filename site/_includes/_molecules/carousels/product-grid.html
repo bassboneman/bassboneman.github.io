@@ -1,0 +1,95 @@
+{% comment %}
+BLOG MODULE
+  associated classes: module-product-grid
+
+moduleTitle:
+  accepts: text or HTML
+  associated class: none, use `.module-product-grid h2` or something of the sort
+  if no input: element doesn't show
+  wrapper tag: h2
+
+Example:
+
+```
+{% include _molecules/carousels/product-grid.html moduleTitle='Our Best Rated Looks' %}
+```
+
+{% endcomment %}
+
+<section class="module module-product-grid">
+  <div class="module-inner">
+    {% if include.moduleTitle %}
+      <h2>{{ include.moduleTitle }}</h2>
+    {% endif %}
+    <div id="carousel-product-grid" class="carousel slide {{ include.carouselClass }}" data-ride="carousel" data-interval="false" aria-live="polite">
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="row">
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+          </div>
+        </div><!-- .item -->
+        <div class="item">
+          <div class="row">
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+          </div>
+        </div><!-- .item -->
+        <div class="item">
+          <div class="row">
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              {% include _molecules/products/listing-single.html quickView="yes" %}
+            </div>
+          </div>
+        </div><!-- .item -->
+      </div>
+
+      <div class="carousel-control-wrap">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-product-grid" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-product-grid" data-slide-to="1" class=""></li>
+          <li data-target="#carousel-product-grid" data-slide-to="2" class=""></li>
+        </ol>
+        <a class="left carousel-control" href="#carousel-product-grid" data-slide="prev" aria-label="previous">
+          <svg class="icon-arrow-left" role="presentation">
+            <use xlink:href="#icon-arrow-left"></use>
+          </svg>
+        </a>
+        <a class="right carousel-control" href="#carousel-product-grid" data-slide="next" aria-label="next">
+          <svg class="icon-arrow-right" role="presentation">
+            <use xlink:href="#icon-arrow-right"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

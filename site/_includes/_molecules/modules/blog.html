@@ -1,0 +1,90 @@
+{% if page.brand == 'chicos' %}
+  <section class="module">
+    <script type="text/javascript" id="insidechic-5b8cf3a4-b0f0-13e9-3737-d5a159268ae6" class="insidechic-async-script-loader">
+      (function() {
+        function async_load(){
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          var theUrl = 'https://insidechic.chicos.com/wp-content/themes/insidechic/js/embed_featured.js';
+          s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + 'ref=' + encodeURIComponent(window.location.href);
+          var embedder = document.getElementById('insidechic-5b8cf3a4-b0f0-13e9-3737-d5a159268ae6');
+          embedder.parentNode.insertBefore(s, embedder);
+        }
+        if (window.attachEvent)
+          window.attachEvent('onload', async_load);
+        else
+          window.addEventListener('load', async_load, false);
+      })();
+    </script>
+  </section>
+{% elsif page.brand == 'soma' %}
+  <section class="module">
+    <div class="module-4-across module-blog">
+      <div class="module-inner">
+        <h2>
+          <svg class="logo-intimately-soma">
+            <use xlink:href="#logo-intimately-soma"></use>
+          </svg>
+        </h2>
+        {% if include.moduleSubCopy %}
+        <p>{{ include.moduleSubCopy }}</p>
+        {% endif %}
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <article class="story">
+              <a href="#">
+                <img src="http://insidechic.chicos.com/wp-content/uploads/2015/08/Banana-Pecan-c-John-Kernick-copy-466x308.jpg" class="img-responsive" alt="">
+                <h3>Story Title</h3>
+              </a>
+            </article>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <article class="story">
+              <a href="#">
+                <img src="http://insidechic.chicos.com/wp-content/uploads/2015/07/MARRAKECH-2-466x308.jpg" class="img-responsive" alt="">
+                <h3>Story Title</h3>
+              </a>
+            </article>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <article class="story">
+              <a href="#">
+                <img src="http://insidechic.chicos.com/wp-content/uploads/2015/08/LOVELL-HEAD-SHOT2-SZL_Naples_11_0759-667x1000_RT1-466x308.jpg" class="img-responsive" alt="">
+                <h3>Story Title</h3>
+              </a>
+            </article>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <article class="story">
+              <a href="#">
+                <img src="http://insidechic.chicos.com/wp-content/uploads/2015/07/sheilahead-466x308.jpg" class="img-responsive" alt="">
+                <h3>Story Title</h3>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- .module -->
+{% endif %}
+
+{% comment %}
+BLOG MODULE
+  associated classes: module-blog
+
+moduleSubCopy:
+  accepts: text or HTML
+  associated class: none, use `.module-img p` or something of the sort
+  if no input: element doesn't show
+  wrapper tag: p
+
+Example:
+
+```
+{% include _molecules/modules/blog.html moduleSubCopy="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laore." %}
+```
+
+
+
+{% endcomment %}

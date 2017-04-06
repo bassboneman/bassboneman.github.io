@@ -1,0 +1,1187 @@
+<div class="lib-notes">
+  <h3>Note 1: Jumbo vs. regular content</h3>
+  <p>
+    Most content modules reside in two parent containers that have a max width setting of 1200 pixels. 
+    A single wrapper set is all that's needed for these modules:
+  </p>
+  <div class="example-code" style="display: block;">
+    {% highlight html %}
+    <div class="content">
+      <div class="container-fluid">
+        <!-- module markup -->
+      </div><!-- .container-fluid -->
+    </div><!-- .content -->
+    {% endhighlight %}
+  </div>
+    <p>
+      Some shelf headers and carousels can also be used in a "jumbo" container that has a max 
+      width of 1680 pixels. Typically, these modules are the first element on the page. 
+      You'll need to add ".content-wide" to the outer wrapper:
+    </p>
+  <div class="example-code" style="display: block;">
+    {% highlight html %}
+    <div class="content content-wide">
+      <div class="container-fluid">
+        <!-- module markup -->
+      </div><!-- .container-fluid -->
+    </div><!-- .content.content-wide -->
+    {% endhighlight %}
+  </div>
+ <h3>Note 2: White-on-dark modules</h3>
+  <p>
+    Add <code>.module-copy-white</code> to any module wrapper to force the copy and links (not buttons) 
+    to show up in white. This will be used mostly on carousels and images with text overlays. 
+    See an example below.
+  </p>
+
+  <h3>Note 3: Aligning Carousel Arrows</h3>
+  <p>Add <code>data-carousel="align-arrows"</code> the <code>.carousel</code> element in order to align the previous and next icons to the image and not the content on all devices. An example of this can be found in the <a href="#carousels-shelf">Carousel/Shelf Header module</a>.</p>  
+  <p>Add <code>data-carousel="align-arrows-mobile"</code> the <code>.carousel</code> element in order to align the previous and next icons to the image and not the content on mobile devices. An example of this can be found in the <a href="#modules-combo">Combo Module Carousel</a>.</p>
+
+</div><!-- .lib-notes -->
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-default">Carousel</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/carousels/default.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/carousels/default.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-jumbo">Jumbo</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/carousels/jumbo.html carouselImage='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+3360x1200&w=3360&h=1200' carouselImageMobile='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+767x767&w=767&h=767' carouselHeading='Zenergy<sup>&reg;</sup>' carouselCopy='<p>Activewear that goes anywhere.</p>' btnLabel='Shop Now' btnClass='btn-primary' btnLink='#' btnExtra='' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/carousels/jumbo.html carouselImage='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+3360x1200&w=3360&h=1200' carouselImageMobile='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+767x767&w=767&h=767' carouselHeading='Zenergy<sup>&reg;</sup>' carouselCopy='<p>Activewear that goes anywhere.</p>' btnLabel='Shop Now' btnClass='btn-primary' btnLink='#' btnExtra='' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-single-img">Carousel with Single Image</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/carousels/single-img.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/carousels/single-img.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-shelf">Carousel based on Shelf Header</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="alert alert-info">
+    This was created for those times when a shelf header may or may not be a carousel. See Soma's <a href="/soma/pages/standalone/find-bra-category.html">Find a Bra (Category)</a> page. 
+  </div>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf-carousel.html carouselAttr='data-carousel="align-arrows-mobile"' moduleLayout='module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Heading Lorem' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, dicta ratione.</p>' moduleLinkUrl='#' btnLabel='Shop Now' btnClass='btn-primary' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf-carousel.html carouselAttr='data-carousel="align-arrows-mobile"' moduleLayout='module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Heading Lorem' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, dicta ratione.</p>' moduleLinkUrl='#' btnLabel='Shop Now' btnClass='btn-primary' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-related">Related Products (viewable on mobile PDP)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-xs-6">
+          {% include _molecules/carousels/related.html %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/carousels/related.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-collection-promo">Collection Promo Carousel</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-xs-6">
+          {% include _molecules/carousels/collection-promo.html promoType="carouselPromo" %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+          {% include _molecules/carousels/collection-promo.html promoType="carouselPromo" %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-collection-promo-single">Collection Promo (Single)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-xs-6">
+          {% include _molecules/carousels/collection-promo.html promoType="singlePromo" %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+          {% include _molecules/carousels/collection-promo.html promoType="singlePromo" %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+
+{% if page.brand == "whbm" %}
+  <section class="example-wrap">
+    <header>
+      <h2 id="carousels-collection-promo-static">Collection Promo w/ Static Heading</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/carousels/collection-promo-static-heading.html promoType="carouselPromo" moduleHeading='New Arrivals' moduleImage='https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+800x600&w=800&h=600' %}      
+          </div>
+        </div>
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        {% include _molecules/carousels/collection-promo-static-heading.html promoType="carouselPromo" moduleHeading='New Arrivals' moduleImage='https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+800x600&w=800&h=600' %}
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+
+  <section class="example-wrap">
+    <header>
+      <h2 id="carousels-collection-promo-static-single">Collection Promo w/ Static Heading (Single Element)</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/carousels/collection-promo-static-heading.html promoType="singlePromo" moduleHeading='New Arrivals' moduleImage='https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+800x600&w=800&h=600' %}      
+          </div>
+        </div>
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        {% include _molecules/carousels/collection-promo-static-heading.html promoType="singlePromo" moduleHeading='New Arrivals' moduleImage='https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+800x600&w=800&h=600' %}
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+
+{% endif %}
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-product-grid">Product Grid Carousel</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/carousels/product-grid.html moduleTitle='Our Best Rated Looks' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/carousels/product-grid.html moduleTitle='Our Best Rated Looks' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="carousels-product-grid-production">Product Grid Carousel (Production)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="alert alert-info">
+    Note: This is the include that should be used to prepare a template for production, not to actually display the carousel. It will appear to be broken, but it is working as it should. We promise.
+  </div>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/carousels/product-grid-production.html moduleTitle='New Arrivals' moduleDpCategory='/store/category/New+Arrivals/cat40036/' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/carousels/product-grid-production.html moduleTitle='New Arrivals' moduleDpCategory='/store/category/New+Arrivals/cat40036/' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-curated-header">Curated Header</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/curated-header-flexible.html %}    
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/curated-header-flexible.html %}    
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-img-overlay">Image with Text Overlay</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img-overlay.html moduleClass='' moduleHeading='Lacey Stitch Cardigan' moduleCollection='Travelers Collection' moduleLink='Shop Now' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img-overlay.html moduleClass='' moduleHeading='Lacey Stitch Cardigan' moduleCollection='Travelers Collection' moduleLink='Shop Now' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' %}
+        </div>
+      </div>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-img-overlay-bot">Image with Text Overlay (Bottom)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img-overlay.html moduleClass='' moduleLayout='module-img-overlay-bot' moduleHeading='Lacey Stitch Cardigan' moduleCollection='Travelers Collection' moduleLink='Shop Now' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img-overlay.html moduleClass='' moduleLayout='module-img-overlay-bot' moduleHeading='Lacey Stitch Cardigan' moduleCollection='Travelers Collection' moduleLink='Shop Now' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' %}
+        </div>
+      </div>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-img-overlay-shift">Image with Text Overlay (Text shifts outside image at &lt; 992px)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img-overlay.html moduleClass='' moduleLayout='module-img-overlay-shift' moduleHeading='Lacey Stitch Cardigan' moduleCollection='Travelers Collection' moduleLink='Shop Now' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img-overlay.html moduleClass='' moduleLayout='module-img-overlay-shift' moduleHeading='Lacey Stitch Cardigan' moduleCollection='Travelers Collection' moduleLink='Shop Now' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' %}
+        </div>
+      </div>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-img-overlay-white">Image with Text Overlay (White)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img-overlay.html moduleClass='module-copy-white' moduleLayout='' moduleHeading='Lacey Stitch Cardigan' moduleCollection='Travelers Collection' moduleLink='Shop Now' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800&bg=333333' %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img-overlay.html moduleClass='module-copy-white' moduleLayout='' moduleHeading='Lacey Stitch Cardigan' moduleCollection='Travelers Collection' moduleLink='Shop Now' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800&bg=333333' %}
+        </div>
+      </div>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-img-overlay-carousel">Image with Text Overlay (Carousel)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/carousels/carousel-img-overlay.html moduleClass='' moduleLayout='' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleCollection='Travelers Collection' moduleHeading='lacey stitch cardigan' moduleLink='Shop Now' %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/carousels/carousel-img-overlay.html moduleClass='' moduleLayout='' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleCollection='Travelers Collection' moduleHeading='lacey stitch cardigan' moduleLink='Shop Now' %}
+        </div>
+      </div>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-img-wrap">Image with Text</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img.html moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Our Best Tops' %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img.html moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Our Best Tops' %}
+        </div>
+      </div>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-img-wrap-video">Image with Text and Video</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img.html moduleClass='home-combo' moduleVideo='yes' moduleHeading='Explore the new chicos.com' moduleCopy='<p>More simple. More new. More spectacular.</p>' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleLink='Watch the Video' moduleLinkUrl='#' moduleExtra='data-toggle="modal" data-target="#modal-video"' %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img.html moduleClass='home-combo' moduleVideo='yes' moduleHeading='Explore the new chicos.com' moduleCopy='<p>More simple. More new. More spectacular.</p>' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleLink='Watch the Video' moduleLinkUrl='#' moduleExtra='data-toggle="modal" data-target="#modal-video"' %}
+        </div>
+      </div>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>        
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-combo">Combo</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/combo.html moduleComboImg='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800&w=800&h=800' moduleCollection='Travelers &trade;' moduleComboHeading='Arrive <em>in Style</em>' moduleComboButton='Shop the Collection' moduleComboCarouselImg1='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:600x338&w=600&h=338' moduleComboCarouselCaption1='<p><span class="text-uppercase">Lorem ipsum dolor sit amet</span><br>Travelers Classic Essential Tank</p><div class="product-msg">Online Only</div>' moduleComboCarouselImg2='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:600x338&w=600&h=338' moduleComboCarouselCaption2='<p><span class="text-uppercase">Lorem ipsum dolor sit amet</span><br>Travelers Classic Essential Tank</p><div class="product-msg">Online Only</div>' moduleComboCarouselImg3='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:600x338&w=600&h=338' moduleComboCarouselCaption3='<p><span class="text-uppercase">Lorem ipsum dolor sit amet</span><br>Travelers Classic Essential Tank</p><div class="product-msg">Online Only</div>' carouselAttr='data-carousel="align-arrows"' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/combo.html moduleComboImg='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800&w=800&h=800' moduleCollection='Travelers &trade;' moduleComboHeading='Arrive <em>in Style</em>' moduleComboButton='Shop the Collection' moduleComboCarouselImg1='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:600x338&w=600&h=338' moduleComboCarouselCaption1='<p><span class="text-uppercase">Lorem ipsum dolor sit amet</span><br>Travelers Classic Essential Tank</p><div class="product-msg">Online Only</div>' moduleComboCarouselImg2='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:600x338&w=600&h=338' moduleComboCarouselCaption2='<p><span class="text-uppercase">Lorem ipsum dolor sit amet</span><br>Travelers Classic Essential Tank</p><div class="product-msg">Online Only</div>' moduleComboCarouselImg3='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:600x338&w=600&h=338' moduleComboCarouselCaption3='<p><span class="text-uppercase">Lorem ipsum dolor sit amet</span><br>Travelers Classic Essential Tank</p><div class="product-msg">Online Only</div>' carouselAttr='data-carousel="align-arrows"' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-combo-img">Combo w/ 2 Image Modules</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/img.html moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x700&w=800&h=700' moduleHeading='Our Best Tops' %}
+        </div>
+        <div class="col-sm-6">
+          {% include _molecules/modules/img-overlay.html moduleClass='' moduleHeading='Lacey Stitch Cardigan' moduleCollection='Travelers Collection' moduleLink='Shop Now' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' %}
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/modules/img.html moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x700&w=800&h=700' moduleHeading='Our Best Tops' %}
+          </div>
+          <div class="col-sm-6">
+            {% include _molecules/modules/img-overlay.html moduleClass='' moduleHeading='Lacey Stitch Cardigan' moduleCollection='Travelers Collection' moduleLink='Shop Now' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' %}
+          </div>
+        </div>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-ad-large">Large Ad (2x placement)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/ad.html moduleAdColor='blue' %}    
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/ad.html moduleAdColor='blue' %}    
+        </div>
+      </div>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-ad-small">Small Ad (1x placement)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="row">
+        <div class="col-sm-3 col-xs-6">
+          {% include _molecules/modules/ad-small.html %}    
+        </div>
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      <div class="row">
+        <div class="col-sm-3 col-xs-6">
+          {% include _molecules/modules/ad-small.html %}    
+        </div>
+      </div>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-blog">Blog</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/blog.html moduleSubCopy="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laore." %}    
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/blog.html moduleSubCopy="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laore." %}    
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-social">Social</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/social.html moduleTitle='Social Header' moduleLabel1='Social Label' moduleLabel2='Social Label' moduleLabel3='Social Label' moduleLabel4='Social Label' %}    
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/social.html moduleTitle='Social Header' moduleLabel1='Social Label' moduleLabel2='Social Label' moduleLabel3='Social Label' moduleLabel4='Social Label' %}    
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-icon-text">Icon with Text</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/icon-text.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/icon-text.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<p class="lib-alert">If the shelf header is the first main element on the page, add <code>moduleFirst='yes'</code> to the include call. h1's and h2's for shelf headers are styled the same.</p>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-left">Shelf Header</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-right">Shelf Header (text on right)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-left-thirds">Shelf Header in Thirds</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-right-thirds">Shelf Header in Thirds (text on right)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid module-sh-right module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid module-sh-right module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-left-overlay">Shelf Header Overlay</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Left (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' moduleExtra='<a href="#">optional element</a>' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Left (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' moduleExtra='<a href="#">optional element</a>' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-right-overlay">Shelf Header Overlay (text on right)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Right (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' moduleExtra='<a href="#">optional element</a>' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Right (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' moduleExtra='<a href="#">optional element</a>' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-center-overlay">Shelf Header Overlay (centered text)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-center' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Centered (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' moduleExtra='<a href="#">optional element</a>' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-center' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Centered (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' moduleExtra='<a href="#">optional element</a>' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<p class="lib-alert">The following shelf header modules are identical in appearance to the shelf headers above. The only difference is these include the pinterest icon and special collections product menus on click.</p>
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-left-c-sp">Shelf Header</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-right-c-sp">Shelf Header (text on right)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-left-thirds-c-sp">Shelf Header in Thirds</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-right-thirds-c-sp">Shelf Header in Thirds (text on right)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid module-sh-right module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid module-sh-right module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-left-overlay-c-sp">Shelf Header Overlay</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Left (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Left (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-right-overlay-c-sp">Shelf Header Overlay (text on right)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Right (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Right (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-bg-img">Shelf Header with Background Image</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf-bg.html moduleClass='' moduleLayout='module-sh-center' moduleImage='/web_assets/imgs/modules/shelf-bg.jpg' moduleHeading='Shelf Header with BG Image' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf-bg.html moduleClass='' moduleLayout='module-sh-center' moduleImage='/web_assets/imgs/modules/shelf-bg.jpg' moduleHeading='Shelf Header with BG Image' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-appt">Shelf Header: Appointment</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf-appt.html moduleClass='' moduleHeading='Style <em>by</em> Appointment' moduleHeading='Style <em>by</em> Appointment' moduleCopy='<p>Fun. Free. Fabulous! Our Style Experts are here to help.</p>' moduleCtaCopy="Visit or call any Chico's boutique to make an appointment with one of our Style Experts." moduleLink='Make an Appointment' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf-appt.html moduleClass='' moduleHeading='Style <em>by</em> Appointment' moduleHeading='Style <em>by</em> Appointment' moduleCopy='<p>Fun. Free. Fabulous! Our Style Experts are here to help.</p>' moduleCtaCopy="Visit or call any Chico's boutique to make an appointment with one of our Style Experts." moduleLink='Make an Appointment' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-charity-heading">Charity Heading</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/module-heading.html moduleHeading='Shop <em>Chic</em> for a Cause &trade;' moduleCopy='Charities We Support:' %}    
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/module-heading.html moduleHeading='Shop <em>Chic</em> for a Cause &trade;' moduleCopy='Charities We Support:' %}    
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-charity">Charity</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <section class="module">
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/modules/charity.html charityLogo="childrens-miracle-network-hospitals.png" charityHeading="Children's Miracle Network Hospitals" charityCopy="For thirty years, Children's Miracle Network Hospitals have been improving and saving the lives of children by supporting children's hospitals across the United States and Canada. They provide, comfort, treatment, and hope to millions of sick kids, touching the lives of more children and families than any other children's charity." charityExtra="Meet the Miracle Children" %}
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      <section class="module">
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/modules/charity.html charityLogo="childrens-miracle-network-hospitals.png" charityHeading="Children's Miracle Network Hospitals" charityCopy="For thirty years, Children's Miracle Network Hospitals have been improving and saving the lives of children by supporting children's hospitals across the United States and Canada. They provide, comfort, treatment, and hope to millions of sick kids, touching the lives of more children and families than any other children's charity." charityExtra="Meet the Miracle Children" %}
+          </div>
+        </div>
+      </section>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-text-simple">Shelf Text: Simple</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf-header-text.html shText='yes' moduleClass='' moduleLayout='sh-text-simple' moduleHeading='Sale' moduleCopy='Dresses &amp; Skirts' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf-header-text.html shText='yes' moduleClass='' moduleLayout='sh-text-simple' moduleHeading='Sale' moduleCopy='Dresses &amp; Skirts' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-text-heading">Shelf Text: Heading Only</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf-header-text.html shText='yes' moduleClass='' moduleLayout='sh-text-nocopy' moduleHeading='Sale' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf-header-text.html shText='yes' moduleClass='' moduleLayout='sh-text-nocopy' moduleHeading='Sale' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-shelf-text-large">Shelf Text: Large Copy</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/shelf-header-text.html shText='yes' moduleClass='' moduleLayout='sh-text-lg' moduleHeading='Sale' moduleCopy='Dresses &amp; Skirts' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/shelf-header-text.html shText='yes' moduleClass='' moduleLayout='sh-text-lg' moduleHeading='Sale' moduleCopy='Dresses &amp; Skirts' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+{% if page.brand == "whbm" %}
+  <section class="example-wrap">
+    <header>
+      <h2 id="modules-hotspots">Hotspots</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        {% include _molecules/modules/shelf-hotspot.html collapseGrid='yes' moduleLayout='module-sh-right' collectionNum='4' hotspots='yes' collectionTitle='New Navy' collectionCopy='Classic color in new textures &amp; silhouettes' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+2400x1040&w=1200&h=520' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+767x767&w=767&h=767' %}
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        {% include _molecules/modules/shelf-hotspot.html collapseGrid='yes' moduleLayout='module-sh-right' collectionNum='4' hotspots='yes' collectionTitle='New Navy' collectionCopy='Classic color in new textures &amp; silhouettes' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+2400x1040&w=1200&h=520' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+767x767&w=767&h=767' %}
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+
+
+  <section class="example-wrap">
+    <header>
+      <h2 id="modules-hotspots-2x">Hotspots in 2x</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/modules/shelf-hotspot.html hotspots='yes' moduleLayout='module-shelfless-hotspot module-img' hotspotTitle='Category' hotspotCopy='Optional Copy' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=&w=767&h=500' %}
+          </div>
+        </div>
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/modules/shelf-hotspot.html hotspots='yes' moduleLayout='module-shelfless-hotspot module-img' hotspotTitle='Category' hotspotCopy='Optional Copy' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=&w=767&h=500' %}
+          </div>
+        </div>
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+
+  <section class="example-wrap">
+    <header>
+      <h2 id="modules-hotspots-2x-dark">Hotspots in 2x (dark)</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/modules/shelf-hotspot.html hotspots='yes' moduleLayout='module-shelfless-hotspot module-img module-hs-dark' hotspotTitle='Category' hotspotCopy='Optional Copy' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=&w=767&h=500' %}
+          </div>
+        </div>
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/modules/shelf-hotspot.html hotspots='yes' moduleLayout='module-shelfless-hotspot module-img module-hs-dark' hotspotTitle='Category' hotspotCopy='Optional Copy' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=&w=767&h=500' %}
+          </div>
+        </div>
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+
+  <section class="example-wrap">
+    <header>
+      <h2 id="modules-hotspots-2x-carousel">Hotspots in 2x (carousel)</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/modules/shelf-hotspot.html hotspots='yes' hotspotCarousel='yes' moduleLayout='module-shelfless-hotspot module-img' hotspotTitle='Category' hotspotCopy='Optional Copy' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=&w=767&h=500' %}
+          </div>
+        </div>
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/modules/shelf-hotspot.html hotspots='yes' hotspotCarousel='yes' moduleLayout='module-shelfless-hotspot module-img' hotspotTitle='Category' hotspotCopy='Optional Copy' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=&w=767&h=500' %}
+          </div>
+        </div>
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+
+  <section class="example-wrap">
+    <header>
+      <h2 id="modules-hotspots-2x-dark-carousel">Hotspots in 2x (dark carousel)</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/modules/shelf-hotspot.html hotspots='yes' hotspotCarousel='yes' darkCarousel='yes' moduleLayout='module-shelfless-hotspot module-img module-hs-dark' hotspotTitle='Category' hotspotCopy='Optional Copy' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=&w=767&h=500' %}
+          </div>
+        </div>
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        <div class="row">
+          <div class="col-sm-6">
+            {% include _molecules/modules/shelf-hotspot.html hotspots='yes' hotspotCarousel='yes' darkCarousel='yes' moduleLayout='module-shelfless-hotspot module-img module-hs-dark' hotspotTitle='Category' hotspotCopy='Optional Copy' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=&w=767&h=500' %}
+          </div>
+        </div>
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+
+  <section class="example-wrap">
+    <header>
+      <h2 id="modules-promo-shelfless-1x">Promo: Shelfless 1x</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        <div class="row">
+          <div class="col-xs-3">
+            {% include _molecules/modules/promo-shelfless.html moduleLayout='shelfless-promo-1x' moduleHeading='Tops' moduleCopy='Ease into effortless. <span>Made for layering shapes.</span>' moduleCTA='Shop Lorem Ipsum' moduleLink='#' %}
+          </div>
+        </div>
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        {% include _molecules/modules/promo-shelfless.html moduleLayout='shelfless-promo-1x' moduleHeading='Tops' moduleCopy='Ease into effortless. <span>Made for layering shapes.</span>' moduleCTA='Shop Lorem Ipsum' moduleLink='#' %}
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+
+  <section class="example-wrap">
+    <header>
+      <h2 id="modules-promo-shelfless-2x">Promo: Shelfless 2x</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        <div class="row">
+          <div class="col-xs-6">
+            {% include _molecules/modules/promo-shelfless.html moduleLayout='shelfless-promo-2x' moduleImage='https://placeholdit.imgix.net/~text?txtsize=24&txt=Actual+1140x950&w=1140&h=950' moduleHeading='Tops' moduleCopy='Ease into effortless. <span>Made for layering shapes.</span>' moduleCTA='Shop Lorem Ipsum' moduleLink='#' %}
+          </div>
+        </div>
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        {% include _molecules/modules/promo-shelfless.html moduleLayout='shelfless-promo-2x' moduleImage='https://placeholdit.imgix.net/~text?txtsize=24&txt=Actual+1140x950&w=1140&h=950' moduleHeading='Tops' moduleCopy='Ease into effortless. <span>Made for layering shapes.</span>' moduleCTA='Shop Lorem Ipsum' moduleLink='#' %}
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+
+  <section class="example-wrap">
+    <header>
+      <h2 id="modules-promo-shelfless-4x">Promo: Shelfless 4x</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        <div class="row">
+          <div class="col-xs-6">
+            {% include _molecules/modules/promo-shelfless.html moduleLayout='shelfless-promo-4x' moduleImage='https://placeholdit.imgix.net/~text?txtsize=24&txt=Actual+1140x950&w=1140&h=1400' moduleHeading='Tops' moduleCopy='Ease into effortless. <span>Made for layering shapes.</span>' moduleCTA='Shop Lorem Ipsum' moduleLink='#' %}
+          </div>
+        </div>
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        {% include _molecules/modules/promo-shelfless.html moduleLayout='shelfless-promo-4x' moduleImage='https://placeholdit.imgix.net/~text?txtsize=24&txt=Actual+1140x950&w=1140&h=1400' moduleHeading='Tops' moduleCopy='Ease into effortless. <span>Made for layering shapes.</span>' moduleCTA='Shop Lorem Ipsum' moduleLink='#' %}
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+
+  <section class="example-wrap">
+    <header>
+      <h2 id="modules-olapic-header">Olapic Header</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        {% include _molecules/modules/olapic-header.html moduleClass='module-olapic-header' moduleLayout='module-sh-left' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+2400x1040&w=1200&h=520' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+767x767&w=767&h=767' %}
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        {% include _molecules/modules/olapic-header.html moduleClass='module-olapic-header' moduleLayout='module-sh-left' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+2400x1040&w=1200&h=520' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+767x767&w=767&h=767' %}
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+  <section class="example-wrap">
+    <header>
+      <h2 id="modules-olapic-grid">Olapic Grid</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        {% include _molecules/modules/olapic-grid.html %}    
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        {% include _molecules/modules/olapic-grid.html %}    
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+<section class="example-wrap">
+  <header>
+    <h2 id="modules-video">Video Module</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _molecules/modules/video.html moduleImage='https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+1200x675&w=1200&h=675' moduleHeading='Video Heading' moduleCopy='Module Copy' videoSrc='https://www.youtube.com/embed/GR4B_KKUNs4?modestbranding=0&showinfo=0&rel=0' %}    
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _molecules/modules/video.html moduleImage='https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+1200x675&w=1200&h=675' moduleHeading='Video Heading' moduleCopy='Module Copy' videoSrc='https://www.youtube.com/embed/GR4B_KKUNs4?modestbranding=0&showinfo=0&rel=0' %}    
+      {% endhighlight %}
+    </div>
+  </div>
+</section>

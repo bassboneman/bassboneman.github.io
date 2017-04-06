@@ -1,0 +1,43 @@
+<div class="chat-wrap">
+  <div class="chat">
+    {% if page.brand == "soma" %}
+    <h4 class="chat-heading">
+      Soma Live Help
+        <small>Live Help &amp; Expert Tips</small>
+    </h4>
+    {% elsif page.brand == "whbm" %}
+    <h4 class="chat-heading">Live Help
+      <small>from a Style Expert</small>
+    </h4>
+    {% else %}
+    <h4 class="chat-heading">Chat Live
+      <small>With a Chico's Stylist</small>
+    </h4>
+    <p><i class="fa fa-comments"></i></p>
+    {% endif %}
+    <a class="btn btn-primary btn-sm btn-block" href="">
+      Start Chat
+    </a>
+    {% if page.title == "Gift Card Check Balance" %}
+      <div class="chat-extra">
+        <p>Speak to one of our friendly stylists for answers to all your questions.</p>
+        {% if page.brand == 'whbm' %}
+          <p>
+            <i class="fa fa-fw fa-phone"></i> 877.948.2525<br>
+            <i class="fa fa-fw fa-envelope"></i> <a href="mailto:customerservice@whitehouseblackmarket.com" class="long-email">customerservice@whitehouseblackmarket.com</a>
+          </p>
+        {% elsif page.brand == 'soma' %}
+          <p>
+            <i class="fa fa-fw fa-phone"></i> 866.768.7662<br>
+            <i class="fa fa-fw fa-envelope"></i> <a href="mailto:customerservice@soma.com" class="long-email">customerservice@soma.com</a>
+          </p>
+        {% else %}
+          <p>
+            <i class="fa fa-fw fa-phone"></i> (888) 855-4986<br>
+            <i class="fa fa-fw fa-envelope"></i> <a href="mailto:customerservice@chicos.com" class="long-email">customerservice@chicos.com</a>
+          </p>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>

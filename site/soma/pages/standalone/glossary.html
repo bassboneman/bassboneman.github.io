@@ -1,0 +1,60 @@
+---
+layout: page-collection
+title: Glossary
+top-link: pages
+brand: soma
+---
+
+<div class="content">
+  <div class="container-fluid">
+    {% include _molecules/navigation/breadcrumb.html breadLvl2='Bra Fit Guide' breadLvl3='Bra Glossary' %}
+    <div class="glossary-wrap col-border-wrap">
+      <h1 class="text-center">Glossary</h1>
+      <div class="row">
+        {% comment %}Make a variable that equals the first value in the terms list and then check the 'group' YAML value against it.{% endcomment %}
+        {% assign headerValue = '0' %}
+          {% comment %}Pull from YAML file. Decided to prioritize HTML indentation over Liquid indentation, hence the weirdness below.{% endcomment %}
+          {% for term in site.data.soma-glossary %}
+            {% comment %}If YAML group value and headerValue don't match, close out the group and start a new one.{% endcomment %}
+            {% if term.group != headerValue %}
+              {% comment %}If this is the first time through, the closing tags are unnecessary{% endcomment %}
+              {% if headerValue != '0' %}
+            </div><!-- .glossary-terms -->
+          </div><!-- .glossary-block -->
+              {% endif %}
+              {% comment %}Special cases that force column breaks on desktop{% endcomment %}
+              {% if term.group == '1&ndash;9' or term.group == 'E&ndash;K' or term.group == 'S&ndash;T' %}
+                {% assign column = term.group %}
+                {% if term.group != '1&ndash;9' %}
+        </div>
+                {% endif %}
+        <div class="col-sm-4 {% if term.group != 'S&ndash;T' %}col-border{% endif %}" id="col-{{ column }}">
+              {% endif %}
+              {% comment %}Now that we've created a new group and maybe column, update the variable.{% endcomment %}
+              {% assign headerValue = term.group %}
+          <div class="glossary-block">
+            <h2>
+              {% comment %}<a href="#" data-toggle="glossary-list">{% endcomment %}
+              {{ headerValue }}{% comment %}</a>{% endcomment %}
+            </h2>
+            <div class="glossary-terms">
+              {% endif %}
+              <div class="glossary-term">
+                <h3><a href="#" class="glossary-toggle" data-toggle="glossary-term">{{ term.term }}</a></h3>
+                <div class="glossary-definition" aria-expanded="false">
+                  <p>{{ term.definition }}</p>
+                  <p><a href="{{ term.link }}" class="btn btn-primary">Shop Now</a></p>
+                </div>
+              </div><!-- .glossary-term -->
+          {% endfor %}
+            </div><!-- .glossary-terms -->
+          </div><!-- .glossary-block.panel -->
+        </div><!-- .col-sm-4 -->
+      </div><!-- .row -->
+    </div><!-- .glossary -->
+
+
+  </div><!-- .container-fluid -->
+</div><!-- .content -->
+
+{% include _molecules/navigation/top-link.html %}

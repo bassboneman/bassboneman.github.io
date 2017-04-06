@@ -1,0 +1,43 @@
+<ul id="menu-utility">
+  <li class="menu-signin dropdown">
+    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Sign In
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-signin">
+      <div class="dropdown-inner">
+        <h3>Hi, Jenny!</h3>
+        {% if page.brand == 'whbm' %}
+          <p>You are a Platinum Member</p>
+        {% elsif page.brand == 'soma' %}
+          <p>You have 240 Rewards Points</p>
+        {% else %}
+          {% comment %}<p>You are a(n) (Introductory) Passport Member</p>{% endcomment %}
+        {% endif %}
+        <hr>
+        <ul>
+          {% if page.brand == "soma" %}
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">About Love Soma Rewards</a></li>
+          {% else %}
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Your Orders</a></li>
+          <li><a href="#">Payment Info</a></li>
+          <li><a href="#">Loyalty Program</a></li>
+          {% endif %}                  
+        </ul>
+        <hr>
+        <p>
+          {% include _atoms/buttons/button-link.html btnLabel='Sign Out' btnClass='btn-primary' %}
+        </p>
+        <img class="img-responsive" src="http://placehold.it/300x125&text=Promo+Image" alt="">
+      </div>
+    </div>
+  </li>
+  {% if page.brand == "soma" %}
+    <li><a href="#">Register</a></li>
+    <li><a href="#">Find a Boutique</a></li>
+  {% else %}
+    <li><a href="#">Find a Store</a></li>
+  {% endif %}
+</ul>

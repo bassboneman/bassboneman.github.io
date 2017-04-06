@@ -1,0 +1,81 @@
+<section id="checkout-payment-options" class="checkout-block {% if page.type == 'registered' %}complete{% else %}first not-started{% endif %}">
+  <header>
+    {% if page.type == 'registered' %}
+      <a href="#" class="checkout-btn-change" data-toggle="modal" data-target="#modal-payment-options">Change</a>  
+    {% else %}
+      <a href="#" class="checkout-btn-change" data-toggle="checkout-edit">Change</a>
+    {% endif %}
+    <h2>3. Payment Options</h2>
+  </header>
+  <div class="checkout-block-body">
+
+    {% comment %}Gift Card is always visible after payment is first opened{% endcomment %}
+    {% include _molecules/checkout/blocks/giftcard-entry.html %}
+
+    <div class="radio-list">
+      <div class="checkout-section-form">
+        {% include _atoms/forms/radio.html radioGroup='payment-options' radioID='creditcard' radioValue='creditcard' labelName='Credit Card' styled='yes' radioClass='checkout-toggle' checked='checked' tooltip="<strong>Cards We Accept</strong><br>Visa, Mastercard, Discover, American Express, JCB and Diner's Club International" %}
+        
+        <div id="checkout-creditcard" class="checkout-toggle-content">
+          {% include _molecules/checkout/forms/cc.html %}
+        </div><!-- .checkout-toggle-content -->
+        
+        <hr class="hr-dark">
+        {% include _atoms/forms/radio.html radioGroup='payment-options' radioID='paypal' radioValue='paypal' labelName='PayPal' styled='yes' radioClass='checkout-toggle' %}
+
+        <div id="checkout-paypal" class="checkout-toggle-content toggle-hidden">
+          <p class="alert alert-info"><strong>We’re sorry, but at this time our <span class="text-highlight">boutiques are unable to accept returns</span> for orders purchased using PayPal. PayPal orders may only be returned via mail using the return label provided. We apologize for any inconvenience.</strong></p>
+          <p>Continuing will take you to Paypal to login to your account. Afterwards you will have an opportunity to review and submit your order. View <a href="#">PayPal Policies</a> and your payment rights.</p>
+        </div><!-- .checkout-toggle-content -->
+
+        <hr class="hr-dark">
+
+        <h3>Contact Information</h3>
+        <p>This will allow us to send you order and shipping confirmation emails. This will also allow us to send exclusive offers, updates on new arrivals and special events.</p>
+
+        <div class="row row-tight">
+          <div class="col-sm-6">
+            <div class="field-wrap">
+              {% include _atoms/forms/input.html class="input-lg" labelName='Email' labelID='payment-email' inputType='email' %}
+            </div><!-- .field-wrap -->
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+
+        {% include _atoms/forms/checkbox.html checkValue='check-updates' labelName="<strong>Yes</strong>, send me exclusive offers, updates on new arrivals and special events." styled='yes' %}
+        
+        <div class="row row-tight">
+          <div class="col-sm-6">
+            {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-primary btn-lg btn-block btn-checkout btn-width' btnLabel='Save &amp; Continue' btnExtra='data-checkout="save-info" data-btn="creditcard"' %}
+            <p>{% include _atoms/buttons/button.html btnClass='btn-alt btn-lg btn-block btn-width btn-has-paypal hidden' btnLabel='Continue to <span class="sr-only">Paypal</span> <svg class="icon-paypal"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-paypal"></use></svg>' btnExtra='data-btn="paypal"' %}</p>
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+
+      </div><!-- .checkout-section-form -->
+      <div class="checkout-section-entry">
+        {% include _molecules/checkout/blocks/payment-entry.html %}
+       </div><!-- .checkout-section-entry -->
+    </div><!-- .radio-list -->
+    {% if page.user == 'registered' %}
+
+      <div class="checkout-section-options">
+        <div class="radio-media-list">
+          {% include _molecules/checkout/radios/cc.html ccName='Visa' ccImg='visa' radioSet='cc-options' radioID='cc-option-1' checked='yes' %}
+          {% include _molecules/checkout/radios/cc.html ccName='American Express' ccImg='americanexpress' radioSet='cc-options' radioID='cc-option-2' %}
+          {% include _molecules/checkout/radios/cc.html ccName='MasterCard' ccImg='mastercard' radioSet='cc-options' radioID='cc-option-3' %}
+          {% include _molecules/checkout/radios/cc.html ccName='Visa' ccImg='visa' radioSet='cc-options' radioID='cc-option-4' %}
+        </div><!-- .radio-media-list -->
+        <div class="row row-tight">
+          <div class="col-sm-6 col-sm-offset-3">
+            <div class="p">
+              {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-alt btn-lg btn-block btn-has-plus' btnLabel='Add a New Credit Card' btnExtra='data-toggle="modal" data-target="#modal-credit-card"' %}
+              <!-- Button trigger modal -->
+            </div>
+            <div class="text-center"><a href="#" class="btn btn-link">Cancel</a></div>
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+      </div><!-- .checkout-section-options -->
+
+    {% endif %}
+    
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->

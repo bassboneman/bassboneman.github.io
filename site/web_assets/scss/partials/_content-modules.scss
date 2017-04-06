@@ -1,0 +1,749 @@
+.module {
+  // margin-bottom: 5rem;
+  h2, h3, h4, h5, h6 {
+    margin-top: 0;
+  }
+}
+
+// Content modules that are used on pages with multiple content modules (e.g. home page)
+// .module-top-margin is required on any shelf header that comes directly after a jumbo shelf header
+.module + .module,
+.module + .module-wrapper,
+.module-wrapper + .module,
+.module-top-margin {
+  margin-top: 5rem;
+}
+
+// Content modules that are used inside the collection grid
+.collection .module {
+  margin: 0 0 5rem 0;
+}
+// Content modules that are used inside the special collection grid
+.c-sp-wrap {
+  .module {
+    margin: 0 0 .3rem 0;
+  }
+}
+// another possibility for module margins
+// .is-sitepage,
+// .is-homepage {
+//   .module {
+//     margin-bottom: 5rem;
+//   }
+// }
+
+.module {
+  sup {
+    margin-left: .5rem;
+    vertical-align: baseline;
+    position: relative;
+    top: -1.6em;
+    font-size: .3em;
+  }
+}
+
+// not sure if this is needed for all cases
+.content-wide {
+  .module {
+    margin-bottom: 0;
+  }
+  .module-sh {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+}
+// .module-sh {
+  .module-extra {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+  }
+// }
+
+.shop-now {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.module-img {
+  margin-bottom: 5rem;
+  text-align: center;
+  letter-spacing: $letter-spacing;
+  // these should be h2's now, but keeping h3 for legacy elements
+  h2,
+  h3 {
+    margin: .5rem 0 1rem 0;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    @media screen and (max-width: 767px) {
+      font-size: 1.5rem;
+    }
+  }
+  img {
+    margin-bottom: 2rem;
+  }
+  &.module-carousel {
+    img {
+      margin: 0;
+    }
+  }
+  .collection-name {
+    display: inline-block;
+    font-size: 1.8rem;
+    // font-weight: 700;
+    // text-transform: lowercase;
+    // text-transform: none;
+  }
+  &.module-img-overlay {
+    position: relative;
+    .module-img-copy {
+      position: absolute;
+      width: 100%;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      @include vertical-align-high;
+    }
+    &.module-img-overlay-bot {
+      .module-img-copy {
+        @include vertical-align-none;
+        top: auto;
+        bottom: 2.4rem;
+      }
+    }
+    &.module-img-overlay-shift {
+      .module-img-copy {
+        @media screen and (max-width: 991px) {
+          position: static;
+          // color: $color-black !important; // this is to prevent white module text from "disappearing" once it moves outside the image
+          @include vertical-align-none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $break-xs-max) {
+    max-width: 44rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // this wrapper houses the svg play icon and centers it over the image
+  .module-img-video {
+    position: relative;
+    text-align: center;
+    .play-icon {
+      @include play-icon;
+    }
+  }
+  .module-link-wrap:hover {
+    .module-img-video {
+      .play-icon {
+        @include opacity(1.0);
+      }
+    }
+  }
+}
+
+.collection-name {
+  margin: 0;
+  font-size: 1.8rem;
+  text-transform: none;
+}
+
+.module-combo {
+  .module-combo-img {
+    margin-bottom: 2rem;
+  }
+  .module-combo-copy {
+    margin-bottom: 2rem;
+    text-align: center;
+    .collection-name {
+      font-family: $font-family-serif;
+      font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    h3 {
+      font-family: $font-family-serif;
+      margin-bottom: 2rem;
+      font-size: 4.8rem;
+      font-weight: 300;
+      line-height: 1;
+    }
+    img {
+      margin-bottom: 2rem;
+    }
+  }
+  .module-combo-carousel {
+    .carousel {
+      padding-bottom: 1.5rem;
+      .carousel-caption {
+        position: static;
+        p {
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+          font-weight: 700;
+          letter-spacing: $letter-spacing;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $break-xs-max) {
+    .module-combo-img,
+    .module-combo-carousel {
+      max-width: 44rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.module-ad {
+  border: 12px solid $color-border;
+  margin-bottom: 5rem;
+  padding: 8rem 5rem;
+  text-align: center;
+  letter-spacing: $letter-spacing;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #939598;
+  .ad-main {
+    margin: 0;
+    font-size: 7rem;
+    font-weight: 500;
+    @media screen and (max-width: $break-sm-max) {
+      font-size: 6rem;
+    }
+    @media screen and (max-width: $break-xs-max) {
+      font-size: 12vw;
+    }
+  }
+  .ad-code {
+    display: block;
+    font-weight: 500;
+  }
+  hr {
+    width: 10rem;
+    height: .2rem;
+    margin: 3rem auto;
+    background: $color-dovegray;
+  }
+  &.module-ad-blue {
+    border-color: #b5d1da;
+    .ad-main,
+    .ad-code {
+      color: #b5d1da;
+    }
+    hr {
+      background: #b5d1da;
+    }
+  }
+  @media screen and (max-width: $break-sm-max) {
+    padding: 4rem 2rem;
+  }
+}
+
+.module-4-across {
+  text-align: center;
+  h3 {
+    margin: .5rem 0 1rem 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;      
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    margin-bottom: 1.5rem;
+  }
+  .story {
+    margin-bottom: 3rem;
+    letter-spacing: $letter-spacing;
+  }
+  @media screen and (max-width: $break-xs-max) {
+    .story {
+      max-width: 44rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media screen and (max-width: $break-sm-max) {
+    .row {
+      .col-sm-6:nth-child(3) {
+        clear: left;
+      }
+    }
+  }
+}
+.module-blog {
+  h2 {
+    margin-bottom: 1rem;
+    letter-spacing: $letter-spacing;
+  }
+  .logo-inside-chic {
+    width: 20rem;
+    height: 4.8rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+}
+.module-social {
+  h2 {
+    margin-bottom: 0;
+    font-size: 3.0rem;
+    letter-spacing: $letter-spacing;
+    text-transform: uppercase;
+  }
+  hr {
+    background-color: $color-black;
+  }
+}
+
+.module-product-grid {
+  padding: 2rem 0;
+  background: #f6f6f5;
+  .module-inner > h2 {
+    padding: 0 2rem;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: $letter-spacing;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .carousel {
+    padding: 0 4rem;
+    .carousel-control {
+      width: 4rem;
+    }
+    .carousel-control.left {
+      [class*='icon-arrow'] {
+        left: 1rem;
+      }
+    }
+    .carousel-control.right {
+      [class*='icon-arrow'] {
+        right: 1rem;
+      }
+    }
+    .carousel-indicators {
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+      bottom: 0;
+    }
+  }
+  .product {
+    margin-bottom: 2rem;
+  }
+  .product-name {
+    height: 51px;
+    overflow: hidden;
+  }
+  @media screen and (max-width: $break-xs-max) {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    > h2 {
+      font-size: 1.8rem;
+    }
+    .carousel {
+      padding: 0 1.5rem 0 1.5rem;
+      .carousel-indicators {
+        bottom: 0;
+      }
+      .carousel-control {
+        width: 1.7rem;
+        height: 1.7rem;
+        top: auto;
+        bottom: 0;
+      }
+      [class*='icon-arrow'] {
+        width: 1.7rem;
+        height: 2.5rem;
+      }
+      .carousel-control-wrap {
+        height: 3rem;
+        margin: 2rem -1.5rem -2rem -1.5rem;
+        background: #fff;
+      }
+    }
+    .row {
+      .col-xs-6:nth-child(3) {
+        clear: left;
+      }
+    }
+  }
+
+  // this moves the arrows up so that they roughly match the height of the image (the negative pixel value is half the height of the product name and stars)
+  @media screen and (min-width: 768px) {
+    .carousel-control {
+      [class*="icon-arrow"] {
+        transform: translateY(calc(-50% - 25px));
+      }
+    }
+    .product-name {
+      height: 34px;
+    }
+  }
+}
+
+// prevents product names longer than 2 lines from breaking the layout. This is related to .module-product-grid above
+.carousel-related {
+  .product {
+    margin-bottom: .3rem; // this equalizes the orginal height with the product-name element
+  }
+  .product-name {
+    height: 3.4rem;
+    overflow: hidden;
+  }
+}
+
+// used to wrap entire modules with one anchor
+.module-link-wrap {
+  display: block;
+  text-decoration: none;
+  color: $color-black;
+  .shop-now {
+    text-decoration: underline;
+    color: $color-black;
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+  &:hover,
+  &:focus {
+    color: $color-black;
+    text-decoration: none;
+  }
+}
+
+// add this to any outer container to create a white-on-dark module
+// making a mixin since we shelf headers and other modules move copy around at different breakpoints
+@mixin module-copy-white {
+  color: #fff;
+  a:not(.btn),
+  small {
+    color: #fff;
+  }
+  .carousel {
+    .carousel-caption {
+      color: #fff;
+    }
+  }
+  .module-link-wrap {
+    color: #fff;
+    .shop-now {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  hr {
+    border-color: #fff;
+  }
+}
+.module-copy-white {
+  @media screen and (min-width: 992px) {
+    @include module-copy-white;
+  }
+  @media screen and (min-width: 768px) {
+    .module-sh {
+      @include module-copy-white;
+    }
+  }
+}
+
+.module-copy-white {
+  .module-img-overlay:not(.module-img-overlay-shift) {
+    color: #fff;
+    a:not(.btn) {
+      color: #fff;
+    }
+  }
+  .module-link-wrap {
+    color: #fff;
+    a:not(.btn) {
+      color: #fff;
+    }
+    .shop-now {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+
+.module-ad-sm {
+}
+
+.module-sh-text {
+  margin: 0 -15px;
+  padding: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  .module-inner {
+    padding: 0 1.5rem;
+  }
+  h1,
+  h2,
+  .module-heading {
+    margin: 0 0 1rem 0;
+    font-size: 4rem;
+    line-height: 1;
+  }
+  &.sh-text-lg {
+    font-size: 4.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+    h1,
+    h2,
+    .module-heading {
+      margin: 0;
+      font-family: $font-family-serif;
+      font-size: 3.2rem;
+      font-style: italic;
+    }
+  }
+  hr {
+    width: 6rem;
+    height: .2rem;
+    margin: .5rem auto;
+    background-color: $color-black;
+  }
+  @media screen and (max-width: $break-sm-max) {
+    h1,
+    h2,
+    .module-heading {
+      font-size: 4vw;
+    }
+    .module-sh-text-copy {
+      font-size: 5vw;
+    }
+  }
+  @media screen and (max-width: $break-xs-max) {
+    h1,
+    h2,
+    .module-heading {
+      font-size: 7vw;
+    }
+    .module-sh-text-copy {
+      font-size: 8vw;
+    }
+  }
+  &.sh-text-nocopy {
+    h1,
+    h2,
+    .module-heading {
+      margin: 0;
+      font-size: 7.2rem;
+      font-family: $font-family-serif;
+      font-style: italic;
+      @media screen and (max-width: $break-sm-max) {
+        font-size: 8vw;
+      }
+      @media screen and (max-width: $break-xs-max) {
+        font-size: 10vw;
+      }
+    }
+  }
+}
+
+.module-charity {
+  margin-bottom: 3rem;
+  padding: 4rem;
+  text-align: center;
+  border: 1px solid $color-border;
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  img {
+    margin: 0 auto 3rem auto;
+    max-width: 50%;
+  }
+  h2 {
+    margin: 0 0 2rem 0;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: $letter-spacing;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .module-charity-copy {
+    margin-bottom: 3rem;
+  }
+  .module-charity-extra {
+    a {
+      font-weight: 700;
+      font-style: underline;
+      text-transform: uppercase;
+      color: $color-gray;
+    }
+  }
+}
+
+// this used to be used only for charity, but new cases arose causing a more generic name (was .module-charity-heading)
+.module-heading {
+  margin: 3rem 0;
+  text-align: center;
+  h1, p:last-child {
+    margin: 0;
+  }
+  @include module-heading;
+}
+
+.module-icon-text {
+  .icon-text-item {
+    display: block;
+    margin: 0 auto;
+    padding: 2rem 2rem 0 2rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include clearfix;
+    &:hover {
+      text-decoration: underline;
+      color: $color-black;
+    }
+    svg {
+      float: left;
+      width: 3.6rem;
+      height: 3.6rem;
+      margin: 0.5rem 1.4rem 0 0;
+    }
+    .icon-text-copy {
+      display: block;
+      padding-left: 5.0rem;
+    }
+  }
+  @media screen and (max-width: $break-sm-max) {
+    .icon-text-item {
+      margin-bottom: 3rem;
+      padding: 0;
+      // font-size: 1.4rem;
+    }
+  }
+  @media screen and (max-width: $break-xs-max) {
+    .icon-text-item {
+      max-width: 80%;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hr-mobile {
+    display: none;
+  }
+}
+.hr-mobile-tall,
+.hr-tall {
+  margin: 3.5rem 0;
+}
+.hr-mobile-short {
+  margin: 1rem 0;
+}
+
+
+
+// editorial promo. currently only used on WHBM and Soma
+.editorial-promo {
+  @include editorial-promo;
+  h4 {
+    .the {
+      text-transform: lowercase;
+      font-style: italic;
+    }
+    .normal-case {
+      text-transform: none;
+    }
+    .border-left {
+      padding-left: 1rem;
+      margin-left: 1rem;
+      border-left: 1px solid #fff;
+    }
+  }
+  a {
+  }
+}
+
+
+
+// olapic 
+.module-olapic-header {
+  margin-bottom: 3rem;
+  .module-sh {
+    margin-bottom: 0;
+  }
+  .module-sh-copy {
+    .module-heading {
+      font-size: 3.5rem;
+      margin-bottom: 2.5rem;
+    }
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    a {
+      font-weight: 700;
+    }
+  }
+  // @media screen and (min-width: 768px) {
+  //   border-bottom: 4px solid $color-black;
+  //   .module-sh-copy {
+  //     width: 45%;
+  //   }
+  // }
+}
+.olapic-extra {
+  padding: 0 2rem;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  letter-spacing: $letter-spacing;
+  text-align: center;
+}
+
+// Collection Promo Split
+// This module can be used as both a single element or a carousel. 
+// The module heading is always present and does not rotate with the carousel.
+// There is a shop now link beneath the image
+
+.collection-promo-static-heading {
+  .module-heading {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem 5rem;
+    background: rgba(255,255,255,0.65);
+    @include vertical-align;
+    h2 {
+      margin: 0;
+    }
+  }
+  .after-carousel-cta {
+    display: block;
+    margin: 1.5rem 0 1.8rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+      a {
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  }
+}

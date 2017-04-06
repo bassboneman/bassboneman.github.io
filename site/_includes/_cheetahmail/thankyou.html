@@ -1,0 +1,87 @@
+{% if page.mailtype == 'mail509' %}
+  <p>Thank you! Your email has been added to the 
+  {% if page.brand == 'chicos' %}Chicos.com {% elsif page.brand == 'whbm' %}WHBM.com{% endif %} list.</p>
+{% elsif page.mailtype == 'mail501' %}
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-push-6">
+        {% if page.brand == 'chicos' %}
+          <h1 class="heading-lg heading-serif">Thank You</h1>
+          <p>We can't wait to start filling you in on all our latest news. We've already sent your <strong>10% off* discount</strong> to %%email%% You should receive it momentarily.</p>
+          <p><a href="http://www.chicos.com/store/home.jsp" class="btn btn-primary btn-lg">Start Shopping</a></p>
+          <p>Once your merchandise purchases reach $500, you'll be upgraded to our Passport Program and entitled to:</p>
+          <ul>
+            <li>5% off every merchandise purchase</li>
+            <li>Birthday bonuses</li>
+            <li>Free Shipping</li>
+            <li>Exclusive parties and events</li>
+            <li>Private sales</li>
+          </ul>         
+          <p><a href="https://www.chicos.com/store/account/registration.jsp?" class="btn btn-primary btn-lg">Create An Account</a></p>
+          <p class="disclaimer">
+            <a href="#" data-toggle="modal" data-target="#details">
+              *Details
+            </a>
+          </p>
+        {% elsif page.brand == 'whbm' %}
+          <h1 class="form-email-heading-alt">Thank You</h1>
+          <p>You’ve made a great choice.</p>
+          <p>Keep an eye on your inbox for 10% off your next purchase, previews of our new collections and special invitations.</p>
+          <p><a href="https://www.whitehouseblackmarket.com/store/category/new+arrivals/cat210006/" class="btn btn-primary btn-lg">Shop New Arrivals</a></p>
+          <hr>
+          <h2>WHBM Rewards</h2>
+          <p>Like shopping? You’ll start earning Rewards from your first purchase, plus receive insider perks, exclusive discounts, free shipping and more.</p>
+          <p><a href="https://www.whitehouseblackmarket.com/store/page.jsp?id=49409284" class="btn btn-primary btn-lg">Sign Up</a></p>        
+        {% endif %}
+      </div><!-- col-xs-12 col-sm-6 -->
+      <div class="col-sm-6 hidden-xs col-sm-pull-6">
+        {% if page.brand == 'chicos' %}
+          <img src="imgs/register.jpg" alt="" class="img-responsive">
+        {% elsif page.brand == 'whbm' %}
+          <img src="imgs/thankyou.jpg" alt="" class="img-responsive">
+        {% endif %}
+      </div>
+    </div><!-- .row -->
+  </div><!-- .container -->
+  <!--end cheetahmail code -->
+  <div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="modal-text" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="modal-body">
+          <p>10% off welcome offer only valid for new email sign-ups. If you are already in our database, you will not receive a welcome email with your 10% coupon. Offer not valid on the purchase of gift cards, previously purchased merchandise, taxes or shipping. One time use only, may not be combined with other coupons, offers or events. Not valid if reproduced. No cash value. Limited time only.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% elsif page.mailtype == 'mail-flyover' %}
+  <div class="container" id="flyover-thankyou">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="form-stylized">
+          <h2 class="form-stylized-h2 heading-lg"><em>Thank You</em></h2>
+          <p class="text-uppercase text-center">
+            Your email has been added to the Chicos.com list so you will receive our special offers and more.
+          </p>
+          <p  class="text-center small text-uppercase disclaimer">
+            <a href="#" data-toggle="modal" data-target="#details">
+              *Details
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade modal-simple" id="details" tabindex="-1" role="dialog" aria-labelledby="modal-text" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="modal-body">
+          <p>
+            10% off welcome offer only valid for new email sign-ups. If you are already in our database, you will not receive a welcome email with your 10% coupon. Offer not valid on the purchase of gift cards, previously purchased merchandise, taxes or shipping. One time use only, may not be combined with other coupons, offers or events. Not valid if reproduced. No cash value. Limited time only.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

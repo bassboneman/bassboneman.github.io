@@ -1,0 +1,227 @@
+.modal-header {
+  background: $color-bg-light;
+  border: 0;
+}
+
+.modal-style {
+  .modal-content {
+    border: 1px solid $color-black;
+    border-top-width: 4px;
+    @include box-shadow-none;
+  }
+  .modal-inner {
+    @media (min-width: 991px) {
+      padding: 0 4rem;
+    }
+  }
+  .close {
+    margin-top: -.7rem;
+    font-size: 3.2rem;
+    color: $color-black;
+    @include opacity(1.0);
+  }
+}
+
+.modal-simple {
+  .modal-body {
+    padding: 3rem;
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// gallery modal
+// non-zoom version
+// .modal-gallery {
+//   .modal-content {
+//     background: none;
+//     border: 0;
+//     @include box-shadow-none;
+//   }
+//   .modal-backdrop.in {
+//     @include opacity(0.9);
+//   }
+//   .close.close-corner {
+//     font-size: 30px;
+//     color: $color-white;
+//     background: none;
+//     @include box-shadow-none;
+//   }
+//   .product-img-wrap {
+//     cursor: crosshair;
+//   }
+// }
+
+.modal-gallery {
+  .modal-dialog {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+  }
+  .modal-body {
+    padding: 0 15px;
+  }
+  .modal-content {
+    background: none;
+    border: 0;
+    @include box-shadow-none;
+    text-align: center;
+    font-size: 0;
+  }
+  .modal-backdrop.in {
+    @include opacity(0.9);
+  }
+  .close.close-corner {
+    // margin: 0 -30px 0 0;
+    margin: 0;
+    font-size: 30px;
+    color: $color-white;
+    background: none;
+    @include box-shadow-none;
+  }
+  .product-img-wrap {
+    cursor: crosshair;
+    margin-bottom: 0;
+    img {
+      object-fit: contain;
+      max-height: 100vh;
+      min-height: 100vh;
+    }
+  }
+  .zoom-thumbs {
+    margin: -6px 0;
+    vertical-align: top;
+    display: inline-block;
+    max-width: 120px;
+    padding-right: 12px;
+    @media screen and (max-width: $break-sm-max) {
+      display: none;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 6px 0;
+      }
+      li:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .zoom-main {
+    display: inline-block;
+  }
+  @media screen and (max-width: $break-sm-max) {
+    .close.close-corner {
+      font-size: 4rem;
+      text-shadow: 0 0 2px rgba(0,0,0,0.8);
+    }
+    .product-img-wrap {
+      margin: 0 -1.5rem;
+    }
+  }
+}
+
+#modal-size-calculator {
+  h2 {
+    text-align: center;
+    font-weight: 400;
+    small {
+      display: block;
+    }
+  }
+  p {
+    margin-bottom: $dimension-small;
+    text-align: center;
+    font-size: $font-size-medium;
+  }
+  .nav-tabs {
+    text-align: center;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
+  @include modal-size-calculator;
+}
+
+// Needed so it shows up when triggered within product preview modal. A script (in site.js) is also need to fix a scrolling issue.
+#modal-size-calculator,
+#modal-size {
+  z-index: 1050; 
+}
+
+// make quick view slide in from the right
+@media screen and (max-width: $break-sm-max) {
+  .modal-dialog {
+    .modal.fade:not(.in) & {
+      -webkit-transform: translate3d(25%, 0, 0);
+          -ms-transform: translate3d(25%, 0, 0);
+              transform: translate3d(25%, 0, 0);
+    }
+  }
+}
+@media screen and (max-width: $break-xs-max) {
+  .modal-dialog {
+    margin: 0;
+  }
+}
+.close.close-corner {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+  font-size: 3.2rem;
+  text-shadow: none;
+  @include opacity(1.0);
+}
+
+.modal.modal-pdp {
+  .close.close-corner {
+    top: .5rem;
+  }
+  .modal-body {
+    padding: 4rem 2rem;
+  }
+}
+
+.modal-video {
+  .modal-content {
+    background: none;
+    border: 0;
+    @include box-shadow-none;
+  }
+  .modal-body {
+    padding: 0;
+    text-align: right;
+  }
+  .modal-inner {
+    background: #fff;
+  }
+  .close {
+    float: none;
+    margin-right: 1rem;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: none;
+    @include opacity(1.0);
+  }
+  @media (min-width: 1200px) {
+    .modal-lg {
+      width: 1024px;
+    }
+  }
+}
+
+// fixed header
+@media screen and (max-width: 767px) {
+  .modal-fixed-header {
+    .modal-body {
+      max-height: calc(100vh - 5.5rem);
+      overflow-y: auto;
+    }
+  }
+}

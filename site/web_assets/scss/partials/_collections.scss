@@ -1,0 +1,394 @@
+// any special collection classes will begin with ".c-sp"
+
+// use .content-sh when the .module-sh needs a background color that fills the available horizontal space
+// .content-sh {
+//   .container-fluid {
+//     max-width: 100%;
+//   }
+//   .module-sh {
+//     margin-left: -1.5rem;
+//     margin-right: -1.5rem;
+//     background-color: #eee;
+//   }
+//   .module-sh-inner {
+//     position: relative;
+//     max-width: $max-width;
+//     margin: 0 auto;
+//   }
+// }
+
+
+.module-sh {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: .3rem;
+  @include clearfix;
+  .module-sh-copy {
+    text-align: center;
+  }
+  // top-level modules get h1
+  h1,
+  h2,
+  .module-heading {
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+  }
+  p {
+    font-size: 2.0rem;
+    line-height: 1.2;
+  }
+  hr {
+    width: 6.0rem;
+    border-color: $color-black;
+    &.hr-long {
+      width: 15rem;
+    }
+  }
+  // @media screen and (min-width: 992px) { // repeated in special collections
+  //   .btn {
+  //     @include btn-responsive;
+  //   }
+  // }
+  // removed the above to allow users to define button styles
+}
+
+// this is used to float the promo unit to the right of the collection grid
+@media screen and (min-width: 768px) {
+  .promo-right {
+    > [class*='col']:first-child {
+      float: right;
+    }
+  }
+}
+
+
+
+// added social variant since WHBM shows more than just pinterest
+.c-sp-social {
+  @include c-sp-social;
+  position: absolute;
+  right: 1.5rem;
+  z-index: 200;
+  display: block;
+  // width: 2.4rem;
+  a {
+    display: inline-block;
+    margin-left: 2rem;
+    text-decoration: none;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  [class*='icon-'] {
+    width: 2.4rem;
+    height: 2.4rem;
+    @include transition(fill);
+  }
+  .icon-pinterest:hover {
+    fill: $color-pinterest;
+  }
+  .icon-facebook:hover {
+    fill: $color-fb;
+  }
+  .icon-twitter:hover {
+    fill: $color-twitter;
+  }
+}
+.module-sh-right {
+  .c-sp-social {
+    left: 1.5rem;
+    right: auto;
+  }
+}
+
+.c-sp-prods {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  // z-index: 600;
+  z-index: 1010;
+  width: 30rem;
+  height: 100%;
+  padding: 4.0rem 2.0rem 2.0rem 2.0rem;
+  // overflow: auto;
+  background: #fff;
+  border-left: .1rem solid $color-border;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  @include transition(all);
+  @media screen and (max-width: $break-xs-max) {
+    width: 100%;
+    border: 0;
+  }
+  .media {
+    margin: 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid $color-border;
+    &:last-child {
+      border-bottom: 1px solid $color-border;
+    }
+  }
+  h4 {
+    font-size: 1.8rem !important; // adding !important as creatives will have control over other p elements in the module
+  }
+  p {
+    font-size: 1.5rem !important; // adding !important as creatives will have control over other p elements in the module
+  }
+  .icon-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .c-sp-prods-inner {
+    height: 100%;
+    overflow: auto;
+    img {
+      width: 100px;
+    }
+  }
+}
+.module-sh.open .c-sp-prods {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.c-sp-link,
+.c-sp-link:hover,
+.c-sp-link:active,
+.c-sp-link:focus {
+  display: block;
+  color: $color-black;
+  text-decoration: none;
+  @include clearfix;
+}
+
+@media screen and (max-width: $break-sm-max) {
+  .module-sh {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    .module-heading,
+    h1,
+    h2,
+    .module-heading {
+      font-size: 3.0rem;
+    }
+    p {
+      font-size: 1.6rem;
+      line-height: 1.2;
+    }
+  }
+}
+.module-sh-copy {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  @include vertical-align;
+  @media screen and (max-width: $break-xs-max) {
+    position: static;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .module-sh-right & {
+    left: auto;
+    right: 0;
+  }
+}
+
+.module-sh-img {
+  position: relative;
+}
+
+.module-sh-grid {
+  .module-sh-img {
+    float: right;
+    width: 50%;
+  }
+  &.module-sh-right {
+    .module-sh-img {
+      float: left;
+    }
+  }
+  &.module-sh-thirds {
+    .module-sh-img {
+      width: 66%;
+    }
+    // .module-sh-copy {
+    //   width: 23%;
+    // }
+  }
+  @media screen and (max-width: $break-xs-max) {
+    .module-sh-img,
+    &.module-sh-right .module-sh-img,
+    &.module-sh-thirds .module-sh-img {
+      float: none;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: $break-xs-max) {
+  .module-sh,
+  .module-sh.module-sh-thirds {
+    .module-sh-copy {
+      position: static;
+      padding: 3rem 1.5rem;
+      width: 100%;
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0);
+    }
+    h1,
+    h2,
+    .module-heading {
+      font-size: 3.0rem;
+    }
+    p {
+      font-size: 1.6rem;
+      line-height: 1.2;
+    }
+  }
+  .carousel {
+    .module-sh-copy { // make sure bottom padding is large enough to accommodate carousel indicators
+      padding-bottom: 4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .module-sh.module-sh-wide {
+    .module-sh-copy {
+      width: 100%;
+      padding: 0 10%;  
+    }
+  }
+}
+
+// special collection page header, content, footer
+
+.c-sp-wrap {
+  .module {
+    margin-bottom: .3rem;
+    @include c-sp-wrap;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .module-sh {
+    .module-sh-copy {
+      padding: 0 45% 0 10%;
+    }
+  }
+  .module-sh.module-sh-right {
+    .module-sh-copy {
+      padding: 0 10% 0 45%;
+    }
+  }
+  .module-sh.module-sh-center {
+    .module-sh-copy {
+      padding: 0 10% 0 10%;
+    }
+  }
+  .module-sh.module-sh-grid {
+    .module-sh-copy {
+      width: 50%;
+      padding: 0 5%;
+    }
+  }
+  .module-sh.module-sh-grid.module-sh-thirds {
+    .module-sh-copy {
+      width: 33%;
+      padding: 0 5%;
+    }
+  }
+  .carousel {
+    h1, h2, p {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.c-sp-header {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding: 2.5rem 0;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  h1 {
+    margin: 0;
+    font-size: 3.2rem;
+    letter-spacing: 1rem;
+    @media screen and (max-width: $break-xs-max) {
+      // font-size: 2.4rem;
+      letter-spacing: .5rem;
+    }
+  }
+  i {
+    text-transform: none;
+  }
+  @include c-sp-header;
+}
+
+.c-sp-footer {
+  padding: 2rem;
+  text-align: center;
+  a {
+    display: inline-block;
+    margin: 0 2rem;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-decoration: none;
+  }
+  @include c-sp-footer;
+}
+@media screen and (max-width: $break-sm-max) {
+  .c-sp-header,
+  .c-sp-footer {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    .row {
+      margin: 0;
+    }
+  }
+}
+
+
+.collection-group-cta {
+  margin-bottom: 8rem;
+}
+
+.c-sp-click {
+  @include c-sp-click;
+}
+
+// module that uses a bg image rather than an image in the html
+.module-sh-bg {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding: 3rem;
+  .module-sh-copy {
+    position: static;
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    @include vertical-align-none;
+    > * {
+      margin-bottom: 0;
+    }
+  }
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;  
+}

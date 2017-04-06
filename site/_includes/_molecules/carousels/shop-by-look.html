@@ -1,0 +1,33 @@
+<section class="module module-carousel">
+  <div class="module-inner">
+    <div id="carousel-default-{{ include.id }}" class="carousel slide carousel-lg carousel-copy-right {{ include.carouselClass }}" data-ride="carousel" data-interval="false" aria-live="polite">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-default-{{ include.id }}" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-default-{{ include.id }}" data-slide-to="1" class=""></li>
+        <li data-target="#carousel-default-{{ include.id }}" data-slide-to="2" class=""></li>
+        <li data-target="#carousel-default-{{ include.id }}" data-slide-to="3" class=""></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="{{ site.baseurl }}/web_assets/imgs/whbm/shopbylook{{ include.id }}a.jpg">
+        </div>
+        <div class="item">
+          <img src="{{ site.baseurl }}/web_assets/imgs/whbm/shopbylook{{ include.id }}b.jpg">
+        </div>
+        <div class="item">
+          <img src="{{ site.baseurl }}/web_assets/imgs/whbm/shopbylook{{ include.id }}c.jpg">
+        </div>
+        <div class="item">
+          <img src="{{ site.baseurl }}/web_assets/imgs/whbm/shopbylook{{ include.id }}d.jpg">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#carousel-default-{{ include.id }}" data-slide="prev" aria-label="previous">
+        <!-- Trying to minimize the number of files I edit; doing this was simpler than editing svg-defs.svg -->
+        <img src="{{ site.baseurl }}/web_assets/svg/arrow-big-left.svg" />
+      </a>
+      <a class="right carousel-control" href="#carousel-default-{{ include.id }}" data-slide="next" aria-label="next">
+        <img src="{{ site.baseurl }}/web_assets/svg/arrow-big-right.svg" />
+      </a>
+    </div><!-- #carousel-default -->
+  </div>
+</section><!-- .module -->

@@ -1,0 +1,219 @@
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-text">Text Input</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/input.html labelName='Text Label' labelID='text-label' inputType="text" %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/input.html labelName='Text Label' labelID='text-label' inputType="text" %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-email">Email Input</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/input.html labelName='Email Label' labelID='email-label' inputType="email" %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/input.html labelName='Email Label' labelID='email-label' inputType="email" %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-password">Password Input</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/input.html labelName='Password Label' labelID='password-label' inputType="password" %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/input.html labelName='Password Label' labelID='password-label' inputType="password" %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-select">Select Dropdown</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/select.html labelName='Select Label' labelID='select-label' selectOptions='<option value="">Option 1</option><option value="">Option 2</option>' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/select.html labelName='Select Label' labelID='select-label' selectOptions='<option value="">Option 1</option><option value="">Option 2</option>' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-radio">Radio Input</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/radio.html radioGroup='radio-options' radioID='radio-option-1' radioValue='option-1' labelName='Radio option 1' checked='checked' %}
+      {% include _atoms/forms/radio.html radioGroup='radio-options' radioID='radio-option-1' radioValue='option-2' labelName='Radio option 2' %}
+      {% include _atoms/forms/radio.html radioGroup='radio-options' radioID='radio-option-1' radioValue='option-3' labelName='Radio option 3' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/radio.html radioGroup='radio-options' radioID='radio-option-1' radioValue='option-1' labelName='Radio option 1' checked='checked' %}
+      {% include _atoms/forms/radio.html radioGroup='radio-options' radioID='radio-option-1' radioValue='option-2' labelName='Radio option 2' %}
+      {% include _atoms/forms/radio.html radioGroup='radio-options' radioID='radio-option-1' radioValue='option-3' labelName='Radio option 3' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-checkbox">Checkbox Input</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/checkbox.html checkValue='check-1' labelName="Checkbox option 1" checked='checked' %}
+      {% include _atoms/forms/checkbox.html checkValue='check-2' labelName="Checkbox option 2" %}
+      {% include _atoms/forms/checkbox.html checkValue='check-3' labelName="Checkbox option 3" %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/checkbox.html checkValue='check-1' labelName="Checkbox option 1" checked='checked' %}
+      {% include _atoms/forms/checkbox.html checkValue='check-2' labelName="Checkbox option 2" %}
+      {% include _atoms/forms/checkbox.html checkValue='check-3' labelName="Checkbox option 3" %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-radio-inline">Radio Input (inline)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/radio-inline.html radioName='inline-radio-options' radioID='inline-radio-1' radioValue='option-1' labelName="1" checked='checked' %}
+      {% include _atoms/forms/radio-inline.html radioName='inline-radio-options' radioID='inline-radio-2' radioValue='option-2' labelName="2" %}
+      {% include _atoms/forms/radio-inline.html radioName='inline-radio-options' radioID='inline-radio-3' radioValue='option-3' labelName="3" %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/radio-inline.html radioName='inline-radio-options' radioID='inline-radio-1' radioValue='option-1' labelName="1" checked='checked' %}
+      {% include _atoms/forms/radio-inline.html radioName='inline-radio-options' radioID='inline-radio-2' radioValue='option-2' labelName="2" %}
+      {% include _atoms/forms/radio-inline.html radioName='inline-radio-options' radioID='inline-radio-3' radioValue='option-3' labelName="3" %} 
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-checkbox-inline">Checkbox Input (inline)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/checkbox-inline.html checkID='check-1' checkValue='check-1' labelName="1" checked='checked' %}
+      {% include _atoms/forms/checkbox-inline.html checkID='check-2' checkValue='check-2' labelName="2" %}
+      {% include _atoms/forms/checkbox-inline.html checkID='check-3' checkValue='check-3' labelName="3" %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/checkbox-inline.html checkID='check-1' checkValue='check-1' labelName="1" checked='checked' %}
+      {% include _atoms/forms/checkbox-inline.html checkID='check-2' checkValue='check-2' labelName="2" %}
+      {% include _atoms/forms/checkbox-inline.html checkID='check-3' checkValue='check-3' labelName="3" %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-textarea">Textarea</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/textarea.html labelID='label' labelName='Label' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/textarea.html labelID='label' labelName='Label' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-phone">Phone</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/phone.html labelName='Phone' labelID1='phone1' labelID2='phone2' labelID3='phone3' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/phone.html labelName='Phone' labelID1='phone1' labelID2='phone2' labelID3='phone3' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-error">Error States</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/error.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/error.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="forms-error">Help Text</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/forms/help.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/forms/help.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>

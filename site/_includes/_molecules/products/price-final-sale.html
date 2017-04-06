@@ -1,0 +1,12 @@
+<p class="product-price">
+  {% if page.sale-type == 'regular' %}
+    <span class="product-price-sale">$79.99</span>
+    <span class="product-price-regular">$129.75</span>
+  {% elsif page.sale-type == 'final' and page.layout != 'page-collection' %}
+    {% include _atoms/text/product-price-final-sale.html longLabel='yes' tooltip='yes' %}
+  {% else %}
+    <span class="product-price-sale">$39.98</span>
+    <span class="product-price-regular" style="text-decoration: line-through;">$49.00</span>
+    <span class="product-price-final-label product-price-sale">Final Sale- no returns or exchanges <a class="final-sale-tooltip" href="javascript://" data-toggle="tooltip" data-html="true" data-placement="bottom" title="" data-original-title="Merchandise marked &quot;final sale&quot; is sold &quot;as is&quot; and may not be returned or exchanged and is not eligible for price adjustment. Merchandise prices ending in .98 indicate final sale."><i class="fa fa-question-circle fa-lg"></i></a></span>{% comment %} if price messaging required {% endcomment %}
+  {% endif %}
+</p>

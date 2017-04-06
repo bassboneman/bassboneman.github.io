@@ -1,0 +1,25 @@
+{% comment %}make sure all forms work with unique IDs{% endcomment %}
+{% comment %}NOT SURE IF ALL OF THESE ARE NEEDED FOR THESE FORM FIELDS{% endcomment %}
+{% if include.placement == 'modal-address' %}
+  {% capture contact-email %}contact-email-modal-address{% endcapture %}
+  {% capture contact-phone %}contact-phone-modal-address{% endcapture %}
+{% elsif include.placement == 'modal-cc' %}
+  {% capture contact-email %}contact-email-modal-cc{% endcapture %}
+  {% capture contact-phone %}contact-phone-modal-cc{% endcapture %}
+{% else %}
+  {% capture contact-email %}contact-email{% endcapture %}
+  {% capture contact-phone %}contact-phone{% endcapture %}
+{% endif %}
+
+<div class="row row-tight">
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      {% include _atoms/forms/input.html class="input-lg" labelName='Email Address' labelID=contact-email inputType='email' %}
+    </div><!-- .field-wrap -->          
+  </div><!-- .col-sm-6 -->
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      {% include _atoms/forms/input.html class="input-lg" labelName='Phone Number' labelID=contact-phone inputType='tel' %}
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->

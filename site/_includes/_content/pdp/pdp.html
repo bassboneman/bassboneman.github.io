@@ -1,0 +1,38 @@
+{% if page.brand == 'soma' %}
+  {% include _molecules/navigation/back-link.html linkLabel='Back to New Arrivals' %}
+{% else %}
+  {% include _molecules/navigation/back-link.html %} 
+{% endif %}
+
+<div class="row">
+  <div class="col-md-7 col-sm-6">
+    {% include _molecules/products/images.html %}
+  </div>
+  <div class="col-md-5 col-sm-6">
+    <article>
+      {% include _molecules/products/complete.html %}
+    </article>
+  </div>
+</div>
+
+
+{% if page.pdp-type == 'complete' %}
+  <hr>
+  <h3 class="heading-styled">Complete the Look</h3>
+  {% include _molecules/products/complete-look.html %}
+  {% comment %}only showing one now
+  {% include _molecules/products/complete-look.html %}
+  {% include _molecules/products/complete-look.html %}
+  {% endcomment %}
+  {% include _molecules/products/related-all.html relatedHeading='yes' %}
+  {% include _molecules/navigation/tabs.html %}
+{% else %}
+  {% include _molecules/products/related-all.html relatedHeading='yes' %}
+  {% if page.title == "Product Page (Donations)" or page.title == "Product Page (Gift Card)" or page.title == "Product Page (e-Gift Card)" %}
+  {% else %}
+    {% include _molecules/navigation/tabs.html %}
+  {% endif %}
+{% endif %}
+
+{% include _molecules/modals/modal-add-wishlist.html %}
+{% include _molecules/modals/modal-quick-view.html %}

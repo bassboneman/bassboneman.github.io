@@ -1,0 +1,39 @@
+{% include _templates/header-checkout.html %}
+
+<main>
+  <div class="content content-checkout">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          {{content}}
+
+        </div><!-- .col-md-8 -->
+        <div class="col-md-4">
+
+          <aside class="checkout-sidebar">
+            {% if page.checkoutPage != 'confirmation' %}
+              {% include _molecules/checkout/summary.html placement='sidebar' %}          
+            {% endif %}
+            <div class="sidebar-item">
+              <a href="#">
+                <img src="http://placeholdit.imgix.net/~text?txtsize=33&txt=Checkout+Promo&w=400&h=200" alt="Sidebar Promo" class="img-responsive">
+              </a>
+            </div>
+            {% include _molecules/blocks/sidebar.html %}
+          </aside><!-- .checkout-sidebar -->
+
+        </div><!-- .col-md-4 -->
+      </div><!-- .row -->
+    </div><!-- .container-fluid -->
+  </div><!-- .content -->
+
+  {% comment %}Alerts{% endcomment %}
+  {% include _molecules/checkout/blocks/alert.html %}
+
+
+</main>
+
+{% comment %}
+{% include _molecules/modals/modal-cart.html %}
+{% endcomment %}
+{% include _templates/footer-checkout.html %}

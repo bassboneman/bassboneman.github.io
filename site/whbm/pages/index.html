@@ -1,0 +1,18 @@
+---
+layout: index
+title: Pages
+top-link: pages
+brand: whbm
+---
+
+<style>
+  section {
+    margin-bottom: 40px;
+  }
+</style>
+
+<div class="col-md-12">
+  <h1>White House Black Market</h1>
+  <p class="update">Last updated: {{ site.time | date: '%B %d, %Y' }}</p>
+  {% include _templates/list.html %}
+</div>

@@ -1,0 +1,20 @@
+<div class="modal fade" id="modal-print-shopping-bag" tabindex="-1" role="dialog" aria-labelledby="modal-print-shopping-bag" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="myModalLabel">Print Your Shopping Bag</h3>
+      </div>
+      <div class="modal-body">
+        <p>Print your shopping list and take it with you to your favorite Chico's store locations.</p>
+
+        <form action="#">
+          {% include _atoms/forms/input.html labelName='Zip Code (optional)' labelID='zip-code' inputType="text" %}
+          {% include _atoms/buttons/button.html btnClass='btn-primary' btnLabel='Submit' btnLink='shopping-bag-print.html' %}
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

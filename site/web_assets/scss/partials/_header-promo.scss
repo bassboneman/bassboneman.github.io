@@ -1,0 +1,201 @@
+#header-promo-wrap {
+  padding: 1rem 0;
+  background: $color-black;
+  a {
+    color: $color-header-promo;
+    text-decoration: none;
+  }
+  .item {
+    overflow: auto; // this prevents the margin of the last child element from growing the container
+  }
+  #promo-carousel {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+  #header-promo-toggle {
+    position: relative;
+    color: #fff;
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    @include clearfix;
+  }
+  #header-promo {
+    display: none;
+    max-width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-transform: uppercase;
+    color: #fff;
+    @media screen and (max-width: $break-xs-max) {
+      max-width: 80%;
+    }
+  }
+  #header-promo-inner {
+    padding: 1rem 0 2.5rem 0;
+    @include opacity(0.0);
+  }
+  .carousel-control {
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    @include transition(opacity);
+    @include opacity(1.0);
+    &:hover {
+      @include opacity(0.5);
+    }
+  }
+  .carousel-indicators {
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+    margin: 0;
+    text-align: left;
+    width: 90%;
+    li {
+      display: none;
+      position: static;
+      text-indent: 0;
+      background: none;
+      border-color: transparent;
+      white-space: nowrap; // add ellipsis when copy gets too long
+      width: 100%; // add ellipsis when copy gets too long
+      overflow: hidden; // add ellipsis when copy gets too long
+      text-overflow: ellipsis; // add ellipsis when copy gets too long
+      @include promo-label-styles;
+      &.active {
+        display: block;
+        width: auto;
+        height: auto;
+        // color: #fff;
+        color: $color-header-promo;
+        background: none;
+        border-color: transparent;
+        @include opacity(1.0);
+        visibility: visible;
+      }
+      @keyframes flickerAnimation {
+        0%   { opacity:0; }
+        100% { opacity:1; }
+      }
+      @-o-keyframes flickerAnimation{
+        0%   { opacity:0; }
+        100% { opacity:1; }
+      }
+      @-moz-keyframes flickerAnimation{
+        0%   { opacity:0; }
+        100% { opacity:1; }
+      }
+      @-webkit-keyframes flickerAnimation{
+        0%   { opacity:0; }
+        100% { opacity:1; }
+      }
+      &.active {
+         -webkit-animation: flickerAnimation 1s 1;
+         -moz-animation: flickerAnimation 1s 1;
+         -o-animation: flickerAnimation 1s 1;
+          animation: flickerAnimation 1s 1;
+      }
+    }
+  }
+  &.promo-open {
+    .carousel-indicators li.active {
+         -webkit-animation: none;
+            -moz-animation: none;
+              -o-animation: none;
+                 animation: none;
+      }
+    .carousel-indicators li {
+      @include opacity(0.0);
+    }
+  }
+  .promo-left,
+  .promo-right {
+    fill: $color-header-promo;
+    @include header-promo-icons;
+  }
+}
+
+
+.promo-toggle-icon {
+  float: left;
+  margin: .2rem 1rem 0 0;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  @include transition(all, 0.5s);
+  svg {
+    display: inline-block;
+    fill: $color-header-promo;
+    overflow: visible !important;
+  }
+  @include promo-toggle-icon;
+}
+// &.promo-open {
+//   .promo-toggle-icon {
+//     -webkit-transform: rotate(45deg);
+//         -ms-transform: rotate(45deg);
+//             transform: rotate(45deg);
+//   }
+// }
+
+.header-promo-heading {
+  margin: 0 0 2.5rem 0;
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: .5px;
+  @include header-promo-heading;
+  small {
+    display: block;
+    margin-top: .5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $color-header-promo;
+  }
+}
+.header-promo-copy {
+  margin-bottom: 2rem;
+  span,
+  a {
+    margin: 0 1.5rem;
+  }
+  span {
+    @media screen and (max-width: $break-xs-max) {
+      display: block;
+    }
+  }
+}
+.header-promo-details {
+  font-size: 1rem;
+}
+
+// header promo now has an outer link wrapper
+.header-promo-link-wrap {
+  text-decoration: none;
+  .header-promo-cta,
+  .header-promo-details {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Header promos should be wrapped in an anchor tag
+// the above styles are set up with that in mind,
+// however, it's possible that individual links might
+// be used. In that case, the following style is needed
+// in order to add an underline to the details links
+#header-promo {
+  [data-toggle="modal"] {
+    text-decoration: underline;
+  }
+}

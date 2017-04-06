@@ -1,0 +1,44 @@
+{% comment %} if has orders {% endcomment %}
+
+<p>Orders placed with {% if page.brand == 'whbm' %}White House Black Market{% elsif page.brand == 'soma' %}Soma{% else %}Chico's{% endif %} within the past six months are displayed. Please check on the order number to view the detail of the order. Tracking is only enabled for orders placed within the past 90 days.</p>
+
+{% if include.noOrders != 'yes' %}
+  <div class="table-responsive">
+    <table class="table {% if page.brand == 'soma' %}table-striped{% endif %}">
+      <thead>
+        <tr>
+          <th>Order Number</th>
+          <th>Date Placed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="">1808470743</a></td>
+          <td>Monday, May 16, 2015</td>
+        </tr>
+        <tr>
+          <td><a href="">1808470908</a></td>
+          <td>Thursday, June 4, 2015</td>
+        </tr>
+        <tr>
+          <td><a href="">1808474546</a></td>
+          <td>Thursday, June 4, 2015</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endif %}
+
+<h2>Questions?</h2>
+<p>Have additional questions about your order? Feel free to email us at <a href="mailto:customerservice@{% if page.brand == 'whbm' %}whitehouseblackmarket{% elsif page.brand == 'soma' %}soma{% else %}chicos{% endif %}.com">customerservice@{% if page.brand == 'whbm' %}whitehouseblackmarket{% elsif page.brand == 'soma' %}soma{% else %}chicos{% endif %}.com</a> or call us toll free at {% if page.brand == 'whbm' %}1.877.948.2525{% elsif page.brand == 'soma' %}1.866.768.7662{% else %}1.888.855.4986{% endif %}.</p>
+
+<h2>No Recent Orders</h2>
+<p>We only display orders placed within the past six months.</p>
+
+<h3>Return Services:</h3>
+<ul class="list-unstyled">
+  <li><a href="#" data-toggle="modal" data-target="#modal-returns">Read Our Returns Policy</a></li>
+  <li><a href="http://www.shipmentmanager.com/Portal.aspx?MerchantID=3737&TargetPageID=32">Print a Return Shipping Label</a></li>
+  <li><a href="http://returnstracking.shipmentmanager.com/3737">Track a Return Shipment</a></li>
+</ul>
+{% include _molecules/modals/modal-returns.html %}

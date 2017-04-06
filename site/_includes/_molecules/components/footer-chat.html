@@ -1,0 +1,11 @@
+<div class="footer-chat {% if include.chatActive %}footer-chat-active{% endif %} {% if page.feature == 'chat-active' %}footer-chat-active{% endif %}">
+  <a href="#">
+    {% if page.brand == 'soma' %}
+      <svg class="icon-chat"><use xlink:href="#icon-chat-soma"></use></svg>
+      Need Help?
+    {% else %}
+      <svg class="icon-chat"><use xlink:href="#icon-chat"></use></svg>
+      Live Chat
+    {% endif %}
+  </a>
+</div>

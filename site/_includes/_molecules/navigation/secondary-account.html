@@ -1,0 +1,93 @@
+{% if page.brand == 'whbm' %}
+  <nav class="nav-secondary">
+    <div class="hidden-xs">
+      <h4>My Account</h4>
+      <ul>
+        <li class="{% if page.title == "WHBM Rewards" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/login-success.html">Rewards Status</a></li>
+        <li class="{% if page.title == "Profile &amp; Preferences" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/profile-preferences.html">Profile &amp; Preferences</a></li>
+        <li class="{% if page.title == "Saved Payment" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/saved-payment.html">Saved Payment</a></li>
+        <li class="{% if page.title == "Address Book" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/address-book.html">Address Book</a></li>
+        <li class="{% if page.title == "My Orders" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/my-orders.html">My Orders</a></li>
+        <li class="{% if page.nav == 'wish-list' %}active{% endif %}">
+          <a href="../{% if page.top-link == 'molecules' %}pages/{% endif %}account/my-wish-list.html">My Wish List</a>
+        </li>
+        <li><a href="../collection.html">Shop Now</a></li>
+      </ul>
+    </div>
+
+
+    <div class="visible-xs">
+      <select class="form-control selectpicker" onchange="location = this.options[this.selectedIndex].value;">
+        <option value="" selected="selected">My Account</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/login-success.html">Rewards Status</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/profile-preferences.html">Profile &amp; Preferences</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/saved-payment.html">Saved Payment</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/address-book.html">Address Book</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/my-orders.html">My Orders</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/my-wish-list.html">My Wish List</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}collection.html">Shop Now</option> 
+      </select>
+    </div>
+  </nav>
+
+{% elsif page.brand == 'soma' %}
+
+  <nav class="nav-secondary">
+    <div class="hidden-xs">
+      <h4>My Account</h4>
+      <ul>
+        <li class="{% if page.title == "Login Success" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/login-success.html">Rewards Status</a></li>
+        <li class="{% if page.title == "Refer Friends" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/refer-friends.html">Refer Friends</a></li>
+        <li class="{% if page.title == "Profile &amp; Preferences" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/profile-preferences.html">Profile &amp; Preferences</a></li>
+        <li class="{% if page.title == "Saved Payment" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/saved-payment.html">Saved Payment</a></li>
+        <li class="{% if page.title == "Address Book" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/address-book.html">Address Book</a></li>
+        <li class="{% if page.title == "My Orders" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/my-orders.html">My Orders</a></li>
+        <li class="{% if page.nav == 'wish-list' %}active{% endif %}"><a href="../{% if page.top-link == 'molecules' %}pages/{% endif %}account/my-wish-list.html">Soma Wish List</a></li>
+      </ul>
+    </div>
+    <div class="visible-xs">
+      <select class="form-control selectpicker" onchange="location = this.options[this.selectedIndex].value;">
+        <option value="" selected="selected">My Account</option>
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/love-soma-rewards.html">Rewards Status</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/refer-friends.html">Refer Friends</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/profile-preferences.html">Profile &amp; Preferences</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/saved-payment.html">Saved Payment</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/address-book.html">Address Book</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/my-orders.html">My Orders</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/my-wish-list.html">Soma Wish List</option> 
+      </select>
+    </div>
+  </nav>
+
+{% else %}
+
+  <nav class="nav-secondary">
+    <div class="hidden-xs">
+      <h4>My Account</h4>
+      <ul>
+        <li class="{% if page.title == "Profile &amp; Preferences" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/profile-preferences.html">Profile &amp; Preferences</a></li>
+        <li class="{% if page.title == "Saved Payment" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/saved-payment.html">Saved Payment</a></li>
+        <li class="{% if page.title == "Address Book" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/address-book.html">Address Book</a></li>
+        <li class="{% if page.title == "My Orders" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/my-orders.html">My Orders</a></li>
+        <li class="{% if page.nav == 'wish-list' %}active{% endif %}"><a href="../{% if page.top-link == 'molecules' %}pages/{% endif %}account/my-wish-list.html">My Wish List</a></li>
+        <li class="{% if page.title == "Passport Program" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/passport-program.html">Passport Program</a></li>
+      </ul>
+    </div>
+    <div class="visible-xs">
+      <select class="form-control selectpicker" onchange="location = this.options[this.selectedIndex].value;">
+        <option value="" selected="selected">My Account</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/profile-preferences.html">Profile &amp; Preferences</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/saved-payment.html">Saved Payment</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/address-book.html">Address Book</option> 
+        <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/my-orders.html">My Orders</option> 
+        {% if page.brand == 'soma' %}
+          <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/love-soma-rewards.html">Love Soma Rewards</option> 
+          <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/my-wish-list.html">Soma Wish List</option> 
+        {% else %}
+          <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/passport-program.html">Passport Program</option> 
+          <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}account/my-wish-list.html">My Wish List</option> 
+        {% endif %}
+      </select>
+    </div>
+  </nav>
+{% endif %}

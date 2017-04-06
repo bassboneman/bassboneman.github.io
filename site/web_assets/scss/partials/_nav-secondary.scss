@@ -1,0 +1,84 @@
+// basic list, as seen on customer care pages
+.nav-secondary {
+  margin-bottom: $dimension-base;
+  text-transform: $text-transform-subnav;
+  letter-spacing: 0;
+  h4 {
+    margin-top: 0;
+  }
+  ul {
+    list-style: none;
+    padding: $dimension-none;
+    li {
+      @include subnav-fonts;
+      font-weight: 400;
+      a,
+      a:hover {
+        display: block;
+        line-height: $line-height-base;
+        text-decoration: none;
+      }
+      &.active a,
+      &.active a:hover {
+        font-weight: 700;
+      }
+    }
+  }
+  @include nav-secondary;
+}
+
+// as seen on collection pages
+.nav-secondary-collection {
+  margin-top: $dimension-base;
+  margin-bottom: $dimension-base;
+  // h4 {
+  //   // @include bold-caps;
+  //   // margin-bottom: $dimension-small;
+  // }
+  ul {
+    list-style: none;
+    padding: $dimension-none;
+    li {
+      font-size: $font-size-medium;
+      line-height: $line-height-tall;
+      padding-top: $dimension-xsmall;
+    }
+    .nav-secondary-parent,
+    .nav-secondary-all {
+      font-weight: $font-weight-bold;
+    }
+    // .nav-secondary-all a,
+    // .nav-secondary-all a:hover {
+    //   // color: $color-red;
+    // }
+    .active a,
+    .active a:hover {
+      font-weight: $font-weight-bold;
+      color: $color-subnav-active;
+      text-decoration: none;
+    }
+    ul {
+      margin-left: $dimension-small;
+      li {
+        font-weight: $font-weight-base;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $color-subnav-active;
+  }
+}
+
+// back links
+.back-link {
+  margin: $dimension-small 0;
+  font-size: $font-size-small;
+  @include back-link;
+  a {
+    text-decoration: none;
+  }
+}

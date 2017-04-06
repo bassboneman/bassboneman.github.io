@@ -1,0 +1,19 @@
+<div class="modal fade" id="modal-passport" tabindex="-1" role="dialog" aria-labelledby="modal-passport" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        {% if page.brand == 'whbm' %}
+          <h3>Your Rewards Number can be found 3 ways:</h3>
+          <ul>
+            <li>On the back of your mailer, near your address</li>
+            <li>At the top of your receipt</li>
+            <li>By calling customer service at 877.948.2525</li>
+          </ul>
+        {% else %}
+          <img class="img-responsive img-center" src="https://placeholdit.imgix.net/~text?txtsize=42&txt=Passport+Number+Location&w=520&h=360&txttrack=0" alt="">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

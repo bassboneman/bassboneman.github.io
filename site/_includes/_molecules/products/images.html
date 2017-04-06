@@ -1,0 +1,32 @@
+<div class="product-media">
+  <div class="row">
+    {% comment %}<div class="col-md-2 hidden-sm hidden-xs">{% endcomment %}
+    <div class="col-md-2 hidden-sm hidden-xs">
+      <ul class="product-alt-images">
+        {% if page.title == "Product Page (Donations)" %}
+          <li><a href="">{% include _atoms/images/product-thumbs.html %}</a></li>
+        {% elsif page.title == "Product Page (Gift Card)" or page.title == "Product Page (e-Gift Card)" %}
+          <li><a href="">{% include _atoms/images/product-thumbs.html %}</a></li>
+          <li><a href="">{% include _atoms/images/product-thumbs.html %}</a></li>
+        {% else %}
+          <li><a href="">{% include _atoms/images/product-thumbs.html %}</a></li>
+          <li><a href="">{% include _atoms/images/product-thumbs.html %}</a></li>
+          <li><a href="">{% include _atoms/images/product-thumbs.html %}</a></li>
+          <li class="product-media-link">
+            <a href="#" data-toggle="pdp-video">
+              {% include _atoms/images/product-thumbs.html %}
+              <span class="icon-play"></span>
+              <svg class="play-icon">
+                <use xlink:href="#play-icon"></use>
+              </svg>
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="col-md-10 col-sm-12 col-xs-12">
+      {% include _atoms/images/product-main.html %}
+      {% include _molecules/products/product-image-controls.html %}
+    </div>
+  </div>
+</div>

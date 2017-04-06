@@ -1,0 +1,85 @@
+// borrows from bootstrap's responsive embed
+.responsive-embed-3by4 {
+  padding-bottom: 133.33333%;
+}
+.pdp-video-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  @include transition(all);
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.pdp-video {
+  @include transition(all);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.pdp-img-wrap {
+  visibility: visible;
+  opacity: 1;
+  @include transition(all);
+  &.closed {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.module-video {
+  text-align: center;
+  .video-overlay {
+    position: relative;
+    z-index: 200;
+    display: block;
+    .play-icon {
+      @include play-icon;
+    }
+    * {
+      text-decoration: none;
+    }
+    &:hover {
+      .play-icon {
+        @include opacity(1.0);
+      }
+      * {
+        text-decoration: none;
+        color: $color-black;
+      }
+    }
+    .module-heading,
+    .module-copy {
+      position: absolute;
+      top: 3rem;
+      width: 100%;
+      padding: 0 2rem;
+    }
+    .module-copy {
+      top: auto;
+      bottom: 3rem;
+    }
+    @media screen and (max-width: 767px) {
+      .play-icon {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -50px;
+      }
+    }
+  }
+}
+.video-hidden {
+  display: none;
+}

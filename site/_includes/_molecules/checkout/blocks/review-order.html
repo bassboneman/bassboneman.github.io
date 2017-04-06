@@ -1,0 +1,141 @@
+{% comment %}Created so multiple gifting elements could be toggled on the same page{% endcomment %}
+{% capture id %}{{ include.id }}{% endcapture %}
+{% capture id1 %}{{ id }}-1{% endcapture %}
+{% capture id2 %}{{ id }}-2{% endcapture %}
+{% capture id3 %}{{ id }}-3{% endcapture %}
+{% capture id4 %}{{ id }}-4{% endcapture %}
+{% capture id5 %}{{ id }}-5{% endcapture %}
+{% capture id6 %}{{ id }}-6{% endcapture %}
+{% capture id7 %}{{ id }}-7{% endcapture %}
+{% capture id8 %}{{ id }}-8{% endcapture %}
+{% capture id9 %}{{ id }}-9{% endcapture %}
+
+<section id="checkout-review-order" class="checkout-block {% if include.type == 'multi-ship' %}review-order-multi{% endif %}">
+  <header>
+    <h2>
+      {% if page.type == 'registered' %}4. 
+      {% elsif include.type != 'multi-ship' %}5. 
+      {% endif %}Review Order</h2>
+  </header>
+  <div class="checkout-block-body">
+    {% if include.type == 'multi-ship' %}
+
+      <div class="col-sm-6">
+        <div class="p">
+          {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-alt btn-lg btn-block btn-has-arrow' btnLabel='Change Shipping Options' btnExtra='data-toggle="modal" data-target="#modal-address-multi"' %}
+        </div><!-- .p -->
+      </div><!-- .col-sm-6 -->
+
+      <div class="checkout-multi-block">
+        <header>
+          <h3>Shipment 1 of 2</h3>
+        </header>
+        <div class="row">
+          <div class="col-xs-7">
+            <strong>Liz Hamilton</strong> <br>
+            456 Elm Street, Somewhere, VA 22222<br>
+            505-258-4975
+          </div>
+          <div class="col-xs-5 edit-remove">
+            <a href="#">Change</a>
+          </div><!-- .col-xs-5 -->
+        </div><!-- .row -->
+
+        <hr>
+
+        <div class="row">
+          <div class="col-xs-9">
+            <div class="row">
+              <div class="col-sm-6">
+                <strong>Standard - <span class="text-uppercase">Free</span></strong><br>
+                6-9 business days                
+              </div><!-- .col-sm-6 -->
+              <div class="col-sm-6">
+                Estimated Arrival: Jan 17-20              
+              </div><!-- .col-sm-6 -->
+            </div><!-- .row -->
+          </div><!-- .col-xs-9 -->
+          <div class="col-xs-3 edit-remove">
+            <a href="#">Change</a>
+          </div><!-- .col-xs-3 -->
+        </div><!-- .row -->
+
+        <hr>
+
+        {% include _molecules/blocks/product-details-checkout.html placement='review-order' orderID=id2 totalProducts='1' layout='has-header' %}        
+        {% if include.singleGift %}
+          {% include _molecules/checkout/blocks/gifting-options.html giftingID=id1 singleGift='yes' %}
+        {% else %}
+          {% include _molecules/checkout/blocks/gifting-options.html giftingID=id1 %}
+        {% endif %}
+
+        <header>
+          <h3>Shipment 2 of 2</h3>
+        </header>
+        <div class="row">
+          <div class="col-xs-7">
+            <strong>Liz Hamilton</strong> <br>
+            456 Elm Street, Somewhere, VA 22222<br>
+            505-258-4975
+          </div>
+          <div class="col-xs-5 edit-remove">
+            <a href="#">Change</a>
+          </div><!-- .col-xs-5 -->
+        </div><!-- .row -->
+
+        <hr>
+
+        <div class="row">
+          <div class="col-xs-9">
+            <div class="row">
+              <div class="col-sm-6">
+                <strong>Standard - <span class="text-uppercase">Free</span></strong><br>
+                6-9 business days                
+              </div><!-- .col-sm-6 -->
+              <div class="col-sm-6">
+                Estimated Arrival: Jan 17-20              
+              </div><!-- .col-sm-6 -->
+            </div><!-- .row -->
+          </div><!-- .col-xs-9 -->
+          <div class="col-xs-3 edit-remove">
+            <a href="#">Change</a>
+          </div><!-- .col-xs-3 -->
+        </div><!-- .row -->
+        <hr>
+
+        {% include _molecules/blocks/product-details-checkout.html placement='review-order' orderID=id3 totalProducts='2' layout='has-header' %}        
+
+        {% if include.giftMessage %}
+          {% include _molecules/checkout/blocks/gifting-options.html giftingID=id2 giftMessage='yes' %}
+        {% else %}
+          {% include _molecules/checkout/blocks/gifting-options.html giftingID=id2 %}
+        {% endif %}
+
+      </div><!-- .checkout-multi-block -->
+
+    {% else %}
+
+      <h3>Order Summary (3 items)</h3>
+
+      {% include _molecules/blocks/product-details-checkout.html placement='review-order' %}
+      {% include _molecules/blocks/product-details-checkout.html placement='review-order' %}
+      {% include _molecules/blocks/product-details-checkout.html placement='review-order' %}
+    
+
+
+      {% if include.giftMessage %}
+        {% if include.giftTogether %}
+          {% include _molecules/checkout/blocks/gifting-options.html giftingID=id3 giftMessage='yes' giftTogether='yes' %}
+        {% else %}
+          {% include _molecules/checkout/blocks/gifting-options.html giftingID=id3 giftMessage='yes' %}
+        {% endif %}
+      {% else %}
+        {% include _molecules/checkout/blocks/gifting-options.html giftingID=id3 %}
+      {% endif %}
+
+      {% include _molecules/checkout/summary.html placement='body' %}
+
+    {% endif %}
+      
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->

@@ -1,0 +1,24 @@
+{% include _templates/header.html %}
+
+<main role="main">
+  <div class="content content-pad">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1>{{page.title}}</h1>
+          <article>
+            {{content}}
+          </article>
+        </div>
+        <div class="col-sm-4">
+          {% include _molecules/blocks/sidebar.html %}
+        </div>
+      </div>
+    </div><!-- .container-fluid -->
+  </div><!-- .content -->
+</main>
+
+{% include _molecules/modals/modal-privacy-policy.html %}
+{% include _molecules/modals/modal-returns.html %}
+
+{% include _templates/footer.html %}

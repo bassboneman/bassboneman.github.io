@@ -1,0 +1,51 @@
+<div class="modal modal-style fade" id="{% if include.error %}modal-signup-error{% else %}modal-signup{% endif %}" tabindex="-1" role="dialog" aria-labelledby="modal-signup" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="modal-inner">
+          <div class="form-stylized">
+            <h2 class="form-stylized-h2">Stay Chic</h2>
+            {% comment %}
+            used to be .form-stylized-copy. do we still need?
+            {% endcomment %}
+            <p class="text-center">
+              Sign up for email to enjoy 20% off your next purchase* and be in-the-know with style news, insider offers and private previews.
+            </p>
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                <form action="https://ebm.cheetahmail.com/r/regf2" method="post" name="chicos">
+                  <input type="hidden" name="aid" value="2078541674">
+                  <input type="hidden" name="n" value="502">
+                  <input type="hidden" name="a" value="1">
+                  <input type="hidden" name="SOURCE" value="FLY">
+                  <input type="hidden" name="WELCOME_CYCLE_DATE" value="%%_DT_TODAY%%">
+                  <div class="input-group">
+                    <div class="form-group {% if include.error %}has-error{% endif %}">
+                      <label class="control-label sr-only" for="email-label">
+                        Enter Email Address
+                      </label>
+                      <input name="email" class="form-control placeholder-italic" type="text" placeholder="Enter Email Address" value="">
+                    </div>
+                    <span class="input-group-btn">
+                      {% include _atoms/buttons/button.html btnClass='btn-primary btn-block btn-icon-mobile' btnLabel='<span class="hidden-xs">Submit</span><span class="visible-xs"><svg class="icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use></svg></span>' %}
+                    </span>
+                  </div><!-- .input-group -->
+                  {% if include.error %}<p class="help-block has-error">Please enter a valid email address</p>{% endif %}
+                </form>
+              </div>
+            </div>
+            <p class="text-center small text-uppercase">
+              <a href="#" data-toggle="details-block">
+                *Details
+              </a>
+            </p>
+            <div class="details-block">
+              20% off welcome offer only valid for new email sign-ups. If you are already in our database, you will not receive a welcome email with your 20% coupon. Offer not valid on the purchase of gift cards, previously purchased merchandise, taxes or shipping. One time use only, may not be combined with other coupons, offers or events. Not valid if reproduced. No cash value. Limited time only.
+            </div>
+          </div><!-- .form-stylized -->
+        </div><!-- .modal-inner -->
+      </div>
+    </div>
+  </div>
+</div><!-- .modal -->

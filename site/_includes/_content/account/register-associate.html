@@ -1,0 +1,75 @@
+<form action="">
+  <p>* Indicates a required field</p>
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='First Name *' labelID='first-name' inputType='text' %}
+    </div>
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Last Name *' labelID='last-name' inputType='text' %}
+    </div>
+  </div><!-- .row -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Associate ID *' labelID='associate-id' inputType='text' %}
+    </div>
+  </div><!-- .row -->
+
+  <hr>
+  
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/select.html labelName='Country *' labelID='country' selectOptions='<option value="">United States</option><option value="">Canada</option><option value="">Hobbiton</option>' helpBlock='Note: We ship to a limited number of international locations at this time.' %}
+    </div>
+  </div><!-- .row -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Street Address *' labelID='street-address' inputType='text' %}
+    </div>
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Apt / Unit / Suite' labelID='apt' inputType='text' %}
+    </div>
+  </div><!-- .row -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='City *' labelID='city' inputType='text' %}
+    </div>
+    <div class="col-sm-3">
+      {% include _atoms/forms/select.html labelName='State *' labelID='state' selectOptions='<option value="">Alabama</option><option value="">Arkansas</option><option value="">Ontario</option>' %}
+    </div>
+    <div class="col-sm-3">
+      {% include _atoms/forms/input.html labelName='Zip Code *' labelID='zip' inputType='text' %}
+    </div>
+  </div><!-- .row -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/phone.html labelName='Phone *' labelID='phone' %}
+    </div>
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Email *' labelID='email' inputType='email' %}
+    </div>
+  </div><!-- .row -->
+
+    <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Password *' labelID='password' labelTooltip='Your password must begin with a letter, contain at least one number or special character, and may not contain your name, email address, or the word &quot;password&quot;' inputType='password' %}
+    </div>
+
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Confirm Password *' labelID='confirm-password' inputType='password' %}
+    </div>
+  </div><!-- .row -->
+
+  <div class="form-group">
+    {% include _atoms/buttons/button.html btnClass='btn-primary' btnLabel='Save' %}  
+  </div>
+</form>
+
+{% if page.brand == 'whbm' %}
+  <p>Please note by submitting your associate identification number you are authorizing whitehouseblackmarket.com to validate your current status as an associate at Chicos FAS. Following your confirmation your associate discount will be included in your registered profile.</p>
+{% else %}
+  <p>Please note by submitting your associate identification number you are authorizing chicos.com to validate your current status as an associate at Chicos FAS. Following your confirmation your associate discount will be included in your registered profile.</p>
+{% endif %}

@@ -1,0 +1,15 @@
+.sidebar-item {
+  padding-bottom: $dimension-base;
+  & + & {
+    padding-top: $dimension-base;
+    border-top: 1px solid $color-border;
+  }
+  h3,
+  p {
+    margin-bottom: $dimension-small;
+  }
+  *:last-child {
+    margin-bottom: 0;
+  }
+  @include sidebar-item;
+}

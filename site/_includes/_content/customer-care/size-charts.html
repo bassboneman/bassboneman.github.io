@@ -1,0 +1,5647 @@
+{% if page.brand == 'soma' %}
+{% capture email %}customerservice@soma.com{% endcapture %}
+{% capture phone %}1-866-768-7662{% endcapture %}
+{% elsif page.brand == 'whbm' %}
+{% capture email %}customerservice@whitehouseblackmarket.com{% endcapture %}
+{% capture phone %}1-877-948-2525{% endcapture %}
+{% else %}
+{% capture email %}customerservice@chicos.com{% endcapture %}
+{% capture phone %}1-888-855-4986{% endcapture %}
+{% endif %}
+
+{% if page.brand == 'soma' %}
+  <div class="size-wrap">
+    <p class="visible-xs">
+      <select class="form-control selectpicker" id="select-size-cat">
+        <option value="0" selected="selected">Tops</option> 
+        <option value="1">Bottoms</option> 
+        <option value="2">Dresses</option> 
+        <option value="3">Outerwear</option> 
+        <option value="4">Swim</option> 
+        <option value="5">Accessories</option> 
+      </select>
+    </p>
+    <ul id="tabs-size" class="nav nav-tabs hidden-xs" role="tablist">
+      <li role="presentation" class="active"><a href="#tops" aria-controls="tops" role="tab" data-toggle="tab">Tops</a></li>
+      <li role="presentation"><a href="#bottoms" aria-controls="bottoms" role="tab" data-toggle="tab">Bottoms</a></li>
+      <li role="presentation"><a href="#dresses" aria-controls="dresses" role="tab" data-toggle="tab">Dresses</a></li>
+      <li role="presentation"><a href="#outerwear" aria-controls="outerwear" role="tab" data-toggle="tab">Outerwear</a></li>
+      <li role="presentation"><a href="#swim" aria-controls="swim" role="tab" data-toggle="tab">Swim</a></li>
+      <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Accessories</a></li>
+    </ul>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="tops">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link" data-toggle="generic">Measuring Guide</a></h2>
+          <div class="toggle-item measure-info">
+            <div class="measure-img">
+              <img src="{{ site.baseurl }}/web_assets/imgs/whbm/size-charts/tops.jpg" alt="Tops Measuring Guide" class="img-responsive">
+              <span class="measure-item tops-bust">Bust</span>
+              <span class="measure-item measure-item-right tops-arm">Arm</span>
+              <span class="measure-item measure-item-right tops-waist">Waist</span>
+              <span class="measure-item tops-high-hip">High Hip</span>
+            </div>
+            <dl>
+              <dt>Bust</dt>
+              <dd>Measure under your arms around the fullest part of your chest, keeping the tape measure parallel to the floor.</dd>
+              <dt>Arm</dt>
+              <dd>Standing straight with arm relaxed and feet together, measure from the bottom of the center back of your neck, extending across the shoulder and down the back of your arm to your wrist.</dd>
+              <dt>Waist</dt>
+              <dd>Measure around your natural waist, keeping the tape slightly loose.</dd>
+              <dt>High Hip</dt>
+              <dd>With feet together, measure at approximately 4" down from natural waist, keeping the tape measure parallel to the floor.</dd>
+            </dl>
+          </div>
+        </div><!-- .toggle-wrap -->
+
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Regular Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>31½"</td>
+                    <td>29"</td>
+                    <td>24"</td>
+                    <td>30½"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>32½"</td>
+                    <td>29⅜"</td>
+                    <td>25"</td>
+                    <td>31½"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>33½"</td>
+                    <td>29¾"</td>
+                    <td>26"</td>
+                    <td>32½"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>34½"</td>
+                    <td>30⅛"</td>
+                    <td>27"</td>
+                    <td>33½"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>35½"</td>
+                    <td>30½"</td>
+                    <td>28"</td>
+                    <td>34½"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>36½"</td>
+                    <td>30⅞"</td>
+                    <td>29"</td>
+                    <td>35½"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>37½"</td>
+                    <td>31¼"</td>
+                    <td>30"</td>
+                    <td>36½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>39"</td>
+                    <td>31⅝"</td>
+                    <td>30½"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>40½"</td>
+                    <td>32"</td>
+                    <td>33"</td>
+                    <td>39½"</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>42½"</td>
+                    <td>32½"</td>
+                    <td>35"</td>
+                    <td>40"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>80.01</td>
+                    <td>73.66</td>
+                    <td>60.96</td>
+                    <td>77.47</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>82.55</td>
+                    <td>74.64</td>
+                    <td>63.5</td>
+                    <td>80.01</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>85.09</td>
+                    <td>75.565</td>
+                    <td>66.04</td>
+                    <td>82.55</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>87.63</td>
+                    <td>76.66</td>
+                    <td>68.58</td>
+                    <td>85.09</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>90.17</td>
+                    <td>77.47</td>
+                    <td>71.12</td>
+                    <td>87.63</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>92.71</td>
+                    <td>78.42</td>
+                    <td>73.66</td>
+                    <td>90.17</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>95.25</td>
+                    <td>76.83</td>
+                    <td>76.2</td>
+                    <td>92.71</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>99.06</td>
+                    <td>80.22</td>
+                    <td>80.01</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>102.87</td>
+                    <td>81.28</td>
+                    <td>83.82</td>
+                    <td>100.33</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>107.95</td>
+                    <td>82.55</td>
+                    <td>88.9</td>
+                    <td>101.6</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Petite Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>31"</td>
+                    <td>27½"</td>
+                    <td>23"</td>
+                    <td>30"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>32"</td>
+                    <td>27⅞"</td>
+                    <td>24"</td>
+                    <td>31"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>33"</td>
+                    <td>28¼"</td>
+                    <td>25"</td>
+                    <td>32"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>34"</td>
+                    <td>28⅝"</td>
+                    <td>26"</td>
+                    <td>33"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>35"</td>
+                    <td>29"</td>
+                    <td>27"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>36"</td>
+                    <td>29⅜"</td>
+                    <td>28"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>37"</td>
+                    <td>29¾"</td>
+                    <td>29"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>38½"</td>
+                    <td>30¼"</td>
+                    <td>30½"</td>
+                    <td>37½"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>40"</td>
+                    <td>31"</td>
+                    <td>32"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>42"</td>
+                    <td>32"</td>
+                    <td>34"</td>
+                    <td>39½"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>78.74</td>
+                    <td>68.85</td>
+                    <td>58.42</td>
+                    <td>76.2</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>81.28</td>
+                    <td>70.57</td>
+                    <td>60.96</td>
+                    <td>78.74</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>83.82</td>
+                    <td>71.75</td>
+                    <td>63.5</td>
+                    <td>81.28</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>86.36</td>
+                    <td>72.6</td>
+                    <td>66.04</td>
+                    <td>83.82</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>88.9</td>
+                    <td>73.66</td>
+                    <td>68.58</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>91.44</td>
+                    <td>74.63</td>
+                    <td>71.12</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>93.98</td>
+                    <td>75</td>
+                    <td>73.66</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>97.79</td>
+                    <td>75.56</td>
+                    <td>77.47</td>
+                    <td>95.25</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>101.6</td>
+                    <td>78.74</td>
+                    <td>81.28</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>106.68</td>
+                    <td>81.28</td>
+                    <td>86.36</td>
+                    <td>100.33</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'4" or under, regardless of size. Petite pieces have shortened sleeves, narrowed shoulders, raised waist, shorter skirt length, and reduced pant inseam.</p>
+          </div>
+        </div><!-- .toggle-wrap -->
+      </div><!-- .tab-pane -->
+
+
+      <div role="tabpanel" class="tab-pane" id="bottoms">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link" data-toggle="generic">Measuring Guide</a></h2>
+          <div class="toggle-item measure-info">
+            <div class="measure-img">
+              <img src="{{ site.baseurl }}/web_assets/imgs/whbm/size-charts/bottoms.jpg" alt="Bottoms Measuring Guide" class="img-responsive">
+              <span class="measure-item measure-item-right bottoms-waist">Waist</span>
+              <span class="measure-item bottoms-low-hip">Low Hip</span>
+              <span class="measure-item measure-item-right bottoms-inseam">Inseam</span>
+            </div>
+            <dl>
+              <dt>Waist</dt>
+              <dd>Measure around your natural waist, keeping the tape slightly loose.</dd>
+              <dt>Low Hip</dt>
+              <dd>With feet together, measure around the fullest part of your hips (approx. 8" down from the natural waist), keeping the tape measure parallel to the floor.</dd>
+              <dt>Inseam</dt>
+              <dd>Wearing pants that fit well, measure from crotch seam to hem.</dd>
+            </dl>
+          </div>
+        </div><!-- .toggle-wrap -->
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Regular Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>30"</td>
+                    <td>40"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>31½"</td>
+                    <td>41½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>33"</td>
+                    <td>43"</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>35"</td>
+                    <td>45"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>      
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>60.69</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>71.12</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>76.2</td>
+                    <td>101.6</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>80.01</td>
+                    <td>105.41</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>83.82</td>
+                    <td>109.22</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>88.9</td>
+                    <td>114.3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Petite Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>23"</td>
+                    <td>33"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>30½"</td>
+                    <td>40½"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>32"</td>
+                    <td>42"</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>34"</td>
+                    <td>44"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>           
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>58.42</td>
+                    <td>83.82</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>60.96</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>71.12</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>77.47</td>
+                    <td>102.87</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>81.28</td>
+                    <td>106.68</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>86.36 </td>
+                    <td>111.76</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'4" or under, regardless of size. Petite pieces have shortened sleeves, narrowed shoulders, raised waist, shorter skirt length, and reduced pant inseam.</p>
+            <h3>Long Inseam</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active"  aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSL</td>
+                    <td>00L</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XSL</td>
+                    <td>0L</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>XSL</td>
+                    <td>2L</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>SL</td>
+                    <td>4L</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>SL</td>
+                    <td>6L</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>ML</td>
+                    <td>8L</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>ML</td>
+                    <td>10L</td>
+                    <td>30"</td>
+                    <td>40"</td>
+                  </tr>
+                  <tr>
+                    <td>LL</td>
+                    <td>12L</td>
+                    <td>31½"</td>
+                    <td>41½"</td>
+                  </tr>
+                  <tr>
+                    <td>LL</td>
+                    <td>14L</td>
+                    <td>33"</td>
+                    <td>43"</td>
+                  </tr>
+                  <tr>
+                    <td>XLL</td>
+                    <td>16L</td>
+                    <td>35"</td>
+                    <td>45"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSL</td>
+                    <td>00L</td>
+                    <td>60.96</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XSL</td>
+                    <td>0L</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>XSL</td>
+                    <td>2L</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>SL</td>
+                    <td>4L</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>SL</td>
+                    <td>6L</td>
+                    <td>71.12</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>ML</td>
+                    <td>8L</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>ML</td>
+                    <td>10L</td>
+                    <td>76.2</td>
+                    <td>101.6</td>
+                  </tr>
+                  <tr>
+                    <td>LL</td>
+                    <td>12L</td>
+                    <td>80.01</td>
+                    <td>105.41</td>
+                  </tr>
+                  <tr>
+                    <td>LL</td>
+                    <td>14L</td>
+                    <td>83.82</td>
+                    <td>109.22</td>
+                  </tr>
+                  <tr>
+                    <td>XLL</td>
+                    <td>16L</td>
+                    <td>88.9</td>
+                    <td>114.3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'7" to 5'9", regardless of size. Long sizes have longer inseams, and the knee and calf position is 1" lower than regular sizes.</p>
+            <h3>Short Inseam</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSS</td>
+                    <td>00S</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XSS</td>
+                    <td>0S</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>XSS</td>
+                    <td>2S</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>SS</td>
+                    <td>4S</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>SS</td>
+                    <td>6S</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>MS</td>
+                    <td>8S</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>MS</td>
+                    <td>10S</td>
+                    <td>30"</td>
+                    <td>40"</td>
+                  </tr>
+                  <tr>
+                    <td>LS</td>
+                    <td>12S</td>
+                    <td>31½"</td>
+                    <td>41½"</td>
+                  </tr>
+                  <tr>
+                    <td>LS</td>
+                    <td>14S</td>
+                    <td>33"</td>
+                    <td>43"</td>
+                  </tr>
+                  <tr>
+                    <td>XLS</td>
+                    <td>16S</td>
+                    <td>35"</td>
+                    <td>45"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSS</td>
+                    <td>00S</td>
+                    <td>60.96</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XSS</td>
+                    <td>0S</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>XSS</td>
+                    <td>2S</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>SS</td>
+                    <td>4S</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>SS</td>
+                    <td>6S</td>
+                    <td>71.12</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>MS</td>
+                    <td>8S</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>MS</td>
+                    <td>10S</td>
+                    <td>76.2</td>
+                    <td>101.6</td>
+                  </tr>
+                  <tr>
+                    <td>LS</td>
+                    <td>12S</td>
+                    <td>80.01</td>
+                    <td>105.41</td>
+                  </tr>
+                  <tr>
+                    <td>LS</td>
+                    <td>14S</td>
+                    <td>83.82</td>
+                    <td>109.22</td>
+                  </tr>
+                  <tr>
+                    <td>XLS</td>
+                    <td>16S</td>
+                    <td>88.9</td>
+                    <td>114.3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'5" to 5'6", regardless of size. Short sizes have shorter inseams, and the knee and calf position is 1" higher than regular sizes. </p>
+          </div>
+        </div><!-- .toggle-wrap -->
+      </div><!-- .tab-pane -->
+
+      <div role="tabpanel" class="tab-pane" id="dresses">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link" data-toggle="generic">Measuring Guide</a></h2>
+          <div class="toggle-item measure-info">
+            <div class="measure-img">
+              <img src="{{ site.baseurl }}/web_assets/imgs/whbm/size-charts/dresses.jpg" alt="Dresses Measuring Guide" class="img-responsive">
+              <span class="measure-item dresses-bust">Bust</span>
+              <span class="measure-item measure-item-right dresses-arm">Arm</span>
+              <span class="measure-item measure-item-right dresses-waist">Waist*</span>
+              <span class="measure-item dresses-low-hip">Low Hip*</span>
+            </div>
+            <p class="small">*Note: To measure for skirts, follow the guide for low hips and waist.</p>
+            <dl>
+              <dt>Bust</dt>
+              <dd>Measure under your arms around the fullest part of your chest, keeping the tape measure parallel to the floor.</dd>
+              <dt>Arm</dt>
+              <dd>Standing straight with arm relaxed and feet together, measure from the bottom of the center back of your neck, extending across the shoulder and down the back of your arm to your wrist.</dd>
+              <dt>Waist</dt>
+              <dd>Measure around your natural waist, keeping the tape slightly loose.</dd>
+              <dt>Low Hip</dt>
+              <dd>With feet together, measure around the fullest part of your hips (approx. 8" down from the natural waist), keeping the tape measure parallel to the floor.</dd>
+            </dl>
+          </div>
+        </div><!-- .toggle-wrap -->
+
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Regular Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>31½"</td>
+                    <td>29"</td>
+                    <td>23"</td>
+                    <td>34½"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>32½"</td>
+                    <td>29⅜"</td>
+                    <td>24"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>33½"</td>
+                    <td>29¾"</td>
+                    <td>25"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>34½"</td>
+                    <td>30⅛"</td>
+                    <td>26"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>35½"</td>
+                    <td>30½"</td>
+                    <td>27"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>36½"</td>
+                    <td>30⅞"</td>
+                    <td>28"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>37½"</td>
+                    <td>31¼"</td>
+                    <td>29"</td>
+                    <td>40"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>39"</td>
+                    <td>31⅝"</td>
+                    <td>30½"</td>
+                    <td>41½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>40½"</td>
+                    <td>32"</td>
+                    <td>32"</td>
+                    <td>43"</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>42½"</td>
+                    <td>32½"</td>
+                    <td>34"</td>
+                    <td>45"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>80.01</td>
+                    <td>73.66</td>
+                    <td>58.42</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>82.55</td>
+                    <td>74.64</td>
+                    <td>60.96</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>85.09</td>
+                    <td>75.565</td>
+                    <td>63.5</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>87.63</td>
+                    <td>76.66</td>
+                    <td>66.04</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>90.17</td>
+                    <td>77.47</td>
+                    <td>68.58</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>92.71</td>
+                    <td>78.42</td>
+                    <td>71.12</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>95.25</td>
+                    <td>79.375</td>
+                    <td>73.66</td>
+                    <td>101.6</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>99.06</td>
+                    <td>80.33</td>
+                    <td>77.47</td>
+                    <td>105.41</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>102.87</td>
+                    <td>81.28</td>
+                    <td>81.28</td>
+                    <td>109.22</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>107.95</td>
+                    <td>82.55</td>
+                    <td>86.36</td>
+                    <td>114.3</td>
+                  </tr>
+                </tbody>
+              </table>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Petite Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>31"</td>
+                    <td>27½"</td>
+                    <td>23"</td>
+                    <td>33"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>32"</td>
+                    <td>27⅞"</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>33"</td>
+                    <td>28¼"</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>34"</td>
+                    <td>28⅝"</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>35"</td>
+                    <td>29"</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>36"</td>
+                    <td>29⅜"</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>37"</td>
+                    <td>29¾"</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>38½"</td>
+                    <td>30¼"</td>
+                    <td>30½"</td>
+                    <td>40½"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>40"</td>
+                    <td>31"</td>
+                    <td>32"</td>
+                    <td>42"</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>42"</td>
+                    <td>32"</td>
+                    <td>34"</td>
+                    <td>44"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>78.74</td>
+                    <td>66.85</td>
+                    <td>58.42</td>
+                    <td>83.82</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>81.28</td>
+                    <td>70.57</td>
+                    <td>60.96</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>83.82</td>
+                    <td>71.75</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>86.36</td>
+                    <td>72.6</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>88.9</td>
+                    <td>73.66</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>91.44</td>
+                    <td>74.63</td>
+                    <td>71.12</td>
+                    <td>96.25</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>93.98</td>
+                    <td>75</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>97.79</td>
+                    <td>75.56</td>
+                    <td>77.47</td>
+                    <td>102.87</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>101.6</td>
+                    <td>78.74</td>
+                    <td>81.28</td>
+                    <td>106.68</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>106.68</td>
+                    <td>81.28</td>
+                    <td>86.36</td>
+                    <td>111.76</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'4" or under, regardless of size. Petite pieces have shortened sleeves, narrowed shoulders, raised waist, shorter skirt length, and reduced pant inseam.</p>
+          </div>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="outerwear">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link" data-toggle="generic">Measuring Guide</a></h2>
+          <div class="toggle-item measure-info">
+            <div class="measure-img">
+              <img src="{{ site.baseurl }}/web_assets/imgs/whbm/size-charts/outerwear.jpg" alt="Outerwear Measuring Guide" class="img-responsive">
+              <span class="measure-item outerwear-bust">Bust</span>
+              <span class="measure-item measure-item-right outerwear-arm">Arm</span>
+              <span class="measure-item measure-item-right outerwear-waist">Waist*</span>
+              <span class="measure-item outerwear-low-hip">Low Hip*</span>
+            </div>
+            <p class="small">*Note: To measure for skirts, follow the guide for low hips and waist.</p>
+            <dl>
+              <dt>Bust</dt>
+              <dd>Measure under your arms around the fullest part of your chest, keeping the tape measure parallel to the floor.</dd>
+              <dt>Arm</dt>
+              <dd>Standing straight with arm relaxed and feet together, measure from the bottom of the center back of your neck, extending across the shoulder and down the back of your arm to your wrist.</dd>
+              <dt>Waist</dt>
+              <dd>Measure around your natural waist, keeping the tape slightly loose.</dd>
+              <dt>Low Hip</dt>
+              <dd>With feet together, measure around the fullest part of your hips (approx. 8" down from the natural waist), keeping the tape measure parallel to the floor.</dd>
+            </dl>
+          </div>
+        </div><!-- .toggle-wrap -->
+
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Regular Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>31½"</td>
+                    <td>29"</td>
+                    <td>23"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>32½"</td>
+                    <td>29⅜"</td>
+                    <td>24"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>33½"</td>
+                    <td>29¾"</td>
+                    <td>25"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>34½"</td>
+                    <td>30⅛"</td>
+                    <td>26"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>35½"</td>
+                    <td>30½"</td>
+                    <td>27"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>36½"</td>
+                    <td>30⅞"</td>
+                    <td>28"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>37½"</td>
+                    <td>31¼"</td>
+                    <td>29"</td>
+                    <td>40"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>39"</td>
+                    <td>31⅝"</td>
+                    <td>31⅝"</td>
+                    <td>41½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>40½"</td>
+                    <td>32"</td>
+                    <td>32"</td>
+                    <td>43"</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>42½"</td>
+                    <td>32½"</td>
+                    <td>32½"</td>
+                    <td>45"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>80.01</td>
+                    <td>73.66</td>
+                    <td>58.42</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>82.55</td>
+                    <td>74.64</td>
+                    <td>60.96</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>85.09</td>
+                    <td>75.565</td>
+                    <td>63.5</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>87.63</td>
+                    <td>76.66</td>
+                    <td>66.04</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>90.17</td>
+                    <td>77.47</td>
+                    <td>68.58</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>92.71</td>
+                    <td>78.42</td>
+                    <td>71.12</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>95.25</td>
+                    <td>79.375</td>
+                    <td>73.66</td>
+                    <td>101.6</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>99.06</td>
+                    <td>80.22</td>
+                    <td>80.01</td>
+                    <td>105.41</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>102.87</td>
+                    <td>81.28</td>
+                    <td>81.28</td>
+                    <td>109.22</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>107.95</td>
+                    <td>82.55</td>
+                    <td>82.55</td>
+                    <td>114.3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Petite Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>31"</td>
+                    <td>27½"</td>
+                    <td>23"</td>
+                    <td>33"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>32"</td>
+                    <td>27⅞"</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>33"</td>
+                    <td>28¼"</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>34"</td>
+                    <td>28⅝"</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>35"</td>
+                    <td>29"</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>36"</td>
+                    <td>29⅜"</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>37"</td>
+                    <td>29¾"</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>38½"</td>
+                    <td>30¼"</td>
+                    <td>30½"</td>
+                    <td>40½"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>40"</td>
+                    <td>31"</td>
+                    <td>32"</td>
+                    <td>42"</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>42"</td>
+                    <td>32"</td>
+                    <td>34"</td>
+                    <td>44"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>78.74</td>
+                    <td>68.85</td>
+                    <td>58.42</td>
+                    <td>83.82</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>81.28</td>
+                    <td>70.57</td>
+                    <td>60.96</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>83.82</td>
+                    <td>71.75</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>86.36</td>
+                    <td>72.6</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>88.9</td>
+                    <td>73.66</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>91.44</td>
+                    <td>74.63</td>
+                    <td>71.12</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>93.98</td>
+                    <td>75</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>97.79</td>
+                    <td>75.56</td>
+                    <td>77.47</td>
+                    <td>102.87</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>101.6</td>
+                    <td>78.74</td>
+                    <td>81.28</td>
+                    <td>106.68</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>106.68</td>
+                    <td>81.28</td>
+                    <td>86.36</td>
+                    <td>111.76</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'4" or under, regardless of size. Petite pieces have shortened sleeves, narrowed shoulders, raised waist, shorter skirt length, and reduced pant inseam.</p>
+          </div>
+        </div><!-- .toggle-wrap -->
+      </div><!-- .tabpanel -->
+      <div role="tabpanel" class="tab-pane" id="swim">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link" data-toggle="generic">Measuring Guide</a></h2>
+          <div class="toggle-item measure-info">
+            <div class="measure-img">
+              <img src="{{ site.baseurl }}/web_assets/imgs/whbm/size-charts/swim.jpg" alt="Outerwear Measuring Guide" class="img-responsive">
+              <span class="measure-item swim-bust">Bust</span>
+              <span class="measure-item measure-item-right swim-torso">Torso</span>
+              <span class="measure-item measure-item-right swim-waist">Waist</span>
+              <span class="measure-item swim-high-hip">High Hip</span>
+            </div>
+            <p class="small">*Note: To measure for skirts, follow the guide for low hips and waist.</p>
+            <dl>
+              <dt>Bust</dt>
+              <dd>Measure under your arms around the fullest part of your chest, keeping the tape measure parallel to the floor.</dd>
+              <dt>Torso</dt>
+              <dd>Measure a loop from your shoulder, down the front of your body to the crotch and back up the other side.</dd>
+              <dt>Waist</dt>
+              <dd>Measure around your natural waist, keeping the tape slightly loose.</dd>
+              <dt>High Hip</dt>
+              <dd>With feet together, measure at approximately 4" down from natural waist, keeping the tape measure parallel to the floor. </dd>
+            </dl>
+          </div>
+        </div><!-- .toggle-wrap -->
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Regular Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Torso</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>32½"</td>
+                    <td>57¾"</td>
+                    <td>25"</td>
+                    <td>31½"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>33½"</td>
+                    <td>58¾"</td>
+                    <td>26"</td>
+                    <td>32½"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>34½"</td>
+                    <td>59¾"</td>
+                    <td>27"</td>
+                    <td>33½"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>35½"</td>
+                    <td>60¾"</td>
+                    <td>28"</td>
+                    <td>34½"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>36½"</td>
+                    <td>61¾"</td>
+                    <td>29"</td>
+                    <td>35½"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>37½"</td>
+                    <td>62¾"</td>
+                    <td>30"</td>
+                    <td>36½"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>39"</td>
+                    <td>63¾"</td>
+                    <td>31½"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>40½"</td>
+                    <td>64¾"</td>
+                    <td>33"</td>
+                    <td>39½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>42½"</td>
+                    <td>65¾"</td>
+                    <td>35"</td>
+                    <td>40"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Torso</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>82.55</td>
+                    <td>146.68</td>
+                    <td>63.5</td>
+                    <td>80.01</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>85.09</td>
+                    <td>149.22</td>
+                    <td>66.04</td>
+                    <td>82.55</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>87.63</td>
+                    <td>151.76</td>
+                    <td>68.58</td>
+                    <td>85.09</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>90.17</td>
+                    <td>154.3</td>
+                    <td>71.12</td>
+                    <td>87.63</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>92.71</td>
+                    <td>156.84</td>
+                    <td>73.66</td>
+                    <td>90.17</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>95.25</td>
+                    <td>159.38</td>
+                    <td>76.2</td>
+                    <td>92.71</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>99.06</td>
+                    <td>161.92</td>
+                    <td>80.01</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>102.87</td>
+                    <td>164.46</td>
+                    <td>83.82</td>
+                    <td>100.33</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>107.95</td>
+                    <td>167</td>
+                    <td>88.9</td>
+                    <td>101.6</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+          </div>
+        </div><!-- .toggle-wrap -->
+      </div><!-- .tabpanel -->
+      <div role="tabpanel" class="tab-pane" id="accessories">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Tights</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-uppercase">Small/Medium</td>
+                    <td>5' - 5'5"</td>
+                    <td>100 LBS - 145 LBS</td>
+                  </tr>
+                  <tr>
+                    <td class="text-uppercase">Medium/Large</td>
+                    <td>5'5" - 5'10"</td>
+                    <td>140 LBS - 185 LBS</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-uppercase">Small/Medium</td>
+                    <td>152 CM - 165 CM</td>
+                    <td>45 KG - 66 KG</td>
+                  </tr>
+                  <tr>
+                    <td class="text-uppercase">Medium/Large</td>
+                    <td>165 CM - 177.8 CM</td>
+                    <td>64KG - 84KG</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Shoes</h3>
+            <h3>Knee-High Flat Boot</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>14¾"</td>
+                    <td>13¼"</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>15“</td>
+                    <td>13½"</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>15¼"</td>
+                    <td>13¾"</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>15½"</td>
+                    <td>14"</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>15¾"</td>
+                    <td>14¼"</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>16“</td>
+                    <td>14½"</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>16¼"</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>16½"</td>
+                    <td>15"</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>16¾"</td>
+                    <td>15¼"</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>17“</td>
+                    <td>15½"</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>17¼"</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>17½"</td>
+                    <td>16"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>37.8</td>
+                    <td>33.9</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>38.4</td>
+                    <td>34.5</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>39.0</td>
+                    <td>35.0</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>39.6</td>
+                    <td>35.6</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>40.2</td>
+                    <td>36.1</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>40.8</td>
+                    <td>36.7</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>41.4</td>
+                    <td>37.2</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>42.0</td>
+                    <td>37.8</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>42.6</td>
+                    <td>38.3</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>43.2</td>
+                    <td>38.9</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>43.8</td>
+                    <td>39.4</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>45.0</td>
+                    <td>40.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Knee-High Heeled Boot</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>14½"</td>
+                    <td>13¼"</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>14¾"</td>
+                    <td>13½"</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>15“</td>
+                    <td>13¾"</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>15¼"</td>
+                    <td>14"</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>15½"</td>
+                    <td>14¼"</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>15¾"</td>
+                    <td>14½"</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>16“</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>16¼"</td>
+                    <td>15"</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>16½"</td>
+                    <td>15¼"</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>16¾"</td>
+                    <td>15½"</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>17“</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>17¼"</td>
+                    <td>16"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>36.8</td>
+                    <td>33.9</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>37.4</td>
+                    <td>34.5</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>38.0</td>
+                    <td>35.0</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>38.6</td>
+                    <td>35.6</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>39.2</td>
+                    <td>36.1</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>39.8</td>
+                    <td>36.7</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>40.4</td>
+                    <td>37.2</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>41.0</td>
+                    <td>37.8</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>41.6</td>
+                    <td>38.3</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>42.2</td>
+                    <td>38.9</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>42.8</td>
+                    <td>39.4</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>44.0</td>
+                    <td>40.5</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Over-the-Knee Heeled Boot</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                    <th>Top of Shaft Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>18"</td>
+                    <td>13¼"</td>
+                    <td>13¾"</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>18½"</td>
+                    <td>13½"</td>
+                    <td>14"</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>19“</td>
+                    <td>13¾"</td>
+                    <td>14¼"</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>19¼"</td>
+                    <td>14"</td>
+                    <td>14½"</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>19½"</td>
+                    <td>14¼"</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>19¾"</td>
+                    <td>14½"</td>
+                    <td>15"</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>20“</td>
+                    <td>14¾"</td>
+                    <td>15¼"</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>20¼"</td>
+                    <td>15"</td>
+                    <td>15½"</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>20½"</td>
+                    <td>15¼"</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>20¾"</td>
+                    <td>15½"</td>
+                    <td>16"</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>21“</td>
+                    <td>15¾"</td>
+                    <td>16¼"</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>21¼"</td>
+                    <td>16"</td>
+                    <td>16½"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                    <th>Top of Shaft Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>46.5</td>
+                    <td>33.9</td>
+                    <td>34.8</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>47.3</td>
+                    <td>34.5</td>
+                    <td>35.4</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>48.0</td>
+                    <td>35.0</td>
+                    <td>36.0</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>48.8</td>
+                    <td>35.6</td>
+                    <td>36.6</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>49.5</td>
+                    <td>36.1</td>
+                    <td>37.2</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>50.3</td>
+                    <td>36.7</td>
+                    <td>37.8</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>51.0</td>
+                    <td>37.2</td>
+                    <td>38.4</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>51.8</td>
+                    <td>37.8</td>
+                    <td>39.0</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>52.5</td>
+                    <td>38.3</td>
+                    <td>39.6</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>53.3</td>
+                    <td>38.9</td>
+                    <td>40.2</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>54.0</td>
+                    <td>39.4</td>
+                    <td>40.8</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>55.5</td>
+                    <td>40.5</td>
+                    <td>41.4</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">*Circumference</p>
+            <h3>Belts</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Non-Stretch</th>
+                    <th>Waist</th>
+                    <th>Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>25½"</td>
+                    <td>28"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>27½"</td>
+                    <td>30"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>29½"</td>
+                    <td>32"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>32"</td>
+                    <td>34½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>34½"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>37"</td>
+                    <td>39½"</td>
+                  </tr>
+                  <tr>
+                    <td>XXL</td>
+                    <td>39½"</td>
+                    <td>42"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Non-Stretch</th>
+                    <th>Waist</th>
+                    <th>Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>25½"</td>
+                    <td>28"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>27½"</td>
+                    <td>30"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>29½"</td>
+                    <td>32"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>32"</td>
+                    <td>34½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>34½""</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>37"</td>
+                    <td>39½"</td>
+                  </tr>
+                  <tr>
+                    <td>XXL</td>
+                    <td>39½"</td>
+                    <td>42"</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Stretch</th>
+                    <th>Waist</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>24½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>26½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>28½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>31"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>33½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>36"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XXL</td>
+                    <td>38½"</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Stretch</th>
+                    <th>Waist</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>24½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>26½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>28½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>31"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>33½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>36"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XXL</td>
+                    <td>38½"</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+          </div>
+        </div><!-- .toggle-wrap -->
+      </div><!-- .tabpanel -->
+    </div>
+    <h2>Need Help?</h2>
+    <p>Still not sure what you need? Our Expert Stylists can help you find the perfect size. Email <a href="mailto:{{ email }}" class="long-email">{{ email }}</a> or call {{ phone }}.</p>
+  </div><!-- .size-wrap -->
+{% elsif page.brand == 'whbm' %}  
+  <div class="size-wrap">
+    <p class="visible-xs">
+      <select class="form-control selectpicker" id="select-size-cat">
+        <option value="0" selected="selected">Tops</option> 
+        <option value="1">Bottoms</option> 
+        <option value="2">Dresses</option> 
+        <option value="3">Outerwear</option> 
+        <option value="4">Swim</option> 
+        <option value="5">Accessories</option> 
+      </select>
+    </p>
+    <ul id="tabs-size" class="nav nav-tabs hidden-xs" role="tablist">
+      <li role="presentation" class="active"><a href="#tops" aria-controls="tops" role="tab" data-toggle="tab">Tops</a></li>
+      <li role="presentation"><a href="#bottoms" aria-controls="bottoms" role="tab" data-toggle="tab">Bottoms</a></li>
+      <li role="presentation"><a href="#dresses" aria-controls="dresses" role="tab" data-toggle="tab">Dresses</a></li>
+      <li role="presentation"><a href="#outerwear" aria-controls="outerwear" role="tab" data-toggle="tab">Outerwear</a></li>
+      <li role="presentation"><a href="#swim" aria-controls="swim" role="tab" data-toggle="tab">Swim</a></li>
+      <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Accessories</a></li>
+    </ul>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="tops">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link" data-toggle="generic">Measuring Guide</a></h2>
+          <div class="toggle-item measure-info">
+            <div class="measure-img">
+              <img src="{{ site.baseurl }}/web_assets/imgs/whbm/size-charts/tops.jpg" alt="Tops Measuring Guide" class="img-responsive">
+              <span class="measure-item tops-bust">Bust</span>
+              <span class="measure-item measure-item-right tops-arm">Arm</span>
+              <span class="measure-item measure-item-right tops-waist">Waist</span>
+              <span class="measure-item tops-high-hip">High Hip</span>
+            </div>
+            <dl>
+              <dt>Bust</dt>
+              <dd>Measure under your arms around the fullest part of your chest, keeping the tape measure parallel to the floor.</dd>
+              <dt>Arm</dt>
+              <dd>Standing straight with arm relaxed and feet together, measure from the bottom of the center back of your neck, extending across the shoulder and down the back of your arm to your wrist.</dd>
+              <dt>Waist</dt>
+              <dd>Measure around your natural waist, keeping the tape slightly loose.</dd>
+              <dt>High Hip</dt>
+              <dd>With feet together, measure at approximately 4" down from natural waist, keeping the tape measure parallel to the floor.</dd>
+            </dl>
+          </div>
+        </div><!-- .toggle-wrap -->
+
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Regular Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>31½"</td>
+                    <td>29"</td>
+                    <td>24"</td>
+                    <td>30½"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>32½"</td>
+                    <td>29⅜"</td>
+                    <td>25"</td>
+                    <td>31½"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>33½"</td>
+                    <td>29¾"</td>
+                    <td>26"</td>
+                    <td>32½"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>34½"</td>
+                    <td>30⅛"</td>
+                    <td>27"</td>
+                    <td>33½"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>35½"</td>
+                    <td>30½"</td>
+                    <td>28"</td>
+                    <td>34½"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>36½"</td>
+                    <td>30⅞"</td>
+                    <td>29"</td>
+                    <td>35½"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>37½"</td>
+                    <td>31¼"</td>
+                    <td>30"</td>
+                    <td>36½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>39"</td>
+                    <td>31⅝"</td>
+                    <td>30½"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>40½"</td>
+                    <td>32"</td>
+                    <td>33"</td>
+                    <td>39½"</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>42½"</td>
+                    <td>32½"</td>
+                    <td>35"</td>
+                    <td>40"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>80.01</td>
+                    <td>73.66</td>
+                    <td>60.96</td>
+                    <td>77.47</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>82.55</td>
+                    <td>74.64</td>
+                    <td>63.5</td>
+                    <td>80.01</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>85.09</td>
+                    <td>75.565</td>
+                    <td>66.04</td>
+                    <td>82.55</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>87.63</td>
+                    <td>76.66</td>
+                    <td>68.58</td>
+                    <td>85.09</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>90.17</td>
+                    <td>77.47</td>
+                    <td>71.12</td>
+                    <td>87.63</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>92.71</td>
+                    <td>78.42</td>
+                    <td>73.66</td>
+                    <td>90.17</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>95.25</td>
+                    <td>76.83</td>
+                    <td>76.2</td>
+                    <td>92.71</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>99.06</td>
+                    <td>80.22</td>
+                    <td>80.01</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>102.87</td>
+                    <td>81.28</td>
+                    <td>83.82</td>
+                    <td>100.33</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>107.95</td>
+                    <td>82.55</td>
+                    <td>88.9</td>
+                    <td>101.6</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Petite Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>31"</td>
+                    <td>27½"</td>
+                    <td>23"</td>
+                    <td>30"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>32"</td>
+                    <td>27⅞"</td>
+                    <td>24"</td>
+                    <td>31"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>33"</td>
+                    <td>28¼"</td>
+                    <td>25"</td>
+                    <td>32"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>34"</td>
+                    <td>28⅝"</td>
+                    <td>26"</td>
+                    <td>33"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>35"</td>
+                    <td>29"</td>
+                    <td>27"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>36"</td>
+                    <td>29⅜"</td>
+                    <td>28"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>37"</td>
+                    <td>29¾"</td>
+                    <td>29"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>38½"</td>
+                    <td>30¼"</td>
+                    <td>30½"</td>
+                    <td>37½"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>40"</td>
+                    <td>31"</td>
+                    <td>32"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>42"</td>
+                    <td>32"</td>
+                    <td>34"</td>
+                    <td>39½"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>78.74</td>
+                    <td>68.85</td>
+                    <td>58.42</td>
+                    <td>76.2</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>81.28</td>
+                    <td>70.57</td>
+                    <td>60.96</td>
+                    <td>78.74</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>83.82</td>
+                    <td>71.75</td>
+                    <td>63.5</td>
+                    <td>81.28</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>86.36</td>
+                    <td>72.6</td>
+                    <td>66.04</td>
+                    <td>83.82</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>88.9</td>
+                    <td>73.66</td>
+                    <td>68.58</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>91.44</td>
+                    <td>74.63</td>
+                    <td>71.12</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>93.98</td>
+                    <td>75</td>
+                    <td>73.66</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>97.79</td>
+                    <td>75.56</td>
+                    <td>77.47</td>
+                    <td>95.25</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>101.6</td>
+                    <td>78.74</td>
+                    <td>81.28</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>106.68</td>
+                    <td>81.28</td>
+                    <td>86.36</td>
+                    <td>100.33</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'4" or under, regardless of size. Petite pieces have shortened sleeves, narrowed shoulders, raised waist, shorter skirt length, and reduced pant inseam.</p>
+          </div>
+        </div><!-- .toggle-wrap -->
+      </div><!-- .tab-pane -->
+
+
+      <div role="tabpanel" class="tab-pane" id="bottoms">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link" data-toggle="generic">Measuring Guide</a></h2>
+          <div class="toggle-item measure-info">
+            <div class="measure-img">
+              <img src="{{ site.baseurl }}/web_assets/imgs/whbm/size-charts/bottoms.jpg" alt="Bottoms Measuring Guide" class="img-responsive">
+              <span class="measure-item measure-item-right bottoms-waist">Waist</span>
+              <span class="measure-item bottoms-low-hip">Low Hip</span>
+              <span class="measure-item measure-item-right bottoms-inseam">Inseam</span>
+            </div>
+            <dl>
+              <dt>Waist</dt>
+              <dd>Measure around your natural waist, keeping the tape slightly loose.</dd>
+              <dt>Low Hip</dt>
+              <dd>With feet together, measure around the fullest part of your hips (approx. 8" down from the natural waist), keeping the tape measure parallel to the floor.</dd>
+              <dt>Inseam</dt>
+              <dd>Wearing pants that fit well, measure from crotch seam to hem.</dd>
+            </dl>
+          </div>
+        </div><!-- .toggle-wrap -->
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Regular Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>30"</td>
+                    <td>40"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>31½"</td>
+                    <td>41½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>33"</td>
+                    <td>43"</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>35"</td>
+                    <td>45"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>      
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>60.69</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>71.12</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>76.2</td>
+                    <td>101.6</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>80.01</td>
+                    <td>105.41</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>83.82</td>
+                    <td>109.22</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>88.9</td>
+                    <td>114.3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Petite Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>23"</td>
+                    <td>33"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>30½"</td>
+                    <td>40½"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>32"</td>
+                    <td>42"</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>34"</td>
+                    <td>44"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>           
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>58.42</td>
+                    <td>83.82</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>60.96</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>71.12</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>77.47</td>
+                    <td>102.87</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>81.28</td>
+                    <td>106.68</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>86.36 </td>
+                    <td>111.76</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'4" or under, regardless of size. Petite pieces have shortened sleeves, narrowed shoulders, raised waist, shorter skirt length, and reduced pant inseam.</p>
+            <h3>Long Inseam</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active"  aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSL</td>
+                    <td>00L</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XSL</td>
+                    <td>0L</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>XSL</td>
+                    <td>2L</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>SL</td>
+                    <td>4L</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>SL</td>
+                    <td>6L</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>ML</td>
+                    <td>8L</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>ML</td>
+                    <td>10L</td>
+                    <td>30"</td>
+                    <td>40"</td>
+                  </tr>
+                  <tr>
+                    <td>LL</td>
+                    <td>12L</td>
+                    <td>31½"</td>
+                    <td>41½"</td>
+                  </tr>
+                  <tr>
+                    <td>LL</td>
+                    <td>14L</td>
+                    <td>33"</td>
+                    <td>43"</td>
+                  </tr>
+                  <tr>
+                    <td>XLL</td>
+                    <td>16L</td>
+                    <td>35"</td>
+                    <td>45"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSL</td>
+                    <td>00L</td>
+                    <td>60.96</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XSL</td>
+                    <td>0L</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>XSL</td>
+                    <td>2L</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>SL</td>
+                    <td>4L</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>SL</td>
+                    <td>6L</td>
+                    <td>71.12</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>ML</td>
+                    <td>8L</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>ML</td>
+                    <td>10L</td>
+                    <td>76.2</td>
+                    <td>101.6</td>
+                  </tr>
+                  <tr>
+                    <td>LL</td>
+                    <td>12L</td>
+                    <td>80.01</td>
+                    <td>105.41</td>
+                  </tr>
+                  <tr>
+                    <td>LL</td>
+                    <td>14L</td>
+                    <td>83.82</td>
+                    <td>109.22</td>
+                  </tr>
+                  <tr>
+                    <td>XLL</td>
+                    <td>16L</td>
+                    <td>88.9</td>
+                    <td>114.3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'7" to 5'9", regardless of size. Long sizes have longer inseams, and the knee and calf position is 1" lower than regular sizes.</p>
+            <h3>Short Inseam</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSS</td>
+                    <td>00S</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XSS</td>
+                    <td>0S</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>XSS</td>
+                    <td>2S</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>SS</td>
+                    <td>4S</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>SS</td>
+                    <td>6S</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>MS</td>
+                    <td>8S</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>MS</td>
+                    <td>10S</td>
+                    <td>30"</td>
+                    <td>40"</td>
+                  </tr>
+                  <tr>
+                    <td>LS</td>
+                    <td>12S</td>
+                    <td>31½"</td>
+                    <td>41½"</td>
+                  </tr>
+                  <tr>
+                    <td>LS</td>
+                    <td>14S</td>
+                    <td>33"</td>
+                    <td>43"</td>
+                  </tr>
+                  <tr>
+                    <td>XLS</td>
+                    <td>16S</td>
+                    <td>35"</td>
+                    <td>45"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th></th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSS</td>
+                    <td>00S</td>
+                    <td>60.96</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XSS</td>
+                    <td>0S</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>XSS</td>
+                    <td>2S</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>SS</td>
+                    <td>4S</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>SS</td>
+                    <td>6S</td>
+                    <td>71.12</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>MS</td>
+                    <td>8S</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>MS</td>
+                    <td>10S</td>
+                    <td>76.2</td>
+                    <td>101.6</td>
+                  </tr>
+                  <tr>
+                    <td>LS</td>
+                    <td>12S</td>
+                    <td>80.01</td>
+                    <td>105.41</td>
+                  </tr>
+                  <tr>
+                    <td>LS</td>
+                    <td>14S</td>
+                    <td>83.82</td>
+                    <td>109.22</td>
+                  </tr>
+                  <tr>
+                    <td>XLS</td>
+                    <td>16S</td>
+                    <td>88.9</td>
+                    <td>114.3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'5" to 5'6", regardless of size. Short sizes have shorter inseams, and the knee and calf position is 1" higher than regular sizes. </p>
+          </div>
+        </div><!-- .toggle-wrap -->
+      </div><!-- .tab-pane -->
+
+      <div role="tabpanel" class="tab-pane" id="dresses">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link" data-toggle="generic">Measuring Guide</a></h2>
+          <div class="toggle-item measure-info">
+            <div class="measure-img">
+              <img src="{{ site.baseurl }}/web_assets/imgs/whbm/size-charts/dresses.jpg" alt="Dresses Measuring Guide" class="img-responsive">
+              <span class="measure-item dresses-bust">Bust</span>
+              <span class="measure-item measure-item-right dresses-arm">Arm</span>
+              <span class="measure-item measure-item-right dresses-waist">Waist*</span>
+              <span class="measure-item dresses-low-hip">Low Hip*</span>
+            </div>
+            <p class="small">*Note: To measure for skirts, follow the guide for low hips and waist.</p>
+            <dl>
+              <dt>Bust</dt>
+              <dd>Measure under your arms around the fullest part of your chest, keeping the tape measure parallel to the floor.</dd>
+              <dt>Arm</dt>
+              <dd>Standing straight with arm relaxed and feet together, measure from the bottom of the center back of your neck, extending across the shoulder and down the back of your arm to your wrist.</dd>
+              <dt>Waist</dt>
+              <dd>Measure around your natural waist, keeping the tape slightly loose.</dd>
+              <dt>Low Hip</dt>
+              <dd>With feet together, measure around the fullest part of your hips (approx. 8" down from the natural waist), keeping the tape measure parallel to the floor.</dd>
+            </dl>
+          </div>
+        </div><!-- .toggle-wrap -->
+
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Regular Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>31½"</td>
+                    <td>29"</td>
+                    <td>23"</td>
+                    <td>34½"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>32½"</td>
+                    <td>29⅜"</td>
+                    <td>24"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>33½"</td>
+                    <td>29¾"</td>
+                    <td>25"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>34½"</td>
+                    <td>30⅛"</td>
+                    <td>26"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>35½"</td>
+                    <td>30½"</td>
+                    <td>27"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>36½"</td>
+                    <td>30⅞"</td>
+                    <td>28"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>37½"</td>
+                    <td>31¼"</td>
+                    <td>29"</td>
+                    <td>40"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>39"</td>
+                    <td>31⅝"</td>
+                    <td>30½"</td>
+                    <td>41½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>40½"</td>
+                    <td>32"</td>
+                    <td>32"</td>
+                    <td>43"</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>42½"</td>
+                    <td>32½"</td>
+                    <td>34"</td>
+                    <td>45"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>80.01</td>
+                    <td>73.66</td>
+                    <td>58.42</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>82.55</td>
+                    <td>74.64</td>
+                    <td>60.96</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>85.09</td>
+                    <td>75.565</td>
+                    <td>63.5</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>87.63</td>
+                    <td>76.66</td>
+                    <td>66.04</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>90.17</td>
+                    <td>77.47</td>
+                    <td>68.58</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>92.71</td>
+                    <td>78.42</td>
+                    <td>71.12</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>95.25</td>
+                    <td>79.375</td>
+                    <td>73.66</td>
+                    <td>101.6</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>99.06</td>
+                    <td>80.33</td>
+                    <td>77.47</td>
+                    <td>105.41</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>102.87</td>
+                    <td>81.28</td>
+                    <td>81.28</td>
+                    <td>109.22</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>107.95</td>
+                    <td>82.55</td>
+                    <td>86.36</td>
+                    <td>114.3</td>
+                  </tr>
+                </tbody>
+              </table>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Petite Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>31"</td>
+                    <td>27½"</td>
+                    <td>23"</td>
+                    <td>33"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>32"</td>
+                    <td>27⅞"</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>33"</td>
+                    <td>28¼"</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>34"</td>
+                    <td>28⅝"</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>35"</td>
+                    <td>29"</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>36"</td>
+                    <td>29⅜"</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>37"</td>
+                    <td>29¾"</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>38½"</td>
+                    <td>30¼"</td>
+                    <td>30½"</td>
+                    <td>40½"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>40"</td>
+                    <td>31"</td>
+                    <td>32"</td>
+                    <td>42"</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>42"</td>
+                    <td>32"</td>
+                    <td>34"</td>
+                    <td>44"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>78.74</td>
+                    <td>66.85</td>
+                    <td>58.42</td>
+                    <td>83.82</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>81.28</td>
+                    <td>70.57</td>
+                    <td>60.96</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>83.82</td>
+                    <td>71.75</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>86.36</td>
+                    <td>72.6</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>88.9</td>
+                    <td>73.66</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>91.44</td>
+                    <td>74.63</td>
+                    <td>71.12</td>
+                    <td>96.25</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>93.98</td>
+                    <td>75</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>97.79</td>
+                    <td>75.56</td>
+                    <td>77.47</td>
+                    <td>102.87</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>101.6</td>
+                    <td>78.74</td>
+                    <td>81.28</td>
+                    <td>106.68</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>106.68</td>
+                    <td>81.28</td>
+                    <td>86.36</td>
+                    <td>111.76</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'4" or under, regardless of size. Petite pieces have shortened sleeves, narrowed shoulders, raised waist, shorter skirt length, and reduced pant inseam.</p>
+          </div>
+        </div>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="outerwear">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link" data-toggle="generic">Measuring Guide</a></h2>
+          <div class="toggle-item measure-info">
+            <div class="measure-img">
+              <img src="{{ site.baseurl }}/web_assets/imgs/whbm/size-charts/outerwear.jpg" alt="Outerwear Measuring Guide" class="img-responsive">
+              <span class="measure-item outerwear-bust">Bust</span>
+              <span class="measure-item measure-item-right outerwear-arm">Arm</span>
+              <span class="measure-item measure-item-right outerwear-waist">Waist*</span>
+              <span class="measure-item outerwear-low-hip">Low Hip*</span>
+            </div>
+            <p class="small">*Note: To measure for skirts, follow the guide for low hips and waist.</p>
+            <dl>
+              <dt>Bust</dt>
+              <dd>Measure under your arms around the fullest part of your chest, keeping the tape measure parallel to the floor.</dd>
+              <dt>Arm</dt>
+              <dd>Standing straight with arm relaxed and feet together, measure from the bottom of the center back of your neck, extending across the shoulder and down the back of your arm to your wrist.</dd>
+              <dt>Waist</dt>
+              <dd>Measure around your natural waist, keeping the tape slightly loose.</dd>
+              <dt>Low Hip</dt>
+              <dd>With feet together, measure around the fullest part of your hips (approx. 8" down from the natural waist), keeping the tape measure parallel to the floor.</dd>
+            </dl>
+          </div>
+        </div><!-- .toggle-wrap -->
+
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Regular Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>31½"</td>
+                    <td>29"</td>
+                    <td>23"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>32½"</td>
+                    <td>29⅜"</td>
+                    <td>24"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>33½"</td>
+                    <td>29¾"</td>
+                    <td>25"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>34½"</td>
+                    <td>30⅛"</td>
+                    <td>26"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>35½"</td>
+                    <td>30½"</td>
+                    <td>27"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>36½"</td>
+                    <td>30⅞"</td>
+                    <td>28"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>37½"</td>
+                    <td>31¼"</td>
+                    <td>29"</td>
+                    <td>40"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>39"</td>
+                    <td>31⅝"</td>
+                    <td>31⅝"</td>
+                    <td>41½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>40½"</td>
+                    <td>32"</td>
+                    <td>32"</td>
+                    <td>43"</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>42½"</td>
+                    <td>32½"</td>
+                    <td>32½"</td>
+                    <td>45"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>80.01</td>
+                    <td>73.66</td>
+                    <td>58.42</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>82.55</td>
+                    <td>74.64</td>
+                    <td>60.96</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>85.09</td>
+                    <td>75.565</td>
+                    <td>63.5</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>87.63</td>
+                    <td>76.66</td>
+                    <td>66.04</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>90.17</td>
+                    <td>77.47</td>
+                    <td>68.58</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>92.71</td>
+                    <td>78.42</td>
+                    <td>71.12</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>95.25</td>
+                    <td>79.375</td>
+                    <td>73.66</td>
+                    <td>101.6</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>99.06</td>
+                    <td>80.22</td>
+                    <td>80.01</td>
+                    <td>105.41</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>102.87</td>
+                    <td>81.28</td>
+                    <td>81.28</td>
+                    <td>109.22</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>16</td>
+                    <td>107.95</td>
+                    <td>82.55</td>
+                    <td>82.55</td>
+                    <td>114.3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Petite Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-labelledby="table-inches" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>31"</td>
+                    <td>27½"</td>
+                    <td>23"</td>
+                    <td>33"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>32"</td>
+                    <td>27⅞"</td>
+                    <td>24"</td>
+                    <td>34"</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>33"</td>
+                    <td>28¼"</td>
+                    <td>25"</td>
+                    <td>35"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>34"</td>
+                    <td>28⅝"</td>
+                    <td>26"</td>
+                    <td>36"</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>35"</td>
+                    <td>29"</td>
+                    <td>27"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>36"</td>
+                    <td>29⅜"</td>
+                    <td>28"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>37"</td>
+                    <td>29¾"</td>
+                    <td>29"</td>
+                    <td>39"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>38½"</td>
+                    <td>30¼"</td>
+                    <td>30½"</td>
+                    <td>40½"</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>40"</td>
+                    <td>31"</td>
+                    <td>32"</td>
+                    <td>42"</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>42"</td>
+                    <td>32"</td>
+                    <td>34"</td>
+                    <td>44"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Arm</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXSP</td>
+                    <td>00P</td>
+                    <td>78.74</td>
+                    <td>68.85</td>
+                    <td>58.42</td>
+                    <td>83.82</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>0P</td>
+                    <td>81.28</td>
+                    <td>70.57</td>
+                    <td>60.96</td>
+                    <td>86.36</td>
+                  </tr>
+                  <tr>
+                    <td>XSP</td>
+                    <td>2P</td>
+                    <td>83.82</td>
+                    <td>71.75</td>
+                    <td>63.5</td>
+                    <td>88.9</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>4P</td>
+                    <td>86.36</td>
+                    <td>72.6</td>
+                    <td>66.04</td>
+                    <td>91.44</td>
+                  </tr>
+                  <tr>
+                    <td>SP</td>
+                    <td>6P</td>
+                    <td>88.9</td>
+                    <td>73.66</td>
+                    <td>68.58</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>8P</td>
+                    <td>91.44</td>
+                    <td>74.63</td>
+                    <td>71.12</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>MP</td>
+                    <td>10P</td>
+                    <td>93.98</td>
+                    <td>75</td>
+                    <td>73.66</td>
+                    <td>99.06</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>12P</td>
+                    <td>97.79</td>
+                    <td>75.56</td>
+                    <td>77.47</td>
+                    <td>102.87</td>
+                  </tr>
+                  <tr>
+                    <td>LP</td>
+                    <td>14P</td>
+                    <td>101.6</td>
+                    <td>78.74</td>
+                    <td>81.28</td>
+                    <td>106.68</td>
+                  </tr>
+                  <tr>
+                    <td>XLP</td>
+                    <td>16P</td>
+                    <td>106.68</td>
+                    <td>81.28</td>
+                    <td>86.36</td>
+                    <td>111.76</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">For women 5'4" or under, regardless of size. Petite pieces have shortened sleeves, narrowed shoulders, raised waist, shorter skirt length, and reduced pant inseam.</p>
+          </div>
+        </div><!-- .toggle-wrap -->
+      </div><!-- .tabpanel -->
+      <div role="tabpanel" class="tab-pane" id="swim">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link" data-toggle="generic">Measuring Guide</a></h2>
+          <div class="toggle-item measure-info">
+            <div class="measure-img">
+              <img src="{{ site.baseurl }}/web_assets/imgs/whbm/size-charts/swim.jpg" alt="Outerwear Measuring Guide" class="img-responsive">
+              <span class="measure-item swim-bust">Bust</span>
+              <span class="measure-item measure-item-right swim-torso">Torso</span>
+              <span class="measure-item measure-item-right swim-waist">Waist</span>
+              <span class="measure-item swim-high-hip">High Hip</span>
+            </div>
+            <p class="small">*Note: To measure for skirts, follow the guide for low hips and waist.</p>
+            <dl>
+              <dt>Bust</dt>
+              <dd>Measure under your arms around the fullest part of your chest, keeping the tape measure parallel to the floor.</dd>
+              <dt>Torso</dt>
+              <dd>Measure a loop from your shoulder, down the front of your body to the crotch and back up the other side.</dd>
+              <dt>Waist</dt>
+              <dd>Measure around your natural waist, keeping the tape slightly loose.</dd>
+              <dt>High Hip</dt>
+              <dd>With feet together, measure at approximately 4" down from natural waist, keeping the tape measure parallel to the floor. </dd>
+            </dl>
+          </div>
+        </div><!-- .toggle-wrap -->
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Regular Sizes</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Torso</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>32½"</td>
+                    <td>57¾"</td>
+                    <td>25"</td>
+                    <td>31½"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>33½"</td>
+                    <td>58¾"</td>
+                    <td>26"</td>
+                    <td>32½"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>34½"</td>
+                    <td>59¾"</td>
+                    <td>27"</td>
+                    <td>33½"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>35½"</td>
+                    <td>60¾"</td>
+                    <td>28"</td>
+                    <td>34½"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>36½"</td>
+                    <td>61¾"</td>
+                    <td>29"</td>
+                    <td>35½"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>37½"</td>
+                    <td>62¾"</td>
+                    <td>30"</td>
+                    <td>36½"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>39"</td>
+                    <td>63¾"</td>
+                    <td>31½"</td>
+                    <td>38"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>40½"</td>
+                    <td>64¾"</td>
+                    <td>33"</td>
+                    <td>39½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>42½"</td>
+                    <td>65¾"</td>
+                    <td>35"</td>
+                    <td>40"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>&nbsp;</th>
+                    <th>Bust</th>
+                    <th>Torso</th>
+                    <th>Waist</th>
+                    <th>High Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>00</td>
+                    <td>82.55</td>
+                    <td>146.68</td>
+                    <td>63.5</td>
+                    <td>80.01</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>0</td>
+                    <td>85.09</td>
+                    <td>149.22</td>
+                    <td>66.04</td>
+                    <td>82.55</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>2</td>
+                    <td>87.63</td>
+                    <td>151.76</td>
+                    <td>68.58</td>
+                    <td>85.09</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>4</td>
+                    <td>90.17</td>
+                    <td>154.3</td>
+                    <td>71.12</td>
+                    <td>87.63</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>6</td>
+                    <td>92.71</td>
+                    <td>156.84</td>
+                    <td>73.66</td>
+                    <td>90.17</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>8</td>
+                    <td>95.25</td>
+                    <td>159.38</td>
+                    <td>76.2</td>
+                    <td>92.71</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>10</td>
+                    <td>99.06</td>
+                    <td>161.92</td>
+                    <td>80.01</td>
+                    <td>96.52</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>12</td>
+                    <td>102.87</td>
+                    <td>164.46</td>
+                    <td>83.82</td>
+                    <td>100.33</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>14</td>
+                    <td>107.95</td>
+                    <td>167</td>
+                    <td>88.9</td>
+                    <td>101.6</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+          </div>
+        </div><!-- .toggle-wrap -->
+      </div><!-- .tabpanel -->
+      <div role="tabpanel" class="tab-pane" id="accessories">
+        <div class="toggle-wrap">
+          <h2><a href="#" class="toggle-link open" data-toggle="generic">Measurements</a></h2>
+          <div class="toggle-item open">
+            <div class="unit-toggle"><a href="#" data-toggle="measure-unit">View in Centimeters</a></div>
+            <h3>Tights</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-uppercase">Small/Medium</td>
+                    <td>5' - 5'5"</td>
+                    <td>100 LBS - 145 LBS</td>
+                  </tr>
+                  <tr>
+                    <td class="text-uppercase">Medium/Large</td>
+                    <td>5'5" - 5'10"</td>
+                    <td>140 LBS - 185 LBS</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-uppercase">Small/Medium</td>
+                    <td>152 CM - 165 CM</td>
+                    <td>45 KG - 66 KG</td>
+                  </tr>
+                  <tr>
+                    <td class="text-uppercase">Medium/Large</td>
+                    <td>165 CM - 177.8 CM</td>
+                    <td>64KG - 84KG</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Shoes</h3>
+            <h3>Knee-High Flat Boot</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>14¾"</td>
+                    <td>13¼"</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>15“</td>
+                    <td>13½"</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>15¼"</td>
+                    <td>13¾"</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>15½"</td>
+                    <td>14"</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>15¾"</td>
+                    <td>14¼"</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>16“</td>
+                    <td>14½"</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>16¼"</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>16½"</td>
+                    <td>15"</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>16¾"</td>
+                    <td>15¼"</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>17“</td>
+                    <td>15½"</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>17¼"</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>17½"</td>
+                    <td>16"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>37.8</td>
+                    <td>33.9</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>38.4</td>
+                    <td>34.5</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>39.0</td>
+                    <td>35.0</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>39.6</td>
+                    <td>35.6</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>40.2</td>
+                    <td>36.1</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>40.8</td>
+                    <td>36.7</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>41.4</td>
+                    <td>37.2</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>42.0</td>
+                    <td>37.8</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>42.6</td>
+                    <td>38.3</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>43.2</td>
+                    <td>38.9</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>43.8</td>
+                    <td>39.4</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>45.0</td>
+                    <td>40.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Knee-High Heeled Boot</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>14½"</td>
+                    <td>13¼"</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>14¾"</td>
+                    <td>13½"</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>15“</td>
+                    <td>13¾"</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>15¼"</td>
+                    <td>14"</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>15½"</td>
+                    <td>14¼"</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>15¾"</td>
+                    <td>14½"</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>16“</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>16¼"</td>
+                    <td>15"</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>16½"</td>
+                    <td>15¼"</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>16¾"</td>
+                    <td>15½"</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>17“</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>17¼"</td>
+                    <td>16"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>36.8</td>
+                    <td>33.9</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>37.4</td>
+                    <td>34.5</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>38.0</td>
+                    <td>35.0</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>38.6</td>
+                    <td>35.6</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>39.2</td>
+                    <td>36.1</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>39.8</td>
+                    <td>36.7</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>40.4</td>
+                    <td>37.2</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>41.0</td>
+                    <td>37.8</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>41.6</td>
+                    <td>38.3</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>42.2</td>
+                    <td>38.9</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>42.8</td>
+                    <td>39.4</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>44.0</td>
+                    <td>40.5</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <h3>Over-the-Knee Heeled Boot</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                    <th>Top of Shaft Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>18"</td>
+                    <td>13¼"</td>
+                    <td>13¾"</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>18½"</td>
+                    <td>13½"</td>
+                    <td>14"</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>19“</td>
+                    <td>13¾"</td>
+                    <td>14¼"</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>19¼"</td>
+                    <td>14"</td>
+                    <td>14½"</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>19½"</td>
+                    <td>14¼"</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>19¾"</td>
+                    <td>14½"</td>
+                    <td>15"</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>20“</td>
+                    <td>14¾"</td>
+                    <td>15¼"</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>20¼"</td>
+                    <td>15"</td>
+                    <td>15½"</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>20½"</td>
+                    <td>15¼"</td>
+                    <td>15¾"</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>20¾"</td>
+                    <td>15½"</td>
+                    <td>16"</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>21“</td>
+                    <td>15¾"</td>
+                    <td>16¼"</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>21¼"</td>
+                    <td>16"</td>
+                    <td>16½"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Sizes</th>
+                    <th>Shaft Height</th>
+                    <th>Calf Circ*</th>
+                    <th>Top of Shaft Circ*</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>46.5</td>
+                    <td>33.9</td>
+                    <td>34.8</td>
+                  </tr>
+                  <tr>
+                    <td>5½</td>
+                    <td>47.3</td>
+                    <td>34.5</td>
+                    <td>35.4</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>48.0</td>
+                    <td>35.0</td>
+                    <td>36.0</td>
+                  </tr>
+                  <tr>
+                    <td>6½</td>
+                    <td>48.8</td>
+                    <td>35.6</td>
+                    <td>36.6</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>49.5</td>
+                    <td>36.1</td>
+                    <td>37.2</td>
+                  </tr>
+                  <tr>
+                    <td>7½</td>
+                    <td>50.3</td>
+                    <td>36.7</td>
+                    <td>37.8</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>51.0</td>
+                    <td>37.2</td>
+                    <td>38.4</td>
+                  </tr>
+                  <tr>
+                    <td>8½</td>
+                    <td>51.8</td>
+                    <td>37.8</td>
+                    <td>39.0</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>52.5</td>
+                    <td>38.3</td>
+                    <td>39.6</td>
+                  </tr>
+                  <tr>
+                    <td>9½</td>
+                    <td>53.3</td>
+                    <td>38.9</td>
+                    <td>40.2</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>54.0</td>
+                    <td>39.4</td>
+                    <td>40.8</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>55.5</td>
+                    <td>40.5</td>
+                    <td>41.4</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <p class="small">*Circumference</p>
+            <h3>Belts</h3>
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Non-Stretch</th>
+                    <th>Waist</th>
+                    <th>Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>25½"</td>
+                    <td>28"</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>27½"</td>
+                    <td>30"</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>29½"</td>
+                    <td>32"</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>32"</td>
+                    <td>34½"</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>34½"</td>
+                    <td>37"</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>37"</td>
+                    <td>39½"</td>
+                  </tr>
+                  <tr>
+                    <td>XXL</td>
+                    <td>39½"</td>
+                    <td>42"</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Non-Stretch</th>
+                    <th>Waist</th>
+                    <th>Hip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>64.77</td>
+                    <td>71.12</td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>69.85</td>
+                    <td>76.2</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>74.93</td>
+                    <td>81.28</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>81.28</td>
+                    <td>87.63</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>87.63</td>
+                    <td>93.98</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>93.98</td>
+                    <td>100.33</td>
+                  </tr>
+                  <tr>
+                    <td>XXL</td>
+                    <td>100.33</td>
+                    <td>106.68</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+            <div class="table-responsive">
+              <table class="table table-size-chart table-in table-highlight active" aria-hidden="false">
+                <thead>
+                  <tr>
+                    <th>Stretch</th>
+                    <th>Waist</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>24½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>26½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>28½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>31"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>33½"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>36"</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XXL</td>
+                    <td>38½"</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-size-chart table-cm table-highlight" aria-labelledby="table-centimeters" aria-hidden="true">
+                <thead>
+                  <tr>
+                    <th>Stretch</th>
+                    <th>Waist</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XXS</td>
+                    <td>62.23</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XS</td>
+                    <td>67.31</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>72.39</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>78.74</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>85.09</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>91.44</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>XXL</td>
+                    <td>97.79</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- .table-responsive -->
+          </div>
+        </div><!-- .toggle-wrap -->
+      </div><!-- .tabpanel -->
+    </div>
+    <h2>Need Help?</h2>
+    <p>Still not sure what you need? Our Expert Stylists can help you find the perfect size. Email <a href="mailto:{{ email }}" class="long-email">{{ email }}</a> or call {{ phone }}.</p>
+  </div><!-- .size-wrap -->
+{% else %}
+  <p>Our unique sizing chart runs from 000-4.5. Because size is just a number--the simpler, the better (and the more consistent, so you always know your size at Chico's). From conventional sizes 0 to 22, you'll easily find your size on the chart below.</p>
+  <p>Want help from a Chico's Style Expert? Chat Live now, contact our Customer Care Team at 1.888.855.4986 or customerservice@chicos.com or visit any of our boutiques.</p>
+  <h2>Available Size Charts</h2>
+  <ul class="list-inline">
+    <li><a href="#size-missy">Missy Chart</a></li>
+    <li><a href="#size-petites">Petites Chart</a></li>
+    <li><a href="#size-belt">Belt Chart</a></li>
+    <li><a href="#size-spanx">Spanx Chart</a></li>
+  </ul>
+  <h3 class="anchor" id="size-missy">Missy Size Chart</h3>
+  {% include _molecules/tables/size-chart-missy.html %}
+  <h3 class="anchor" id="size-petites">Petites Size Chart</h3>
+  {% include _molecules/tables/size-chart-petites.html %}
+  <p>
+    <strong>Chest/Bust:</strong> Measure under arms, around the fullest part of your chest.<br>
+    <strong>Waist:</strong> Measure around your natural waistline, keeping the tape relaxed.<br>
+    <strong>Hips:</strong> Measure around the fullest part of your hips.
+  </p>
+  <p class="small">
+    *Some items may be sizes 0/1 (comparable to a small/medium or sizes 4-10) and 2/3 (comparable to a medium/large or sizes 12-18)
+  </p>
+  <h3 class="anchor" id="size-belt">Belt Chart</h3>
+  {% include _molecules/tables/size-chart-belt.html %}
+  <h3 class="anchor" id="size-spanx">Spanx Chart</h3>
+  <p>In-between sizes? Please size up.</p>
+  {% include _molecules/tables/size-chart-spanx.html %}
+{% endif %}

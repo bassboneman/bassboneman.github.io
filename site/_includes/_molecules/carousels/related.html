@@ -1,0 +1,40 @@
+<div id="carousel-related" class="carousel-related carousel slide {{ include.carouselClass }}" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="row">
+        <div class="col-xs-4">
+          {% include _molecules/products/listing-single.html %}
+        </div>
+        <div class="col-xs-4">
+          {% include _molecules/products/listing-single.html %}
+        </div>
+        <div class="col-xs-4">
+          {% include _molecules/products/listing-single.html %}
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="row">
+        <div class="col-xs-4">
+          {% include _molecules/products/listing-single.html %}
+        </div>
+        <div class="col-xs-4">
+          {% include _molecules/products/listing-single.html %}
+        </div>
+        <div class="col-xs-4">
+          {% include _molecules/products/listing-single.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#carousel-related" data-slide="prev" aria-label="previous">
+    <svg class="icon-arrow-left" role="presentation">
+      <use xlink:href="#icon-arrow-left"></use>
+    </svg>
+  </a>
+  <a class="right carousel-control" href="#carousel-related" data-slide="next" aria-label="next">
+    <svg class="icon-arrow-right" role="presentation">
+      <use xlink:href="#icon-arrow-right"></use>
+    </svg>
+  </a>
+</div>

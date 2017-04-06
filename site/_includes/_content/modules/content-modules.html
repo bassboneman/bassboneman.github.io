@@ -1,0 +1,86 @@
+<div class="content content-wide">
+  <div class="container-fluid">
+    {% include _molecules/carousels/jumbo.html carouselImage='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+3360x1200&w=3360&h=1200' carouselImageMobile='https://placeholdit.imgix.net/~text?txtsize=60&txt=Actual+size:+767x767&w=767&h=767' carouselHeading='Zenergy<sup>&reg;</sup>' carouselCopy='<p>Activewear that goes anywhere.</p>' btnLabel='Shop Now' btnClass='btn-primary' btnLink='#' btnExtra='' %}
+    <hr class="hr-mobile">
+  </div><!-- .container-fluid -->
+</div><!-- .content.content-wide -->
+
+<div class="content">
+  <div class="container-fluid">
+    {% include _molecules/carousels/default.html %}
+    {% include _molecules/carousels/single-img.html %}
+    {% include _molecules/modules/icon-text.html %}    
+    
+
+    {% comment %}{% include _molecules/modules/img-wrap.html %}{% endcomment %}
+
+    {% comment %}2x2 combo module.{% endcomment %}
+    <section class="module">
+      <div class="module-img-wrap">
+        <div class="module-inner">
+          <div class="row">
+            <div class="col-sm-6">
+              {% include _molecules/modules/img-overlay.html moduleClass='' moduleHeading='Lacey Stitch Cardigan' moduleCollection='Travelers Collection' moduleCopy='<p>Lorem ipsum dolor sit amet.</p>' moduleLink='Shop Now' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' %}
+            </div>
+            <div class="col-sm-6">
+              {% include _molecules/modules/img.html moduleClass='' moduleHeading='Our Best Tops' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleCopy='<p>Lorem Ipsum dolor sit amet.</p>' moduleLink='Shop Now' %}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              {% include _molecules/modules/ad.html moduleAdColor='blue' moduleAdHeading='40% Off' moduleAdSubheading='Entire Purchase' moduleAdCopy='Passport members take an additional 5% off' moduleAdCode='Use code 66073' %}
+            </div>
+            <div class="col-sm-6">
+              {% include _molecules/modules/img.html moduleClass='' moduleHeading="Summer's Hottest Hue" moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleSubCopy='' moduleLink='Shop Now' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- .module -->
+
+    {% include _molecules/modules/combo.html carouselAttr='data-carousel="align-arrows"' moduleComboImg='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleCollection='Travelers &trade;' moduleComboHeading='Arrive <em>in Style</em>' moduleComboButton='Shop the Collection' moduleComboCarouselImg1='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:600x338&w=600&h=338' moduleComboCarouselCaption1='<p><span class="text-uppercase">Lorem ipsum dolor sit amet</span><br>Travelers Classic Essential Tank</p><div class="product-msg">Online Only</div>' moduleComboCarouselImg2='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:600x338&w=600&h=338' moduleComboCarouselCaption2='<p><span class="text-uppercase">Lorem ipsum dolor sit amet</span><br>Travelers Classic Essential Tank</p><div class="product-msg">Online Only</div>' moduleComboCarouselImg3='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:600x338&w=600&h=338' moduleComboCarouselCaption3='<p><span class="text-uppercase">Lorem ipsum dolor sit amet</span><br>Travelers Classic Essential Tank</p><div class="product-msg">Online Only</div>' %}
+
+    {% comment %}SHELF HEADERS{% endcomment %}
+
+    {% comment %}text left, image right, full-width image{% endcomment %}
+    {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Left (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' moduleExtra='<a href="#">optional element</a>' %}
+
+    {% comment %}text right, image left, full-width image{% endcomment %}
+    {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Right (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+
+    {% comment %}text left, image right{% endcomment %}
+    {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+
+    {% comment %}text right, image left{% endcomment %}
+    {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+
+    {% comment %}text left (1/3), image right (2/3){% endcomment %}
+    {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+
+    {% comment %}text left (1/3), image right (2/3){% endcomment %}
+    {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-sh-grid module-sh-right module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' moduleLinkUrl='#' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+
+
+    {% include _molecules/modules/shelf-appt.html moduleClass='' moduleHeading='Style <em>by</em> Appointment' moduleHeading='Style <em>by</em> Appointment' moduleCopy='<p>Fun. Free. Fabulous! Our Style Experts are here to help.</p>' moduleCtaCopy="Visit or call any Chico's boutique to make an appointment with one of our Style Experts." moduleLink='Make an Appointment' %}
+
+
+    {% include _molecules/modules/blog.html moduleSubCopy="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laore." %}
+
+    {% include _molecules/modules/social.html moduleTitle='Social Header' moduleLabel1='Social Label' moduleLabel2='Social Label' moduleLabel3='Social Label' moduleLabel4='Social Label' %}
+
+    {% include _molecules/carousels/product-grid.html moduleTitle='Our Best Rated Looks' %}
+  </div><!-- .container-fluid -->
+</div><!-- .content -->
+
+{% comment %} maybe add this post-launch 
+<!-- use .content-sh when the .module-sh needs a background color that fills the available horizontal space -->
+<div class="content content-sh">
+  <div class="container-fluid">
+    <section class="module">
+      {% include _molecules/modules/shelf-left-overlay.html %}
+    </section>
+  </div>
+</div>
+{% endcomment %}
+
+{% include _molecules/modals/modal-quick-view.html %}

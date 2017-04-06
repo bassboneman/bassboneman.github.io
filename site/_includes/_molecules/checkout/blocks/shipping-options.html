@@ -1,0 +1,47 @@
+<section id="checkout-shipping-options" class="checkout-block {% if page.type == 'registered' %}complete{% else %}first not-started{% endif %}">
+  <header>
+    {% if page.type == 'registered' %}
+      <a href="#" class="checkout-btn-change" data-toggle="modal" data-target="#modal-shipping-options">Change</a>  
+    {% else %}
+      <a href="#" class="checkout-btn-change" data-toggle="checkout-edit">Change</a>
+    {% endif %}
+    <h2>2. Shipping Options</h2>
+  </header>
+  <div class="checkout-block-body">
+    <div class="checkout-section-form">
+      <div class="radio-media-list">
+        {% include _molecules/checkout/radios/shipping.html shipping='standard' radioSet='shipping-options' radioID='shipping-option-1' checked='yes' %}
+        {% include _molecules/checkout/radios/shipping.html shipping='express' radioSet='shipping-options' radioID='shipping-option-2' %}
+        {% include _molecules/checkout/radios/shipping.html shipping='twoday' radioSet='shipping-options' radioID='shipping-option-3' %}
+        {% include _molecules/checkout/radios/shipping.html shipping='nextday' radioSet='shipping-options' radioID='shipping-option-4' %}
+      </div><!-- .radio-media-list -->
+      <div class="row row-tight">
+        <div class="col-sm-6">
+          {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-primary btn-lg btn-block btn-checkout btn-width' btnLabel='Save &amp; Continue' btnExtra='data-checkout="payment-options"' %}
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->
+    </div><!-- .checkout-section-form -->
+    <div class="checkout-section-entry">
+      <div class="row">
+        <div class="col-sm-3 col-xs-4">
+          <strong>Standard</strong><br>
+          <img src="{{ site.baseurl }}/web_assets/svg/checkout/shipping-standard.svg" alt="Standard Shipping" class="icon-shipping">
+        </div><!-- .col -->
+        <div class="col-sm-7 col-xs-5">
+          <div class="row">
+            <div class="col-sm-6">
+              Estimated Arrival:<br>
+              <span class="arrival-date">Mar 15-20</span>
+            </div><!-- .col -->
+            <div class="col-sm-6">
+              <strong>6-9</strong> business days
+            </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .col -->
+        <div class="col-sm-2 col-xs-3 text-right">
+          <span class="text-uppercase">Free</span>
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .checkout-section-entry -->
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->

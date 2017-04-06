@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include _templates/head.html %}
+  {% include _assets/svg-defs.html %}
+
+</head>
+
+<body class="page-guide" data-spy="scroll" data-target=".scrollspy">
+  
+{% include nav.html %}
+
+  <div class="molecular-wrap">
+    {{ content }}
+  </div>
+
+{% include _templates/foot.html %}
+
+</body>
+</html>

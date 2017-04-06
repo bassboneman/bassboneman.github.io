@@ -1,0 +1,44 @@
+.hrecipe {
+  .fn {
+    font-family: $font-base;
+    font-size: 18px;
+    text-align: center;
+  }
+  h3 {
+    font-family: $font-base;
+    font-size: 16px;
+  }
+  .details {
+    font-family: $font-base;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .ingredients {
+    margin-bottom: 30px;
+    padding: 0 0 0 25px;
+    list-style: none;
+    border-left: 2px solid #b2b2b2;
+    li {
+      line-height: 1.7;
+    }
+  }
+  .instructions {
+    margin-bottom: 30px;
+    padding: 0 0 0 27px;
+    counter-reset: item;
+    > li {
+      line-height: 1.7;
+      text-indent:-20px;
+      list-style-type: none;
+      counter-increment: item;
+      &:before {
+        display: inline-block;
+        width: 20px;
+        padding-right: 7px;
+        font-weight: 700;
+        text-align: right;
+        content:counter(item) ".";
+      }
+    }
+  }
+}

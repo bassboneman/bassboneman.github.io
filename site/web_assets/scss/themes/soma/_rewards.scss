@@ -1,0 +1,426 @@
+$color-preferred: $color-black;
+$color-gold: #e9c367;
+$color-platinum: #acacac;
+
+// These styles are currently only used by Soma.
+.rewards-wrap {
+  // max-width: 70rem;
+  max-width: 70rem;
+  margin: 4rem auto 8rem auto;
+  h2 {
+    max-width: 24rem;
+    margin: 0 auto 2rem auto;
+  }
+  h3 {
+    margin: 0 0 3rem 0;
+    font-size: 2.4rem;
+    font-style: italic;
+    text-align: center;
+  }
+}
+.accordion-rewards {
+  .panel {
+    border-top: .1rem solid $color-border;
+    &:last-child {
+      border-bottom: .1rem solid $color-border;
+    }
+  }
+  .panel-title {
+    margin: 0;
+    font-family: $font-family-base;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    @media screen and (max-width: 767px) {
+      font-size: 1.4rem;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      &:after {
+        display: block;
+        float: right;
+        margin-top: 1.1rem;
+        font-size: 0;
+        line-height: 0;
+        width: 1rem;
+        height: 1rem;
+        content: url('../svg/close-large.svg');
+        @include opacity(0.8);
+        -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+                transform: rotate(0);
+        -webkit-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        @include transition(all, 0.5s);
+      }
+      &.collapsed:after {
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+      }
+    }
+  }
+  .panel-body {
+    padding: 0 1.5rem 2rem 6.5rem;
+  }
+  svg {
+    float: left;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 1.5rem;
+    vertical-align: middle;
+  }
+  @media screen and (max-width: 767px) {
+    .panel-heading {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .panel-title {
+      line-height: 2.4rem;
+      a:after {
+        margin-top: .7rem;
+      }
+    }
+    .panel-body {
+      padding-left: 0;
+    }
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+
+// rewards table
+.soma-table-wrap {
+  // max-width: 80rem;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 0; // using because of the hide/show jquery animation
+  // @media screen and (max-width: 767px) {
+  //   max-width: 50rem;
+  // }
+  .link-group {
+    font-size: 0;
+    a {
+      color: #fff;
+      font: {
+        family: $font-family-base;
+        weight: 600;
+        size: 1.4rem;
+      }
+      // text-transform: uppercase;
+      // letter-spacing: 0.03em;
+      &:first-child {
+        margin-right: 1.5rem;
+        padding-right: 1.5rem;
+        border-right: 1px solid #fff;
+      }
+    }
+  }
+  // .under-table {
+  //   text-align: center;
+  // }
+  @media screen and (max-width: 767px) {
+    font-size: 1.4rem;
+    // padding-left: 10px;
+    // padding-right: 10px;
+    // .under-table {
+    //   max-width: 300px;
+    //   margin: 0 auto;
+    // }
+  }
+}
+.soma-table {
+  width: 100%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  border-spacing: 0;
+  border-collapse: collapse;
+  // table-layout: fixed;
+  table {
+    width: 100%;
+  }
+  th, td {
+    font-size: 1.6rem;
+    @media screen and (max-width: 767px) {
+      font-size: 1.3rem;
+    }
+  }
+  th {
+    width: 20%;
+    padding: 1.2rem .8rem;
+    font-weight: 400;
+    text-align: center;
+    // line-height: 1.14218;
+    // border-top: 0;
+    // border: .1rem solid transparent;
+    border: .1rem solid $color-border;
+    // border-bottom-color: $color-border;
+    // border-right: .1rem solid $color-border;
+    // border-left: .1rem solid $color-border;
+    &.description {
+      text-align: left;
+      width: 40%;
+      font-weight: 400;
+    }
+  }
+  td {
+    padding: 1.2rem .8rem;
+    // height: 3.8em;
+    // line-height: 1.14218;
+    vertical-align: middle;
+    border: .1rem solid $color-border;
+    &:first-child {
+      border-left: 0;
+    }
+    &:last-child {
+      border-right: 0;
+    }
+    &.description {
+      // .subtitle {
+      //   font: {
+      //     family: $font-family-base;
+      //     size: 0.619em;
+      //   }
+      //   letter-spacing: 0.03em;
+      //   text-transform: uppercase;
+      // }
+    }
+  }
+  tr:last-child td {
+    border-bottom: 0;
+  }
+  th:last-child {
+    border-right: 0;
+  }
+  th.description {
+    // padding-bottom: .5rem;
+    // padding-right: .5rem;
+    vertical-align: bottom;
+    border-left: 0;
+  }
+  @media screen and (max-width: 767px) {
+    text-transform: none;
+    // width: 30rem;
+    td, th {
+      width: 10%;
+      &.description {
+        width: 70%;
+      }
+    }
+    th {
+      padding-top: 8rem;
+      text-align: left;
+      &.description {
+        // width: 70%;
+      }
+      &.yes-no-header {
+        // width: 10%;
+        span {
+          display: block;
+          text-transform: uppercase;
+        }
+        > span {
+          width: 3rem;
+          line-height: 1;
+          white-space: nowrap;
+          -webkit-transform-origin: 45% 50%;
+              -ms-transform-origin: 45% 50%;
+                  transform-origin: 45% 50%;
+          -webkit-transform: rotate(270deg);
+              -ms-transform: rotate(270deg);
+                  transform: rotate(270deg);
+        }
+      }
+    }
+  }
+  .yes-no {
+    // width: 13.3333%;
+    text-align: center;
+  }
+  .tier-name {
+    display: block;
+    // font-size: 1.714em;
+    // font-style: italic;
+    // font-size: 1.6rem;
+    font-weight: 700;
+    // text-transform: uppercase;
+  }
+  .subtitle {
+    display: block;
+    font-size: 1.2rem;
+    // font: {
+    //   // family: $font-family-base;
+    //   // size: 1.048em;
+    // }
+    // letter-spacing: 0.03em;
+    // text-transform: uppercase;
+  }
+  .yes-no-header {
+    &.preferred {
+      color: #fff;
+      background: $color-black;
+    }
+    &.gold {
+      background: $color-gold;
+    }
+    &.platinum {
+      background: $color-platinum;
+    }
+  }
+  &.table-preferred {
+    td.preferred {
+      background: #eee;
+    }
+  }
+  &.table-gold {
+    td.gold {
+      background: lighten($color-gold, 28%);
+    }
+  }
+  &.table-platinum {
+    td.platinum {
+      background: #eee;
+    }
+  }
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    // margin-top: 0.333em;
+  }
+  // @media screen and (max-width: 767px) {
+  //   // width: 300px;
+  //   .yes-no-header {
+  //     .tier-name {
+  //       // font-size: 1.4em;
+  //     }
+  //     .subtitle {
+  //       // font-size: 0.85em;
+  //     }
+  //     > span {
+  //       // line-height: 1.05em;
+  //     }
+  //   }
+  // }
+}
+
+
+// login success header
+.rewards-login-header {
+  * {
+    font-family: $font-family-base;
+  }
+  img {
+    width: 15rem;
+  }
+}
+
+// status chart
+.rewards-graph {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 3rem;
+  line-height: 3rem;
+  background: #eee;
+}
+.rewards-bar {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3rem;
+  padding: 0 1rem 0 2rem;
+  text-align: right;
+  &:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-width: 1.5rem;
+    margin-top: -1.5rem;
+  }
+  &.preferred {
+    color: #fff;
+    background: $color-preferred;
+    &:after {
+      border-left-color: $color-preferred;
+    }
+  }
+  &.gold {
+    background: $color-gold;
+    &:after {
+      border-left-color: $color-gold;
+    }
+  }
+  &.platinum {
+    background: $color-platinum;
+    &:after {
+      border-left-color: $color-platinum;
+    }
+  }
+}
+.rewards-target {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
+// history
+
+.rewards-block {
+  margin-bottom: 3rem;
+  * {
+    font-family: $font-family-base;
+  }
+  h2 + h3,
+  h3 + h2 {
+    margin: -.5rem 0 2rem 0;
+  }
+}
+
+
+.rewards-block {
+  .toggle-link {
+    font-size: 1.6rem;
+    text-decoration: none;
+    svg {
+      -webkit-transform: rotate(0);
+          -ms-transform: rotate(0);
+              transform: rotate(0);
+      -webkit-transform-origin: 50% 50%;
+          -ms-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+        @include transition(all, 0.4s);
+    }
+    &.open {
+      svg {
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+// find bra
+
+.find-bra {
+  .module-img-collection {
+    h2 {
+      font-size: 1.8rem;
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+  }
+}

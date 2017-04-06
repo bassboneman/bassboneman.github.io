@@ -1,0 +1,80 @@
+{% comment %}if no orders{% endcomment %}
+<div class="alert alert-warning">We do not see any completed orders for your account at this time. Please call customer service at {% if page.brand == 'whbm' %}1.877.948.2525{% elsif page.brand == 'soma' %}1.866.768.7662{% else %}1.888.855.4986{% endif %} to learn more details.</div>
+{% comment %}end if{% endcomment %}
+
+<div class="row">
+  <div class="col-sm-6">
+    <section class="detail-wrap">
+      <h2 class="detail-heading">Order 1010101010 Status</h2>
+      <div class="detail">
+        <dl class="dl-horizontal">
+          <dt>Status:</dt>
+          <dd>Order Processing</dd>
+          <dt>Bill to name:</dt>
+          <dd>Jane Doe</dd>
+          <dt>Order Date:</dt>
+          <dd>June 16, 2015</dd>
+        </dl>
+      </div>
+    </section><!-- .detail-wrap -->
+    <section class="detail-wrap">
+      <h2 class="detail-heading">Shipment Summary</h2>
+      <div class="detail">
+        <dl class="dl-horizontal">
+          <dt>Ship To Name:</dt>
+          <dd>Brian MacDonald</dd>
+          <dt>Ship To Address:</dt>
+          <dd>
+            123 Main St.<br>
+            Naples, FL 34104<br>
+            USA
+          </dd>
+          <dt>Shipping Method:</dt>
+          <dd>Parcel Post</dd>
+          <dt>Order Total:</dt>
+          <dd>$307.00</dd>
+        </dl>
+      </div>
+    </section><!-- .detail-wrap -->
+  </div>
+  <div class="col-sm-6">
+    <p>Have additional questions about your order? Feel free to email us at <a href="mailto:customerservice@{% if page.brand == 'whbm' %}whitehouseblackmarket{% elsif page.brand == 'soma' %}soma{% else %}chicos{% endif %}.com">customerservice@{% if page.brand == 'whbm' %}whitehouseblackmarket{% elsif page.brand == 'soma' %}soma{% else %}chicos{% endif %}.com</a> or call us toll free at {% if page.brand == 'whbm' %}1.877.948.2525{% elsif page.brand == 'soma' %}1.866.768.7662{% else %}1.888.855.4986{% endif %}.</p>
+    <p class="text-center">
+      <a class="btn btn-default" href=""><i class="fa fa-fw fa-arrow-left"></i> Back to Order List</a>
+    </p>    
+  </div>
+</div>
+
+<div class="detail-wrap">
+  <h2 class="detail-heading">Shipment Detail</h2>
+  <div class="detail">
+    <div class="product-details">
+      <div class="row">
+        <div class="col-sm-2 col-xs-2">
+          <img class="img-responsive" src="http://placehold.it/200x250&text=Product" alt="">    
+        </div>
+        <div class="col-sm-10 col-xs-10">
+          <h4>Product Name</h4>
+          <div class="row">
+            <div class="col-sm-9">
+              <dl class="dl-horizontal meta-list">
+                <dt>Style:</dt>
+                <dd>570126513</dd>
+                <dt>SKU:</dt>
+                <dd>451005486120</dd>
+                <dt>Color:</dt>
+                <dd>Natural Cream</dd>
+                <dt>Size:</dt>
+                <dd>Size 000 (0, XXS)</dd>
+                <dt>Item Price:</dt>
+                <dd>$89.00</dd>
+              </dl>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div><!-- .product-details -->
+  </div>
+</div><!-- .detail-wrap -->
+
+{% comment %}{% include _molecules/blocks/detail-wrap-table.html detailLabel='Shipment Detail' %}{% endcomment %}

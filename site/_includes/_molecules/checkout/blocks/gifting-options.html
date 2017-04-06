@@ -1,0 +1,60 @@
+<div class="checkout-gifting">
+  <div class="row">
+    <div class="col-xs-8 col-sm-6">
+      <h3 class="margin-bot-none">
+        <svg class="icon-square-lg icon-left"><use xlink:href="#icon-gift-soma"></use></svg>
+        {% if include.giftMessage == 'yes' %}
+          {% if include.giftTogether == 'yes' %}
+            Gifted Item(s) - 2
+          {% else %}
+            Gifted Item(s) - 2
+          {% endif %}
+        {% else %}
+          Gifting
+        {% endif %}
+      </h3>
+    </div><!-- .col-xs-6 -->
+    <div class="col-xs-4 col-sm-6 text-right">
+      <a href="#" class="checkout-link" data-action="toggle" data-target="gifting-{{ include.giftingID }}" data-label="Close">View<span class="hidden-xs hidden-sm"> Gifting Options</span></a>
+    </div><!-- .col-xs-6 -->
+  </div><!-- .row -->
+
+  <div id="gifting-{{ include.giftingID }}" class="checkout-gifting-options">
+
+    {% if include.singleGift %}
+      {% include _molecules/checkout/radios/gifting.html singleGift='yes' %}
+    {% elsif include.giftMessage %}
+      {% if include.giftTogether %}
+
+        {% include _molecules/checkout/blocks/gift-message-together.html %}
+
+      {% else %}
+        {% include _molecules/blocks/product-details-checkout.html placement='review-order' status='message-entered' totalProducts='2' %}
+      {% endif %}
+
+      {% if include.giftTogether !='yes' %}
+        {% if include.confirmationPage !='yes' %}
+          <div class="row row-tight">
+            <div class="col-sm-6">
+              <p>
+                {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-alt btn-lg btn-block btn-has-plus' btnLabel='Gift More Items' btnExtra='data-toggle="modal" data-target="#modal-gift-select"' %}
+              </p>
+            </div><!-- .col-sm-6 -->
+          </div><!-- .row -->
+        {% endif %}
+      {% endif %}
+
+      {% if include.confirmationPage !='yes' %}
+        {% include _molecules/checkout/radios/gifting-checkbox.html %}
+      {% endif %}
+
+    {% else %}
+      {% if include.confirmationPage !='yes' %}
+        <div class="radio-list radio-media-list">
+          {% include _molecules/checkout/radios/gifting.html %}
+        </div><!-- .radio-list.radio-media-list -->
+      {% endif %}
+    {% endif %}
+
+  </div><!-- .checkout-gifting-options -->
+</div><!-- .checkout-gifting -->

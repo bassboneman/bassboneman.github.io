@@ -1,0 +1,17 @@
+{% comment %}
+4? states are:
+1. not-starting (shows nothing)
+2. editing (form view)
+3. completed (shows entered content)
+4. options (for a list of choices, e.g. addresses)
+{% endcomment %}
+
+<form action="#" class="form-labels">
+  {% include _molecules/checkout/blocks/shipping-address.html %}
+  {% include _molecules/checkout/blocks/shipping-options.html %}
+  {% include _molecules/checkout/blocks/payment-options.html %}
+  {% if page.type != 'registered' %}
+    {% include _molecules/checkout/blocks/save-info.html %} 
+  {% endif %}
+  {% include _molecules/checkout/blocks/review-order.html id='1' %}
+</form>

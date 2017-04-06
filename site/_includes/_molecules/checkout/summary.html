@@ -1,0 +1,99 @@
+<section class="checkout-summary {% if include.placement == 'sidebar' %}co-sidebar hidden-xs hidden-sm{% elsif include.placement == 'header' %}co-header{% endif %}">
+  {% if include.placement == 'sidebar' %}
+    <header>
+      <h2>Order Summary (3 items)</h2>
+    </header>
+  {% endif %}
+  <div class="row">
+    <div class="col-xs-8">
+      <strong>Item Subtotal </strong>
+    </div><!-- .col-xs-8 -->
+    <div class="col-xs-4 text-right">
+      <strong>$222.22</strong>
+    </div><!-- .col-xs-4 -->
+  </div><!-- .row -->
+  <div class="row">
+    <div class="col-xs-8">
+      Shipping &amp; Handling
+    </div><!-- .col-xs-8 -->
+    <div class="col-xs-4 text-right">
+      FREE
+    </div><!-- .col-xs-4 -->
+  </div><!-- .row -->
+  <div class="row">
+    <div class="col-xs-8">
+      Sales Tax
+    </div><!-- .col-xs-8 -->
+    <div class="col-xs-4 text-right">
+      $10.10
+    </div><!-- .col-xs-4 -->
+  </div><!-- .row -->
+  <div class="summary-total">
+    <div class="row">
+      <div class="col-xs-8">
+        <strong>Order Total </strong>
+      </div><!-- .col-xs-8 -->
+      <div class="col-xs-4 text-right">
+        <strong>$232.32</strong>
+      </div><!-- .col-xs-4 -->
+    </div><!-- .row -->
+    <div class="row">
+      <div class="col-xs-8">
+        Balance Due
+      </div><!-- .col-xs-8 -->
+      <div class="col-xs-4 text-right">
+        $232.32
+      </div><!-- .col-xs-4 -->
+    </div><!-- .row -->
+  </div><!-- .summary-total -->
+  {% if include.confirmationPage %}
+  {% elsif include.placement == 'body' %}
+    <div class="row row-tight">
+      <div class="col-sm-3 col-xs-6">
+        {% include _atoms/forms/input.html class="input-lg" labelName='Promo Code' labelID='promo-code' inputType='text' extra='pattern="\d*"' %}
+      </div><!-- .col-xs-3 -->
+      <div class="col-xs-6">
+        {% include _atoms/buttons/button.html btnClass='btn-default btn-lg' btnLabel='Apply' %}
+      </div><!-- .col-xs-4 -->
+    </div><!-- .row -->
+    <div class="row row-tight">
+      <div class="col-sm-6">
+        {% if page.type == 'unregistered' %}
+          {% include _atoms/buttons/button.html btnClass='btn-primary btn-lg btn-block btn-width' btnLabel='Place Order' btnExtra='data-btn="place-order" disabled="disabled"' %}    
+        {% else %}
+          {% include _atoms/buttons/button.html btnClass='btn-primary btn-lg btn-block btn-width' btnLabel='Place Order' %}
+        {% endif %}
+      </div><!-- .col-xs-6 -->
+    </div><!-- .row -->
+  {% else %}
+    <form action="#" class="form-labels">
+      <div class="row row-tight">
+        <div class="col-xs-6">
+          <div class="p">
+            {% if include.placement == 'sidebar' %}
+              {% include _atoms/forms/input.html class='input-lg' labelName='Promo Code' labelID='promo-code-sidebar' inputType='text' extra='pattern="\d*"' %}
+            {% elsif include.placement == 'header' %}
+              {% include _atoms/forms/input.html class='input-lg' labelName='Promo Code' labelID='promo-code-header' inputType='text' extra='pattern="\d*"' %}
+            {% endif %}
+          </div><!-- .p -->
+        </div><!-- .col-xs-6 -->
+        <div class="col-xs-6">
+          {% include _atoms/buttons/button.html btnClass='btn-default btn-lg' btnLabel='Apply' %}
+        </div><!-- .col-xs-6 -->
+      </div><!-- .row -->
+      {% if page.type == 'registered' %}
+        {% if page.setting == 'flow' %}
+          {% include _atoms/buttons/button.html btnLink='confirmation.html' btnClass='btn-primary btn-lg btn-block' btnLabel='Place Order' %} 
+        {% else %}
+          {% include _atoms/buttons/button.html btnClass='btn-primary btn-lg btn-block' btnLabel='Place Order' %} 
+        {% endif %}
+      {% else %}
+        {% if page.setting == 'flow' %}
+          {% include _atoms/buttons/button.html btnLink='confirmation.html' btnClass='btn-primary btn-lg btn-block' btnLabel='Place Order' btnExtra='data-btn="place-order" disabled="disabled"' %} 
+        {% else %}
+          {% include _atoms/buttons/button.html btnClass='btn-primary btn-lg btn-block' btnLabel='Place Order' btnExtra='data-btn="place-order" disabled="disabled"' %}
+        {% endif %}
+      {% endif %}
+    </form><!-- .form-labels -->
+  {% endif %}
+</section><!-- .checkout-summary -->

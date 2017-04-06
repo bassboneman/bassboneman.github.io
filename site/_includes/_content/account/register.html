@@ -1,0 +1,113 @@
+{% if page.brand == 'soma' %}
+  {% include _molecules/components/accordion-rewards.html %}
+  <hr>
+  <h1 class="text-center">Register</h1>
+{% endif %}
+
+<form action="">
+  <p>* Indicates a required field</p>
+  <h2>Account Name</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='First Name *' labelID='first-name' inputType='text' %}
+    </div>
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Last Name *' labelID='last-name' inputType='text' %}
+    </div>
+  </div><!-- .row -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      {% if page.brand == 'chicos' %}
+        {% include _atoms/forms/input.html labelName='Already have a Passport number?' labelID='passport' inputType='text' helpBlock='<a href="#" data-toggle="modal" data-target="#modal-passport">Where Can I Find My Passport number?</a>' %}
+      {% else %}
+        {% include _atoms/forms/input.html labelName='Already have a Member number?' labelID='member-number' inputType='text' helpBlock='<a href="#" data-toggle="modal" data-target="#modal-passport">Where Can I Find My Member number?</a>' %}
+      {% endif %}
+    </div>
+  </div><!-- .row -->
+
+  <hr>
+  
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/select.html labelName='Country *' labelID='country' selectOptions='<option value="">United States</option><option value="">Pakistan</option><option value="">Tattooine</option>' helpBlock='Note: We ship to a limited number of international locations at this time.' %}
+    </div>
+  </div><!-- .row -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Street Address *' labelID='street-address' inputType='text' %}
+    </div>
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Apt / Unit / Suite' labelID='apt' inputType='text' %}
+    </div>
+  </div><!-- .row -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='City *' labelID='city' inputType='text' %}
+    </div>
+    <div class="col-sm-3">
+      {% include _atoms/forms/select.html labelName='State *' labelID='state' selectOptions='<option value="">Florida</option><option value="">Texas</option><option value="">Vermont</option>' %}
+    </div>
+    <div class="col-sm-3">
+      {% include _atoms/forms/input.html labelName='Zip Code *' labelID='zip' inputType='text' %}
+    </div>
+  </div><!-- .row -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/phone.html labelName='Phone *' labelID='phone' %}
+      {% if page.brand == 'whbm' %}
+        {% include _atoms/forms/checkbox.html checkValue='phone-opt-in' labelName='You may call me with exclusive offers, updates on new arrivals and special events.' checked='' %}
+      {% endif %}
+    </div>
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Email *' labelID='email' inputType='email' %}
+      {% if page.brand == 'whbm' %}
+        {% include _atoms/forms/checkbox.html checkValue='email-opt-in' labelName='Email me exclusive offers, updates on new arrivals and special events.' checked='' %}
+      {% endif %}
+
+    </div>
+  </div><!-- .row -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Password *' labelID='password' labelExtra='<a href="javascript://" data-toggle="tooltip" data-placement="top" title="Your password must begin with a letter, contain at least one number or special character, and may not contain your name, email address, or the word &quot;password&quot;"><i class="fa fa-question-circle fa-lg"></i></a>' inputType='password' %}
+    </div>
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Confirm Password *' labelID='confirm-password' inputType='password' %}
+    </div>
+  </div><!-- .row -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/select.html labelName='Birth Month *' labelID='birth-month' selectOptions='<option value="">January</option><option value="">February</option><option value="">March</option>' labelExtra='<a href="javascript://" data-toggle="tooltip" data-placement="top" title="Tell us your birthday so you don\'t miss out on your annual birthday reward."><i class="fa fa-question-circle fa-lg"></i></a>' %}
+    </div>
+    <div class="col-sm-6">
+      {% if page.brand == 'chicos' %}
+        {% include _atoms/forms/select.html labelName="How did you hear about Chico's" labelID='hear-about' selectOptions='<option value="">Friend</option><option value="">Web Site</option><option value="">Other</option>' %}        
+      {% else %}
+        {% include _atoms/forms/select.html labelName="How did you hear about us" labelID='hear-about' selectOptions='<option value="">Friend</option><option value="">Web Site</option><option value="">Other</option>' %}
+      {% endif %}
+    </div>
+  </div><!-- .row -->
+
+  <div class="form-group">
+    {% include _atoms/buttons/button.html btnClass='btn-primary' btnLabel='Save' %}  
+  </div>
+</form>
+
+{% if page.brand == 'chicos' %}
+  <p>To join Chico's Passport program and receive benefits, you must provide a valid U.S. mailing address; Chico's Passport is a U.S.-based loyalty program, and is not currently available to customers residing outside of the U.S. Non-U.S. customers may create an online account, but will not be enrolled in our loyalty program.</p>
+{% elsif page.brand == 'whbm' %}
+  <p class="text-center">
+    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#modal-terms">Terms &amp; Conditions</a>
+  </p>
+  <p>To join WHBM Rewards and receive benefits, you must provide a name and valid U.S. mailing address. WHBM Rewards is a U.S.- based loyalty program and is not currently available to customers residing outside of the U.S. Non-U.S. customers may create an online account, but will not be enrolled in our loyalty program. By signing up for the  WHBM Rewards program you are opting-in to receive emails, offers and promotions. Please see our <a href="#">Privacy Policy</a> for information on adjusting your communication preferences, including opting-out.
+{% else %}
+  <p>Disclaimer content goes here.</p>
+{% endif %}
+
+{% include _molecules/modals/modal-passport.html %}
+{% include _molecules/modals/modal-terms.html %}

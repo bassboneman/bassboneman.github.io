@@ -1,0 +1,430 @@
+// These styles are currently only used by WHBM. Templates include about and charity.
+.about-heading {
+  display: inline-block;
+  margin: 0 0 5rem 0;
+  padding: 0 2rem;
+  // font-weight: 400;
+  @include font-weight-light;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  border: .1rem solid $color-black;
+  border-width: 0 .1rem;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.about-lead,
+.about-sub-lead {
+  margin: 3rem 0 0 0;
+  text-align: center;
+  @media screen and (min-width: 992px) {
+    max-width: 70%;
+    margin-top: 6rem;
+  }  
+}
+.about-lead {
+  margin-bottom: 6rem;
+  h1 {
+    margin-bottom: 4rem;
+    font-size: 3.6rem;
+    text-align: center;
+  }
+}
+.about-block + .about-block {
+  margin-top: 10rem;
+}
+.about-block.about-logo-wrap {
+  margin-top: 4rem;
+}
+.about-block {
+  h1 {
+    letter-spacing: $letter-spacing;
+  }
+  h2 {
+    margin-bottom: 4rem;
+    font-size: 3.6rem;    
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  a {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  @media screen and (min-width: 768px) {
+    .lead {
+      font-size: 2.5rem;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &:before {
+    @include anchor-scroll;
+  }
+}
+
+.charity-logos {
+  margin: 5rem 0 8rem 0;
+}
+.module.module-combo-charity {
+  margin-top: 2rem;
+  .module-combo {
+    .module-combo-copy {
+      .collection-name {
+        font-family: $font-family-serif;
+        margin-bottom: 1rem;
+        font-size: 4.8rem;
+        font-weight: 300;
+        line-height: 1;
+      }
+    }
+  }
+  .module-combo {
+    .module-combo-copy {
+      h3 {
+        font-family: $font-family-base;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.charity-video {
+  svg {
+    fill: #fff;
+  }
+  .shop-now {
+    @include font-weight-bold;
+  }
+}
+
+
+.module-sh-charity {
+  margin-bottom: 3rem;
+  h2 {
+    font-family: $font-family-serif; // this might eventually become the library default
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+  }
+}
+.module-sh-charity-alt {
+  h2 {
+    font-family: $font-family-serif; // this might eventually become the library default
+    line-height: 1.4;
+    font-weight: 400;
+    small {
+      display: block;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.4;
+      text-transform: none;
+    }
+    @media screen and (min-width: 992px) {
+      font-size: 6.4rem; 
+      line-height: 1.2;
+      small {
+        font-size: 4.5rem;
+      }
+    }
+  }
+}
+
+
+.carousel-about {
+  margin-top: 6rem;
+  padding-bottom: 3rem;
+  .carousel-inner {
+    width: calc(100% - 5rem);
+    margin: 0 auto;
+  }
+  h3 {
+    margin: .5rem 0 0 0;
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    min-height: 11.5rem;
+  }
+  @media screen and (min-width: 768px) {
+    h2, p {
+      margin-left: 0;
+      margin-right: 0;
+      letter-spacing: 0;
+    }
+  }
+  .carousel-indicators {
+    bottom: 0;
+  }
+  .carousel-control.right [class*='icon-arrow'] {
+    right: 0;
+  }
+  .carousel-control.left [class*='icon-arrow'] {
+    left: 0;
+  }
+  @media screen and (max-width: 767px) {
+    [class*=col-]:nth-child(odd) {
+      clear: left;
+    }
+  }
+}
+
+.about-logo {
+  margin: 3rem 0;
+  @media screen and (min-width: 768px) {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.module-sh-lbbc {
+  @media screen and (min-width: 768px) {
+    color: #fff;
+    .module-sh {
+      h1 {
+        font-family: $font-family-serif;
+        font-size: 6.4rem;
+        font-weight: 400;
+      }
+      p {
+        margin-bottom: 7rem;
+        font-size: 2.5rem;
+        list-style: 1.6;
+      }
+      .btn-primary {
+        background: rgba(0,0,0,0.8);
+        &:hover {
+          background: #000;
+        }
+      }      
+    }
+    .btn {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    .module-sh-copy {
+      padding: 3rem 2rem 0 2rem;
+      text-align: center;
+    }
+  }
+}
+
+.profile {
+  margin-bottom: 3rem;
+  text-align: center;
+  a, a:hover, a:active, a:focus {
+    text-decoration: none;
+  }
+  h3 {
+    margin-top: 3rem;
+    font-family: $font-family-serif;
+    font-size: 3.2rem;
+    line-height: 1;
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      margin-top: 2rem;
+    }
+  }
+  .profile-location {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  .profile-diagnosis {
+    margin: -1rem 0 1rem 0;
+    font-family: $font-family-serif;
+    font-size: 2.2rem;
+    font-style: italic;
+  }
+  blockquote {
+    padding: 0;
+    font-family: $font-family-serif;
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 3rem;
+    border: 0;
+    &:before,
+    &:after {
+      display: block;
+      content: open-quote;
+      color: #fad0e9;
+      font-size: 6rem;
+      position: relative;
+      top: 2rem;
+    }
+    &:after {
+      content: close-quote;
+      // padding-bottom: 2rem; // prevent overlap with elements below
+    }
+  }
+  .profile-link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  .profile-story {
+    font-family: $font-family-serif;
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 3rem;
+    text-align: justify;    
+    text-align-last: center;
+    p {
+      margin-bottom: 3rem;
+    }
+    @media screen and (min-width: 992px) {
+      max-width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+.carousel-profile {
+  padding-bottom: 4rem;
+  .profile-img {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.modal-profile {
+  .profile-img {
+    margin-bottom: 4rem;
+    max-width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.module-sh-lbbc-heading {
+  margin: 4rem 0;
+  h1 {
+    font-weight: 400;
+  }
+  p {
+    font-size: 2rem;
+  }
+  .btn {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+.module.module-combo-lbbc {
+  margin-top: 2rem;
+  .module-combo {
+    .module-combo-copy {
+      .collection-name {
+        font-family: $font-family-serif;
+        margin-bottom: 1rem;
+        font-size: 4.8rem;
+        font-weight: 300;
+        line-height: 1;
+      }
+    }
+  }
+  .module-combo {
+    .module-combo-copy {
+      h3 {
+        font-family: $font-family-base;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.lbbc-donations {
+  margin: 4rem 0;
+  padding: 4rem 3rem;
+  text-align: center;
+  background: #ebebeb;
+  h2 {
+    margin-bottom: 3rem;
+    font-family: $font-family-serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  h3 {
+    margin-bottom: 0;
+    font-size: 6.5rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    sup {
+      vertical-align: baseline;
+      position: relative;
+      top: -.9em;
+      font-size: 2.8rem;
+    }
+  }
+  // [class*='col-']
+  p {
+    margin-bottom: 5rem;
+    font-size: 2.4rem;
+    line-height: 1.3;
+    @include font-weight-light;
+    strong {
+      @include font-weight-semibold;
+    }
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 2rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    .donation-level {
+      max-width: calc(100% - 6rem);
+      min-height: 21rem;
+      margin: 0 auto;
+    }
+    p {
+      margin: 0 auto;
+      max-width: 40rem;
+    }
+  }
+}
+
+.lbbc-donations-mobile-heading {
+  margin-bottom: 1rem;
+  font-family: $font-family-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  span {
+    display: block;
+    font-size: 3rem;
+    text-transform: none;
+  }
+}
+
+.lbbc-social {
+  .module-4-across {
+    padding: 3rem 0;
+    border-top: .1rem solid $color-black;
+    .story {
+      margin: 0;
+    }
+    .caption {
+      font-size: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}

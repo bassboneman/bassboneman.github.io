@@ -1,0 +1,191 @@
+<div id="persistent-cart">
+  <span data-toggle="close-cart">
+    <span class="icon-close">&times;</span>
+    {% comment %}
+    SVG is breaking script in FF. I have zero idea why.
+    <svg class="icon-close">
+      <use xlink:href="#icon-close"></use>
+    </svg>
+    {% endcomment %}
+    <span class="sr-only">Close Cart</span>
+  </span>
+  <h3>My Shopping Bag (3)</h3>
+  <div class="product-details-wrap">
+    <div class="product-details">
+      <div class="row row-tight">
+        <div class="col-xs-3">
+          <img class="img-responsive" src="http://placehold.it/200x250&amp;text=Product" alt="">
+        </div>
+        <div class="col-xs-9">
+          <table class="table table-bag">
+            <tbody>
+              <tr>
+                <td>Product Name</td>
+                <td class="text-right">
+                  {% if page.sale-type == 'final' and page.layout == 'page-pdp' %}
+                    <span class="product-price-sale">
+                      $140.00
+                    </span>
+                  {% else %}
+                    <span class="strikethrough">$140.00</span>
+                  {% endif %}
+                </td>
+                  
+              </tr>
+              <tr>
+                <td>
+                  <span>Color:</span> Black<br>
+                  <span>Size:</span> 2 (4/6, XS)<br>
+                  <span>Quantity:</span> 1<br>
+                </td>
+                <td class="text-right cell-bottom">
+                  <a href="#" class="text-uppercase">Edit</a>
+                </td>
+              </tr>
+              {% if page.sale-type == 'final' and page.layout == 'page-pdp' %}
+                <tr>
+                  <td colspan="2">
+                    {% include _atoms/text/product-price-final-sale.html longLabel='yes' hidePrice='yes' %}
+                  </td>
+                </tr>
+              {% endif %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="product-details">
+      <div class="row row-tight">
+        <div class="col-xs-3">
+          <img class="img-responsive" src="http://placehold.it/200x250&amp;text=Product" alt="">
+        </div>
+        <div class="col-xs-9">
+          <table class="table table-bag">
+            <tbody>
+              <tr>
+                <td>Product Name</td>
+                <td class="text-right">$140.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <span>Color:</span> Black<br>
+                  <span>Size:</span> 2 (4/6, XS)<br>
+                  <span>Quantity:</span> 1<br>
+                </td>
+                <td class="text-right cell-bottom">
+                  <a href="#" class="text-uppercase">Edit</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="product-details">
+      <div class="row row-tight">
+        <div class="col-xs-3">
+          <img class="img-responsive" src="http://placehold.it/200x250&amp;text=Product" alt="">
+        </div>
+        <div class="col-xs-9">
+          <table class="table table-bag">
+            <tbody>
+              <tr>
+                <td>Product Name</td>
+                <td class="text-right">$140.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <span>Color:</span> Black<br>
+                  <span>Size:</span> 2 (4/6, XS)<br>
+                  <span>Quantity:</span> 1<br>
+                </td>
+                <td class="text-right cell-bottom">
+                  <a href="#" class="text-uppercase">Edit</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Order Summary</h3>
+  <div class="row">
+    <div class="col-xs-8">Item Subtotal</div>
+    <div class="col-xs-4 text-right">$140.00</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8">Estimated Total (before tax)</div>
+    <div class="col-xs-4 text-right">$140.00</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8">25% off full-priced Jackets</div>
+    <div class="col-xs-4 text-right">-$40.00</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8">Additional Discount</div>
+    <div class="col-xs-4 text-right">-$40.00</div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-xs-7">
+      <div class="cart-links">
+        <a href="#">View my bag</a><br>
+        <a href="#">Continue Shopping</a>
+      </div>
+    </div>
+    <div class="col-xs-5">
+      {% include _atoms/buttons/button-link.html btnLabel='Check Out' btnClass='btn-primary btn-block' %}
+    </div>
+  </div>
+  <div class="bag-promo-img">
+    <a href="#"><img class="img-responsive" src="http://placehold.it/348x90&text=Promo+Image" alt=""></a>
+  </div>
+</div>
+
+<div class="modal fade" id="persistent-mobile" tabindex="-1" role="dialog" aria-labelledby="persistent-mobile-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 id="persistent-mobile-label">Items added to bag</h3>
+        <div class="bag-list">
+          <div class="media">
+            <div class="media-left media-middle">
+              <img src="http://placehold.it/200x250&amp;text=Product" class="media-object" alt="Product">
+            </div>
+            <div class="media-body media-middle">
+              You added <strong>Chevron Jacquard Jacket</strong> to your Shopping Bag.
+              <span class="p-type">Size: 2</span>
+              <span class="p-type">Color: Red</span>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left media-middle">
+              <img src="http://placehold.it/200x250&amp;text=Product" class="media-object" alt="Product">
+            </div>
+            <div class="media-body media-middle">
+              You added <strong>Chevron Jacquard Jacket</strong> to your Shopping Bag.
+              <span class="p-type">Size: 4</span>
+              <span class="p-type">Color: Blue</span>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left media-middle">
+              <img src="http://placehold.it/200x250&amp;text=Product" class="media-object" alt="Product">
+            </div>
+            <div class="media-body media-middle">
+              You added <strong>Chevron Jacquard Jacket</strong> to your Shopping Bag.
+              <span class="p-type">Size: 6</span>
+              <span class="p-type">Color: Emu Black with Hyena Stripes in Golden Pink</span>
+            </div>
+          </div>
+        </div><!-- .bag-list -->
+        <p><a href="#" class="btn btn-primary btn-lg btn-block">View Bag</a></p>
+        <p class="text-center text-uppercase"><a href="#">Continue Shopping</a></p>
+      </div>
+    </div>
+  </div>
+</div>

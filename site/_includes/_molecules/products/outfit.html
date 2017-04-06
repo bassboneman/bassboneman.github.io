@@ -1,0 +1,30 @@
+<div class="product-outfit">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="product-media-outfit">
+        {% include _atoms/images/product-outfit.html %}
+      </div>
+    </div>
+    <div class="col-sm-7 col-sm-offset-1">
+      <div class="product-wrap">
+        {% include _molecules/products/heading.html %}
+        {% include _molecules/products/price.html %}
+        {% include _molecules/components/product-swatches.html %}
+        {% include _molecules/products/options-all.html %}
+
+  
+
+        <div class="item-selected-checkbox item-deselected initial-hide">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="checked-3" disabled="disabled">
+              <span class="selected-text">Item selected</span>
+              <span class="deselected-text">Select a size to select item</span>
+            </label>
+          </div>
+        </div><!-- .item-selected-checkbox -->
+
+      </div>
+    </div>
+  </div>
+</div>

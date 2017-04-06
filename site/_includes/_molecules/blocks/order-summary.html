@@ -1,0 +1,58 @@
+<section class="detail-wrap detail-sidebar">
+  {% include _atoms/text/detail-heading.html detailLabel='Order Summary' %}
+  <div class="detail detail-highlight">
+    <div class="row">
+      <div class="col-xs-9 col-sm-8">
+        <strong class="text-uppercase">Item Subtotal</strong>
+      </div>
+      <div class="col-xs-3 col-sm-4 text-right">
+        <strong>$99.99</strong>
+      </div>
+    </div>
+    <div class="row"><!-- if coupon applied -->
+      <div class="col-xs-6 col-sm-5">
+        $25 of $100
+      </div>
+      <div class="col-xs-3 col-sm-3 text-right">
+        <a href="#">Remove</a>
+      </div>
+      <div class="col-xs-3 col-sm-4 text-right">
+        -$25.00
+      </div>
+    </div>
+  </div>
+  <div class="detail">
+    <div class="row">
+      <div class="col-xs-9 col-sm-8">
+        <strong class="text-uppercase">Estimated Total (Before Tax)</strong>
+      </div>
+      <div class="col-xs-3 col-sm-4 text-right">
+        <strong>$74.99</strong>
+      </div>
+    </div>
+  </div>
+  <div class="detail detail-highlight">
+    <div class="row"><!-- if coupon applied -->
+      <div class="col-xs-9">
+        <p class="text-alert">
+          <strong>$25 of $100</strong><br>
+          You must spend at least $100 to qualify
+        </p>
+      </div>
+      <div class="col-xs-3 text-right">
+        <a href="#">Remove</a>
+      </div>
+    </div>
+    <form action="">
+      <label for="promo-code">Promotion Code</label>
+      <div class="form-inline">
+        <div class="form-group">
+          <input type="text" id="promo-code" class="form-control input-sm" placeholder="Enter promo">
+        </div>
+        <div class="form-group">
+          {% include _atoms/buttons/button.html btnClass='btn-default btn-sm' btnLabel='Apply' %}
+        </div>
+      </div>
+    </form>
+  </div>
+</section><!-- .detail-wrap -->

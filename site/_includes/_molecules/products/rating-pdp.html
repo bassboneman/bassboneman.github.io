@@ -1,0 +1,28 @@
+<div class="product-rating">
+  <span class="product-stars">
+    {% if page.brand == 'soma' %}
+      <svg class="icon-star rating-liked">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+      </svg>
+      <svg class="icon-star rating-liked">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+      </svg>
+      <svg class="icon-star rating-liked">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+      </svg>
+      <svg class="icon-star rating-liked">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+      </svg>
+      <svg class="icon-star">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+      </svg>
+    {% else %}
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+    {% endif %}
+  </span>
+  <a href="">Read all 32 reviews</a> <a href="">Write a review</a>
+</div>

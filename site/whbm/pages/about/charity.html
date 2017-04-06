@@ -1,0 +1,130 @@
+---
+layout: page-generic
+title: Charity
+top-link: pages
+brand: whbm
+---
+
+<section class="about-block about-lead">
+  <h2 class="about-heading">
+    Charity
+  </h2>
+</section>
+
+{% include _molecules/modules/shelf.html
+  moduleMobile ='noMobileImg'
+  moduleClass='module-sh-charity-alt module-copy-white'
+  moduleLayout='module-sh-center' 
+  moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200&bg=333333' 
+  moduleHeading='<small>At White House Black Market,</small> we believe women deserve to look & feel both beautiful & accomplished.' 
+%}
+
+<section class="about-block about-lead">
+  <h1>We are committed to <span class="block-lg">empowering women</span></h1>
+  <hr>
+  <p>We’ve seen the influence of unity and know that together we can make a difference. This philosophy of togetherness—as a business alongside our customers and associates—is the foundation of our philanthropy.</p>
+  <p>We proudly support organizations on a national and local level that encourage, empower and support all women. We invite you to get to know these groups.</p>
+  <div class="charity-logos">
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-2">
+        <a href="#charity-1"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Charity+Logo&w=500&h=214" class="img-responsive" alt=""></a>
+      </div>
+      <div class="col-xs-4">
+        <a href="#charity-2"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Charity+Logo&w=500&h=214" class="img-responsive" alt=""></a>
+      </div>
+    </div>
+  </div>
+</section><!-- .about-block -->
+
+<section id="charity-1" class="charity-block">
+  <div class="about-block about-sub-lead">
+    <h2>Living Beyond Breast Cancer</h2>
+    <hr>
+    <p>We began our partnership with Ardmore, Pennsylvania-based LBBC in 2004—a national non-profit group dedicated to empowering and educating women with breast cancer. By 2006, we  became LBBC’s largest and most valued corporate contributor. In the years since, Chico’s FAS, Inc. has raised more than $5.5 million for LBBC.</p>
+    <p><a href="#" class="btn btn-primary btn-responsive">Learn More</a></p>
+  </div>
+
+  {% include _molecules/modules/shelf.html 
+    moduleClass='module-sh-charity module-copy-white'
+    moduleLayout='module-sh-center' 
+    moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200&bg=333333' 
+    moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767&bg=333333' 
+    moduleHeading='For everyone affected by breast cancer,' 
+    moduleCopy='<p>LBBC is the best and most helpful resource we know, providing people with trusted breast cancer nformation, and a community of patients and caregivers.</p>' 
+    moduleLinkUrl='#' 
+    buttonLabel='LBBC.org' 
+    buttonClass='btn-responsive'
+  %}
+
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _molecules/modules/img.html moduleClass='charity-video' moduleVideo='yes' playIcon='play-icon-alt' moduleHeading='A labor of Love' moduleCopy='<p>WHBM President, Donna Noce, shares her journey to receiving LBBC’s Founders Award in 2015.</p>' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800&bg=333333' moduleLink='Watch Video' moduleLinkUrl='#' moduleExtra='data-toggle="modal" data-target="#modal-video-1"' %}
+    </div>
+    <div class="col-sm-6">
+      {% include _molecules/modules/img.html moduleClass='charity-video' moduleVideo='yes' playIcon='play-icon-alt' moduleHeading='25 Years, 25 Women' moduleCopy='<p>Inspirational stories from survivors who found an ally in LBBC.</p>' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800&bg=333333' moduleLink='Watch Video' moduleLinkUrl='#' moduleExtra='data-toggle="modal" data-target="#modal-video-2"' %}
+    </div>
+  </div>
+
+
+
+
+</section><!-- .charity-block -->
+
+<section id="charity-2" class="charity-block">
+  <div class="about-block about-sub-lead">
+    <h2>Dress for Success</h2>
+    <hr>
+    <p>Considered a global leader in women's employment assistance—providing professional attire to underprivileged women—Dress for Success has expanded to more than 135 cities in 16 countries since it was founded in 1997.</p>
+    <p>With the help of Brand President, Donna Noce, we founded the Dress for Success Southwest Florida affiliate in 2010. Every year since, we’ve been a signature sponsor of their Shop for Success and Fashion Night in Black and White charity events. And in the last six years we’ve helped serve over 1,700 local women—providing monetary, clothing and accessories donations, and volunteer time. WHBM leaders serve on the board as well as various committees and help provide resources for job training, seminars, mentoring and career coaching.</p>
+    <p><a href="#" class="btn btn-primary btn-responsive">dressforsuccess.org</a></p>
+  </div>
+
+  {% include _molecules/modules/shelf.html 
+    moduleClass=''
+    moduleLayout='' 
+    moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200&bg=333333' 
+    moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767&bg=333333' 
+  %}
+
+
+</section><!-- .charity-block -->
+
+<section class="about-block about-logo-wrap">
+  <hr>
+  <div class="about-logo">
+    <img src="{{ site.baseurl }}/web_assets/svg/whbm/logo.svg" alt="White House Black Market" class="img-responsive">
+  </div>
+</section>
+
+
+
+<div class="modal modal-video fade" id="modal-video-1" tabindex="-1" role="dialog" aria-labelledby="modal-video" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="modal-inner">
+          <div id="video-wrapper" class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="" data-iframe-src="https://www.youtube.com/embed/S6GlqCBHcCY?modestbranding=0&showinfo=0&rel=0&autoplay=1" allowfullscreen></iframe>
+          </div>
+        </div><!-- .modal-inner -->
+      </div>
+    </div>
+  </div>
+</div><!-- .modal -->
+
+
+<div class="modal modal-video fade" id="modal-video-2" tabindex="-1" role="dialog" aria-labelledby="modal-video" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="modal-inner">
+          <div id="video-wrapper" class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="" data-iframe-src="https://www.youtube.com/embed/GYENH1PTS14?modestbranding=0&showinfo=0&rel=0&autoplay=1" allowfullscreen></iframe>
+          </div>
+        </div><!-- .modal-inner -->
+      </div>
+    </div>
+  </div>
+</div><!-- .modal -->

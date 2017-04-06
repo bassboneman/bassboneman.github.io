@@ -1,0 +1,9 @@
+// overrides for rating stars
+
+.BVRRRatingSummaryStyle2 {
+  height: auto !important;
+  padding: 0 !important;
+  .BVRRRatingSummaryNoReviews {
+    padding: 0 !important;
+  }
+}

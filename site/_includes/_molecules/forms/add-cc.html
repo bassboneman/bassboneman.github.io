@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="credit-card-number">Credit Card Number</label>
+      <input type="text" class="form-control" id="credit-card-number" placeholder="">
+    </div>
+  </div>
+  <div class="col-md-6">
+    {% include _atoms/forms/select.html labelName='Credit Card Type' labelID='credit-card-type' selectOptions='<option value="">Visa</option><option value="">Mastercard</option><option value="">Discover</option><option value="">American Express</option>' %}
+  </div>
+</div><!-- .row -->
+
+<div class="row">
+  <div class="col-md-6">
+    {% include _atoms/forms/select.html labelName='Expiration Date' labelID='expiration-month' selectOptions='<option value="">January</option><option value="">February</option><option value="">March</option><option value="">April</option><option value="">May</option><option value="">June</option><option value="">July</option><option value="">August</option><option value="">September</option><option value="">October</option><option value="">November</option><option value="">December</option>' %}
+  </div>
+  <div class="col-md-6">
+    {% include _atoms/forms/select.html labelName='Expiration Year' labelID='expiration-year' labelHidden='hidden' selectOptions='<option value="">2015</option><option value="">2016</option><option value="">2017</option><option value="">2018</option><option value="">2019</option><option value="">2020</option>' %}
+  </div>
+</div><!-- .row -->
+
+{% include _molecules/forms/user-details.html %}
+
+{% include _atoms/forms/buttons.html %}

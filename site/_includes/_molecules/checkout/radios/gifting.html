@@ -1,0 +1,156 @@
+{% capture type %}{% if include.type == 'checkbox' %}checkbox{% else %}radio{% endif %}{% endcapture %}
+
+{% comment %}
+{% capture radioTarget %}{{ include.radioID }}-content{% endcapture %}
+{% endcomment %}
+
+<div class="radio-list radio-media-list">
+  {% if include.singleGift %}
+    <div class="radio checkout-toggle">
+      <label>
+        <div class="media">
+          <div class="media-left media-middle">
+            <input type="radio" name="gifting-options" id="gifting-option-single-1" value="gifting-option-single-1" styled='yes'>
+            <span class="input-styled"></span>
+          </div>
+          <div class="media-body media-middle">
+            <div class="row">
+              <div class="col-xs-8">
+                Gift Wrap &amp; Gift Receipt - $6.00
+              </div><!-- .col -->
+              <div class="col-xs-4 text-right">
+                <a href="#" data-target="radio-cancel" class="radio-cancel">Cancel</a>
+              </div>
+            </div><!-- .row -->
+          </div><!-- .media-body -->
+        </div><!-- .media -->
+      </label>
+      <div id="checkout-gifting-option-single-1" class="checkout-toggle-content toggle-hidden toggle-gifting">
+        <div class="row">
+          <div class="col-sm-6">
+            <p>
+              <img src="{{ site.baseurl }}/web_assets/imgs/checkout/gift-together.jpg" alt="Gift Wrap Together" class="img-responsive">
+            </p>
+            <p>Your gift arrives beautifully presented  in a Soma gift box with a ribbon,  bow and your gift message.</p>
+          </div><!-- .row -->
+          <!-- <div class="col-sm-2 text-center">or</div> -->
+          <div class="col-sm-6">
+            {% include _molecules/checkout/forms/gift-message.html stacked='yes' hideButton='yes' %}
+          </div><!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row row-tight">
+          <div class="col-sm-6 col-sm-offset-3">
+            <div class="p">
+              {% include _atoms/buttons/button.html btnClass='btn-lg btn-block btn-primary' btnLabel='Save &amp; Continue' %}
+            </div>
+            <div class="text-center"><a href="#" class="btn btn-link">Cancel</a></div>
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+
+      </div><!-- .checkout-toggle-content -->
+    </div><!-- .radio.checkout-toggle -->
+
+  {% else %}
+
+    <div class="radio checkout-toggle">
+      <label>
+        <div class="media">
+          <div class="media-left media-middle">
+            <input type="radio" name="gifting-options" id="gifting-option-1" value="gifting-option-1" styled='yes'>
+            <span class="input-styled"></span>
+          </div>
+          <div class="media-body media-middle">
+            <div class="row">
+              <div class="col-xs-8">
+                Gift Wrap &amp; Gift Receipt - $6.00
+              </div><!-- .col -->
+              <div class="col-xs-4 text-right">
+                <a href="#" data-target="radio-cancel" class="radio-cancel">Cancel</a>
+              </div>
+            </div><!-- .row -->
+          </div><!-- .media-body -->
+        </div><!-- .media -->
+      </label>
+      <div id="checkout-gifting-option-1" class="checkout-toggle-content toggle-hidden toggle-gifting">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-wrap-together">
+                <p>
+                  <img src="{{ site.baseurl }}/web_assets/imgs/checkout/gift-together.jpg" alt="Gift Wrap Together" class="img-responsive">
+                </p>
+                <h4>Gift Together </h4>
+                <p>All of your items will arrive in a single package with one personal message and a single gift receipt. Optional decorative gift box, $6.00</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .row -->
+          <!-- <div class="col-sm-2 text-center">or</div> -->
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-wrap-individual">
+                <p>
+                  <img src="{{ site.baseurl }}/web_assets/imgs/checkout/gift-individual.jpg" alt="Gift Wrap Individually" class="img-responsive">
+                </p>
+                <h4>Gift Individually</h4>
+                <p>Each gift will arrive packaged separately with individual personal messages and gift receipts. Optional decorative gift box, $6.00 each.</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .checkout-toggle-content -->
+    </div><!-- .radio.checkout-toggle -->
+
+    <div class="radio checkout-toggle">
+      <label>
+        <div class="media">
+          <div class="media-left media-middle">
+            <input type="radio" name="gifting-options" id="gifting-option-2" value="gifting-option-2" styled='yes'>
+            <span class="input-styled"></span>
+          </div>
+          <div class="media-body media-middle">
+            <div class="row">
+              <div class="col-xs-8">
+                Gift Message &amp; Gift Receipt - FREE
+              </div><!-- .col -->
+              <div class="col-xs-4 text-right">
+                <a href="#" data-target="radio-cancel" class="radio-cancel">Cancel</a>
+              </div>
+            </div><!-- .row -->
+
+          </div><!-- .media-body -->
+        </div><!-- .media -->
+      </label>
+      <div id="checkout-gifting-option-2" class="checkout-toggle-content toggle-hidden toggle-gifting">
+        {% comment %}
+        needed if single item in cart
+        {% include _molecules/checkout/forms/gift-message.html %}
+        {% endcomment %}
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-message-together">
+                <h4>Add a Gift Message Together </h4>
+                <p>All of your items will arrive with one personal message and a single gift receipt.</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .row -->
+          <!-- <div class="col-sm-2 text-center">or</div> -->
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-message-individual">
+                <h4>Add Gift Message Individually</h4>
+                <p> Each gift will arrive with individual personal messages and gift receipts.</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .col -->
+        </div><!-- .row -->
+
+      </div><!-- .checkout-toggle-content -->
+    </div><!-- .radio.checkout-toggle -->
+
+  {% endif %}
+</div><!-- .radio-list  -->
+
+{% include _molecules/checkout/radios/gifting-checkbox.html %}

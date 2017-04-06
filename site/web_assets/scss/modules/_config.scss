@@ -1,0 +1,769 @@
+// color naming resource: http://chir.ag/projects/name-that-color/#eadfc7
+
+$color-black: #000;
+$color-white: #fff;
+$color-gray-light: #ddd;
+$color-gray-lightest: #f2f2f2;
+$color-gray: #5a5858;
+$color-gray-dark: #666;
+$color-off-white: darken($color-white, 7.5%);
+// $color-red: #ff0a0a;
+$color-red: #e00;
+$color-red-dark: $color-red;
+$color-error: $color-red;
+
+// when brand-specific colors are needed. the following hexes are arbitrary
+$color-brand-dark: #000;
+$color-brand-light: #fff;
+$color-brand-medium: #ccc;
+
+$color-table-alt: $color-gray-lightest;
+
+// temp until all brands are styled
+$color-dovegray: #6a6a6a; 
+$color-bay-of-many: #23527c; // blue
+
+// temp for atomic round
+$color-btn-primary: $color-black;
+$color-btn-default: $color-black;
+$color-btn-primary-hover: $color-gray;
+$color-btn-default-hover: $color-gray;
+
+// social colors
+$color-fb: #3b5998;
+$color-twitter: #55acee;
+$color-google-plus: #dd4b39;
+$color-pinterest: #cc2127;
+$color-instagram: #3f729b;
+$color-youtube: #cd201f;
+$color-snapchat: #fffc01;
+$color-email: $color-dovegray;
+
+// used on element borders, hr's, table borders, etc.
+$color-border: $color-gray-light !default;
+$color-border-light: lighten($color-gray-light, 2.5%) !default;
+$color-border-dark: darken($color-gray-light, 15%) !default;
+$color-border-black: $color-black !default;
+
+// light backgrounds used in th cells, etc.
+$color-bg-light: $color-off-white !default;
+// $color-bg-light: $color-gray-lightest !default;
+$color-bg: darken($color-off-white, 7.5%) !default;
+$color-bg-dark: darken($color-off-white, 12.5%) !default;
+
+$color-text: $color-black !default;
+$color-link: $color-black !default;
+$color-link-hover: $color-black !default;
+
+$color-subnav-link: $color-link !default; // required because WHBM has different regular link and subnav link colors
+$color-subnav-hover: $color-link !default;
+$color-subnav-active: $color-link !default;
+
+$color-mobile-utility-bg: #eee;
+$color-mobile-utility-border: $color-border;
+
+@mixin nav-secondary {}
+
+@mixin bag-number {
+  top: .6rem;
+}
+
+@mixin subnav-fonts {
+  font-size: $font-size-subnav;
+  padding-top: .7rem;
+}
+
+@mixin form-control {}
+@mixin message-count {}
+
+$color-sale: $color-red !default;
+$color-sale-small: $color-black !default;
+
+// carousels
+$color-indicator-active: #959595;
+$color-indicator-border: transparent;
+
+// breakpoints with examples in comments
+$break-sm-min: 768px;  // tablet portrait
+$break-md-min: 992px;  // tablet landscape to small desktop
+$break-lg-min: 1200px; // large desktop
+$break-xs-max: 767px;  // mobile
+$break-sm-max: 991px;  // tablet portrait
+$break-md-max: 1199px; // tablet landscape to small desktop
+
+$hover-decoration: none;
+$border-radius: 0 !default;
+
+// page wrapper
+// $max-width: 996px !default;
+$max-width: 120rem;
+$max-width-wide: 168rem; // mainly for larger imagery at the top of collection pages and the homepage
+
+// used to determine padding or margins on block elements
+$dimension-none: 0;
+$dimension-xxsmall: .2rem;
+$dimension-xsmall: .5rem;
+$dimension-small: 1.0rem;
+$dimension-medium: 1.5rem;
+$dimension-base: 2.0rem;
+$dimension-large: 2.5rem;
+$dimension-xlarge: 3.0rem;
+
+// block level element margins
+// $margin-heading: 0 0 2rem 0;
+$margin-p: 0 0 2rem 0;
+$margin-ul: 0 0 2rem 0;
+$margin-ol: 0 0 2rem 0;
+$margin-dd: 0 0 2rem 0;
+$margin-address: 0 0 2rem 0;
+
+// padding and margins for #content 
+$margin-content: 0 auto;
+$padding-content: $dimension-base 0;
+
+// font family
+// $font-family-base: "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$font-family-base: "Arial", sans-serif !default;
+$font-family-serif: "Georgia", serif;
+
+@mixin longform {}
+
+// font weights
+$font-weight-light: 300 !default;
+$font-weight-base: 400 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-dt: 700;
+
+// mixins needed for Whitney in WHBM
+@mixin font-weight-light {
+  font-weight: $font-weight-light;
+}
+@mixin font-weight-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+// font sizes
+$font-size-base: 1.5rem !default;
+$font-size-large: 1.6rem !default;
+$font-size-xlarge: 1.8rem !default;
+$font-size-medium: 1.3rem !default;
+// $font-size-small: 85% !default; // reexamine
+$font-size-small: 1.2rem !default;
+$font-size-xsmall: 1.2rem !default; // find these in the css and replace
+$font-size-xxsmall: 1.2rem !default; // find these in the css and replace
+$font-size-subnav: 1.5rem !default;
+
+$line-height-base: 1.42857143;
+
+$letter-spacing: 0.01em;
+$letter-spacing-button: .18em;
+
+// line heights
+$line-height-base: 1.42857143 !default;
+// $line-height-heading: 1.1 !default;
+$line-height-tall: 1.8 !default;
+
+// link styles
+$link-static: underline !default;
+$link-hover: underline !default;
+$text-transform: none !default;
+
+// form element (borders, arrows, etc.)
+$color-form-default: #959595 !default;
+$color-select-open: #eee;
+$color-form-error: $color-red;
+// $color-filters-cat-border: $color-form-default;
+
+$color-dropdown-li-hover: #eee;
+$color-dropdown-li-selected: #eee;
+@mixin select-button {
+  .btn {
+    .caret {
+      @include opacity(0.5);
+    }
+  }
+}
+@mixin button-link {
+  text-transform: none;
+}
+// header
+$height-header: 8rem;
+$height-header-mobile: 10rem;
+$height-header-inner-mobile: 4.4rem;
+$height-menu-mobile: 5.6rem;
+// these two should equal 8rem
+$height-header-inner: 4.8rem;
+$height-menu: 3.2rem;
+
+// filters 
+$color-filters-bg: $color-black;
+$color-filters-label: $color-black; // dropdown label color
+$color-filters-label: #fff; // dropdown label color
+$color-filters-label-selected: #fff;
+$color-filters-label-hover: $color-black;
+$color-filters-label-hover-bg: $color-white;
+$color-filters-label-xs: $color-black;
+$color-filters-label-selected-xs: $color-black;
+$color-filters-cat-border: transparent;
+@mixin filter-selected{
+  color: $color-filters-label-selected;
+}
+
+// filters icons
+$filters-toggle-icon: url(../svg/arrow-down-white.svg);
+$filters-toggle-icon-open: url(../svg/arrow-up.svg);
+$filters-toggle-icon-opacity: 1.0;
+$filters-toggle-icon-sm: url(../svg/arrow-down-white.svg); // needed because dropdown is white-on-dark for smaller devices
+
+
+// buttons
+$btn-text-transform: uppercase !default;
+$color-btn-border: transparent !default;
+
+// icons
+$color-icon-default: $color-gray;
+$icon-size: 16px;
+
+// text-transforms 
+$text-transform-subnav: none !default;
+
+// // product details
+// $font-size-product-name: 26px !default;
+// $font-weight-product-name: 400 !default;
+
+// these style various elements that can have wide-ranging differences between brands
+// mixins are simpler than creating variables for every possible style attribute
+// some mixins are defined in the brands' config files when needed
+
+@mixin product-price {}
+@mixin product-rating {}
+@mixin product-remove {
+  span {
+    float: right;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  @include clearfix;
+}
+@mixin buy-more {
+  font-size: 1.3rem;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+@mixin product-msg {
+  letter-spacing: .5px;
+}
+@mixin product-inner-msg {
+  font-size: 1.2rem;
+}
+@mixin product-img-wrap {}
+
+@mixin modal-size-calculator {
+  h2 {
+    font-size: 2.2rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+    small {
+      text-transform: none;
+    }
+  }
+}
+
+
+@mixin product-no-inventory {
+  margin-top: $dimension-xlarge;
+  padding: $dimension-xlarge;
+  text-align: center;
+  border-top: .1rem solid $color-border;
+  h2 {
+    font-weight: $font-weight-base;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+@mixin product-gift-card-link {
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  border-top: .1rem solid $color-border;
+}
+
+@mixin login-wrap {}
+@mixin account-detail {}
+
+
+// play icon (used in modules and modals)
+@mixin play-icon {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: 15rem;
+  height: 15rem;
+  top: 50%;
+  left: 50%;
+  margin-top: -7.5rem;
+  margin-left: -7.5rem;
+  @include opacity(0.5);
+  @include transition(opacity);
+}
+// universal mixins not being defined in the brands
+@mixin facet-heading {}
+@mixin detail-heading {
+  text-transform: uppercase;
+  background-color: $color-border;
+}
+@mixin dl-horizontal {
+  dt {
+    color: $color-gray;
+  }
+}
+@mixin facet-label {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+@mixin editorial-promo {}
+@mixin heading-serif {}
+
+@mixin bootstrap-select {
+  .btn {
+    font-size: 1.4rem;
+  }
+}
+@mixin footer-promo {
+  background: rgba(255,255,255,0.8);
+  @include box-shadow(1px,0,3px,0,rgba(0,0,0,0.2));
+}
+@mixin footer-chat {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.8rem;
+  background: rgba(255,255,255,0.9);
+  @include box-shadow(1px,0,3px,0,rgba(0,0,0,0.2));
+}
+@mixin menu-inactive {
+  @include opacity(0.5);
+}
+@mixin menu-sale {}
+$color-border-menu: #ececec;
+
+$anchor-margin: 10rem;
+$anchor-margin-mobile: 12rem;
+
+// header promo
+$color-header-promo: #fff;
+@mixin header-promo-icons {
+  width: 1rem;
+  height: 3rem;
+}
+@mixin promo-toggle-icon {
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  @media screen and (max-width: $break-sm-max) {
+    float: right;
+    margin: 0 0 0 1rem;
+  }
+  #header-promo-wrap.promo-open & {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+
+// footer 
+@mixin footer-headings {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-black;
+}
+@mixin footer-lists {
+  margin-bottom: 1.2rem;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+  a {
+    color: $color-gray;
+    text-decoration: none;
+  }
+}
+@mixin footer-newsletter {
+  text-align: left;
+  label {
+    font-size: $font-size-small;
+  }
+  .input-group {
+    margin-bottom: 3rem;
+  }
+  @media screen and (max-width: 991px) {
+    background: #f2f2f2;
+    label {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+
+@mixin social {
+  a {
+    margin-right: 1.2rem;
+    @media screen and (min-width: 992px) and (max-width: 1199px) { // get these on one line for ipad landscape
+      margin-right: .6rem;
+    }
+  }
+}
+@mixin social-pdp {
+  a {
+    background: $color-black;
+    svg {
+      fill: #fff;
+    }
+    // &.social-google-plus:hover {background: $color-google-plus;}
+    &.social-pinterest:hover {background: $color-pinterest;}
+    &.social-facebook:hover {background: $color-fb;}
+    &.social-twitter:hover {background: $color-twitter;}
+    &.social-email:hover {background: $color-email;}
+  }
+}
+
+@mixin menu-utility {
+  > li {
+    font-size: 1.3rem;
+  }
+}
+
+@mixin menu-utility-mobile {
+  background: #f2f2f2;
+  > ul > li > a {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }  
+}
+
+@mixin mobile-cat-toggle {
+  margin-top: .7rem;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+@mixin customer-links {
+  text-transform: uppercase;
+}
+@mixin mobile-menu-heading {
+  padding: 1.6rem 1.5rem;
+  // padding: 1.6rem 1.5rem 1.6rem 2rem;
+}
+@mixin menu-ul {}
+@mixin menu-li {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  // text-transform: uppercase;
+}
+@mixin menu-li-h2 {}
+$menu-height: 4rem;
+$mobile-menu-h2-font-size: 1.4rem;
+
+@mixin search-toggle-open {}
+@mixin search-msg {
+  color: $color-gray;
+}
+
+@mixin copyright {
+  font-size: 1.0rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: $color-gray;
+}
+@mixin ship-to {}
+
+@mixin mobile-contact {
+  div {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+@mixin footer {}
+@mixin ship-to-mobile {}
+@mixin footer-menu-block-mobile {}
+@mixin search-wrap {
+  @media screen and (max-width: $break-sm-max) {
+    background: #fff;
+    background: rgba(255,255,255,0.95);
+  }
+}
+@mixin search-placeholder {
+  font-weight: normal;
+  font-style: italic;
+  font-family: $font-family-serif;
+}
+
+@mixin dropdown-signin {
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  ul {
+    a {
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@mixin persistent-cart {
+  .dropdown-inner {
+    h3 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+// filters 
+@mixin filter-wrap {}
+@mixin breadcrumb {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+@mixin back-link {
+  a {
+    text-transform: uppercase;
+  }
+}
+@mixin selector-toggle {}
+@mixin label {}
+@mixin selector-label {
+  text-transform: uppercase;
+}
+@mixin filter-tag {
+  text-transform: uppercase;
+  color: $color-black;
+  background-color: #eee;
+}
+@mixin filters-default {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+@mixin filters-default-overrides {
+  // font-size: 1.8rem;
+}
+@mixin filter-refine-sort {}
+@mixin filter-sort {}
+@mixin filter-tools-mobile-head {
+  @media screen and (max-width: $break-sm-max) {
+    h3 {
+      text-transform: uppercase;
+    }
+  }
+}
+@mixin filter-dropdown {
+  .dropdown-menu {
+    > li {
+      > a {
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+    > li.dropdown-header {
+      padding: 2rem 1rem 0.7rem 1rem;
+      font-weight: 700;
+      color: $color-black;
+    }
+  }
+}
+
+
+@mixin select-caret {
+  margin-top: -.3rem;
+  border: 0;
+  width: 1rem;
+  height: .7rem;
+  background: url(../svg/arrow-down.svg) 50% 50% no-repeat;
+  background-size: 1rem .7rem;
+}
+@mixin select-caret-up { // remove if the double arrow goes global
+  background-image: url(../svg/arrow-up.svg); 
+}
+
+@mixin filter-dropdown-menu {}
+@mixin filter-icon-opacity-mobile {}
+
+// used on collection pages
+@mixin c-product-name {
+  margin: 1.2rem 0 .5rem 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  line-height: 1.42857143;
+}
+@mixin c-product-price {
+  margin-bottom: .3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@mixin c-product-msg {
+  font-size: 1.2rem;
+  // &.product-msg-special {
+  //   color: $color-red-dark;
+  // }
+}
+
+@mixin product-name {}
+@mixin btn-wrapped {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+@mixin product-description {}
+@mixin product-description-more {}
+@mixin heading-styled {
+  text-transform: uppercase;
+}
+@mixin swatch {}
+
+// quickview mixin is needed inside/outside specific media queries
+@mixin quick-view {
+  .quick-view-touch {
+    border-color: $color-border;
+    background: rgba(255,255,255,0.85);
+  }
+}
+@mixin quick-view-icon {
+  .quick-view-touch {
+    background: #fff;
+  }
+  .icon-plus {
+    fill: $color-black;
+    @include opacity(0.6);
+  }
+}
+@mixin chat-heading {
+  font-size: $chat-heading-font-size;
+  font-weight: $chat-heading-font-weight;
+  text-transform: $chat-heading-text-transform;
+}
+@mixin well {
+  letter-spacing: 0;
+}
+@mixin back-top {}
+@mixin small {}
+// @mixin alert {
+//   padding: 0.5rem;
+//   border-color: transparent;
+//   background-color: $color-bg-light; // temp
+//   .product-wrap & {
+//     margin-top: $dimension-base;
+//     font-size: 1.2rem;
+//   }
+//   .product-details & {
+//     margin-top: 1rem;
+//     margin-bottom: 1rem;
+//     font-size: 1.3rem;
+//   }
+// }
+
+@mixin info-link {
+  font-size: 1.2rem;
+}
+
+@mixin nav-tabs {}
+@mixin curated-link {}
+
+// Styles shared between #menu and .filter-wrap dropdowns
+@mixin dropdown-nav-panels {
+  h3 {
+    margin: 0 0 1.2rem 0;
+    @include dropdown-li-heading;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include menu-ul;
+    li {
+      @include menu-li;
+      @media screen and (max-width: $break-sm-max) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 2.4rem;
+    @include dropdown-li-link;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// cheetahmail form
+@mixin form-email {}
+
+@mixin anchor-scroll {
+  display: block; 
+  content: ' ';
+  margin-top: -10rem; 
+  height: 10rem; 
+  visibility: hidden;
+}
+
+@mixin header-promo-heading {}
+@mixin cta-wrap {
+  border: .1rem solid $color-border;
+}
+
+@mixin nav-tabs {}
+@mixin store-city {}
+@mixin store-location {}
+@mixin frameless-copyright {}
+@mixin product-count {
+  color: $color-gray;
+}
+@mixin copyright-mobile {
+  font-size: 1.4rem;
+  text-transform: none;
+  color: $color-black;
+  .copy {
+    font-weight: 400;
+  }
+}
+@mixin product-details {
+  dt,
+  label {
+    font-weight: $font-weight-base;
+    color: $color-gray;
+  }
+}
+@mixin edit-remove {}
+@mixin detail-sidebar {
+  border: .1rem solid $color-border;
+}
+@mixin detail-highlight {
+  background: lighten($color-border, 10%);
+}
+@mixin sidebar-item {}
+@mixin table-attention {}

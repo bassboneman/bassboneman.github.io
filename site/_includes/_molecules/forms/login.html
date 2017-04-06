@@ -1,0 +1,114 @@
+{% comment %}
+breaking soma out since there are a lot of changes happening based on Checkout work
+{% endcomment %}
+{% if page.brand == 'soma' %}
+  <div class="login-wrap">
+    {% comment %}
+    <div class="alert alert-danger" role="alert">
+      We do not recognize that email and password combination
+    </div>
+    {% endcomment %}
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="login-block">
+          <h2>Sign In</h2>
+          <p>If you are a customer who already has an online login, sign in to manage your account, view your Love Soma Rewards status, or track your purchases.</p>
+          <form action="#">
+            {% include _atoms/forms/input.html labelName='Email' labelHidden='yes' labelID='login-email' inputType='text' placeholder='Email' labelHidden='yes' %}
+            {% include _atoms/forms/input.html labelName='Password' labelHidden='yes' labelID='login-password' inputType='password' placeholder='Password' labelHidden='yes' %}
+            <div class="text-right-lg">
+              {% include _atoms/buttons/button.html btnClass='btn-primary btn-block-mobile' btnLabel='Sign In' %}<br>
+              <small class="block margin-top"><a href="#">Forgot your password?</a></small>
+            </div>
+          </form>
+        </div><!-- .login-block -->
+      </div><!-- .col-sm-6 -->
+      <div class="col-sm-6">
+        <div class="login-block">
+          <h2>Checkout as a Guest</h2>
+          <p>New to Soma? You will be able to create a Soma account as you complete your order.</p>
+          <div>
+            <a href="#" class="btn btn-primary btn-block-mobile">Checkout as a Guest</a>
+          </div>
+        </div><!-- .login-block -->
+      </div><!-- .col-sm-6 -->
+    </div><!-- .row -->
+    <div class="login-info">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="login-info-logo">
+            <img src="/web_assets/svg/soma/love-soma-rewards.svg" alt="Love Soma Rewards" class="img-responsive">
+          </div>
+        </div><!-- .col -->
+        <div class="col-sm-9">
+          <p>Love Soma Rewards is Soma's customer loyalty program. Love Soma Rewards is open to U.S. and International residents, excluding Canadian residents. Unfortunately, Canadian residents are not eligible for Love Soma Rewards. If you are a Canadian resident, you may create an online account, but you will not be enrolled in our loyalty program.</p>
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .login-info -->
+  </div><!-- .login-wrap -->
+
+{% else %}
+
+  <div class="login-wrap">
+    <div class="alert alert-danger" role="alert">
+      We do not recognize that email and password combination
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="login-block">
+          <h2>
+            {% if page.brand == 'whbm' %}Sign In{% else %}Registered Already{% endif %}
+          </h2>
+          {% if page.brand == 'soma' %}
+            <p>If you are a customer who already has an online login, sign in to manage your account, view your Love Soma Rewards status, or track your purchases.</p>
+          {% endif %}
+          <form>
+            <div class="form-horizontal">
+              <div class="form-group">
+                <label for="email" class="col-md-3 control-label">Email</label>
+                <div class="col-md-9">
+                  <input type="email" class="form-control" id="email" value="auntbea@gmail.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-md-3 control-label">Password</label>
+                <div class="col-md-9">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="" value="12345678">
+                </div>
+              </div>
+            </div>
+            <div class="text-right-lg">
+              {% include _atoms/buttons/button.html btnClass='btn-primary' btnLabel='Sign In' %}<br>
+              <small class="block margin-top"><a href="">Forgot your password?</a></small>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="login-block">
+          <h2>
+            {% if page.brand == 'whbm' %}Register{% else %}New to Chicos.com?{% endif %}
+          </h2>
+          {% if page.brand == 'whbm' %}
+            <p>If you're new to WHBM or already joined in a boutique, register now to ensure you receive all the benefits of WHBM Rewards membership.</p>
+          {% else %}
+            <ul class="ul-spaced">
+              <li>You're a new Chico's customer. Create an online account to begin enjoying the benefits of membership.</li>
+              <li>You're a Passport member and want to register to receive your benefits. <a href="#" data-toggle="modal" data-target="#modal-passport">Learn More</a></li>
+            </ul>
+          {% endif %}
+          <div class="text-right-lg">
+            <a href="" class="btn btn-primary">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% if page.brand == 'whbm' %}
+      <p>To join WHBM Rewards and receive benefits, you must provide a valid U.S. mailing address; WHBM Rewards a U.S.-based loyalty program and is not currently available to customers residing outside of the U.S. Non-U.S. customers may create an online account, but will not be enrolled in our loyalty program.</p>
+    {% else %}  
+      <p>To join Chico's Passport program and receive benefits, you must provide a valid U.S. mailing address; Chico's Passport is a U.S.-based loyalty program, and is not currently available to customers residing outside of the U.S. Non-U.S. customers may create an online account, but will not be enrolled in our loyalty program.</p>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% include _molecules/modals/modal-passport.html %}

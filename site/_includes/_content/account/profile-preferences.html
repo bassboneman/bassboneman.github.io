@@ -1,0 +1,160 @@
+<div class="alert alert-success">
+  Profile has been updated successfully
+</div>
+
+<form action="">
+  <h2>Account Name</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='First Name' labelID='first-name' inputType="text" formError='has-error' %}
+    </div>
+    <div class="col-sm-6">
+      {% include _atoms/forms/input.html labelName='Last Name' labelID='last-name' inputType="text" %}
+    </div>
+  </div><!-- .row -->
+
+  {% if page.brand == 'chicos' %}
+    <p><strong>Passport Number:</strong> 1234567891 <a href="javascript://" data-toggle="tooltip" data-placement="top" title="This number helps us track your eligibility for Passport Rewards"><i class="fa fa-question-circle fa-lg"></i></a></p>
+    <p><a class="btn btn-default" href="#" data-toggle="modal" data-target="#modal-print-passport">Print Your Card</a></p>
+  {% elsif page.brand == 'whbm' %}
+    <p><strong>Black Book Number:</strong> 1234567891 <a href="javascript://" data-toggle="tooltip" data-placement="top" title="This number helps us track your eligibility for WHBM Rewards"><i class="fa fa-question-circle fa-lg"></i></a></p>
+  {% else %}
+    <p><strong>Love Soma Rewards Number:</strong> 1234567891 <a href="javascript://" data-toggle="tooltip" data-placement="top" title="This number helps us track your eligibility for Love Soma Rewards"><i class="fa fa-question-circle fa-lg"></i></a></p>
+  {% endif %}
+
+  <hr>
+
+  <h2>Account Address</h2>
+  {% include _molecules/forms/address.html %}
+
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Phone Number <a href="javascript://" data-toggle="tooltip" data-placement="top" title="We may use this to contact you about the status of your order. Please provide your primary number (even if a mobile phone)."><i class="fa fa-question-circle"></i></a></h2>
+      {% include _atoms/forms/phone.html labelName='Phone' labelID1='phone1' labelID2='phone2' labelID3='phone3' %}
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          Use as mobile number
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="" checked>
+          Allow Customer Service Representatives to call me.
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="" checked>
+          Allow Pre-Recorded Messages.
+        </label>
+      </div>
+
+    </div>
+    <div class="col-sm-6">
+      <h2>Mobile Number <a href="javascript://" data-toggle="tooltip" data-placement="top" title="This number allows us to offer you mobile-based services."><i class="fa fa-question-circle"></i></a></h2>
+      {% include _atoms/forms/phone.html labelName='Mobile Phone' labelID1='mobile-phone1' labelID2='mobile-phone2' labelID3='mobile-phone3' %}
+      {% comment %}This only appears if the user clicks the "Use as mobile number" checkbox on the left{% endcomment %}
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="" checked>
+          Allow Alerts &amp; Promotions as text messages.
+        </label>
+      </div>
+      <p class="small">
+        I am providing my express consent to have text messages sent to the provided phone number and may opt out at any time. I have read and agree to the <a href="#" data-toggle="modal" data-target="#modal-privacy-policy">Privacy Policy</a> and <a href="#" data-toggle="modal" data-target="#modal-terms">Terms and Conditions</a> of use and understand that standard text messaging rates may apply.
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Promotional Emails</h2>
+      <p>We'll send you special offers and updates on new arrivals.</p>
+      {% include _atoms/forms/input.html labelName='Email' labelID='email' inputType="email" %}
+      {% include _atoms/forms/select.html labelName='Email Frequency *' labelID='email-frequency' formError='has-error' selectOptions='<option value="">Receive all</option><option value="">Receive once per week</option><option value="">Receive twice per month</option>' %}
+      <h3>Interests</h3>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          New Arrivals
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          Fashion Trends &amp; Style Tips
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          Local Store Events
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          Sale Events
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          Outlet Email
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          All of the Above
+        </label>
+      </div>
+
+      <h3>Unsubscribe</h3>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          Unsubscribe from all promotional emails. Your information will not be shared. See our <a href="#" data-toggle="modal" data-target="#modal-privacy-policy">Privacy Policy</a> for details.
+        </label>
+      </div>
+
+    </div>
+    <div class="col-sm-6">
+      <h2>
+        {% if page.brand == 'soma' %}Soma{% elsif page.brand == 'whbm' %}WHBM{% else %}Chicos{% endif %}.com Login Email</h2>
+      <p>All order based and service emails will be send to this address. You will use this to log into your {% if page.brand == 'soma' %}Soma{% elsif page.brand == 'whbm' %}WHBM{% else %}Chicos{% endif %}.com account.</p>
+      {% include _atoms/forms/input.html labelName='Email' labelID='email2' inputType="email" %}
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="">
+          Use as promotional email
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password <a href="javascript://" data-toggle="tooltip" data-placement="top" title="Your password must begin with a letter, contain at least one number or special character, and may not contain your name, email address, or the word 'password'."><i class="fa fa-question-circle fa-lg"></i></a></label>
+        <input type="password" class="form-control" id="password">
+      </div>
+      <div class="form-group">
+        <label for="password2">Confirm Password</label>
+        <input type="password" class="form-control" id="password">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="form-group">
+    {% include _atoms/buttons/button.html btnClass='btn-primary' btnLabel='Save' %}
+  </div>
+
+{% include _molecules/combo/privacy-policy.html %}
+
+</form>
+
+{% include _molecules/modals/modal-terms.html %}
+{% include _molecules/modals/modal-print-passport.html %}

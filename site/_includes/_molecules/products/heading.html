@@ -1,0 +1,16 @@
+{% comment %} The product group name is not always needed on default PDP pages. {% endcomment %}
+{% if page.title == "Product Page (Gift Card)" %}
+  {% include _atoms/text/product-name.html %}
+  <p class="product-gift-card-link">Need it fast? Send an <a href="">e-Gift Card</a></p>
+{% elsif page.title == "Product Page (e-Gift Card)" %}
+  {% include _atoms/text/product-name.html %}
+  <p class="product-gift-card-link">Prefer a Gift-Boxed Card? Send a <a href="">Gift Card</a></p>
+{% else %}
+  {% if page.title == "Product Page (Donations)" or page.title == "Product Page (Gift Card)" or page.title == "Locate in Store (PDP)" %}
+    {% include _atoms/text/product-name.html %}
+  {% else %}
+    {% include _atoms/text/product-group.html %}
+    {% include _atoms/text/product-name.html %}
+  {% endif  %}
+  {% include _atoms/text/product-style-id.html %}
+{% endif %}

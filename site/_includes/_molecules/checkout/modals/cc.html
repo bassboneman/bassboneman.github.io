@@ -1,0 +1,19 @@
+<div class="modal fade modal-checkout" id="modal-credit-card" tabindex="-1" role="dialog" aria-labelledby="modal-credit-cardLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-credit-cardLabel">Add a New Credit Card</h3>
+      </div>
+      <div class="modal-body">
+        <form action="#" class="form-labels">
+          {% include _molecules/checkout/forms/cc.html placement='modal-cc' %}
+          <h3>Bill To:</h3>
+          {% include _molecules/checkout/forms/address.html placement='modal-cc' %}
+          <hr>
+        </form>
+      </div><!-- .modal-body -->
+      {% include _molecules/checkout/modals/footer.html %}
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal #modal-credit-card -->

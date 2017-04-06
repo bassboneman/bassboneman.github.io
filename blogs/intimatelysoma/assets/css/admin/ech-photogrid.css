@@ -1,0 +1,9 @@
+.shortcake-attachment-preview {
+	width: auto !important;
+	min-width: 150px;
+	padding: 12px !important;
+}
+
+.thumbnail {
+	min-width: 150px;
+}

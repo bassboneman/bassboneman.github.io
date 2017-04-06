@@ -1,0 +1,182 @@
+// breadcrumbs
+.breadcrumb {
+  background: none;
+  border-radius: $border-radius;
+}
+
+// buttons
+.btn-xs { // ?
+  font-size: 1.0rem;
+}
+.btn-block-mobile {
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
+// typography
+ul,
+ol {
+  padding-left: 25px;
+}
+.lead {
+  font-weight: $font-weight-base;
+}
+
+// tabs
+// create drop shadows per current design
+
+.nav-tabs {
+  margin-bottom: $dimension-base;
+  > li > a {
+    border-radius: $border-radius;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav-tabs {
+    margin-bottom: 0;
+    // this is used on WHBM size charts
+    &.nav-tabs-margin {
+      margin-bottom: 2rem;
+    }
+  }
+  .tab-content {
+    position: relative;
+    padding-top: 20px;
+    background: #fff;
+  }
+}
+
+// .reviews-tabs {
+//   @include reviews-tabs;
+// }
+.nav.nav-tabs {
+  @include nav-tabs;
+}
+
+// forms
+.form-control,
+select {
+  border-radius: $border-radius;
+  @include box-shadow-none;
+  border-color: $color-form-default;
+}
+label {
+  font-weight: $font-weight-base;
+  @include label;
+}
+.form-inline {
+  margin-bottom: $dimension-base;
+}
+
+// messaging and modals
+.alert {
+  border-radius: 0;
+  @include alert;
+}
+.modal-content {
+  border-radius: 0;
+  @include box-shadow(0,0,5px,0,rgba(0,0,0,0.2));
+}
+.alert-success,
+.alert-info,
+.alert-warning,
+.alert-danger {
+  color: $color-text;
+}
+// .alert-success {
+//   @include alert-success;
+// }
+// .alert-info {
+//   @include alert-info;
+// }
+// .alert-warning {
+//   @include alert-warning;
+// }
+// .alert-danger {
+//   @include alert-warning;
+// }
+// wells
+.well {
+  // letter-spacing: 0;
+  border-radius: $border-radius;
+  @include box-shadow(0,0,0,0,$color-black);
+  @include well;
+  >:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// tables 
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+  border-width: 1px;
+}
+
+// carousel overrides are in the carousel partial
+
+.input-group {
+  .form-control {
+    border-right-color: $color-black;
+  }
+}
+
+.has-error,
+.has-error .checkbox,
+.has-error .checkbox-inline,
+.has-error .control-label,
+.has-error .help-block,
+.has-error .radio,
+.has-error .radio-inline,
+.has-error.checkbox label,
+.has-error.checkbox-inline label,
+.has-error.radio label,
+.has-error.radio-inline label {
+  color: $color-error;
+}
+.has-error .form-control {
+  border-color: $color-error;
+}
+
+
+.dropdown-menu {
+  > li {
+    > a:focus, 
+    > a:hover {
+      background-color: $color-dropdown-li-hover;
+    }
+    &.selected > a {
+      background-color: $color-dropdown-li-selected;
+    }
+  }
+}
+
+// borders on columns
+// .dropdown-menu covers the top level nav dropdowns
+// .col-border-wrap should be used everywhere else this is needed
+.dropdown-menu,
+.col-border-wrap {
+  .row {
+    overflow: hidden;
+    .col-border {
+      margin-bottom: -9999rem;
+      padding-bottom: 9999rem;
+      border-right: .1rem solid $color-border;
+      @media screen and (max-width: 767px) {
+        border: 0
+      }
+    }
+  }
+}
+.dropdown-menu {
+  .row {
+    .col-border {
+      @media screen and (max-width: $break-sm-max) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border: 0;
+      }
+    }
+  }
+}

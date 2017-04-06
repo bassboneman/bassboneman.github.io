@@ -1,0 +1,150 @@
+.form-labels {
+  .form-group {
+    margin-bottom: 3rem;
+    position: relative;
+    .form-control {
+      color: $color-black;
+      transition: all .2s ease-in-out;
+    }
+    label {
+      // display: none; // temp
+      position: absolute;
+      top: .4rem;
+      left: 1.3rem;
+      margin: 0 !important;
+      text-transform: none;
+      font-size: .9rem;
+      visibility: hidden;
+      opacity: 0;
+      color: #666;
+      transition: all .2s ease-in-out;
+    }
+    &.focus {
+      .form-control {
+        padding-top: 1.2rem;
+        padding-bottom: 0rem;
+
+        &::-webkit-input-placeholder {// WebKit, Blink, Edge
+          color: #fff;
+        }
+        &:-moz-placeholder {// Mozilla Firefox 4 to 18
+          color: #fff;
+        }
+        &::-moz-placeholder {// Mozilla Firefox 19+
+          color: #fff;
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+          color: #fff;
+        }
+      }
+      label {
+        top: .2rem;
+        visibility: visible;
+        opacity: 1;
+      }
+
+
+    }
+  }
+  .field-wrap { // use this wrapper to create space for input errors
+    position: relative;
+    width: calc(100% - 3rem);
+  }
+  
+  // styled checkboxes and radios
+  .checkbox,
+  .radio {
+    margin: 0 0 3rem 0;
+    line-height: 2.4rem;
+    input[type="checkbox"],
+    input[type="radio"] {
+      opacity: 0;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    label {
+      padding-left: 0; // overrides bootstrap default not needed in this checkbox type
+    }
+    .input-styled {
+      position: relative;
+      display: block;
+      padding-left: 3.2rem;
+      text-transform: none;
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+        display: inline-block; // Needed for the line-height to take effect
+      }
+      &:after {
+        content: '';
+        background: #fff;
+        width: 2.4rem;
+        height: 2.4rem;
+        border: .1rem solid $color-black;
+        border-radius: .5rem;
+        left: 0;
+        top: 0;
+      }
+    }
+    input[type="checkbox"]:checked + span:after,
+    input[type="radio"]:checked + span:after {
+      content: ''; // unhide
+      background: $color-black url(/web_assets/svg/checkout/check.svg) 50% 50% no-repeat;
+      background-size: 1.6rem 1.6rem;
+    }
+  }
+  .radio {
+    .input-styled:after {
+      // border: .1rem solid $color-black;
+      border-radius: 50%;
+    }
+  }
+  .radio-media-list {
+    margin-bottom: 2rem;
+    .radio {
+      margin: 0 -1.5rem;
+      padding: 0;
+      border-bottom: .1rem solid $color-border;
+      label {
+        display: block;
+        padding: 1rem 1.5rem;
+        text-transform: none;
+        line-height: 1.4;
+        &:hover {
+          background: #eee;
+        }
+      }
+      .input-styled {
+        height: 2.4rem;
+        padding-left: 0;
+        &:before,
+        &:after {
+          position: static;
+        }
+      }
+    }
+  }
+
+
+
+  @media screen and (max-width: 767px) { 
+    select,
+    textarea,
+    input {
+      font-size: 1.6rem;
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+

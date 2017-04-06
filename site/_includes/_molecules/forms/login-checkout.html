@@ -1,0 +1,38 @@
+<div class="login-wrap">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="login-left">
+        <h2>Returning Customers</h2>
+        <p>Welcome back! Type your email and password below.</p>
+        <form>
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label for="email" class="col-md-3 control-label">Email</label>
+              <div class="col-md-9">
+                <input type="email" class="form-control" id="email" value="auntbea@gmail.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-md-3 control-label">Password</label>
+              <div class="col-md-9">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="" value="12345678">
+              </div>
+            </div>
+          </div>
+          <div class="p text-right">
+            {% include _atoms/buttons/button.html btnClass='btn-primary' btnLabel='Sign In' %}<br>
+            <small class="block"><a href="">Forgot your password?</a></small>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="login-right">
+        <h2>New Customers</h2>
+        <p>You can checkout as a guest or choose to create a Chico's account as your complete your order.</p>
+        <div class="p text-right"><a href="" class="btn btn-primary">Checkout as a guest</a></div>
+      </div>
+    </div>
+  </div>
+  <p>To join Chico's Passport program and receive benefits, you must provide a valid U.S. mailing address; Chico's Passport is a U.S.-based loyalty program, and is not currently available to customers residing outside of the U.S. Non-U.S. customers may create an online account, but will not be enrolled in our loyalty program.</p>
+</div>

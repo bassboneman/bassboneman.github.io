@@ -1,0 +1,83 @@
+{% if page.brand == 'soma' %}
+{% capture phone %}866.768.7662{% endcapture %}
+{% capture email %}<a href="mailto:customerservice@soma.com">customerservice@soma.com</a>{% endcapture %}
+{% capture emailIntl %}<a href="mailto:internationalorders@soma.com">internationalorders@soma.com</a>{% endcapture %}
+{% capture copy %}<p>Soma is a place where lingerie is not just beautiful and sensual, but luxuriously soft and comfortable. A place that caters to women with a fit for every body. A place where warm, personal service is the mantra. Use the links to the left to learn about our policies, or contact us by email or phone with any questions or suggestions.</p>{% endcapture %}
+{% elsif page.brand == 'whbm' %}
+{% capture phone %}877.948.2525{% endcapture %}
+{% capture email %}<a href="mailto:customerservice@whitehouseblackmarket.com" class="long-email">customerservice@whitehouseblackmarket.com</a>{% endcapture %}
+{% capture emailIntl %}<a href="mailto:internationalorders@whitehouseblackmarket.com" class="long-email">internationalorders@whitehouseblackmarket.com</a>{% endcapture %}
+{% capture copy %}<p>Our passion has always been to make women feel beautiful. That's what we're about, and we strive for our customer service to be beautiful too. Use the links to the left to learn about our policies, or contact us by email or phone with any questions or suggestions.</p>{% endcapture %}
+{% else %}
+{% capture phone %}888.855.4986{% endcapture %}
+{% capture email %}<a href="mailto:customerservice@chicos.com">customerservice@chicos.com</a>{% endcapture %}
+{% capture emailIntl %}<a href="mailto:internationalorders@chicos.com">internationalorders@chicos.com</a>{% endcapture %}
+{% capture copy %}<p>Our values &ndash; beautiful apparel, exceptional service and deep appreciation for our customers &ndash; are the heart of our business. Use the links to the left to learn about our policies, or contact us by email or phone with any questions or suggestions.</p>{% endcapture %}
+{% endif %}
+
+{{ copy }}
+<dl>
+  <dt>
+    Toll Free Customer Service:
+  </dt>
+  <dd>
+    {{ phone }}
+  </dd>
+  <dt>
+    Customer Service Phone Hours:
+  </dt>
+  <dd>
+    7:00 AM - 1:00 AM (ET)<br>
+    7 days a week
+  </dd>
+  <dt>
+    Sales and Live Chat Hours:
+  </dt>
+  <dd>
+    7:00 AM - 1:00 AM (ET)<br>
+    7 days a week
+  </dd>
+  <dt>
+    Customer Service email:
+  </dt>
+  <dd>
+    7:00 AM - 1:00 AM (ET)<br>
+    7 days a week
+  </dd>
+  <dt>
+    International orders:
+  </dt>
+  <dd>
+    {{ emailIntl }}
+  </dd>
+  <dt>
+    Mailing Address:
+  </dt>
+  <dd>
+    {% if page.brand == 'soma' %}
+      Soma Intimates<br>
+      11215 Metro Parkway<br>
+      Fort Myers, FL 33966<br>
+      United States
+    {% else %}
+      Chico's<br>
+      11215 Metro Parkway<br>
+      Fort Myers, FL 33966<br>
+      United States
+    {% endif %}
+  </dd>
+  <dt>
+    Phone:
+  </dt>
+  <dd>
+    239.277.6200
+  </dd>
+  <dt>
+    TDD Phone:
+  </dt>
+  <dd>
+    888.550.5559
+  </dd>
+</dl>
+<h2>Help for Our Associates</h2>
+<p>If you're an employee of Chico's, White House Black Market or Soma Intimates and find yourself in an emergency situation, such as a natural disaster, please give us a call at 877.488.6975. We're always here to help our associates in any way we can.</p>

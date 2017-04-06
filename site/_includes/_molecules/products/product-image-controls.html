@@ -1,0 +1,12 @@
+<div class="product-image-controls {% if include.locateStore != 'yes' %}visible-sm visible-xs{% endif %}">
+  <div class="row">
+    <div class="col-xs-6">
+      {% if include.locateStore %}{% else %}
+        <a href="#"><svg class="icon-play-sm icon-square-sm icon-left"><use xlink:href="#icon-play-sm"></use></svg> Video</a>
+      {% endif %}
+    </div>
+    <div class="col-xs-6 text-right">
+      <a href="#" data-toggle="modal" data-target="#modal-gallery">Zoom <svg class="icon-zoom icon-square-sm icon-right"><use xlink:href="#icon-zoom"></use></svg></a>
+    </div>
+  </div>
+</div><!-- .product-image-controls -->

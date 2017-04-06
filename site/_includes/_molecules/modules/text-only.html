@@ -1,0 +1,94 @@
+{% comment %}
+TEXT-ONLY MODULE
+  associated class: module-text
+
+moduleClass
+  accepts: CSS class(es)
+  if no input: nothing happens
+  notes: Custom class in wrapper to apply specific styling inside module
+moduleLayout: 
+  accepts: CSS class(es)
+  if no input: nothing happens
+  preset values: none
+  notes: Choose from preset layouts or define your own
+moduleTitle: 
+  accepts: text or HTML
+  associated class: module-text-title
+  if no input: element doesn't show
+  wrapper tag: h2
+moduleSubTitle:
+  accepts: text or HTML
+  associated class: module-text-subtitle
+  if no input: element doesn't show
+  wrapper tag: div
+moduleSubCopy:
+  accepts: text or HTML
+  associated class: module-text-subcopy
+  if no input: element doesn't show
+  wrapper tag: div
+moduleCtaLabel:
+  accepts: text (HTML can be used but is a less likely use case)
+  associated class: module-text-cta
+  if no input: element/button doesn't show
+  wrapper tag: div > a (a tag makes it a button)
+  notes: This is the text that goes inside a CTA button
+moduleCtaUrl: 
+  accepts: absolute or relative URL
+  if no input: falls back to '#'
+moduleCtaClass: 
+  accepts: CSS class(es)
+  if no input: nothing happens
+  notes: adds custom class(es) to CTA button
+modulePostCta: 
+  accepts: text or HTML
+  associated class: module-text-postcta
+  if no input: element doesn't show
+  wrapper tag: div
+
+
+Example:
+
+```
+{% include _molecules/modules/text-only.html moduleClass='prototype-text-module' moduleTitle='<span class="percent-off">Sale</span> Up to XX% off select styles' moduleCtaUrl='/store/sale/?icid=HP_SALE' moduleCtaLabel='Shop the Sale' moduleCtaClass='btn-responsive' %}
+```
+
+{% endcomment %}
+
+<section class="module {{ include.moduleClass }}">
+  <div class="module-text {{ include.moduleLayout }}">
+    <div class="module-inner">
+      {% if include.moduleTitle %}
+      <h2 class="module-text-title">
+        {{ include.moduleTitle }}
+      </h2>
+      {% endif %}
+
+      {% if include.moduleSubTitle %}
+      <div class="module-text-subtitle">
+        {{ include.moduleSubTitle }}
+      </div>
+      {% endif %}
+
+      {% if include.moduleSubCopy %}
+      <div class="module-text-subcopy">
+        {{ include.moduleSubCopy }}
+      </div>
+      {% endif %}
+
+      {% if include.moduleCtaLabel %}
+      <div class="module-text-cta">
+        <a href="{% if include.moduleCtaUrl %}{{ include.moduleCtaUrl }}{% else %}#{% endif %}"
+           class="btn btn-primary {{ include.moduleCtaClass }}">
+          {{ include.moduleCtaLabel }}
+        </a>
+      </div>
+      {% endif %}
+
+      {% if include.modulePostCta %}
+      <div class="module-text-postcta">
+        {{ include.modulePostCta }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section><!-- .module -->

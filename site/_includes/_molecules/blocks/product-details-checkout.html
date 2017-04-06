@@ -1,0 +1,34 @@
+{% comment %}
+needed because of flows
+{% endcomment %}
+{% capture placement %}{{ include.placement }}{% endcapture %}
+{% capture class %}{{ include.class }}{% endcapture %}
+{% capture id %}{{ include.id }}{% endcapture %}
+{% capture addressSet %}{{ include.addressSet }}{% endcapture %}
+{% capture status %}{{ include.status }}{% endcapture %}
+{% capture modal %}{{ include.modal }}{% endcapture %}
+
+{% if include.layout == 'has-header' %}
+  <div class="row">
+    <div class="col-xs-7">
+      <p><strong>Items in Shipment ({{ include.totalProducts }})</strong></p>
+    </div>
+    <div class="col-xs-5 text-right">
+      <a href="#" class="checkout-link link-toggled" data-action="toggle" data-target="orders-{{ include.orderID }}" data-label="Open">Close</a>
+    </div><!-- .col-xs-5 -->
+  </div><!-- .row -->
+
+  <div id="orders-{{ include.orderID }}">
+{% endif %}
+
+  {% include _molecules/checkout/blocks/product-details.html modal=modal placement=placement id=id class=class addressSet=addressSet status=status %}  
+  {% if include.totalProducts == '2' %}
+    {% include _molecules/checkout/blocks/product-details.html modal=modal placement=placement id=id class=class status=status %}  
+  {% elsif include.totalProducts == '3' %}
+    {% include _molecules/checkout/blocks/product-details.html modal=modal placement=placement id=id class=class status=status %}  
+    {% include _molecules/checkout/blocks/product-details.html modal=modal placement=placement id=id class=class status=status %}  
+  {% endif %}
+
+{% if include.layout == 'has-header' %}
+  </div><!-- #order-{{ include.orderID }} -->
+{% endif %}

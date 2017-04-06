@@ -1,0 +1,15 @@
+.banner-secondary {
+  [class*="col-"]:first-child {
+    text-align: center;
+  }
+  [class*="col-"]:last-child {
+    text-align: right;
+  }
+  padding: 20px 15px;
+  h3 {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}

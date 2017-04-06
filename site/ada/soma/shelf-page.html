@@ -1,0 +1,157 @@
+<!-- Section Begin -->
+
+<h2 class="pageName" id="top">Soma Shelf Page</h2>
+
+<section>
+
+    <div class="sectionContent">
+
+        <div class="sectionHead">
+
+            <p class="issue">ARIA attributes must conform to valid values</p>
+
+            <p class="issueHeader">Disabilities Affected:</p>
+
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Mobility/Dexterity</li>
+
+            </ul>
+
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+
+            </ul>
+
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>4.1.1 Parsing</li>
+
+            </ul>
+
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+
+                <li></li>
+
+            </ul>
+
+        </div>
+
+        <!-- begin sample code -->
+        <div class="sampleHTML">
+
+            <h3>HTML:</h3>
+
+            <p class="comment">Issue is with the 3rd party plugin, Slick Slider</p>
+
+            <span class="code">&lt;div class=&quot;slide slick-slide slick-current slick-active&quot; data-slick-index=&quot;2&quot; aria-hidden=&quot;false&quot; tabindex=&quot;-1&quot; role=&quot;option&quot; aria-describedby=&quot;slick-slide02&quot; style=&quot;width: 994px; display: block;&quot;&gt;</span>
+
+        </div>
+        <!-- end smaple code -->
+
+        <!-- begin solution -->
+        <div class="proposedSolution">
+
+            <h3>Fix any of the following:</h3>
+            <p><span class="code"></span></p>
+
+            <ul>
+
+                <li>Invalid ARIA attribute value: aria-describedby="slick-slide02"</li>
+
+            </ul>
+
+        </div>
+        <!-- end solution -->
+
+        <div class="sectionHead">
+
+            <p class="issue">Links must have discernible text</p>
+
+            <p class="issueHeader">Disabilities Affected:</p>
+
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Mobility/Dexterity</li>
+
+            </ul>
+
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+
+            </ul>
+
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.1.1 Non-text Content</li>
+                <li>4.1.2 Name, Role, Value</li>
+
+            </ul>
+
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+
+                <li>1194.22 (a) Text equivalent for non-text elements</li>
+
+            </ul>
+
+        </div>
+
+        <!-- begin sample code -->
+        <div class="sampleHTML">
+
+            <h3>HTML:</h3>
+
+            <p class="comment">Effects color swatches on shelf page</p>
+
+            <span class="code">&lt;a href=&quot;javascript:swatchView.swapShelfPhoto('9','570119844' ,'657',1);&quot;&gt;
+                &lt;img height=&quot;25&quot; alt=&quot;&quot; width=&quot;25&quot; src=&quot;/Product_Images/570119844_657_s.gif&quot; border=&quot;0&quot;&gt;&lt;/a&gt;</span>
+
+
+        </div>
+        <!-- end smaple code -->
+
+        <!-- begin solution -->
+        <div class="proposedSolution">
+
+            <h3>Fix any of the following:</h3>
+            <p><span class="code"></span></p>
+
+            <ul>
+
+                <li>Element does not have text that is visible to screen readers</li>
+                <li>aria-label attribute does not exist or is empty</li>
+                <li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty or not visible</li>
+                <li>Element's default semantics were not overridden with role="presentation"</li>
+                <li>Element's default semantics were not overridden with role="none"</li>
+
+            </ul>
+
+        </div>
+
+        <div class="proposedSolution">
+
+            <h3>Fix all of the following:</h3>
+            <p><span class="code"></span></p>
+
+            <ul>
+
+                <li>Element is in tab order and does not have accessible text</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- end solution -->
+
+
+    </div>
+
+</section>
+<!-- Section End -->

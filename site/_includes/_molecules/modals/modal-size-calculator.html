@@ -1,0 +1,39 @@
+<div class="modal fade" id="modal-size-calculator" tabindex="-1" role="dialog" aria-labelledby="modal-size-calculator" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <h2>
+          Fit Predictor
+          <small>Calculate Your Size</small>
+        </h2>
+        <div role="tabpanel">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#size-pane-1" aria-controls="calculator" role="tab" data-toggle="tab">Calculator</a></li>
+            <li role="presentation"><a href="#size-pane-2" aria-controls="size" role="tab" data-toggle="tab">Your Best Size</a></li>
+            <li role="presentation"><a href="#size-pane-3" aria-controls="profile" role="tab" data-toggle="tab">Your Fit Profile</a></li>
+          </ul>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="size-pane-1">
+              <p>My top's size is</p>
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+
+                  {% include _atoms/forms/select.html labelName='Similar Designers' labelID='similar-designers' labelHidden='hidden' selectOptions='<option value="">Similar designers that fit me</option>' %}
+
+                  {% include _atoms/forms/select.html labelName='Category' labelID='category' labelHidden='hidden' selectOptions='<option value="">Category</option>' %}
+
+                  {% include _atoms/forms/select.html labelName='My Size' labelID='my-size' labelHidden='hidden' selectOptions='<option value="">My size</option>' %}
+
+                </div>
+              </div>  
+            </div>
+            <div role="tabpanel" class="tab-pane" id="size-pane-2">...</div>
+            <div role="tabpanel" class="tab-pane" id="size-pane-3">...</div>
+          </div>
+        </div>
+        <p>1/2</p>
+      </div>
+    </div>
+  </div>
+</div>

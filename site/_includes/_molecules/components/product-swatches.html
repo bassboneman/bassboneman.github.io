@@ -1,0 +1,33 @@
+{% comment %}<div class="colors">
+  {% if include.productSwatches  == 'yes' %}
+    <a href="#" class="colors-toggle">
+      <svg class="icon-plus">
+        <use xlink:href="#icon-plus"></use>
+      </svg>
+      More Colors
+    </a>
+  {% endif %}{% endcomment %}
+  <div class="swatch-wrap">
+    {% if include.productSwatches  == 'yes' %}
+    {% else %}
+      {% include _atoms/text/facet-label.html %}
+    {% endif %}
+    <div class="swatch selected">
+      <img class="img-responsive" src="https://placeholdit.imgix.net/~text?bg=c5c5c5&w=300&h=400" title="Swatch Name" alt="Swatch Name" data-imgswap="{{ site.baseurl }}/web_assets/imgs/temp/gray.png">
+    </div>
+    <div class="swatch">
+      <img class="img-responsive" src="https://placeholdit.imgix.net/~text?bg=f1cec3&w=300&h=400" title="Swatch Name" alt="Swatch Name" data-imgswap="{{ site.baseurl }}/web_assets/imgs/temp/pink.png">
+    </div>
+    <div class="swatch">
+      <img class="img-reponsive" src="https://placeholdit.imgix.net/~text?bg=5190df&w=300&h=400" title="Swatch Name" alt="Swatch Name" data-imgswap="{{ site.baseurl }}/web_assets/imgs/temp/blue.png">
+    </div>
+    {% if include.productSwatches  == 'yes' %}
+      <a href="{{ site.baseurl }}/pages/chicos/pdp/default.html">
+        <svg class="icon-plus">
+          <use xlink:href="#icon-plus"></use>
+        </svg>
+        <span class="sr-only">More Colors</span>
+      </a>
+    {% endif %}
+  </div><!-- .swatch-wrap -->
+{% comment %}</div><!-- .colors -->{% endcomment %}

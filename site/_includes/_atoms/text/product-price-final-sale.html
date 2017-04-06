@@ -1,0 +1,34 @@
+{% comment %}Collection page elements{% endcomment %}
+{% if page.layout == 'page-collection' %}
+  {% if page.sale-type == 'special' %}
+    <span class="product-price-sale product-price-special">
+      Specially Priced at $30.00
+    </span>  
+  {% else %}
+    <span class="product-price-sale">
+      {% if page.currency == 'cad' %}CAD&nbsp;{% else %}${% endif %}39.00
+      {% if page.sale-type == 'final' %}
+        <span class="product-price-final-label">Final Sale</span>
+      {% endif %}
+      <span class="product-price-regular">{% if page.currency == 'cad' %}CAD&nbsp;{% else %}${% endif %}49.00</span>
+    </span>
+  {% endif %}
+{% else %}{% comment %}Final sale content anywhere else, including PDP{% endcomment %}
+  {% if page.title == 'Shopping Bag' or page.title == 'Atoms' %}
+  {% elsif include.hidePrice == 'yes' %}
+  {% else %}
+    <span class="product-price-sale">$79.99</span>
+    <span class="product-price-regular">$129.75</span>
+  {% endif %}
+  <span class="product-price-final">
+    <span class="product-price-final-label">
+      <span>Final Sale</span>
+      {% if include.longLabel %}
+        - no returns or exchanges
+      {% endif %}
+      {% if include.tooltip %}
+        <a href="javascript://" data-toggle="tooltip" data-html="true" data-placement="bottom" title="" data-original-title="Merchandise marked &quot;final sale&quot; is sold &quot;as is&quot; and may not be returned or exchanged and is not eligible for price adjustment. Merchandise prices ending in .98 indicate final sale."><i class="fa fa-question-circle fa-lg"></i></a>  
+      {% endif %}
+    </span>
+  </span>
+{% endif %}

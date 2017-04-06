@@ -1,0 +1,115 @@
+{% comment %}
+CURATED GRID MODULE
+  associated class: curated
+
+moduleID:
+  accepts: string
+  notes: This is appended to a CSS ID, which makes some characters invalid:
+         ~ ! @ $ % ^ & * ( ) + = , . / ' ; : " ? > < [ ] \ { } | ` #
+         no spaces either
+  if no input: your module will have an id of 'curated-'
+moduleHeading:
+  accepts: text or HTML
+  associated class: none, use `.curated h3` or something of the sort
+  wrapper tag: h2
+  if no input: falls back to 'Category Name'
+moduleLink:
+  accepts: text (HTML can be used but is an unlikely use case)
+  associated class: parent div has .curated-link
+  if no input: falls back to moduleHeader value
+  wrapper tag: a
+  notes: This is the text that goes in the upper-right CTA. Invisible in
+         condensed form. Is appended to the text 'Shop All'
+moduleLinkCondensed:
+  accepts: text (HTML can be used but is an unlikely use case)
+  associated class: none, use `.curated .btn` or something of the sort
+  if no input: falls back to moduleLink value
+  wrapper tag: button
+  notes: This is the text that goes in the CTA button under the grid. Invisible 
+         in condensed form. Is appended to the text 'Shop All'
+moduleCondensed:
+  accepts: string
+  values: 'yes' for condensed mode (less images, no CTAs)
+  if no input: ...full...mode?
+
+promoType:
+  accepts: string
+  values: 'contentModuleTwoBy' for one image
+          'carouselPromo' for a carousel
+          each take up 2 spots in the collection grid.
+  if no input: defaults to 'carouselPromo' without only two images next to it
+promoAlign:
+  accepts: string
+  values: 'right' to put the promo to the right of grid items in the row
+  if no input: defaults to being on the left
+  notes: promo always goes first on mobile
+promoClass,
+promoCollection,
+promoHeading,
+promoCopy,
+promoLink,
+promoImage:
+  These exist for the sole purpose of passing along to img-overlay.html by way
+  of listing-curated.html and collection-promo.html. See img-overlay.html for
+  more information.
+
+Example:
+
+```
+{% include _molecules/collection/curated.html moduleHeading='FPO Leg Shape 1 FPO' moduleID='1' moduleCondensed='yes' promoType='contentModuleTwoBy' promoHeading='Test Heading' promoCollection='' promoCopy='This text is proof that we can edit promos inside curated grids' promoLink='Shop the Collection' promoImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=&w=800&h=800' %}
+```
+
+{% endcomment %}
+
+{% capture headerText %}
+  {% if include.moduleHeading %}
+    {{ include.moduleHeading }}
+  {% else %}
+    Category Name     
+  {% endif %}
+{% endcapture %}
+
+{% capture linkText %}
+  {% if include.moduleLink %}
+    {{ include.moduleLink }}
+  {% else %}     
+    {{ headerText }}    
+  {% endif %}
+{% endcapture %}
+
+{% capture linkTextCondensed %}
+  {% if include.moduleLinkCondensed %}
+    {{ include.moduleLinkCondensed }}
+  {% else %}
+    {{ linkText }}    
+  {% endif %}
+{% endcapture %}
+
+<section id="curated-{{ include.moduleID }}" class="curated">
+  <div class="curated-heading">
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>{{ headerText }}</h2>
+      </div>
+      <div class="col-sm-6 curated-link">
+        {% unless include.moduleCondensed == 'yes' %}
+          <a href="#">Shop All {{ linkText }}</a>
+        {% endunless %}
+      </div>
+    </div>
+  </div><!-- .curated-section-heading -->
+  {% if include.promoType == "contentModuleTwoBy" or include.promoType == "shelfless2x" %}
+    {% include _molecules/products/listing-curated.html promoType=include.promoType promoAlign=include.promoAlign promoClass=include.promoClass promoCollection=include.promoCollection promoHeading=include.promoHeading promoCopy=include.promoCopy promoLink=include.promoLink promoImage=include.promoImage %}
+  {% else %}
+    {% include _molecules/products/listing-curated.html promoType="carouselPromo" promoAlign=include.promoAlign %}
+  {% endif %}
+
+  {% unless include.moduleCondensed == 'yes' %}
+    {% include _molecules/products/listing-all.html %}
+    <div class="text-center">
+      {% capture btnLabelInput %}Shop All<span class="hidden-xs"> {{ linkTextCondensed }}</span>{% endcapture %}
+      {% capture btnClasses %}btn-primary{% unless page.brand == 'soma' %} btn-responsive{% endunless %}{% endcapture %}
+      {% include _atoms/buttons/button.html btnClass=btnClasses btnLabel=btnLabelInput btnLink='#' %}
+    </div>
+  {% endunless %}
+</section><!-- .curated -->

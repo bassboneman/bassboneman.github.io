@@ -1,0 +1,26 @@
+{% if include.productImg %}
+  {% comment %}<img class="img-responsive img-swap" src="{{ include.productImg }}" alt="Product Name">{% endcomment %}
+  <img class="img-responsive img-swap" src="{{ site.baseurl }}/web_assets/imgs/temp/gray.png" alt="Product Name">
+{% else %}
+  <img class="img-responsive img-swap" src="{{ site.baseurl }}/web_assets/imgs/temp/gray.png" alt="Product Name">
+{% endif  %}
+{% comment %}images based on these files
+http://www.chicos.com/Product_Images/570152656.jpg?resize=450px:563px&output-quality=85
+http://www.chicos.com/Product_Images/570152656.jpg?resize=270px:338px&output-quality=85
+{% endcomment %}
+
+{% comment %}use the follow for srcset
+
+  <img class="img-responsive img-swap" src="{{ site.baseurl }}/web_assets/imgs/temp/collection/collection_lg.jpg" alt="Product Name"
+    srcset="
+      {{ site.baseurl }}/web_assets/imgs/temp/collection/collection_sm.jpg 270w,
+      {{ site.baseurl }}/web_assets/imgs/temp/collection/collection_lg.jpg 450w
+      
+    "
+    sizes="
+      (min-width: 768px) 25vw,
+      50vw
+    "
+  >
+
+{% endcomment %}

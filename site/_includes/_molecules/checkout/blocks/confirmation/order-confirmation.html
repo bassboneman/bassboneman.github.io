@@ -1,0 +1,40 @@
+<section id="checkout-confirmation" class="checkout-block">
+  <header>
+    <div class="row">
+      <div class="col-xs-7">
+        <h2>Order Confirmation</h2>
+      </div>
+      <div class="col-xs-5">
+        <div class="print-order">
+          <a href="#">Print</a>        
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="checkout-block-body">
+    <h3 class="subhead">Thank you! Your order is being processed.</h3>
+    <p>A confirmation of your order has been sent to <strong>email@email.com</strong>. We'll send you another email to notify you when your order ships.</p>
+    <hr>
+    <h3>Order Details</h3>
+    <div class="order-details-block">
+      <div class="row">
+        <div class="col-sm-3">
+          <p>Order Number</p>
+          <p><strong>1234567890</strong></p>
+        </div>
+        <div class="col-sm-3">
+          <p>Date</p>
+          <p><strong>{{ site.time | date: '%B %d, %Y' }}</strong></p>
+        </div>
+        <div class="col-sm-3">
+          <p>Status</p>
+          <p><strong>Processing</strong></p>
+        </div>
+        <div class="col-sm-3">
+          <p>Total</p>
+          <p><strong>$XXX.XX</strong></p>
+        </div>
+      </div>
+    </div><!-- .order-details-block -->
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->

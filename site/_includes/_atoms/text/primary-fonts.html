@@ -1,0 +1,25 @@
+{% if page.brand == 'chicos' %}
+<p>Normal: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;</p>
+<p><strong>Bold: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;</strong></p>
+<p><em>Italic: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;</em></p>
+
+{% elsif page.brand == 'whbm' %}    
+
+<p class="light">Light: "Whitney 3r", "Helvetica Neue", Helvetica, Arial, sans-serif;</p>
+<p>Normal: "Whitney 5r", "Helvetica Neue", Helvetica, Arial, sans-serif;</p>
+<p class="semibold">Semibold: "Whitney 6r", "Helvetica Neue", Helvetica, Arial, sans-serif;</p>
+<p><strong>Bold: "Whitney 7r", "Helvetica Neue", Helvetica, Arial, sans-serif;</strong></p>
+<p><em>Italic: "Whitney 5r", "Helvetica Neue", Helvetica, Arial, sans-serif;</em></p>
+
+{% elsif page.brand == 'soma' %}
+<p class="light">Light: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;</p>
+<p>Normal: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;</p>
+<p><strong>Bold: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;</strong></p>
+<p><em>Italic: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;</em></p>
+{% else %}
+
+<p>Normal: "Helvetica Neue", Helvetica, Arial, sans-serif;</p>
+<p><strong>Bold: "Helvetica Neue", Helvetica, Arial, sans-serif;</strong></p>
+<p><em>Italic: "Helvetica Neue", Helvetica, Arial, sans-serif;</em></p>
+
+{% endif %}

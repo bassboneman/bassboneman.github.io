@@ -1,0 +1,25 @@
+<section id="checkout-my-order" class="checkout-block">
+  <header>
+    <h2>My Order</h2>
+  </header>
+  <div class="checkout-block-body">
+    {% include _molecules/blocks/product-details-checkout.html placement='review-order' orderID='id1' totalProducts='1' layout='has-header' confirmationPage='yes' %}
+    
+    <hr class="hr-dark">
+
+    {% include _molecules/checkout/summary.html placement='body' confirmationPage='yes' %}
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->
+
+<p style="margin-top: 5rem; text-align: center;">My Order with gifting</p>
+
+<section id="checkout-my-order" class="checkout-block">
+  <header>
+    <h2>My Order</h2>
+  </header>
+  <div class="checkout-block-body">
+    {% include _molecules/blocks/product-details-checkout.html placement='review-order' orderID='id2' totalProducts='3' layout='has-header' confirmationPage='yes' %}
+    {% include _molecules/checkout/blocks/gifting-options.html giftingID='id2' giftMessage='yes' confirmationPage='yes' %}
+    {% include _molecules/checkout/summary.html placement='body' confirmationPage='yes' %}
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->

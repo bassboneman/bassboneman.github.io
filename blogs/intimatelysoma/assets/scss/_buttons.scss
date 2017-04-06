@@ -1,0 +1,18 @@
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  border-color: transparent;
+  @include radius(0);
+}
+.btn-primary {
+  background: $color-black;
+  @include transition(all);
+  &:focus {
+    background: $color-black;
+    border-color: transparent;
+  }
+  &:hover {
+    background: $color-soma;
+    border-color: transparent;
+  }
+}

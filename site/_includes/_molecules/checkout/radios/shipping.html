@@ -1,0 +1,58 @@
+{% if include.shipping == 'standard' %}
+  {% capture name %}Standard{% endcapture %}
+  {% capture days %}<strong>6-9</strong> business days{% endcapture %}
+  {% capture arrival %}Jan 17-20{% endcapture %}
+  {% capture cost %}FREE{% endcapture %}
+  {% capture icon %}standard{% endcapture %}
+{% elsif include.shipping == 'express' %}
+  {% capture name %}Express{% endcapture %}
+  {% capture days %}<strong>2-5</strong> business days{% endcapture %}
+  {% capture arrival %}Jan 14-19{% endcapture %}
+  {% capture cost %}$X.XX{% endcapture %}
+  {% capture icon %}express{% endcapture %}
+{% elsif include.shipping == 'twoday' %}
+  {% capture name %}Two Day{% endcapture %}
+  {% capture days %}<strong>2</strong> business days{% endcapture %}
+  {% capture arrival %}Jan 13{% endcapture %}
+  {% capture cost %}$X.XX{% endcapture %}
+  {% capture icon %}two-day{% endcapture %}
+{% elsif include.shipping == 'nextday' %}
+  {% capture name %}Next Day{% endcapture %}
+  {% capture days %}<strong>Next</strong> business day<br><em>Signature Required</em>{% endcapture %}
+  {% capture arrival %}Jan 12{% endcapture %}
+  {% capture cost %}$XX.XX{% endcapture %}
+  {% capture icon %}next-day{% endcapture %}
+{% endif %}
+
+<div class="radio">
+  <label>
+    <div class="media">
+      <div class="media-left media-middle">
+        <input type="radio" name="{{ include.radioSet }}" id="{{ include.radioID }}" value="{{ include.radioID }}" {% if include.checked %}checked="checked"{% endif %} styled='yes'>
+        <span class="input-styled"></span>
+      </div>
+      <div class="media-body">
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-1 col-xs-4">
+            <strong>{{ name }}</strong><br>
+            <img src="{{ site.baseurl }}/web_assets/svg/checkout/shipping-{{ icon }}.svg" alt="{{ Name }} Shipping" class="icon-shipping">
+          </div><!-- .col-->
+          <div class="col-sm 6 col-xs-5">
+            <div class="row">
+              <div class="col-sm-6">
+                Estimated Arrival:<br>
+                <span class="arrival-date">{{ arrival }}</span>
+              </div><!-- .col -->
+              <div class="col-sm-6">
+                {{ days }} 
+              </div><!-- .col -->
+            </div><!-- .row -->
+          </div><!-- .col -->
+          <div class="col-sm-2 col-xs-3 text-right">
+            <span class="text-uppercase">{{ cost }}</span>
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .media-body -->
+    </div><!-- .media -->
+  </label>
+</div><!-- .radio -->

@@ -1,0 +1,33 @@
+<section class="module module-hot-spot whbm-hot-spot-hero">
+  <div class="module-inner">
+    <div class="hot-spot-left-panel">
+        <div class="hot-spot-caption">
+          <h2 class="heading-serif heading-caps">Foundations</h2>
+          <p>Lorem Ipsum Dolor Sit Amet</p>
+        </div>
+        <img src="{{ site.baseurl }}/web_assets/imgs/whbm/hot-spot-1.jpg">
+    </div>
+    <div class="hot-spot-right-panel">
+        <img src="{{ site.baseurl }}/web_assets/imgs/whbm/hot-spot-2.jpg">
+        <div class="hot-spots">
+          {% for item in site.data.hot-spots %}
+            <a class="hot-spot{% if forloop.index > 2 %} alt-hover{% endif %}" 
+               style="top: {{ item.y }}; left: {{ item.x }}"
+               {% if item.link %}
+               href="{{ item.link }}"
+               data-target="#modal-quick-view" 
+               data-toggle="modal"
+               {% else %}
+               href="javascript:void(0);"
+               data-use-tooltip
+               {% endif %}
+            >
+              <svg class="icon-plus">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+            </a>
+          {% endfor %}
+        </div>
+    </div>
+  </div>
+</section><!-- .module -->

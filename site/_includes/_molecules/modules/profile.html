@@ -1,0 +1,37 @@
+<article class="profile">
+  {% if include.moduleType == 'modal' %}
+    <h3>{{ include.profileName }}</h3>
+    <p class="profile-diagnosis">Diagnosis Stage: {{ include.profileDiagnosis }}</p>
+    <p class="profile-location">{{ include.profileLocation }}</p>
+    <div class="profile-img">
+      <img src="{{ include.profileImg }}" class="img-responsive" alt="{{ include.profileName }}">    
+    </div><!-- .profile-img -->
+    <div class="profile-story">{{ include.profileStory }}</div>
+  {% else %}
+    <a href="#" data-toggle="modal" data-target="#modal-profile-{{ include.modalID }}">
+      {% if include.moduleType != 'carousel' %}
+        <div class="row">
+          <div class="col-sm-5 col-md-6 col-lg-7">
+      {% endif %}
+            <div class="profile-img">
+              <img src="{{ include.profileImg }}" class="img-responsive" alt="{{ include.profileName }}">    
+            </div><!-- .profile-img -->
+      {% if include.moduleType != 'carousel' %}
+          </div><!-- .col- -->
+          <div class="col-sm-7 col-md-6 col-lg-5">
+      {% endif %}
+            <h3>{{ include.profileName }}</h3>
+            {% if include.moduleType != 'carousel' %}<p class="profile-location">{{ include.profileLocation }}</p>{% endif %}
+            {% if include.moduleType != 'carousel' %}
+               <blockquote>
+                {{ include.profileQuote }}
+              </blockquote>
+            {% endif %}
+            <span class="profile-link">Learn More</span>
+      {% if include.moduleType != 'carousel' %}
+          </div><!-- .col- -->
+        </div><!-- .row -->
+      {% endif %}
+    </a>
+  {% endif %}
+</article><!-- .profile -->

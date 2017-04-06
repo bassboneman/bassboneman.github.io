@@ -1,0 +1,19 @@
+{% include _templates/header.html %}
+
+<main role="main">
+  <div class="content page-pdp">
+    <div class="container-fluid">
+      {{content}}
+    </div><!-- .container-fluid -->
+  </div><!-- .content -->
+</main>
+
+{% include _molecules/modals/modal-gallery.html %}
+{% if page.pdp-type == 'complete' %}
+{% include _molecules/modals/modal-gallery-single.html %}
+{% endif %}
+
+{% include _molecules/modals/modal-size.html %}
+{% include _molecules/modals/modal-size-calculator.html %}
+{% include _molecules/modals/modal-cart.html %}
+{% include _templates/footer.html %}

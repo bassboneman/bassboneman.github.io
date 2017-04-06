@@ -1,0 +1,287 @@
+h1, .h1 {
+  @include h1;
+}
+h2, .h2 {
+  @include h2;
+}
+h3, .h3 {
+  @include h3;
+}
+h4, .h4 {
+  @include h4;
+}
+h5, h6, .h5, .h6 {
+  @include h5-h6;
+}
+h2, h3, h4, h5, h6,
+.h2, .h3, .h4, .h5, .h6, {
+  letter-spacing: $letter-spacing;
+  @include h2-h6-margins;
+}
+
+// letter spacing is set on the body element. we need to prevent that from affecting long-form text
+// p, li {
+//   letter-spacing: 0;
+// }
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+.long-email {
+  @include long-email;
+}
+
+// we need a top-margin to prevent thefixed header overlapping internal anchors
+.anchor {
+  &:before {
+    display: block; 
+    content: " "; 
+    margin-top: -$anchor-margin; 
+    height: $anchor-margin; 
+    visibility: hidden; 
+    @media screen and (max-width: 991px) {
+      margin-top: -$anchor-margin-mobile; 
+      height: $anchor-margin-mobile; 
+    }
+  }
+}
+
+.red {
+  color: $color-red;
+}
+
+// this is used on related products as the all caps heading
+.heading-styled {
+  font-weight: 400;
+  text-align: center;
+  @include heading-styled;
+}
+
+// used for internal anchor links so the element shows up beneath the fixed header 
+.scroll-anchor {
+  margin-top: -15rem;
+  padding-top: 15rem;
+  @media screen and (max-width: 991px) {
+    margin-top: -6rem;
+    padding-top: 6rem;
+  }
+}
+
+.link-no-underline {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// this adds a horizontal line right through the middle of the text
+.heading-has-line {
+  display: table;
+  max-width: 80%;
+  margin: 0 auto;
+  white-space: nowrap;
+  @include heading-has-line;
+  &:before, &:after {
+    border-top: 2px solid $color-black;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.5em;
+    width: 45%;
+  }
+  &:before { right: 1.5%; }
+  &:after { left: 1.5%; }
+  @media screen and (max-width: $break-xs-max) {
+    max-width: none;
+    margin: 0;
+  }
+}
+
+.serif {
+  font-family: $font-family-serif;
+}
+// used in carousels as headings
+.heading-serif {
+  font-family: $font-family-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  @include heading-serif;
+}
+.heading-lg {
+  font-size: 7.2rem;
+  @media screen and (max-width: $break-xs-max) {
+    font-size: 4rem;
+  }
+}
+dt {
+  // font-weight: $font-weight-dt;
+  @include font-weight-semibold;
+}
+dd {
+  margin: $margin-dd;
+}
+p,
+.p {
+  margin: $margin-p;
+}
+ul {
+  margin: $margin-ul;
+}
+ol {
+  margin: $margin-ol;
+}
+small {
+  @include small;
+}
+address {
+  margin: $margin-address;
+  letter-spacing: 0;
+}
+.heading-suggest {
+  margin: 80px 0 80px 0 !important;
+  text-align: center;
+}
+.fa-large {
+  font-size: 32px;
+}
+.dl-horizontal {
+  margin-bottom: 1rem;
+  dt {
+    float: left;
+    width: 100px;
+    font-weight: $font-weight-base;
+    text-align: left;
+  }
+  .dt-divider {
+    margin-top: $dimension-small;
+    padding-top: $dimension-small;
+    border-top: 1px solid $color-border;
+    + dd {
+      margin-top: $dimension-small;
+      padding-top: $dimension-small;
+      border-top: 1px solid $color-border;
+    }
+  }
+  dt,
+  dd {
+    margin-bottom: $dimension-none;
+  }
+  dd {
+    margin-left: 12rem;
+  }
+  @include dl-horizontal;
+  @media (max-width: 540px) {
+    margin-bottom: 0;
+    dt {
+      float: none;
+      width: auto;
+    }
+    dd {
+      margin: 0 0 $dimension-small 0;
+    }
+    .dt-divider {
+      + dd {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: 0;
+      }
+    }
+  }
+}
+
+// used on appt. page
+.blockquote {
+  margin: 4rem 0 2rem 0;
+  padding: 0;
+  font-family: $font-family-serif;
+  font-size: 2rem;
+  line-height: 1.3;
+  text-align: center;
+  border: 0;
+  quotes: "“" "”" "‘" "’";
+  &:before,
+  &:after {
+    display: block;
+    content: open-quote;
+    font-size: 72px;
+    line-height: 0.1em;
+  }
+  &:after {
+    content: close-quote;
+    padding-top: 4rem;
+  }
+  .author {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-style: italic;
+  }
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+.pad-right-10 {
+  padding-right: 1rem;
+}
+.text-alert {
+  color: $color-red-dark;
+}
+.italic {
+  font-style: italic;
+}
+.tight {
+  letter-spacing: 0;
+}
+.light {
+  @include font-weight-light;
+}
+.normal {
+  font-weight: $font-weight-base;
+}
+.medium {
+  font-weight: 500;
+}
+.semibold {
+  @include font-weight-semibold;
+}
+.back-top {
+  @include back-top;
+}
+
+// code and info link combo element
+.info-wrap {
+  text-transform: uppercase;
+  span,
+  a {
+    vertical-align: middle;
+    line-height: 2rem;
+  }
+  a {
+    font-size: 1rem;
+  }
+  span {
+    padding-right: 1rem;
+    &:after {
+      padding-left: 1rem;
+      content: '|';
+    }
+  }
+}
+.info-link {
+  @include info-link;
+}
+
+.details-block {
+  display: none;
+  width: 100%;
+  padding: 2rem 0;
+  font-size: 1.4rem;
+  text-align: center;
+  color: $color-gray-dark;
+}

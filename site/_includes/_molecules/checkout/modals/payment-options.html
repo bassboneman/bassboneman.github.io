@@ -1,0 +1,42 @@
+<div class="modal fade modal-checkout" id="modal-payment-options" tabindex="-1" role="dialog" aria-labelledby="modal-payment-optionsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-payment-optionsLabel">Select a Payment Option</h3>
+      </div>
+      <div class="modal-body">
+        <form action="#" class="form-labels">
+
+          <div class="radio-list radio-media-list">
+            {% include _molecules/checkout/radios/payment.html radioClass='checkout-toggle' ccLabel='Visa' ccType='visa' radioSet='payment-options' radioID='payment-option-1' checked='yes' %}
+            {% include _molecules/checkout/radios/payment.html radioClass='checkout-toggle' ccLabel='Discover' ccType='discover' radioSet='payment-options' radioID='payment-option-2' %}
+            {% include _molecules/checkout/radios/payment.html radioClass='checkout-toggle' ccLabel='Mastercard' ccType='mastercard' radioSet='payment-options' radioID='payment-option-3' %}
+            {% include _molecules/checkout/radios/payment.html radioClass='checkout-toggle' ccLabel='American Express' ccType='americanexpress' radioSet='payment-options' radioID='payment-option-4'%}
+            {% include _molecules/checkout/radios/payment.html radioClass='checkout-toggle' ccLabel='Diners Club' ccType='dinersclub' radioSet='payment-options' radioID='payment-option-5' %}
+
+            {% include _molecules/checkout/radios/payment-alt.html radioSet='payment-options' radioID='creditcard-modal' radioValue='creditcard-modal' labelName='Add a New Credit Card' styled='yes' radioClass='checkout-toggle border-dark' %}
+            <div id="checkout-creditcard-modal" class="checkout-toggle-content toggle-hidden">
+              {% include _molecules/checkout/forms/cc.html %}
+            </div><!-- .checkout-toggle-content -->
+
+            {% include _molecules/checkout/radios/payment-alt.html radioSet='payment-options' radioID='paypal-modal' radioValue='paypal-modal' labelName='PayPal' styled='yes' radioClass='checkout-toggle' %}
+            <div id="checkout-paypal-modal" class="checkout-toggle-content toggle-hidden">
+              <p class="alert alert-info"><strong>We’re sorry, but at this time our <span class="text-highlight">boutiques are unable to accept returns</span> for orders purchased using PayPal. PayPal orders may only be returned via mail using the return label provided. We apologize for any inconvenience.</strong></p>
+              <p>Continuing will take you to Paypal to login to your account. Afterwards you will have an opportunity to review and submit your order. View <a href="#">PayPal Policies</a> and your payment rights.</p>
+
+              <div class="row row-tight">
+                <div class="col-sm-6">
+                  <p>{% include _atoms/buttons/button.html btnClass='btn-alt btn-lg btn-block btn-width btn-has-paypal' btnLabel='Continue to <span class="sr-only">Paypal</span> <svg class="icon-paypal"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-paypal"></use></svg>' %}</p>
+                </div><!-- .col-sm-6 -->
+              </div><!-- .row -->
+            </div><!-- .checkout-toggle-content -->
+
+          </div><!-- .radio-media-list -->
+
+        </form>
+      </div><!-- .modal-body -->
+      {% include _molecules/checkout/modals/footer.html %}
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal #modal-credit-card -->

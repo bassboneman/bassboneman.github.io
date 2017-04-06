@@ -1,0 +1,45 @@
+.content {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0;
+}
+.container-fluid {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+.category-details {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  font-size: 15px;
+  color: #6d6e71;
+  letter-spacing: 1px;
+  &.top {
+    border-top: 1px solid $color-black;
+  }
+}
+.content {
+  a {
+    // color: #6d6e71;
+    // &.active,
+    // &:hover {
+      // color: $color-black
+    // }
+    // &:hover {
+      // text-decoration: none;
+    // }
+    &.active,
+    &.current {
+      border-bottom: 1px solid #6d6e71;
+    }
+  }
+  .page-numbers.current {
+    border-bottom: 1px solid #6d6e71;
+  }
+}
+
+@media (min-width: 768px) {
+  .paging {
+    text-align: right;
+  }
+}

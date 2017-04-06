@@ -1,0 +1,580 @@
+// delete this file once chicos starts using the filter bar with filter crumbs (see WHBM for example)
+
+@mixin filters-default {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.filter-wrap {
+  position: relative;
+  margin-bottom: 2rem;
+  @media screen and (min-width: 992px) {
+    background: $color-filters-bg;
+  }
+  .bootstrap-select.btn-group .dropdown-toggle,
+  .bootstrap-select.btn-group.open .dropdown-toggle,
+  .form-control.selectpicker {
+    @include filters-default;
+  }
+}
+
+
+// these include the dropdown panels
+// i had to add a bunch of floats to the top level anchors and spans to prevent IE from screwing up the layout
+.filter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include clearfix;
+  > li {
+    display: block;
+    > a {
+      display: block;
+      @include filters-default;
+      padding: 0 1.8rem; // override filters-default mixin
+      line-height: 4.4rem; // override filters-default mixin
+      color: $color-filters-label;
+      @include transition(background);
+    }
+    & > a:hover {
+      text-decoration: none;
+      background: $color-filters-label-hover;
+    }
+    &.open > a {
+      color: $color-filters-label-hover;
+      background: $color-filters-label-hover-bg;
+    }
+    > a {
+      float: left;
+      width: 100%;
+
+      span {
+        @include clearfix;
+        float: left;
+        display: block;
+        width: 100%;
+        &:after {
+          display: block;
+          float: right;
+          width: 1rem;
+          height: .7rem;
+          margin: 1.8rem 0 0 .8rem;
+          content: '';
+          background-image: $filters-toggle-icon;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          // background-size: 10px 7px;
+          @include opacity($filters-toggle-icon-opacity);
+        }
+      }
+    }
+    &.open > a span:after {
+      background-image: $filters-toggle-icon-open;
+    }
+    &.dropdown-selected > a {
+      font-weight: 700;
+      @include filter-selected;
+    }
+  }
+  .dropdown-menu {
+    z-index: 950;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  .filter-toggles {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem;
+    a {
+      text-decoration: none;
+      &:hover {
+        color: $color-black;
+      }
+    }
+    .row {
+      clear: both;
+    }
+    @media screen and (max-width: $break-sm-max) {
+      padding: 0 1.5rem 1rem 1.5rem;
+    }
+  }
+  // .col-border {
+  //   border-left: 1px solid $color-border;
+  //   padding-left: 1.4rem;
+  // }
+  @media screen and (min-width: 992px) {
+    > li {
+      position: static;
+      float: left;
+    }
+  }
+  @media screen and (max-width: $break-sm-max) {
+    > li > a {
+      font-size: 1.5rem;
+    }
+    .dropdown,
+    .dropdown-menu {
+      position: static;
+      width: 100%;
+
+    }
+    .dropdown-menu {
+      @include box-shadow-none;
+    }
+  }
+}
+
+// these styles are based on li's and a's from filter-list. they have to be duplicated here because the design moves this element outside the list on mobile devices
+.filter-clear {
+  // display: block;
+  float: left;
+  > a {
+    display: block;
+    padding: 0 1.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 4.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-filters-label;
+    @include transition(background);
+  }
+  svg {
+    width: .8rem;
+    height: .8rem;
+    margin-right: .3rem;
+    fill: $color-filters-label;
+  }
+  @media screen and (max-width: $break-sm-max) {
+    display: none;
+  }
+}
+
+// select dropdown
+.filter-category {
+  margin-left: -15px;
+  margin-right: -15px;
+  .bootstrap-select.btn-group .dropdown-toggle,
+  .bootstrap-select.btn-group.open .dropdown-toggle,
+  .form-control.selectpicker {
+    background: $color-filters-bg;
+    border-color: transparent;
+    @media screen and (max-width: 991px) {
+      color: $color-filters-label;
+    }
+  }
+  .dropdown-menu {
+    > li {
+      > a {
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+    > li.dropdown-header {
+      padding: 2rem 1rem 0.7rem 1rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $color-black;
+    }
+    > li.divider {
+      display: none;
+    }
+    > li a.opt {
+      padding-left: 1rem !important;
+    }
+  }
+  .form-group {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 992px) {
+    float: left;
+    min-width: 22rem;
+    height: 4.4rem;
+    margin: 0;
+    padding-right: .5rem;
+    border-right: .2rem solid #fff;
+    .form-group {
+      margin: .5rem 0;
+    }
+
+    .bootstrap-select.btn-group .dropdown-toggle,
+    .form-control.selectpicker {
+      border-color: transparent;
+      background: $color-white;
+    }
+    .bootstrap-select.btn-group.open .dropdown-toggle {
+      border-color: $color-form-default;
+      background: $color-white;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .bootstrap-select {
+      .btn {
+        .caret {
+          background-image: $filters-toggle-icon-sm;
+        }
+      }
+    }
+  }
+}
+
+
+.filter-sort {
+  @media screen and (min-width: $break-md-min) {
+    float: right;
+    .form-group {
+      margin: .5rem 0;
+    }
+    .form-control {
+      color: $color-filters-label;
+      background: transparent;
+      border: transparent;
+    }
+    .bootstrap-select {
+      .btn {
+        color: $color-filters-label;
+        background: transparent;
+        border-color: transparent;
+        .caret {
+          background-image: $filters-toggle-icon;
+        }
+      }
+    }
+    .bootstrap-select.btn-group.open .dropdown-toggle {
+      color: $color-filters-label;
+      background: transparent;
+      border-color: transparent;
+    }
+    .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+.filter-refine {
+  display: none;
+}
+@media screen and (max-width: $break-sm-max) {
+  .filter-refine-sort {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin: 0 -15px 20px -15px;
+    border-bottom: 1px solid $color-form-default;
+    @include clearfix;
+  }
+  .filter-refine {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 3.4rem;
+    padding: .6rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 2rem;
+    text-transform: uppercase;
+    color: $color-black;
+    border: 1px solid transparent; // to match button height
+    border-width: 1px 0;
+    border-top-color: transparent;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+    span {
+      &:after {
+        display: block;
+        float: right;
+        margin-top: .5rem;
+        font-size: 0;
+        line-height: 0;
+        width: 1rem;
+        height: 1rem;
+        content: url('../svg/plus.svg');
+      }
+    }
+  }
+  .filter-sort {
+    float: right;
+    width: 50%;
+    border-left: 1px solid $color-form-default;
+    .bootstrap-select.btn-group .dropdown-toggle,
+    .bootstrap-select.btn-group.open .dropdown-toggle,
+    .form-control.selectpicker {
+      border-color: transparent;
+    }
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: $break-xs-max) {
+  .filter-wrap {
+    .filter-list {
+      margin-bottom: 2rem;
+      > li {
+        > a {
+          max-width: 100%;
+        }
+      }
+      .filter-toggles {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.selector-toggle {
+  display: block;
+  padding: 1rem 0;
+  overflow: hidden;
+  zoom: 1;
+}
+// add .swatch or .box to .selector in order to get correct styling
+.selector {
+  position: relative;
+  float: left;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: .5rem;
+  border: .1rem solid transparent;
+  background-image: none;
+  &.swatch,
+  &.swatch:before,
+  &.box {
+    @include transition(border);
+  }
+  &.swatch {
+    background-size: 1.6rem 1.6rem;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    &:before {
+      display: block;
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: .1rem solid transparent;
+      @include transition(border);
+    }
+  }
+  &.box {
+    border: .1rem solid $color-black;
+  }
+}
+
+.selector-label {
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  padding: .3rem 0;
+  text-transform: uppercase;
+}
+
+.selector-toggle {
+  &:hover {
+    .selector.swatch {
+      border: 1px solid $color-black;
+      &:before {
+        border-color: #fff;
+      }
+    }
+    .selector.box {
+      // border-width: .2rem;
+    }
+  }
+  &.selected {
+    .selector.swatch {
+      border-color: $color-black;
+      &:before {
+        border: .2rem solid #fff;
+      }
+    }
+    .selector.box {
+      background-color: $color-black;
+      @include box-shadow(0,0,0,2px,rgb(255,255,255), inset);      
+    }
+  }
+}
+
+.selector-toggle.disabled {
+  color: $color-gray-light;
+  cursor: default;
+  .selector.box,
+  .selector.swatch {
+    border-color: $color-gray-light;
+    background: none !important;
+  }
+}
+.filter-list .filter-toggles a.disabled,
+.filter-list .filter-toggles a.disabled:hover {
+  color: $color-gray-light;
+}
+
+@media screen and (max-width: $break-sm-max) {
+  .selector-toggle {
+    padding: 1.3rem 0;
+  }
+  .selector.swatch,
+  .selector.box {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1.0rem;
+    background-size: 2.4rem 2.4rem;
+  }
+  .selector-label {
+    padding: .6rem 0;
+  }
+}
+
+.filter-tools-mobile {
+  display: none;
+}
+
+.filter-tools-mobile-head {
+  display: none;
+  @media screen and (max-width: $break-sm-max) {
+    display: block;
+    padding: 15px;
+    h3 {
+      margin: 0;
+      text-transform: uppercase;
+    }
+    a {
+      float: right;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: $break-md-min) {
+  .filter-list-wrap {
+    float: left;
+  }
+}
+
+
+@media screen and (max-width: $break-sm-max) {
+  .filter-list-wrap {
+    display: none;
+    opacity: 0;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+    &.open {
+      display: block;
+      position: fixed;
+      z-index: 1200;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 65px;
+      overflow: auto;
+      background: $color-white;
+      display: block;
+      opacity: 1;
+      -webkit-animation: fadeIn .3s ease-in-out;
+         -moz-animation: fadeIn .3s ease-in-out;
+           -o-animation: fadeIn .3s ease-in-out;
+              animation: fadeIn .3s ease-in-out;
+
+    }
+    .filter-list {
+      > .dropdown {
+        border-top: 1px solid $color-border;
+      }
+    }
+  }
+  .filter-tools-mobile {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: $color-white;
+    border-top: 1px solid $color-border;
+  }
+  .filters-open {
+    overflow: hidden;
+    .dropdown-backdrop {
+      display: none;
+    }
+  }
+}
+
+// used for tools fade-in
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  1% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+
+
+@media screen and (max-width: 991px) {
+  .filter-list {
+    > li {
+      > a {
+        color: $color-filters-label-xs;
+      }
+      & > a:hover {
+        background: $color-white;
+      }
+      &.open > a {
+        background: $color-white;
+      }
+      & > a span:after {
+        background-image: url(../svg/arrow-up.svg);
+      }
+      &.open > a span:after {
+        background-image: url(../svg/arrow-down.svg);
+      }
+      &.dropdown-selected > a {
+        color: $color-black;
+      }
+    }
+  }
+}
+

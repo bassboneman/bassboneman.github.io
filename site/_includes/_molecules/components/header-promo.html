@@ -1,0 +1,101 @@
+<div id="header-promo-wrap">
+  <div id="promo-carousel" class="carousel slide" data-ride="carousel">
+    <div id="header-promo-toggle">
+      <a href="#" data-toggle="header-promo" aria-controls="header-promo" aria-expanded="false">
+        <span class="promo-toggle-icon">
+          {% if page.brand == 'soma' %}
+            <svg class="icon-arrow-down">
+              <use xlink:href="#icon-arrow-down"></use>
+            </svg>
+          {% else %}
+            <svg class="icon-plus">
+              <use xlink:href="#icon-plus"></use>
+            </svg>
+          {% endif %}
+          <span class="sr-only">Toggle Promotions</span>
+        </span>
+      </a>
+      <ol class="carousel-indicators">
+        <li data-toggle="header-promo" class="active">
+          Free Shipping on Your Next Purchase * Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore doloribus perspiciatis dicta, esse, nesciunt ea illo dolorum voluptatibus quas modi deleniti quia, eos voluptate deserunt numquam nostrum aperiam excepturi, quisquam.
+        </li>
+        <li data-toggle="header-promo">
+          24 Hour Flash Sale 50% Off When You Spend $100 or More
+        </li>
+        <li data-toggle="header-promo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit
+        </li>
+      </ol>
+    </div>
+    <div id="header-promo">
+      <div id="header-promo-inner">
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <a href="#" class="header-promo-link-wrap">
+              <h4 class="header-promo-heading">
+                40% Off Entire Purchase
+                <small>Passport Members take an extra 5% off</small>
+              </h4>
+              <div class="header-promo-copy">
+                <span class="header-promo-code">Use code: XXXXXX</span>
+                <span class="header-promo-cta">Shop Now</span>
+              </div>
+              <div class="header-promo-details">
+                <span tabindex="0" role="button" data-toggle="modal" data-target="#modal-promo-details" data-class="shop-now" onclick="var s=s_gi(s_account); s.tl(this,'o','GPS_40Off_DETAILS');">
+                  Details
+                </span>
+              </div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" class="header-promo-link-wrap">
+              <h4 class="header-promo-heading">
+                40% Off Entire Purchase
+                <small>Passport Members take an extra 5% off</small>
+              </h4>
+              <p>This text is making a taller carousel panel</p>
+              <div class="header-promo-copy">
+                <span class="header-promo-code">Use code: XXXXXX</span>
+                <span class="header-promo-cta">Shop Now</span>
+              </div>
+              <div class="header-promo-details">
+                <span tabindex="0" role="button" data-toggle="modal" data-target="#modal-promo-details" data-class="shop-now" onclick="var s=s_gi(s_account); s.tl(this,'o','GPS_40Off_DETAILS');">
+                  Details
+                </span>
+              </div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" class="header-promo-link-wrap">
+              <h4 class="header-promo-heading">
+                40% Off Entire Purchase
+                <small>Passport Members take an extra 5% off</small>
+              </h4>
+              <div class="header-promo-copy">
+                <span class="header-promo-code">Use code: XXXXXX</span>
+                <span class="header-promo-cta">Shop Now</span>
+              </div>
+              <div class="header-promo-details">
+                <span tabindex="0" role="button" data-toggle="modal" data-target="#modal-promo-details" data-class="shop-now" onclick="var s=s_gi(s_account); s.tl(this,'o','GPS_40Off_DETAILS');">
+                  Details
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+  
+        <a class="left carousel-control" href="#promo-carousel" role="button" data-slide="prev" aria-label="previous">
+          <svg class="promo-left" role="presentation">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-promo-left"></use>
+          </svg>
+        </a>
+        <a class="right carousel-control" href="#promo-carousel" role="button" data-slide="next" aria-label="next">
+          <svg class="promo-right" role="presentation">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-promo-right"></use>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div><!-- #promo-carousel -->
+</div><!-- #header-promo-wrap -->

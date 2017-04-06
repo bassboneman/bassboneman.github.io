@@ -1,0 +1,288 @@
+{% if page.brand == 'soma' %}
+{% capture email %}<a href="mailto:customerservice@soma.com">customerservice@soma.com</a>{% endcapture %}
+{% capture phone %}1.866.768.7662{% endcapture %}
+{% capture url %}soma.com{% endcapture %}
+{% capture name %}Soma{% endcapture %}
+{% capture nameLong %}Soma Intimates{% endcapture %}
+{% capture rewards %}Love Soma Rewards Information{% endcapture %}
+{% elsif page.brand == 'whbm' %}
+{% capture email %}<a href="mailto:customerservice@whitehouseblackmarket.com">customerservice@whitehouseblackmarket.com</a>{% endcapture %}
+{% capture phone %}1.877.948.2525{% endcapture %}
+{% capture url %}whitehouseblackmarket.com{% endcapture %}
+{% capture name %}White House | Black Market{% endcapture %}
+{% capture nameLong %}White House | Black Market{% endcapture %}
+{% capture rewards %}WHBM Rewards Information{% endcapture %}
+{% else %}
+{% capture email %}<a href="mailto:customerservice@chicos.com">customerservice@chicos.com</a>{% endcapture %}
+{% capture phone %}1.888.855.4986{% endcapture %}
+{% capture url %}chicos.com{% endcapture %}
+{% capture nameLong %}Chico's{% endcapture %}
+{% capture name %}Chico's{% endcapture %}
+{% capture rewards %}Passport Information{% endcapture %}
+{% endif %}
+
+
+<ul id="top" class="list-unstyled">
+  <li><a href="#section-1">Order Status &amp; Tracking</a></li>
+  <li><a href="#section-2">Ordering &amp; Payment Options</a></li>
+  <li><a href="#section-3">{{ rewards }}</a></li>
+  <li><a href="#section-4">Returns, Adjustments and Exchanges</a></li>
+  <li><a href="#section-5">Shipping Options &amp; Charges</a></li>
+  <li><a href="#section-6">Technical Questions</a></li>
+  <li><a href="#section-7">International FAQ</a></li>
+</ul>
+
+{% if page.brand == 'soma' %}
+<hr>
+{% endif %}
+
+<section id="section-1">
+  <h2>Order Status &amp; Tracking</h2>
+  <h3>1. I didn't receive an order confirmation. What should I do?</h3>
+  <p>If you did not receive an email confirmation of your order please call us at {{ phone }} or email us at {{ email }}</p>
+  <h3>2. I just placed an order. Can I check the status of it online?</h3>
+  <p>For your convenience, {{ url }} offers an Order Inquiry feature. Once you have logged in under "My Account", select the Order Inquiry link from the menu and you will be able to review and track delivery on orders made online and by phone.</p>
+  <h3>3. What if an item is unavailable or backordered?</h3>
+  <p>While we make every effort to fulfill your order, occasionally certain items may be unavailable. We will notify you via your email confirmation if we are out of stock on an item that you have ordered. Any changes will be removed from your order total and will be reflected on your shipping invoice. Items that are backordered will be indicated in your confirmation.</p>
+  <h3>4. I received my order, but one item was missing. What should I do?</h3>
+  <p>If you received your order and an item is missing (that is not on backorder) please call Customer Service at {{ phone }} for further assistance.</p>
+  <h3>5. How do I modify or cancel my order?</h3>
+  <p>Due to the quick processing time at our distribution center, we are unable to cancel or modify an order after it has been submitted.</p>
+  <h3>6. My order status is In Progress. What does that mean?</h3>
+  <p>Your order is in the process of being fulfilled and shipped, but has not yet received a tracking number. Changes to your order cannot be made once your order is In Progress. We will gladly accept your return and provide an exchange or refund in accordance with our Return Policy.</p>
+  <h3>7. I just ordered something, but now it's on sale. Do you honor price adjustments?</h3>
+  <p>Yes, we do issue sale price adjustments. However, your order must have been placed no more than 10 days before the price change was made. Please have your invoice number ready and contact our Customer Service Department at {{ phone }} to see if you are eligible for a price adjustment.</p>
+  <p class="back-top"><a href="#top">Back to top</a></p>
+
+</section>
+
+{% if page.brand == 'soma' %}
+<hr>
+{% endif %}
+
+<section id="section-2">
+  <h2>Ordering &amp; Payment Options</h2>
+  <h3>1. I'm not sure what size I wear. Does {{ url }} have a size chart that can help me?</h3>
+  <p>Yes, we have a size chart link available on each product page. </p>
+  <h3>2. I saw an item in one of your boutiques, but can't seem to find it on your website.</h3>
+  <p>Merchandise selection on our website varies from our boutiques. Call us at {{ phone }} and one of our sales associates would be happy to try to locate any item for you.</p>
+  <h3>3. I want to purchase an item that I see online, but you don't have my size. Will it be back in stock?</h3>
+  <p>We are a specialty company and make limited quantities of our apparel and accessories. Not all items that sell out will be re-stocked. If we are expecting to re-stock the item we will show an "expected shipping date" on the order confirmation. If sufficient quantities are available in boutiques, you can contact Customer Service at {{ phone }} and the item can be located from a boutique location and mailed to your home.</p>
+  <h3>4. Is it possible to save items in my bag?</h3>
+  <p>You are able to save items in your shopping bag once you have logged on to the site. However, we do not recommend holding items in your bag for over a week. We are a specialty company and once an item sells out, the item will automatically be removed from your bag.</p>
+  <h3>5. Can I purchase a Gift Card online?</h3>
+  <p>Yes. Gift Cards are available for purchase online, by phone or at any participating {{ nameLong }} location.</p>
+  <h3>6. How do I redeem my Gift Card?</h3>
+  <p>Gift Cards may be redeemed at any participating {{ nameLong }} location, by phone or online. To redeem online have your Gift Card out as you will need to input the card # and pin during the Payment page at Checkout. For additional information regarding the redemption of Gift Cards, please call {{ phone }}.</p>
+  <h3>7. Do you gift wrap?</h3>
+  <p>While we do not offer gift wrap, we will gift box your order in a premium branded gift box.</p>
+  <h3>8. How is my order gift packaged?</h3>
+  <p>Gift packaging will include the following:</p>
+  <ul>
+    <li>Prices will be removed</li>
+    <li>Items will be wrapped in tissue</li>
+    <li>All items will be placed in one premium branded gift box per order</li>
+  </ul>
+  <h3>9. How do I select gift packaging?</h3>
+  <p>Select the gift box option at step two in your shopping cart at checkout.</p>
+  <h3>10. Is my gift packaging refundable?</h3>
+  <p>Your gift packaging is not refundable.</p>
+  <h3>11. What are the {{ name }} online payment options?</h3>
+  <p>We accept all major credit cards (Discover, American Express, Diner's Club International, JCB, CUP, Visa and MasterCard), Paypal, {{ nameLong }} Gift Cards and checkcards from either Visa or MasterCard.</p>
+  <h3>12. When will my credit card or Paypal account be charged?</h3>
+  <p>Your credit card or PayPal account will be authorized for the entire amount of the order at the time of purchase. The card or PayPal account will then be charged when the order is shipped. We will send you an email confirmation of your order once you have completed the order.</p>
+  <h3>13. My credit card was declined, but the charge is showing on my credit card account. What happened?</h3>
+  <p>The "charges" that are appearing on your card account are pre-authorization holds. They are not charges; however, your card company may be temporarily holding those funds. Your card may have declined for one of the following reasons:</p>
+  <ol>
+    <li> Your BILLING address entered does not exactly match the BILLING address that your card company has on file.</li>
+    <li>Your card company is declining your transaction because of insufficient funds or another reason from your card company.</li>
+  </ol>
+  <p>Please contact your card company to release any pending holds from {{ nameLong }} if you received an ERROR response that matches any of the reasons above. {{ nameLong }} has no control of the grace period for releasing authorized funds, particularly debit card funds.</p>
+  <h3>14. When will my order be processed?</h3>
+  <p>If your order fits all authorization criteria, then all orders placed Monday-Friday before 2pm EST ship out the same business day, pending any unexpected delays. Orders placed on weekends and holidays will be processed and shipped on the next business day. If an item is on backorder, the item will ship out once it passes our quality control process.</p>
+  <h3>15. I can't find the item I'm looking for. How can I search for it?</h3>
+  <p>You can either enter the 9-digit Item number from your catalog into the search box at the top-right of the screen, or you can click on the Search link to find products by Keyword, Color and Size.</p>
+  <h3>16. How do I use a coupon or discount code?</h3>
+  <p>You will have the opportunity to enter in your discount code during Step One of the Checkout process.</p>
+  <p class="back-top"><a href="#top">Back to top</a></p>
+</section>
+
+{% if page.brand == 'soma' %}
+<hr>
+{% endif %}
+
+<section id="section-3">
+  {% comment %}
+  The next section has large chunks of different info, so a larger if/then wrapper is needed
+  {% endcomment %}
+  {% if page.brand == 'whbm' %}
+    <h2>WHBM Rewards Information</h2>
+    <h3>1. What is WHBM Rewards?</h3>
+    <p>WHBM Rewards is our U.S.-based loyalty program at White House | Black Market. It has replaced the Black Book program. There is no fee to sign up or maintain membership. Register as a WHBM Rewards member online, at any U.S. White House | Black Market boutique or outlet, or by phone at {{ phone }}. Present or enter your WHBM Rewards member number every time you shop at White House | Black Market. Once you've achieved Silver status (total qualifying net spend in a calendar year is equal to or greater than $500), you'll automatically begin receiving a 5% discount and other program perks.</p>
+    <h3>2. I already have a WHBM Rewards Number but am creating an account online for the first time. Do I need my WHBM Rewards Number to Register?</h3>
+    <p>If you are new to whbm.com but have already received a WHBM Rewards member number by shopping in our boutiques, outlets, or by phone, there will be a field in the online Registration page where you can enter your WHBM Rewards number. This allows us to locate you in our records and ensure that you receive your WHBM Rewards benefits as you shop online. You can find your WHBM Rewards member number on the back of your WHBM catalog or on your receipt. If you are already a registered user on whbm.com and are logged-in to the site, you will automatically receive your WHBM Rewards benefits. In this case you will not need to enter your WHBM Rewards member number.</p>
+    <h3>3. The website gave me a different WHBM Rewards Number. What do I do now?</h3>
+    <p>If you already have a WHBM Rewards number and did not enter it when you created an account online, the number you see is a new WHBM Rewards number. Both numbers should merge within 72 hours and your original number is the one that will remain active. Any purchasing you do on the temporary number will be transferred to your original account once merged. In the meantime, if there should be any interference with your discounts and benefits, just contact us at {{ phone }} or {{ email }} with your order information and we will make the adjustments for you. If you have achieved Silver status (total qualifying net spend in a calendar year is equal to or greater than $500) and your order does not reflect your member discounts, please contact us with your order information and we will make the adjustments for you.</p>
+    <h3>4. I am a Silver, Gold or Platinum Level WHBM Rewards Member. Where will I see my 5% discount applied to my online order?</h3>
+    <p>If you have achieved Silver, Gold or Platinum status (total net spend in a calendar year is equal to or greater than $500), you will see all of your discounts, including your 5% WHBM Rewards discount on merchandise, in Step 3 of the Checkout process. In addition, you will receive a confirmation via email once your order has been processed. If the discount is not reflected, please contact customer service at 877.948.2525 or email us at a {{ email }} to review your order.</p>
+  {% elsif page.brand == 'soma' %}
+    <h2>Love Soma Rewards Program Information</h2>
+    <h3>1. What is the Love Soma Rewards?</h3>
+    <p>Love Soma Rewards is Soma’s customer loyalty program, consisting of three tiers: Preferred, Gold and Platinum. As a member of the program, you will automatically receive points for every dollar you spend on qualifying merchandise (excluding gift cards, promotional offers, taxes and shipping) at Soma boutiques and outlets, online at soma.com, or by phone. For every 125 Points you earn, you will receive a $5 Reward certificate.</p>
+    <h3>2. How do I join Love Soma Rewards?</h3>
+    <p>Love Soma Rewards is open to U.S. and International residents, excluding Canadian residents. Unfortunately, Canadian residents are not eligible for Love Soma Rewards. If you are a Canadian resident, you may create an online account, but you will not be enrolled in our loyalty program. There is no fee to join or maintain membership in the Program. You may sign up for Love Soma Rewards online at soma.com, at any Soma boutique or outlet, or by phone at {{ phone }} (TTY: 888.550.5559) by providing your first and last name, valid mailing address, phone number, email address and birth month.</p>
+    <h3>3. The website gave me a different Love Soma Rewards number, what do I do now?</h3>
+    <p>The numbers should merge within 72 hours and your original number is the one that will remain active. Any purchasing you do on the temporary number will be transferred to your original account once merged. In the meantime, if this interferes with your discounts and benefits, just contact us at 866.768.7662 or customerservice@soma.com with your order information and we will make the adjustments for you.</p>
+    <h3>4. Where do I input my Love Soma Rewards Number?</h3>
+    <p>If you are new to soma.com but have already received a Love Soma Rewards member number by shopping in our U.S. boutiques or by phone, there will be a field on the online Registration page where you can enter your Love Soma Rewards number. This allows us to locate you in our records and ensure that you earn Points and receive your Love Soma Rewards benefits for all your online purchases. You can find your Love Soma Rewards member number on the back of your Soma catalog or on your receipt.</p>
+    <p>You will automatically receive your Love Soma Rewards benefits (such as free shipping when applicable) if you are already a registered user on soma.com and remain logged-in to the site. In this case you will not need to enter your Love Soma Rewards member number.</p>
+    <p>For more Love Soma Rewards FAQ's, <a href="#" data-toggle="modal" data-target="#modal-rewards-faq">click here</a>.</p>
+  {% else %}
+    <h2>Passport Program Information</h2>
+    <h3>1. What is the Passport Program?</h3>
+    <p>The Passport Program is our U.S.-based loyalty program at {{ name }}. There is no fee to sign up or maintain membership. Sign up for Passport online, at any U.S. {{ name }} boutique, or by phone at {{ phone }} (TTY: 888-550-5559). To join the program and receive benefits, you must provide your full name, a valid email address, phone number and a valid U.S. mailing address. Present your Passport card or enter your qualifying membership number every time you shop at {{ name }}. When your qualifying merchandise purchases reach $500 (whether it takes one day or three years - there's no limit on time) you will be upgraded to Passport in our Passport Program.</p>
+    <h3>2. The website gave me a different Passport or Introductory Passport number, what do I do now?</h3>
+    <p>The numbers should merge within 72 hours and your original number is the one that will remain active. Any purchasing you do on the temporary number will be transferred to your original account once merged. In the meantime, if this interferes with your discounts and benefits, just contact us at 888.855.4986 or {{ email }} with your order information and we will make the adjustments for you. If you are a full Passport member (qualifying merchandise purchases reach $500) and your order does not reflect your member discounts, please contact us with your order information and we will make the adjustments for you.</p>
+    <h3>3. Where do I input my Passport or Introductory Passport Number?</h3>
+    <p>If you are new to the website but have already received a Passport or Introductory Passport number by shopping in our boutiques or by phone, there will be a field in the online Registration page where you can enter your Passport or Introductory Passport number. By doing so, it will help us locate you in our records and ensure that you receive your Passport benefits as you shop online.</p>
+    <p>If you are already a registered user on {{ url }} and are logged-in to the site you will automatically receive your Passport benefits. In this case you will not need to enter your Passport or Introductory Passport number.</p>
+    <h3>4. I am a Passport customer. Where will I see my 5% discount applied to my order?</h3>
+    <p>If you are a Passport member (qualifying merchandise purchases reach $500), you will see all of your discounts, including your 5% Passport discount on merchandise, on Step 3 of the Checkout process. In addition, you will receive a confirmation via email once your order has been processed. If the discount is not reflected, please contact customer service at 888.855.4986 or email us at {{ email }} to review your order.</p>
+  {% endif %}
+  <p class="back-top"><a href="#top">Back to top</a></p>
+</section>
+
+{% if page.brand == 'soma' %}
+<hr>
+{% endif %}
+
+<section id="section-4">
+  {% if page.brand == 'soma' %}
+    <h2>Returns, Adjustments and Exchanges</h2>
+    <h3>Soma Return Policy</h3>
+    <p>Merchandise returns and exchanges will be accepted (excluding “final sale” items and gift boxes) within 60 days of the date of purchase. Returns must be accompanied by original or gift receipt, or date and amount of purchase must be validated in our system. Customer identification may be required. Refunds will be made in the original form of payment, except that merchandise credit may be given for gift receipt returns. If your original purchase was made by check, you may choose to receive a merchandise card, or a check will be mailed within 30 days of return. Merchandise must be in its original condition, unworn and unwashed, or merchandise must be defective. Merchandise purchased in an outlet store must be returned to an outlet. Purchases must be returned in the country of original purchase. We are unable to accept the return of product purchased online via BorderFree.</p>
+    <h3>Standards for Shipping Hazardous Materials Pertaining to Beauty Products</h3>
+    <p>Flammable substances (ex. aerosols and alcohol-based products) may be mailed only via surface transportation in accordance with U.S. postal regulations. Full responsibility rests with the consumer to comply with all postal and non postal statutes and regulations regarding mail. Information regarding postal statutes, regulations, and mailing requirements is available from your local Postmaster or Postal Service Business Mail Entry Manager, and at the Postal Service's mailing standards Web site at <a href="http://www.usps.com">www.usps.com</a>."</p>
+    <h3>General Points to Remember When Returning by Mail</h3>
+    <ul>
+      <li>Pack items safely for shipping using original packaging.</li>
+      <li>You may use the carrier of your choice by creating your own label and in compliance with applicable Department of Transportation requirements.</li>
+      <li>We recommend using a form of traceable and insurable delivery</li>
+    </ul>
+    <h3>Telephone and Online Purchases</h3>
+    <h4>U.S. Customers:</h4>
+    <h5>Paypal Orders</h4>
+    <p>Merchandise purchased via PayPal may not be returned in stores but must be returned via mail using the return shipping label provided. If you do not have your shipping label, please contact Customer Service.</p>
+    <h5>Bring It to a Boutique</h5>
+    <p>If you prefer to return or to exchange your purchase in one of our boutiques, our sales associates will be happy to help you with your return or exchange at any of our Soma U.S. boutiques (excluding outlets).</p>
+    <p><a href="https://stores.soma.com/?_ga=1.849841.1250420781.1484944810">Click here</a> to find the boutique or outlet nearest you.</p>
+    <h5>Make a Return by Mail</h5>
+    <p>If you prefer to send your return by mail, please affix the Prepaid Return Shipping Label that we provided, along with your invoice, to the box and drop off your package in the U.S. mail. Please note that when we receive your return, we'll deduct $7.00 USD from your refund for handling fees. If you prefer to use the carrier of your choice and create your own label, we recommend using a traceable and insured form of delivery.</p>
+    <h5>Please ship returns to:</h5>
+    <address>Soma Returns Department<br>
+    1020 Barrow Industrial Parkway<br>
+    Winder, GA 30680<br>
+    USA</address>
+    <h3>Returned Check Policy</h3>
+    <p>A service charge of $25 or the maximum permitted by law will be assessed for NSF checks. The amount of the check and service charge may be collected via electronic debit or bank draft drawn from your account.</p>
+    <h3>Price Adjustment Policy</h3>
+    <p>We will adjust the price of an item on a one-time basis if price decreases within 10 days of original purchase if you present your original receipt in store for an in store purchase. Online or catalog purchases are not eligible for price adjustment in our stores.</p>
+    <h3>Final Sale</h3>
+    <p>Merchandise marked final sale is sold "as is" and may not be returned or exchanged and is not eligible for price adjustment.</p> 
+    <h3>More Information</h3>
+    <p>For more information regarding returns, adjustments, and exchanges, including our return policy for International customers, please read our <a href="returns.html">Return Policy</a>.</p>
+  {% else %}
+    <h2>Returns, Adjustments and Exchanges</h2>
+    <h3>1. For web &amp; catalog purchases</h3>
+    <h4>{{ name }}{% if page.brand == 'whbm' %} -{% endif %} No Problem 60 Day Return Policy</h4>
+    {% if page.brand == 'whbm' %}
+      <p>Returns made within 60 days of purchase are graciously accepted! (Wedding Dress 30 Day Return Policy is stated below.) Merchandise must be unworn and unwashed, or defective. Catalog and website merchandise may be returned to any boutique (excluding outlets) or to White House | Black Market Returns Department, 1275 Barrow Industrial Pkwy, Auburn, GA 30011. Returns made with the original receipt will be refunded in the original tender. Returns without the original receipt will be refunded at the lowest price in the form of a merchandise credit.</p>
+      <h4>Wedding Dress Returns</h4>
+      <p>Returns made within 30 days of purchase are graciously accepted! White House Black Market offers free returns for Wedding Dress purchases via a pre-paid postage return label. Merchandise must be unworn, unwashed, unaltered or defective. All Wedding dresses are delivered with an attached "product" tag. Please do not remove this tag until you are completely satisfied with your purchase. Once the tag has been removed, the garment is no longer returnable. Returns made with the original receipt will be refunded in the original tender. Returns without the original receipt will be refunded at the lowest selling price in the form of a merchandise credit.</p>
+      <p class="alert alert-info">
+        <strong>Please note: Wedding dresses may not be returned to White House | Black Market Boutiques or Outlet boutiques</strong>
+      </p>
+    {% else %}
+      <p>Returns made within 60 days of purchase are graciously accepted! Merchandise must be unworn and unwashed, or defective. Catalog and website merchandise may be returned to any boutique (excluding outlets) or to {{ name }} Returns Department, 1275 Barrow Industrial Pkwy, Auburn, GA 30011. Returns made with the original receipt will be refunded in the original tender. Returns without the original receipt will be refunded at the lowest selling price in the form of a merchandise credit.</p>
+    {% endif %}
+    <h4>{{ name }} {% if page.brand == 'whbm' %}-{% else %}Price{% endif %} Adjustment Policy</h4>
+    <p>We will gladly adjust the price of an item if it decreases within 10 days of your original purchase! A one time price adjustment may be made by calling {{ phone }}. Online or catalog purchases are not eligible for adjustment in our boutiques.</p>
+    <h3>2. For purchases made in our boutiques</h3>
+    <h4>{{ name }}{% if page.brand == 'whbm' %} -{% endif %} No Problem 60 Day Return Policy</h4>
+    <p>Returns made within 60 days of purchase are graciously accepted! Merchandise must be unworn and unwashed, or defective. Outlet purchases must be returned to an outlet. Returns made with the original receipt will be refunded in the original tender. Refunds by check will be mailed within 30 days. Returns without the original receipt will be refunded at the lowest selling price in the form of a merchandise credit. Customer identification may be required for a refund.</p>
+    <h3>3. Returned check policy</h3>
+    <p>Checks returned unpaid are subject to a service charge of $25 or the maximum allowed by law. The returned check, together with service charges, may be collected via electronic debit or bank draft drawn from your account.</p>
+    <h3>4. {{ name }} {% if page.brand == 'whbm' %}-{% else %}Price{% endif %} Adjustment Policy</h3>
+    <p>We will gladly adjust the price of an item if it decreases within 10 days of your original purchase! A one time price adjustment may be made on original or sale price merchandise. Customer must physically present original receipt at boutique if purchase was at boutique, (at outlet if purchase was at outlet). Online or catalog purchases are not eligible for price adjustment in our boutiques.</p>
+    <p class="back-top"><a href="#top">Back to top</a></p>
+  {% endif %}
+</section>
+
+{% if page.brand == 'soma' %}
+<hr>
+{% endif %}
+
+<section id="section-5">
+  <h2>Shipping Options &amp; Charges</h2>
+  <h3>1. Do you ship to APO/FPO military addresses or P.O. Boxes?</h3>
+  <p>We do ship to military addresses and P.O. Boxes, however, we can only ship these items via Basic and Quick delivery. Please note that Basic delivery requires an additional three days of arrival time.</p>
+  <h3>2. Do you save my billing and shipping information so I don't have to enter it each time I place an order?</h3>
+  <p>If you are a registered user and have signed in, yes. The current address we have on file for you will automatically show up in Step 2 of the Checkout process. You will be able to make any revisions at this time or enter in a different "Ship To" address.</p>
+  <h3>3. What is the difference between a shipping and a billing address?</h3>
+  <p>Your shipping address is where you would like your order to be shipped to; your billing address is the same address you used to place an order with your credit card.</p>
+  <h3>4. What are the methods of shipping and charges?</h3>
+  {% include _molecules/tables/shipping.html %}
+</section>
+
+{% if page.brand == 'soma' %}
+<hr>
+{% endif %}
+
+<section id="section-6">
+  <h2>Technical Questions</h2>
+  <h3>1. I forgot my password. What do I do now?</h3>
+  <p>When you click on "My Account" to log in you'll see a link to receive a Password hint/reminder. If this doesn't help, click "Email Me My Password" and your password will be sent to you via email within 24 hours.</p>
+  <h3>2. I spelled my name wrong when I registered. How do I correct it?</h3>
+  <p>Sign in on "My Account" using your email address and password. Next, click on "Account Profile." Make any necessary changes here and save your changes. If you make a change to your name and see that another {% if page.brand == 'whbm' %}member{% elsif page.brand == 'soma' %}Rewards{% else %}Passport{% endif %} number has been assigned to you, please contact our Customer Service Center at {{ phone }} and we will get your accounts corrected.</p>
+  <h3>3. How accurate is the color display on the Internet?</h3>
+  <p>Because it's important that all {{ url }} customers be pleased with their purchases, be advised that all color varies slightly from one computer monitor to another.</p>
+  <h3>4. Does {{ url }} use cookies?</h3>
+  <p>To enhance your shopping experience at {{ url }}, we use cookies, which are small data files that we store on your computer's hard drive. Rest assured, the cookies we use do not store personally identifiable information. They simply enable us to keep track of your order as you shop our site. For example, {{ url }} uses cookies in order to save your shopping bag information so that you can browse from page to page without losing that information. When shopping {{ url }}, we recommend you use a cookie-enabled browser in order to avoid having to constantly re-enter information. Cookies also enable us to monitor and maintain information about your use of our site. The information we retrieve assists us with tracking your order, improving our site design, products, services, contests and promotions and overall shopping experience.</p>
+  <h3>5. I keep getting an error page. What should I do?</h3>
+  <p>Please call our Customer Service Center at {{ phone }} and be prepared to provide them with the error number listed on the error page.</p>
+  <h3>6. Do I have to provide my email address if I want to browse the products?</h3>
+  <p>You do not need to provide your email address if you just want to look around and browse the products on {{ url }}. We will ask you for your email address when you choose to make a purchase so that we may send you an order confirmation immediately after you place your order. This is to let you know we've received your information correctly and we are processing your order. When you register, there is a checkbox for you to select if you DO NOT wish to be contacted by email from {{ nameLong }}. If selected, we will not send you any promotional emails, only your order confirmation email.</p>
+  <h3>7. Do I have to sign in?</h3>
+  <p>{{ name }} does not require you to be registered or sign in to make a purchase on our web site. We do strongly recommend creating an account online for all the great benefits, but we welcome guest shopping. Visit the "My Account" link at the top of any page to sign in.</p>
+  <p class="back-top"><a href="#top">Back to top</a></p>
+</section>
+
+{% if page.brand == 'soma' %}
+<hr>
+{% endif %}
+
+<section id="section-7">
+  <h2>International FAQ</h2>
+  <h3>Who is Borderfree?</h3>
+  <p>Borderfree is a groundbreaking global ecommerce solution that allows us to present our international shoppers with {% if page.brand == 'whbm' %}White House | Black Market's{% elsif page.brand == 'soma' %}Soma's{% else %}Chico's{% endif %} product prices in the currency of their choice, aggressive international shipping {% if page.brand == 'whbm' %}and handling{% endif %} costs, and the lowest possible guaranteed order total. The Borderfree solution allows us to serve the best possible shopping experience to our international customers, so you can purchase from us with confidence.</p>
+  <h3>How do I place an order?</h3>
+  <p>It's easy! Our website recognizes when you are shopping from an international location. You may also click on the flag in the top right of the navigation bar to select your shipping destination and preferred currency. All prices will automatically be converted into your chosen currency.</p>
+  <p>Shop our website as you would normally by adding items to your bag and then clicking on the checkout button. We will calculate and display in your chosen currency a total transaction amount that includes your merchandise purchases, all shipping {% if page.brand == 'whbm' %}and handling{% endif %} costs to your selected international destination, and any applicable duties and taxes.</p>
+  <h3>How are my shipping {% if page.brand == 'whbm' %}and handling{% endif %} and sales tax costs calculated?</h3>
+  <p>Our international ecommerce partner, Borderfree, calculates and guarantees your international shipping {% if page.brand == 'whbm' %}and handling{% endif %} costs automatically during our checkout process. Your international shipping {% if page.brand == 'whbm' %}and handling{% endif %} costs are based on your selected level of service (e.g., standard or expedited shipping), your number of items, weight of your items, your selected destination country, and applicable duties and taxes.</p>
+  <h3>Can I ship an order outside of the U.S. but still pay in U.S. Dollars (USD)?</h3>
+  <p>Yes! You can ship your order to any international destination currently supported by Borderfree and pay in U.S. dollars. We also support many other currencies.</p>
+  <h3>What are the accepted methods of payment for international orders?</h3>
+  <p>For your convenience, we accept Visa, Mastercard, American Express, JCB and China UnionPay.</p>
+  <h3>Can I use my gift card or merchandise credit for international orders?</h3>
+  <p>We are unable to accept gift cards or a merchandise credit as a payment method for international orders at this time.</p>
+  <h3>When am I billed?</h3>
+  <p>Your credit card will be billed by our e-commerce partner, Borderfree, at the time your purchases leave the United States of America and your credit-card statement will read "BF*{% if page.brand == 'whbm' %}WHBM{% elsif page.brand == 'soma' %}SOMA{% else %}Chicos{% endif %}" with 'BF' denoting the Borderfree network.</p>
+  <h3>How can I track my International order?</h3>
+  <p>You will receive an email that provides tracking information once your order ships. You may also track packages from within <a href="/store/checkout/orderstatuscheck.jsp?entity=01" target="_blank">your order history</a>.</p>
+  <h3>Are there any items that cannot be shipped internationally?</h3>
+  <p>If any of your items cannot be exported from the United States or imported into your selected country, you will be notified during the checkout process. As a general rule, consumer commodities such as aerosols, fragrances, and other alcohol-based products may not be available for international shipping.</p>
+  <h3>Can I return my items?</h3>
+  <p>Yes. Return instructions are provided with your package.</p>
+  <p class="back-top"><a href="#top">Back to top</a></p>
+</section>

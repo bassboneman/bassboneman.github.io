@@ -1,0 +1,67 @@
+{% comment %}make sure all forms work with unique IDs{% endcomment %}
+
+{% if include.placement == 'modal-cc' %}
+  {% capture cc-number %}cc-number-modal-cc{% endcapture %}
+  {% capture cc-month %}cc-month-modal-cc{% endcapture %}
+  {% capture cc-year %}cc-year-modal-cc{% endcapture %}
+  {% capture cc-security %}cc-security-modal-cc{% endcapture %}
+  {% capture cc-save-number %}cc-save-number-modal-cc{% endcapture %}
+  {% capture cc-billing-same %}cc-billing-same-modal-cc{% endcapture %}
+{% else %}
+  {% capture cc-number %}cc-number{% endcapture %}
+  {% capture cc-month %}cc-month{% endcapture %}
+  {% capture cc-year %}cc-year{% endcapture %}
+  {% capture cc-security %}cc-security{% endcapture %}
+  {% capture cc-save-number %}cc-save-number{% endcapture %}
+  {% capture cc-billing-same %}cc-billing-same{% endcapture %}
+{% endif %}
+
+<div class="row row-tight">
+  <div class="col-md-8 col-sm-6">
+    <div class="field-wrap">
+      {% include _atoms/forms/input.html class="input-lg has-tooltip" labelName='Credit Card Number' labelID=cc-number inputType='text' icon='icon-lock-checkout' ccType='visa' extra='data-card="visa" pattern="\d*"' tooltip='Guaranteed SAFE Checkout - This is a secure credit card payment' %}
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-md-8 col-sm-6">
+    <div class="row row-tight">
+      <div class="col-sm-6">
+        <div class="field-wrap">
+          {% include _atoms/forms/select.html selectClass='input-lg' labelName='Month' labelID=cc-month selectOptions='<option value="">Month</option><option value="January">January</option><option value="February">February</option><option value="March">March</option><option value="April">April</option><option value="May">May</option><option value="June">June</option><option value="July">July</option><option value="August">August</option><option value="September">September</option><option value="October">October</option><option value="November">November</option><option value="December">December</option>' %}
+        </div><!-- .field-wrap -->
+      </div><!-- .col-sm-6 -->
+      <div class="col-sm-6">
+        <div class="field-wrap">
+          {% include _atoms/forms/select.html selectClass='input-lg' labelName='Year' labelID=cc-year selectOptions='<option value="">Year</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option>' %}
+        </div><!-- .field-wrap -->
+      </div><!-- .col-sm-6 -->
+    </div><!-- .row -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-md-4 col-sm-3">
+    <div class="field-wrap">
+      {% include _atoms/forms/input.html formGroupClass='has-tooltip' class="input-lg" labelName='Security Code' labelID=cc-security inputType='password' tooltip='Please enter the number located on the back of your credit card in the signature area.' %}
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+{% include _atoms/forms/checkbox.html checkValue=cc-save-number labelName="Save this credit card for my next order" checked='checked' styled='yes' %}
+<hr>
+
+<div class="radio-list">
+  <div id="shipping-address-separate" class="checkbox checkout-toggle">
+    <label>
+      <input type="checkbox" value="shipping-address-separate" checked="checked">
+      <span class="input-styled">Billing Address same as Shipping Address</span>
+    </label>
+    <div id="checkout-shipping-address-separate" class="checkout-toggle-content toggle-hidden toggle-content-padding">
+      {% include _molecules/checkout/forms/address.html %}
+    </div><!-- .checkout-toggle-content -->
+  </div><!-- .checkbox -->
+</div><!-- .radio-list -->
+
+
+{% if include.placement == 'modal-cc' %}
+<hr>
+{% endif %}

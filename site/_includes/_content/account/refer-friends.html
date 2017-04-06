@@ -1,0 +1,28 @@
+<h2>Give $15, Get $15</h2>
+<p>Give your friends $15 off their first Soma purchase and get a $15 Reward (that’s 375 Bonus Points) for each friend that joins and makes a purchase.</p>
+<p>Simply provide your friends' names and email addresses below. For each friend who registers a Love Soma Rewards account using the email address you provide, we'll deposit 375 Bonus Points into your account at the time of your friend's first purchase.</p>
+<hr>
+<h3>Enter Your Friends' Information</h3>
+
+<form action="#">
+  <div class="refer-friend-fields">
+    <div class="row row-tight refer-friend-field">
+      <div class="col-xs-6 col-md-5">
+        {% include _atoms/forms/input.html labelName='First Name' labelID='first-name-1' inputType='text' %}
+      </div>
+      <div class="col-xs-6 col-md-5">
+        {% include _atoms/forms/input.html labelName='Email Address' labelID='email-1' inputType='email' %}
+      </div>
+    </div>
+  </div>
+
+  <p class="text-right"><button class="btn btn-default btn-sm add-field">Add Friend</button></p>
+
+ <!--  <div class="row row-tight">
+    <div class="col-xs-6 col-xs-offset-6 col-sm-4 col-sm-offset-8 col-md-2 col-md-offset-10">
+      <p><button class="btn btn-default btn-sm btn-block add-field">Add Friend</button></p>
+    </div>
+  </div> -->
+  <p class="small">Email addresses submitted will be used solely for purposes of sending your friend a single notification email. Your friend will not be contacted further unless she or he provides an email address when creating an Account or purchasing online. See our <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+  <p>{% include _atoms/buttons/button.html btnClass='btn-primary' btnLabel='Submit' %}</p>
+</form>

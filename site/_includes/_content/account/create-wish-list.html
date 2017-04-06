@@ -1,0 +1,92 @@
+<h2>Give More Than Just Hints</h2>
+<p>Sign up and enter up to 10 email addresses of friends and family so they may have access to your Wish List. (*The people granted access to your Wish List will be able to view your shipping address.)</p>
+
+<div class="row">
+  <div class="col-sm-6">
+    <form action="">
+      <h3>Shipping Address</h3>
+      <p>This information will be used by people shopping from your Wish List.</p>
+      <div>Type of Address</div>
+      {% include _atoms/forms/radio.html radioGroup='address-type' radioID='address-type-1' radioValue='us-address' labelName='U.S. Address' checked='checked' %}
+      {% include _atoms/forms/radio.html radioGroup='address-type' radioID='address-type-2' radioValue='canadian-address' labelName='Canadian Address' %}
+      {% include _atoms/forms/radio.html radioGroup='address-type' radioID='address-type-3' radioValue='military-address' labelName='Military APO/FPO/DPO Address' %}
+      {% include _atoms/forms/radio.html radioGroup='address-type' radioID='address-type-4' radioValue='international-address' labelName='International Address' %}
+
+      <div class="row row-tight">
+        <div class="col-md-6">
+          {% include _atoms/forms/input.html labelName='First Name *' labelID='first-name' inputType='text' %}
+        </div>
+        <div class="col-md-6">
+          {% include _atoms/forms/input.html labelName='Last Name *' labelID='last-name' inputType='text' %}
+        </div>
+      </div>
+      {% include _atoms/forms/input.html labelName='Apt / Unit / Suite' labelID='suite' inputType='text' %}
+      <div class="row row-tight">
+        <div class="col-md-6">
+          {% include _atoms/forms/input.html labelName='City *' labelID='city' inputType='text' %}
+        </div>
+        <div class="col-md-6">
+          {% include _atoms/forms/select.html labelName='State *' labelID='state' selectOptions='<option value="">Alabama</option><option value="">Yukon</option><option value="">Winterfell</option>' %}
+        </div>
+      </div>
+      <div class="row row-tight">
+        <div class="col-md-6">
+          {% include _atoms/forms/input.html labelName='Zip/Postal Code *' labelID='zip-postal' inputType='text' %}
+        </div>
+        <div class="col-md-6">
+          {% include _atoms/forms/select.html labelName='Country *' labelID='country' selectOptions='<option value="">United States</option><option value="">Canada</option><option value="">Hobbiton</option>' %}
+        </div>
+      </div>
+      {% include _atoms/forms/phone.html labelName='Telephone *' labelID1='phone1' labelID2='phone2' labelID3='phone3' %}
+      {% include _atoms/forms/input.html labelName='Email *' labelID='email' inputType='email' %}
+      {% include _atoms/forms/input.html labelName='Confirm Email *' labelID='email-confirm' inputType='email' %}
+      <div class="form-group">
+        {% include _atoms/buttons/button.html btnClass='btn-default' btnLabel='Update Information' %}
+      </div>
+    </form>
+  </div>
+
+  <div class="col-sm-6">
+    <h3>Authorized Viewers</h3>
+    {% comment %}if no viewers{% endcomment %}
+    <p>No one is currently authorized to view your Wish List.</p>
+    {% comment %}else{% endcomment %}
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>
+            <strong {% if page.brand == 'soma' %}class="text-uppercase"{% endif %}>Peter Quill</strong><br>
+            starlord@gmail.com
+          </td>
+          <td><a href="#" {% if page.brand == 'soma' %}class="text-uppercase"{% endif %}>Edit</a></td>
+        </tr>
+        <tr>
+          <td>
+            <strong {% if page.brand == 'soma' %}class="text-uppercase"{% endif %}>Groot</strong><br>
+            i.am.groot@gmail.com
+          </td>
+          <td><a href="#" {% if page.brand == 'soma' %}class="text-uppercase"{% endif %}>Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+    {% comment %}endif{% endcomment %}
+    {% if page.brand == 'chicos' %}
+      {% include _atoms/buttons/button-link.html href='#' btnClass='btn-default btn-sm' btnLabel='Send New Invitations to My Users' btnExtra='data-toggle="popup-invitations" data-brand="chicos"' %}
+    {% elsif page.brand == 'soma' %}
+      {% include _atoms/buttons/button-link.html href='#' btnClass='btn-default btn-sm' btnLabel='Send New Invitations to My Users' btnExtra='data-toggle="popup-invitations" data-brand="soma"' %}
+    {% else %}
+      {% include _atoms/buttons/button-link.html href='#' btnClass='btn-default btn-sm' btnLabel='Send New Invitations to My Users' btnExtra='data-toggle="popup-invitations" data-brand="whbm"' %}
+    {% endif %}
+    <hr>
+    <h3>Invite Users</h3>
+    <p>This information will be used to send an email invitation with a link and password to let this user view your Wish List.</p>
+    <form action="">
+      {% include _atoms/forms/input.html labelName='First Name *' labelID='first-name-invite' inputType='text' %}
+      {% include _atoms/forms/input.html labelName='Email Address *' labelID='email-invite' inputType='email' %}
+      {% include _atoms/forms/textarea.html labelID='note' labelName='Note' %}
+      <div class="form-group">
+        {% include _atoms/buttons/button.html btnClass='btn-default' btnLabel='Add User' %}
+      </div>
+    </form>
+  </div>
+</div>

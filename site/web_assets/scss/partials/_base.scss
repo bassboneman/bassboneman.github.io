@@ -1,0 +1,88 @@
+html {
+  font-size: 62.5%; // Sets up the Base 10 stuff
+}
+body {
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  color: $color-text;
+  letter-spacing: $letter-spacing;
+}
+
+.longform {
+  @include longform;
+  li,
+  dd,
+  p,
+  .detail-wrap,
+  .alert,
+  table,
+  td,
+  th {
+    letter-spacing: 0;
+  }
+  section:before { 
+    @include anchor-scroll; 
+  }
+}
+
+hr {
+  border-color: $color-border;
+}
+a {
+  color: $color-link;
+  text-decoration: $link-static;
+  &:hover,
+  &:active {
+    color: $color-link-hover;
+    text-decoration: $link-static;
+  }
+  &:focus {
+    color: $color-link;
+  }
+}
+.block {
+  display: block;
+}
+.block-lg {
+  @media screen and (min-width: 992px) {
+    display: block;
+  }
+}
+.margin-top {
+  margin-top: .5rem;
+}
+.margin-top-lg {
+  margin-top: 1rem;
+}
+// .margin-none {
+//   margin: 0;
+// }
+@media screen and (min-width: 992px) {
+  .text-right-lg {
+    text-align: right;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  small {
+    color: $color-text;
+  }
+}
+dl {
+  margin-bottom: 0;
+}
+.img-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+ul.ul-spaced {
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+// .dropdown:hover .dropdown-menu {
+//   display: block;
+//   // margin-top: 0; // remove the gap so it doesn't close
+// }

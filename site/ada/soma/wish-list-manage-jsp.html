@@ -1,0 +1,215 @@
+<!-- Parent Section Begin -->
+
+<h2 class="pageName" id="top">wish_list_manage.jsp</h2>
+
+<section>
+
+    <!-- Individual Issue Section Begin -->
+
+    <div class="sectionContent">
+
+        <div class="sectionHead">
+
+            <p class="issue">Form elements must have labels</p>
+
+            <p class="issueHeader">Disabilities Affected:</p>
+
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Low Vision</li>
+                <li>Mobility/Dexterity</li>
+
+            </ul>
+
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+                <li>Section 508: MUST</li>
+
+            </ul>
+
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.3.1 Info and Relationships</li>
+                <li>3.3.2 Labels or Instructions</li>
+                <li>4.1.2 Name, Role, Value</li>
+
+            </ul>
+
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+
+                <li>1194.22 (n) Information required to complete electronic forms online</li>
+                <li>1194.21 (l) Form fields, directions, and cues</li>
+
+            </ul>
+
+        </div>
+
+        <!-- begin sample code -->
+        <div class="sampleHTML">
+
+            <h3>HTML:</h3>
+
+            <p class="comment"></p>
+
+            <span class="code">&lt;input id=&quot;listAddrType0&quot; name=&quot;listAddrType&quot; value=&quot;USA&quot; onclick=&quot;populateOptions('wishListShippingAddressFrm','bill');&quot; type=&quot;radio&quot; checked=&quot;&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;listAddrType1&quot; name=&quot;listAddrType&quot; value=&quot;Canada&quot; onclick=&quot;populateOptions('wishListShippingAddressFrm','bill')&quot; type=&quot;radio&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;listAddrType2&quot; name=&quot;listAddrType&quot; value=&quot;Military&quot; onclick=&quot;populateOptions('wishListShippingAddressFrm','bill')&quot; type=&quot;radio&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;listAddrType3&quot; name=&quot;listAddrType&quot; value=&quot;International&quot; onclick=&quot;populateOptions('wishListShippingAddressFrm','bill')&quot; type=&quot;radio&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;billFirstName&quot; maxlength=&quot;40&quot; name=&quot;billFirstName&quot; value=&quot;Homer&quot; class=&quot;txtbx&quot; type=&quot;text&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;billLastName&quot; maxlength=&quot;40&quot; name=&quot;billLastName&quot; value=&quot;Gaines&quot; class=&quot;txtbx&quot; type=&quot;text&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;billAddress1&quot; maxlength=&quot;35&quot; name=&quot;billAddress1&quot; value=&quot;123 here&quot; class=&quot;txtbx&quot; type=&quot;text&quot; size=&quot;40&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;billAddress2&quot; maxlength=&quot;35&quot; name=&quot;billAddress2&quot; value=&quot;&quot; class=&quot;txtbx&quot; type=&quot;text&quot; size=&quot;40&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;billCity&quot; maxlength=&quot;40&quot; name=&quot;billCity&quot; value=&quot;Ft&quot; class=&quot;txtbx&quot;&gt;</span>
+            <span class="code">&lt;select id=&quot;billCountry&quot; name=&quot;billCountry&quot;&gt;&lt;option value=&quot;USA&quot;&gt;USA&lt;/option&gt;
+                  &lt;/select&gt;</span>
+            <span class="code">&lt;select id=&quot;stateList&quot; name=&quot;billState&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;billPostalCode&quot; maxlength=&quot;10&quot; name=&quot;billPostalCode&quot; value=&quot;33912&quot; class=&quot;txtbx&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;billPhone&quot; maxlength=&quot;14&quot; name=&quot;billPhone&quot; value=&quot;1231231234&quot; class=&quot;txtbx&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;email&quot; maxlength=&quot;40&quot; name=&quot;email&quot; value=&quot;homer.gaines@chicos.com&quot; class=&quot;txtbx&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;confirmEmail&quot; maxlength=&quot;40&quot; name=&quot;confirmEmail&quot; value=&quot;&quot; class=&quot;txtbx&quot;&gt;</span>
+            <span class="code">&lt;input id=&quot;fName&quot; maxlength=&quot;40&quot; name=&quot;firstName&quot; value=&quot;&quot; class=&quot;full-width-text&quot; type=&quot;text&quot;&gt;</span>
+            <span class="code"></span>
+            <span class="code">&lt;input id=&quot;iEmail&quot; maxlength=&quot;40&quot; name=&quot;email&quot; value=&quot;&quot; class=&quot;full-width-text&quot; type=&quot;text&quot;&gt;</span>
+            <span class="code">&lt;textarea style=&quot;height:50px&quot; name=&quot;txtNote&quot; class=&quot;full-width-text&quot;&gt;&lt;/textarea&gt;</span>
+
+        </div>
+        <!-- end smaple code -->
+
+        <!-- begin solution -->
+        <div class="proposedSolution">
+
+            <h3>Fix any of the following:</h3>
+            <p><span class="code"></span></p>
+
+            <ul>
+
+                <li>aria-label attribute does not exist or is empty</li>
+                <li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty or not visible</li>
+                <li>Form element does not have an implicit (wrapped) &lt;label&gt;</li>
+                <li>Form element does not have an explicit &lt;label&gt;</li>
+                <li>Element has no title attribute or the title attribute is empty</li>
+
+            </ul>
+
+            <h3>Fix all of the following:</h3>
+            <p><span class="code"></span></p>
+
+            <ul>
+
+                <li></li>
+
+            </ul>
+
+
+        </div>
+        <!-- end solution -->
+
+    </div>
+
+    <!-- End Individual Issue Section -->
+    <!-- Parent Section Begin -->
+
+    <h2 class="pageName" id="top">Radio inputs with the same name attribute value must be part of a group</h2>
+
+    <section>
+
+        <!-- Individual Issue Section Begin -->
+
+        <div class="sectionContent">
+
+            <div class="sectionHead">
+
+                <p class="issue"></p>
+
+                <p class="issueHeader">Disabilities Affected:</p>
+
+                <ul>
+                    <li>Blindness</li>
+                    <li>Deafblindness</li>
+                    <li>Mobility/Dexterity</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <p class="issueHeader">Issue Type:</p>
+                <ul>
+                    <li>WCAG 2.0 (A): MUST</li>
+                    <li>Section 508: MUST</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <p class="issueHeader">WCAG Success Criteria:</p>
+                <ul>
+                    <li>1.3.1 Info and Relationships</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <p class="issueHeader">Section 508 Guidelines:</p>
+                <ul>
+
+                    <li>1194.21 (l) Form fields, directions, and cues</li>
+                    <li>1194.22 (n) Information required to complete electronic forms online</li>
+
+                </ul>
+
+            </div>
+
+            <!-- begin sample code -->
+            <div class="sampleHTML">
+
+                <h3>HTML:</h3>
+
+                <p class="comment"></p>
+
+                <span class="code">&lt;input id=&quot;listAddrType0&quot; name=&quot;listAddrType&quot; value=&quot;USA&quot; onclick=&quot;populateOptions('wishListShippingAddressFrm','bill');&quot; type=&quot;radio&quot; checked=&quot;&quot;&gt;</span>
+
+
+            </div>
+            <!-- end smaple code -->
+
+            <!-- begin solution -->
+            <div class="proposedSolution">
+
+                <h3>Fix any of the following:</h3>
+                <p><span class="code"></span></p>
+
+                <ul>
+
+                    <li>All elements with the name "listAddrType" do not reference the same element with aria-labelledby</li>
+                    <li>Element does not have a containing fieldset or ARIA group</li>
+
+                </ul>
+
+                <h3>Fix all of the following:</h3>
+                <p><span class="code"></span></p>
+
+                <ul>
+
+                    <li></li>
+
+                </ul>
+
+
+            </div>
+            <!-- end solution -->
+
+        </div>
+
+        <!-- End Individual Issue Section -->
+
+    </section>
+    <!-- End Parent Section  -->
+
+
+</section>
+<!-- End Parent Section  -->

@@ -1,0 +1,21 @@
+<section class="module {{ include.moduleClass }}">
+  <div class="module-sh module-sh-grid">
+    <div class="module-inner">
+      {% if include.collectionSpecial %}<a href="#" class="c-sp-link" data-toggle="c-sp-toggle"}>{% endif %}
+        <div class="module-sh-img">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800" alt="" class="img-responsive">
+        </div>
+        <div class="module-sh-copy">
+          <h2>{{ include.moduleHeading }}</h2>
+          <hr>
+          <p>{{ include.moduleCopy }}</p>
+          {% if include.collectionSpecial %}<span class="btn btn-primary">{{ include.buttonLabel }}</span>
+          {% else %}<a href="#" class="btn btn-primary {{ include.btnClass }}">{{ include.buttonLabel }}</a>{% endif %}
+        </div>
+      {% if include.collectionSpecial %}</a>{% endif %}
+      {% if include.collectionSpecial %}
+        {% include _molecules/modules/c-sp.html %}
+      {% endif %}
+    </div>
+  </div>
+</section><!-- .module -->

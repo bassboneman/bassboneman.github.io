@@ -1,0 +1,350 @@
+.photo-carousel-wrap {
+  margin: 30px 0;
+  padding: 5px 10px 5px 0;
+  // background: #e5e5e5;
+}
+
+
+/* Slider */
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+
+  // background: #000;
+  // padding: 5px;
+  // & + .slick-slider {
+  //   margin-top: 5px;
+  // }
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  // padding: 5px;
+  // border: 5px solid transparent;
+  [dir="rtl"] & {
+    float: right;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    border: 5px solid transparent;
+    border-width: 5px 0 5px 10px;
+  }
+  &.slick-loading img {
+    display: none;
+  }
+
+  display: none;
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+
+.slick-arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0;
+  line-height: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  &.slick-prev {
+    left: 10px;
+  }
+  &.slick-next {
+    left: auto;
+    right: 10px;
+  }
+}
+
+
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: FontAwesome;
+  font-size: 40px;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0,0,0,0.75);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.slick-next:before {
+  content: "\f054";
+}
+
+.slick-prev:before {
+  content: "\f053";
+}
+
+.slider-nav {
+  .slick-arrow {
+    display: none !important;
+  }
+}
+
+.slick-slide {
+  @include opacity(0.5);
+  @include transition(opacity);
+  &:hover,
+  &.slick-current {
+    @include opacity(1.0);
+    outline: none;
+  }
+}
+
+
+// added by josh
+// .slick-for {
+//   img {
+//     margin-left: 5px;
+//   }
+// }
+
+// .thumb-container {
+//   position:relative;
+//   overflow:hidden;
+//   padding:0 10px 10px;
+//   margin:0;
+//   background:#000;
+//   display:block
+// }
+
+// .photo-thumbnails {
+//   position:absolute;
+//   width:100%;
+//   list-style-type:none;
+//   font-size:0;
+//   clear:both
+// }
+
+// li.photo-thumb {
+//   position:relative;
+//   display:inline-block;
+//   padding:0;
+//   width:80px;
+//   height:80px;
+//   padding-top:5px;
+//   margin-right:10px;
+//   border:0
+// }
+
+// #videoGallery
+// li.photo-thumb {
+//   position:relative;
+//   display:inline-block;
+//   padding-top:5px;
+//   width:120px;
+//   height:90px;
+//   margin-right:10px;
+//   border:0
+// }
+
+// .photo-thumb
+// a {
+//   display:block;
+//   position:relative;
+//   border:2px solid #444;
+//   -webkit-transition:border-color .2s ease-in-out;
+//   -moz-transition:border-color .2s ease-in-out;
+//   -o-transition:border-color .2s ease-in-out;
+//   -ms-transition:border-color .2s ease-in-out
+// }
+
+// .photo-thumb a:hover {
+//   border-color:#fff;
+//   border-width:2px
+// }
+
+// .photo-thumb.active a:after {
+// }
+
+// li.photo-thumb.active {
+//   background:url(/buzz/wp-content/themes/notreble-v5/images/carousel-pointer.png?8b7043) top center no-repeat
+// }
+
+// .photo-thumb.active
+// a {
+//   border-color:#fff
+// }
+
+// .photo-thumb
+// img {
+//   display:block;
+//   width:100%;
+//   margin:0
+// }
+
+// .carousel {
+// }
+
+// .carousel .full-size {
+//   width:100%;
+//   overflow:hidden;
+//   background:#000
+// }
+
+// .carousel .full-size
+// .panel {
+//   display:inline-block;
+//   text-align:center;
+//   list-style-type:none;
+//   padding:0;
+//   margin:0
+// }
+
+// .carousel .full-size .panel
+// img {
+//   max-width:100%
+// }
+
+// .carousel
+// .video.panel {
+//   background:#000
+// }
+
+// .carousel
+// img {
+//   vertical-align:initial;
+//   margin:0;
+//   float:none
+// }
+
+// .carousel
+// ul {
+//   margin:0;
+//   padding:0
+// }
+
+// .carousel .photo-thumbnails>.photo-thumb.active {
+//   border:0 solid #000
+// }
+
+// .carousel
+// .caption-container {
+//   position:absolute;
+//   z-index:200;
+//   bottom:0;
+//   padding:0;
+//   margin:0;
+//   color:#fff;
+//   text-align:left;
+//   font-size:12px;
+//   line-height:22px;
+//   width:100%;
+//   background:url(/imgs/bg/black-op80.png?8b7043) repeat;
+//   background:rgba(0,0,0,0.8)
+// }
+
+// .carousel .caption-container
+// .photo-caption {
+//   overflow:auto;
+//   height:90px;
+//   margin:20px 60px 20px 30px;
+//   padding:0;
+//   font-size:14px;
+//   line-height:20px;
+//   -webkit-font-smoothing:antialiased;
+//   -webkit-overflow-scrolling:touch
+// }
+
+// .caption-toggle {
+//   position:absolute;
+//   top:14px;
+//   right:10px
+// }
+
+// .show-caption {
+//   position:absolute;
+//   z-index:200;
+//   bottom:14px;
+//   right:10px;
+//   background:url(/imgs/bg/black-op80.png?8b7043) repeat;
+//   background:rgba(0,0,0,0.8);
+//   display:block
+// }

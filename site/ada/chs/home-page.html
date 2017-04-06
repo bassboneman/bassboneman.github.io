@@ -1,0 +1,263 @@
+<h2 class="pageName" id="top">home.jsp</h2>
+<section>
+    <div class="sectionContent">
+        <div class="sectionHead">
+            <p class="issue">Elements must have sufficient color contrast.</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Low Vision</li>
+                <li>Color-blindness</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (AA): MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.4.3 Contrast (Minimum)</li>
+            </ul>
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+                <li>1194.21 (j) Color and contrast range</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;h3&gt;Make a Bold Statement&lt;/h3&gt;</span> <span class="code">&lt;h3&gt;Make Some Waves&lt;/h3&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Element has insufficient color contrast of 1.00 <span class="code">(foreground color: #ffffff, background color: #ffffff, font size: 22.5pt, font weight: bold)</span></p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;span class=&quot;shop-now&quot;&gt;Shop Jewelry&lt;/span&gt;</span> <span class="code">&lt;p&gt;Go from sea to scene with ease.&lt;/p&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Element has insufficient color contrast of 1.00 <span class="code">(foreground color: #ffffff, background color: #ffffff, font size: 13.5pt, font weight: normal)</span></p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;span class=&quot;copy&quot;&gt;&copy; Copyright 2016 Chico's Distribution Services, LLC. All rights reserved.&lt;/span&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Element has insufficient color contrast of 3.53<span class="code">(foreground color: #898888, background color: #ffffff, font size: 7.5pt, font weight: bold)</span></p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment">Cheetahmail</p><span class="code">&lt;label for=&quot;&quot;&gt;&lt;span class=&quot;text-uppercase&quot;&gt;Get it first&lt;/span&gt; - Sign up and receive 20% off&lt;/label&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Element has insufficient color contrast of 3.53 <span class="code">(foreground color: #898888, background color: #ffffff, font size: 9.0pt, font weight: normal)</span></p>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;div class=&quot;ship-to location-store-switch&quot;&gt; Ship to: &lt;a href=&quot;#&quot; id=&quot;contextSelectorLink&quot;&gt;&lt;img src=&quot;/store/ibf/images/flags/USA.jpg&quot; alt=&quot;USA&quot;&gt;&lt;/a&gt; &lt;span id=&quot;ibf-countryName&quot; style=&quot;display:none;&quot;&gt;UNITED STATES&lt;/span&gt;&lt;/div&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Element has insufficient color contrast of 3.53 <span class="code">(foreground color: #898888, background color: #ffffff, font size: 7.5pt, font weight: bold)</span></p>
+        </div>
+        <div class="sectionHead">
+            <p class="issue">ID Attribiute value must be unique</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>4.1.1 Parsing</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;a href=&quot;#&quot; id=&quot;contextSelectorLink&quot;&gt;&lt;img src=&quot;/store/ibf/images/flags/USA.jpg&quot; alt=&quot;USA&quot;&gt;&lt;/a&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Document has multiple elements with the same id attribute: contextSelectorLink.</p>
+        </div>
+        <div class="sectionHead">
+            <p class="issue">Headings must not be empty.</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Mobility/Dexterity</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.3.1 Info and Relationships</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;h2&gt; &lt;a href=&quot;https://insidechic.chicos.com/&quot; target=&quot;_blank&quot;&gt; &lt;svg class=&quot;svg-logo&quot;&gt; &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#logo-inside-chic&quot;&gt;&lt;/use&gt; &lt;/svg&gt; &lt;/a&gt;&lt;/h2&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <ul>
+                <li>Element does not have text that is visible to screen readers</li>
+                <li>Element's default semantics were not overridden with role="presentation"</li>
+                <li>Element's default semantics were not overridden with role="none"</li>
+            </ul>
+        </div>
+        <div class="sectionHead">
+            <p class="issue">Frames must have unique title attributes</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Mobility/Dexterity</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+                <li>Section 508: MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>2.4.1 Bypass Blocks</li>
+                <li>4.1.2 Name, Role, Value</li>
+                <li>1.3.1 Info and Relationships</li>
+            </ul>
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+                <li>1194.22 (i) Frame titles for identification and navigation</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;iframe scrolling=&quot;no&quot; src=&quot;https://insidechic.chicos.com/embed/featured/&quot; id=&quot;iFrameResizer0&quot; style=&quot;border: none; width: 100%; overflow: hidden; height: 367px;&quot;&gt;&lt;/iframe&gt; </span>
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;iframe frameborder=&quot;0&quot; height=&quot;65&quot; width=&quot;100%&quot; id=&quot;footerEmailWrapper&quot; scrolling=&quot;no&quot; marginheight=&quot;0px&quot; marginwidth=&quot;0px&quot; src=&quot;//ebm.cheetahmail.com/r/regf2?aid=2078541674&amp;amp;n=509&amp;amp;a=0&quot; style=&quot;overflow: hidden;&quot;&gt;&lt;/iframe&gt; </span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <p>Element has no title attribute or the title attribute is empty</p>
+            <h3>Fix all of the following:</h3>
+            <p>Element's title attribute is not unique</p>
+        </div>
+        <div class="sectionHead">
+            <p class="issue">Images must have ALT text</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+                <li>Section 508: MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.1.1 Non-text Content</li>
+            </ul>
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+                <li>1194.22 (a) Text equivalent for non-text elements</li>
+                <li>1194.21 (a) Programmatically-discernable text</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment">Fit Predictor & 3rd party Tracking</p><span class="code">&lt;img src=&quot;https://api.fit-predictor.net/tracker.gif&quot;&gt;</span> <span class="code">&lt;img src=&quot;https://link.chicos.ewcsacq.net/s/at?site=10294&amp;amp;page=https%3A%2F%2Febm.cheetahmail.com%2Fr%2Fregf2%3Faid%3D2078541674%26n%3D509%26a%3D0&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot;&gt;</span> <span class="code">&lt;img name=&quot;hs_pix_es&quot; src=&quot;https://sc.email.chicos.com/spacer.gif?hscbrnd=3843&amp;amp;event=31~https%3A//www.chicos.com/store/index.html~53~https%3A//www.chicos.com/store/index.html~5~https%3A//www.chicos.com/store/index.html~7~1920x1200~28~chicos&quot; border=&quot;0&quot; height=&quot;1&quot; width=&quot;1&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <ul>
+                <li>Element does not have an alt attribute</li>
+                <li>aria-label attribute does not exist or is empty</li>
+                <li>aria-labelledby attribute does not exist, references elements that do not exist or references </li>
+                <li>elements that are empty or not visible</li>
+                <li>Element has no title attribute or the title attribute is empty</li>
+                <li>Element's default semantics were not overridden with role="presentation"</li>
+                <li>Element's default semantics were not overridden with role="none"</li>
+            </ul>
+        </div>
+        <div class="sectionHead">
+            <p class="issue">Form elements must have labels</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Low Vision</li>
+                <li>Mobility/Dexterity</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+                <li>Section 508: MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.3.1 Info and Relationships</li>
+                <li>3.3.2 Labels or Instructions</li>
+                <li>4.1.2 Name, Role, Value</li>
+            </ul>
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+                <li>1194.22 (n) Information required to complete electronic forms online</li>
+                <li>1194.21 (l) Form fields, directions, and cues</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;input name=&quot;email&quot; id=&quot;chicos_footer&quot; class=&quot;form-control checkRequired&quot; type=&quot;email&quot; placeholder=&quot;Enter email address&quot;&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <ul>
+                <li>aria-label attribute does not exist or is empty</li>
+                <li>aria-labelledby attribute does not exist, references elements that do not exist or references </li>
+                <li>elements that are empty or not visible</li>
+                <li>Form element does not have an implicit (wrapped) &lt;label&gt;</li>
+                <li>Form element does not have an explicit &lt;label&gt;</li>
+                <li>Element has no title attribute or the title attribute is empty</li>
+            </ul>
+        </div>
+        <div class="sectionHead">
+            <p class="issue">Links must have discernable text</p>
+            <p class="issueHeader">Disabilities Affected:</p>
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Mobility/Dexterity</li>
+            </ul>
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+            </ul>
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.1.1 Non-text Content</li>
+                <li>4.1.2 Name, Role, Value</li>
+            </ul>
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+                <li>1194.22 (a) Text equivalent for non-text elements</li>
+            </ul>
+        </div>
+        <div class="sampleHTML">
+            <h3>HTML:</h3>
+            <p class="comment"></p><span class="code">&lt;a href=&quot;#&quot; class=&quot;CTA-GPS&quot; alt=&quot;GPS Toggle Open&quot; data-toggle=&quot;header-promo&quot;&gt;</span> <span class="code">&lt;a id=&quot;logo&quot; onclick=&quot;s_objectID='Chicos';&quot; href=&quot;https://www.chicos.com/store/&quot;&gt;&lt;svg&gt; &lt;use xmlns:xlink=&quot;//www.w3.org/1999/xlink&quot; xlink:href=&quot;#svg-logo&quot;&gt;&lt;/use&gt; &lt;/svg&gt;&lt;/a&gt;</span> <span class="code">&lt;a href=&quot;#&quot; class=&quot;search-toggle&quot; data-toggle=&quot;search&quot;&gt; &lt;svg class=&quot;icon-search&quot;&gt; &lt;use xmlns:xlink=&quot;//www.w3.org/1999/xlink&quot; xlink:href=&quot;#icon-search&quot;&gt;&lt;/use&gt; &lt;/svg&gt;&lt;/a&gt;</span> <span class="code">&lt;a class=&quot;left carousel-control&quot; href=&quot;#carousel-product-grid&quot; data-slide=&quot;prev&quot;&gt;</span> <span class="code">&lt;a class=&quot;right carousel-control&quot; href=&quot;#carousel-product-grid&quot; data-slide=&quot;next&quot;&gt;</span> <span class="code">&lt;a class=&quot;social-instagram&quot; href=&quot;//instagram.com/lovechicos&quot; target=&quot;_blank&quot; onclick=&quot;var s=s_gi(s_account); s.tl(this,'o','FOOTER_INSAGRAM');&quot;&gt;</span> <span class="code">&lt;a class=&quot;social-pinterest&quot; href=&quot;//pinterest.com/lovechicos/&quot; target=&quot;_blank&quot; onclick=&quot;var s=s_gi(s_account); s.tl(this,'o','FOOTER_PINTERST');&quot;&gt;</span> <span class="code">&lt;a class=&quot;social-facebook&quot; href=&quot;//www.facebook.com/LoveChicos&quot; target=&quot;_blank&quot; onclick=&quot;var s=s_gi(s_account); s.tl(this,'o','FOOTER_FACEBOOK');&quot;&gt;</span> <span class="code">&lt;a class=&quot;social-youtube&quot; href=&quot;//www.youtube.com/lovechicos&quot; target=&quot;_blank&quot; onclick=&quot;var s=s_gi(s_account); s.tl(this,'o','FOOTER_YOUTUBE');&quot;&gt;</span> <span class="code">&lt;a class=&quot;social-twitter&quot; href=&quot;//twitter.com/chicos&quot; target=&quot;_blank&quot; onclick=&quot;var s=s_gi(s_account); s.tl(this,'o','FOOTER_TWITTER');&quot;&gt;</span> <span class="code">&lt;a class=&quot;social-google-plus&quot; href=&quot;//plus.google.com/+chicos/posts&quot; target=&quot;_blank&quot; onclick=&quot;var s=s_gi(s_account); s.tl(this,'o','FOOTER_GOOGLE');&quot;&gt;</span> <span class="code">&lt;a class=&quot;social-inside-chic&quot;href=&quot;//insidechic.chicos.com&quot; target=&quot;_blank&quot; onclick=&quot;var s=s_gi(s_account); s.tl(this,'o','FOOTER_BLOG');&quot;&gt;</span> <span class="code">&lt;a href=&quot;https://insidechic.chicos.com/&quot; target=&quot;_blank&quot;&gt;&lt;svg class=&quot;svg-logo&quot;&gt; &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xlink:href=&quot;#logo-inside-chic&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;</span> </div>
+        <div class="proposedSolution">
+            <h3>Fix any of the following:</h3>
+            <ul>
+                <li>Element does not have text that is visible to screen readers</li>
+                <li>aria-label attribute does not exist or is empty</li>
+                <li>aria-labelledby attribute does not exist, references elements that do not exist or references </li>
+                <li>elements that are empty or not visible</li>
+                <li>Element's default semantics were not overridden with role="presentation"</li>
+                <li>Element's default semantics were not overridden with role="none"</li>
+            </ul>
+            <h3>Fix all of the following:</h3>
+            <ul>
+                <li>Element is in tab order and does not have accessible text</li>
+            </ul>
+        </div>
+    </div>
+</section>

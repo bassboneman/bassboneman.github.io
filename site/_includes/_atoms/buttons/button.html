@@ -1,0 +1,5 @@
+{% if include.btnLink %}
+  <a href="{{ include.btnLink }}" class="btn {{ include.btnClass }}" {{ include.btnExtra }}>{{ include.btnLabel }}</a>
+{% else %}
+  <button type="submit" class="btn {{ include.btnClass }}" {{ include.btnExtra }}>{{ include.btnLabel }}</button>
+{% endif %}

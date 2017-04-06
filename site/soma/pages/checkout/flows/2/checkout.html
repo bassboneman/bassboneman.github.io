@@ -1,0 +1,971 @@
+---
+title: Checkout Usability Flow 2 (Checkout)
+top-link: pages
+brand: soma
+layout: checkout
+type: registered
+setting: flow
+flow: two
+---
+{% comment %}
+markup on this page is based on this content block
+{% include _content/checkout/checkout.html %}
+{% endcomment %}
+
+
+<form action="#" class="form-labels">
+  <section id="checkout-shipping-address" class="checkout-block complete">
+  <header>
+    
+      <a href="#" class="checkout-btn-change" data-toggle="modal" data-target="#modal-address-multi-select">Change</a>  
+    
+    <h2>1. Shipping Address</h2>
+  </header>
+  <div class="checkout-block-body">
+    
+
+    <div class="checkout-section-entry">
+      <h3>Ship to:</h3>
+      <div>
+        Liz Hamilton <br>
+        456 Elm Street, Somewhere, VA 22222<br>
+        505-258-4975
+      </div>
+    </div><!-- .checkout-section-entry -->
+
+
+
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->
+  <section id="checkout-shipping-options" class="checkout-block complete">
+  <header>
+    
+      <a href="#" class="checkout-btn-change" data-toggle="modal" data-target="#modal-shipping-options">Change</a>  
+    
+    <h2>2. Shipping Options</h2>
+  </header>
+  <div class="checkout-block-body">
+    <div class="checkout-section-form">
+      <div class="radio-media-list">
+        
+
+<div class="radio">
+  <label>
+    <div class="media">
+      <div class="media-left media-middle">
+        <input type="radio" name="shipping-options" id="shipping-option-1" value="shipping-option-1" checked="checked" styled='yes'>
+        <span class="input-styled"></span>
+      </div>
+      <div class="media-body">
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-1 col-xs-4">
+            <strong>Standard</strong><br>
+            <img src="/web_assets/svg/checkout/shipping-standard.svg" alt=" Shipping" class="icon-shipping">
+          </div><!-- .col-->
+          <div class="col-sm 6 col-xs-5">
+            <div class="row">
+              <div class="col-sm-6">
+                Estimated Arrival:<br>
+                <span class="arrival-date">Jan 17-20</span>
+              </div><!-- .col -->
+              <div class="col-sm-6">
+                <strong>6-9</strong> business days 
+              </div><!-- .col -->
+            </div><!-- .row -->
+          </div><!-- .col -->
+          <div class="col-sm-2 col-xs-3 text-right">
+            <span class="text-uppercase">FREE</span>
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .media-body -->
+    </div><!-- .media -->
+  </label>
+</div><!-- .radio -->
+        
+
+<div class="radio">
+  <label>
+    <div class="media">
+      <div class="media-left media-middle">
+        <input type="radio" name="shipping-options" id="shipping-option-2" value="shipping-option-2"  styled='yes'>
+        <span class="input-styled"></span>
+      </div>
+      <div class="media-body">
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-1 col-xs-4">
+            <strong>Express</strong><br>
+            <img src="/web_assets/svg/checkout/shipping-express.svg" alt=" Shipping" class="icon-shipping">
+          </div><!-- .col-->
+          <div class="col-sm 6 col-xs-5">
+            <div class="row">
+              <div class="col-sm-6">
+                Estimated Arrival:<br>
+                <span class="arrival-date">Jan 14-19</span>
+              </div><!-- .col -->
+              <div class="col-sm-6">
+                <strong>2-5</strong> business days 
+              </div><!-- .col -->
+            </div><!-- .row -->
+          </div><!-- .col -->
+          <div class="col-sm-2 col-xs-3 text-right">
+            <span class="text-uppercase">$X.XX</span>
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .media-body -->
+    </div><!-- .media -->
+  </label>
+</div><!-- .radio -->
+        
+
+<div class="radio">
+  <label>
+    <div class="media">
+      <div class="media-left media-middle">
+        <input type="radio" name="shipping-options" id="shipping-option-3" value="shipping-option-3"  styled='yes'>
+        <span class="input-styled"></span>
+      </div>
+      <div class="media-body">
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-1 col-xs-4">
+            <strong>Two Day</strong><br>
+            <img src="/web_assets/svg/checkout/shipping-two-day.svg" alt=" Shipping" class="icon-shipping">
+          </div><!-- .col-->
+          <div class="col-sm 6 col-xs-5">
+            <div class="row">
+              <div class="col-sm-6">
+                Estimated Arrival:<br>
+                <span class="arrival-date">Jan 13</span>
+              </div><!-- .col -->
+              <div class="col-sm-6">
+                <strong>2</strong> business days 
+              </div><!-- .col -->
+            </div><!-- .row -->
+          </div><!-- .col -->
+          <div class="col-sm-2 col-xs-3 text-right">
+            <span class="text-uppercase">$X.XX</span>
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .media-body -->
+    </div><!-- .media -->
+  </label>
+</div><!-- .radio -->
+        
+
+<div class="radio">
+  <label>
+    <div class="media">
+      <div class="media-left media-middle">
+        <input type="radio" name="shipping-options" id="shipping-option-4" value="shipping-option-4"  styled='yes'>
+        <span class="input-styled"></span>
+      </div>
+      <div class="media-body">
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-1 col-xs-4">
+            <strong>Next Day</strong><br>
+            <img src="/web_assets/svg/checkout/shipping-next-day.svg" alt=" Shipping" class="icon-shipping">
+          </div><!-- .col-->
+          <div class="col-sm 6 col-xs-5">
+            <div class="row">
+              <div class="col-sm-6">
+                Estimated Arrival:<br>
+                <span class="arrival-date">Jan 12</span>
+              </div><!-- .col -->
+              <div class="col-sm-6">
+                <strong>Next</strong> business day<br><em>Signature Required</em> 
+              </div><!-- .col -->
+            </div><!-- .row -->
+          </div><!-- .col -->
+          <div class="col-sm-2 col-xs-3 text-right">
+            <span class="text-uppercase">$XX.XX</span>
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .media-body -->
+    </div><!-- .media -->
+  </label>
+</div><!-- .radio -->
+      </div><!-- .radio-media-list -->
+      <div class="row row-tight">
+        <div class="col-sm-6">
+          
+  <a href="#" class="btn btn-primary btn-lg btn-block btn-checkout btn-width" data-checkout="payment-options">Save &amp; Continue</a>
+
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->
+    </div><!-- .checkout-section-form -->
+    <div class="checkout-section-entry">
+      <div class="row">
+        <div class="col-sm-3 col-xs-4">
+          <strong>Standard</strong><br>
+          <img src="/web_assets/svg/checkout/shipping-standard.svg" alt="Standard Shipping" class="icon-shipping">
+        </div><!-- .col -->
+        <div class="col-sm-7 col-xs-5">
+          <div class="row">
+            <div class="col-sm-6">
+              Estimated Arrival:<br>
+              <span class="arrival-date">Mar 15-20</span>
+            </div><!-- .col -->
+            <div class="col-sm-6">
+              <strong>6-9</strong> business days
+            </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .col -->
+        <div class="col-sm-2 col-xs-3 text-right">
+          <span class="text-uppercase">Free</span>
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .checkout-section-entry -->
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->
+  <section id="checkout-payment-options" class="checkout-block complete">
+  <header>
+    
+      <a href="#" class="checkout-btn-change" data-toggle="modal" data-target="#modal-payment-options">Change</a>  
+    
+    <h2>3. Payment Options</h2>
+  </header>
+  <div class="checkout-block-body">
+
+
+
+
+
+
+<div class="checkout-gift-card">
+  <div class="row">
+    <div class="col-xs-6">
+      <h3 class="margin-bot-none">
+        <svg class="icon-square-lg icon-left"><use xlink:href="#icon-gift-card"></use></svg>
+        Gift Card
+      </h3>
+      
+
+    </div><!-- .col-xs-6 -->
+    <div class="col-xs-6 text-right">
+      <a href="#" class="checkout-link" data-action="toggle" data-target="giftcard-1" data-label="Close">Apply<span class="hidden-xs hidden-sm"> Gift Card</span></a>
+    </div><!-- .col-xs-6 -->
+  </div><!-- .row -->
+
+
+
+  <div class="giftcard-applied-content">
+    <div class="row">
+      <div class="col-xs-8">
+        <div class="media">
+          <div class="media-left">
+            <svg class="icon-left checkmark"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use></svg>
+          </div>
+          <div class="media-body">
+            Gift Card ending in 9901<br>
+            Applied: $75.00 | Balance: $0.00<br>
+          </div><!-- .media-body -->
+        </div><!-- .media -->
+      </div><!-- .col -->
+      <div class="col-xs-4 text-right">
+        <a href="#" class="checkout-link link-toggled" data-toggle="giftcard-remove">Remove</a>
+      </div><!-- .col -->
+    </div><!-- .row -->
+  </div><!-- .giftcard-applied-content -->
+
+
+  <div id="giftcard-1" class="checkout-hidden">
+    <div class="giftcard-form">
+      <div class="row row-tight">
+        <div class="col-sm-6">
+          <div class="field-wrap">
+            <div class="form-group   ">
+  <label class="control-label " for="gift-card-number">Gift Card Number
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="gift-card-number" placeholder=""  pattern="\d*">
+  
+  
+  
+
+</div><!-- .form-group -->
+          </div><!-- .field-wrap -->
+        </div><!-- .col -->
+        <div class="col-sm-6">
+          <div class="field-wrap">
+            <div class="form-group  has-icon ">
+  <label class="control-label " for="gift-card-pin">PIN
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="gift-card-pin" placeholder=""  pattern="\d*">
+  
+  
+  
+    <a class="input-icon" href="javascript://" data-toggle="tooltip" data-placement="top" title="Lorem ipsum dolor sit amet" data-original-title="Lorem ipsum dolor sit amet">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-question"></use>
+      </svg>
+    </a><!-- .input-icon -->
+  
+  
+
+</div><!-- .form-group -->
+          </div><!-- .field-wrap -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .checkout-section-form -->
+
+    <div class="giftcard-balance">
+      <div class="row">
+        <div class="col-sm-3">
+          <p>
+            Gift Card Number<br>
+            &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;9901
+          </p>
+        </div><!-- .col -->
+        <div class="col-sm-3">
+          <p>
+            Card Balance<br>
+            $75.00
+          </p>
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .gift-entry-balance -->
+
+    <p class="giftcard-buttons">
+      
+  <a href="#" class="btn btn-alt btn-lg" data-toggle="giftcard-balance">Check Balance</a>
+
+      
+  <a href="#" class="btn btn-alt btn-lg" data-toggle="giftcard-another">Check Another</a>
+
+      
+  <a href="#" class="btn btn-primary btn-lg" data-toggle="giftcard-apply">Apply</a>
+
+    </p>
+ 
+
+  </div><!-- .checkout-hidden -->
+</div><!-- .checkout-gift-card -->
+
+
+
+
+    <hr class="hr-dark">
+
+
+
+
+
+
+
+    <div class="radio-list">
+      <div class="checkout-section-form">
+        <div class="radio checkout-toggle">
+  <label>
+    <input type="radio" name="payment-options" id="creditcard" value="creditcard" checked >
+    <span class="input-styled">
+    
+    
+      <span class="label-heading">Credit Card</span>
+      
+        <a class="label-icon" href="javascript://" data-toggle="tooltip" data-placement="bottom" title="" data-html="true" data-original-title="<strong>Cards We Accept</strong><br>Visa, Mastercard, Discover, American Express, JCB and Diner's Club International"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-question"></use></svg></a>
+      
+    
+    
+    </span><!-- .input-styled -->
+  </label>
+</div>
+        
+        <div id="checkout-creditcard" class="checkout-toggle-content">
+          
+
+
+
+<div class="row row-tight">
+  <div class="col-md-8 col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group  has-icon has-cc">
+  <label class="control-label " for="cc-number">Credit Card Number
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg has-tooltip" id="cc-number" placeholder=""  data-card="visa" pattern="\d*">
+  
+  
+  
+    <a class="input-icon" href="javascript://" data-toggle="tooltip" data-placement="top" title="Guaranteed SAFE Checkout - This is a secure credit card payment" data-original-title="Guaranteed SAFE Checkout - This is a secure credit card payment">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-lock-checkout"></use>
+      </svg>
+    </a><!-- .input-icon -->
+  
+  
+    <span class="input-icon-cc"></span><!-- .input-cc-icon -->
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-md-8 col-sm-6">
+    <div class="row row-tight">
+      <div class="col-sm-6">
+        <div class="field-wrap">
+          <div class="form-group  ">
+  
+    <label class="control-label" for="cc-month">Month
+      
+        
+      
+    </label>
+  
+  <select class="form-control selectpicker input-lg" id="cc-month"  >
+    <option value="">Month</option><option value="January">January</option><option value="February">February</option><option value="March">March</option><option value="April">April</option><option value="May">May</option><option value="June">June</option><option value="July">July</option><option value="August">August</option><option value="September">September</option><option value="October">October</option><option value="November">November</option><option value="December">December</option>
+  </select>
+  
+</div>
+        </div><!-- .field-wrap -->
+      </div><!-- .col-sm-6 -->
+      <div class="col-sm-6">
+        <div class="field-wrap">
+          <div class="form-group  ">
+  
+    <label class="control-label" for="cc-year">Year
+      
+        
+      
+    </label>
+  
+  <select class="form-control selectpicker input-lg" id="cc-year"  >
+    <option value="">Year</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option>
+  </select>
+  
+</div>
+        </div><!-- .field-wrap -->
+      </div><!-- .col-sm-6 -->
+    </div><!-- .row -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-md-4 col-sm-3">
+    <div class="field-wrap">
+      <div class="form-group  has-icon ">
+  <label class="control-label " for="cc-security">Security Code
+    
+      
+    
+  </label>
+  <input type="password" class="form-control input-lg" id="cc-security" placeholder=""  pattern="\d*">
+  
+  
+  
+    <a class="input-icon" href="javascript://" data-toggle="tooltip" data-placement="top" title="Please enter the number located on the back of your credit card in the signature area." data-original-title="Please enter the number located on the back of your credit card in the signature area.">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-question"></use>
+      </svg>
+    </a><!-- .input-icon -->
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div  class="checkbox ">
+  <label>
+    <input type="checkbox" value="cc-save-number" checked>
+    <span class="input-styled">Save this credit card for my next order</span>
+  </label>
+</div>
+<hr>
+
+<div class="radio-list">
+  <div id="shipping-address-separate" class="checkbox checkout-toggle">
+    <label>
+      <input type="checkbox" value="shipping-address-separate" checked="checked">
+      <span class="input-styled">Billing Address same as Shipping Address</span>
+    </label>
+    <div id="checkout-shipping-address-separate" class="checkout-toggle-content toggle-hidden toggle-content-padding">
+      
+
+
+<div class="row row-tight">
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="first-name">First Name
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="first-name" placeholder=""  >
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="last-name">Last Name
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="last-name" placeholder=""  >
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group  ">
+  
+    <label class="control-label" for="country">Country
+      
+        
+      
+    </label>
+  
+  <select class="form-control selectpicker input-lg" id="country"  >
+    <option value="">Country</option><option value="United States">United States</option><option value="Jakku">Jakku</option><option value="Hoth">Hoth</option>
+  </select>
+  
+</div>
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="street-address">Street Address
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="street-address" placeholder=""  >
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="apt-unit-suite">Apt/ Unit/ Suite
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="apt-unit-suite" placeholder=""  >
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->  
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-sm-3">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="zip-code">Zip Code
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="zip-code" placeholder=""  pattern="\d*">
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-3 -->
+  <div class="col-sm-3">
+    <div class="field-wrap">  
+      <div class="form-group  ">
+  
+    <label class="control-label" for="state">State
+      
+        
+      
+    </label>
+  
+  <select class="form-control selectpicker input-lg" id="state"  >
+    <option value="">State</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District Of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option>
+  </select>
+  
+</div>
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-3 -->
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="city">City
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="city" placeholder=""  >
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="">Phone
+    
+      
+    
+  </label>
+  <input type="tel" class="form-control input-lg" id="" placeholder=""  >
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+
+
+    </div><!-- .checkout-toggle-content -->
+  </div><!-- .checkbox -->
+</div><!-- .radio-list -->
+
+
+
+          
+        </div><!-- .checkout-toggle-content -->
+        
+        <hr class="hr-dark">
+        <div class="radio checkout-toggle">
+  <label>
+    <input type="radio" name="payment-options" id="paypal" value="paypal"  >
+    <span class="input-styled">
+    
+    
+      <span class="sr-only">Paypal</span>
+      <svg class="icon-paypal"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-paypal"></use></svg>
+    
+    
+    </span><!-- .input-styled -->
+  </label>
+</div>
+
+        <div id="checkout-paypal" class="checkout-toggle-content toggle-hidden">
+          <p class="alert alert-info"><strong>We’re sorry, but at this time our <span class="text-highlight">boutiques are unable to accept returns</span> for orders purchased using PayPal. PayPal orders may only be returned via mail using the return label provided. We apologize for any inconvenience.</strong></p>
+          <p>Continuing will take you to Paypal to login to your account. Afterwards you will have an opportunity to review and submit your order. View <a href="#">PayPal Policies</a> and your payment rights.</p>
+
+          <div class="row row-tight">
+            <div class="col-sm-6">
+              <p>
+  <button type="submit" class="btn btn-alt btn-lg btn-block btn-width btn-has-paypal" >Continue to <span class="sr-only">Paypal</span> <svg class="icon-paypal"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-paypal"></use></svg></button>
+</p>
+            </div><!-- .col-sm-6 -->
+          </div><!-- .row -->
+          
+        </div><!-- .checkout-toggle-content -->
+
+        <hr class="hr-dark">
+
+        <h3>Contact Information</h3>
+        <p>This will allow us to send you order and shipping confirmation emails. This will also allow us to send exclusive offers, updates on new arrivals and special events.</p>
+
+        <div class="row row-tight">
+          <div class="col-sm-6">
+            <div class="field-wrap">
+              <div class="form-group   ">
+  <label class="control-label " for="payment-email">Email
+    
+      
+    
+  </label>
+  <input type="email" class="form-control input-lg" id="payment-email" placeholder=""  >
+  
+  
+  
+
+</div><!-- .form-group -->
+            </div><!-- .field-wrap -->
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+
+        <div  class="checkbox ">
+  <label>
+    <input type="checkbox" value="check-updates" >
+    <span class="input-styled"><strong>Yes</strong>, send me exclusive offers, updates on new arrivals and special events.</span>
+  </label>
+</div>
+
+        
+        
+        <div class="row row-tight">
+          <div class="col-sm-6">
+            
+  <a href="#" class="btn btn-primary btn-lg btn-block btn-checkout btn-width" data-checkout="save-info">Save &amp; Continue</a>
+
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+
+      </div><!-- .checkout-section-form -->
+      <div class="checkout-section-entry">
+        <h3>Credit Card</h3>
+<div class="media cc-info">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="/web_assets/svg/checkout/visa.svg" alt="">
+    </a>
+  </div><!-- .media-left -->
+  <div class="media-body">
+    Visa ending in 0007<br>
+    Expires 3/2017
+  </div><!-- .media-body -->
+</div><!-- .media -->
+<h3 class="margin-top-extra">Contact Information</h3>
+<div>liz.hamilton@mailservice.com</div>
+       </div><!-- .checkout-section-entry -->
+    </div><!-- .radio-list -->
+    
+    
+    
+
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<section id="checkout-review-order" class="checkout-block ">
+  <header>
+    <h2>
+      4. 
+      Review Order</h2>
+  </header>
+  <div class="checkout-block-body">
+    
+
+      <h3>Order Summary (2 items)</h3>
+
+      
+
+  <div class="product-details">
+  <div class="row row-tight">
+    <div class="col-sm-2 col-xs-3">
+      <img class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/checkout/temp/red.jpg" alt="Product Image">  
+    </div><!-- .col-xs-3 -->
+    <div class="col-sm-10 col-xs-9">
+      
+        <h4>Product Name</h4>
+      
+      <div class="row">
+
+        
+          <div class="col-sm-9">  
+        
+
+        
+          <dl class="dl-horizontal meta-list">
+            <dt>Size:</dt>
+            <dd>Size 000 (0, XXS)</dd>
+            <dt>Color:</dt>
+            <dd>Red</dd>
+            <dt>Total Price:</dt>
+            <dd><span class="strikethrough pad-right-10">$99.00</span> $74.00</dd>
+            <dt>QTY:</dt>
+            <dd>1</dd>
+          </dl>
+        
+
+        
+          </div><!-- .col-sm-9 -->
+          
+            <div class="col-sm-3">
+              
+                <div class="edit-remove"><a href="#">Change</a> | <a href="#">Remove</a></div>          
+              
+            </div><!-- .col-sm-3 -->
+          
+        
+
+      </div><!-- .row -->
+    </div><!-- .col-xs-9 -->
+  </div><!-- .row -->
+</div><!-- .product-details -->  
+  
+
+
+      
+
+
+
+      
+
+  <div class="product-details">
+  <div class="row row-tight">
+    <div class="col-sm-2 col-xs-3">
+      <img class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/checkout/temp/blue.jpg" alt="Product Image">  
+    </div><!-- .col-xs-3 -->
+    <div class="col-sm-10 col-xs-9">
+      
+        <h4>Product Name</h4>
+      
+      <div class="row">
+
+        
+          <div class="col-sm-9">  
+        
+
+        
+          <dl class="dl-horizontal meta-list">
+            <dt>Size:</dt>
+            <dd>Size 000 (0, XXS)</dd>
+            <dt>Color:</dt>
+            <dd>Blue</dd>
+            <dt>Total Price:</dt>
+            <dd><span class="strikethrough pad-right-10">$99.00</span> $74.00</dd>
+            <dt>QTY:</dt>
+            <dd>1</dd>
+          </dl>
+        
+
+        
+          </div><!-- .col-sm-9 -->
+          
+            <div class="col-sm-3">
+              
+                <div class="edit-remove"><a href="#">Change</a> | <a href="#">Remove</a></div>          
+              
+            </div><!-- .col-sm-3 -->
+          
+        
+
+      </div><!-- .row -->
+    </div><!-- .col-xs-9 -->
+  </div><!-- .row -->
+</div><!-- .product-details -->  
+  
+
+
+    
+
+
+      {% include _molecules/checkout/flows/gifting.html %}
+      
+
+      <section class="checkout-summary ">
+  
+  <div class="row">
+    <div class="col-xs-8">
+      <strong>Item Subtotal </strong>
+    </div><!-- .col-xs-8 -->
+    <div class="col-xs-4 text-right">
+      <strong>$222.22</strong>
+    </div><!-- .col-xs-4 -->
+  </div><!-- .row -->
+  <div class="row">
+    <div class="col-xs-8">
+      Shipping &amp; Handling
+    </div><!-- .col-xs-8 -->
+    <div class="col-xs-4 text-right">
+      FREE
+    </div><!-- .col-xs-4 -->
+  </div><!-- .row -->
+  <div class="row">
+    <div class="col-xs-8">
+      Sales Tax
+    </div><!-- .col-xs-8 -->
+    <div class="col-xs-4 text-right">
+      $10.10
+    </div><!-- .col-xs-4 -->
+  </div><!-- .row -->
+
+
+ 
+  <div class="summary-total">
+    <div class="row">
+      <div class="col-xs-8">
+        <strong>Order Total </strong>
+      </div><!-- .col-xs-8 -->
+      <div class="col-xs-4 text-right">
+        <strong>$232.32</strong>
+      </div><!-- .col-xs-4 -->
+    </div><!-- .row -->
+    <div class="row">
+      <div class="col-xs-8">
+        Balance Due
+      </div><!-- .col-xs-8 -->
+      <div class="col-xs-4 text-right">
+        $232.32
+      </div><!-- .col-xs-4 -->
+    </div><!-- .row -->
+  </div><!-- .summary-total -->
+
+
+  
+
+    <div class="row row-tight">
+      <div class="col-sm-3 col-xs-6">
+        <div class="form-group   ">
+  <label class="control-label " for="promo-code">Promo Code
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="promo-code" placeholder="" pattern="\d*" >
+  
+  
+  
+
+</div><!-- .form-group -->
+      </div><!-- .col-xs-3 -->
+      <div class="col-xs-6">
+        
+  <button type="submit" class="btn btn-default btn-lg" >Apply</button>
+
+      </div><!-- .col-xs-4 -->
+    </div><!-- .row -->
+    <div class="row row-tight">
+      <div class="col-sm-6">
+        
+  <a href="confirmation.html" class="btn btn-primary btn-lg btn-block btn-width" >Place Order</a>
+
+      </div><!-- .col-xs-6 -->
+    </div><!-- .row -->
+  
+
+</section><!-- .checkout-summary -->
+
+    
+      
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->
+</form>
+

@@ -1,0 +1,11 @@
+<p class="product-price">
+  {% if page.sale-type == 'regular' %}
+    <span class="product-price-sale">$79.99</span>
+    <span class="product-price-regular">$129.75</span>
+  {% elsif page.sale-type == 'final' and page.layout != 'page-collection' %}
+    {% include _atoms/text/product-price-final-sale.html longLabel='yes' tooltip='yes' %}
+  {% else %}
+    <span>$79.99</span>
+    <span class="product-price-msg">Priced from $59.99 to $79.99</span>{% comment %} if price messaging required {% endcomment %}
+  {% endif %}
+</p>

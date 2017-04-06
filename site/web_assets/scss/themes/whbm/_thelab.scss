@@ -1,0 +1,509 @@
+
+// #menu > ul > li > a {
+//   font-size: 1.3rem;
+//   letter-spacing: 0.12em;
+//   font-weight: 500;
+//   position: relative;
+
+//   @media screen and (min-width: 992px) {
+//     padding: 0 4rem;
+//   }
+//   @media screen and (min-width: 1200px) {
+//     padding: 0px 5.5rem;
+//   }
+// }
+
+// #menu.hover > ul > li.open span {
+//     font-weight: 500;
+// }
+
+// // Triangles under menu items
+// #menu > ul > li.open > a {
+//   z-index: 9999; // arbitrary
+//   &:before, &:after {
+//     content: "";
+//     width: 0; 
+//     height: 0; 
+//     position: absolute;
+//   }
+//   &:before {
+//     border-left: 12px solid transparent;
+//     border-right: 12px solid transparent; 
+//     border-top: 6px solid #ececec;
+//     bottom: -6px;
+//     left: calc(50% - 12px); // Not sure what browsers you're targeting; calc was just a quick solution.
+//   }
+//   &:after {
+//     border-left: 10px solid transparent;
+//     border-right: 10px solid transparent; 
+//     border-top: 5px solid white;
+//     bottom: -5px;
+//     left: calc(50% - 10px);
+//   }
+// }
+
+// #menu > ul > li.open:first-child > a:after {
+//   @media screen and (min-width: 992px) {
+//     left: calc(50% - 10px - 2rem); // Compensate for first list item not having a left margin
+//   }
+//   @media screen and (min-width: 1200px) {
+//     left: calc(50% - 10px - 2.75rem);
+//   }
+// }
+
+// #menu > ul > li:first-child > a:before {
+//   @media screen and (min-width: 992px) {
+//     left: calc(50% - 12px - 2rem); // Compensate for first list item not having a left margin
+//   }
+//   @media screen and (min-width: 1200px) {
+//     left: calc(50% - 12px - 2.75rem);
+//   }
+// }
+
+// #menu > ul .dropdown > a {
+//   @media screen and (max-width: 991px) {
+//     font-size: 1.4rem;
+
+//     &:first-child {
+//       padding: 1.6rem 1.5rem;
+//     }
+//   }
+// }
+
+
+// =======================
+
+// .dropdown-menu.dropdown-utility.dropdown-signin .dropdown-inner ul a,
+// #persistent-cart.dropdown-signin .dropdown-inner ul a {
+//     font-weight: 500;
+//     letter-spacing: 0.12em;
+// }
+
+// .dropdown-menu.dropdown-utility.dropdown-signin {
+//   letter-spacing: 0.075em;
+
+//   a.btn {
+//       letter-spacing: 0.2em;
+//   }
+// }
+
+
+// #menu-utility > ul > li.menu-bag a {
+//   font-weight: 500;
+// }
+
+// #menu-utility .bag-number {
+//   width: 30.5px;
+//   top: 11px;
+// }
+
+// #menu-utility .bag-wrap {
+//   width: 30px;
+//   height: 31px;
+//   margin-top: -12px;
+
+//   @media screen and (max-width: 991px) {
+//       margin: -10px auto 0px;
+//   }
+// }
+
+// #menu-utility .bag-wrap .icon-bag {
+//   width: 30px;
+//   height: 31px;
+// }
+
+// #persistent-cart {
+//   letter-spacing: 0.075em;
+  
+//   h3 {
+//     font-weight: 500;
+//     letter-spacing: 0.12em;
+//   }
+
+//   div.row div a.btn { // Apologies for this, hunting for the right amount of specificity
+//     font-weight: 700;
+//     letter-spacing: 0.2em;
+//     font-size: 1.4rem;
+//     padding: 1rem;
+//   }
+// }
+
+
+// #header {
+//   background-color: rgba(255, 255, 255, 0.97);
+// }
+
+// .sticky #header #header-inner {
+//   // header down to 85px
+//   padding-top: 0.6rem;
+//   padding-bottom: 0.8rem;
+
+//   // header shrunk on mobile as well
+//   @media screen and (max-width: 767px) {
+//     padding-top: 0.45rem;
+//     padding-bottom: 0.65rem;
+//   }
+// }
+
+// .sticky #logo {
+//   // logo should be 15px tall on sticky desktop header
+//   @media screen and (min-width: 992px) {
+//     transform: scale(0.8333333);
+//   }
+// }
+
+// .sticky #menu > ul > li > a {
+//   line-height: 3rem;
+// }
+
+// .sticky #logo {
+//   @media screen and (max-width: 767px) {
+//     width: 207px;
+//   }
+
+//   svg {
+//     @media screen and (max-width: 767px) {
+//       width: 100%;
+//       height: 13px;
+//     }
+//   }
+// }
+
+// // Search
+// #search-wrap {
+//     background-color: rgba(29, 29, 29, 0.95);
+
+//     .form-control {
+//       color: white;
+//       font-size: 1.6rem;
+//       letter-spacing: 0.05em;
+
+//       &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+//         color: white;
+//       }
+//       &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+//         color: white;
+//       }
+//       &::-moz-placeholder { /* Mozilla Firefox 19+ */
+//         color: white;
+//       }
+//       &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+//         color: white;
+//       }
+//     }
+
+//     .search-close .icon-close, .icon-search {
+//     fill: #FFFFFF;
+//   }
+
+//   .btn-primary {
+//     letter-spacing: 0.1em;
+//   }
+// }
+
+// // Mobile menu
+// #menu .ship-to {
+//     font-size: 1.4rem;
+//     letter-spacing: 0.12em;
+//     padding: 1.6rem 1.5rem;
+// }
+
+// .menu-header-mobile {
+//   h3, p {
+//     font-size: 1.3rem;
+//     font-weight: 300;
+//     letter-spacing: 0.1em;
+//   }
+
+//   .customer-links {
+//     text-align: left;
+
+//     a {
+//       letter-spacing: 0.12em;
+//       font-weight: 500;
+
+//       &:first-child {
+//         margin-left: 0;
+//       }
+//     }
+
+//   }
+// }
+
+
+// // Header Submenus
+// #menu .dropdown-menu {
+//   background-color: rgba(29, 29, 29, 0.95);
+//   padding: 30px 0px 20px;
+
+//   @media screen and (max-width: 991px) {
+//     background-color: white;
+//     padding-top: 10px;
+//     padding-bottom: 0;
+//   }
+
+//   // When there is more than one column of subnav links, the spacing between
+//   // the columns on mobile nav gets messed up. This is my solve; not sure if
+//   // it'll work in all instances. I had to do the padding-bottom: 0 just above
+//   // to compensate.
+//   .row > div {
+//     @media screen and (max-width: 991px) {
+//       margin-bottom: 3rem;
+//     }
+//   }
+
+//   ul li {
+//     @media screen and (min-width: 992px) {
+//         margin-bottom: 0.8rem;
+//     }
+//   }
+
+//   a {
+//     color: #ddd;
+//     letter-spacing: 0.1em;
+
+//     @media screen and (max-width: 991px) {
+//       font-size: 1.2rem;
+//       letter-spacing: 0.1em;
+//       color: #6A6A6A;
+//       font-weight: 500;
+//     }
+//   }
+
+//   h3 {
+//     color: #fff;
+//     font-size: 1.2rem;
+//     letter-spacing: 0.12em;
+//     font-weight: 500;
+
+//     @media screen and (max-width: 991px) {
+//       color: black;
+//       margin-bottom: 1.5rem;
+//     }
+//   }
+
+//   &.white-background {
+//     background-color: rgba(255, 255, 255, 0.97);
+
+//     a {
+//       color: #626262;
+//     }
+
+//     h3 {
+//       color: #000;
+//     }
+
+//     .editorial-promo h4 {
+//       color: black;
+//     }
+//   }
+// }
+
+
+// .editorial-promo {
+//   h4 {
+//     font-family: "Didot 16 A", "Didot 16 B", serif;
+//     color: white;
+//     text-transform: uppercase;
+//     font-weight: 700;
+//     letter-spacing: 0.05em;
+//     font-size: 1.6rem;
+//       margin-top: 2rem;
+//     margin-bottom: 0.3rem;
+
+//     .the {
+//       text-transform: lowercase;
+//       font-style: italic;
+//     }
+
+//     .normal-case {
+//       text-transform: none;
+//     }
+
+//     .italic {
+//       font-style: italic;
+//     }
+
+//     .border-left {
+//       padding-left: 10px;
+//       margin-left: 10px;
+//       border-left: 1px solid white;
+//     }
+
+//     .tight {
+//       letter-spacing: 0;
+//     }
+//   }
+
+//   a {
+//     text-transform: uppercase;
+//     color: white;
+//     font-size: 1.2rem;
+//     letter-spacing: 0.1em;
+//     font-weight: 500;
+//   }
+// }
+
+
+// Carousel
+.carousel-lg h2.heading-caps {
+  font-style: normal;
+  letter-spacing: 0.05em;
+  font-size: 9rem;
+  color: white;
+  font-family: "Didot 64 A", "Didot 64 B", serif;
+  // Was hoping to get lining numerals in; doesn't seem to be the case.
+  // This could be a problem!
+  -moz-font-feature-settings: "lnum=1";
+  -ms-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+  -o-font-feature-settings: "lnum";
+  font-feature-settings: "lnum";
+  
+  @media screen and (max-width: 767px) {
+    color: black;
+    font-size: 50px;
+  }
+}
+
+.carousel-lg .carousel-caption {
+  @media screen and (min-width: 992px) {
+    top: 25%;
+  }
+}
+
+.carousel-caption {
+  @media screen and (max-width: 767px) {
+    padding: 1rem 2rem 2rem;
+  }
+}
+
+.carousel-caption span {
+  font-size: 3.6rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: white;
+  text-transform: lowercase;
+  font-family: "Didot 24 A", "Didot 24 B", serif;
+  display: inline-block;
+  margin: 0px 3rem;
+
+  @media screen and (max-width: 767px) {
+    color: black;
+    font-size: 30px;
+    font-weight: 300;
+  }
+}
+
+.carousel-caption .btn {
+  background-color: rgba(255, 255, 255, 0.65);
+  color: black;
+  font-size: 15px;
+  padding: 11px 30px;
+  margin-top: 35px;
+  letter-spacing: 0.2em;
+
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    margin: 4px auto;
+    font-weight: 700;
+  }
+}
+
+.banner-secondary {
+  display: none;
+}
+
+// Footer
+#footer #footer-inner {
+  h4 {
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+    }
+  }
+
+  .footer-menu-block ul li a {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    color: #626262;
+  }
+
+  .mobile-contact a {
+    font-family: $font-family-base;
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+  }
+}
+
+.copyright, .ship-to {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    color: #626262;
+}
+
+.ship-to {
+    font-weight: 500;
+}
+
+.footer-newsletter label {
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    color: #626262;
+}
+
+.footer-newsletter .input-group-btn .btn {
+  padding: 6px 15px;
+  letter-spacing: 0.2em;
+
+  @media screen and (max-width: 991px) {
+    padding: 1.35rem 3rem 1.3rem;
+    font-size: 1.5rem;
+    height: 50px;
+  }
+}
+
+#newsletter-signup {
+  font-size: 1.1rem;
+
+  @media screen and (max-width: 991px) {
+    height: 50px;
+    padding: 14px 12px;
+    font-size: 1.4rem;
+  }
+}
+
+#newsletter-signup::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+#newsletter-signup:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+#newsletter-signup::-moz-placeholder { /* Mozilla Firefox 19+ */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+#newsletter-signup:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.social a {
+  @media screen and (min-width: 1200px) {
+      margin-right: 1.9rem;
+  }
+}
+
+// Collection home
+@media (min-width: 991px) {
+  .filter-wrap.sticky-filter {
+    top: 85px; // header down to 85px
+  }
+}

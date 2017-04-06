@@ -1,0 +1,80 @@
+{% if include.promoType == "contentModuleTwoBy" %}
+  {% comment %}
+    Set default values, or use includes if they're available. This was built
+    out to accommodate references to _/molecules/collection/curated.html
+  {% endcomment %}
+  {% capture iOClass %}
+    {% unless include.promoClass == nil %}{{ include.promoClass }}{% endunless %}
+  {% endcapture %}
+  {% capture iOCollection %}
+    {% if include.promoCollection == nil %}Travelers Collection{% else %}{{ include.promoCollection }}{% endif %}
+  {% endcapture %}
+  {% capture iOHeading %}
+    {% if include.promoHeading == nil %}Lacey Stitch Cardigan{% else %}{{ include.promoHeading }}{% endif %}
+  {% endcapture %}
+  {% capture iOCopy %}
+    {% unless include.promoCopy == nil %}{{ include.promoCopy }}{% endunless %}
+  {% endcapture %}
+  {% capture iOLink %}
+    {% if include.promoLink == nil %}Shop Now{% else %}{{ include.promoLink }}{% endif %}
+  {% endcapture %}
+  {% capture iOImage %}
+    {% if include.promoImage == nil %}
+      https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800
+    {% else %}
+      {{ include.promoImage }}
+    {% endif %}
+  {% endcapture %}
+
+  {% include _molecules/modules/img-overlay.html moduleClass=iOClass moduleCollection=iOCollection moduleHeading=iOHeading moduleCopy=iOCopy moduleLink=iOLink moduleImage=iOImage %}
+{% else %}
+  <section class="module">
+    <div class="module-carousel collection-promo-static-heading">
+      <div class="module-inner">
+        {% if include.promoType == "singleCarouselPromo" %}
+        <div class="carousel carousel-collection-promo {{ include.carouselClass }}">
+        {% elsif include.promoType == "carouselPromo" %}
+        <div id="carousel-collection-promo-split" class="carousel slide carousel-collection-promo collection-promo-split" data-ride="carousel" data-interval="false" aria-live="polite">
+        {% endif %}
+          <div class="carousel-inner">
+            <div class="module-heading">
+              <h2>{{ include.moduleHeading }}</h2>
+            </div>
+            <div class="item active">
+              <a href="#">
+                <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading | strip_html }}">
+              </a>
+            </div>
+            {% if include.promoType != "singleCarouselPromo" %}
+              <div class="item">
+                <a href="#">
+                  <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading | strip_html }}">
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading | strip_html }}">
+                </a>
+              </div>
+            {% endif %}
+          </div>
+          {% if include.promoType != "singleCarouselPromo" %}
+            <a class="left carousel-control" href="#carousel-collection-promo-split" data-slide="prev" aria-label="previous">
+              <svg class="icon-arrow-left" role="presentation">
+                <use xlink:href="#icon-promo-left"></use>
+              </svg>
+            </a>
+            <a class="right carousel-control" href="#carousel-collection-promo-split" data-slide="next" aria-label="next">
+              <svg class="icon-arrow-right" role="presentation">
+                <use xlink:href="#icon-promo-right"></use>
+              </svg>
+            </a>
+          {% endif %}
+        </div><!-- #carousel-collection-promo-split -->
+        <div class="after-carousel-cta">
+          <a href="#">Shop Now</a>
+        </div>
+      </div>
+    </div><!-- .module-carousel -->
+  </section><!-- .module -->
+{% endif %}

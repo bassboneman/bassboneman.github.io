@@ -1,0 +1,40 @@
+<div class="modal fade modal-checkout" id="modal-gift-message-individual" tabindex="-1" role="dialog" aria-labelledby="modal-gift-message-individualLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-gift-message-individualLabel">Select <span class="hidden-xs">the</span> Item(s) to <span class="hidden-xs">Gift</span> Message</h3>
+      </div>
+      <div class="modal-body">
+        <p>Each message will arrive with individual personal messages and gift receipts.</p>
+        <form action="#" class="form-labels">
+
+          <div class="radio-media-list radio-list">
+            {% if page.setting == 'flow' %}
+              {% include _molecules/checkout/radios/product.html checkID='message-product-1' placement='gifting' modal='yes' noEdit='true' %}
+              {% include _molecules/checkout/radios/product.html checkID='message-product-3' placement='gifting' modal='yes' status='message-entered' id='flow-message-product-1' class='flow-hidden' %}
+              {% include _molecules/checkout/radios/product.html checkID='message-product-2' placement='gifting' modal='yes' noEdit='true' %}
+              {% include _molecules/checkout/radios/product.html checkID='message-product-4' placement='gifting' modal='yes' status='message-entered' id='flow-message-product-2' class='flow-hidden' %}
+            {% else %}
+              {% include _molecules/checkout/radios/product.html checkID='message-product-1' placement='gifting' modal='yes' noEdit='true' %}
+              {% include _molecules/checkout/radios/product.html checkID='message-product-2' placement='gifting' modal='yes' status='message-entered' %}
+              {% include _molecules/checkout/radios/product.html checkID='message-product-3' placement='gifting' modal='yes' noEdit='true' %}
+            {% endif %}
+          </div><!-- .radio-media-list -->
+                    
+        </form>
+      </div><!-- .modal-body -->
+
+      {% comment %}remove this conditional once usability btesting is done{% endcomment %}
+      {% if page.setting == 'flow' %}
+        <div class="modal-footer">
+          <button type="button" class="btn btn-alt" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" data-gifting="options" data-target="gifting-flow-entry-1">Save &amp; Continue</button>
+        </div>
+      {% else %}
+        {% include _molecules/checkout/modals/footer.html %}
+      {% endif %}
+
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal #modal-gift-select -->

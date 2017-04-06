@@ -1,0 +1,69 @@
+<section class="example-wrap">
+  <header>
+    <h2 id="images-responsive">Responsive</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/images/responsive.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/images/responsive.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="images-thumbs">Product Thumbs</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/images/product-thumbs.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/images/product-thumbs.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="images-main">Product Large</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/images/product-main.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/images/product-main.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+{% if page.brand == 'soma' %}
+  <section class="example-wrap">
+    <header>
+      <h2 id="images-icons">Icons (16px)</h2>
+      <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+    </header>
+    <div class="example">
+      <div class="example-display">
+        {% include _atoms/images/icons.html %}
+      </div>
+      <div class="example-code">
+        {% highlight html %}
+        {% include _atoms/images/icons.html %}
+        {% endhighlight %}
+      </div>
+    </div>
+  </section>
+{% endif %}

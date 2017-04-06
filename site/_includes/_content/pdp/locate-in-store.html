@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="frameless-header">
+    <div class="row">
+      <div class="col-xs-8">
+        <h3>Locate in Store</h3>
+      </div>
+      <div class="col-xs-4 text-right">
+        <a href="" onclick="window.close();">Close Window <i class="fa fa-times-circle"></i></a>
+      </div>
+    </div>
+  </div>
+  <p>To locate this item at a store nearest you, enter both color and size choices. Then, enter the zip code of the area you wish to shop.</p>
+  <div class="alert alert-info">
+    <p>Please note: We cannot guarantee store inventory availability. Inventory can change quickly throughout the day. Call store prior to arriving to confirm availability. Our locate in store feature only displays items that are not on sale.</p>
+  </div>
+  <div class="locate-wrap">
+    <div class="row">
+      <div class="col-md-7 col-sm-6">
+        {% include _atoms/images/product-main.html %}
+      </div>
+      <div class="col-md-5 col-sm-6">
+        <article>
+          <form action="">
+            {% include _molecules/products/complete.html %}
+          </form>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div id="store-locator-tabs" role="tabpanel">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#list-view" aria-controls="list-view" role="tab" data-toggle="tab">List View</a>
+      </li>
+      <li role="presentation">
+        <a href="#map-view" aria-controls="map-view" role="tab" data-toggle="tab">Map View</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="list-view">
+        <ul class="store-results store-results-tab">
+          {% include _molecules/lists/store-results.html %}
+          {% include _molecules/lists/store-results.html %}
+          {% include _molecules/lists/store-results.html %}
+        </ul><!-- .store-results -->
+      </div>
+      <div role="tabpanel" class="tab-pane" id="map-view">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804" width="600" height="450" frameborder="0" style="border:0"></iframe>
+        </div>
+        <p class="text-right">
+          {% include _atoms/buttons/button.html btnClass='btn-default btn-sm' btnLabel='Print Search Results' %}
+          {% include _atoms/buttons/button.html btnClass='btn-primary btn-sm' btnLabel='Locate Another Size or Color' %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div><!-- .container-fluid -->
+
+{% include _molecules/modals/modal-gallery.html %}

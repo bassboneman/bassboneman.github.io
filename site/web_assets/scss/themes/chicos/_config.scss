@@ -1,0 +1,374 @@
+// This file should only be used to set brand variables/mixins. CSS should be placed in _overrides.scss.
+
+// containers
+$max-width: 1200px;
+
+// fonts
+$font-family-base: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: "Didot 24 3r", serif;
+
+// colors
+$color-orange: #f26e50;
+$color-bay-of-many: #23527c; // blue
+$color-gray: #5a5858;
+$color-dovegray: #6a6a6a;
+$color-btn-primary: $color-black;
+$color-btn-default: $color-gray;
+$color-subnav-active: #c30;
+$color-subnav-hover: #c30;
+$color-sale-small: $color-red;
+$color-link-hover: $color-gray;
+$color-footer-border: #ebebeb;
+
+// footer
+$copyright-font-weight: 700;
+
+// buttons
+$font-weight-button: 700;
+
+// typography
+$letter-spacing: 0;
+$letter-spacing-button: .1em;
+@mixin alert {
+  // padding: .5rem;
+  .product-wrap & {
+    margin-top: $dimension-base;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .product-details & {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+  }
+}
+@mixin heading-has-line {}
+
+// products 
+@mixin product-group {}
+@mixin product-name {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+@mixin product-style-id {}
+@mixin product-size-tools {}
+@mixin product-full-link {}
+@mixin product-price {
+  font-weight: 700;
+}
+
+@mixin login-wrap {
+  h2 {
+    font-size: $font-size-h3;
+    margin-bottom: $dimension-small;
+    @include bold-caps;
+  }
+  .login-block {
+    min-height: 240px;
+    padding: $dimension-base;
+    border: 1px solid $color-border;
+    @media screen and (max-width: $break-sm-max) {
+      min-height: 280px;
+    }
+    @media screen and (max-width: $break-xs-max) {
+      min-height: 0px;
+    }
+  }
+}
+
+@mixin logo {
+  top: 1.2rem;
+  width: 14.4rem;
+  height: 3rem;
+  svg {
+    width: 14.4rem;
+    height: 3rem;
+  }
+}
+@mixin logo-medium {
+  top: .9rem;
+  width: 12.5rem;
+  height: 2.6rem;
+  svg {
+    width: 12.5rem;
+    height: 2.6rem;
+  }
+}
+@mixin logo-mobile {
+  top: .9rem;
+  width: 12.5rem;
+  height: 2.6rem;
+  svg {
+    width: 12.5rem;
+    height: 2.6rem;
+  }
+}
+
+@mixin menu-open-item {
+  border-bottom-color: $color-black; 
+}
+
+$font-size-base: 1.5rem;
+$font-size-h1: 2.2rem;
+$font-size-h2: 1.8rem;
+$font-size-h3: 1.6rem;
+$font-size-h4: 1.5rem;
+$font-size-h5-h6: 1.5rem;
+
+@mixin h2-h6-margins {
+  margin: 3rem 0 1rem 0;
+}
+@mixin h1 {
+  margin: 0 0 2rem 0;
+  font-size: $font-size-h1;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+@mixin h2 {
+  font-size: $font-size-h2;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+@mixin h3 {
+  font-size: $font-size-h3;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: .25px;
+}
+@mixin h4 {
+  font-size: $font-size-h4;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: .25px;
+  // text-transform?
+}
+@mixin h5-h6 {
+  font-size: $font-size-h5-h6;
+  font-weight: 700;
+  letter-spacing: .25px;
+}
+
+// header promo
+@mixin promo-label-styles {}
+
+// header
+// all of these need to be revisited
+$header-inner-padding: 4rem 1.5rem 3.0rem 1.5rem;
+$header-inner-padding-sticky: 1rem 1.5rem 1rem 1.5rem;
+$header-height: 15.1rem;
+$header-height-sticky: 11rem;
+$header-height-mobile: 12rem;
+$header-height-mobile-sticky: 5.2rem;
+
+@mixin menu-bag-placement {
+  right: 1.5rem;
+  bottom: 1rem;    
+}
+
+
+// utility menu
+@mixin menu-utility {
+  > li {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+
+$font-size-menu-utility: 1.3rem;
+$font-weight-menu-utility: 700;
+$menu-bag-font-size: 1.2rem;
+$menu-bag-font-weight: 400;
+@mixin menu-utility-font {}
+@mixin menu-utility-bag-number {
+  top: 8px;
+  width: 24px;
+}
+@mixin menu-utility-bag-wrap {
+  width: 24px;
+  height: 26px;
+  margin-top: -9px;
+  @media screen and (max-width: $break-sm-max) {
+    margin: -4px auto 0 auto;
+  }
+  .icon-bag {
+    width: 24px;
+    height: 26px;
+    fill: $color-black;
+  }
+  &:hover {
+    .icon-bag {
+      fill: $color-bay-of-many;
+    }
+  }
+}
+
+
+
+
+
+
+// search
+$color-search-wrap-bg: #f2f2f2;
+$color-search-close: #838383;
+$color-search-close-hover: $color-black;
+@mixin search-form-control {
+  font-size: 1.8rem; 
+}
+@mixin search-btn {}
+
+// mobile menu
+@mixin ship-to-mobile {
+  padding: 0.8rem 1.5rem;
+  // font-size: 1.6rem;
+  font-size: 1rem;
+  color: #666;
+}
+@mixin menu-header-mobile {
+  h3 {
+    margin: 0 0 1.5rem 0;
+    text-transform: uppercase;
+  }
+}
+
+// menu
+$mobile-menu-h2-font-size: 2rem;
+@mixin menu-ul {
+  @media screen and (max-width: 991px) {
+    padding: 1.5rem 0 0 2rem;  
+  }
+}
+@mixin menu-li {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  // text-transform: uppercase;
+  @media screen and (max-width: 991px) {
+    margin-bottom: 2rem;
+  }
+}
+@mixin menu-li-a {
+  padding: 0 2.5rem;
+  text-transform: uppercase;
+  @media screen and (max-width: $break-sm-max) {
+    padding: .8rem 1.5rem;
+  }
+  @media (max-width: 1100px) {
+    padding: 0 1.5rem;
+  }
+}
+@mixin menu-li-h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase; 
+  line-height: 3.2rem;
+}
+$menu-sticky-line-height: 4rem;
+@mixin menu-sale {
+  color: #f00;
+  &:hover {
+    color: #f00;
+  }
+}
+
+@mixin dropdown-li-link {
+  color: $color-black;
+  @media screen and (max-width: $break-sm-max) {
+    font-size: 1.6rem;
+    color: $color-black;
+  }
+}
+@mixin dropdown-li-heading {
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: $color-black;
+  @media screen and (max-width: 991px) {
+    font-size: 1.4rem;
+    color: $color-black;
+  }
+}
+@mixin menu-dropdown {
+  padding: 2rem 0;
+  background: #fff;
+  background: rgba(255,255,255,0.95);
+  @include box-shadow(0,1px,3px,0,rgba(0,0,0,0.1));
+}
+@mixin menu-triangles {}
+
+
+@mixin module-heading {
+  h1 {
+    margin-bottom: 0;
+    font-size: 4rem;
+    text-transform: uppercase;
+    em {
+      font-family: $font-family-serif;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+  }
+}
+
+@mixin product-outfit {}
+$color-outfit-price: $color-black;
+
+// special collections page
+@mixin c-sp-social {
+  top: 1.5rem;
+  [class*='icon-'] {
+    fill: $color-gray-light;
+  }
+}
+@mixin c-sp-header {
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid $color-black;
+  z-index: 50;
+  &:after,
+  &:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-top-color: #fff;
+    border-width: 15px;
+    margin-left: -15px;
+  }
+  &:before {
+    border-top-color: $color-black;
+    border-width: 16px;
+    margin-left: -16px;
+  }
+}
+@mixin c-sp-footer {
+  background: $color-black;
+  a {
+    color: #fff;
+  }
+}
+@mixin c-sp-wrap {}
+@mixin c-sp-click {}
+
+@mixin search-toggle-open {
+  a {
+    @include opacity(0.5);
+  }
+}

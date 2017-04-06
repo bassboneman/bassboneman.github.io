@@ -1,0 +1,292 @@
+// // Updated filter bar
+
+// // wanted to shed the current JS, so I pulled the .filter-wrap stuff from
+// // _filters and renamed as .filter-wrap-new as a starting point
+// .filter-wrap-new {
+//   position: relative;
+//   // This was carried over from the original, but for some reason it caused
+//   // a wacky line break issue in Chrome, so it's out for now. Might be less
+//   // relevant anyways if the filter isn't sticky? But that is just speculation
+//   // margin-top: -1px;
+//   margin-bottom: 2rem;
+//   letter-spacing: 0.12em;
+//   @media screen and (min-width: 992px) {
+//     // background: $color-filters-wrap-bg;
+//     // border-top: 1px solid transparent;
+//     background-color: #424141;
+//   }
+
+//   @media screen and (max-width: $break-sm-max) {
+//     margin-bottom: 0;
+//   }
+
+//   .container-fluid {
+//     @media screen and (max-width: $break-sm-max) {
+//       padding: 0;
+//     }
+//   }
+
+//   .filter-category {
+//     margin-right: 0;
+
+//     .bootstrap-select.btn-group .dropdown-menu {
+//       max-height: none!important;
+
+//       .dropdown-menu {
+//         max-height: none!important;
+//       }
+//     }
+
+//     @media screen and (max-width: $break-sm-max) {
+//       width: 100%;
+//       max-width: 100%;
+
+//       .bootstrap-select .btn {
+//         border: 0px none;
+//         background-color: black;
+//         color: white;
+
+//         .caret {
+//           background-image: url("../svg/arrow-down-white.svg")
+//         }
+//       }
+
+//       .bootstrap-select.open  {
+//         .btn {
+//             background-color: black;
+//         }
+
+//         .btn .caret {
+//           background-image: url("../svg/arrow-up-white.svg")
+//         }
+//       }
+//     }
+//   }
+
+//   .filter-tools {
+//     display: block;
+//   }
+
+//   .filter-list.mobile-toggle-hidden {
+//     @media screen and (max-width: $break-sm-max) {
+//       display: none;
+//     }
+//   }
+// }
+
+// .filter-list-mobile {
+  
+// }
+
+// #mobile-filter-modal {
+//   .modal-dialog, .modal-content {
+//     @media screen and (max-width: $break-xs-max) {
+//       height: 100%;
+//     }
+//   }
+
+//   .modal-body {
+//     padding: 0;
+//     overflow-y: scroll;
+    
+//     @media screen and (max-width: $break-xs-max) {
+//       height: 100%;
+//     }
+//   }
+
+//   .modal-footer {
+//     bottom: 0px;
+//     width: 100%;
+//     background-color: white;
+
+//     @media screen and (max-width: $break-xs-max) {
+//       position: fixed;
+//     }
+//   }
+
+//   h3 {
+//     text-transform: uppercase;
+//     letter-spacing: 0.12em;
+//     padding: 15px 18px 4px;
+//   }
+
+//   .filter-list {
+//     padding: 0 0 60px;
+
+//     > li > a {
+//       color: black;
+
+//       span::after {
+//         background-image: url("../svg/arrow-down.svg");
+//       }
+//     }
+
+
+//     > li.open > a span::after {
+//       background-image: url("../svg/arrow-up.svg");
+//     }
+
+//     .dropdown-menu {
+//       width: 100%;
+//     }
+
+//     .filter-toggles {
+//       padding: 0 1.5rem;
+//       letter-spacing: 0.1em;
+//     }
+//   }
+
+//   .dropdown-backdrop {
+//     display: none;
+//   }
+// }
+
+// .mobile-filter-list-trigger {
+//   width: 50%;
+//   float: left;
+//   padding: 0 10px;
+//   border-bottom: 1px solid #888;
+//   border-right: 1px solid #888;
+
+//   a {
+//     width: 100%;
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     display: inline-block;
+//     padding: 1rem 0px;
+//     font-size: 1.2rem;
+//     position: relative;
+
+//     svg {
+//       opacity: 0.75;
+//       position: absolute;
+//       right: 0px;
+//       top: 34%;
+//       width: 10px;
+//     }
+//   }
+// }
+
+// .new-filter-sort-by {
+//   margin: 0;
+//   height: 3.1rem;
+
+//   .bootstrap-select.btn-group {
+//     .btn {
+//       font-size: 1.2rem;
+//       letter-spacing: 0.12em;
+//       font-weight: 500;
+//       border: 0px none;
+//     }
+//   }
+
+//   .dropdown-menu > li > a {
+//     font-weight: 500;
+//     text-transform: uppercase;
+//   }
+
+//   @media screen and (min-width: 992px) {
+//     float: right;
+    
+//     .bootstrap-select.btn-group {
+//       width: auto;
+//       margin-top: 4px;
+//       height: 3.1rem;
+
+//       .btn {
+//         background-color: #424141;
+//         color: white;
+//         height: 3.1rem;
+//       }
+
+//       .caret {
+//         background-image: url("../svg/arrow-down-white.svg");
+//       }
+      
+//       &.open .dropdown-toggle {
+//         background-color: #888;
+//       }
+//     }
+//   }
+
+//   @media screen and (max-width: $break-sm-max) {
+//     width: 50%;
+//     float: left;
+
+//     .bootstrap-select.btn-group {
+//       width: 100%;
+
+//       .btn {
+//         border-bottom: 1px solid #888;
+//         padding: 1rem;
+//         height: auto;
+//       }
+//     }
+//   }
+// }
+
+// @media (min-width: 991px) {
+//   .filter-wrap-new.sticky-filter {
+//     position: fixed;
+//     top: 101px;
+//     z-index: 200;
+//     width: 100%;
+//   }
+//   .filter-outer {
+//     height: 4.4rem;
+//   }
+// }
+
+// .filter-second-row {
+//   max-width: 1200px;
+//   margin-top: 5px;
+
+//   .bootstrap-select .btn .filter-option {
+//     letter-spacing: 0.12em;
+//   }
+
+//   .filter-tag, .filter-clear {
+//     float: left;
+//     display: inline-block;
+//     background-color: #eee;
+//     margin: 0 1rem 1rem 0;
+
+//     a {
+//       display: block;
+//       padding: 0px 1.8rem;
+//       font-size: 1.2rem;
+//       font-weight: 500;
+//       line-height: 4rem;
+//       text-transform: uppercase;
+//       text-decoration: none;
+//       color: #000;
+//       transition: background 0.25s ease 0s;
+//       letter-spacing: 0.12em;
+
+//       @media screen and (max-width: $break-sm-max) {
+//         padding: 1rem 1.8rem;
+//         line-height: 1.5rem;
+//       }
+//     }
+
+//     svg {
+//       width: 0.8rem;
+//       height: 0.8rem;
+//       margin-left: 0.7rem;
+//     }
+//   }
+// }
+
+// .new-filter-paging-wrap {
+//   text-align: right;
+
+//   .items-total {
+//     padding-left: 0;
+//     border-left: 0 none;
+//     margin-right: 0;
+//   }
+// }
+
+// .breadcrumb > li + li.ellipsis::before {
+//   content: "";
+// }

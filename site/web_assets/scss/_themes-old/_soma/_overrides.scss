@@ -1,0 +1,1200 @@
+// temp 
+// variables
+$soma-color-pinkish-background: #FCF8F4;
+$soma-color-desat-light-pink: #F5E9DA;
+$soma-color-desat-medium-pink: #E1BCAA;
+$soma-color-desat-pink: #ECD5CE;
+$soma-color-desat-red: #ce9f91;
+$soma-color-gray: #737373;
+$soma-color-darker-gray: #595959;
+$soma-color-standardized-gray: #6A6A6A;
+
+// global
+.block-line,
+.block-line-desktop {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .block-line-desktop {
+    display: inline;
+  }
+  .block-line-mobile {
+    display: block;
+  }
+}
+.margin-top-30 {
+  margin-top: 3rem;
+}
+.margin-bot-30 {
+  margin-bottom: 3rem;
+}
+
+// global?
+.module-cta {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.module-cta-wrap {
+  padding: 1.5rem 0 4.5rem 0;
+  .module-cta {
+    display: inline-block;
+    &:first-child {
+      padding-right: 2rem;
+      margin-right: 2rem;
+      border-right: 1px solid $color-dovegray;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0 0 3rem 0;
+  }
+}
+.margin-bot-tall {
+  margin-bottom: 3.5rem;
+}
+
+// bra fit guide
+.module-sh-bfg {
+  .module-sh {
+    margin-bottom: 0.1rem;
+    .module-sh-copy {
+      top: 0;
+      height: 100%;
+      padding: 0;
+      font-family: $font-family-serif;
+      font-size: 1.8rem;
+      @include transform-none;
+      // @media screen and (min-width: 768px) { what is this for?
+      //   padding: 0 45% 0 10%;
+      // }
+      @media screen and (max-width: 1199px) {
+        font-size: 1.6rem;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .bfg-heading {
+    font-size: 2.35em;
+    float: left;
+    padding: 4rem 4% 3rem 27.5%;
+    line-height: 1;
+    position: relative;
+    @include vertical-align;
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      top: 13vw;
+      float: none;
+      margin: 0;
+      padding: 0 0 0 51%;
+      font-size: 7vw;
+      border-right: 0 none;
+      @include transform-none;
+    }
+    @media screen and (min-width: 992px) {
+      margin-top: 1.5rem;
+    }
+    span {
+      display: block;
+      font-size: 2.5em;
+      line-height: 0.66;
+    }
+  }
+  .tm {
+    font-family: $font-family-base;
+    font-size: 0.6em;
+    position: relative;
+    top: -0.5em;
+  }
+  .bd-large-copy {
+    font-size: 2.8rem;
+    line-height: 1.07em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .bd-small-copy {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1;
+    // @media screen and (max-width: 767px) {
+    //   font-size: 1.4rem;
+    // }
+  }
+  .module-extra {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+    margin: 0;
+    font-family: $font-family-base;
+    font-size: 1rem;
+    @media screen and (max-width: 767px) {
+      position: static;
+      margin-bottom: .5rem;
+    }
+  }
+}
+
+
+.module-sh .divider {
+  width: 1px;
+  height: 60%;
+  position: absolute;
+  background-color: #e3ddd7;
+  top: 20%;
+  left: 50%;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+
+.bra-destination {
+  @media screen and (min-width: 768px) {
+    position: relative;
+    @include vertical-align;
+  }
+  @media screen and (min-width: 992px) {
+    margin-top: 1rem;
+  }
+  @media screen and (max-width: 767px) {
+    top: auto;
+    padding: 2rem 0 0.5rem;
+    @include transform-none;
+  }
+}
+
+  
+.bfg-links {
+  padding: 1rem;
+  font: {
+    family: $font-family-serif;
+    size: 1.8rem;
+    style: italic;
+  }
+  text-align: center;
+  background-color: $color-brand-light;
+  @media screen and (max-width: 991px) {
+    margin: 0 -1.5rem;
+  }
+}
+.bfg-links-mobile {
+  margin: 1.5rem 0;
+  // padding-bottom: 1.5rem;
+}
+
+.module-bfg-size {
+  text-align: center;
+  > .row > [class*='col-']:first-child {
+    border-right: 1px solid #e3ddd7;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 4rem;
+  }
+  // a {
+  //   font-weight: 600;
+  //   text-transform: uppercase;
+  // }
+}
+.measurements {
+  margin-bottom: 3.5rem;
+  text-align: center;
+  select,
+  .bootstrap-select {
+    width: 220px !important;
+    @media screen and (max-width: 767px) {
+      width: 136px !important;
+    }
+  }
+  .form-group {
+    display: inline-block;
+    // margin: 0;
+    margin: 0 0 1rem 0;
+    & + .form-group {
+      margin-left: 1rem;
+    }
+  }
+}
+
+
+// make an atom?
+.watch-videos {
+  display: inline-block;
+  margin: 0 0 0.4rem -3.5rem;
+  line-height: 3.2rem;
+  svg {
+    display: inline-block;
+    // position: relative;
+    // top: 1rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+}
+
+.soma-heading {
+  font-size: 4.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  @media screen and (max-width: 767px) {
+    font-size: 2.8rem;
+  }
+}
+.soma-subheading {
+  // margin-bottom: 0;
+  font-family: $font-family-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  // letter-spacing: 0.01em;
+  @media screen and (max-width: 767px) {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+
+
+
+
+.module-bfg-checklist {
+  @media screen and (min-width: 768px) {
+    margin-top: 12rem; 
+  }
+  .panel {
+    margin: 0;
+    @include box-shadow-none;
+    .checklist-item {
+      margin: 0;
+      padding: 1.5rem 0;
+      font-size: 0;
+      font-weight: 400;
+      border-top: 1px solid $color-border;
+      a {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        @include transition(color);
+        span {
+          font-size: 2.2rem;
+        }
+        .number {
+          display: inline-block;
+          width: 3.2rem;
+          height: 3.2rem;
+          margin-right: .8rem;
+          padding-top: .2rem;
+          line-height: 3rem;
+          text-align: center;
+          color: #fff;
+          background-color: $color-black;
+          @include radius(50%);
+          @include transition(background-color);
+        }
+        &:not(.collapsed),
+        &:hover {
+          color: #ce9f91;
+          .number {
+            background-color: #ce9f91;
+          }
+        }
+        &:after {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          content: "";
+          width: 1.5rem;
+          height: 1rem;
+          margin-top: -5px;
+          background-image: url(../svg/arrow-down.svg);
+        }
+        &:not(.collapsed):after {
+          -webkit-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+                  transform: rotate(180deg);
+        }
+        @media screen and (max-width: 767px) {
+          .number {
+            width: 2.5rem;
+            height: 2.5rem;
+            padding-top: .2rem;
+            line-height: 2.3rem;
+          }
+          span {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+    &:first-child .checklist-item {
+      padding-top: 0;
+      border: 0;
+    }
+  }
+  .perfect-fit-copy {
+    position: relative;
+    overflow: hidden;
+    clear: both;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: $font-family-base;
+    &.pf-show-less {
+      max-height: 127px;
+    }
+  }
+  .fit-tips-block {
+    margin-top: 5rem;
+    @media screen and (max-width: 767px) {
+      margin-top: 1rem;
+    }
+  }
+  .show-more {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 14rem;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0, rgba(255, 255, 255, 0)),
+      color-stop(67%, rgb(255, 255, 255))
+    );
+    background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 67%);
+    background-image: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 67%);
+    background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 67%);
+    background-image: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 67%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 67%);
+    a {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      padding-bottom: 2.5rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+.perfect-fit-copy {
+  > div:first-child {
+    padding-left: 5.5rem;
+  }
+  h4 {
+    margin: 0 0 .3rem 0;
+    font: {
+      family: $font-family-base;
+      size: 1.3rem;
+      weight: 400;
+    }
+    text-transform: uppercase;
+  }
+  ul {
+    padding-left: 1.6rem;
+  }
+  p, li {
+    margin-bottom: 0.5rem;
+  }
+  .soma-fit-tip {
+    padding-left: 3rem;
+    h4 {
+      font-weight: 600;
+      text-transform: none;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    > div:first-child,
+    .soma-fit-tip {
+      padding-left: 4.8rem;
+    }
+  }
+}
+
+
+
+
+//     .soma-t4-bfg-04 .panel:first-child h4 {
+//   border: 0;
+//   padding: 0;
+// }
+
+// .soma-t4-bfg-04 .checklist-item a {
+//   display: block;
+//   position: relative;
+//   text-decoration: none;
+//   font-size: 2.2rem;
+// }
+
+
+
+
+// .soma-t4-bfg-04 .checklist-item {
+//   font-family: "BentonModern", serif;
+//   width: 100%;
+//   font-weight: 400;
+//   margin: 0;
+//   padding: 1.5rem 0;
+//   border-top: 1px solid #F5E9DA;
+// }
+
+
+
+
+
+
+
+
+// make this a universal element
+.module-video-list {
+  margin-top: 12rem;
+  @media screen and (max-width: 767px) {
+    margin-top: 2rem;
+  }
+
+  .bfg-video-block {
+    margin: 3rem 0 12.5rem;
+    overflow: hidden;
+
+    .bfg-video-window {
+      width: 68%;
+      display: inline-block;
+      float: left;
+      padding-top: 0;
+      position: relative;
+      background: $color-black;
+      img {
+        width: 100%;
+      }
+      @media screen and (max-width: 991px) {
+        width: 100%;
+      }
+
+      // .play-icon-overlay {
+      //   position: absolute;
+      //   width: 100%;
+      //   height: 100%;
+      //   cursor: pointer;
+      //   top: 0;
+      //   left: 0;
+
+      //   // &:hover .play-icon {
+      //   //   background-color: rgba($soma-color-desat-red,0.9);
+      //   // }
+      // }
+      
+      // .play-icon {
+      //   position: absolute;
+      //   width: 88px;
+      //   height: 88px;
+      //   top: 50%;
+      //   left: 50%;
+      //   margin: -44px 0 0 -44px;
+      //   background-color: rgba(0,0,0,0.7);
+      //   border-radius: 88px;
+      //   display: none;
+      //   transition: background-color 0.2s ease;
+
+      //   &:after {
+      //     content: "";
+      //     display: inline-block;
+      //     width: 0; 
+      //     height: 0;
+      //     border-top: 2.4rem solid transparent;
+      //     border-bottom: 2.4rem solid transparent;
+      //     border-left: 3.2rem solid white;
+      //     position: absolute;
+      //     left: 50%;
+      //     top: 50%;
+      //     margin: -2.4rem 0 0 -1.1rem;
+      //   }
+
+      //   @media screen and (max-width: 767px) {
+      //     width: 44px;
+      //     height: 44px;
+      //     margin: -22px 0 0 -22px;
+      //     border-radius: 44px;
+
+      //     &:after {
+      //       border-top: 1.2rem solid transparent;
+      //       border-bottom: 1.2rem solid transparent;
+      //       border-left: 1.6rem solid white;
+      //       margin: -1.2rem 0 0 -0.5rem;
+      //     }
+      //   }
+      // }
+    }
+    .bfg-video-playlist {
+      width: 32%;
+      display: inline-block;
+      float: left;
+      background-color: $soma-color-pinkish-background;
+      padding: 3rem 0;
+      overflow: auto;
+      @media screen and (max-width: 991px) {
+        width: 100%;
+      }
+
+      .vc-title {
+        font-family: $font-family-serif;
+        font-size: 1.8rem;
+        border-bottom: 1px solid $soma-color-desat-light-pink;
+        font-weight: 400;
+        padding: 0 0 0.3rem;
+        margin: 2rem 3rem 1rem;
+      }
+
+      .video-collection:first-child .vc-title {
+        margin-top: 0;
+      }
+
+      .media {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 1rem 0;
+        text-decoration: none;
+
+        .number-play {
+          float: left;
+          // position: absolute;
+          // top: 38px; // Dependent on image height and padding
+          // -webkit-transform: translateY(-50%);
+          // -ms-transform: translateY(-50%);
+          // transform: translateY(-50%);
+          font-size: 1.3rem;
+          font-weight: 600;
+          line-height: 6.1rem;
+          text-align: center;
+          width: 3rem;
+
+          // .play {
+          //   display: none;
+          // }
+        }
+        // img.old-thumb {
+        //   width: 104px;
+        //   margin-left: 3rem;
+        // }
+        .yt-thumb {
+          position: relative;
+          width: 104px;
+          height: 61px;
+          margin-left: 3rem;
+          // overflow: hidden;
+          border: 3px solid transparent;
+          img {
+            // position: absolute;
+            // top: -10px; 
+            // left: 0;
+            width: 100%;
+          }
+        }
+        .media-body {
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+          font-weight: 400;
+          padding-right: 3rem;
+
+          p {
+            margin-bottom: 0;
+          }
+        }
+
+        &.active {
+          // background-color: #fefdfc;
+          background-color: #fff;
+
+          // .number-play {
+          //   top: 40px;
+
+          //   .number {
+          //     display: none;
+          //   }
+          //   .play {
+          //     display: inline-block;
+          //     width: 0; 
+          //     height: 0; 
+          //     border-top: 0.6rem solid transparent;
+          //     border-bottom: 0.6rem solid transparent;
+          //     border-left: 0.8rem solid black;
+          //   }
+          // }
+          .yt-thumb {
+            border-color: $color-black;
+          }
+          img {
+            // border: 1px solid #fff;
+            // border-radius: 2px;
+          }
+        }
+      } 
+      .vc-individual-title {
+        text-transform: uppercase; 
+        font-family: $font-family-base;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        margin-bottom: 0.4rem;
+      }
+    }
+    // &.ready-and-unclicked {
+    //   .bfg-video-window .play-icon {
+    //     display: block;
+    //   }
+    //   // .bfg-video-playlist .video-collection:first-child .media:nth-of-type(1) {
+    //   //   background-color: #FEFDFC;
+    //   // }
+    // }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.module-sh-bra-01 {
+  font-family: $font-family-serif;
+  .module-sh {
+    h2 {
+      small {
+        display: block;
+        font-family: $font-family-base;
+        font-style: normal;
+        margin-bottom: 5rem;
+        font-size: 1.5rem;
+      }
+    }
+    p {
+      margin-bottom: 4rem;
+      font-size: 1.8rem;
+    }
+  }
+  .module-ctas {
+    a {
+      display: inline-block;
+      margin: 0 1.7rem;
+      font-family: $font-family-base;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: #fff;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .module-sh h2 small {
+      margin-bottom: 1.5rem;
+    }
+    .module-sh p {
+      margin: 0;
+    }
+    .module-ctas a {
+      display: none;
+    }
+    .module-sh .module-sh-copy {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .curated .shelfless-promo-2x {
+    display: none;
+  }  
+}
+
+
+
+// find bra template
+// not global but can be. soma-only for now
+.module-img-collection {
+  margin-bottom: 5rem;
+  a {
+    img {
+      @include opacity(1.0);
+      @include transition(opacity);
+    }
+    &:hover {
+      img {
+        @include opacity(0.85);
+      }
+    }
+  }
+  h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    text-transform: none;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+// soma rewards
+.module-sh-soma-rewards {
+  h2 {
+    color: #f5e9da;
+    sup {
+      top: -0.3em;
+      font-size: 0.7em;
+    }
+    svg {
+      display: block;
+      width: 76%;
+      height: 100%;
+      margin: 0 auto 1.5rem auto;
+      text-align: center;
+      fill: #fff;
+    }
+  }
+  &.module-sh-soma-share-rewards { // variation on the same shelf header
+    h2 {
+      svg {
+        width: 288px;
+        height: 112px;
+        @media screen and (max-width: 767px) {
+          width: 190px;
+          height: 73px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    h2 {
+      color: $color-black;
+      svg {
+        width: 120px;
+        height: 45px;
+        fill: $color-black;
+      }
+    }
+    .module-sh-copy {
+      // position: relative;
+      padding: 2rem 1.5rem 2rem 0;
+    }
+  }
+}
+
+
+.share-rewards {
+  margin: 0 0 5rem 0;
+  @media screen and (min-width: 768px) {
+    margin: 5rem 0 3rem 0;
+  }
+}
+
+
+// not global but can be. soma-only for now
+.number-box-wrap {
+  margin: 0 15rem;
+  @media screen and (max-width: 991px) {
+    margin: 0 5rem;
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+}
+
+.number-box {
+  position: relative;
+  margin: 7rem 1.5rem 6rem 1.5rem;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border: 2px solid #ecd5ce;
+  p {
+    margin: 0;
+  }
+
+
+
+// .thelab-soma-share-rewards .sr-number-box .number {
+//   position: absolute;
+//   font-family: "BentonModern", serif;
+//   background-color: #ECD5CE;
+//   font-size: 2.2rem;
+//   border: 0;
+//   border-radius: 3.6rem;
+//   padding-top: 0.3rem;
+//   top: -0.4rem;
+//   left: 50%;
+//   width: 3.6rem;
+//   height: 3.6rem;
+//   text-align: center;
+//   font-size: 2.2rem;
+// }
+
+  .number {
+    position: absolute;
+    top: -.4rem;
+    left: 50%;
+    width: 3.6rem;
+    height: 3.6rem;
+    font-family: $font-family-serif;
+    font-size: 2.2rem;
+    line-height: 3.6rem;
+    text-align: center;
+    background: #ecd5ce;
+    @include radius(50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
+
+
+  @media screen and (max-width: 1199px) {
+    margin: 7rem 0 6rem 0;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 4rem 0;
+    .number {
+      width: 3.4rem;
+      height: 3.4rem;
+      line-height: 3.4rem;
+      font-size: 2rem;
+    }
+  }
+}
+
+// global element
+.btn-with-label {
+  display: inline-block;
+  margin-bottom: 4rem;
+  vertical-align: bottom;
+  span {
+    // position: absolute;
+    // top: -30px;
+    display: block;
+    width: 100%;
+    margin-bottom: .5rem;
+    text-align: center;
+    font: {
+      family: $font-family-serif;
+      size: 1.8rem;
+      style: italic;
+    }
+    color: #838383;
+  }
+  .btn {
+    margin: 0 4rem;
+  }
+}
+
+.social-block-soma {
+  text-align: center;
+  h3 {
+    margin: 0;
+  }
+  p {
+    font: {
+      family: $font-family-serif;
+      size: 1.8rem;
+    }
+  }
+}
+
+
+.soma-table-wrap {
+  margin: 4rem -15px;
+  padding: 5rem 0 8rem 0;
+  font: {
+    family: $font-family-serif;
+    size: 2.1rem;
+  }
+  color: #fff;
+  background-color: $color-black;
+  .link-group {
+    font-size: 0;
+    a {
+      color: #fff;
+      font: {
+        family: $font-family-base;
+        weight: 600;
+        size: 1.4rem;
+      }
+      text-transform: uppercase;
+      // letter-spacing: 0.03em;
+      &:first-child {
+        margin-right: 1.5rem;
+        padding-right: 1.5rem;
+        border-right: 1px solid #fff;
+      }
+    }
+  }
+  .under-table {
+    text-align: center;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 1.4rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    .under-table {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+}
+.soma-table {
+  width: 600px;
+  margin: 0 auto 5rem;
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  th {
+    padding-top: 6em;
+    font: {
+      size: 1em;
+      weight: 400;
+    }
+    line-height: 1.14218;
+    border-top: 0;
+    border-right: 1px solid #4f4f4f;
+    border-left: 1px solid #4f4f4f;
+  }
+  td {
+    height: 3.8em;
+    line-height: 1.14218;
+    vertical-align: middle;
+    border: 1px solid #4f4f4f;
+    &:first-child {
+      border-left: 0;
+    }
+    &:last-child {
+      border-right: 0;
+    }
+    &.description {
+      .subtitle {
+        font: {
+          family: $font-family-base;
+          size: 0.619em;
+        }
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+    }
+  }
+  tr:last-child td {
+    border-bottom: 0;
+  }
+  th:last-child {
+    border-right: 0;
+  }
+  th.description {
+    padding-bottom: .5rem;
+    padding-right: .5rem;
+    &:first-child {
+      border-left: 0;
+    }
+  }
+  .yes-no-header {
+    width: 13.3333%;
+    span {
+      display: block;
+    }
+    > span {
+      line-height: 1.286em;
+      white-space: nowrap;
+      -webkit-transform-origin: 33% 20%;
+          -ms-transform-origin: 33% 20%;
+              transform-origin: 33% 20%;
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+    }
+  }
+  .yes-no {
+    width: 13.3333%;
+    text-align: center;
+  }
+  .tier-name {
+    font-size: 1.714em;
+    font-style: italic;
+  }
+  .subtitle {
+    font: {
+      family: $font-family-base;
+      size: 1.048em;
+    }
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .preferred {
+    color: #ecd5ce;
+    svg {
+      fill: #ecd5ce;
+    }
+  }
+  .gold {
+    color: #b79c5b;
+    svg {
+      fill: #b79c5b;
+    }
+  }
+  .platinum {
+    color: #bcbcbe;
+    svg {
+      fill: #bcbcbe;
+    }
+  }
+  svg {
+    width: 1em;
+    height: 1em;
+    margin-top: 0.333em;
+  }
+  @media screen and (max-width: 767px) {
+    width: 300px;
+    .yes-no-header {
+      .tier-name {
+        font-size: 1.4em;
+      }
+      .subtitle {
+        font-size: 0.85em;
+      }
+      > span {
+        line-height: 1.05em;
+      }
+    }
+  }
+}
+
+
+.module-sh-soma-donation {
+  .module-sh-copy {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    padding: 0;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    // @media screen and (min-width: 768px) {
+    //   padding: 0 45% 0 10%;
+    // }
+  }
+  h2 {
+    margin-top: 2rem;
+    font-size: 10px;
+
+    svg {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      // max-width: 100%;
+      width: 100%;
+      // height: 6.4em;
+
+
+// .my-svg-container{
+//  display: inline-block;
+//  position: relative;
+//  width: 50%;
+//  padding-bottom: 60%; /* depends on svg ratio, for my zebra height/width = 1.2 so padding-bottom = 50% * 1.2 = 60% */
+ 
+//  vertical-align: middle; /* top | middle | bottom ... do what you want */
+// }
+
+
+// .my-svg{ /* svg into : object, img or inline */
+//   display: block;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%; /* only required for <img /> */
+// }
+    
+
+
+    }
+    span {
+      display: block;
+    }
+    .title-bra {
+      // font-size: 9em;
+      letter-spacing: -.02em;
+      line-height: 0.85;
+    }
+    .title-donation {
+      // font-size: 3.45em;
+      letter-spacing: -0.01em;
+      line-height: 0.4;
+    }
+  }
+  
+}
+
+// a variation of module-sh-text
+.module-soma-after-sh {
+  margin: 0 0 5rem 0;
+  padding: 0;
+  font-size: 3.6rem;
+  font-family: $font-family-serif;
+  // letter-spacing: 0.01em;
+  a {
+    margin: 0 1.5rem;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-left: 1px solid $color-black;
+    border-right: 1px solid $color-black;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 2rem;
+    a {
+      border: 0;
+    }
+    span {
+      display: block;
+    }
+  }
+}
+
+
+
+
+// survivor stories
+// these elements have hide/show elements, so some special css is needed
+
+.suvivor-story-wrap {
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .survivor-story {
+    margin-top: 3rem;
+    text-align: center;
+    // width: 50%;
+    width: calc(50% - 15px);
+    &.survivor-story-left {
+      float: left;
+      @include clearfix;
+    }
+    &.survivor-story-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+    }
+  }
+}
+
+// width: 768px)
+// .soma-gb-stories .survivor-story-valerie {
+//   right: 15px;
+//   position: absolute;
+//   top: 0;
+//   width: calc(50% - 15px);
+// }
+// .soma-gb-stories .survivor-story {
+//   margin-top: 3rem;
+//   text-align: center;
+//   width: 50%;
+// }
+

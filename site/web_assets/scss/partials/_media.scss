@@ -1,0 +1,14 @@
+// this is the 2-column layout that will hopefully replace most table-based product detail layouts
+.media-product {
+  margin-bottom: 20px;
+  .media-object {
+    width: 100px;
+    @media screen and (min-width: 768px) {
+      width: 150px;
+    }
+  }
+  + .media-product {
+    padding-top: 20px;
+    border-top: 1px solid $color-border;
+  }
+}

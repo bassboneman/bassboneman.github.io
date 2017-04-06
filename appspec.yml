@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/deploy
+hooks:
+  BeforeInstall:
+    - location: scripts/removefiles
+      runas: root
+  ApplicationStart:
+    - location: scripts/startwatch
+      runas: root

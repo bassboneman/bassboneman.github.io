@@ -1,0 +1,104 @@
+.appt-wrap {
+  // padding: 0 0 5rem 0;
+  .appt-item {
+    margin: 0 auto;
+    padding: 2rem 0;
+    text-align: center;
+    h2 {
+      // font-family: $font-family-serif;
+      font-size: 2.4rem;
+    }
+    img {
+      width: 60px;
+    }
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .blockquote {
+    margin-bottom: 0;
+  }
+  hr {
+    margin: 3rem 0;
+  }
+  @media screen and (min-width: 768px) {
+    .col-sm-4:nth-child(2) {
+      border-left: 1px solid $color-border;
+      border-right: 1px solid $color-border;
+    }
+  }
+  @media screen and (max-width: $break-xs-max) {
+    .appt-item {
+      max-width: 400px;
+      border-bottom: 1px solid $color-border;
+    }
+    hr {
+      display: none;
+    }
+  }
+}
+.appt-cta {
+  padding: 5rem 0;
+  // padding: 5rem 0;
+  text-align: center;
+  h2 {
+    // font-family: $font-family-serif;
+    font-size: 3.6rem;
+  }
+}
+
+.module-sh-appt {
+  position: relative;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  // background: #000 url(../imgs/temp/leopard.jpg);
+  background: #000 url(https://placeholdit.imgix.net/~text?txtsize=33&txt=1200%C3%97400&w=1200&h=400&bg=222222) 50% 50%;
+  h1 {
+    margin-bottom: 1rem;
+    font-family: $font-family-serif;
+    font-size: 4.8rem;
+    em {
+      text-transform: none;
+    }
+  }
+  p {
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    font-style: italic;
+  }
+  @media screen and (max-width: $break-sm-max) {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+  .module-sh-appt-cta {
+    margin: 0 -3rem -3rem -3rem;
+    padding: 1.5rem 3rem;
+    background: rgba(0,0,0,0.6);
+    a {
+      margin-left: 3rem;
+      color: #fff;
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    span {
+      font-style: italic;
+    }
+    @media screen and (max-width: $break-sm-max) {
+      span {
+        display: block;
+      }
+      a {
+        margin-left: 0;
+      }
+    }
+  }
+}

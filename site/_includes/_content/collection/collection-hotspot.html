@@ -1,0 +1,47 @@
+<div class="content">
+  <div class="container-fluid">
+
+    {% include _molecules/modules/module-heading.html moduleHeading='Wardrobe Refresh' moduleCopy='Everything you need to take your style to the next level.' %}
+
+    {% include _molecules/navigation/breadcrumb.html breadLvl2='Clothing' breadLvl3='Dresses &amp; Skirts' %}   
+
+    <div class="collection-group">
+      {% include _molecules/modules/shelf-hotspot.html collapseGrid='yes' collectionNum='1' collectionTitle='Suede &amp; Leather' collectionCopy='The naturals for elevating your look' collectionVisible='yes' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+2400x1040&w=1200&h=520' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+767x767&w=767&h=767' %}
+      <div class="collection">
+        {% include _molecules/products/listing-all.html %}
+        <div class="collection-group-cta text-center">
+          {% include _atoms/buttons/button.html btnClass='btn-primary btn-responsive' btnLabel='Shop the Collection' %}
+        </div>
+      </div>
+    </div><!-- .collection-group -->
+    <div class="collection-group">
+      {% include _molecules/modules/shelf-hotspot.html collapseGrid='yes' moduleLayout='module-sh-right' collectionNum='2' hotspots='yes' collectionTitle='Nautical Style' collectionCopy='The long &amp; short of a classic look' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+2400x1040&w=1200&h=520' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+767x767&w=767&h=767' %}
+      <div class="collection" style="display: none;">
+        {% include _molecules/products/listing-all.html %}
+        <div class="collection-group-cta text-center">
+          {% include _atoms/buttons/button.html btnClass='btn-primary btn-responsive' btnLabel='Shop the Collection' %}
+        </div>
+      </div>
+    </div><!-- .collection-group -->
+    <div class="collection-group">
+      {% include _molecules/modules/shelf-hotspot.html collapseGrid='yes' collectionNum='3' tooltips='yes' collectionTitle='Long Layers' collectionCopy='Layer up with longer silhouettes' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+2400x1040&w=1200&h=520' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+767x767&w=767&h=767' %}
+      <div class="collection" style="display: none;">
+        {% include _molecules/products/listing-all.html %}
+        <div class="collection-group-cta text-center">
+          {% include _atoms/buttons/button.html btnClass='btn-primary btn-responsive' btnLabel='Shop the Collection' %}
+        </div>
+      </div>
+    </div><!-- .collection-group -->
+    <div class="collection-group">
+      {% include _molecules/modules/shelf-hotspot.html collapseGrid='yes' moduleLayout='module-sh-right' collectionNum='4' hotspots='yes' collectionTitle='New Navy' collectionCopy='Classic color in new textures &amp; silhouettes' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+2400x1040&w=1200&h=520' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=12&txt=Actual+Size+767x767&w=767&h=767' %}
+      <div class="collection" style="display: none;">
+        {% include _molecules/products/listing-all.html %}
+        <div class="collection-group-cta text-center">
+          {% include _atoms/buttons/button.html btnClass='btn-primary btn-responsive' btnLabel='Shop the Collection' %}
+        </div>
+      </div>
+    </div><!-- .collection-group -->
+  </div><!-- .container-fluid -->
+</div><!-- .content.content-wide -->
+
+{% include _molecules/modals/modal-quick-view.html %}

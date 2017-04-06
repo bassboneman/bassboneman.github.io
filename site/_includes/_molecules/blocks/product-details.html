@@ -1,0 +1,67 @@
+<div class="product-details">
+  <div class="row row-tight">
+    <div class="col-xs-3">
+      {% if include.prodLinked == "yes" %}
+        <a href="#" data-toggle="modal" data-target="#modal-quick-view"><img class="img-responsive" src="http://placehold.it/200x250&text=Product" alt=""></a>
+      {% else %}
+        {% if include.color %}
+          <img class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/checkout/temp/{{ include.color }}.jpg" alt="">
+        {% else %}
+          <img class="img-responsive" src="http://placehold.it/200x250&text=Product" alt="">
+        {% endif %}
+      {% endif %}
+    </div>
+    <div class="col-xs-9">
+      <h4>
+        {% if include.prodLinked == "yes" %}
+          <a href="#" data-toggle="modal" data-target="#modal-quick-view">Product Name</a>
+        {% else %}
+          Product Name
+        {% endif %}
+      </h4>
+      {% if include.quantitySelect == "yes" %}
+        <div class="row">
+          <div class="col-sm-9">
+          {% endif %}
+          <dl class="dl-horizontal meta-list">
+            <dt>Style:</dt>
+            <dd>570126513</dd>
+            <dt>SKU:</dt>
+            <dd>451005486120</dd>
+            <dt>Color:</dt>
+            <dd>
+              {% if include.color %}
+                {{ include.color | capitalize }}
+              {% else %}
+                Natural Cream
+              {% endif %}
+            </dd>
+            <dt>Size:</dt>
+            <dd>Size 000 (0, XXS)</dd>
+            <dt>Item Price:</dt>
+            <dd>$99.00</dd>
+            <dt>Total Price:</dt>
+            <dd><span class="strikethrough pad-right-10">$99.00</span> $74.00</dd>
+          </dl>
+          {% if include.quantitySelect == "yes" %}
+            </div><!-- .col-sm-10 -->
+            <div class="col-sm-3 hidden-print">
+              {% include _atoms/forms/select.html selectClass='select-qty' labelName='Quantity' labelHidden='hidden' labelID='quantity-1' formClass="form-group-max-width" selectOptions='<option value="1" title="QTY 1">1</option><option value="2" title="QTY 2">2</option><option value="3" title="QTY 3">3</option>' %}
+              <div class="edit-remove"><a href="#">Edit</a> | <a href="#">Remove</a></div>
+            </div>
+          </div><!-- .row -->
+          {% endif %}
+      
+      {% if include.alertMsg == "yes" %}
+        <div class="alert alert-danger hidden-print">
+          Are you sure you want to remove this item? <a href="#">Yes</a> or <a href="#">No</a>
+        </div>
+      {% endif %}
+
+      {% if include.finalSale %}
+        {% include _atoms/text/product-price-final-sale.html longLabel='yes' tooltip='yes' %}
+      {% endif %}
+
+    </div>
+  </div>
+</div><!-- .product-details -->

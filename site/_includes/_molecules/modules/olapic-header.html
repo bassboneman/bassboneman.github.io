@@ -1,0 +1,20 @@
+<section class="module {{ include.moduleClass }}">
+  <div class="module-sh {{ include.moduleLayout }}">
+    <div class="module-inner">
+      <div class="module-sh-img">
+        <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading }}" class="img-responsive {% if include.moduleImageMobile %}hidden-xs{% endif %}">
+        {% if include.moduleImageMobile %}
+          <img src="{{ include.moduleImageMobile }}" alt="{{ include.moduleHeading }}" class="img-responsive visible-xs">            
+        {% endif %}
+      </div>
+
+      <div class="module-sh-copy">
+        <h2 class="heading-serif">#Obsessories</h2>
+        <p>Selfie, Shelfie, Groupie... Take your pic and share your love for our accessories on Instagram and Twitter. (You might see yourself here.)</p>
+        <p><a href="javascript:void(0);">Shop Accessories Boutique</a></p>
+        <p><a href="javascript:void(0);">Submit a Picture</a></p>
+      </div>
+
+    </div>
+  </div>
+</section><!-- .module -->

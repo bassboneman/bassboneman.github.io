@@ -1,0 +1,36 @@
+<section class="detail-wrap detail-cols">
+  {% include _atoms/text/detail-heading.html detailLabel='Order Summary' %}
+  <div class="detail">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Liz Hamilton <small><a href="">Edit</a></small></h3>
+        <address>
+          123 Main St.<br>
+          Naples, FL 34104<br>
+          USA
+        </address>
+      </div>
+      <div class="col-md-4">
+        <h3>Standard <small><a href="">Edit</a></small></h3>
+        <p>
+          <span class="text-uppercase">Free</span><br>
+          Est. Arrival: Feb. 7-11
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h3>Sending a Gift?</h3>
+        <p>
+          Our gift options include:
+        </p>
+        <ul>
+          <li>Gift Boxes</li>
+          <li>Gift Receipts</li>
+          <li>Gift Message</li>
+        </ul>
+        <p>
+          {% include _atoms/buttons/button.html btnClass='btn-default' btnLabel='Submit' %}
+        </p>
+      </div>
+    </div>
+  </div>
+</section><!-- .detail-wrap -->

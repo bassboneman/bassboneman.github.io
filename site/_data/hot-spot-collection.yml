@@ -1,0 +1,96 @@
+- collection: Suede and Leather
+  subtitle: The Naturals for Elevating Your Look
+  align: right
+  hot_spots:
+    - type: hotspot
+      x: '17.75%'
+      y: '42.1154%'
+      mobile-x: '27%'
+      mobile-y: '41%'
+    - type: hotspot
+      x: '19.5%'
+      y: '81.5385%'
+      mobile-x: '29%'
+      mobile-y: '81%'
+    - type: hotspot
+      x: '47.5833%'
+      y: '14.6154%'
+      mobile-x: '71%'
+      mobile-y: '14%'
+    - type: hotspot
+      x: '41.1667%'
+      y: '34.2308%'
+      mobile-x: '62%'
+      mobile-y: '33%'
+    - type: hotspot
+      x: '53.1667%'
+      y: '76.7308%'
+      mobile-x: '79.5%'
+      mobile-y: '76%'
+
+- collection: Nautical Style
+  subtitle: The Long & Short of a Classic Look
+  align: left
+  hot_spots:
+    - type: stylenote
+      x: '60%'
+      y: '24.6154%'
+      mobile-x: '39%'
+      mobile-y: '24%'
+      note: A crop shape takes the blazer up a notch. Instantly give your favorite worn-in denim a polished edge.
+      product: Double Breasted Cropped Blazer
+      price: 149
+    - type: stylenote
+      x: '87.75%'
+      y: '42.1154%'
+      mobile-x: '80%'
+      mobile-y: '41%'
+      note: A crop shape takes the blazer up a notch. Instantly give your favorite worn-in denim a polished edge.
+      product: Double Breasted Cropped Blazer
+      price: 149
+
+- collection: Long Layers
+  subtitle: Layer Up with Longer Silhouettes
+  align: right
+  hot_spots:
+    - type: hotspot
+      x: '10.75%'
+      y: '21.9231%'
+      mobile-x: '15%'
+      mobile-y: '21%'
+    - type: hotspot
+      x: '22%'
+      y: '46.9231%'
+      mobile-x: '33%'
+      mobile-y: '46%'
+    - type: hotspot
+      x: '8.08333%'
+      y: '69.0385%'
+      mobile-x: '11%'
+      mobile-y: '68%'
+    - type: hotspot
+      x: '61.416667%'
+      y: '46.9231%'
+      mobile-x: '92%'
+      mobile-y: '46%'
+
+- collection: New Navy
+  subtitle: Classic Color in New Textures and Silhouettes
+  align: left
+  hot_spots:
+    - type: stylenote
+      x: '48.75%'
+      y: '40.1923%'
+      mobile-x: '23%'
+      mobile-y: '39%'
+      note: Pair a navy cashmere poncho over a crisp white flared pant for an elongated silhouette.
+      product: Navy Cashmere Poncho
+      price: 175
+    - type: stylenote
+      x: '68.5833%'
+      y: '56.1538%'
+      mobile-x: '49%'
+      mobile-y: '55%'
+      note: Pair a navy cashmere poncho over a crisp white flared pant for an elongated silhouette.
+      product: Navy Cashmere Poncho
+      price: 175

@@ -1,0 +1,76 @@
+// bootstrap
+@import "vendor/bootstrap";
+
+@import "modules/mixins";
+@import "vendor/normalize";
+@import "vendor/bootstrap-overrides";
+@import "partials/base";
+
+// layouts
+@import "layouts/content";
+// @import "layouts/header";
+// @import "partials/header-dropdowns";
+// @import "layouts/footer";
+
+
+// checkout-specific files
+@import 'checkout/header';
+@import 'checkout/footer';
+
+// page-specific styles
+@import "layouts/customer_care";
+
+// modules
+// @import "partials/logo";
+@import "partials/typography";
+@import "partials/icons";
+@import "partials/svg";
+@import "partials/lists";
+@import "partials/buttons";
+@import "partials/tables";
+@import "partials/modals";
+// @import "partials/carousel";
+@import "partials/forms";
+@import "partials/select"; // styles for form select swap
+@import "partials/tooltips";
+// @import "partials/banners";
+@import "partials/detail"; // a generic name for elements that contain user or order info
+@import "partials/media";
+@import "partials/cta";
+// @import "partials/search-new.scss";
+// @import "partials/nav-secondary";
+@import "partials/sidebar";
+// @import "partials/facets";
+@import "partials/social";
+// @import "partials/messaging";
+@import "partials/product";
+@import "partials/chat";
+// @import "partials/meeting";
+// @import "partials/account";
+// @import "partials/header-promo";
+// @import "partials/collections";
+// @import "partials/collection-nav";
+// @import "partials/filters"; // added back once chicos was up-to-date
+// @import "partials/content-modules";
+// @import "partials/curated";
+@import "partials/checkout";
+@import "partials/footer-sticky";
+// @import "partials/appt";
+// @import "partials/video";
+
+@import "partials/size-charts";
+
+@import "vendor/third-party";
+@import "partials/shame";
+// @import "partials/print";
+
+
+
+// checkout specific styles
+@import 'checkout/base';
+@import 'checkout/buttons';
+@import 'checkout/forms';
+
+
+// flows: remove after testing
+@import 'checkout/flows';

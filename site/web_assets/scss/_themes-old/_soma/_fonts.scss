@@ -1,0 +1,48 @@
+/*
+This CSS resource incorporates links to font software which is 
+the valuable copyrighted property of WebType LLC, The Font Bureau 
+and/or their suppliers. You may not 
+attempt to copy, install, redistribute, convert, modify or reverse 
+engineer this font software. Please contact WebType with any 
+questions: http://www.webtype.com 
+*/
+
+@font-face {
+  font-family: "BentonModernDisp";
+  src: url("../fonts/soma/58eb3312-f28a-4514-a563-d42faa3f7c5b-2.eot");
+  src: url("../fonts/soma/58eb3312-f28a-4514-a563-d42faa3f7c5b-2.eot?") format("embedded-opentype"),
+       url("../fonts/soma/58eb3312-f28a-4514-a563-d42faa3f7c5b-3.woff") format("woff"),
+       url("../fonts/soma/58eb3312-f28a-4514-a563-d42faa3f7c5b-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "BentonModernDisp";
+  src: url("../fonts/soma/09730b6e-a7f1-4630-9ec5-90feab736613-2.eot");
+  src: url("../fonts/soma/09730b6e-a7f1-4630-9ec5-90feab736613-2.eot?") format("embedded-opentype"),
+       url("../fonts/soma/09730b6e-a7f1-4630-9ec5-90feab736613-3.woff") format("woff"),
+       url("../fonts/soma/09730b6e-a7f1-4630-9ec5-90feab736613-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+
+// semibold can be turned on in the future
+// @font-face {
+//   font-family: "BentonModernDispSmbld";
+//   src: url("../fonts/soma/e915841c-258d-4c34-aa05-b05bc5bdda8c-2.eot");
+//   src: url("../fonts/soma/e915841c-258d-4c34-aa05-b05bc5bdda8c-2.eot?") format("embedded-opentype"),
+//        url("../fonts/soma/e915841c-258d-4c34-aa05-b05bc5bdda8c-3.woff") format("woff"),
+//        url("../fonts/soma/e915841c-258d-4c34-aa05-b05bc5bdda8c-1.ttf") format("truetype");
+//   font-style: normal;
+//   font-weight: normal;
+// }
+// semibold italic can be turned on in the future
+// @font-face {
+//   font-family: "BentonModernDispSmbld";
+//   src: url("../fonts/soma/89bef087-f9e3-4790-b7c5-0008eec4690e-2.eot");
+//   src: url("../fonts/soma/89bef087-f9e3-4790-b7c5-0008eec4690e-2.eot?") format("embedded-opentype"),
+//        url("../fonts/soma/89bef087-f9e3-4790-b7c5-0008eec4690e-3.woff") format("woff"),
+//        url("../fonts/soma/89bef087-f9e3-4790-b7c5-0008eec4690e-1.ttf") format("truetype");
+//   font-style: italic;
+//   font-weight: normal;
+// }

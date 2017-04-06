@@ -1,0 +1,47 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="c-sp-header">
+      <div class="row">
+        <div class="col-sm-4">
+          July 2015
+        </div>
+        <div class="col-sm-4">
+          <h1>
+            Black Label
+          </h1>
+        </div>
+        <div class="col-sm-4">
+          <a href="#">Shop <i>the</i> Collection</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-sp-wrap">
+
+      {% comment %}text left, image right, full-width image{% endcomment %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Left (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+
+      {% comment %}text right, image left, full-width image{% endcomment %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:2400x1200&w=2400&h=1200' moduleImageMobile='https://placeholdit.imgix.net/~text?txtsize=52&txt=Actual+size:767x767&w=767&h=767' moduleHeading='Shelf Header Right (Full Image)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+
+      {% comment %}text left, image right{% endcomment %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+
+      {% comment %}text right, image left{% endcomment %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid module-sh-right' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+
+      {% comment %}text left (1/3), image right (2/3){% endcomment %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Left (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+
+      {% comment %}text left (1/3), image right (2/3){% endcomment %}
+      {% include _molecules/modules/shelf.html collectionSpecial='yes' moduleClass='' moduleLayout='module-sh-grid module-sh-right module-sh-thirds' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleHeading='Shelf Header Right (Thirds)' moduleCopy='<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cupiditate, aut rem maxime voluptatibus ipsum eos accusamus optio sequi.</p>' buttonLabel='Shop the Look' buttonClass='btn-responsive' %}
+
+    </div>
+
+    <div class="c-sp-footer">
+      <a href="#">Locate a Black Label Boutique <i class="fa fa-fw fa-caret-right"></i></a>
+      <a href="#">Shop the Collection <i class="fa fa-fw fa-caret-right"></i></a>
+    </div>
+
+  </div><!-- .container-fluid -->
+</div><!-- .content -->

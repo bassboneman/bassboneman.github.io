@@ -1,0 +1,126 @@
+{% capture carouselID %}{% if include.moduleID %}{{ include.moduleID }}{% else %}carousel-shelf{% endif %}{% endcapture %}
+
+<section class="module {{ include.moduleClass }}">
+  <div class="module-sh module-sh-carousel {{ include.moduleLayout }}">
+    <div class="module-inner">
+      <div id="{{ carouselID }}" class="carousel slide {{ include.carouselClass }}" data-ride="carousel" data-interval="false" aria-live="polite" {{ include.carouselAttr }}>
+        <ol class="carousel-indicators">
+          <li data-target="#{{ carouselID }}" data-slide-to="0" class="active"></li>
+          <li data-target="#{{ carouselID }}" data-slide-to="1" class=""></li>
+          <li data-target="#{{ carouselID }}" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="module-sh-img">
+              <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading }}" class="img-responsive hidden-xs">
+              <img src="{{ include.moduleImageMobile }}" alt="{{ include.moduleHeading }}" class="img-responsive visible-xs">            
+            </div><!-- .module-sh-img -->
+            <div class="module-sh-copy">
+              {% if include.moduleHeading %}
+                {% if include.moduleFirst %}
+                  <h1 class="{{ include.moduleHeadingClass }}">
+                    {{ include.moduleHeading }}
+                  </h1>             
+                {% else %}
+                  <h2 class="{{ include.moduleHeadingClass }}">
+                    {{ include.moduleHeading }}
+                  </h2>
+                {% endif %}
+              {% endif %}
+              {% if include.moduleCopy %}
+                {{ include.moduleCopy }}
+              {% endif %}
+              {% if include.moduleLinkUrl %}
+                <p>
+                  <a href="{{ include.moduleLinkUrl }}" class="btn btn-primary {{ include.btnClass }}">{{ include.btnLabel }}</a>
+                </p>
+              {% endif %}
+              {% if include.moduleExtra %}
+                <div class="module-extra">{{ include.moduleExtra }}</div>
+              {% endif %}
+            </div><!-- .module-sh-copy -->
+            {% if include.moduleExtraAlt %}
+              <div class="module-extra-alt">{{ include.moduleExtraAlt }}</div>
+            {% endif %}
+          </div><!-- .item -->
+          <div class="item">
+            <div class="module-sh-img">
+              <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading }}" class="img-responsive hidden-xs">
+              <img src="{{ include.moduleImageMobile }}" alt="{{ include.moduleHeading }}" class="img-responsive visible-xs">            
+            </div><!-- .module-sh-img -->
+            <div class="module-sh-copy">
+              {% if include.moduleHeading %}
+                {% if include.moduleFirst %}
+                  <h1 class="{{ include.moduleHeadingClass }}">
+                    {{ include.moduleHeading }}
+                  </h1>             
+                {% else %}
+                  <h2 class="{{ include.moduleHeadingClass }}">
+                    {{ include.moduleHeading }}
+                  </h2>
+                {% endif %}
+              {% endif %}
+              {% if include.moduleCopy %}
+                {{ include.moduleCopy }}
+              {% endif %}
+              {% if include.moduleLinkUrl %}
+                <p>
+                  <a href="{{ include.moduleLinkUrl }}" class="btn btn-primary {{ include.btnClass }}">{{ include.btnLabel }}</a>
+                </p>
+              {% endif %}
+              {% if include.moduleExtra %}
+                <div class="module-extra">{{ include.moduleExtra }}</div>
+              {% endif %}
+            </div><!-- .module-sh-copy -->
+            {% if include.moduleExtraAlt %}
+              <div class="module-extra-alt">{{ include.moduleExtraAlt }}</div>
+            {% endif %}
+          </div><!-- .item -->
+          <div class="item">
+            <div class="module-sh-img">
+              <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading }}" class="img-responsive hidden-xs">
+              <img src="{{ include.moduleImageMobile }}" alt="{{ include.moduleHeading }}" class="img-responsive visible-xs">            
+            </div><!-- .module-sh-img -->
+            <div class="module-sh-copy">
+              {% if include.moduleHeading %}
+                {% if include.moduleFirst %}
+                  <h1 class="{{ include.moduleHeadingClass }}">
+                    {{ include.moduleHeading }}
+                  </h1>             
+                {% else %}
+                  <h2 class="{{ include.moduleHeadingClass }}">
+                    {{ include.moduleHeading }}
+                  </h2>
+                {% endif %}
+              {% endif %}
+              {% if include.moduleCopy %}
+                {{ include.moduleCopy }}
+              {% endif %}
+              {% if include.moduleLinkUrl %}
+                <p>
+                  <a href="{{ include.moduleLinkUrl }}" class="btn btn-primary {{ include.btnClass }}">{{ include.btnLabel }}</a>
+                </p>
+              {% endif %}
+              {% if include.moduleExtra %}
+                <div class="module-extra">{{ include.moduleExtra }}</div>
+              {% endif %}
+            </div><!-- .module-sh-copy -->
+            {% if include.moduleExtraAlt %}
+              <div class="module-extra-alt">{{ include.moduleExtraAlt }}</div>
+            {% endif %}
+          </div><!-- .item -->
+        </div><!-- .carousel-inner -->
+        <a class="left carousel-control" href="#{{ carouselID }}" data-slide="prev" aria-label="previous">
+          <svg class="icon-arrow-left" role="presentation">
+            <use xlink:href="#icon-arrow-left"></use>
+          </svg>
+        </a>
+        <a class="right carousel-control" href="#{{ carouselID }}" data-slide="next" aria-label="next">
+          <svg class="icon-arrow-right" role="presentation">
+            <use xlink:href="#icon-arrow-right"></use>
+          </svg>
+        </a>
+      </div><!-- .carousel -->
+    </div><!-- .module-inner -->
+  </div><!-- .module-sh.module-sh-carousel -->
+</section><!-- .module -->

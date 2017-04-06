@@ -1,0 +1,15 @@
+<div class="product-media-zoom">
+  {% if include.gallerySingle !='yes' %}
+    <div class="zoom-thumbs">
+      <ul class="">
+        <li><a href="">{% include _atoms/images/product-thumbs.html %}</a></li>
+        <li><a href="">{% include _atoms/images/product-thumbs.html %}</a></li>
+        <li><a href="">{% include _atoms/images/product-thumbs.html %}</a></li>
+        <li><a href="">{% include _atoms/images/product-thumbs.html %}</a></li>
+      </ul>
+    </div>
+  {% endif %}
+  <div class="zoom-main">
+    {% include _atoms/images/product-main.html container='modal' %}
+  </div>
+</div>

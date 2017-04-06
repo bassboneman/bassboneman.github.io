@@ -1,0 +1,25 @@
+{% if page.brand == 'chicos' %}
+<p class="serif">Normal: "Didot 24 A", "Didot 24 B", serif;</p>
+<p class="serif"><strong>Bold: "Didot 24 A", "Didot 24 B", serif;</strong></p>
+<p class="serif"><em>Italic: "Didot 24 A", "Didot 24 B", serif;</em></p>
+
+{% elsif page.brand == 'whbm' %}    
+
+<p class="serif">Normal: "Didot 24 3r", serif;</p>
+<p class="serif"><em>Italic: "Didot 24 3e", serif;</em></p>
+<p class="serif"><strong>Bold: "Didot 24 3r", serif;</strong></p>
+<p class="serif"><strong><em>Bold Italic: "Didot 24 3r", serif;</em></strong></p>
+
+{% elsif page.brand == 'soma' %}
+
+<p class="serif">Normal: "BentonModern", serif;</p>
+<p class="serif"><strong>Bold: "BentonModern", serif;</strong></p>
+<p class="serif"><em>Italic: "BentonModern", serif;</em></p>
+
+{% else %}
+
+<p class="serif">Normal: serif;</p>
+<p class="serif"><strong>Bold: serif;</strong></p>
+<p class="serif"><em>Italic: serif;</em></p>
+
+{% endif %}

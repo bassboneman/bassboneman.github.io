@@ -1,0 +1,37 @@
+{% comment %}productImg="http://www.chicos.com/Product_Images/1570153013_3407.jpg"{% endcomment %}
+<div class="row">
+  <div class="col-sm-3 col-xs-6">
+    {% if include.promoType == "promoSmall" %}
+      {% include _molecules/modules/ad-small.html %}
+    {% elsif include.promoType == "shelfless1x" %}
+      {% include _molecules/modules/promo-shelfless.html moduleLayout='shelfless-promo-1x' moduleHeading='Tops' moduleCopy='Ease into effortless. <span>Made for layering shapes.</span>' moduleCTA='Shop Lorem Ipsum' moduleLink='#' %}
+    {% else %}
+      {% include _molecules/products/listing-single.html carouselThumb="yes" quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+    {% endif %}
+  </div>
+  <div class="col-sm-3 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productMsgSpecial="yes" productSwatches="yes" %}
+  </div>
+  <div class="col-sm-3 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+  </div>
+  <div class="col-sm-3 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+  </div>
+  <div class="col-sm-3 col-xs-6">
+    {% if include.promoType == "promoSmall" %}
+      {% include _molecules/modules/ad-small.html %}
+    {% else %}
+      {% include _molecules/products/listing-single.html carouselThumb="yes" quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+    {% endif %}
+  </div>
+  <div class="col-sm-3 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productMsgSpecial="yes" productSwatches="yes" %}
+  </div>
+  <div class="col-sm-3 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+  </div>
+  <div class="col-sm-3 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+  </div>
+</div>

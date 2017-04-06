@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "BentonModern";
+  src: url("../fonts/54c171f9-586a-486d-9b33-d83a361c6e1b-2.eot");
+  src: url("../fonts/54c171f9-586a-486d-9b33-d83a361c6e1b-2.eot?") format("embedded-opentype"),
+       url("../fonts/54c171f9-586a-486d-9b33-d83a361c6e1b-3.woff") format("woff"),
+       url("../fonts/54c171f9-586a-486d-9b33-d83a361c6e1b-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "BentonModern";
+  src: url("../fonts/e9b51f4d-44c2-4b20-ba40-6117e07aa439-2.eot");
+  src: url("../fonts/e9b51f4d-44c2-4b20-ba40-6117e07aa439-2.eot?") format("embedded-opentype"),
+       url("../fonts/e9b51f4d-44c2-4b20-ba40-6117e07aa439-3.woff") format("woff"),
+       url("../fonts/e9b51f4d-44c2-4b20-ba40-6117e07aa439-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "BentonModern";
+  src: url("../fonts/d65fb8c5-0507-4f22-b843-a0b480522e8e-2.eot");
+  src: url("../fonts/d65fb8c5-0507-4f22-b843-a0b480522e8e-2.eot?") format("embedded-opentype"),
+       url("../fonts/d65fb8c5-0507-4f22-b843-a0b480522e8e-3.woff") format("woff"),
+       url("../fonts/d65fb8c5-0507-4f22-b843-a0b480522e8e-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "BentonModern";
+  src: url("../fonts/33835a29-b5c8-4ccc-bce8-1395819f4e13-2.eot");
+  src: url("../fonts/33835a29-b5c8-4ccc-bce8-1395819f4e13-2.eot?") format("embedded-opentype"),
+       url("../fonts/33835a29-b5c8-4ccc-bce8-1395819f4e13-3.woff") format("woff"),
+       url("../fonts/33835a29-b5c8-4ccc-bce8-1395819f4e13-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+body {
+  font-family: $font-base;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.667;
+}
+
+a {
+  // color: $color-denim;
+  color: $color-black;
+  @include transition(color);
+  &:hover {
+    text-decoration: underline;
+    // color: $color-denim;
+    color: $color-black;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 20px 0;
+  font-weight: 400;
+}
+h1,h2, h3, h4 {
+  letter-spacing: $letter-spacing;
+}
+h1 {
+  margin: 20px 0 30px 0;
+  font-size: 42px;
+  font-weight: 700;
+  // text-transform: uppercase;
+}
+@media (max-width: 991px) {
+  h1 {
+    margin: 15px 0 25px 0;
+  }
+}
+h2 {
+  font-size: 28px;
+  // font-weight: 700;
+  // text-transform: uppercase;
+}
+h3 {
+  font-size: 22px;
+  // font-weight: 700;
+  // text-transform: uppercase;
+}
+h4 {
+  font-family: $font-base;
+  // font-weight: 700;
+}
+p, ul, ol {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+section {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+.bold {
+  font-weight: 700;
+}
+.margin-bot-40 {
+  margin-bottom: 40px;
+}
+
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  background: none;
+  > li + li:before {
+    color: $color-black;
+    content: "\003e" !important;
+  }
+  .active {
+    color: $color-black;
+  }
+}
+
+.advertisement {
+  text-align: center;
+}

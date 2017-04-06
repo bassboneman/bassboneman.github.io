@@ -1,0 +1,15 @@
+<div class="product-controls">
+  <div class="product-controls-primary">
+    {% comment %}This button should trigger the modal for tablets and mobile only.{% endcomment %}
+    <div class="form-group">
+      {% include _atoms/buttons/button.html href='#' btnClass='btn-buy btn-lg btn-block hidden-xs' btnLabel='Add to Bag' btnExtra='data-toggle="persistent-cart"' %}
+      {% include _atoms/buttons/button.html href='#' btnClass='btn-buy btn-lg btn-block visible-xs' btnLabel='Add to Bag' btnExtra='data-toggle="modal" data-target="#persistent-mobile"' %}
+    </div>
+  </div>
+  {% if page.title == "Product Page (Donations)" or page.title =="Product Page (Gift Card)" or page.title == "Product Page (e-Gift Card)" or include.completeLook %}
+  {% else %}
+    <div class="product-controls-secondary">
+      {% include _atoms/buttons/wrapped.html %}
+    </div>
+  {% endif  %}
+</div>

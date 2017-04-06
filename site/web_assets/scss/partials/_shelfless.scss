@@ -1,0 +1,56 @@
+.shelfless-promo-1x {
+  position: relative;
+  min-height: 31.4rem;
+  h3 {
+    margin-top: 0;
+  }
+  // @media screen and (max-width: 767px) {
+  //   height: auto;
+  // }
+  .shelfless-promo-text {
+    @media screen and (max-width: 767px) {
+      padding: 50px 0;
+      @include vertical-align-none;
+    }
+  }
+}
+.shelfless-promo-2x,
+.shelfless-promo-4x {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.shelfless-promo-text {
+  position: absolute;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  @include vertical-align;
+  span {
+    display: block;
+  }
+  h3 {
+    margin-bottom: 2.5rem;
+    font-family: $font-family-serif;
+    font-size: 5.5rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    letter-spacing: $letter-spacing;
+    @media screen and (max-width: 991px) {
+      font-size: 4rem;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    letter-spacing: $letter-spacing;
+  }
+  a {
+    display: block;
+    margin-top: 5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: $letter-spacing;
+  }
+}

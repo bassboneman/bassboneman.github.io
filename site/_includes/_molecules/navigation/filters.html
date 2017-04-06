@@ -1,0 +1,680 @@
+{% if page.brand == "soma" %}
+  <div class="filter-outer">
+    <div class="content filter-wrap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="filter-tools">
+              <div class="filter-category visible-sm visible-xs">
+                {% include _atoms/forms/select.html labelName='Categories' labelHidden='hidden' labelID='filter-cats' selectOptions='<option value="">Shop By</option><optgroup label="Categories"><option value="tops">Tops</option><option value="sweaters">Sweaters</option><option value="jackets">Jackets</option><option value="dresses-skirts">Dresses &amp; Skirts</option><option value="pants-shorts">Pants &amp; Shorts</option><option value="denim">Denim</option><option value="swim">Swim</option><option value="online-exclusives">Online Exclusives</option></optgroup>' %}
+              </div>
+              <div class="filter-list-wrap filter-desktop">
+                <div class="filter-tools-mobile-head">
+                  <a href="#" data-toggle="filter-tools">
+                    <svg class="icon-close">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+                    </svg>
+                  </a>
+                  <h3>Filter</h3>
+                </div>
+                <ul class="filter-list">
+                  <li class="dropdown hidden-sm hidden-xs">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Shop By</span></a>
+                    <div class="dropdown-menu">
+                      <div class="filter-shop-by">
+                        <div class="row">
+                          <div class="col-sm-3 col-xs-12 col-border">
+                            <h3>Shop Collections</h3>
+                            <ul>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-3 col-xs-12 col-border">
+                            <h3>Styles</h3>
+                            <ul>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-3 col-xs-12 col-border">
+                            <h3>Lorem Ipsum</h3>
+                            <ul>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-3 col-xs-12">
+                            <h3>Dolor Sit Amet</h3>
+                            <ul>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      {% include _atoms/buttons/button-close-panel.html %}
+                    </div>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Color</span></a>
+                    <div class="dropdown-menu">
+                      <div class="filter-toggles">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="all" label="All" dataAll="yes" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="neutral" label="Neutral" disabled="yes" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="blue" label="Blue" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="purple" label="Purple" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="orange" label="Orange" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="black" label="Black" %}
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="gold" label="Gold" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="green" label="Green" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="pink" label="Pink" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="denim" label="Denim" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="black-white" label="Black &amp; White" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="silver" label="Silver" %}
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="yellow" label="Yellow" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="multi" label="Multi" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="brown" label="Brown" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="white" label="White" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="red" label="Red" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="gray" label="Gray" %}
+                          </div>
+                        </div>
+                      </div>
+                      {% include _atoms/buttons/button-close-panel.html %}
+                    </div>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Apparel Size</span></a>
+                    <div class="dropdown-menu">
+                      <div class="filter-toggles">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="Apparel Size" label="All" dataName="all" dataAll="yes" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Apparel Size" label="S" dataName="S" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="Apparel Size" label="M" dataName="M" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Apparel Size" label="L" dataName="L" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="Apparel Size" label="XL" dataName="XL" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Apparel Size" label="XL/XXL" dataName="XL/XXL" %}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {% include _atoms/buttons/button-close-panel.html %}
+                    </div>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Bra Size</span></a>
+                    <div class="dropdown-menu">
+                      <div class="filter-toggles">
+                        <div class="row">
+                          <div class="col-xs-6 col-border">
+                            <h3>Band Sizes</h3>
+                            <div class="row">
+                              <div class="col-sm-6">
+                                {% include _molecules/navigation/filter-selector.html dataType="Band Size" label="32" dataName="32" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Band Size" label="34" dataName="34" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Band Size" label="36" dataName="36" %}
+                              </div><!-- .col-sm-6 -->
+                              <div class="col-sm-6">
+                                {% include _molecules/navigation/filter-selector.html dataType="Band Size" label="38" dataName="38" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Band Size" label="40" dataName="40" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Band Size" label="42" dataName="42" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Band Size" label="44" dataName="44" %}
+                              </div><!-- .col-sm-6 -->
+                            </div><!-- .row -->
+                          </div>
+                          <div class="col-xs-6">
+                            <h3>Cup Sizes</h3>
+                            <div class="row">
+                              <div class="col-sm-4">
+                                {% include _molecules/navigation/filter-selector.html dataType="Cup Size" label="A" dataName="A" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Cup Size" label="B" dataName="B" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Cup Size" label="C" dataName="C" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Cup Size" label="D" dataName="D" %}
+                              </div>
+                              <div class="col-sm-4">
+                                {% include _molecules/navigation/filter-selector.html dataType="Cup Size" label="DD" dataName="DD" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Cup Size" label="DDD" dataName="DDD" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Cup Size" label="E" dataName="E" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Cup Size" label="F" dataName="F" %}
+                              </div>
+                              <div class="col-sm-4">
+                                {% include _molecules/navigation/filter-selector.html dataType="Cup Size" label="FF" dataName="FF" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Cup Size" label="G" dataName="G" %}
+                                {% include _molecules/navigation/filter-selector.html dataType="Cup Size" label="H" dataName="H" %}
+                              </div>
+                            </div><!-- .row -->
+                          </div><!-- .col-sm-6 -->
+                        </div><!-- .row -->
+                      </div><!-- .filter-toggles -->
+                      {% include _atoms/buttons/button-close-panel.html %}
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown-sort hidden-sm hidden-xs">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Sort By</span></a>
+                    <div class="dropdown-menu">
+                      <ul>
+                        <li class="selected"><a href="#">All</a></li>
+                        <li><a href="#">Most Popular</a></li>
+                        <li><a href="#">Newest</a></li>
+                        <li><a href="#">Price: High to Low</a></li>
+                        <li><a href="#">Price: Low to High</a></li>
+                        <li><a href="#">Top Rated</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul><!-- .filter-list -->
+                <div class="filter-tools-mobile">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <a href="javascript:void(0)" class="btn btn-primary btn-block" data-toggle="filter-clear-all">
+                        Clear All
+                      </a>
+                    </div>
+                    <div class="col-xs-6">
+                      <a href="javascript:void(0)" class="btn btn-primary btn-block" data-toggle="filter-tools">
+                        Done
+                      </a>
+                    </div>
+                  </div>
+                </div><!-- .filter-tools-mobile -->
+              </div><!-- .filter-list-wrap -->
+              <div class="filter-refine-sort">
+                <a href="javascript:void(0)" class="filter-refine" data-toggle="filter-tools">
+                  <span>Filter</span>
+                </a>
+                <div class="filter-sort visible-sm visible-xs">
+                  {% include _atoms/forms/select.html labelName='Sort By' labelHidden='hidden' labelID='filter-cats' selectOptions='<option value="">Sort By</option><option value="">All</option><option value="">Most Popular</option><option value="">Newest</option><option value="">Price: High to Low</option><option value="">Price: Low to High</option><option value="">Top Rated</option>' %}
+                </div><!-- .filter-sort -->
+              </div><!-- .filter-refine-sort -->
+            </div><!-- .filter-tools -->
+          </div>
+        </div>
+      </div><!-- .container-fluid -->
+    </div><!-- .content.filter-wrap -->
+    <div class="content filter-tags-wrap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="filter-tags"></div><!-- Tags are added via scripting -->
+            <a class="filter-clear hidden" href="#" data-toggle="filter-clear-all">
+              Clear All
+              <svg class="icon-close">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+              </svg>
+            </a> 
+          </div>  
+        </div>   
+      </div>
+    </div><!-- .filter-tags-wrap -->
+  </div><!-- .filter-outer -->
+
+{% else %}
+
+  <div class="filter-outer">
+    <div class="content filter-wrap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="filter-tools">
+              <div class="filter-category visible-sm visible-xs">
+                {% include _atoms/forms/select.html labelName='Categories' labelHidden='hidden' labelID='filter-cats' selectOptions='<option value="">Shop By</option><optgroup label="Categories"><option value="tops">Tops</option><option value="sweaters">Sweaters</option><option value="jackets">Jackets</option><option value="dresses-skirts">Dresses &amp; Skirts</option><option value="pants-shorts">Pants &amp; Shorts</option><option value="denim">Denim</option><option value="swim">Swim</option><option value="online-exclusives">Online Exclusives</option></optgroup>' %}
+              </div><!-- .filter-category -->
+              <div class="filter-list-wrap filter-desktop">
+                <div class="filter-tools-mobile-head">
+                  <a href="#" data-toggle="filter-tools">
+                    <svg class="icon-close">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+                    </svg>
+                  </a>
+                  <h3>Filter</h3>
+                </div>
+                <ul class="filter-list">
+                  <li class="dropdown hidden-sm hidden-xs">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Shop By</span></a>
+                    <div class="dropdown-menu">
+                      <div class="filter-shop-by">
+                        <div class="row">
+                          <div class="col-sm-3 col-xs-12 col-border">
+                            <h3>Shop Collections</h3>
+                            <ul>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-3 col-xs-12 col-border">
+                            <h3>Styles</h3>
+                            <ul>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-3 col-xs-12 col-border">
+                            <h3>Lorem Ipsum</h3>
+                            <ul>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-3 col-xs-12">
+                            <h3>Dolor Sit Amet</h3>
+                            <ul>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                              <li><a href="#">Lorem ipsum</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      {% include _atoms/buttons/button-close-panel.html %}
+                    </div>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Color</span></a>
+                    <div class="dropdown-menu">
+                      <div class="filter-toggles">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="all" label="All" dataAll="yes" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="neutral" label="Neutral" disabled="yes" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="blue" label="Blue" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="purple" label="Purple" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="orange" label="Orange" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="black" label="Black" %}
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="gold" label="Gold" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="green" label="Green" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="pink" label="Pink" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="denim" label="Denim" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="black-white" label="Black &amp; White" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="silver" label="Silver" %}
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="yellow" label="Yellow" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="multi" label="Multi" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="brown" label="Brown" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="white" label="White" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="red" label="Red" %}
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="color" dataName="gray" label="Gray" %}
+                          </div>
+                        </div>
+                      </div>
+                      {% include _atoms/buttons/button-close-panel.html %}
+                    </div>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Size</span></a>
+                    <div class="dropdown-menu">
+                      <div class="filter-toggles">
+                        <div class="row">
+                          <div class="col-xs-6 col-border">
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="all" label="All" dataAll="yes" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="00" label="00" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="0" label="0" %}
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="0.5" label="0.5" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="1" label="1" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="1.5" label="1.5" %}
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="2" label="2" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="2.5" label="2.5" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="3" label="3" %}
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="3.5" label="3.5" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="4" label="4" %}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="00P" label="00P" disabled="yes" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="0P" label="0P" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName=".5P" label=".5P" %}
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="1P" label="1P" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="1.5P" label="1.5P" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="2P" label="2P" %}
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="2.5P" label="2.5P" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="3P" label="3P" %}
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="3.5P" label="3.5P" %}
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12">
+                                {% include _molecules/navigation/filter-selector.html dataType="size" dataName="4P" label="4P" %}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {% include _atoms/buttons/button-close-panel.html %}
+                    </div>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Style</span></a>
+                    <div class="dropdown-menu">
+                      <div class="filter-toggles">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="style" dataName="all" label="All" dataAll="yes" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="style" dataName="blouses-shirts" label="Blouses &amp; Shirts" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="style" dataName="knits-tees" label="Knits &amp; Tees" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="style" dataName="sweaters" label="Sweaters" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="style" dataName="solids" label="Solids" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="style" dataName="patterns" label="Patterns" %}
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="style" dataName="no-iron-collection" label="No Iron Collection" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="style" dataName="online-exclusives" label="Online Exclusives" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="style" dataName="petites" label="Petites" %}
+                          </div>
+                        </div>
+                      </div>
+                      {% include _atoms/buttons/button-close-panel.html %}
+                    </div>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Sleeve Length</span></a>
+                    <div class="dropdown-menu">
+                      <div class="filter-toggles">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="sleeve" dataName="all" label="All" dataAll="yes" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="sleeve" dataName="short" label="Short" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="sleeve" dataName="long" label="Long" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="sleeve" dataName="tank" label="Tank" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="sleeve" dataName="3-4-sleeve" label="3/4 Sleeve" %}
+                          </div>
+                        </div>
+                      </div>
+                      {% include _atoms/buttons/button-close-panel.html %}
+                    </div>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Price</span></a>
+                    <div class="dropdown-menu">
+                      <div class="filter-toggles">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="all" label="All" dataAll="yes" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="Under $50" label="Under $50" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="$50 - $99.99" label="$50 - $99.99" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="$100 - $149.99" label="$100 - $149.99" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="$150 - $199.99" label="$150 - $199.99" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="$200 and over" label="$200 and over" %}
+                          </div>
+                        </div>
+                      </div>
+                      {% include _atoms/buttons/button-close-panel.html %}
+                    </div>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Accessory Sizes</span></a>
+                    <div class="dropdown-menu">
+                      <div class="filter-toggles">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="all" label="All" dataAll="yes" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="Under $50" label="Under $50" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="$50 - $99.99" label="$50 - $99.99" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="$100 - $149.99" label="$100 - $149.99" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="$150 - $199.99" label="$150 - $199.99" %}
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12">
+                            {% include _molecules/navigation/filter-selector.html dataType="price" dataName="$200 and over" label="$200 and over" %}
+                          </div>
+                        </div>
+                      </div>
+                      {% include _atoms/buttons/button-close-panel.html %}
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown-sort hidden-sm hidden-xs">
+                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Sort By</span></a>
+                    <div class="dropdown-menu">
+                      <ul>
+                        <li class="selected"><a href="#">All</a></li>
+                        <li><a href="#">Most Popular</a></li>
+                        <li><a href="#">Newest</a></li>
+                        <li><a href="#">Price: High to Low</a></li>
+                        <li><a href="#">Price: Low to High</a></li>
+                        <li><a href="#">Top Rated</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul><!-- .filter-list -->
+                <div class="filter-tools-mobile">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <a href="javascript:void(0)" class="btn btn-primary btn-block" data-toggle="filter-clear-all">
+                        Clear All
+                      </a>
+                    </div>
+                    <div class="col-xs-6">
+                      <a href="javascript:void(0)" class="btn btn-primary btn-block" data-toggle="filter-tools">
+                        Done
+                      </a>
+                    </div>
+                  </div>
+                </div><!-- .filter-tools-mobile -->
+              </div><!-- .filter-list-wrap -->
+              <div class="filter-refine-sort">
+                <a href="javascript:void(0)" class="filter-refine" data-toggle="filter-tools">
+                  <span>Filter</span>
+                </a>
+                <div class="filter-sort visible-sm visible-xs">
+                  {% include _atoms/forms/select.html labelName='Sort By' labelHidden='hidden' labelID='filter-cats' selectOptions='<option value="">Sort By</option><option value="">All</option><option value="">Most Popular</option><option value="">Newest</option><option value="">Price: High to Low</option><option value="">Price: Low to High</option><option value="">Top Rated</option>' %}
+                </div><!-- .filter-sort -->
+              </div><!-- .filter-refine-sort -->
+            </div><!-- .filter-tools -->
+          </div>
+        </div>
+      </div><!-- .container-fluid -->
+    </div><!-- .content.filter-wrap -->
+    <div class="content filter-tags-wrap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="filter-tags"></div><!-- Tags are added via scripting -->
+            <a class="filter-clear hidden" href="#" data-toggle="filter-clear-all">
+              Clear All
+              <svg class="icon-close">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+              </svg>
+            </a> 
+          </div>  
+        </div>   
+      </div>
+    </div><!-- .filter-tags-wrap -->
+  </div><!-- .filter-outer -->
+{% endif %}

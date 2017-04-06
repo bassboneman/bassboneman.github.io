@@ -1,0 +1,83 @@
+#footer {
+  @include max-width-block;
+  // margin-top: 20px;
+  font-size: 13px;
+  .footer-border {
+    margin: 0 -15px;
+    padding: 20px 0;
+    border-top: 4px solid $color-black;
+  }
+  h4 {
+    margin-bottom: 7px;
+    font-family: $font-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+  ul {
+    list-style: none;
+    margin: 0 0 30px 0;
+    padding: 0;
+    li {
+      // margin-bottom: 8px;
+      // text-transform: uppercase;
+      // letter-spacing: $letter-spacing;
+      margin-bottom: 1.2rem;
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 0.04rem;
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .input-group {
+    margin-bottom: 30px;
+  }
+  .svg-logo-footer {
+    width: 110px;
+    height: 36px;
+  }
+  p {
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+    &:last-child {
+      margin-bottom: 30px;
+    }
+    a {
+      .fa {
+        margin-right: 5px;
+      }
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+
+#social {
+  a {
+    margin-right: 12px;
+    font-size: 28px;
+    color: $color-black;
+    @include transition(color);
+    &.social-instagram:hover {color: $color-instagram;}
+    &.social-pinterest:hover {color: $color-pinterest;}
+    &.social-facebook:hover {color: $color-fb;}
+    &.social-youtube:hover {color: $color-youtube;}
+    &.social-twitter:hover {color: $color-twitter;}
+    &.social-google-plus:hover {color: $color-google-plus;}
+    @media (max-width: 1200px) {
+      font-size: 24px;
+    }
+  }
+}

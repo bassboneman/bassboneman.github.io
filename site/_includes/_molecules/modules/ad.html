@@ -1,0 +1,34 @@
+<section class="module">
+  <div class="module-ad {% if include.moduleAdColor %}module-ad-{{ include.moduleAdColor }}{% endif %}">
+    <div class="module-inner">
+      <h3 class="ad-main">
+        {% if include.moduleAdHeading %}
+          {{include.moduleAdHeading}}
+        {% else %}
+          Head     
+        {% endif %}
+      </h3>
+      <p>{% if include.moduleAdSubheading %}
+          {{include.moduleAdSubheading}}
+        {% else %}
+          Subhead     
+        {% endif %}
+      </p>
+      <hr>
+      <p>{% if include.moduleAdCopy %}
+          {{include.moduleAdCopy}}
+        {% else %}
+          Copy     
+        {% endif %}
+        <span class="ad-code">
+          {% if include.moduleAdCode %}
+            {{include.moduleAdCode}}
+          {% else %}
+            Promo Code     
+          {% endif %}
+        </span>    
+      </p>
+      {% include _atoms/buttons/button-link.html btnClass='btn-primary btn-responsive' btnLabel='Shop Now !' %}
+    </div>
+  </div>
+</section><!-- .module -->

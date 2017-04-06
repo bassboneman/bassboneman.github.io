@@ -1,0 +1,23 @@
+<div class="form-group {{include.formError}} {% if include.tooltip or include.icon %}has-icon{% endif %} {% if include.ccType %}has-cc{% endif %}">
+  <label class="control-label {% if include.labelHidden %}sr-only{% endif %}" for="{{include.labelID}}">{{include.labelName}}
+    {% if labelExtra != "" %}
+      {{include.labelExtra}}
+    {% endif %}
+  </label>
+  <input type="{{include.inputType}}" class="form-control {{ include.class }}" id="{{include.labelID}}" placeholder="{{include.placeholder}}" {% if include.value %}value="{{ include.value }}"{% endif %} {% if include.extra %}{{ include.extra}}{% endif %}>
+  {% if include.helpBlock %}
+    <p class="help-block">{{include.helpBlock}}</p>
+  {% endif %}
+  {% if include.tooltip %}
+  {% comment %}This is being used in checkout as on overlayed object in the form field.{% endcomment %}
+    <a class="input-icon" href="javascript://" data-toggle="tooltip" data-placement="top" title="{{ include.tooltip }}" data-original-title="{{ include.tooltip }}">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{% if include.icon %}#{{ include.icon }}{% else %}#icon-question{% endif %}"></use>
+      </svg>
+    </a><!-- .input-icon -->
+  {% endif %}
+  {% if include.ccType %}
+    <span class="input-icon-cc"></span><!-- .input-cc-icon -->
+  {% endif %}
+
+</div><!-- .form-group -->

@@ -1,0 +1,23 @@
+<div class="modal fade modal-checkout" id="modal-shipping-options" tabindex="-1" role="dialog" aria-labelledby="modal-shipping-optionsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-shipping-optionsLabel">Select a Shipping Option</h3>
+      </div>
+      <div class="modal-body">
+        <form action="#" class="form-labels">
+
+          <div class="radio-media-list">
+            {% include _molecules/checkout/radios/shipping.html shipping='standard' radioSet='shipping-multi-options' radioID='shipping-option-multi-1' checked='yes' %}
+            {% include _molecules/checkout/radios/shipping.html shipping='express' radioSet='shipping-multi-options' radioID='shipping-option-multi-2' %}
+            {% include _molecules/checkout/radios/shipping.html shipping='twoday' radioSet='shipping-multi-options' radioID='shipping-option-multi-3' %}
+            {% include _molecules/checkout/radios/shipping.html shipping='nextday' radioSet='shipping-multi-options' radioID='shipping-option-multi-4' %}
+          </div><!-- .radio-media-list -->
+
+        </form>
+      </div><!-- .modal-body -->
+      {% include _molecules/checkout/modals/footer.html %}
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal #modal-credit-card -->

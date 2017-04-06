@@ -1,0 +1,142 @@
+// temp styles or prototyping only
+// if turned back on, must deal with issues in legacy page header
+
+// [class*="icons-"] {
+//   width: $icons-size;
+//   height: $icons-size;
+//   fill: $color-icons-default;
+// }
+// .icons-star {
+  
+// }
+// .icons-arrow-big-left,
+// .icons-arrow-big-right {
+//   // width: 30px;
+//   // height: 56px;
+// }
+
+// .icons-twitter {
+//   // fill: $color-twitter;
+//   // width: 32px;
+//   // height: 22px;
+// }
+
+// .icons-chat {
+//   // width: 48px;
+//   // height: 44px;
+// }
+
+
+.fit-icon {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: .5rem;
+  vertical-align: bottom;
+}
+
+// .play-icon {
+//   display: inline-block;
+//   width: 16px;
+//   height: 16px;
+//   margin-right: 5px;
+//   vertical-align: middle;
+// }
+
+.top-link {
+  display: none;
+  position: fixed;
+  bottom: 20rem;
+  right: 0;
+  z-index: 500;
+  width: 6rem;
+  padding: 2rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0,0,0,0.3);
+  @include transition(background);
+  .icon-arrow-up-thin {
+    display: block;
+    width: 32px;
+    height: 10px;
+    margin: 0 auto .5rem auto;
+    fill: #fff;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+  }
+}
+@media (max-width: 1024px) {
+  .top-link {
+    display: none !important;
+  }
+}
+// IE scrollbar fix
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .top-link {
+    width: 7rem;
+    padding-right: 2rem;
+  }
+}
+// alternate fix, but Jerrod and I decided against it
+// @-ms-viewport{
+//   width: auto !important;
+// }
+
+// used on special collections flyout
+.icon-arrow-up,
+.icon-arrow-down {
+  width: 3.0rem;
+  height: 1.0rem;
+}
+
+// default close icon styles
+.icon-close,
+.icon-plus {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.icon-arrow-left,
+.icon-arrow-right {
+  width: 1rem;
+  height: 1.5rem;
+}
+
+// add as molecule
+.icon-square {
+  width: 1.6rem; // match font-size
+  height: 1.6rem;
+  vertical-align: -.2rem;
+}
+.icon-square-sm {
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: -.2rem;
+}
+.icon-square-lg {
+  width: 2.8rem;
+  height: 2.8rem;
+  vertical-align: -.8rem;
+}
+.icon-left {
+  margin-right: .5rem;
+}
+.icon-right {
+  margin-left: .5rem;
+}
+.has-icon,
+.has-icon:hover {
+  text-decoration: none;
+}
+.has-icon + .has-icon {
+  margin-left: 2rem;
+}

@@ -1,0 +1,17 @@
+<div class="form-group {{include.formError}} {{include.formClass}}">
+  {% if include.labelHidden == "hidden" %}
+    <label class="control-label sr-only" for="{{include.labelID}}">{{include.labelName}}</label>
+  {% else %}
+    <label class="control-label" for="{{include.labelID}}">{{include.labelName}}
+      {% if labelExtra != "" %}
+        {{include.labelExtra}}
+      {% endif %}
+    </label>
+  {% endif %}
+  <select class="form-control selectpicker {% if include.selectClass %}{{ include.selectClass }}{% endif %}" id="{{include.labelID}}" {% if include.disabled == 'true' %}disabled="true"{% endif %} {% if include.selectExtra %}{{ include.selectExtra }}{% endif %}>
+    {{include.selectOptions}}
+  </select>
+  {% if include.helpBlock %}
+    <p class="help-block">{{include.helpBlock}}</p>
+  {% endif %}
+</div>

@@ -1,0 +1,39 @@
+{% if page.brand == 'whbm' %}
+  <h2>Because Everyone Wants Comfort and Style</h2>
+  <p>See something you have to have? Register on Make a Wish and share it with family and friends. Now they know the right size and color. Looking for gift ideas for a friend? Consult her Chico's Wish List and get her exactly what she's been wanting.</p>
+{% elsif page.brand == 'soma' %}
+  <p>Register a Wish List and share it with family and friends. Looking for gift ideas for a friend? Consult her Soma Wish List.</p>
+{% else %}
+  <h2>Because everyone wants comfort and style.</h2>
+  <p>See something you have to have? Register on Make a Wish and share it with family and friends. Now they know the right size and color. Looking for gift ideas for a friend? Consult her Chico's Wish List and get her exactly what she's been wanting.</p>
+{% endif %}
+
+
+{% if page.brand == 'soma' %}
+<h3>Browse and Edit Your Wish List</h3>
+{% else %}
+<h3>View Your Wishes</h3>
+<p>Browse and edit your Wish List.</p>
+{% endif %}
+<p><a href="my-wish-list-items.html" class="btn btn-default">View My Wish List</a></p>
+
+<hr>
+
+{% if page.brand == 'soma' %}
+<h3>Create and Manage Your Wish List</h3>
+{% else %}
+<h3>Make a Wish</h3>
+<p>Create and manage your personal Wish List.</p>
+{% endif %}
+<p><a href="" class="btn btn-default">Create Wish List</a></p>
+
+<hr>
+
+{% if page.brand == 'soma' %}
+<h3>Browse Your Friend's Wish List</h3>
+<p><a href="" class="btn btn-default">View a Friend's Wish List</a></p>
+{% else %}
+<h3>Grant a Wish</h3>
+<p>Browse Wish Lists that you've been invited to view.</p>
+<p><a href="" class="btn btn-default">Grant a Wish</a></p>
+{% endif %}

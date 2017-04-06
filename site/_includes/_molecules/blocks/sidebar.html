@@ -1,0 +1,18 @@
+{% include _molecules/components/chat.html %}
+
+<section class="sidebar-item">
+  {% if page.brand == 'soma' %}
+    <h3>Return Policy</h3>
+    <p>Return items by mail or bring them in to a store within 60 days.</p>
+  {% else %}
+    <h3>No Hassle Return Policy</h3>
+    <p>It's easy; return items by mail or bring them in to a store within 60 days.</p>
+  {% endif %}
+  <p><a href="#" data-toggle="modal" data-target="#modal-returns">Learn More</a></p>
+</section>
+
+<section class="sidebar-item">
+  <h3>Security</h3>
+  <p>We provide a safe, secure checkout because we care about your privacy.</p>
+  <p><a href="#" data-toggle="modal" data-target="#modal-privacy-policy">Learn More</a></p>
+</section>

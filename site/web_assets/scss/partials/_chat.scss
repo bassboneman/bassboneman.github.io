@@ -1,0 +1,43 @@
+$chat-heading-font-size: 30px;
+$chat-heading-small-font-size: 12px;
+$chat-heading-font-weight: 400;
+$chat-heading-text-transform: uppercase;
+$chat-heading-icon-size: 40px;
+
+.chat-wrap {
+  margin-bottom: $dimension-base;
+  padding: $dimension-small;
+  text-align: center;
+  border: 1px solid $color-border;
+  .fa {
+    font-size: $chat-heading-icon-size;
+    color: $color-gray-light;
+  }
+  .chat-heading {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    @include chat-heading;
+    small {
+      display: block;
+      margin-top: $dimension-xsmall;
+      font-size: $chat-heading-small-font-size;
+      color: $color-black;
+    }
+  }
+  .chat-extra {
+    padding-top: $dimension-base;
+    p {
+      margin-bottom: $dimension-small;
+    }
+    p:last-child {
+      margin: 0;
+    }
+    .fa {
+      font-size: $font-size-large;
+      color: $color-black;
+      &.fa-envelope {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

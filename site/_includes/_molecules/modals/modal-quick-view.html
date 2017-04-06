@@ -1,0 +1,25 @@
+<div class="modal fade modal-pdp" id="modal-quick-view" tabindex="-1" role="dialog" aria-labelledby="modal-quick-view" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            {% include _molecules/products/images.html %}
+          </div>
+          <div class="col-md-6">
+            <article>
+              {% include _molecules/products/complete-modal.html %}
+              {% comment %}Not identical to PDP page elements{% endcomment %}
+            </article>
+          </div>
+        </div>
+        {% comment %}{% if page.title == "Browse (populated)" %}
+          {% include _molecules/products/related-all-modal.html %}    
+        {% endif %}{% endcomment %}
+        {% include _molecules/products/related-all.html %}    
+
+      </div>
+    </div>
+  </div>
+</div>

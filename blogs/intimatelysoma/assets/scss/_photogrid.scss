@@ -1,0 +1,38 @@
+.row {
+	width: 750px;
+	.col-sm-2 {
+		float:left;
+		margin-right:2px;
+		width: 123px;
+		p {
+			width: 100%;
+		}
+	}
+
+	.col-sm-3 {
+		float:left;
+		margin-right:2px;
+		width: 185px;
+		p {
+			width: 100%;
+		}
+	}
+
+	.col-sm-4 {
+		float:left;
+		margin-right:2px;
+		width: 247px;
+		p {
+			width: 100%;
+		}
+	}
+
+	.col-sm-6 {
+		float:left;
+		margin-right:2px;
+		width: 371px;
+		p {
+			width: 100%;
+		}
+	}
+}

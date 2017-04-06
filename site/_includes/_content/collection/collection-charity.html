@@ -1,0 +1,52 @@
+<div class="content">
+  <div class="container-fluid">
+    <section class="module">
+      {% include _molecules/modules/module-heading.html moduleClass='module-charity-heading' moduleHeading='Shop <em>Chic</em> for a Cause &trade;' moduleCopy='Charities We Support:' %}    
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/charity.html charityLogo="childrens-miracle-network-hospitals.png" charityHeading="Children's Miracle Network Hospitals" charityCopy="For thirty years, Children's Miracle Network Hospitals have been improving and saving the lives of children by supporting children's hospitals across the United States and Canada. They provide, comfort, treatment, and hope to millions of sick kids, touching the lives of more children and families than any other children's charity." charityExtra="Meet the Miracle Children" %}
+        </div>
+        <div class="col-sm-6">
+          {% include _molecules/modules/charity.html charityLogo="stand-up-to-cancer.png" charityHeading="Stand Up To Cancer" charityCopy="With cancer taking a life a minute, there's no time to sit idly by. Stand Up To Cancer is a ground-breaking initiative to bring together the best and brightest cancer researchers - in collaboration rather than competition. The end of cancer begins when we unite in one unstoppable movement and Stand Up To Cancer." %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          {% include _molecules/modules/charity.html charityLogo="living-beyond-breast-cancer.png" charityHeading="Living Beyond Breast Cancer" charityCopy="The mission of Living Beyond Breast Cancer is to connect people with trusted breast cancer information and a community of support. LBBC is nationally recognized for the quality of their educational programs and assists women at all stages of diagnosis, treatment, and recovery." %}
+        </div>
+        <div class="col-sm-6">
+          {% include _molecules/modules/charity.html charityLogo="american-heart-association.png" charityHeading="American Heart Association" charityCopy="Did you know heart disease is the No. 1 cause of death in women? The AHA is a voluntary organization dedicated to eliminating cardiovascular diseases and stroke through the funding of innovative research, advocating stronger public health policies and providing lifesaving tools and information." %}
+        </div>
+      </div>
+    </section>
+  </div><!-- .container-fluid -->
+</div><!-- .content.content-wide -->
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-xs-12">
+        {% include _molecules/navigation/breadcrumb.html breadLvl2='Clothing' breadLvl3='Dresses &amp; Skirts' %}
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        {% include _molecules/navigation/product-count.html %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include _molecules/navigation/filters.html %}
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="collection">
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-all.html %}
+    </div><!-- .collection -->
+  </div><!-- .container-fluid -->
+</div><!-- .content -->
+
+{% include _molecules/modals/modal-quick-view.html %}
+{% include _molecules/modals/modal-gallery.html %}
+{% include _molecules/navigation/top-link.html %}

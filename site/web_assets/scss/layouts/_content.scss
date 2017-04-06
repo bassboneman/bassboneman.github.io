@@ -1,0 +1,36 @@
+// adding wrapper in case brands require more stylable elements
+.content {
+  .container-fluid {
+    max-width: $max-width;
+    margin: 0 auto;
+    @include clearfix;
+  }
+  &.content-wide {
+    .container-fluid {
+      max-width: $max-width-wide;
+      // padding-right: 0;
+      // padding-left: 0;
+    }
+  }
+}
+
+.frameless {
+  .content {
+    .container-fluid {
+      max-width: none;
+    }
+  }
+  #copyright {
+    padding: 1.5rem 1.5rem 5rem 1.5rem;
+    @include frameless-copyright;
+  }
+}
+
+// used on those pages where top/bottom padding is required for the main content block (e.g. customer care)
+.content-pad {
+  padding: $padding-content;
+}
+
+.page-pdp {
+  padding-bottom: 30px;
+}

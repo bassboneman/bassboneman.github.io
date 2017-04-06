@@ -1,0 +1,36 @@
+<section id="checkout-confirmation-payment" class="checkout-block">
+  <header>
+    <h2>Payment</h2>
+  </header>
+  <div class="checkout-block-body">
+    {% include _molecules/checkout/blocks/payment-entry.html %}
+
+
+    <div class="checkout-gift-card giftcard-applied">
+      <div class="row">
+        <div class="col-xs-6">
+          <h3 class="margin-top-extra">
+            <svg class="icon-square-lg icon-left"><use xlink:href="#icon-gift-card"></use></svg>
+            Gift Card
+          </h3>
+        </div><!-- .col-xs-6 -->
+      </div><!-- .row -->
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="media">
+            <div class="media-left">
+              <svg class="icon-left checkmark"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use></svg>
+            </div>
+            <div class="media-body">
+              Gift Card ending in 9901<br>
+              Applied: $75.00 | Balance: $0.00<br>
+            </div><!-- .media-body -->
+          </div><!-- .media -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .checkout-giftcard -->
+
+
+
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->

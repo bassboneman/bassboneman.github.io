@@ -1,0 +1,6 @@
+<div {% if include.checkboxID %}id="{{ include.checkboxID }}"{% endif %} class="checkbox {% if include.checkboxClass %}{{ include.checkboxClass }}{% endif %}">
+  <label>
+    <input type="checkbox" value="{{include.checkValue}}" {{include.checked}}>
+    {% if include.styled %}<span class="input-styled">{% endif %}{{include.labelName}}{% if include.styled %}</span>{% endif %}
+  </label>
+</div>

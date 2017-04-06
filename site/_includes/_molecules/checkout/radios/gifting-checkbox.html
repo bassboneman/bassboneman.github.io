@@ -1,0 +1,97 @@
+{% comment %}
+hiding for now
+<div class="radio-list radio-media-list">
+  <div class="checkbox checkout-toggle">
+    <label>
+      <div class="media">
+        <div class="media-left media-middle">
+          <!-- <input type="checkbox" value="gifting-kit" id="gifting-kit" styled='yes' inputExtra='{{ radioTarget1 }}'> -->
+          <input type="checkbox" value="gifting-kit" id="gifting-kit" styled='yes'>
+          <span class="input-styled"></span>
+        </div>
+        <div class="media-body media-middle">
+          Add a Gift Kit - $3.00 Each
+        </div><!-- .media-body -->
+      </div><!-- .media -->
+    </label>
+    <div id="checkout-gifting-kit" class="checkout-toggle-content checkout-gifting-kit toggle-hidden toggle-gifting">
+      <p>Wrap it beautifully yourself in a Soma gift box, satin ribbon with bow, note card and  white tissue paper.</p>
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <p>
+            <img src="{{ site.baseurl }}/web_assets/imgs/checkout/gift-kit.jpg" alt="Gift Kit" class="img-responsive">
+          </p>
+        </div>
+      </div><!-- .row -->
+
+
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="row">
+            <div class="col-xs-5">
+              <p>
+                <strong>Shirt Box</strong><br>
+                (12" x 15")
+              </p>
+            </div><!-- .col -->
+            <div class="col-xs-7 text-right">
+              <div class="input-group increment-wrap">
+                <input type="text" name="quant[1]" class="form-control input-increment" value="0" min="0" max="10">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" disabled="disabled" data-type="minus" data-field="quant[1]">
+                    -
+                  </button>
+                </span>
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" data-type="plus" data-field="quant[1]">
+                    +
+                  </button>
+                </span>
+              </div><!-- .input-group -->
+            </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="row">
+            <div class="col-xs-5">
+              <p>
+                <strong>Robe Box</strong><br>
+                (18" x 18")
+              </p>
+            </div><!-- .col -->
+            <div class="col-xs-7 text-right">
+              <div class="input-group increment-wrap">
+                <input type="text" name="quant[2]" class="form-control input-increment" value="0" min="0" max="10">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" disabled="disabled" data-type="minus" data-field="quant[2]">
+                    -
+                  </button>
+                </span>
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" data-type="plus" data-field="quant[2]">
+                    +
+                  </button>
+                </span>
+              </div><!-- .input-group -->
+            </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+
+      <div class="row row-tight">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="p">
+            {% include _atoms/buttons/button.html btnClass='btn-lg btn-block btn-primary' btnLabel='Save &amp; Continue' btnExtra='data-something=""' %}
+          </div>
+          <div class="text-center"><a href="#" class="btn btn-link" data-dismiss="modal">Cancel</a></div>
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->    
+
+    </div><!-- .checkout-toggle-content -->
+
+  </div><!-- .radio.checkout-toggle -->
+</div><!-- .radio-list  -->
+{% endcomment %}

@@ -1,0 +1,567 @@
+// Olapic hero
+// .sticky #header-wrap {
+//     height: 8.5rem; // header down to 85px
+// }
+
+.carousel-lg .carousel-caption.olapic-caption {
+  color: white!important;
+  width: 500px;
+  top: 5%;
+
+  @media screen and (max-width: $break-xs-max) {
+    width: 100%;
+    color: black!important;
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    font-family: "Didot 24 A", "Didot 24 B";
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+
+    @media screen and (max-width: $break-xs-max) {
+      padding-bottom: 0;
+    }
+  
+    &:after {
+      width: 100px;
+      height: 2px;
+      background-color: white;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 50px);
+
+      @media screen and (max-width: $break-xs-max) {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+    
+    @media screen and (max-width: $break-xs-max) {
+      font-size: 1.3rem;
+      line-height: 2.3rem;
+    }
+
+    &.normal-case {
+      text-transform: none;
+
+      a {
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        font-size: 1.5rem;
+
+        @media screen and (max-width: $break-xs-max) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  a {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    font-size: 1.4rem;
+
+    @media screen and (max-width: $break-xs-max) {
+      color: black;
+    }
+  }
+
+  .smaller-margin-bottom {
+    margin-bottom: 1rem;
+  }
+}
+
+// Actual Olapic
+.olapic-wrap {
+  max-width: 1025px;
+  margin: 0 auto;
+}
+
+// Collection shelf header
+.module.module-carousel.whbm-collection-hero {
+  margin-bottom: 0;
+  border-bottom: 1px solid #f0f0f0;
+
+  .carousel-caption {
+    left: 0px;
+    width: 50%;
+
+    @media screen and (min-width: 1200px) {
+      width: 590px;
+    }
+
+    @media screen and (max-width: $break-xs-max) {
+      width: 100%;
+    }
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    font-family: "Didot 24 A", "Didot 24 B";
+    position: relative;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    color: black;
+
+    @media screen and (max-width: $break-xs-max) {
+      padding-bottom: 0;
+    }
+  
+    &:after {
+      width: 100px;
+      height: 2px;
+      background-color: black;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 50px);
+
+      @media screen and (max-width: $break-xs-max) {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  img.img-responsive {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.breadcrumb, .paging-wrap {
+  letter-spacing: 0.1em;
+}
+
+// Filter bar
+.filter-outer.whbm-navigation-filters {
+  @media screen and (min-width: 992px) {
+    height: 4rem; // Filter bar height down to 40px from 45
+  }
+
+  .filter-wrap {
+    letter-spacing: 0.12em;
+
+    @media screen and (min-width: 992px) {
+      background-color: #424141;
+    }
+  }
+
+  // Filter bar height down to 40px from 45
+  .filter-list > li:first-child, .filter-list > li > a {
+    line-height: 4rem;
+    
+    span::after {
+      height: 40px;
+    }
+  }
+
+  .filter-list > li > a {
+    @media screen and (max-width: $break-sm-max) {
+      color: black;
+    }
+
+    span::after {
+      background-image: url("../svg/arrow-down-white.svg");
+      
+      @media screen and (max-width: $break-sm-max) {
+        background-image: url("../svg/plus.svg");
+      }
+    }
+  }
+
+  .filter-list > li.open > a {
+    background-color: white;
+    color: black;
+
+    span::after {
+      background-image: url("../svg/arrow-up.svg");
+
+      @media screen and (max-width: $break-sm-max) {
+        background-image: url("../svg/minus.svg");
+      }
+    }
+  }
+
+  .filter-list .dropdown-menu {
+      background-color: rgba(255,255,255,0.95);
+  }
+
+  .filter-category {
+    height: 4rem; // Filter bar height down to 40px from 45
+
+    .bootstrap-select {
+      height: 3rem; // Filter bar height down to 40px from 45
+      
+      .btn {
+        font-size: 1.2rem;
+        letter-spacing: 0.12em;
+        height: 3rem; // Filter bar height down to 40px from 45
+
+        @media screen and (max-width: $break-sm-max) {
+          height: 4rem; // but bigger is better on mobile 
+        }
+      }
+    }
+  }
+
+  .filter-refine-label {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 3.8rem; // Filter bar height down to 40px from 45
+    top: -1px; // Not elegant. Why didn't this line up with the other items?
+    position: relative;
+  }
+
+  .filter-clear {
+    svg {
+      fill: white;
+
+      @media screen and (max-width: $break-sm-max) {
+        fill: black;
+      }
+    }
+    a {
+      color: white;
+      line-height: 4rem; // Filter bar height down to 40px from 45
+
+      @media screen and (max-width: $break-sm-max) {
+        color: black;
+      }
+    }
+  }
+
+  .filter-tools-toggle {
+    background-color: rgb(66, 65, 65);
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+
+    &.open span::after {
+      background-image: url("../svg/minus-white.svg");
+    }
+    
+    span::after {
+      background-image: url("../svg/plus-white.svg");
+      opacity: 0.5;
+    }
+  }
+
+}
+
+// Actual grid
+.whbm-collection-grid {
+  .product {
+    letter-spacing: 0.1em;
+
+    .product-msg.product-msg-special {
+      color: #cc3354;
+    }
+
+    .product-price {
+      font-weight: 300;
+      color: #cc3354;
+    }
+  }
+
+  .paging-wrap {
+    margin-bottom: 2rem;
+  }
+}
+
+
+// Shop by look
+.whbm-shop-by-look {
+  margin: 20px 0;
+
+  @media screen and (max-width: $break-sm-max) {
+    margin: 0;
+  }
+
+  .product-outfit {
+    padding: 20px 0;
+    border-bottom: 1px solid #dddddd;
+
+    @media screen and (max-width: $break-sm-max) {
+      padding: 30px 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .product-img-wrap .btn {
+    display: none;
+  }
+
+  .product-group {
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 0;
+  }
+
+  .product-name {
+    font-size: 2rem;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+  }
+
+  .product-style-id {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    color: black;
+    margin-top: 1rem;
+  }
+
+  .product-price {
+    
+    .product-price-regular, .product-price-sale {
+      font-weight: 500;
+      font-size: 1.8rem;
+    }
+
+    .product-price-sale {
+      color: #cc3354;
+    }
+
+    .product-price-msg {
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+
+      @media screen and (max-width: $break-sm-max) {
+        display: block;
+      }
+    }
+  }
+
+  .colors {
+    margin: 1.5rem 0 1.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .product-size-tools {
+    span {
+      letter-spacing: 0.12em;
+      font-size: 1.2rem;
+    }
+
+    a {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  .product-dropdowns {
+    margin: 2.5rem 0 0.2rem;
+    position: relative; // for placement of item selected checkbox thing
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: none;
+    }
+
+    .bootstrap-select .btn {
+      font-weight: 300;
+      font-size: 1.3rem;
+      letter-spacing: 0.12em;
+      border-color: #6e6e6e;
+    }
+  }
+
+  .item-selected-checkbox {
+    .deselected-text {
+      display: none;
+    }
+    .selected-text {
+      display: inline-block;
+    }
+
+    &.item-deselected {
+      display: block;
+
+      .deselected-text {
+        display: inline-block;
+      }
+      .selected-text {
+        display: none;
+      }
+      label {
+        background-color: #aaaaaa;
+      }
+    }
+
+    &.initial-hide {
+      display: none!important;
+    }
+
+    label {
+      display: inline-block;
+      color: white;
+      font-weight: 700;
+      // background-color: #4b4b4b;
+      background-color: #777777;
+      font-size: 1.2rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.2rem 1.4rem;
+      line-height: 3rem;
+      margin: 15px 0;
+
+      @media screen and (max-width: $break-sm-max) {
+        width: 100%;
+        text-align: center;
+      }
+
+      input {
+        position: relative;
+        margin: 0 10px 0 0;
+      }
+    }
+
+    .checkbox {
+      margin-top: 0;
+    }
+  }
+
+  .view-full-details {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .module.module-carousel {
+    margin-bottom: 3rem;
+      
+    @media screen and (max-width: $break-sm-max) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .carousel-control {
+    &.left img  { left: 0;  }
+    &.right img { right: 0; }
+      
+    @media screen and (max-width: $break-sm-max) {
+      &.left img  { left: 10px;  }
+      &.right img { right: 10px; }
+    }
+
+    img {
+      height: 18px;
+      position: absolute;
+      top: calc(50% - 9px);
+      display: inline-block;
+      right: 0px;
+
+      @media screen and (max-width: $break-sm-max) {
+        height: 30px;
+      }
+    }
+  }
+
+  .carousel-indicators {
+    bottom: -3rem;
+
+    li {
+      width: 1rem;
+      height: 1rem;
+      margin: 0px 0.5rem;
+      background-color: #dcdada;
+
+      &.active {
+        background-color: #b7b7b7;
+      }
+    } 
+  }
+}
+
+.whbm-shop-by-look-footer {
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  z-index: 799;
+
+  &.hide-footer .actual-footer {
+    transform: translateY(100%);
+  }
+
+  &.relative {
+    position: relative!important;
+  }
+
+  &.dark-footer .actual-footer {
+    // background-color: #424141;
+    background-color: black;
+    color: white;
+
+    .footer-print-link {
+      color: white;
+    }
+
+    .btn {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  .container-fluid {
+    max-width: 1200px;
+  }
+
+  .actual-footer {
+    background-color: white;
+    border-top: 1px solid #DDD;
+    padding: 1.3rem 0;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.12em;
+    transition: transform 1s;
+    transform: translateY(0%);
+
+    @media screen and (max-width: $break-sm-max) {
+      text-align: center;
+    }
+
+    .footer-print-link {
+      text-decoration: none;
+
+      @media screen and (max-width: $break-sm-max) {
+        display: none;
+      }
+    }
+
+    .btn {
+      margin-right: 15px;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+
+      @media screen and (max-width: $break-sm-max) {
+        margin: 0;
+      }
+    }
+  }
+}

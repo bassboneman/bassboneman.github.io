@@ -1,0 +1,5 @@
+<div class="form-group">
+  <label for="{{include.labelID}}">{{include.labelName}}</label>
+  <textarea id="{{include.labelID}}" class="form-control {% if include.counter %}counter{% endif %}" rows="{% if include.rows %}{{ include.rows }}{% else %}3{% endif %}" {% if include.counter %}data-countmax="{{ include.counter }}"{% endif %}></textarea>
+</div>
+{% if include.counter %}<div class="char-count"><span>{{ include.counter }}</span> characters remaining</div>{% endif %}

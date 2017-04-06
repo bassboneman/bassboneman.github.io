@@ -1,0 +1,32 @@
+---
+layout: page-collection
+title: Sandbox
+top-link: pages
+brand: chicos
+user: maxtest
+---
+
+{% comment %}
+Be sure to change the "brand" and "user" variables above
+* available brand values are: "chicos", "whbm", and "soma"
+* "user" should match your folder name
+{% endcomment %}
+
+
+{% comment %}
+All other content modules should use the following container. You don't have to include .content and .container-fluid for each module. 
+Those parent elements can wrap all modules.
+{% endcomment %}
+<div class="content">
+  <div class="container-fluid">
+   
+  	 {% comment %}SHELF HEADERS{% endcomment %}
+
+    {% comment %}text left, image right, full-width image{% endcomment %}
+    {% include _molecules/modules/shelf.html moduleClass='module-sh-max-test-sh' moduleLayout='' moduleImage='assets/imgs/max-test-sh/SH_tops.jpg' moduleImageMobile='assets/imgs/max-test-sh/SH_tops_sm.jpg' moduleHeading='Max is Awesome!' moduleCopy='<p>Want to be the center of attention at your next social outing? Want to make your friends jealous? Buy from the new Backlabel collection!</p>' buttonLabel='SHOP BLACK LABEL' buttonClass='' %}
+
+  </div><!-- .container-fluid -->
+</div><!-- .content -->
+
+{% comment %}The following is the quick view modal used by various content module molecules.{% endcomment %}
+{% include _molecules/modals/modal-quick-view.html %}

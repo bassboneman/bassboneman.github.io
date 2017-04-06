@@ -1,0 +1,58 @@
+<section id="checkout-shipping-address" class="checkout-block">
+  <header>
+    <h2>Choose Where to Ship Each Item</h2>
+  </header>
+  <div class="checkout-block-body">
+
+    <div class="checkout-section-form">
+
+      {% include _molecules/blocks/product-details-checkout.html %}
+      {% include _molecules/blocks/product-details-checkout.html %}
+      {% include _molecules/blocks/product-details-checkout.html %}
+
+    </div><!-- .checkout-section-form -->
+
+    <div class="checkout-section-entry">
+    </div><!-- .checkout-section-entry -->
+
+    <div class="row row-tight">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="p">
+          {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-lg btn-primary btn-block' btnLabel='Save &amp; Continue' btnExtra='data-toggle="modal" data-target="#"' %}
+          <!-- Button trigger modal -->
+        </div>
+        <div class="text-center"><a href="#" class="btn btn-link">Cancel</a></div>
+      </div><!-- .col-sm-6 -->
+    </div><!-- .row -->
+
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->
+
+
+<section id="checkout-shipping-address" class="checkout-block">
+  <header>
+    <h2>Choose Where to Ship Each Item</h2>
+  </header>
+  <div class="checkout-block-body">
+    <div class="checkout-section-form">
+      {% include _molecules/blocks/product-details-checkout.html addressSet='true' %}
+      {% include _molecules/blocks/product-details-checkout.html %}
+      {% include _molecules/blocks/product-details-checkout.html %}
+    </div><!-- .checkout-section-form -->
+    <div class="checkout-section-entry">
+
+    </div><!-- .checkout-section-entry -->
+    <div class="row row-tight">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="p">
+          {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-lg btn-primary btn-block' btnLabel='Save &amp; Continue' btnExtra='data-toggle="modal" data-target="#"' %}
+          <!-- Button trigger modal -->
+        </div>
+        <div class="text-center"><a href="#" class="btn btn-link">Cancel</a></div>
+      </div><!-- .col-sm-6 -->
+    </div><!-- .row -->
+
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->
+
+

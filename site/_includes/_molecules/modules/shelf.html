@@ -1,0 +1,71 @@
+{% comment %}
+NOTE: This module has grown in complexity to the point that I think it makess sense to explore less-complicated options post-launch
+{% endcomment %}
+
+<section class="module {{ include.moduleClass }}">
+  <div class="module-sh {{ include.moduleLayout }}">
+    <div class="module-inner">
+      {% if include.collectionSpecial %}<a href="#" class="c-sp-link" data-toggle="c-sp-toggle"}>{% endif %}
+        <div class="module-sh-img">
+
+          {% if include.moduleImageMobile == nil or include.moduleMobile == 'noMobileImg' %}
+            {% if include.moduleLinkUrl %}<a href="{{ include.moduleLinkUrl }}">{% endif %}
+          {% endif %}
+          <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading }}" class="img-responsive {% if include.moduleImageMobile or include.moduleMobile == 'noMobileImg' %}hidden-xs{% endif %}">
+          {% if include.moduleImageMobile == nil %}
+            {% if include.moduleLinkUrl %}</a>{% endif %}
+          {% endif %}
+
+          {% if include.moduleImageMobile %}
+            {% if include.moduleLinkUrl %}<a href="{{ include.moduleLinkUrl }}" class="visible-xs">{% endif %}
+              <img src="{{ include.moduleImageMobile }}" alt="{{ include.moduleHeading }}" class="img-responsive visible-xs">            
+            {% if include.moduleLinkUrl %}</a>{% endif %}
+          {% elsif include.moduleMobile == 'noMobileImg' %}
+            {% if include.moduleLinkUrl %}</a>{% endif %}
+          {% endif %}
+
+        </div>
+        {% if include.moduleCopy or include.moduleHeading or include.buttonLabel or include.moduleExtra or include.moduleLinkUrl %}
+          <div class="module-sh-copy">
+            {% if include.moduleHeading %}
+              {% if include.moduleFirst %}
+                <h1 class="{{ include.moduleHeadingClass }}">
+                  {{ include.moduleHeading }}
+                </h1>             
+              {% else %}
+                <h2 class="{{ include.moduleHeadingClass }}">
+                  {{ include.moduleHeading }}
+                </h2>
+              {% endif %}
+            {% endif %}
+            {% if page.brand == 'chicos' %}<hr>{% endif %}
+            {% if include.moduleCopy %}
+              {{ include.moduleCopy }}
+            {% endif %}
+            {% if include.collectionSpecial %}
+              {% if include.buttonLabel %}
+                <span class="btn btn-primary {{ include.buttonClass }}">
+                  {{ include.buttonLabel }}
+                </span>
+              {% endif %} 
+            {% endif %}           
+            {% if include.moduleLinkUrl %}
+              <a href="{{ include.moduleLinkUrl }}" class="btn btn-primary {{ include.buttonClass }}">
+                {{ include.buttonLabel }}
+              </a>
+            {% endif %}
+            {% if include.moduleExtra %}
+              <div class="module-extra">{{ include.moduleExtra }}</div>
+            {% endif %}
+          </div><!-- .module-sh-copy -->
+        {% endif %}
+      {% if include.collectionSpecial %}</a>{% endif %}
+      {% if include.collectionSpecial %}
+        {% include _molecules/modules/c-sp.html %}
+      {% endif %}
+      {% if include.moduleExtraAlt %}
+        <div class="module-extra-alt">{{ include.moduleExtraAlt }}</div>
+      {% endif %}
+    </div>
+  </div>
+</section><!-- .module -->

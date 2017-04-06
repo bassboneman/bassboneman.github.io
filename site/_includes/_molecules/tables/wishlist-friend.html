@@ -1,0 +1,70 @@
+<div class="product-details">
+  <div class="row">
+    <div class="col-sm-2 col-xs-2">
+      <a href="#" data-toggle="modal" data-target="#modal-quick-view"><img class="img-responsive" src="http://placehold.it/200x250&text=Product" alt=""></a>    
+    </div>
+    <div class="col-sm-10 col-xs-10">
+      <h4><a href="#" data-toggle="modal" data-target="#modal-quick-view">Product Name</a></h4>
+      <div class="row">
+        <div class="col-sm-9">
+          <dl class="dl-horizontal meta-list">
+            <dt>Style:</dt>
+            <dd>570126513</dd>
+            <dt>SKU:</dt>
+            <dd>451005486120</dd>
+            <dt>Color:</dt>
+            <dd>Natural Cream</dd>
+            <dt>Size:</dt>
+            <dd>Size 000 (0, XXS)</dd>
+            <dt>Item Price:</dt>
+            <dd>$89.00</dd>
+            <dt>Qty Requested:</dt>
+            <dd>1</dd>
+            <dt>Qty Purchased:</dt>
+            <dd>0</dd>
+          </dl>
+          <div class="alert alert-warning" role="alert">This item is sold out in that size.</div>
+        </div> 
+        <div class="col-sm-3">
+          {% include _atoms/forms/select.html labelName='Quantity Requested' labelID='qty-requested' labelHidden='hidden' selectOptions='<option value="1" title="QTY 1">1</option><option value="2" title="QTY 2">2</option><option value="3" title="QTY 3">3</option>' %}
+          <p><a href="" class="btn btn-default btn-sm btn-block">View This Item</a></p>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div><!-- .product-details -->
+
+<div class="product-details">
+  <div class="row">
+    <div class="col-sm-2 col-xs-2">
+      <a href="#" data-toggle="modal" data-target="#modal-quick-view"><img class="img-responsive" src="http://placehold.it/200x250&text=Product" alt=""></a>    
+    </div>
+    <div class="col-sm-10 col-xs-10">
+      <h4><a href="#" data-toggle="modal" data-target="#modal-quick-view">Product Name</a></h4>
+      <div class="row">
+        <div class="col-sm-9">
+          <dl class="dl-horizontal meta-list">
+            <dt>Style:</dt>
+            <dd>570126513</dd>
+            <dt>SKU:</dt>
+            <dd>451005486120</dd>
+            <dt>Color:</dt>
+            <dd>Natural Cream</dd>
+            <dt>Size:</dt>
+            <dd>Size 000 (0, XXS)</dd>
+            <dt>Item Price:</dt>
+            <dd>$89.00</dd>
+            <dt>Qty Requested:</dt>
+            <dd>1</dd>
+            <dt>Qty Purchased:</dt>
+            <dd>0</dd>
+          </dl>
+        </div> 
+        <div class="col-sm-3">
+          {% include _atoms/forms/select.html labelName='Quantity Requested' labelID='qty-requested' labelHidden='hidden' selectOptions='<option value="1" title="QTY 1">1</option><option value="2" title="QTY 2">2</option><option value="3" title="QTY 3">3</option>' %}
+          <p><a href="" class="btn btn-primary btn-sm btn-block">Add to Bag</a></p>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div><!-- .product-details -->

@@ -1,0 +1,18 @@
+<div class="modal fade" id="modal-add-wishlist" tabindex="-1" role="dialog" aria-labelledby="modal-add-wishlist" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="myModalLabel">Your item has been added to your wish list.</h3>
+      </div>
+      <div class="modal-body">
+        <p class="text-center">
+          {% include _atoms/buttons/button-link.html btnLabel='View Wish List' btnClass='btn-primary' %}
+        </p>
+        <p class="text-center">
+          {% include _atoms/buttons/button-link.html btnLabel='Continue Shopping' btnClass='btn-default' %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

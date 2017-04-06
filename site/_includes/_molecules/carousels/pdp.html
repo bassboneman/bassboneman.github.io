@@ -1,0 +1,117 @@
+{% if page.title == "Product Page (Video A)" %}
+  <div class="visible-xs">
+    <div class="responsive-embed responsive-embed-3by4">
+      <video id="player" class="pdp-video" autoplay="">
+        <source src="http://akamai.ksckreate.net/videos/13000/m4v/A_Chicos_2000_900x1200-1600.m4v" type="video/x-m4v">
+        <source src="http://akamai.ksckreate.net/videos/13000/mp4/A_Chicos_2000_900x1200-1600.mp4" type="video/mp4">
+        <source src="http://akamai.ksckreate.net/videos/13000/webm/A_Chicos_2000_900x1200-1600.webm" type="video/webm">
+        <source src="http://akamai.ksckreate.net/videos/13000/ogv/A_Chicos_2000_900x1200-1600.ogv" type="video/ogg">
+      </video>
+    </div>
+  </div>
+{% elsif page.title == "Product Page (Video B)" %}
+  <div class="visible-xs">
+      <div class="responsive-embed responsive-embed-3by4">
+        <video id="player" class="pdp-video" autoplay="">
+          <source src="http://akamai.ksckreate.net/videos/13000/m4v/B_Chicos_2000_900x1200-1600.m4v" type="video/x-m4v">
+          <source src="http://akamai.ksckreate.net/videos/13000/mp4/B_Chicos_2000_900x1200-1600.mp4" type="video/mp4">
+          <source src="http://akamai.ksckreate.net/videos/13000/webm/B_Chicos_2000_900x1200-1600.webm" type="video/webm">
+          <source src="http://akamai.ksckreate.net/videos/13000/ogv/B_Chicos_2000_900x1200-1600.ogv" type="video/ogg">
+        </video>
+      </div>
+    </div>
+{% elsif page.title == "Product Page (Video C)" %}
+  <div class="visible-xs">
+    <div class="responsive-embed responsive-embed-3by4">
+      <video id="player" class="pdp-video" autoplay="">
+        <source src="http://akamai.ksckreate.net/videos/13000/m4v/C_Chicos_2000_900x1200-1600.m4v" type="video/x-m4v">
+        <source src="http://akamai.ksckreate.net/videos/13000/mp4/C_Chicos_2000_900x1200-1600.mp4" type="video/mp4">
+        <source src="http://akamai.ksckreate.net/videos/13000/webm/C_Chicos_2000_900x1200-1600.webm" type="video/webm">
+        <source src="http://akamai.ksckreate.net/videos/13000/ogv/C_Chicos_2000_900x1200-1600.ogv" type="video/ogg">
+      </video>
+    </div>
+  </div>
+{% elsif page.title == "Product Page (Video D)" %}
+  <div class="visible-xs">
+    <div class="responsive-embed responsive-embed-3by4">
+      <video id="player" class="pdp-video" autoplay="">
+        <source src="http://akamai.ksckreate.net/videos/13000/m4v/D_Chicos_2000_900x1200-1600.m4v" type="video/x-m4v">
+        <source src="http://akamai.ksckreate.net/videos/13000/mp4/D_Chicos_2000_900x1200-1600.mp4" type="video/mp4">
+        <source src="http://akamai.ksckreate.net/videos/13000/webm/D_Chicos_2000_900x1200-1600.webm" type="video/webm">
+        <source src="http://akamai.ksckreate.net/videos/13000/ogv/D_Chicos_2000_900x1200-1600.ogv" type="video/ogg">
+      </video>
+    </div>
+  </div>
+{% else %}
+  <div id="carousel-pdp" class="carousel slide hidden-lg {% if page.title == "Locate in Store (PDP)" %}{% else %}visible-xs{% endif %} {{ include.carouselClass }}" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-pdp" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-pdp" data-slide-to="1" class=""></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        {% if page.title == "Product Page (alt img)" %}
+          <img id="product-img" class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/temp/pdp/option1-md.jpg" alt="Product Name"
+            srcset="
+              {{ site.baseurl }}/web_assets/imgs/temp/pdp/option1-sm.jpg 480w,
+              {{ site.baseurl }}/web_assets/imgs/temp/pdp/option1-md.jpg 767w
+            "
+            sizes="
+              (min-width: 768px) 60vw,
+              100vw
+            "
+          >
+        {% else %}
+          <img id="product-img" class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/temp/pdp/option2-md.jpg" alt="Product Name"
+            srcset="
+              {{ site.baseurl }}/web_assets/imgs/temp/pdp/option2-sm.jpg 480w,
+              {{ site.baseurl }}/web_assets/imgs/temp/pdp/option2-md.jpg 767w
+            "
+            sizes="
+              (min-width: 768px) 60vw,
+              100vw
+            "
+          >
+        {% endif %}
+      </div><!-- .item -->
+      <div class="item">
+        {% if page.title == "Product Page (alt img)" %}
+          <img id="product-img" class="img-responsive" src="http://www.chicos.com/Product_Images/570152656_large.jpg?resize=767px:959px&output-quality=85" alt="Product Name"
+            srcset="
+              http://www.chicos.com/Product_Images/570152656_large.jpg?resize=480px:600px&output-quality=85 480w,
+              http://www.chicos.com/Product_Images/570152656_large.jpg?resize=767px:959px&output-quality=85 767w
+            "
+            sizes="
+              (min-width: 768px) 60vw,
+              100vw
+            "
+          >
+        {% else %}
+          <img id="product-img" class="img-responsive" src="http://www.chicos.com/Product_Images/570155042_large.jpg?resize=767px:959px&output-quality=85" alt="Product Name"
+            srcset="
+              http://www.chicos.com/Product_Images/570155042_large.jpg?resize=480px:600px&output-quality=85 480w,
+              http://www.chicos.com/Product_Images/570155042_large.jpg?resize=767px:959px&output-quality=85 767w
+            "
+            sizes="
+              (min-width: 768px) 60vw,
+              100vw
+            "
+          >
+        {% endif %}
+      </div><!-- .item -->
+    </div><!-- .carousel-inner -->
+    <a class="left carousel-control" href="#carousel-pdp" data-slide="prev" aria-label="previous">
+      <svg class="icon-arrow-left" role="presentation">
+        <use xlink:href="#icon-arrow-left"></use>
+      </svg>
+    </a>
+    <a class="right carousel-control" href="#carousel-pdp" data-slide="next" aria-label="next">
+      <svg class="icon-arrow-right" role="presentation">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg>
+    </a>
+  </div>
+  {% if page.title == "Locate in Store (PDP)" %}
+    {% include _molecules/products/product-image-controls.html locateStore='yes' %}
+  {% endif %}
+{% endif %}

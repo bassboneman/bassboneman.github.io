@@ -1,0 +1,33 @@
+// tabs are the bootstrap default for the most brands. Soma has some color adjustments
+.nav-tabs {
+  margin-bottom: $dimension-base;
+  @include nav-tabs;
+  > li > a {
+    text-decoration: none;
+    border-radius: $border-radius;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav-tabs {
+    margin-bottom: 0;
+    // > li > a {
+    // }
+    // > li.active > a {
+    //   @include box-shadow(2px,1px,3px,0,rgba(0,0,0,0.15));
+    // }
+  }
+  .tab-content {
+    position: relative;
+    padding-top: 20px;
+    background: #fff;
+  }
+}
+@media screen and (max-width: 991px) {
+  .nav-tabs {
+    > li:nth-child(1):nth-last-child(2),
+    > li:nth-child(2):nth-last-child(1) {
+      width: calc(50% + 1px);
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<a 
+  href="javascript:void(0)" 
+  class="selector-toggle {% if include.dataAll %}selected{% endif %} {% if include.disabled %}disabled{% endif %}" 
+  data-name="{{ include.dataName }}" 
+  data-type="{{ include.dataType }}" 
+  data-toggle="{% if include.dataAll %}filter-selector-all{% else %}filter-selector{% endif %}"
+  >
+  {% if include.dataType == 'color' and include.dataAll == nil %}
+    <span class="selector swatch" style="background-image: url({{ site.baseurl }}/web_assets/imgs/swatches/{{ include.dataName}}.png);"></span>  
+  {% else %}
+    <span class="selector box"></span>
+  {% endif %}
+  <span class="selector-label">{{ include.label }}</span>
+</a>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>501 - Email Only Registration NEW</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="//use.typekit.net/rtt2dkh.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<link rel="stylesheet" type="text/css" href="//cloud.typography.com/6398374/758648/css/fonts.css">
+		<link data-css="brand-css" rel="stylesheet" href="http://chicos.coreyweb.com/ui/web_assets/css/chicos.css">
+
+		<link rel="apple-touch-icon" sizes="57x57" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/apple-touch-icon-57x57.png?v=2">
+		<link rel="apple-touch-icon" sizes="60x60" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/apple-touch-icon-60x60.png?v=2">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/apple-touch-icon-72x72.png?v=2">
+		<link rel="apple-touch-icon" sizes="76x76" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/apple-touch-icon-76x76.png?v=2">
+		<link rel="apple-touch-icon" sizes="114x114" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/apple-touch-icon-114x114.png?v=2">
+		<link rel="apple-touch-icon" sizes="120x120" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/apple-touch-icon-120x120.png?v=2">
+		<link rel="apple-touch-icon" sizes="144x144" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/apple-touch-icon-144x144.png?v=2">
+		<link rel="apple-touch-icon" sizes="152x152" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/apple-touch-icon-152x152.png?v=2">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/apple-touch-icon-180x180.png?v=2">
+		<link rel="icon" type="image/png" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/favicon-32x32.png?v=2" sizes="32x32">
+		<link rel="icon" type="image/png" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/favicon-194x194.png?v=2" sizes="194x194">
+		<link rel="icon" type="image/png" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/favicon-96x96.png?v=2" sizes="96x96">
+		<link rel="icon" type="image/png" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/android-chrome-192x192.png?v=2" sizes="192x192">
+		<link rel="icon" type="image/png" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/favicon-16x16.png?v=2" sizes="16x16">
+		<link rel="manifest" href="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="http://chicos.coreyweb.com/ui/web_assets/imgs/chicos/favicons/mstile-144x144.png?v=2">
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">		
+		
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+		<!--start cheetahmail code -->
+		<style type="text/css">
+		.fld { font-family:Arial, Helvetica, sans-serif; font-size:4px; font-weight:normal; color:#000000; margin-bottom:3px; padding:0px; }
+		</style>
+		<script type="text/javascript">
+			var emailRegEx = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-\+])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		function getDom(name)
+		{
+		 if (document.getElementById)
+		 {
+		 	this.obj = document.getElementById(name);
+			 this.style = document.getElementById(name).style;
+		 }
+		 else if (document.all)
+		 {
+			this.obj = document.all[name];
+			this.style = document.all[name].style;
+		 }
+		 else if (document.layers)
+		 {
+		  	this.obj = document.layers[name];
+		  	this.style = document.layers[name];
+		 }
+		}
+
+		function setvisible(object, mode) {
+		 var mobject = new getDom(object);
+		 if (mode == 'hide') {
+		  mobject.style.visibility = 'hidden';
+		  mobject.style.display = 'none';
+		 }
+		 else {
+		  mobject.style.visibility = 'visible';
+		  	mobject.style.display = 'block';
+		 }
+		}
+		function returnsel(tinp) {
+			return tinp[tinp.selectedIndex].value;
+
+		}
+		function setdisclaimer() {
+			var sel = document.chicos.COUNTRY;
+			var val = returnsel(sel);
+			setvisible('disclaimer','show');
+			if (val == 'US') {
+				setvisible('disclaimer','hide');
+			}
+		}
+		</SCRIPT>
+		<!--end cheetahmail code -->
+
+		<style type="text/css" media="screen">
+		.bootstrap-select .btn .caret {
+		  background-image: url(http://chicos.coreyweb.com/ui/web_assets/svg/arrow-down.svg);
+		.bootstrap-select.dropup .btn .caret {
+		  background-image: url(http://chicos.coreyweb.com/ui/web_assets/svg/arrow-up.svg);
+		}
+		</style>
+
+  </head>
+  <body>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-sm-push-6">
+					
+					<h1 class="heading-serif heading-lg">Thank You</h1>
+					
+					<p>
+						We can't wait to start filling you in on all our latest news. We've already sent your <strong>10% off* discount</strong> to %%email%% You should receive it momentarily.
+					</p>
+
+					<p>
+						<a href="http://www.chicos.com/store/home.jsp" class="btn btn-primary btn-lg">Start Shopping</a>
+					</p>
+					
+					<p>
+						Once your merchandise purchases reach $500, you'll be upgraded to our Passport Program and entitled to:
+					</p>
+
+					<ul>
+						<li>5% off every merchandise purchase</li>
+						<li>Birthday bonuses</li>
+						<li>Free Shipping</li>
+						<li>Exclusive parties and events</li>
+						<li>Private sales</li>
+					</ul>				  
+
+					<p>
+						<a href="https://www.chicos.com/store/account/registration.jsp?" class="btn btn-primary btn-lg">Create An Account</a>
+					</p>
+
+					<p class="disclaimer">
+						<a href="#" data-toggle="modal" data-target="#details">
+						  *Details
+						</a>
+					</p>
+
+				</div><!-- col-xs-12 col-sm-6 -->
+				
+				<div class="col-sm-6 hidden-xs col-sm-pull-6">
+					<img src="150827_IMG_CHS_EmailSignUp_tlt.jpg" class="img-responsive">
+				</div>
+			</div><!-- .row -->
+
+		</div><!-- .container -->
+
+	</form>
+
+<!--end cheetahmail code -->
+
+	<div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="modal-text" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	      <div class="modal-body">
+	        <p>
+	          10% off welcome offer only valid for new email sign-ups. If you are already in our database, you will not receive a welcome email with your 10% coupon. Offer not valid on the purchase of gift cards, previously purchased merchandise, taxes or shipping. One time use only, may not be combined with other coupons, offers or events. Not valid if reproduced. No cash value. Limited time only.
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script src="http://chicos.coreyweb.com/ui/web_assets/js/vendor/bootstrap-select.min.js"></script>
+    
+	</body>
+</html>

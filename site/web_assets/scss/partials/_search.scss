@@ -1,0 +1,49 @@
+.search-sort-wrap {
+  padding: 8px 0 8px 8px;
+}
+.search-sort {
+  margin: 0;
+  > li {
+    padding: 0 10px;
+    font-size: $font-size-xsmall;
+    border-left: 1px solid $color-border-light;
+  }
+  > li:first-child {
+    padding-left: 0;
+    border: 0;
+  }
+}
+
+.search-msg {
+  margin-bottom: 3rem;
+  // padding: 1.2rem 0;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  @include search-msg;
+  @media screen and (max-width: 991px) {
+    margin-top: -2rem;
+  }
+}
+
+// typeahead
+.twitter-typeahead {
+  display: block !important; // override for script-generated inline style
+}
+.tt-menu {
+  top: 4.4rem !important;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #484747;
+  background: $color-gray-light;
+  .tt-suggestion {
+    padding: .8rem 1.5rem;
+    &.tt-cursor {
+      background: #f2f2f2;
+    }
+    .tt-highlight {
+      color: $color-black;
+      font-weight: 500;
+    }
+  }
+}

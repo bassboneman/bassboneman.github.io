@@ -1,0 +1,661 @@
+// colors
+$padding-content: 4rem 0;
+$color-gray: #5a5858;
+$color-footer-border: $color-black;
+$color-red: #e00;
+$color-red-dark: $color-red;
+$color-dark-red: $color-red;
+
+// carousels
+$color-indicator-active: #6e6e6e;
+$color-indicator-border: #6e6e6e;
+
+// typography
+$font-family-base: "Whitney 5r", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-semibold: "Whitney 6r", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-bold: "Whitney 7r", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-light: "Whitney 3r", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@mixin font-weight-bold {
+  font-family: $font-family-bold;
+  font-weight: normal;
+}
+@mixin font-weight-semibold {
+  font-family: $font-family-semibold;
+  font-weight: normal;
+}
+@mixin font-weight-light {
+  font-family: $font-family-light;
+  font-weight: normal;
+}
+
+// $font-family-base: "Open Sans", sans-serif;
+$font-family-serif: "Didot 24 3r", serif;
+$font-size-base: 1.4rem;
+$font-size-h1: 2.5rem;
+$font-size-h2: 2.1rem;
+$font-size-h3: 1.8rem;
+$font-size-h4: 1.5rem;
+$font-size-h5-h6: 1.4rem;
+@mixin alert {
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: .1rem solid $color-black;
+  background: none;
+  .product-wrap & {
+    margin-top: $dimension-base;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .product-details & {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+  }
+}
+@mixin heading-has-line {
+  font-family: $font-family-serif;
+  font-size: 2rem;
+}
+strong, b {
+  @include font-weight-bold;
+}
+.serif {
+  strong, b {
+    font-family: $font-family-serif;
+    font-weight: 700;
+  }
+}
+
+
+// buttons
+$font-weight-button: 600;
+$font-weight-button-wrapped: 600;
+$font-weight-dt: 600;
+
+// footer
+$copyright-font-weight: 400;
+
+// typography
+$letter-spacing: .08em;
+$letter-spacing-button: .12em;
+
+@mixin logo {
+  top: 1.5rem;
+  width: 41.3rem;
+  height: 1.7rem;
+  svg {
+    width: 41.3rem;
+    height: 1.7rem;
+  }
+}
+@mixin logo-medium {
+  top: 1.3rem;
+}
+@mixin logo-mobile {
+  top: 1.6rem;
+  width: 28rem;
+  height: 1.2rem;
+  svg {
+    width: 28rem;
+    height: 1.2rem;
+  }
+}
+
+@mixin menu-open-item {
+  font-weight: 500;
+}
+
+@mixin h2-h6-margins {
+  margin: 3rem 0 1rem 0;
+}
+@mixin h1 {
+  margin: 0 0 2rem 0;
+  font-size: $font-size-h1;
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  // letter-spacing: .5px;
+}
+@mixin h2 {
+  font-size: $font-size-h2;
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  // letter-spacing: .5px;
+}
+@mixin h3 {
+  font-size: $font-size-h3;
+  font-weight: 600;
+  line-height: 1.3;
+  text-transform: uppercase;
+  // letter-spacing: .25px;
+}
+@mixin h4 {
+  font-size: $font-size-h4;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  // letter-spacing: .25px;
+  // text-transform?
+}
+@mixin h5-h6 {
+  font-size: $font-size-h5-h6;
+  font-weight: 500;
+  text-transform: uppercase;
+  // letter-spacing: .25px;
+}
+
+// header promo
+@mixin promo-label-styles {
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: $letter-spacing;
+}
+
+// header
+// $header-inner-padding: 4rem 1.5rem 2.3rem 1.5rem;
+// $header-inner-padding-sticky: .6rem 1.5rem .8rem 1.5rem;
+// $header-height: 14.4rem;
+// $header-height-sticky: 8.5rem;
+// $header-height-mobile: 11.9rem;
+// $header-height-mobile-sticky: 5.2rem;
+
+$height-menu: 4rem;
+$height-header-inner: 4rem;
+
+@mixin menu-bag-placement {
+  right: 1.5rem;
+  bottom: 1.3rem;    
+}
+
+// utility menu
+$font-size-menu-utility: 1.2rem;
+$font-weight-menu-utility: 500;
+$menu-bag-font-size: 1.2rem;
+$menu-bag-font-weight: 500;
+
+@mixin menu-utility {
+  > li {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+  }
+}
+
+@mixin menu-utility-font {
+  letter-spacing: $letter-spacing;
+}
+@mixin menu-utility-bag-number {
+  top: 1.1rem;
+  width: 30.5px;
+}
+
+@mixin menu-utility-bag-wrap {
+  width: 3rem;
+  height: 3.1rem;
+  margin-top: -1.2rem;
+  @media screen and (max-width: $break-sm-max) {
+    margin: -1rem auto 0 auto;
+  }
+  .icon-bag {
+    width: 3rem;
+    height: 3.1rem;
+    fill: $color-black;
+  }
+  &:hover {
+    .icon-bag {
+      fill: $color-black;
+    }
+  }
+}
+
+@mixin mobile-cat-toggle {
+  margin-top: .6rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+
+
+
+
+// search
+
+$color-search-wrap-bg: rgba(29,29,29,0.95);
+$color-search-close: #fff;
+$color-search-close-hover: #fff;
+@mixin search-wrap {}
+@mixin search-form-control {
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  // &::-webkit-input-placeholder { // WebKit, Blink, Edge
+  //   color: #fff;
+  // }
+  // &:-moz-placeholder { // Mozilla Firefox 4 to 18
+  //   color: #fff;
+  // }
+  // &::-moz-placeholder { // Mozilla Firefox 19+
+  //   color: #fff;
+  // }
+  // &:-ms-input-placeholder { // Internet Explorer 10-11
+  //   color: #fff;
+  // }
+}
+@mixin search-btn {
+  color: $color-black;
+  background: #fff;
+  letter-spacing: $letter-spacing;
+  &:hover {
+    background-color: rgba(255,255,255,0.9);
+  }
+}
+
+// mobile menu
+@mixin ship-to {
+  @media screen and (max-width: $break-sm-max) {
+    padding: 1.6rem 1.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.12em;
+  }
+}
+@mixin menu-header-mobile {
+  h3, p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: $letter-spacing;
+  }
+  .customer-links {
+    a {
+      font-weight: 500;
+      letter-spacing: $letter-spacing;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// menu
+@mixin menu-li-a {
+  position: relative;
+  @media screen and (min-width: $break-md-min) {
+    padding: 0 4rem;
+  }
+  @media screen and (min-width: $break-lg-min) {
+    padding: 0 5.5rem;
+  }
+  @media (max-width: 1100px) {
+    padding: 0 1.5rem;
+  }
+  &:hover {
+    font-weight: 500;
+  }
+}
+@mixin menu-li-h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+$menu-sticky-line-height: 3rem;
+
+// products 
+@mixin product-price {
+  font-weight: 500;
+}
+
+@mixin product-group {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@mixin product-name {
+  font-weight: 400;
+}
+@mixin product-style-id {
+  color: $color-gray;
+}
+@mixin product-size-tools {
+  letter-spacing: 0;
+  span {
+    font-weight: 400;
+  }
+}
+@mixin product-full-link {
+  font-weight: 600;
+  letter-spacing: $letter-spacing;
+}
+@mixin buy-more {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+@mixin detail-heading {
+  font-weight: 600;
+}
+
+// facets 
+@mixin facet-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+@mixin facet-label {
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+
+@mixin dropdown-li-link {
+  // color: $color-gray-light; // this was used when we had black backgrounds
+  color: #626262; 
+  letter-spacing: 0.1em;
+  @media screen and (max-width: $break-sm-max) {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    // color: $color-dovegray;
+    font-weight: 500;
+  }
+}
+@mixin dropdown-li-heading {
+  font-family: $font-family-bold;
+  font-size: 1.4rem;
+  font-weight: normal; // the above font is bold, so normal is correct
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  // color: #fff; this was used when we had black backgrounds
+  color: $color-black;
+  @media screen and (max-width: $break-sm-max) {
+    // color: $color-black;
+    margin-bottom: 1.5rem;
+  }
+}
+@mixin menu-dropdown {
+  padding: 3rem 0 2rem 0;
+  // background-color: $color-black;
+  // background-color: rgba(29,29,29,0.95);
+  background-color: rgba(255, 255, 255, 0.97);
+  @include box-shadow(0,.1rem,.3rem,0,rgba(0,0,0,0.1));
+  @media screen and (max-width: $break-sm-max) {
+    background-color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+  &.white-background {
+    background-color: rgba(255, 255, 255, 0.97);
+    a {
+      color: #626262;
+    }
+    h3 {
+      color: $color-black;
+    }
+    .editorial-promo h4 {
+      color: $color-black;
+    }
+  }
+}
+@mixin menu-triangles {
+  > a {
+    position: relative;
+    z-index: 9999; // arbitrary
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 0; 
+      height: 0; 
+    }
+    &:before {
+      bottom: -.5rem;
+      border-top: .6rem solid $color-border;
+      border-right: 1.2rem solid transparent; 
+      border-left: 1.2rem solid transparent;
+      left: calc(50% - 1.2rem); // Not sure what browsers you're targeting; calc was just a quick solution.
+    }
+    &:after {
+      bottom: -.4rem;
+      left: calc(50% - 1rem);
+      border-top: .5rem solid white;
+      border-right: 1rem solid transparent; 
+      border-left: 1rem solid transparent;
+    }
+  }
+  &:first-child {
+    > a:after {
+      @media screen and (min-width: $break-md-min) {
+        left: calc(50% - 1rem - 2rem); // Compensate for first list item not having a left margin
+      }
+      @media screen and (min-width: $break-lg-min) {
+        left: calc(50% - 1rem - 2.75rem);
+      }      
+    }
+  }
+  &:first-child {
+    > a:before {
+      @media screen and (min-width: $break-md-min) {
+        left: calc(50% - 1.2rem - 2rem); // Compensate for first list item not having a left margin
+      }
+      @media screen and (min-width: $break-lg-min) {
+        left: calc(50% - 1.2rem - 2.75rem);
+      }
+    }
+  }
+}
+
+
+
+@mixin module-heading {
+  h1 {
+    font-family: $font-family-serif;
+    font-size: 6.2rem;
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      margin: 1rem;
+      font-size: 4rem;
+    }
+  }
+  p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+  }
+}
+
+@mixin product-outfit {
+  letter-spacing: $letter-spacing;
+  .product-size-tools {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+}
+$color-outfit-price: #cc3354;
+
+// special collections page
+@mixin c-sp-social {
+  bottom: 1.5rem;
+  [class*='icon-'] {
+    fill: #999;
+  }
+  @media screen and (max-width: 767px) {
+    left: 1.5rem;
+    right: auto;
+    top: 1.5rem;
+    bottom: auto;
+  }
+}
+@mixin c-sp-header {
+  letter-spacing: $letter-spacing;
+  h1 {
+    display: inline;
+    margin: 0 1.2rem 0 0;
+    font-family: $font-family-serif;
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: $letter-spacing;
+    // text-transform: uppercase;
+    // letter-spacing: 0.05em;
+    // letter-spacing: $letter-spacing;
+    vertical-align: middle;
+    @media screen and (max-width: 991px) {
+      display: block;
+      font-size: 3.5rem;
+      margin: 0;
+    }
+  }
+}
+@mixin c-sp-footer {}
+@mixin c-sp-wrap {
+  margin-bottom: 1rem;
+  .module-sh-copy {
+    left: 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-family: $font-family-serif;
+    h2 {
+      font-weight: 400;
+      letter-spacing: $letter-spacing;
+      @media screen and (min-width: 991px) {
+        font-size: 7.5rem;
+        line-height: 7rem;
+      }
+    }
+    p {
+      font-size: 2.4rem;
+      font-style: italic;
+      line-height: 3rem;
+      letter-spacing: $letter-spacing;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 1.5rem 0;
+      p {
+        font-size: 1.7rem;
+        line-height: 1.4;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .module-sh-copy {
+      width: 33.3333%;
+      text-align: left;
+    }
+    .module-sh-center {
+      .module-sh-copy {
+        left: 33.3333%;
+      }
+    }
+    .module-sh-right {
+      .module-sh-copy {
+        left: 66.6666%;
+      }
+    }
+  }
+}
+
+@mixin c-sp-click {
+  position: fixed;
+  z-index: 10;
+  top: 8.5rem;
+  left: 50%;
+  width: 30rem;
+  margin-left: -15rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing;
+  color: #fff;
+  @include opacity(1);
+  background: rgba(0, 0, 0, 0.5);
+  @include transition(all);
+  @media screen and (max-width: 991px) {
+    top: 4.4rem;
+    padding: 0.3rem;
+    width: 25rem;
+    margin-left: -12.5rem;
+  }
+  &.click-hidden {
+    z-index: -1;
+    @include opacity(0);
+  }
+}
+
+@mixin dl-horizontal {
+  text-transform: uppercase;
+  letter-spacing: 0;
+  dt {
+    width: 17rem;
+    font-weight: 600;
+    color: $color-black;
+  }
+  dd {
+    margin-left: 19rem;
+  }
+}
+
+@mixin bootstrap-select {
+  .btn {
+    font-size: 1.2rem;
+  }
+}
+
+@mixin editorial-promo {
+  h4 {
+    margin: 2rem 0 .3rem 0;
+    font-family: $font-family-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+  }
+  a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    // text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+  }
+}
+
+@mixin search-toggle-open {
+  a {
+    @include opacity(0.5);
+  }
+}
+@mixin back-top {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em !important;
+}
+@mixin small {
+  $color: #666;
+}
+
+
+// cheetahmail form
+@mixin form-email {
+  .form-email-heading {
+    margin-bottom: .5rem;
+    @media screen and (min-width: 768px) {
+      font-size: 5.4rem; 
+    }
+  }
+  .form-email-tagline {
+    margin-bottom: .5rem;
+    font-style: italic;
+  }
+  @media screen and (max-width: 991px) {
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+@mixin grid-trigger {
+  letter-spacing: 0.12em;
+}

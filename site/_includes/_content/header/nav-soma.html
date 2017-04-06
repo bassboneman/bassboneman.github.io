@@ -1,0 +1,421 @@
+<nav id="menu">
+  <div class="menu-header-mobile">
+    <div class="text-right">
+      <a class="menu-close" href="#" data-toggle="offcanvas">
+        <svg class="icon-close">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </a>
+    </div>
+    {% comment %}if logged in{% endcomment %}
+    <h3>Hi, Jenny!</h3>
+    <p>
+      You have 240 Rewards Points
+    </p>
+    <div class="customer-links">
+      <a href="#">My Account</a>
+      <a href="#">Sign Out</a>
+    </div>
+    {% comment %}
+    else
+      <a href="#" class="text-uppercase link-no-underline">Sign In</a>
+    endif
+    {% endcomment %}
+  </div>
+  <ul>
+    <li class="dropdown">
+      <a href="#" class="top-nav-cat"><h2><span>Bras</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Category</h3>
+              <ul class="sub-nav-split">
+                <li><a href="#">View All</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">DD &amp; Up</a></li>
+                <li><a href="#">Wireless</a></li>
+                <li><a href="#">Full Coverage</a></li>
+                <li><a href="#">Minimizer</a></li>
+                <li><a href="#">Push Up</a></li>
+                <li><a href="#">Strapless</a></li>
+                <li><a href="#">T-Shirt</a></li>
+                <li><a href="#">Unlined</a></li>
+                <li><a href="#">Sport Bras</a></li>
+                <li><a href="#">Bralettes</a></li>
+                <li><a href="#">Bridal/Special Occasion</a></li>
+                <li><a href="#">Demi</a></li>
+                <li><a href="#">Nursing</a></li>
+                <li><a href="#">Bra Accessories</a></li>
+                <li><a href="#">Post Surgical</a></li>
+                <li><a href="#">Racerback</a></li>
+                <li><a href="#">Convertible </a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Vanishing Back</a></li>
+                <li><a href="#">Stunning Support</a></li>
+                <li><a href="#">Enticing Lift Unlined</a></li>
+                <li><a href="#">Embraceable</a></li>
+                <li><a href="#">Enhancing Shape</a></li>
+                <li><a href="#">Sensuous Sides</a></li>
+                <li><a href="#">Sensuous Lace</a></li>
+                <li><a href="#">Memorable</a></li>
+                <li><a href="#">Limited Edition</a></li>
+                <li><a href="#">Shop by Brand</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Buy More &amp; Save</h3>
+              <ul>
+                <li><a href="#">2 For $69 Memorable</a></li>
+                <li><a href="#">2 For $59 Embraceable</a></li>
+                <li><a href="#">2 For $45 Bralettes</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="top-nav-cat"><h2><span>Panties</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3">
+              <h3>Category</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Briefs</a></li>
+                <li><a href="#">Thongs</a></li>
+                <li><a href="#">Hipsters</a></li>
+                <li><a href="#">Bikinis</a></li>
+                <li><a href="#">Boyshorts</a></li>
+                <li><a href="#">Cheekies</a></li>
+                <li><a href="#">Shapewear</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Vanishing Edge</a></li>
+                <li><a href="#">Vanishing Tummy</a></li>
+                <li><a href="#">Embraceable</a></li>
+                <li><a href="#">Cotton &amp; More</a></li>
+                <li><a href="#">Sensuous Lace</a></li>
+                <li><a href="#">Enticing Panties</a></li>
+                <li><a href="#">Travelers</a></li>
+                <li><a href="#">Breathtaking</a></li>
+                <li><a href="#">Limited Edition</a></li>
+                <li><a href="#">Shop by Brand</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Buy More &amp; Save</h3>
+              <ul>
+                <li><a href="#">7 For $37 Panty Raid</a></li>
+                <li><a href="#">5 For $39 Panties</a></li>
+                <li><a href="#">Buy 3 Get 2 Free Panties</a></li>
+                <li><a href="#">3 For $45 Panties</a></li>
+                <li><a href="#">4 For $39 Panties</a></li>
+                <li><a href="#">2 For $39 Smoothing Short</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs editorial-promo">
+              <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=Editorial+or+Promo&w=400&h=350" alt="Editorial or Promo">
+              <h4>Promo</h4>
+              <a href="javascript:void(0);">Lorem Ipsum</a>
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="top-nav-cat"><h2><span>Sleep</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3">
+              <h3>Category</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Pajamas</a></li>
+                <li><a href="#">Lingerie</a></li>
+                <li><a href="#">Robes &amp; Slippers</a></li>
+                <li><a href="#">Sleepshirts</a></li>
+                <li><a href="#">Nursing</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Cool Nights Sleep</a></li>
+                <li><a href="#">Embraceable Sleep</a></li>
+                <li><a href="#">Cotton</a></li>
+                <li><a href="#">Limited Edition</a></li>
+                <li><a href="#">Additional Inseams</a></li>
+                <li><a href="#">Shop by Brand</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Great Offers</h3>
+              <ul>
+                <li><a href="#">$59 Pajama Sets</a></li>
+                <li><a href="#">2 For $60 Sleepshirts</a></li>
+                <li><a href="#">2 For $70 Long Sleepshirts</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs editorial-promo">
+              <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=Editorial+or+Promo&w=400&h=350" alt="Editorial or Promo">
+              <h4>Promo</h4>
+              <a href="javascript:void(0);">Lorem Ipsum</a>
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="top-nav-cat"><h2><span>Apparel</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3">
+              <h3>Category</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Dresses</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Bottoms</a></li>
+                <li><a href="#">Jackets &amp; Wraps</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Lounge</a></li>
+                <li><a href="#">Slimming Solutions</a></li>
+                <li><a href="#">Athleisure</a></li>
+                <li><a href="#">Legging Shop</a></li>
+                <li><a href="#">Shop by Brand</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Great Offers</h3>
+              <ul>
+                <li><a href="#">Bogo 50% Off Loungewear</a></li>
+                <li><a href="#">Dresses Under $50</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs editorial-promo">
+              <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=Editorial+or+Promo&w=400&h=350" alt="Editorial or Promo">
+              <h4>Promo</h4>
+              <a href="javascript:void(0);">Lorem Ipsum</a>
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="top-nav-cat"><h2><span>Sport</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3">
+              <h3>Category</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Sport Bras</a></li>
+                <li><a href="#">Bottoms &amp; Leggings</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Jackets + Wraps</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Activewear</a></li>
+                <li><a href="#">Yoga</a></li>
+                <li><a href="#">Athleisure</a></li>
+                <li><a href="#">Shop by Brand</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs editorial-promo">
+              <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=Editorial+or+Promo&w=400&h=350" alt="Editorial or Promo">
+              <h4>Promo</h4>
+              <a href="javascript:void(0);">Lorem Ipsum</a>
+            </div>
+            <div class="col-md-3 hidden-xs editorial-promo">
+              <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=Editorial+or+Promo&w=400&h=350" alt="Editorial or Promo">
+              <h4>Promo</h4>
+              <a href="javascript:void(0);">Lorem Ipsum</a>
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="top-nav-cat"><h2><span>Swim</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3">
+              <h3>Category</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">One Piece Suits</a></li>
+                <li><a href="#">Bottoms</a></li>
+                <li><a href="#">Cover Ups</a></li>
+                <li><a href="#">Swim Accessories</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Shop by Trend</a></li>
+                <li><a href="#">Shop by Solution</a></li>
+                <li><a href="#">Shop by Brand</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Great Offers</h3>
+              <ul>
+                <li><a href="#">$19.99 And Up Swim Sale</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs editorial-promo">
+              <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=Editorial+or+Promo&w=400&h=350" alt="Editorial or Promo">
+              <h4>Promo</h4>
+              <a href="javascript:void(0);">Lorem Ipsum</a>
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="top-nav-cat"><h2><span>Beauty</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3">
+              <h3>Category</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Fragrance</a></li>
+                <li><a href="#">Body Care</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Oh My Gorgeous</a></li>
+                <li><a href="#">Enticing</a></li>
+                <li><a href="#">Memorable</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs editorial-promo">
+              <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=Editorial+or+Promo&w=400&h=350" alt="Editorial or Promo">
+              <h4>Promo</h4>
+              <a href="javascript:void(0);">Lorem Ipsum</a>
+            </div>
+            <div class="col-md-3 hidden-xs editorial-promo">
+              <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=Editorial+or+Promo&w=400&h=350" alt="Editorial or Promo">
+              <h4>Promo</h4>
+              <a href="javascript:void(0);">Lorem Ipsum</a>
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="top-nav-cat menu-sale"><h2><span>Sale</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3">
+              <h3>Sale</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">New Sale Arrivals</a></li>
+                <li><a href="#">Bras</a></li>
+                <li><a href="#">Panties</a></li>
+                <li><a href="#">Sleep</a></li>
+                <li><a href="#">Apparel</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">Swim</a></li>
+                <li><a href="#">Beauty</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Clearance</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">New Clearance Arrivals</a></li>
+                <li><a href="#">Bras</a></li>
+                <li><a href="#">Panties</a></li>
+                <li><a href="#">Sleep</a></li>
+                <li><a href="#">Apparel</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">Swim</a></li>
+                <li><a href="#">Beauty</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs editorial-promo">
+              <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=Editorial+or+Promo&w=400&h=350" alt="Editorial or Promo">
+              <h4>Promo</h4>
+              <a href="javascript:void(0);">Lorem Ipsum</a>
+            </div>
+            <div class="col-md-3 hidden-xs editorial-promo">
+              <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=20&txt=Editorial+or+Promo&w=400&h=350" alt="Editorial or Promo">
+              <h4>Promo</h4>
+              <a href="javascript:void(0);">Lorem Ipsum</a>
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="top-nav-cat"><h2><span>Look Book</span></h2></a>
+    </li>
+    <li class="search-toggle-wrap">
+      <a href="#" class="search-toggle" data-toggle="search" aria-controls="search-wrap" aria-expanded="false">
+        <h2>
+          <svg class="icon-search">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+          Search
+        </h2>
+      </a>
+    </li>
+    <li class="dropdown visible-sm visible-xs">
+      <a href="#"><h2><span>Customer Support</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <ul>
+            <li><a href="tel:8888554986">Call Us 888-855-4986</a></li>
+            <li><a href="mailto:something@chicos.com">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="ship-to visible-sm visible-xs">
+    Ship to: <a href="#"><img src="{{ site.baseurl }}/web_assets/imgs/flags/usa.png" alt="USA"></a>
+  </div>  
+</nav>

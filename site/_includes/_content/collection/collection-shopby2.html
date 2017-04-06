@@ -1,0 +1,59 @@
+{% if page.brand == 'soma' %}
+{% else %}
+
+{% endif %}
+{% if page.brand == 'whbm' %}
+<div class="module-sh-text sh-text-nocopy">
+        <div class="module-inner">
+            <h2 class="module-heading">Sale</h2>
+        </div>
+    </div>
+{% else %}
+{% comment %}
+<div class="hero-img">
+  <a href="">
+    <img class="img-responsive" src="http://placehold.it/1800x600/ccc/999&text=Collection Lead" alt="Collection">
+  </a>
+</div>
+{% endcomment %}
+{% endif %}
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-xs-12">
+        {% include _molecules/navigation/breadcrumb.html breadLvl2='Sale' breadLvl3='Tops' %}
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        {% include _molecules/navigation/product-count.html %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include _molecules/navigation/filters-shopby-2.html %}
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="collection">
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-curated.html promoType="carouselPromo" %}
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-curated.html promoType="singlePromo" %}
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-curated.html promoType="singlePromo" promoLayout="promo-right" %}
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-curated.html promoType="contentModuleTwoBy" %}
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-curated.html promoType="carouselPromoLarge" %}
+      {% include _molecules/products/listing-all.html %}
+      {% include _molecules/products/listing-all.html promoType="promoSmall" %}
+    </div><!-- .collection -->
+  </div><!-- .container-fluid -->
+</div><!-- .content -->
+
+
+
+{% include _molecules/modals/modal-quick-view.html %}
+{% include _molecules/modals/modal-gallery.html %}
+{% include _molecules/navigation/top-link.html %}

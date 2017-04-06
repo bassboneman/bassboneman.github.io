@@ -1,0 +1,32 @@
+{% comment %}productImg="http://www.chicos.com/Product_Images/570149438_3007.jpg"{% endcomment %}
+<div class="row">
+  <div class="col-sm-6">
+    {% if include.promoType == "shelfless2x" %}
+      {% include _molecules/modules/promo-shelfless.html moduleLayout='shelfless-promo-2x' moduleImage='https://placeholdit.imgix.net/~text?txtsize=24&txt=Actual+1140x950&w=1140&h=950' moduleHeading='Tops' moduleCopy='Ease into effortless. <span>Made for layering shapes.</span>' moduleCTA='Shop Lorem Ipsum' moduleLink='#' %}
+    {% elsif include.promoType == "shelfless4x" %}
+      {% include _molecules/modules/promo-shelfless.html moduleLayout='shelfless-promo-4x' moduleImage='https://placeholdit.imgix.net/~text?txtsize=24&txt=Actual+1140x950&w=1140&h=1400' moduleHeading='Tops' moduleCopy='Ease into effortless. <span>Made for layering shapes.</span>' moduleCTA='Shop Lorem Ipsum' moduleLink='#' %}
+    {% elsif include.promoType == "shelfless2x-hotspot" %}
+      {% include _molecules/modules/shelf-hotspot.html hotspots='yes' moduleLayout='module-shelfless-hotspot module-img' hotspotTitle='Category' hotspotCopy='Optional Copy' moduleImage='https://placeholdit.imgix.net/~text?txtsize=12&txt=&w=767&h=500' %}
+    {% endif %}    
+  </div>
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-xs-6">
+        {% include _molecules/products/listing-single.html carouselThumb="yes" quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+      </div>
+      <div class="col-xs-6">
+        {% include _molecules/products/listing-single.html quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+      </div>
+    </div>
+    {% if include.promoType == 'shelfless4x' %}
+      <div class="row">
+        <div class="col-xs-6">
+          {% include _molecules/products/listing-single.html carouselThumb="yes" quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+        </div>
+        <div class="col-xs-6">
+          {% include _molecules/products/listing-single.html quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+        </div>
+      </div>
+    {% endif %}
+  </div>  
+</div>

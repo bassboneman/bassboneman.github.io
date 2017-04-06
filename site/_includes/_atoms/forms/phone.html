@@ -1,0 +1,11 @@
+<div class="form-group">
+  {% if page.title == "Profile &amp; Preferences" %}     
+  {% else %}
+    <label for="phone1">{{include.labelName}}</label>
+  {% endif %}
+  <div class="form-inline form-phone">
+    <input type="text" class="form-control number" id="{{include.labelID1}}" maxlength="3" {% if include.placeholder %}placeholder="{{ include.placeholder }}"{% endif %}></input> - 
+    <input type="text" class="form-control number" id="{{include.labelID2}}" maxlength="3"></input> -
+    <input type="text" class="form-control number" id="{{include.labelID3}}" maxlength="4"></input>
+  </div>
+</div><!-- .form-group -->

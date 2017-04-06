@@ -1,0 +1,51 @@
+// This is the container used in the footer. In retrospect, it should have been named .social-footer.
+.social {
+  margin-bottom: 3rem;
+  a {
+    text-decoration: none;
+    &:last-child {
+      margin-right: 0;
+    }
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: $color-black;
+      @include transition(fill);
+    }
+    &.social-google-plus:hover svg {fill: $color-google-plus;}
+    &.social-instagram:hover svg {fill: $color-instagram;}
+    &.social-pinterest:hover svg {fill: $color-pinterest;}
+    &.social-facebook:hover svg {fill: $color-fb;}
+    &.social-youtube:hover svg {fill: $color-youtube;}
+    &.social-twitter:hover svg {fill: $color-twitter;}
+    &.social-snapchat:hover svg {fill: $color-snapchat;}
+    &.social-email:hover svg {
+      fill: $color-email; // fill. see http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/ for details
+      color: $color-black; // border
+    }
+  }
+  @include social;
+}
+.social-pdp { // used on pdp -- replaced gigya images
+  margin-bottom: 0;
+  font-size: 0;
+  @include social-pdp;
+  a {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 1rem;
+    text-decoration: none;
+    @include transition(all);
+    svg {
+      width: 28px;
+      height: 28px;
+      @include transition(all);
+    }
+  }
+}
+
+// used in one-off templates (like Soma Rewards)
+.social-block {
+  @extend .social;
+}

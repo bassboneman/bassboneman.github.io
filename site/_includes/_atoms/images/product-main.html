@@ -1,0 +1,60 @@
+<div class="product-img-wrap {% if page.title == "Locate in Store (PDP)" %}product-img-wrap-locate{% endif %}">
+  {% if page.title == "Product Page (Gift Card)" or page.title == "Product Page (e-Gift Card)" %}
+    <img id="product-img" class="img-responsive" src="http://placehold.it/1000x1250&text=Product" alt="Product Name">
+  {% else %}
+
+    {% if page.title == "Locate in Store (PDP)" %}
+    {% else %}
+
+      <div class="hidden-xs pdp-video-wrap">
+        <div class="responsive-embed responsive-embed-3by4">
+          <video class="pdp-video">
+            <source src="http://akamai.ksckreate.net/videos/13000/m4v/A_Chicos_2000_900x1200-1600.m4v" type="video/x-m4v">
+            <source src="http://akamai.ksckreate.net/videos/13000/mp4/A_Chicos_2000_900x1200-1600.mp4" type="video/mp4">
+            <source src="http://akamai.ksckreate.net/videos/13000/webm/A_Chicos_2000_900x1200-1600.webm" type="video/webm">
+            <source src="http://akamai.ksckreate.net/videos/13000/ogv/A_Chicos_2000_900x1200-1600.ogv" type="video/ogg">
+          </video>
+        </div>
+      </div>
+      {% comment %}
+      {% if page.title == "Locate in Store (PDP)" %}{% else %}hidden-sm hidden-xs{% endif %}
+      {% elsif page.title == "Locate in Store (PDP)" %}
+      {% endcomment %}
+      <a href="#" class="hidden-xs pdp-img-wrap" data-toggle="modal" data-target="#modal-gallery">
+        <img id="product-img" class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=60&txt=PDP+Image&w=1000&h=1250&bg=ffffff" alt="Product Name"
+          srcset="
+          https://placeholdit.imgix.net/~text?txtsize=60&txt=PDP+Image&w=480&h=600&bg=ffffff 480w,
+          https://placeholdit.imgix.net/~text?txtsize=60&txt=PDP+Image&w=767&h=959&bg=ffffff 767w,
+          https://placeholdit.imgix.net/~text?txtsize=60&txt=PDP+Image&w=1000&h=1250&bg=ffffff 1000w
+        "
+        sizes="
+          (min-width: 768px) 60vw,
+          100vw
+        "
+        >
+        <span class="btn btn-sm hidden-sm hidden-xs">
+          <svg class="icon-zoom icon-square-sm icon-left"><use xlink:href="#icon-zoom"></use></svg>
+          View Full Screen
+        </span>
+      </a>
+    {% endif %}
+    {% if include.container == 'modal' %}
+      <img id="product-img" class="img-responsive" src="http://www.chicos.com/Product_Images/570152127_3789_large.jpg?resize=767px:946px" alt="Product Name"
+        srcset="
+          http://www.chicos.com/Product_Images/570152127_3789_large.jpg?resize=480px:592px 480w,
+          http://www.chicos.com/Product_Images/570152127_3789_large.jpg?resize=767px:946px 767w
+        "
+        sizes="
+          (min-width: 768px) 60vw,
+          100vw
+        "
+      >
+    {% else %}    
+      {% include _molecules/carousels/pdp.html %}
+    {% endif %}
+  {% endif %}
+</div>
+
+{% comment %}
+http://www.chicos.com/Product_Images/570152127_3789_large.jpg?resize=480:600px&output-quality=60&output-format=jpeg
+{% endcomment %}

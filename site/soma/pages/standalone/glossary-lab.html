@@ -1,0 +1,66 @@
+---
+layout: page-collection
+title: Glossary
+top-link: pages
+brand: soma
+---
+
+{% comment %}
+New SVG!
+{% include_relative includes/_new-svg-defs.html %}
+{% endcomment %}
+
+<div class="content">
+  <div class="container-fluid">
+    {% include _molecules/navigation/breadcrumb.html breadLvl2='Bra Fit Guide' breadLvl3='Bra Glossary' %}
+    <h2 class="soma-heading">Glossary</h2>
+    <div class="glossary">
+      <div class="row">
+        {% comment %}Make a variable that equals the first value in the terms list and then check the 'group' YAML value against it.{% endcomment %}
+        {% assign headerValue = '0' %}
+          {% comment %}Pull from YAML file. Decided to prioritize HTML indentation over Liquid indentation, hence the weirdness below.{% endcomment %}
+          {% for term in site.data.soma-glossary %}
+            {% comment %}If YAML group value and headerValue don't match, close out the group and start a new one.{% endcomment %}
+            {% if term.group != headerValue %}
+              {% comment %}If this is the first time through, the closing tags are unnecessary{% endcomment %}
+              {% if headerValue != '0' %}
+            </div><!-- .glossary-terms -->
+          </div><!-- .glossary-panel-alpha -->
+              {% endif %}
+              {% comment %}Special cases that force column breaks on desktop{% endcomment %}
+              {% if term.group == '1&ndash;9' or term.group == 'E&ndash;K' or term.group == 'S&ndash;T' %}
+                {% assign column = term.group %}
+                {% if term.group != '1&ndash;9' %}
+        </div>
+                {% endif %}
+        <div class="col-sm-4" id="col-{{ column }}">
+              {% endif %}
+              {% comment %}Now that we've created a new group and maybe column, update the variable.{% endcomment %}
+              {% assign headerValue = term.group %}
+          <div class="glossary-panel-alpha panel">
+            <h2 role="button" data-parent="#col-{{ column }}" data-toggle="collapse" data-target="#glossary-mobile-collapse-{{ headerValue }}" aria-expanded="false" aria-controls="glossary-mobile-collapse-{{ headerValue }}" class="glossary-heading-alpha">
+              {{ headerValue }}
+            </h2>
+            <div class="glossary-terms" id="glossary-mobile-collapse-{{ headerValue }}">
+              {% endif %}
+              <div class="glossary-panel-defs panel">
+                <a role="button" data-toggle="collapse" href="#glossary-dd-{{ forloop.index }}" aria-expanded="false" aria-controls="glossary-dd-{{ forloop.index }}" class="glossary-term" data-parent="#glossary-mobile-collapse-{{ headerValue }}">
+                  {{ term.term }}
+                </a>
+                <div class="glossary-def collapse" id="glossary-dd-{{ forloop.index }}">
+                  <p>{{ term.definition }}</p>
+                  <a href="{{ term.link }}" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div><!-- .glossary-panel-defs -->
+          {% endfor %}
+            </div><!-- .glossary-terms -->
+          </div><!-- .glossary-panel-alpha.panel -->
+        </div><!-- .col-sm-4 -->
+      </div><!-- .row -->
+    </div><!-- .glossary -->
+
+
+  </div><!-- .container-fluid -->
+</div><!-- .content -->
+
+{% include _molecules/navigation/top-link.html %}

@@ -1,0 +1,65 @@
+{% comment %}productImg="http://www.chicos.com/Product_Images/570131265_3661.jpg"{% endcomment %}
+<article class="product">
+  <div class="product-thumb-wrap">
+    {% if include.carouselThumb == "yes" %}
+      {% include _atoms/images/product-carousel-final-sale.html carouselID='1' %}
+    {% else %}
+      <a href="/chicos/pages/pdp/default-final-sale.html">
+        {% include _atoms/images/product-thumbs.html %}
+      </a>
+    {% endif %}
+    {% if include.quickView == "yes" %}
+      <a class="quick-view" href="#" data-toggle="modal" data-target="#modal-quick-view">
+        <span class="quick-view-touch">
+          <svg class="icon-plus">
+            <use xlink:href="#icon-plus"></use>
+          </svg>
+        </span>
+        <span class="quick-view-large">Quick Shop</span>
+      </a>
+    {% endif %}
+  </div>
+  <h2 class="product-name"><a href="/chicos/pages/pdp/default-final-sale.html">Product Name</a></h2>
+  {% if include.productPrice == "yes" %}
+    <div class="product-price">
+      {% if page.sale-type %}
+        {% include _atoms/text/product-price-final-sale.html %}
+      {% elsif page.sale-tyle == 'regular' %}
+        $39.00
+      {% else %}
+        $39.00
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if include.productRating == "yes" %}
+    {% include _molecules/products/rating-collection.html %}  
+    <!-- Third party ratings widget goes here -->
+  {% endif %}
+  {% if include.productMsg == "yes" %}
+    <span class="product-msg">
+      {% if page.brand == 'soma' %}
+        Online Only
+      {% else %}
+        Available in regular and petite
+      {% endif %}
+    </span>
+  {% endif %}
+  {% if include.productMsgSpecial == "yes" %}
+    {% if page.brand == 'soma' %}
+      <span class="product-msg product-msg-special">
+        Lace Brief $14.50 <span>or any 3 $33</span>
+      </span>
+    {% else %}
+      <span class="product-msg product-msg-special">
+        Buy 2 or more for $20 each
+      </span>
+    {% endif %}
+  {% endif %}
+  {% comment %}<span class="product-price-sale">$89.00</span>{% endcomment %}
+  {% if include.productSwatches == "yes" %}
+    {% if page.brand == 'soma' %}
+    {% else %}
+      {% include _molecules/components/product-swatches.html %}
+    {% endif %} 
+  {% endif %} 
+</article>

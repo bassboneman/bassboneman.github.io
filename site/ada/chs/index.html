@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessibility Review 2016</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="ada.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid">
+        <div class="col-sm-12 col-md-3">
+            <div class="row">
+
+                <nav>
+
+                    <ul>
+
+                        <li><a href="add-payment-info.html">Add Payment Option</a></li>
+                        <li><a href="add-shipping-info.html">Add Shipping Info</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="checkout_login.html">Checkout login / Login</a></li>
+                        <li><a href="checkout2.html">Checkout 2</a></li>
+                        <li><a href="checkout2-payment.html">Checkout 2 #payment</a></li>
+                        <li><a href="edit-profile.html">Edit Profile</a></li>
+                        <li><a href="edit-shipping-info.html">Edit Shipping Options</a></li>
+                        <li><a href="gifting-options-modal.html">Gifting Options</a></li>
+                        <li><a href="home-page.html">Home Page : home.jsp</a></li>
+                        <li><a href="password-reminder.html">Password Reminder</a></li>
+                        <li><a href="pdp.html">PDP</a></li>
+                        <li><a href="shelf-page.html">Shelf Page</a></li>
+                        <li><a href="wish-list-items-jsp.html">Wish List Items</a></li>
+                        <li><a href="wish-list-manage-jsp.html">Wish List Manage</a></li>
+
+                    </ul>
+
+
+                </nav>
+
+                <!--<section>
+
+                    <div class="sectionContent">
+
+                        <p>The following page(s) have errors that will be corrected elsewhere.</p>
+                        <ul>
+
+                            <li>login_success.jsp</li>
+                            <li>passport.jsp</li>
+                            <li>saved_payment.jsp</li>
+                            <li>wish_list_grant.jsp</li>
+                            <li>orderstatuscheck.jsp</li>
+
+                        </ul>
+
+                    </div>
+
+                </section>-->
+
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-9">
+
+            <div class="row adaPage"></div>
+
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+
+            var adaPageName = 'home-page.html';
+
+            $('nav li a').click(function (e) {
+
+                adaPageName = $(this).attr('href');
+
+                e.preventDefault();
+
+                loadPage();
+
+            });
+
+
+            function loadPage() {
+
+                $('.adaPage').load(adaPageName);
+
+            };
+
+
+            $( window ).resize(function() {
+
+                var navh = $('nav').outerHeight();
+                var navw = $('nav').outerWidth();
+
+                if(navw >= navh){
+
+                   $('.adaPage').css({'margin-top':navh})
+
+                }else{
+
+                    $('.adaPage').css({'margin-top':0})
+
+                }
+
+            });
+
+
+            loadPage();
+
+        });
+    </script>
+
+
+</body>
+
+</html>

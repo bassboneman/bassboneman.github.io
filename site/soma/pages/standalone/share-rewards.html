@@ -1,0 +1,65 @@
+---
+layout: page-collection
+title: Share Rewards
+top-link: pages
+brand: soma
+---
+
+{% comment %}
+.module-img-collection is a variation on .module-img that should be used in a collection grid
+{% endcomment %}
+
+<div class="content">
+  <div class="container-fluid">
+    {% include _molecules/modules/shelf.html moduleClass='module-sh-soma-rewards module-sh-soma-share-rewards' moduleLayout='' moduleImage='/web_assets/imgs/soma/rewards-shelf-header.jpg' moduleImageMobile='/web_assets/imgs/soma/rewards-shelf-header-mobile.jpg' moduleCopy='<h2><svg class="love-soma-rewards"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#love-soma-rewards"></use></svg>Give <sup>$</sup>15, Get <sup>$</sup>15</h2>' %}
+
+    <hr class="hr-mobile">
+
+    <section class="share-rewards">
+      <h2 class="soma-heading">Share the Love</h2>
+      <p class="soma-subheading">
+        The more friends you refer who purchase, the more you earn
+      </p>
+
+      <div class="number-box-wrap">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="number-box">
+              <div class="number">1</div>
+              <p><span class="block-line">Give your friends $15 off</span> their first Soma purchase</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="number-box">
+              <div class="number">2</div>
+              <p><span class="block-line">Your friend joins</span> and makes a purchase</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="number-box">
+              <div class="number">3</div>
+              <p><span class="block-line">You get a $15 Reward</span> (that’s 375 Bonus Points)</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- .number-box-wrap -->
+
+
+      <div class="text-center">
+        <div class="btn-with-label">
+          <span>Sign in to</span>
+          <a href="#" class="btn btn-primary">Refer Friends</a>
+        </div>
+        <div class="btn-with-label">
+          <span>Not a Love Soma Rewards member</span>
+          <a href="#" class="btn btn-primary">See the Benefits</a>
+        </div>
+        <p>Remember, you get a $5 Reward for every 125 Points</p>
+        <a href="javascript:void(0);" class="info-link">Details</a>
+      </div>
+    </section><!-- .share-rewards -->
+
+  </div>
+</div>
+
+{% include _molecules/navigation/top-link.html %}

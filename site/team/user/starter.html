@@ -1,0 +1,39 @@
+---
+layout: page-collection
+title: Sandbox
+top-link: pages
+brand: chicos
+user: user
+---
+
+{% comment %}
+Be sure to change the "brand" and "user" variables above
+* available brand values are: "chicos", "whbm", and "soma"
+* "user" should match your folder name
+{% endcomment %}
+
+{% comment %}
+"Jumbo" content modules have a max width of 1680px. Use the following container when a jumbo element is required.
+{% endcomment %}
+<div class="content content-wide">
+  <div class="container-fluid">
+    <section class="module">
+
+    </section><!-- .module -->
+    <hr class="hr-mobile">
+  </div><!-- .container-fluid -->
+</div><!-- .content.content-wide -->
+
+
+{% comment %}
+All other content modules should use the following container. You don't have to include .content and .container-fluid for each module. 
+Those parent elements can wrap all modules.
+{% endcomment %}
+<div class="content">
+  <div class="container-fluid">
+    
+  </div><!-- .container-fluid -->
+</div><!-- .content -->
+
+{% comment %}The following is the quick view modal used by various content module molecules.{% endcomment %}
+{% include _molecules/modals/modal-quick-view.html %}

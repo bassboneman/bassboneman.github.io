@@ -1,0 +1,22 @@
+<form>
+  <div class="row">
+    <div class="col-md-6">
+      {% include _atoms/forms/input.html labelName='Label 1' labelID='label-1' inputType='text' %}
+    </div>
+    <div class="col-md-6">
+      {% include _atoms/forms/input.html labelName='Label 2' labelID='label-2' inputType='text' %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      {% include _atoms/forms/input.html labelName='Label 3' labelID='label-3' inputType='text' %}
+    </div>
+    <div class="col-md-6">
+      {% include _atoms/forms/input.html labelName='Label 4' labelID='label-4' inputType='text' %}
+    </div>
+  </div>
+  {% include _atoms/forms/phone.html labelName='Phone' labelID1='phone1' labelID2='phone2' labelID3='phone3' %}
+  <div class="form-group">
+    {% include _atoms/buttons/button.html btnClass='btn-default' btnLabel='Submit' %}
+  </div>
+</form>

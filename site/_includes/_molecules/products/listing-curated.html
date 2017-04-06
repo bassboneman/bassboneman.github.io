@@ -1,0 +1,40 @@
+{% comment %}productImg="http://www.chicos.com/Product_Images/570149438_3007.jpg"{% endcomment %}
+<div class="row {% if include.promoLayout %}{{ include.promoLayout }}{% endif %}">
+  <div class="col-sm-6{% if include.promoAlign == "right" %} col-sm-push-6{% endif %}">
+    {% if include.promoType == 'shelfless2xhotspot' %}
+      {% include _molecules/modules/promo-shelfless.html moduleLayout='shelfless-hotspot' %}    
+    {% elsif include.promoType == "shelfless2x" %}
+      {% include _molecules/modules/promo-shelfless.html moduleLayout='shelfless-promo-2x' moduleImage=include.promoImage moduleHeading=include.promoHeading moduleCopy=include.promoCopy moduleCTA=include.promoLink moduleLink=include.promoLinkUrl %}
+    {% elsif include.promoType == 'carouselPromoLarge' %}
+      {% include _molecules/carousels/carousel-img-overlay.html moduleClass='' moduleLayout='' moduleImage='https://placeholdit.imgix.net/~text?txtsize=23&txt=Actual+size:800x800&w=800&h=800' moduleCollection='Travelers Collection' moduleHeading='lacey stitch cardigan' moduleLink='Shop Now' %}
+    {% else %}
+      {% comment %}
+      DANGER, DANGER! _molecules/products/curated.html passes things to 
+      collecton-promo.html through listing-curated.html, and it works now 
+      because there are no params defined here. Define one and you'll need 
+      to define everything that goes through it. 
+      {% endcomment %}
+      {% include _molecules/carousels/collection-promo.html %}
+    {% endif %}
+  </div>
+  <div class="col-sm-6{% if include.promoAlign == "right" %} col-sm-pull-6{% endif %}">
+    <div class="row">
+      <div class="col-xs-6">
+        {% include _molecules/products/listing-single.html carouselThumb="yes" quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+      </div>
+      <div class="col-xs-6">
+        {% include _molecules/products/listing-single.html quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+      </div>
+    </div>
+    {% if include.promoType == "contentModuleTwoBy" %}
+      <div class="row">
+        <div class="col-xs-6">
+          {% include _molecules/products/listing-single.html carouselThumb="yes" quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+        </div>
+        <div class="col-xs-6">
+          {% include _molecules/products/listing-single.html quickView="yes" productPrice='yes' productRating="yes" productMsg="yes" productSwatches="yes" %}
+        </div>
+      </div>
+    {% endif %}
+  </div>  
+</div>

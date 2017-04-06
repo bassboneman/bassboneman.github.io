@@ -1,0 +1,1450 @@
+---
+title: Checkout Usability Flow 3 (Checkout - Multi-ship)
+top-link: pages
+brand: soma
+layout: checkout
+type: registered
+setting: flow
+flow: 3
+---
+{% comment %}
+markup on this page is based on this content block
+{% include _content/checkout/checkout.html %}
+{% endcomment %}
+
+
+<form action="#" class="form-labels">
+
+
+
+
+<section id="checkout-review-order" class="checkout-block review-order-multi">
+  <header>
+    <h2>
+      Review Order</h2>
+  </header>
+  <div class="checkout-block-body">
+    
+{% comment %}
+      <div class="col-sm-6">
+        <div class="p">
+          
+  <a href="#" class="btn btn-alt btn-lg btn-block btn-has-arrow" data-toggle="modal" data-target="#modal-address-multi">Change Shipping Options</a>
+
+        </div><!-- .p -->
+      </div><!-- .col-sm-6 -->
+
+{% endcomment %}
+
+      <div class="checkout-multi-block">
+        <header>
+          <h3>Shipment 1 of 2</h3>
+        </header>
+        <div class="row">
+          <div class="col-xs-7">
+            <strong>Samantha Hamilton-Jones</strong> <br>
+            123 Main Street, Elsewhere, FL 11111<br>
+            505-258-4975
+          </div>
+          <div class="col-xs-5 edit-remove">
+            <a href="#">Change</a>
+          </div><!-- .col-xs-5 -->
+        </div><!-- .row -->
+
+        <hr>
+
+        <div class="row">
+          <div class="col-xs-9">
+            <div class="row">
+              <div class="col-sm-6">
+                <strong>Standard - <span class="text-uppercase">Free</span></strong><br>
+                6-9 business days                
+              </div><!-- .col-sm-6 -->
+              <div class="col-sm-6">
+                Estimated Arrival: Jan 17-20              
+              </div><!-- .col-sm-6 -->
+            </div><!-- .row -->
+          </div><!-- .col-xs-9 -->
+          <div class="col-xs-3 edit-remove">
+            <a href="#">Change</a>
+          </div><!-- .col-xs-3 -->
+        </div><!-- .row -->
+
+        <hr>
+
+        
+
+
+
+
+
+
+
+  <div class="row">
+    <div class="col-xs-7">
+      <p><strong>Items in Shipment (1)</strong></p>
+    </div>
+    <div class="col-xs-5 text-right">
+      <a href="#" class="checkout-link link-toggled" data-action="toggle" data-target="orders-3-2" data-label="Open">Close</a>
+    </div><!-- .col-xs-5 -->
+  </div><!-- .row -->
+
+  <div id="orders-3-2">
+
+
+  <div class="product-details">
+  <div class="row row-tight">
+    <div class="col-sm-2 col-xs-3">
+      <img class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/checkout/temp/red.jpg" alt="Product Image">  
+    </div><!-- .col-xs-3 -->
+    <div class="col-sm-10 col-xs-9">
+      
+        <h4>Product Name</h4>
+      
+      <div class="row">
+
+        
+          <div class="col-sm-9">  
+        
+
+        
+          <dl class="dl-horizontal meta-list">
+            <dt>Size:</dt>
+            <dd>Size 000 (0, XXS)</dd>
+            <dt>Color:</dt>
+            <dd>
+              
+Red              
+            </dd>
+            <dt>Total Price:</dt>
+            <dd><span class="strikethrough pad-right-10">$99.00</span> $74.00</dd>
+            <dt>QTY:</dt>
+            <dd>1</dd>
+          </dl>
+        
+
+        
+          </div><!-- .col-sm-9 -->
+          
+            <div class="col-sm-3">
+              
+                <div class="edit-remove"><a href="#">Change</a> | <a href="#">Remove</a></div>          
+              
+            </div><!-- .col-sm-3 -->
+          
+        
+
+      </div><!-- .row -->
+    </div><!-- .col-xs-9 -->
+  </div><!-- .row -->
+</div><!-- .product-details -->  
+  
+
+
+  </div><!-- #order-3-2 -->
+        
+        
+          <div class="checkout-gifting">
+  <div class="row">
+    <div class="col-xs-8 col-sm-6">
+      <h3 class="margin-bot-none">
+        <svg class="icon-square-lg icon-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-gift-soma"></use></svg>
+        
+          Gifting
+        
+      </h3>
+    </div><!-- .col-xs-6 -->
+    <div class="col-xs-4 col-sm-6 text-right">
+      <a href="#" class="checkout-link" data-action="toggle" data-target="gifting-3-1" data-label="Close">View<span class="hidden-xs hidden-sm"> Gifting Options</span></a>
+    </div><!-- .col-xs-6 -->
+  </div><!-- .row -->
+
+  <div id="gifting-3-1" class="checkout-gifting-options">
+
+    
+      
+        <div class="radio-list radio-media-list">
+          
+
+
+
+<div class="radio-list radio-media-list">
+  
+
+    <div class="radio checkout-toggle">
+      <label>
+        <div class="media">
+          <div class="media-left media-middle">
+            <input type="radio" name="gifting-options" id="gifting-option-1" value="gifting-option-1" styled="yes">
+            <span class="input-styled"></span>
+          </div>
+          <div class="media-body media-middle">
+            <div class="row">
+              <div class="col-xs-8">
+                Gift Wrap &amp; Gift Receipt - $6.00
+              </div><!-- .col -->
+              <div class="col-xs-4 text-right">
+                <a href="#" data-target="radio-cancel" class="radio-cancel">Cancel</a>
+              </div>
+            </div><!-- .row -->
+          </div><!-- .media-body -->
+        </div><!-- .media -->
+      </label>
+      <div id="checkout-gifting-option-1" class="checkout-toggle-content toggle-hidden toggle-gifting">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-wrap-together">
+                <p>
+                  <img src="/web_assets/imgs/checkout/gift-together.jpg" alt="Gift Wrap Together" class="img-responsive">
+                </p>
+                <h4>Gift Together </h4>
+                <p>All of your items will arrive in a single package with one personal message and a single gift receipt. Optional decorative gift box, $6.00</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .row -->
+          <!-- <div class="col-sm-2 text-center">or</div> -->
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-wrap-individual">
+                <p>
+                  <img src="/web_assets/imgs/checkout/gift-individual.jpg" alt="Gift Wrap Individually" class="img-responsive">
+                </p>
+                <h4>Gift Individually</h4>
+                <p>Each gift will arrive packaged separately with individual personal messages and gift receipts. Optional decorative gift box, $6.00 each.</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .checkout-toggle-content -->
+    </div><!-- .radio.checkout-toggle -->
+
+    <div class="radio checkout-toggle">
+      <label>
+        <div class="media">
+          <div class="media-left media-middle">
+            <input type="radio" name="gifting-options" id="gifting-option-2" value="gifting-option-2" styled="yes">
+            <span class="input-styled"></span>
+          </div>
+          <div class="media-body media-middle">
+            <div class="row">
+              <div class="col-xs-8">
+                Gift Message &amp; Gift Receipt - FREE
+              </div><!-- .col -->
+              <div class="col-xs-4 text-right">
+                <a href="#" data-target="radio-cancel" class="radio-cancel">Cancel</a>
+              </div>
+            </div><!-- .row -->
+
+          </div><!-- .media-body -->
+        </div><!-- .media -->
+      </label>
+      <div id="checkout-gifting-option-2" class="checkout-toggle-content toggle-hidden toggle-gifting">
+        
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-message-together">
+                <h4>Add a Gift Message Together </h4>
+                <p>All of your items will arrive with one personal message and a single gift receipt.</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .row -->
+          <!-- <div class="col-sm-2 text-center">or</div> -->
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-message-individual">
+                <h4>Add Gift Message Individually</h4>
+                <p> Each gift will arrive with individual personal messages and gift receipts.</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .col -->
+        </div><!-- .row -->
+
+      </div><!-- .checkout-toggle-content -->
+    </div><!-- .radio.checkout-toggle -->
+
+  
+</div><!-- .radio-list  -->
+
+<div class="radio-list radio-media-list">
+  <div class="checkbox checkout-toggle">
+    <label>
+      <div class="media">
+        <div class="media-left media-middle">
+          <!-- <input type="checkbox" value="gifting-kit" id="gifting-kit" styled='yes' inputExtra=''> -->
+          <input type="checkbox" value="gifting-kit" id="gifting-kit" styled="yes">
+          <span class="input-styled"></span>
+        </div>
+        <div class="media-body media-middle">
+          Add a Gift Kit - $3.00 Each
+        </div><!-- .media-body -->
+      </div><!-- .media -->
+    </label>
+    <div id="checkout-gifting-kit" class="checkout-toggle-content checkout-gifting-kit toggle-hidden toggle-gifting">
+      <p>Wrap it beautifully yourself in a Soma gift box, satin ribbon with bow, note card and  white tissue paper.</p>
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <p>
+            <img src="/web_assets/imgs/checkout/gift-kit.jpg" alt="Gift Kit" class="img-responsive">
+          </p>
+        </div>
+      </div><!-- .row -->
+
+
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="row">
+            <div class="col-xs-5">
+              <p>
+                <strong>Shirt Box</strong><br>
+                (12" x 15")
+              </p>
+            </div><!-- .col -->
+            <div class="col-xs-7 text-right">
+              <div class="input-group increment-wrap">
+                <input type="text" name="quant[1]" class="form-control input-increment" value="0" min="0" max="10">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" disabled="disabled" data-type="minus" data-field="quant[1]">
+                    -
+                  </button>
+                </span>
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" data-type="plus" data-field="quant[1]">
+                    +
+                  </button>
+                </span>
+              </div><!-- .input-group -->
+            </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="row">
+            <div class="col-xs-5">
+              <p>
+                <strong>Robe Box</strong><br>
+                (18" x 18")
+              </p>
+            </div><!-- .col -->
+            <div class="col-xs-7 text-right">
+              <div class="input-group increment-wrap">
+                <input type="text" name="quant[2]" class="form-control input-increment" value="0" min="0" max="10">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" disabled="disabled" data-type="minus" data-field="quant[2]">
+                    -
+                  </button>
+                </span>
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" data-type="plus" data-field="quant[2]">
+                    +
+                  </button>
+                </span>
+              </div><!-- .input-group -->
+            </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+
+      <div class="row row-tight">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="p">
+            
+  <button type="submit" class="btn btn-lg btn-block btn-primary" data-something="">Save &amp; Continue</button>
+
+          </div>
+          <div class="text-center"><a href="#" class="btn btn-link" data-dismiss="modal">Cancel</a></div>
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->    
+
+    </div><!-- .checkout-toggle-content -->
+
+  </div><!-- .radio.checkout-toggle -->
+</div><!-- .radio-list  -->
+        </div><!-- .radio-list.radio-media-list -->
+      
+    
+
+  </div><!-- .checkout-gifting-options -->
+</div><!-- .checkout-gifting -->
+        
+
+        <header>
+          <h3>Shipment 2 of 2</h3>
+        </header>
+        <div class="row">
+          <div class="col-xs-7">
+            <strong>Liz Hamilton</strong> <br>
+            456 Elm Street, Somewhere, VA 22222<br>
+            505-258-4975
+          </div>
+          <div class="col-xs-5 edit-remove">
+            <a href="#">Change</a>
+          </div><!-- .col-xs-5 -->
+        </div><!-- .row -->
+
+        <hr>
+
+        <div class="row">
+          <div class="col-xs-9">
+            <div class="row">
+              <div class="col-sm-6">
+                <strong>Standard - <span class="text-uppercase">Free</span></strong><br>
+                6-9 business days                
+              </div><!-- .col-sm-6 -->
+              <div class="col-sm-6">
+                Estimated Arrival: Jan 17-20              
+              </div><!-- .col-sm-6 -->
+            </div><!-- .row -->
+          </div><!-- .col-xs-9 -->
+          <div class="col-xs-3 edit-remove">
+            <a href="#">Change</a>
+          </div><!-- .col-xs-3 -->
+        </div><!-- .row -->
+        <hr>
+
+        
+
+
+
+
+
+
+
+  <div class="row">
+    <div class="col-xs-7">
+      <p><strong>Items in Shipment (2)</strong></p>
+    </div>
+    <div class="col-xs-5 text-right">
+      <a href="#" class="checkout-link link-toggled" data-action="toggle" data-target="orders-3-3" data-label="Open">Close</a>
+    </div><!-- .col-xs-5 -->
+  </div><!-- .row -->
+
+  <div id="orders-3-3">
+
+
+  <div class="product-details">
+  <div class="row row-tight">
+    <div class="col-sm-2 col-xs-3">
+      <img class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/checkout/temp/blue.jpg" alt="Product Image">  
+    </div><!-- .col-xs-3 -->
+    <div class="col-sm-10 col-xs-9">
+      
+        <h4>Product Name</h4>
+      
+      <div class="row">
+
+        
+          <div class="col-sm-9">  
+        
+
+        
+          <dl class="dl-horizontal meta-list">
+            <dt>Size:</dt>
+            <dd>Size 000 (0, XXS)</dd>
+            <dt>Color:</dt>
+            <dd>
+              
+Blue              
+            </dd>
+            <dt>Total Price:</dt>
+            <dd><span class="strikethrough pad-right-10">$99.00</span> $74.00</dd>
+            <dt>QTY:</dt>
+            <dd>1</dd>
+          </dl>
+        
+
+        
+          </div><!-- .col-sm-9 -->
+          
+            <div class="col-sm-3">
+              
+                <div class="edit-remove"><a href="#">Change</a> | <a href="#">Remove</a></div>          
+              
+            </div><!-- .col-sm-3 -->
+          
+        
+
+      </div><!-- .row -->
+    </div><!-- .col-xs-9 -->
+  </div><!-- .row -->
+</div><!-- .product-details -->  
+  
+    <div class="product-details">
+  <div class="row row-tight">
+    <div class="col-sm-2 col-xs-3">
+      <img class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/checkout/temp/pink.jpg" alt="Product Image">  
+    </div><!-- .col-xs-3 -->
+    <div class="col-sm-10 col-xs-9">
+      
+        <h4>Product Name</h4>
+      
+      <div class="row">
+
+        
+          <div class="col-sm-9">  
+        
+
+        
+          <dl class="dl-horizontal meta-list">
+            <dt>Size:</dt>
+            <dd>Size 000 (0, XXS)</dd>
+            <dt>Color:</dt>
+            <dd>
+              
+Pink              
+            </dd>
+            <dt>Total Price:</dt>
+            <dd><span class="strikethrough pad-right-10">$99.00</span> $74.00</dd>
+            <dt>QTY:</dt>
+            <dd>1</dd>
+          </dl>
+        
+
+        
+          </div><!-- .col-sm-9 -->
+          
+            <div class="col-sm-3">
+              
+                <div class="edit-remove"><a href="#">Change</a> | <a href="#">Remove</a></div>          
+              
+            </div><!-- .col-sm-3 -->
+          
+        
+
+      </div><!-- .row -->
+    </div><!-- .col-xs-9 -->
+  </div><!-- .row -->
+</div><!-- .product-details -->  
+  
+
+
+  </div><!-- #order-3-3 -->
+        
+
+        
+          <div class="checkout-gifting">
+  <div class="row">
+    <div class="col-xs-8 col-sm-6">
+      <h3 class="margin-bot-none">
+        <svg class="icon-square-lg icon-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-gift-soma"></use></svg>
+        
+          Gifting
+        
+      </h3>
+    </div><!-- .col-xs-6 -->
+    <div class="col-xs-4 col-sm-6 text-right">
+      <a href="#" class="checkout-link" data-action="toggle" data-target="gifting-3-2" data-label="Close">View<span class="hidden-xs hidden-sm"> Gifting Options</span></a>
+    </div><!-- .col-xs-6 -->
+  </div><!-- .row -->
+
+  <div id="gifting-3-2" class="checkout-gifting-options">
+
+    
+      
+        <div class="radio-list radio-media-list">
+          
+
+
+
+<div class="radio-list radio-media-list">
+  
+
+    <div class="radio checkout-toggle">
+      <label>
+        <div class="media">
+          <div class="media-left media-middle">
+            <input type="radio" name="gifting-options" id="gifting-option-1" value="gifting-option-1" styled="yes">
+            <span class="input-styled"></span>
+          </div>
+          <div class="media-body media-middle">
+            <div class="row">
+              <div class="col-xs-8">
+                Gift Wrap &amp; Gift Receipt - $6.00
+              </div><!-- .col -->
+              <div class="col-xs-4 text-right">
+                <a href="#" data-target="radio-cancel" class="radio-cancel">Cancel</a>
+              </div>
+            </div><!-- .row -->
+          </div><!-- .media-body -->
+        </div><!-- .media -->
+      </label>
+      <div id="checkout-gifting-option-1" class="checkout-toggle-content toggle-hidden toggle-gifting">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-wrap-together">
+                <p>
+                  <img src="/web_assets/imgs/checkout/gift-together.jpg" alt="Gift Wrap Together" class="img-responsive">
+                </p>
+                <h4>Gift Together </h4>
+                <p>All of your items will arrive in a single package with one personal message and a single gift receipt. Optional decorative gift box, $6.00</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .row -->
+          <!-- <div class="col-sm-2 text-center">or</div> -->
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-wrap-individual">
+                <p>
+                  <img src="/web_assets/imgs/checkout/gift-individual.jpg" alt="Gift Wrap Individually" class="img-responsive">
+                </p>
+                <h4>Gift Individually</h4>
+                <p>Each gift will arrive packaged separately with individual personal messages and gift receipts. Optional decorative gift box, $6.00 each.</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .checkout-toggle-content -->
+    </div><!-- .radio.checkout-toggle -->
+
+    <div class="radio checkout-toggle">
+      <label>
+        <div class="media">
+          <div class="media-left media-middle">
+            <input type="radio" name="gifting-options" id="gifting-option-2" value="gifting-option-2" styled="yes">
+            <span class="input-styled"></span>
+          </div>
+          <div class="media-body media-middle">
+            <div class="row">
+              <div class="col-xs-8">
+                Gift Message &amp; Gift Receipt - FREE
+              </div><!-- .col -->
+              <div class="col-xs-4 text-right">
+                <a href="#" data-target="radio-cancel" class="radio-cancel">Cancel</a>
+              </div>
+            </div><!-- .row -->
+
+          </div><!-- .media-body -->
+        </div><!-- .media -->
+      </label>
+      <div id="checkout-gifting-option-2" class="checkout-toggle-content toggle-hidden toggle-gifting">
+        
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-message-together">
+                <h4>Add a Gift Message Together </h4>
+                <p>All of your items will arrive with one personal message and a single gift receipt.</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .row -->
+          <!-- <div class="col-sm-2 text-center">or</div> -->
+          <div class="col-sm-6">
+            <div class="gifting-package">
+              <a href="#" data-toggle="modal" data-target="#modal-gift-message-individual">
+                <h4>Add Gift Message Individually</h4>
+                <p> Each gift will arrive with individual personal messages and gift receipts.</p>
+              </a>
+            </div><!-- .gifting-package -->
+          </div><!-- .col -->
+        </div><!-- .row -->
+
+      </div><!-- .checkout-toggle-content -->
+    </div><!-- .radio.checkout-toggle -->
+
+  
+</div><!-- .radio-list  -->
+
+<div class="radio-list radio-media-list">
+  <div class="checkbox checkout-toggle">
+    <label>
+      <div class="media">
+        <div class="media-left media-middle">
+          <!-- <input type="checkbox" value="gifting-kit" id="gifting-kit" styled='yes' inputExtra=''> -->
+          <input type="checkbox" value="gifting-kit" id="gifting-kit" styled="yes">
+          <span class="input-styled"></span>
+        </div>
+        <div class="media-body media-middle">
+          Add a Gift Kit - $3.00 Each
+        </div><!-- .media-body -->
+      </div><!-- .media -->
+    </label>
+    <div id="checkout-gifting-kit" class="checkout-toggle-content checkout-gifting-kit toggle-hidden toggle-gifting">
+      <p>Wrap it beautifully yourself in a Soma gift box, satin ribbon with bow, note card and  white tissue paper.</p>
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <p>
+            <img src="/web_assets/imgs/checkout/gift-kit.jpg" alt="Gift Kit" class="img-responsive">
+          </p>
+        </div>
+      </div><!-- .row -->
+
+
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="row">
+            <div class="col-xs-5">
+              <p>
+                <strong>Shirt Box</strong><br>
+                (12" x 15")
+              </p>
+            </div><!-- .col -->
+            <div class="col-xs-7 text-right">
+              <div class="input-group increment-wrap">
+                <input type="text" name="quant[1]" class="form-control input-increment" value="0" min="0" max="10">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" disabled="disabled" data-type="minus" data-field="quant[1]">
+                    -
+                  </button>
+                </span>
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" data-type="plus" data-field="quant[1]">
+                    +
+                  </button>
+                </span>
+              </div><!-- .input-group -->
+            </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="row">
+            <div class="col-xs-5">
+              <p>
+                <strong>Robe Box</strong><br>
+                (18" x 18")
+              </p>
+            </div><!-- .col -->
+            <div class="col-xs-7 text-right">
+              <div class="input-group increment-wrap">
+                <input type="text" name="quant[2]" class="form-control input-increment" value="0" min="0" max="10">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" disabled="disabled" data-type="minus" data-field="quant[2]">
+                    -
+                  </button>
+                </span>
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-increment" data-type="plus" data-field="quant[2]">
+                    +
+                  </button>
+                </span>
+              </div><!-- .input-group -->
+            </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+
+      <div class="row row-tight">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="p">
+            
+  <button type="submit" class="btn btn-lg btn-block btn-primary" data-something="">Save &amp; Continue</button>
+
+          </div>
+          <div class="text-center"><a href="#" class="btn btn-link" data-dismiss="modal">Cancel</a></div>
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->    
+
+    </div><!-- .checkout-toggle-content -->
+
+  </div><!-- .radio.checkout-toggle -->
+</div><!-- .radio-list  -->
+        </div><!-- .radio-list.radio-media-list -->
+      
+    
+
+  </div><!-- .checkout-gifting-options -->
+</div><!-- .checkout-gifting -->
+        
+
+      </div><!-- .checkout-multi-block -->
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="checkout-payment-options" class="checkout-block complete">
+  <header>
+    
+      <a href="#" class="checkout-btn-change" data-toggle="modal" data-target="#modal-payment-options">Change</a>  
+    
+    <h2>Payment Options</h2>
+  </header>
+  <div class="checkout-block-body">
+    <div class="radio-list">
+      <div class="checkout-section-form">
+        <div class="radio checkout-toggle">
+  <label>
+    <input type="radio" name="payment-options" id="creditcard" value="creditcard" checked="">
+    <span class="input-styled">
+    
+    
+      Credit Card
+      
+        <a class="label-icon" href="javascript://" data-toggle="tooltip" data-placement="bottom" title="" data-html="true" data-original-title="<strong>Cards We Accept</strong><br>Visa, Mastercard, Discover, American Express, JCB and Diner's Club International"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-question"></use></svg></a>
+      
+    
+    
+    </span><!-- .input-styled -->
+  </label>
+</div>
+        
+        <div id="checkout-creditcard" class="checkout-toggle-content">
+          
+
+
+
+<div class="row row-tight">
+  <div class="col-md-8 col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group  has-icon has-cc">
+  <label class="control-label " for="cc-number">Credit Card Number
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg has-tooltip" id="cc-number" placeholder="" data-card="visa">
+  
+  
+  
+    <a class="input-icon" href="javascript://" data-toggle="tooltip" data-placement="top" title="" data-original-title="Guaranteed SAFE Checkout - This is a secure credit card payment">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-lock-checkout"></use>
+      </svg>
+    </a><!-- .input-icon -->
+  
+  
+    <span class="input-icon-cc"></span><!-- .input-cc-icon -->
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-md-8 col-sm-6">
+    <div class="row row-tight">
+      <div class="col-sm-6">
+        <div class="field-wrap">
+          <div class="form-group  ">
+  
+    <label class="control-label" for="cc-month">Month
+      
+        
+      
+    </label>
+  
+  <select class="form-control selectpicker input-lg" id="cc-month" style="display: none;">
+    <option value="">Month</option><option value="January">January</option><option value="February">February</option><option value="March">March</option><option value="April">April</option><option value="May">May</option><option value="June">June</option><option value="July">July</option><option value="August">August</option><option value="September">September</option><option value="October">October</option><option value="November">November</option><option value="December">December</option>
+  </select><div class="btn-group bootstrap-select form-control input-lg"><button type="button" class="btn dropdown-toggle selectpicker btn-lg" data-toggle="dropdown" data-id="cc-month" title="Month"><span class="filter-option pull-left">Month</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Month</span>"><span class="text">Month</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>January</span>"><span class="text">January</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>February</span>"><span class="text">February</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>March</span>"><span class="text">March</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>April</span>"><span class="text">April</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>May</span>"><span class="text">May</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>June</span>"><span class="text">June</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>July</span>"><span class="text">July</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="8"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>August</span>"><span class="text">August</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="9"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>September</span>"><span class="text">September</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="10"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>October</span>"><span class="text">October</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>November</span>"><span class="text">November</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="12"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>December</span>"><span class="text">December</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div><div class="btn-group bootstrap-select form-control input-lg"><button type="button" class="btn dropdown-toggle selectpicker btn-lg" data-toggle="dropdown" data-id="cc-month" title="Month"><span class="filter-option pull-left">Month</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Month</span>"><span class="text">Month</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>January</span>"><span class="text">January</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>February</span>"><span class="text">February</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>March</span>"><span class="text">March</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>April</span>"><span class="text">April</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>May</span>"><span class="text">May</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>June</span>"><span class="text">June</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>July</span>"><span class="text">July</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="8"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>August</span>"><span class="text">August</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="9"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>September</span>"><span class="text">September</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="10"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>October</span>"><span class="text">October</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>November</span>"><span class="text">November</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="12"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>December</span>"><span class="text">December</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+  
+</div>
+        </div><!-- .field-wrap -->
+      </div><!-- .col-sm-6 -->
+      <div class="col-sm-6">
+        <div class="field-wrap">
+          <div class="form-group  ">
+  
+    <label class="control-label" for="cc-year">Year
+      
+        
+      
+    </label>
+  
+  <select class="form-control selectpicker input-lg" id="cc-year" style="display: none;">
+    <option value="">Year</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option>
+  </select><div class="btn-group bootstrap-select form-control input-lg"><button type="button" class="btn dropdown-toggle selectpicker btn-lg" data-toggle="dropdown" data-id="cc-year" title="Year"><span class="filter-option pull-left">Year</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Year</span>"><span class="text">Year</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2017</span>"><span class="text">2017</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2018</span>"><span class="text">2018</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2019</span>"><span class="text">2019</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2020</span>"><span class="text">2020</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2021</span>"><span class="text">2021</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2022</span>"><span class="text">2022</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2023</span>"><span class="text">2023</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div><div class="btn-group bootstrap-select form-control input-lg"><button type="button" class="btn dropdown-toggle selectpicker btn-lg" data-toggle="dropdown" data-id="cc-year" title="Year"><span class="filter-option pull-left">Year</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Year</span>"><span class="text">Year</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2017</span>"><span class="text">2017</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2018</span>"><span class="text">2018</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2019</span>"><span class="text">2019</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2020</span>"><span class="text">2020</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2021</span>"><span class="text">2021</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2022</span>"><span class="text">2022</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>2023</span>"><span class="text">2023</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+  
+</div>
+        </div><!-- .field-wrap -->
+      </div><!-- .col-sm-6 -->
+    </div><!-- .row -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-md-4 col-sm-3">
+    <div class="field-wrap">
+      <div class="form-group  has-icon ">
+  <label class="control-label " for="cc-security">Security Code
+    
+      
+    
+  </label>
+  <input type="password" class="form-control input-lg" id="cc-security" placeholder="">
+  
+  
+  
+    <a class="input-icon" href="javascript://" data-toggle="tooltip" data-placement="top" title="" data-original-title="Please enter the number located on the back of your credit card in the signature area.">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-question"></use>
+      </svg>
+    </a><!-- .input-icon -->
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="checkbox ">
+  <label>
+    <input type="checkbox" value="cc-save-number" checked="">
+    <span class="input-styled">Save this credit card for my next order</span>
+  </label>
+</div>
+<hr>
+
+<div class="radio-list">
+  <div id="shipping-address-separate" class="checkbox checkout-toggle">
+    <label>
+      <input type="checkbox" value="shipping-address-separate" checked="checked">
+      <span class="input-styled">Billing Address same as Shipping Address</span>
+    </label>
+    <div id="checkout-shipping-address-separate" class="checkout-toggle-content toggle-hidden toggle-content-padding">
+      
+
+
+<div class="row row-tight">
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="first-name">First Name
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="first-name" placeholder="">
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="last-name">Last Name
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="last-name" placeholder="">
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group  ">
+  
+    <label class="control-label" for="country">Country
+      
+        
+      
+    </label>
+  
+  <select class="form-control selectpicker input-lg" id="country" style="display: none;">
+    <option value="">Country</option><option value="United States">United States</option><option value="Jakku">Jakku</option><option value="Hoth">Hoth</option>
+  </select><div class="btn-group bootstrap-select form-control input-lg"><button type="button" class="btn dropdown-toggle selectpicker btn-lg" data-toggle="dropdown" data-id="country" title="Country"><span class="filter-option pull-left">Country</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Country</span>"><span class="text">Country</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>United States</span>"><span class="text">United States</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Jakku</span>"><span class="text">Jakku</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Hoth</span>"><span class="text">Hoth</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div><div class="btn-group bootstrap-select form-control input-lg"><button type="button" class="btn dropdown-toggle selectpicker btn-lg" data-toggle="dropdown" data-id="country" title="Country"><span class="filter-option pull-left">Country</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Country</span>"><span class="text">Country</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>United States</span>"><span class="text">United States</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Jakku</span>"><span class="text">Jakku</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Hoth</span>"><span class="text">Hoth</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+  
+</div>
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="street-address">Street Address
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="street-address" placeholder="">
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="apt-unit-suite">Apt/ Unit/ Suite
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="apt-unit-suite" placeholder="">
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->  
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-sm-3">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="zip-code">Zip Code
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="zip-code" placeholder="">
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-3 -->
+  <div class="col-sm-3">
+    <div class="field-wrap">  
+      <div class="form-group  ">
+  
+    <label class="control-label" for="state">State
+      
+        
+      
+    </label>
+  
+  <select class="form-control selectpicker input-lg" id="state" style="display: none;">
+    <option value="">State</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District Of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option>
+  </select><div class="btn-group bootstrap-select form-control input-lg"><button type="button" class="btn dropdown-toggle selectpicker btn-lg" data-toggle="dropdown" data-id="state" title="State"><span class="filter-option pull-left">State</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>State</span>"><span class="text">State</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Alabama</span>"><span class="text">Alabama</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Alaska</span>"><span class="text">Alaska</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Arizona</span>"><span class="text">Arizona</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Arkansas</span>"><span class="text">Arkansas</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>California</span>"><span class="text">California</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Colorado</span>"><span class="text">Colorado</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Connecticut</span>"><span class="text">Connecticut</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="8"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Delaware</span>"><span class="text">Delaware</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="9"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>District Of Columbia</span>"><span class="text">District Of Columbia</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="10"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Florida</span>"><span class="text">Florida</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Georgia</span>"><span class="text">Georgia</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="12"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Hawaii</span>"><span class="text">Hawaii</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="13"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Idaho</span>"><span class="text">Idaho</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="14"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Illinois</span>"><span class="text">Illinois</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="15"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Indiana</span>"><span class="text">Indiana</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="16"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Iowa</span>"><span class="text">Iowa</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="17"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Kansas</span>"><span class="text">Kansas</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="18"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Kentucky</span>"><span class="text">Kentucky</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="19"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Louisiana</span>"><span class="text">Louisiana</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="20"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Maine</span>"><span class="text">Maine</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="21"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Maryland</span>"><span class="text">Maryland</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="22"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Massachusetts</span>"><span class="text">Massachusetts</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="23"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Michigan</span>"><span class="text">Michigan</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="24"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Minnesota</span>"><span class="text">Minnesota</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="25"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Mississippi</span>"><span class="text">Mississippi</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="26"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Missouri</span>"><span class="text">Missouri</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="27"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Montana</span>"><span class="text">Montana</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="28"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Nebraska</span>"><span class="text">Nebraska</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="29"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Nevada</span>"><span class="text">Nevada</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="30"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>New Hampshire</span>"><span class="text">New Hampshire</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="31"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>New Jersey</span>"><span class="text">New Jersey</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="32"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>New Mexico</span>"><span class="text">New Mexico</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="33"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>New York</span>"><span class="text">New York</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="34"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>North Carolina</span>"><span class="text">North Carolina</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="35"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>North Dakota</span>"><span class="text">North Dakota</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="36"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Ohio</span>"><span class="text">Ohio</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="37"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Oklahoma</span>"><span class="text">Oklahoma</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="38"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Oregon</span>"><span class="text">Oregon</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="39"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Pennsylvania</span>"><span class="text">Pennsylvania</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="40"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Rhode Island</span>"><span class="text">Rhode Island</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="41"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>South Carolina</span>"><span class="text">South Carolina</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="42"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>South Dakota</span>"><span class="text">South Dakota</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="43"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Tennessee</span>"><span class="text">Tennessee</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="44"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Texas</span>"><span class="text">Texas</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="45"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Utah</span>"><span class="text">Utah</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="46"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Vermont</span>"><span class="text">Vermont</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="47"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Virginia</span>"><span class="text">Virginia</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="48"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Washington</span>"><span class="text">Washington</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="49"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>West Virginia</span>"><span class="text">West Virginia</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="50"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Wisconsin</span>"><span class="text">Wisconsin</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="51"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Wyoming</span>"><span class="text">Wyoming</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div><div class="btn-group bootstrap-select form-control input-lg"><button type="button" class="btn dropdown-toggle selectpicker btn-lg" data-toggle="dropdown" data-id="state" title="State"><span class="filter-option pull-left">State</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>State</span>"><span class="text">State</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Alabama</span>"><span class="text">Alabama</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Alaska</span>"><span class="text">Alaska</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Arizona</span>"><span class="text">Arizona</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Arkansas</span>"><span class="text">Arkansas</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>California</span>"><span class="text">California</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Colorado</span>"><span class="text">Colorado</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Connecticut</span>"><span class="text">Connecticut</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="8"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Delaware</span>"><span class="text">Delaware</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="9"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>District Of Columbia</span>"><span class="text">District Of Columbia</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="10"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Florida</span>"><span class="text">Florida</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Georgia</span>"><span class="text">Georgia</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="12"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Hawaii</span>"><span class="text">Hawaii</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="13"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Idaho</span>"><span class="text">Idaho</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="14"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Illinois</span>"><span class="text">Illinois</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="15"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Indiana</span>"><span class="text">Indiana</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="16"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Iowa</span>"><span class="text">Iowa</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="17"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Kansas</span>"><span class="text">Kansas</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="18"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Kentucky</span>"><span class="text">Kentucky</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="19"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Louisiana</span>"><span class="text">Louisiana</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="20"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Maine</span>"><span class="text">Maine</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="21"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Maryland</span>"><span class="text">Maryland</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="22"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Massachusetts</span>"><span class="text">Massachusetts</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="23"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Michigan</span>"><span class="text">Michigan</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="24"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Minnesota</span>"><span class="text">Minnesota</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="25"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Mississippi</span>"><span class="text">Mississippi</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="26"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Missouri</span>"><span class="text">Missouri</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="27"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Montana</span>"><span class="text">Montana</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="28"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Nebraska</span>"><span class="text">Nebraska</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="29"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Nevada</span>"><span class="text">Nevada</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="30"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>New Hampshire</span>"><span class="text">New Hampshire</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="31"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>New Jersey</span>"><span class="text">New Jersey</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="32"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>New Mexico</span>"><span class="text">New Mexico</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="33"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>New York</span>"><span class="text">New York</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="34"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>North Carolina</span>"><span class="text">North Carolina</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="35"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>North Dakota</span>"><span class="text">North Dakota</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="36"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Ohio</span>"><span class="text">Ohio</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="37"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Oklahoma</span>"><span class="text">Oklahoma</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="38"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Oregon</span>"><span class="text">Oregon</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="39"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Pennsylvania</span>"><span class="text">Pennsylvania</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="40"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Rhode Island</span>"><span class="text">Rhode Island</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="41"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>South Carolina</span>"><span class="text">South Carolina</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="42"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>South Dakota</span>"><span class="text">South Dakota</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="43"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Tennessee</span>"><span class="text">Tennessee</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="44"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Texas</span>"><span class="text">Texas</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="45"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Utah</span>"><span class="text">Utah</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="46"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Vermont</span>"><span class="text">Vermont</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="47"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Virginia</span>"><span class="text">Virginia</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="48"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Washington</span>"><span class="text">Washington</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="49"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>West Virginia</span>"><span class="text">West Virginia</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="50"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Wisconsin</span>"><span class="text">Wisconsin</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="51"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Wyoming</span>"><span class="text">Wyoming</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+  
+</div>
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-3 -->
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group   ">
+  <label class="control-label " for="city">City
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="city" placeholder="">
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+<div class="row row-tight">
+  <div class="col-sm-6">
+    <div class="field-wrap">
+      <div class="form-group    focus">
+  <label class="control-label " for="">Phone
+    
+      
+    
+  </label>
+  <input type="tel" class="form-control input-lg" id="" placeholder="">
+  
+  
+  
+
+</div><!-- .form-group -->
+    </div><!-- .field-wrap -->
+  </div><!-- .col-sm-6 -->
+</div><!-- .row -->
+
+
+    </div><!-- .checkout-toggle-content -->
+  </div><!-- .checkbox -->
+</div><!-- .radio-list -->
+
+
+
+          
+        </div><!-- .checkout-toggle-content -->
+        
+        <hr class="hr-dark">
+        <div class="radio checkout-toggle">
+  <label>
+    <input type="radio" name="payment-options" id="paypal" value="paypal">
+    <span class="input-styled">
+    
+    
+      <span class="sr-only">Paypal</span>
+      <svg class="icon-paypal"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-paypal"></use></svg>
+    
+    
+    </span><!-- .input-styled -->
+  </label>
+</div>
+
+        <div id="checkout-paypal" class="checkout-toggle-content toggle-hidden">
+          <p class="alert alert-info"><strong>We’re sorry, but at this time our <span class="text-highlight">boutiques are unable to accept returns</span> for orders purchased using PayPal. PayPal orders may only be returned via mail using the return label provided. We apologize for any inconvenience.</strong></p>
+          <p>Continuing will take you to Paypal to login to your account. Afterwards you will have an opportunity to review and submit your order. View <a href="#">PayPal Policies</a> and your payment rights.</p>
+
+          <div class="row row-tight">
+            <div class="col-sm-6">
+              <p>
+  <button type="submit" class="btn btn-alt btn-lg btn-block btn-width btn-has-paypal">Continue to <span class="sr-only">Paypal</span> <svg class="icon-paypal"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-paypal"></use></svg></button>
+</p>
+            </div><!-- .col-sm-6 -->
+          </div><!-- .row -->
+          
+        </div><!-- .checkout-toggle-content -->
+
+        <hr class="hr-dark">
+
+        <h3>Contact Information</h3>
+        <p>This will allow us to send you order and shipping confirmation emails. This will also allow us to send exclusive offers, updates on new arrivals and special events.</p>
+
+        <div class="row row-tight">
+          <div class="col-sm-6">
+            <div class="field-wrap">
+              <div class="form-group   ">
+  <label class="control-label " for="payment-email">Email
+    
+      
+    
+  </label>
+  <input type="email" class="form-control input-lg" id="payment-email" placeholder="">
+  
+  
+  
+
+</div><!-- .form-group -->
+            </div><!-- .field-wrap -->
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+
+        <div class="checkbox ">
+  <label>
+    <input type="checkbox" value="check-updates">
+    <span class="input-styled"><strong>Yes</strong>, send me exclusive offers, updates on new arrivals and special events.</span>
+  </label>
+</div>
+
+        
+        
+        <div class="row row-tight">
+          <div class="col-sm-6">
+            
+  <a href="#" class="btn btn-primary btn-lg btn-block btn-checkout btn-width" data-checkout="save-info">Save &amp; Continue</a>
+
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+
+      </div><!-- .checkout-section-form -->
+      <div class="checkout-section-entry">
+        <h3>Credit Card</h3>
+<div class="media cc-info">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="/web_assets/svg/checkout/visa.svg" alt="">
+    </a>
+  </div><!-- .media-left -->
+  <div class="media-body">
+    Visa ending in 0007<br>
+    Expires 3/2017
+  </div><!-- .media-body -->
+</div><!-- .media -->
+<h3 class="margin-top-extra">Contact Information</h3>
+<div>liz.hamilton@mailservice.com</div>
+       </div><!-- .checkout-section-entry -->
+    </div><!-- .radio-list -->
+    
+    
+    
+    <hr class="hr-dark">
+<div class="checkout-gift-card">
+  <div class="row">
+    <div class="col-xs-6">
+      <h3 class="margin-bot-none">
+        <svg class="icon-square-lg icon-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-gift-card"></use></svg>
+        Gift Card
+      </h3>
+      
+
+    </div><!-- .col-xs-6 -->
+    <div class="col-xs-6 text-right">
+      <a href="#" class="checkout-link" data-action="toggle" data-target="giftcard-1" data-label="Close">Apply<span class="hidden-xs hidden-sm"> Gift Card</span></a>
+    </div><!-- .col-xs-6 -->
+  </div><!-- .row -->
+
+
+
+  <div class="giftcard-applied-content">
+    <div class="row">
+      <div class="col-xs-8">
+        <div class="media">
+          <div class="media-left">
+            <svg class="icon-left checkmark"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use></svg>
+          </div>
+          <div class="media-body">
+            Gift Card ending in 9901<br>
+            Applied: $75.00 | Balance: $0.00<br>
+          </div><!-- .media-body -->
+        </div><!-- .media -->
+      </div><!-- .col -->
+      <div class="col-xs-4 text-right">
+        <a href="#" class="checkout-link link-toggled" data-toggle="giftcard-remove">Remove</a>
+      </div><!-- .col -->
+    </div><!-- .row -->
+  </div><!-- .giftcard-applied-content -->
+
+
+  <div id="giftcard-1" class="checkout-hidden">
+    <div class="giftcard-form">
+      <div class="row row-tight">
+        <div class="col-sm-6">
+          <div class="field-wrap">
+            <div class="form-group   ">
+  <label class="control-label " for="gift-card-number">Gift Card Number
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="gift-card-number" placeholder="">
+  
+  
+  
+
+</div><!-- .form-group -->
+          </div><!-- .field-wrap -->
+        </div><!-- .col -->
+        <div class="col-sm-6">
+          <div class="field-wrap">
+            <div class="form-group  has-icon ">
+  <label class="control-label " for="gift-card-pin">PIN
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="gift-card-pin" placeholder="">
+  
+  
+  
+    <a class="input-icon" href="javascript://" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum dolor sit amet">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-question"></use>
+      </svg>
+    </a><!-- .input-icon -->
+  
+  
+
+</div><!-- .form-group -->
+          </div><!-- .field-wrap -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .checkout-section-form -->
+
+    <div class="giftcard-balance">
+      <div class="row">
+        <div class="col-sm-3">
+          <p>
+            Gift Card Number<br>
+            ••••••••9901
+          </p>
+        </div><!-- .col -->
+        <div class="col-sm-3">
+          <p>
+            Card Balance<br>
+            $75.00
+          </p>
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .gift-entry-balance -->
+
+    <p class="giftcard-buttons">
+      
+  <a href="#" class="btn btn-alt btn-lg" data-toggle="giftcard-balance">Check Balance</a>
+
+      
+  <a href="#" class="btn btn-alt btn-lg" data-toggle="giftcard-another">Check Another</a>
+
+      
+  <a href="#" class="btn btn-primary btn-lg" data-toggle="giftcard-apply">Apply</a>
+
+    </p>
+ 
+
+  </div><!-- .checkout-hidden -->
+</div><!-- .checkout-gift-card -->
+
+
+
+
+
+
+
+<hr class="hr-dark">
+
+
+
+
+      <section class="checkout-summary ">
+  
+  <div class="row">
+    <div class="col-xs-8">
+      <strong>Item Subtotal </strong>
+    </div><!-- .col-xs-8 -->
+    <div class="col-xs-4 text-right">
+      <strong>$222.22</strong>
+    </div><!-- .col-xs-4 -->
+  </div><!-- .row -->
+  <div class="row">
+    <div class="col-xs-8">
+      Shipping &amp; Handling
+    </div><!-- .col-xs-8 -->
+    <div class="col-xs-4 text-right">
+      FREE
+    </div><!-- .col-xs-4 -->
+  </div><!-- .row -->
+  <div class="row">
+    <div class="col-xs-8">
+      Sales Tax
+    </div><!-- .col-xs-8 -->
+    <div class="col-xs-4 text-right">
+      $10.10
+    </div><!-- .col-xs-4 -->
+  </div><!-- .row -->
+
+
+ 
+  <div class="summary-total">
+    <div class="row">
+      <div class="col-xs-8">
+        <strong>Order Total </strong>
+      </div><!-- .col-xs-8 -->
+      <div class="col-xs-4 text-right">
+        <strong>$232.32</strong>
+      </div><!-- .col-xs-4 -->
+    </div><!-- .row -->
+    <div class="row">
+      <div class="col-xs-8">
+        Balance Due
+      </div><!-- .col-xs-8 -->
+      <div class="col-xs-4 text-right">
+        $232.32
+      </div><!-- .col-xs-4 -->
+    </div><!-- .row -->
+  </div><!-- .summary-total -->
+
+
+  
+
+    <div class="row row-tight">
+      <div class="col-sm-3 col-xs-6">
+        <div class="form-group   ">
+  <label class="control-label " for="promo-code">Promo Code
+    
+      
+    
+  </label>
+  <input type="text" class="form-control input-lg" id="promo-code" placeholder="">
+  
+  
+  
+
+</div><!-- .form-group -->
+      </div><!-- .col-xs-3 -->
+      <div class="col-xs-6">
+        
+  <button type="submit" class="btn btn-default btn-lg">Apply</button>
+
+      </div><!-- .col-xs-4 -->
+    </div><!-- .row -->
+    <div class="row row-tight">
+      <div class="col-sm-6">
+        
+  <!-- <a href="confirmation.html" class="btn btn-primary btn-lg btn-block btn-width" >Place Order</a> -->
+
+      </div><!-- .col-xs-6 -->
+    </div><!-- .row -->
+  
+
+
+<div class="row row-tight">
+      <div class="col-sm-6">
+        
+  <a href="confirmation.html" class="btn btn-primary btn-lg btn-block btn-width">Place Order</a>
+
+      </div><!-- .col-xs-6 -->
+    </div>
+
+    
+
+</section><!-- .checkout-summary -->
+
+    
+
+
+
+
+  </div><!-- .checkout-block-body -->
+</section>
+
+
+
+
+
+
+</form>
+

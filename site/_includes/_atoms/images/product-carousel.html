@@ -1,0 +1,19 @@
+{% comment %}.carousel-fade used on Soma to crossfade product images{% endcomment %}
+<div id="carousel-collection-{{include.carouselID}}" class="carousel carousel-collection slide {% if page.brand == 'soma' %}carousel-fade{% endif %} {{ include.carouselClass }}" data-ride="carousel" data-interval="false" aria-live="polite">
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      {% if include.productImg %}
+        <a href="#"><img class="img-responsive img-swap" src="{{include.productImg}}" alt="Product Name"></a>
+      {% else %}
+        <a href="#"><img class="img-responsive img-swap" src="{{ site.baseurl }}/web_assets/imgs/temp/gray.png" alt="Product Name"></a>
+      {% endif %}
+    </div>
+    <div class="item">
+      <a href="#"><img class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/temp/gray2.png" alt="Product Name"></a>
+    </div>
+    <div class="item">
+      <a href="#"><img class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/temp/gray3.png" alt="Product Name"></a>
+    </div>
+  </div>
+  <a class="carousel-control" href="#carousel-collection-{{include.carouselID}}" role="button" data-slide="next" aria-label="next"></a>
+</div>

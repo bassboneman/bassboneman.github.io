@@ -1,0 +1,62 @@
+{% if page.title == "Product Page (Donations)" %}
+  <div class="product-description">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis consequuntur accusantium recusandae quas, asperiores optio, assumenda at officia nisi hic cum impedit commodi mollitia. Magni, obcaecati corrupti saepe laudantium non!</p>
+  </div>
+{% elsif page.title == "Product Page (Gift Card)" %}
+  <div class="product-description">
+    {% if page.brand == 'soma' %}
+      <h3>The Perfect Gift</h3>
+      <p>It's guaranteed to fit, it never gets returned and it's always the perfect color. You can't go wrong with a Soma Gift Card because it lets her decide what she wants most. And all Gift Cards arrive in a beautiful gift box.</p>
+      <p>Redeem your Soma gift card for U.S. orders only online, in-store or by phone at 1.866.768.7662. Coupon discounts cannot be applied to a Gift Card purchase.</p>
+      <ul>
+        <li>Gift Card shipping is free (if you choose basic delivery).</li>
+        <li>If your order includes merchandise and Gift Cards, the Gift Cards will be shipped separately.</li>
+      </ul>
+    {% else %}
+      <p>You love her. She loves Chico's. The perfect present. The Chico's Gift Card. Goes with everything, so she can choose anything. Available in denominations as small as $10, as fabulous as $500.00. Gift Cards are redeemable for U.S. orders only online, in our boutiques and outlets, or by phone at 877.948.2525. Gift cards ship separately from merchandise orders, and shipping on Gift Cards is free when basic delivery is selected. Special offers &amp; discounts do not apply to the purchase of gift cards.</p>
+    {% endif %}
+  </div>
+{% elsif page.title == "Product Page (e-Gift Card)" %}
+  <div class="product-description">
+    {% if page.brand == 'soma' %}
+      <p>Soma.com eGift Cards do not expire, have no fees, and are redeemable for U.S orders only at Soma.com, Soma boutiques and outlets. Your Soma.com eGift Card may be used when making a merchandise purchase online at Soma.com by entering your eGift Card number and PIN found in your eGift Card email, or in boutiques and outlets by providing your eGift Card number and PIN to a store sales associate. Please allow up to 24 hours for delivery. Special offers &amp; discounts do not apply to the purchase of gift cards. View terms &amp; conditions.</p>
+    {% else %}
+      <p>Our eGift Cards do not expire, have no fees, and are redeemable for U.S. orders only online, in our boutiques and outlets. eGift Cards may be used when making a merchandise purchase online at Chicos.com by entering your eGift Card number and PIN found in your eGift Card email, or in our U.S. boutiques and outlets by providing your eGift Card number and PIN to a store sales associate. Please allow up to 24 hours for delivery. Special offers &amp; discounts do not apply to the purchase of gift cards. <a href="../customer-care/terms.html">View terms &amp; conditions</a></p>
+    {% endif %}
+  </div>
+{% else %}
+  <div class="product-description-wrapper">
+    <div class="product-description">
+      {% if page.brand == 'soma' %}
+        <p>The age defying <a href="javascript:void(0);" class="tooltip-trigger" data-toggle="tooltip" title="" data-trigger="click" data-html="true" data-original-title="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel metus condimentum ex fringilla scelerisque.</p><a href='javascript:void(0);' class='btn btn-primary btn-xs' data-target='#modal-quick-view' data-toggle='modal'>Shop Now</a><span class='dismiss'><svg class='icon-close'><use xlink:href='#icon-close'></use></svg></span>">t-shirt bra</a> that eliminates gaps with <a href="javascript:void(0);" class="tooltip-trigger" data-toggle="tooltip" title="" data-trigger="click" data-html="true" data-original-title="<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p><a href='javascript:void(0);' class='btn btn-primary btn-xs' data-target='#modal-quick-view' data-toggle='modal'>Shop Now</a><span class='dismiss'><svg class='icon-close'><use xlink:href='#icon-close'></use></svg></span>">top shaping pad</a> technology. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <div class="product-description-more-coreyweb-only">
+          <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipisicing elit</li>
+            <li>Autem libero id, dolores placeat</li>
+            <li>Cupiditate deserunt doloremque</li>
+          </ul>
+        </div><!-- .product-description-more-coreyweb-only -->
+      {% else %}
+        <p>These cropped pants are right on trend with a diamond print that pops. Wear them with a solid top and subtle jewelry for the perfect look. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <div class="product-description-more-coreyweb-only">
+          <ul>
+            <li>The So Slimming&trade; collection: look instantly slimmer with our Hidden Fit&trade; technology, a secret interior stitching that creates a super-slim effect.</li>
+            <li>Our cropped pants sit just below the waist for a modern fit with maximum comfort.</li>
+            <li>On-seam side zip gives you a sleek, smooth look.</li>
+            <li>97% cotton, 3% spandex.</li>
+            <li>Machine wash. Imported.</li>
+          </ul>
+        </div><!-- .product-description-more-coreyweb-only -->
+      {% endif %}
+    </div><!-- .product-description -->
+    <p><a href="#" class="description-more-less" data-toggle="prod-description">Read More...</a></p>
+  </div><!-- .product-description-wrapper -->
+{% endif %}
+
+<style>
+  /* this is for coreyweb prototyping only */
+  .product-description-more-coreyweb-only {
+    display: none;
+  }
+</style>

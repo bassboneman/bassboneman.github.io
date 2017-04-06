@@ -1,0 +1,40 @@
+<div class="radio {{ include.radioClass }}">
+  <label>
+    <div class="media">
+      <div class="media-left media-middle">
+        <input type="radio" name="{{ include.radioSet }}" id="{{ include.radioID }}" value="{{ include.radioID }}" {% if include.checked %}checked="checked"{% endif %} styled='yes'>
+        <span class="input-styled"></span>
+      </div>
+      <div class="media-body media-middle">
+        {% if include.labelName == 'PayPal' %}
+          <span class="sr-only">Paypal</span>
+          <svg class="icon-paypal"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-paypal"></use></svg>
+        {% else %}
+          {{ include.labelName }}
+        {% endif %}
+      </div><!-- .media-body -->
+    </div><!-- .media -->
+  </label>
+</div><!-- .radio -->
+
+{% comment %}
+  {% if include.labelName == 'Add a New Credit Card' %}
+    <div id="checkout-creditcard-modal" class="checkout-toggle-content toggle-hidden">
+      {% include _molecules/checkout/forms/cc.html %}
+    </div><!-- .checkout-toggle-content -->
+
+
+  {% elsif include.labelName == 'PayPal' %}
+    <div id="checkout-paypal-modal" class="checkout-toggle-content toggle-hidden">
+      <p class="alert alert-info"><strong>We’re sorry, but at this time our <span class="text-highlight">boutiques are unable to accept returns</span> for orders purchased using PayPal. PayPal orders may only be returned via mail using the return label provided. We apologize for any inconvenience.</strong></p>
+      <p>Continuing will take you to Paypal to login to your account. Afterwards you will have an opportunity to review and submit your order. View <a href="#">PayPal Policies</a> and your payment rights.</p>
+
+      <div class="row row-tight">
+        <div class="col-sm-6">
+          <p>{% include _atoms/buttons/button.html btnClass='btn-alt btn-lg btn-block btn-width btn-has-paypal' btnLabel='Continue to <span class="sr-only">Paypal</span> <svg class="icon-paypal"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-paypal"></use></svg>' %}</p>
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->
+    </div><!-- .checkout-toggle-content -->
+  {% endif %}
+
+{% endcomment %}

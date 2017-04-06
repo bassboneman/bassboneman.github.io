@@ -1,0 +1,273 @@
+---
+title: Checkout Usability Flow 1 (Confirmation)
+top-link: pages
+brand: soma
+layout: checkout
+type: unregistered
+checkoutPage: confirmation
+---
+
+
+<section id="checkout-confirmation" class="checkout-block">
+  <header>
+    <div class="row">
+      <div class="col-xs-7">
+        <h2>Order Confirmation</h2>
+      </div>
+      <div class="col-xs-5">
+        <div class="print-order">
+          <a href="#">Print</a>        
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="checkout-block-body">
+    <h3 class="subhead">Thank you! Your order is being processed.</h3>
+    <p>A confirmation of your order has been sent to <strong>email@email.com</strong>. We'll send you another email to notify you when your order ships.</p>
+    <hr>
+    <h3>Order Details</h3>
+    <div class="order-details-block">
+      <div class="row">
+        <div class="col-sm-3">
+          <p>Order Number</p>
+          <p><strong>1234567890</strong></p>
+        </div>
+        <div class="col-sm-3">
+          <p>Date</p>
+          <p><strong>{{ site.time | date: '%B %d, %Y' }}</strong></p>
+        </div>
+        <div class="col-sm-3">
+          <p>Status</p>
+          <p><strong>Processing</strong></p>
+        </div>
+        <div class="col-sm-3">
+          <p>Total</p>
+          <p><strong>$XXX.XX</strong></p>
+        </div>
+      </div>
+    </div><!-- .order-details-block -->
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->
+
+
+<section class="checkout-block" id="checkout-confirmation-address">
+  <header>
+    <h2>Shipping Address</h2>
+  </header>
+  <div class="checkout-block-body">
+    <h3>Ship to:</h3>
+    <div>
+      Liz Hamilton <br>
+      456 Elm Street, Somewhere, VA 22222<br>
+      505-258-4975
+    </div>
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->
+<section class="checkout-block" id="checkout-confirmation-shipping-options">
+  <header>
+    <h2>Shipping Options</h2>
+  </header>
+  <div class="checkout-block-body">
+
+    <div class="row">
+      <div class="col-sm-3 col-xs-4">
+        <strong>Standard</strong><br>
+        <img src="/web_assets/svg/checkout/shipping-standard.svg" alt="Standard Shipping" class="icon-shipping">
+      </div><!-- .col -->
+      <div class="col-sm-7 col-xs-5">
+        <div class="row">
+          <div class="col-sm-6">
+            Estimated Arrival:<br>
+            <span class="arrival-date">Mar 15-20</span>
+          </div><!-- .col -->
+          <div class="col-sm-6">
+            <strong>6-9</strong> business days
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .col -->
+      <div class="col-sm-2 col-xs-3 text-right">
+        <span class="text-uppercase">Free</span>
+      </div><!-- .col -->
+    </div><!-- .row -->
+
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->
+<section class="checkout-block" id="checkout-confirmation-payment">
+  <header>
+    <h2>Payment</h2>
+  </header>
+
+
+
+
+
+
+
+
+
+<div class="checkout-block-body">
+    <h3>Credit Card</h3>
+<div class="media cc-info">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="/web_assets/svg/checkout/visa.svg" alt="">
+    </a>
+  </div><!-- .media-left -->
+  <div class="media-body">
+    Visa ending in 0007<br>
+    Expires 3/2017
+  </div><!-- .media-body -->
+</div><!-- .media -->
+<h3 class="margin-top-extra">Contact Information</h3>
+<div>liz.hamilton@mailservice.com</div>
+
+
+    <div class="checkout-gift-card giftcard-applied">
+      <div class="row">
+        <div class="col-xs-6">
+          <h3 class="margin-top-extra">
+            <svg class="icon-square-lg icon-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-gift-card"></use></svg>
+            Gift Card
+          </h3>
+        </div><!-- .col-xs-6 -->
+      </div><!-- .row -->
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="media">
+            <div class="media-left">
+              <svg class="icon-left checkmark"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use></svg>
+            </div>
+            <div class="media-body">
+              Gift Card ending in 9901<br>
+              Applied: $75.00 | Balance: $0.00<br>
+            </div><!-- .media-body -->
+          </div><!-- .media -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .checkout-giftcard -->
+
+
+
+  </div>
+
+
+
+
+</section><!-- .checkout-block -->
+<section class="checkout-block" id="checkout-my-order">
+  <header>
+    <h2>My Order</h2>
+  </header>
+  <div class="checkout-block-body">
+    <div class="row">
+      <div class="col-xs-7">
+        <p><strong>Items in Shipment (2)</strong></p>
+      </div>
+      <div class="col-xs-5 text-right">
+        <a class="checkout-link link-toggled" data-action="toggle" data-label="Open" data-target="orders-id1" href="#">Close</a>
+      </div><!-- .col-xs-5 -->
+    </div><!-- .row -->
+    <div id="orders-id1">
+      <div class="product-details">
+        <div class="row row-tight">
+          <div class="col-sm-2 col-xs-3">
+            <img class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/checkout/temp/blue.jpg" alt="Product Image">  
+          </div><!-- .col-xs-3 -->
+          <div class="col-sm-10 col-xs-9">
+            <h4>Product Name</h4>
+            <div class="row">
+              <div class="col-sm-9">
+                <dl class="dl-horizontal meta-list">
+                  <dt>Size:</dt>
+                  <dd>Size 000 (0, XXS)</dd>
+                  <dt>Color:</dt>
+                  <dd>Blue</dd>
+                  <dt>Total Price:</dt>
+                  <dd><span class="strikethrough pad-right-10">$99.00</span> $74.00</dd>
+                  <dt>QTY:</dt>
+                  <dd>1</dd>
+                </dl>
+              </div><!-- .col-sm-9 -->
+            </div><!-- .row -->
+          </div><!-- .col-xs-9 -->
+        </div><!-- .row -->
+      </div><!-- .product-details -->
+      <div class="product-details">
+        <div class="row row-tight">
+          <div class="col-sm-2 col-xs-3">
+            <img class="img-responsive" src="{{ site.baseurl }}/web_assets/imgs/checkout/temp/red.jpg" alt="Product Image">  
+          </div><!-- .col-xs-3 -->
+          <div class="col-sm-10 col-xs-9">
+            <h4>Product Name</h4>
+            <div class="row">
+              <div class="col-sm-9">
+                <dl class="dl-horizontal meta-list">
+                  <dt>Size:</dt>
+                  <dd>Size 000 (0, XXS)</dd>
+                  <dt>Color:</dt>
+                  <dd>Red</dd>
+                  <dt>Total Price:</dt>
+                  <dd><span class="strikethrough pad-right-10">$99.00</span> $74.00</dd>
+                  <dt>QTY:</dt>
+                  <dd>1</dd>
+                </dl>
+              </div><!-- .col-sm-9 -->
+            </div><!-- .row -->
+          </div><!-- .col-xs-9 -->
+        </div><!-- .row -->
+      </div><!-- .product-details -->    </div><!-- #order-id1 -->
+    <hr class="hr-dark">
+    <section class="checkout-summary">
+      <div class="row">
+        <div class="col-xs-8">
+          <strong>Item Subtotal </strong>
+        </div><!-- .col-xs-8 -->
+        <div class="col-xs-4 text-right">
+          <strong>$222.22</strong>
+        </div><!-- .col-xs-4 -->
+      </div><!-- .row -->
+      <div class="row">
+        <div class="col-xs-8">
+          Shipping &amp; Handling
+        </div><!-- .col-xs-8 -->
+        <div class="col-xs-4 text-right">
+          FREE
+        </div><!-- .col-xs-4 -->
+      </div><!-- .row -->
+      <div class="row">
+        <div class="col-xs-8">
+          Sales Tax
+        </div><!-- .col-xs-8 -->
+        <div class="col-xs-4 text-right">
+          $10.10
+        </div><!-- .col-xs-4 -->
+      </div><!-- .row -->
+      <div class="summary-total">
+        <div class="row">
+          <div class="col-xs-8">
+            <strong>Order Total </strong>
+          </div><!-- .col-xs-8 -->
+          <div class="col-xs-4 text-right">
+            <strong>$232.32</strong>
+          </div><!-- .col-xs-4 -->
+        </div><!-- .row -->
+        <div class="row">
+          <div class="col-xs-8">
+            Applied Gift Card
+          </div><!-- .col-xs-8 -->
+          <div class="col-xs-4 text-right">
+            $75.00
+          </div><!-- .col-xs-4 -->
+        </div><!-- .row -->
+        <div class="row">
+          <div class="col-xs-8">
+            Applied Credit Card
+          </div><!-- .col-xs-8 -->
+          <div class="col-xs-4 text-right">
+            $157.32
+          </div><!-- .col-xs-4 -->
+        </div><!-- .row -->
+      </div><!-- .summary-total -->
+    </section><!-- .checkout-summary -->
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->

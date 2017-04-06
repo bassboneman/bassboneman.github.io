@@ -1,0 +1,143 @@
+From Jerrod and Dev Team
+CC, address, gift card, etc. completed blocks:
+* Add <dl><dt><dd> structure that I used on the my account pages: 
+http://localhost:5000/soma/pages/account/address-book.html
+
+
+MAKE CHANGES ON FLOWS AND IN LIBRARY!
+
+
+Modals will appear for registered users only on every block but shipping options
+
+DONE: "Apply Gift Card" remove "GC" on mobile
+DONE: GC needs xs-6
+DONE: Hide Sidebar "Order Summary" on 991 and smaller
+DONE: Header dropdown on mobile is screwed up 
+Clear CC fields if she hits "Change" guest checkout: nice to have
+DONE: Mobile payment: keep CC payment unchecked on page load
+DONE: Shirt box columns should be col-xs-5
+DONE: FIX THE MARGINS on the gift kit options
+DONE: For gift options radios -- once she selects, add a "cancel" to the right of the radio
+DONE: Add Contact info below cc entry block. Teresa sent the email.
+DONE: Update signin page.
+DONE: Kaylene said no crappy buttons. Narrow the columns. Move the logo next to the body copy.
+DONE: Do same thing to this ( GIFTED ITEM(S) - 2) that you did for gift card labels
+DONE: Promo code wrapper needs to be this: col-sm-3 col-xs-6
+
+
+=================================================================================================================================
+
+
+DONE: Registered:
+DONE: 1. Change opens modal. Add address slides down and reveals form.
+DONE: 3. Change opens payment modal with multiple radios.
+DONE: 4. No save info block
+DONE: Mobile modals need to fill the entire viewport. Make slide have full opacity.
+DONE: .cc-info bottom margin is screwing up payment modal. fix it!
+DONE: Optional decorative gift box,$6. Optional decorative gift box, $6.00 Optional decorative gift box, $6.00 each.
+DONE: Teresa is going to send screen grabs of the four modals... 
+DONE: ...and images for the gift options.
+DONE: "What is a gift kit?" remove this.
+DONE: Gift options: add max-width of 35rem on mobile
+DONE: Change this: 12 1/8" x 14 7/8" to this: 12" x 15"
+DONE: Login: mobile buttons need to fill the space (btn-block)
+DONE: Shopping bag page. Add red/blue instead of NATURAL CREAM.
+* Contact Information field needs to be required if she clicks save & continue. Nice to have.
+what to do with ##modal-gift-select?
+Modal footer button issue
+Registered users will have numbered blocks. Multi-ship will not.
+
+
+=================================================================================================================================
+
+
+Email Teresa if I get stuck!!!
+
+
+In general:
+DONE: on mobile, clicking the "credit card" radio should scroll the credit section offset from the top of the modal.
+DONE: "SELECT A SHIPPING ADDRESS" modal for registered users, need a "ship to multiple addresses" button.
+* This button will close the modal and completely change the page. See below for next steps.
+
+* On multiship, if she clicks the button with her address (or the button with add a new address), then she should get the modal from "Order review with multi-ship" button. That modal should not be triggered in the "Order review with multi-ship" spot. Basically, remove the modal from "Change Shipping Options".
+
+Flow 2:
+DONE: She's only gifting 1 item.
+DONE: Gift package individually: remove the gifted item and just have 2 generic items (with correct images and colors).
+DONE: On same form, clicking save will toggle the gifted item instead and hide the checkbox item.
+DONE: Add a green checkbox to the gifted state item.
+* Add gifting to confirmation with change/remove links removed from the template. Keep the toggle.
+
+
+Flow 3:
+* 3 items.
+* See above about button.
+DONE: Page reloads with "Choose Where to Ship Each Item" as the lead element.
+DONE: The sections no longer have numbers.
+DONE: After initial ship each item container, the order will be:
+DONE: ** payment/giftcard
+DONE: ** order total with promotion code
+
+DONE: Clicking the address buttons (Liz Hamilton) will launch the modal with the address book. She'll select a different address. Close the modal onto page 2.
+DONE: Page 2 can not have the place order button. hide it entirely.
+
+DONE: Third page trigger: Save & Continue button in "Choose Where to Ship Each Item" block will load page 3.
+
+Page 3
+DONE: Next page will include this from the template index: "Order review with multi-ship"
+DONE: Disable first button in that block.
+DONE: After that, include the payment block and the order summary block with "Place Order" button
+
+
+MODALS:
+* #modal-address-multi will show up on multi-ship if she clicks the button next to the product that says "Add a New Address"
+
+* #modal-address-multi-select
+** Add a new heading above the form reveal that says "Add a New Address"
+** Add the shipping option radios if it is a multi-ship modal
+
+
+
+
+
+==================================
+
+Gift message should always be blue
+Make sure it says Gift Message only or "Gift Wrap - $6.00"
+
+ON this page:
+http://localhost:5000/soma/pages/checkout/flows/3/checkout-2.html
+
+When she clicks the address button, she'll enter a new address for the first item. On save, update the first item in the list with a new address. That new address needs to carry over to confirmation. (No. 14 in the doc.)
+
+
+ON multi-ship review, add payment and order summary to the bottom, just beneath the gifting bar.
+
+
+
+
+
+
+
+
+
+===================================
+DONE: Add modal header background to modal footer to make it stand out more
+DONE: Mobile modal buttons will have 1.5rem left/right padding
+DONE: Look at the product-details dl's to see about saving space
+DONE: Remove change | remove from gifting modals
+DONE: .edit-remove needs to flush right on mobile (remove 767px media query)
+
+
+
+
+Modals:
+Fix resize bug
+Fix footer double click bug
+Abbreviate modal headings when too long for mobile <span class="hidden-xs">
+
+Order Summary:
+Need Place Order button beneath promo code in both dropdown and sidebar
+FLow 1 needs a disabled button until she clicks Save & Continue in payment block
+
+

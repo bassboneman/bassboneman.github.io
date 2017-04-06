@@ -1,0 +1,65 @@
+<p style="margin-top: 5rem; text-align: center;">Multi ship</p>
+
+<section id="checkout-confirmation-multiship" class="checkout-block">
+  <header>
+    <h2>Shipment 1 of 2</h2>
+  </header>
+  <div class="checkout-block-body">
+    <h3>Ship to:</h3>
+    <div>
+      Liz Hamilton <br>
+      456 Elm Street, Somewhere, VA 22222<br>
+      505-258-4975
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-9">
+        <div class="row">
+          <div class="col-sm-6">
+            <strong>Standard</strong><br>
+            6-9 business days                
+          </div><!-- .col-sm-6 -->
+          <div class="col-sm-6">
+            Estimated Arrival: Jan 17-20              
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+      </div><!-- .col-xs-9 -->
+      <div class="col-xs-3 text-right">
+        <span class="text-uppercase">Free</span>
+      </div><!-- .col-xs-3 -->
+    </div><!-- .row -->
+    <hr>
+    {% include _molecules/blocks/product-details-checkout.html placement='review-order' orderID='id3' totalProducts='1' layout='has-header' confirmationPage='yes' %}
+  </div><!-- .checkout-block-body -->
+
+  <header>
+    <h2>Shipment 2 of 2</h2>
+  </header>
+  <div class="checkout-block-body">
+    <h3>Ship to:</h3>
+    <div>
+      Liz Hamilton <br>
+      456 Elm Street, Somewhere, VA 22222<br>
+      505-258-4975
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-9">
+        <div class="row">
+          <div class="col-sm-6">
+            <strong>Standard</strong><br>
+            6-9 business days                
+          </div><!-- .col-sm-6 -->
+          <div class="col-sm-6">
+            Estimated Arrival: Jan 17-20              
+          </div><!-- .col-sm-6 -->
+        </div><!-- .row -->
+      </div><!-- .col-xs-9 -->
+      <div class="col-xs-3 text-right">
+        <span class="text-uppercase">Free</span>
+      </div><!-- .col-xs-3 -->
+    </div><!-- .row -->
+    <hr>
+    {% include _molecules/blocks/product-details-checkout.html placement='review-order' orderID='id4' totalProducts='3' layout='has-header' confirmationPage='yes' %}
+  </div><!-- .checkout-block-body --> 
+</section><!-- .checkout-block -->

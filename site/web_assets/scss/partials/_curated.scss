@@ -1,0 +1,264 @@
+.curated-header {
+  position: relative;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  h1 {
+    font-size: 7rem;
+    text-align: center;
+    letter-spacing: 0;
+    em {
+      font-family: $font-family-serif;
+      font-size: 6rem;
+      font-weight: 400;
+      text-transform: lowercase;
+    }
+    @media screen and (max-width: $break-sm-max) {
+      margin-bottom: .5rem;
+      font-size: 5rem;
+      em {
+        font-size: 3rem;
+      }
+    }
+    @media screen and (max-width: $break-xs-max) {
+      margin-bottom: 1rem;
+      font-size: 12vmin;
+      em {
+        font-size: 10vmin;
+      }
+    }
+  }
+  @media screen and (max-width: $break-xs-max) {
+    .curated-header-content {
+      // margin: 2px;
+      left: auto;
+      .curated-header-content-inner {
+        background: rgba(255,255,255,0.6);
+        padding: 2rem;
+      }
+    }
+  }
+  // h2 {
+  //   position: relative;
+  //   max-width: 30rem;
+  //   margin: 0 auto 2rem auto;
+  //   text-align: center;
+  //   text-transform: uppercase;
+  //   &:before {
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     width: 100%;
+  //     z-index: -1;
+  //     content: '';
+  //     margin: 0 auto;
+  //     border-top: 2px solid $color-black;
+  //   }
+  // }
+  h2 {
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+  }
+}
+
+.curated-header-content {
+  position: absolute;
+  margin: 0 auto;
+  left: 30%;
+  width: 65%;
+  // right: 5%;
+  text-align: center;
+  @include vertical-align;
+  @media screen and (max-width: $break-xs-max) {
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+.curated-header-cat-link {
+  // font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  // text-decoration: none;
+  text-decoration: underline;
+  text-transform: uppercase;
+  em {
+    display: block;
+    font-family: $font-family-serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-transform: lowercase;
+  }
+  .curated-header-cat {
+    display: block;
+  }
+  .curated-header-product {
+    display: block;
+    // display: inline-block;
+    // border-bottom: 2px solid $color-black;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $color-black;
+  }
+  @media screen and (max-width: $break-sm-max) {
+    font-size: 1.4rem;
+    em {
+      font-size: 1.8rem;
+    }
+  }
+}
+.curated {
+  margin-bottom: 8rem;
+  &:before { // prevents header overlap on internal anchors
+    content: '';
+    display: block;
+    height: 18rem; // fixed header height
+    margin-top: -18rem; // negative fixed header height
+    @media screen and (max-width: $break-sm-max) {
+      height: 14rem;
+      margin-top: -14rem;
+    }
+  }
+}
+
+.curated-heading {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $color-border;
+  h2 {
+    margin: 0;
+  }
+  a {}
+  @media screen and (max-width: $break-xs-max) {
+    text-align: center;
+  }
+}
+
+.curated-link {
+  text-align: right;
+  text-transform: uppercase;
+  a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  @media screen and (max-width: $break-xs-max) {
+    margin-top: .5rem;
+    text-align: center;
+  }
+  @include curated-link;
+}
+
+
+// creating columns that will grow shrink depending on total
+.curated-header-content-inner {
+  text-align: center;
+  font-size: 0;
+  .flex-col {
+    margin: 1rem 0;
+    display: inline-block;
+    // text-align: left;
+  }
+
+  // one item
+  .flex-col:nth-child(1):nth-last-child(1) {
+    width: 100%;
+  }
+
+  // two items
+  .flex-col:nth-child(1):nth-last-child(2),
+  .flex-col:nth-child(2):nth-last-child(1) {
+    width: 50%;
+  }
+
+  // three items
+  .flex-col:nth-child(1):nth-last-child(3),
+  .flex-col:nth-child(2):nth-last-child(2),
+  .flex-col:nth-child(3):nth-last-child(1) {
+    width: 33.3333%;
+  }
+
+  // four items
+  .flex-col:nth-child(1):nth-last-child(4),
+  .flex-col:nth-child(2):nth-last-child(3),
+  .flex-col:nth-child(3):nth-last-child(2),
+  .flex-col:nth-child(4):nth-last-child(1) {
+    width: 25%;
+  }
+
+  // five items
+  .flex-col:nth-child(1):nth-last-child(5),
+  .flex-col:nth-child(2):nth-last-child(4),
+  .flex-col:nth-child(3):nth-last-child(3),
+  .flex-col:nth-child(4):nth-last-child(2),
+  .flex-col:nth-child(5):nth-last-child(1) {
+    width: 20%;
+  }
+
+  // six items
+  .flex-col:nth-child(1):nth-last-child(6),
+  .flex-col:nth-child(2):nth-last-child(5),
+  .flex-col:nth-child(3):nth-last-child(4),
+  .flex-col:nth-child(4):nth-last-child(3),
+  .flex-col:nth-child(5):nth-last-child(2),
+  .flex-col:nth-child(6):nth-last-child(1) {
+    width: 25%;
+  }
+
+  // seven items
+  .flex-col:nth-child(1):nth-last-child(7),
+  .flex-col:nth-child(2):nth-last-child(6),
+  .flex-col:nth-child(3):nth-last-child(5),
+  .flex-col:nth-child(4):nth-last-child(4),
+  .flex-col:nth-child(5):nth-last-child(3),
+  .flex-col:nth-child(6):nth-last-child(2),
+  .flex-col:nth-child(7):nth-last-child(1) {
+    width: 25%;
+  }
+
+  // eight items
+  .flex-col:nth-child(1):nth-last-child(8),
+  .flex-col:nth-child(2):nth-last-child(7),
+  .flex-col:nth-child(3):nth-last-child(6),
+  .flex-col:nth-child(4):nth-last-child(5),
+  .flex-col:nth-child(5):nth-last-child(4),
+  .flex-col:nth-child(6):nth-last-child(3),
+  .flex-col:nth-child(7):nth-last-child(2),
+  .flex-col:nth-child(8):nth-last-child(1) {
+    width: 25%;
+  }
+
+  // .flex-col:nth-child(1):nth-last-child(6),
+  // .flex-col:nth-child(2):nth-last-child(5),
+  // .flex-col:nth-child(3):nth-last-child(4),
+  // .flex-col:nth-child(4):nth-last-child(3),
+
+  // .flex-col:nth-child(1):nth-last-child(7),
+  // .flex-col:nth-child(2):nth-last-child(6),
+  // .flex-col:nth-child(3):nth-last-child(5),
+  // .flex-col:nth-child(4):nth-last-child(4),
+
+  // .flex-col:nth-child(1):nth-last-child(8),
+  // .flex-col:nth-child(2):nth-last-child(7),
+  // .flex-col:nth-child(3):nth-last-child(6),
+  // .flex-col:nth-child(4):nth-last-child(5) {
+  //   margin-bottom: 2rem;
+  // }
+}
+
+.curated-nav-mobile {
+  display: none;
+  @media screen and (max-width: $break-xs-max) {
+    display: block;
+    margin: 2rem 0 0 0;
+  }
+}

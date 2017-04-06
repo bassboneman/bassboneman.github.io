@@ -1,0 +1,295 @@
+.size-wrap {
+  .nav.nav-tabs {
+    border: 0;
+    > li {
+      > a {
+        margin-right: 2rem;
+        padding: .3rem 0;
+        text-transform: uppercase;
+        border: 0;
+        border-bottom: .3rem solid transparent;
+        &:hover {
+          background: none;
+        }
+      }
+      &.active {
+        > a {
+          font-weight: 700;
+          color: $color-black;
+          border-color: $color-black;
+        }
+      }
+    }
+  }
+  h2 {
+    margin: 0 0 1rem 0;
+    font-family: $font-family-base;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      &:before {
+        display: block;
+        float: right;
+        margin-top: .3rem;
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        background: url(../svg/arrow-down-white.svg) no-repeat 50% 50%;
+        @include transition(transform);
+      }
+      &.open:before {
+        -webkit-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+        -webkit-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+      }
+    }
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+
+
+
+
+  .table-size-chart {
+    position: relative;
+    z-index: 0;
+    > tbody > tr,
+    > tfoot > tr,
+    > thead > tr {
+      > td,
+      > th {
+        vertical-align: middle;
+      }
+    }
+    th,
+    .td-header {
+      font-weight: $font-weight-bold;
+      border-bottom: 2px solid $color-border;
+    }
+    td.td-highlight-dark {
+      font-weight: $font-weight-bold;
+    }
+    td.td-highlight {
+      font-weight: $font-weight-bold;
+    }
+    .td-spacer {
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+  }
+  .table-in,
+  .table-cm {
+    display: none;
+    &.active {
+      display: table;
+    }
+  }
+  .table {
+    th {
+      width: 16.66%;
+      vertical-align: bottom;
+      text-transform: uppercase;
+    }
+    th, td {
+      text-align: center;
+    }
+    // two cells
+    th:nth-child(1):nth-last-child(2) {
+      width: 25%;
+    }
+    th:nth-child(2):nth-last-child(1) {
+      width: 75%;
+    }
+    // three cells
+    th:nth-child(1):nth-last-child(3),
+    th:nth-child(2):nth-last-child(2),
+    th:nth-child(3):nth-last-child(1) {
+      width: 33.33%;
+    }
+    // four cells
+    th:nth-child(1):nth-last-child(4),
+    th:nth-child(2):nth-last-child(3),
+    th:nth-child(3):nth-last-child(2),
+    th:nth-child(4):nth-last-child(1) {
+      width: 25%;
+    }
+    // five cells
+    th:nth-child(1):nth-last-child(5),
+    th:nth-child(2):nth-last-child(4),
+    th:nth-child(3):nth-last-child(3),
+    th:nth-child(4):nth-last-child(2),
+    th:nth-child(5):nth-last-child(1) {
+      width: 20%;
+    }
+  }
+  .unit-toggle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: right;
+    text-transform: uppercase;
+  }
+}
+
+.measure-info {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  h2 {
+    margin-bottom: 0;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  dt {
+    margin-bottom: .2rem;
+    padding-bottom: .2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: .1rem solid $color-border;
+  }
+  dt, dd {
+    padding-left: .6rem;
+    padding-right: .6rem;
+  }
+}
+
+.measure-img {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.measure-item {
+  display: block;
+  position: absolute;
+  left: 5%;
+  width: 38%;
+  padding-bottom: .4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: .1rem solid $color-black;
+  &:before {
+    display: block;
+    position: absolute;
+    bottom: -.3rem;
+    right: 0;
+    width: .5rem;
+    height: .5rem;
+    content: '';
+    background: $color-black;
+    border-radius: 50%;
+  }
+  &.measure-item-right {
+    left: auto;
+    right: 5%;
+    text-align: right;
+    &:before {
+      right: auto;
+      left: 0;
+    }
+  }
+  &.tops-bust {
+    top: 39%;
+    width: 39%;
+  }
+  &.tops-arm {
+    top: 35%;
+    width: 33%;
+  }
+  &.tops-waist {
+    top: 63%;
+    width: 37%;
+  }
+  &.tops-high-hip {
+    top: 72%;
+    width: 37%;
+  }
+  &.bottoms-waist {
+    top: 7%;
+    width: 39%;
+  }
+  &.bottoms-inseam {
+    top: 55%;
+    width: 43%;
+  }
+  &.bottoms-low-hip {
+    top: 19%;
+    width: 38%;
+  }
+
+  &.dresses-arm {
+    top: 22%;
+    width: 36%;
+  }
+  &.dresses-bust {
+    top: 31%;
+    width: 41.5%;    
+  }
+  &.dresses-waist {
+    top: 43%;
+    width: 40%;    
+  }
+  &.dresses-low-hip {
+    top: 56%;
+    width: 39%;    
+  }
+
+  &.outerwear-arm {
+    top: 30%;
+    width: 34.5%;
+  }
+  &.outerwear-bust {
+    top: 37.5%;
+    width: 40%;    
+  }
+  &.outerwear-waist {
+    top: 50%;
+    width: 39%;    
+  }
+  &.outerwear-low-hip {
+    top: 67%;
+    width: 37.5%;    
+  }
+
+  &.swim-torso {
+    top: 26.5%;
+    width: 44%;
+  }
+  &.swim-bust {
+    top: 39%;
+    width: 36%;    
+  }
+  &.swim-waist {
+    top: 58%;
+    width: 39%;    
+  }
+  &.swim-high-hip {
+    top: 65%;
+    width: 35.5%;    
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.2rem;
+  }
+}
+
+.toggle-item {
+  display: none;
+  &.open {
+    display: block;
+  }
+}
+.toggle-wrap {
+  & + .toggle-wrap {
+    margin-top: 2rem;
+  }
+  h2 {
+    margin-bottom: 2rem;
+    padding: .5rem 1rem;
+    color: #fff;
+    background: #4d4d4f; // new color specified for just this project
+  }
+}

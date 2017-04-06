@@ -1,0 +1,33 @@
+<hr>
+{% if include.relatedHeading == "yes" %}
+  <h3 class="heading-styled">You May Also Love...</h3>
+{% endif %}
+<div class="row hidden-xs">
+  <div class="col-sm-2 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView='yes' %}
+  </div>
+  <div class="col-sm-2 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView='yes' %}
+  </div>
+  <div class="col-sm-2 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView='yes' %}
+  </div>
+  <div class="col-sm-2 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView='yes' %}
+  </div>
+  <div class="col-sm-2 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView='yes' %}
+  </div>
+  <div class="col-sm-2 col-xs-6">
+    {% include _molecules/products/listing-single.html quickView='yes' %}
+  </div>
+</div>
+
+{% comment %}mobile view{% endcomment %}
+<div class="visible-xs">
+  {% include _molecules/carousels/related.html %}
+</div>
+{% if include.relatedBotBorder == "no" %}
+{% else %}
+<hr> 
+{% endif %}

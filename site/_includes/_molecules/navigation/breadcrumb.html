@@ -1,0 +1,13 @@
+<ol class="breadcrumb">
+  <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="#" itemprop="url"><span itemprop="title">Home</span></a></li>
+  {% if include.breadLvl3 == nil %}
+    <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><span itemprop="title">{{ include.breadLvl2 }}</span></li>
+  {% elsif include.breadLvl4 == nil %}
+    <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="#" itemprop="url"><span itemprop="title">{{ include.breadLvl2 }}</span></a></li>
+    <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><span itemprop="title">{{ include.breadLvl3 }}</span></li>
+  {% else %}
+    <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="#" itemprop="url"><span itemprop="title">{{ include.breadLvl2 }}</span></a></li>
+    <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">{{ include.breadLvl3 }}</span></li>
+    <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><a href="#" itemprop="url"><span itemprop="title">{{ include.breadLvl4 }}</span></a></li>
+  {% endif %}
+</ol>

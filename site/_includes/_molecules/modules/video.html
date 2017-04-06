@@ -1,0 +1,22 @@
+<section class="module {{ include.moduleClass }}">
+  <div class="module-video">
+    <div class="modal-inner">
+      <a href="#" class="video-overlay" data-video="youtubePlayer">
+        <svg class="play-icon">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play-icon"></use>
+        </svg>
+        <img class="img-responsive" src="{{ include.moduleImage }}" alt="{% if include.videoHeading %}{{ include.moduleHeading }}{% endif %}">
+        {% if include.moduleHeading %}
+          <h2 class="module-heading">{{ include.moduleHeading }}</h2>
+        {% endif %}
+        {% if include.moduleCopy %}
+          <div class="module-copy">{{ include.moduleCopy }}</div>
+        {% endif %}
+        <span class="sr-only">Play Video</span>
+      </a>
+      <div class="video-hidden embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="{{ include.videoSrc }}" allowfullscreen=""></iframe>
+      </div>
+    </div>
+  </div><!-- .module-video -->
+</section><!-- .module -->

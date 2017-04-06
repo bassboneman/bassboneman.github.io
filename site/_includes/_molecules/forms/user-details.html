@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="first-name">First Name</label>
+      <input type="text" class="form-control" id="first-name" placeholder="">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="last-email">Last Name</label>
+      <input type="text" class="form-control" id="last-name" placeholder="">
+    </div>
+  </div>
+</div><!-- .row -->
+
+{% include _molecules/forms/address.html %}
+
+<div class="row">
+  <div class="col-md-12">
+    {% include _atoms/forms/phone.html labelName='Phone' labelID1='phone1' labelID2='phone2' labelID3='phone3' %}
+  </div>
+</div>

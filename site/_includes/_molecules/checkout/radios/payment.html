@@ -1,0 +1,16 @@
+{% capture ccType %}{{ include.ccType }}{% endcapture %}
+{% capture ccLabel %}{{ include.ccLabel }}{% endcapture %}
+
+<div class="radio {{ include.radioClass }}">
+  <label>
+    <div class="media">
+      <div class="media-left media-middle">
+        <input type="radio" name="{{ include.radioSet }}" id="{{ include.radioID }}" value="{{ include.radioID }}" {% if include.checked %}checked="checked"{% endif %} styled='yes'>
+        <span class="input-styled"></span>
+      </div>
+      <div class="media-body">
+        {% include _molecules/checkout/blocks/cc.html ccType=ccType ccLabel=ccLabel %}
+      </div><!-- .media-body -->
+    </div><!-- .media -->
+  </label>
+</div><!-- .radio -->

@@ -1,0 +1,15 @@
+<p>Please enter the 16-digit Gift Card number and 4-digit PIN located on the back of the Gift Card to view your balance.</p>
+
+<form action="">
+  <div class="row">
+    <div class="col-sm-4">
+      {% include _atoms/forms/input.html labelName='Gift Card Number' labelID='gift-card-number' inputType='text' extra='pattern="\d*"' %}
+    </div>
+    <div class="col-sm-4">
+      {% include _atoms/forms/input.html labelName='PIN' labelID='pin' labelExtra='<a href="javascript://" data-toggle="tooltip" data-placement="top" title="Where is the PIN? Scratch off with a coin to reveal the PIN (personal identificaton number)."><i class="fa fa-question-circle fa-lg"></i></a>' inputType='text' extra='pattern="\d*"' %}
+    </div>
+  </div>
+  <div class="form-group">
+    {% include _atoms/buttons/button.html btnClass='btn-default' btnLabel='Check Balance' %}
+  </div>
+</form>

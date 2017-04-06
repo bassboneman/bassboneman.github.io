@@ -1,0 +1,252 @@
+// used for smaller brand-specific styles
+
+.register-heading {
+  margin-bottom: .5rem;
+  font-size: 2.8rem;
+  font-weight: 400;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    margin-top: 3rem !important;
+  }
+}
+
+.register-rewards {
+  text-align: center;
+  h3 {
+    font-size: 2.6rem;
+  }
+  p {
+    font-family: $font-family-serif;
+    font-size: 1.6rem;
+    font-style: italic;;
+    @media screen and (min-width: 768px) {
+      max-width: 40rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  ol {
+    padding-bottom: 1rem;
+    li {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.rewards-heading {
+  margin: 2.5rem 0 !important;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+.rewards-heading-alt {
+  margin: 5rem 0 3rem 0;
+  font-family: $font-family-serif;
+  text-transform: none;
+}
+h2.rewards-heading-alt {
+  font-size: 3.6rem;
+}
+h3.rewards-heading-alt {
+  font-size: 2.8rem;
+}
+.rewards-subheading {
+  margin: 0 0 3rem 0;
+  font-family: $font-family-serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  text-transform: none;
+}
+.rewards-block {
+  text-align: center;
+  @media screen and (min-width: 992px) {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  p {
+    font-family: $font-family-serif;
+    font-size: 1.8rem;
+  }
+  .rewards-status {
+    margin-top: -2rem;
+    font-family: $font-family-base;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+}
+
+.rewards-benefits-row {
+  // max-width: 80rem;
+  // margin: 0 auto 3rem auto;
+  margin: 0 0 3rem 0;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid $color-border;
+  .rewards-benefits-level {
+    margin-bottom: 2rem;
+    text-align: center;
+    h3 {
+      margin: 0;
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: #5a5858;
+      }
+      small {
+        display: block;
+        margin-top: .5rem;
+        font-family: $font-family-serif;
+        font-weight: 400;
+        text-transform: none;
+        color: $color-black;
+      }
+    }
+  }
+  .rewards-benefits-items {
+    li {
+      font-weight: 700;
+    }
+    p {
+      margin: 0;
+      font-family: $font-family-serif;
+      font-style: italic;
+    }
+  }
+  &.rewards-locked {
+    color: #5a5858;
+  }
+  @media screen and (min-width: 767px) {
+    display: table;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    .rewards-benefits-level,
+    .rewards-benefits-items {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .rewards-benefits-level {
+      width: 35%;
+      margin: 0;
+      padding: 1rem 2.5rem 1rem 0;
+      text-align: right;
+    }
+    .rewards-benefits-items {
+      position: relative;
+      width: 65%;
+      padding: 1rem 0 1rem 2.5rem;
+      padding-right: 20%;
+      border-left: 1px solid $color-black;
+      background: #fff;
+      // &:after, &:before {
+      //   right: 100%;
+      //   top: 50%;
+      //   border: solid transparent;
+      //   content: " ";
+      //   height: 0;
+      //   width: 0;
+      //   position: absolute;
+      //   pointer-events: none;
+      // }
+
+      // &:after {
+      //   border-color: rgba(255, 255, 255, 0);
+      //   border-right-color: #ffffff;
+      //   border-width: 7px;
+      //   margin-top: -7px;
+      // }
+      // &:before {
+      //   border-color: rgba(0, 0, 0, 0);
+      //   border-right-color: #000000;
+      //   border-width: 8px;
+      //   margin-top: -8px;
+      // }
+    }
+  }
+}
+
+.sig-noce {
+  width: 125px;
+  height: 36px;
+}
+
+.rewards-chart {
+  width: 100%;
+  margin: 0 0 4rem 0;
+  text-align: left;
+  border: 1px solid $color-black;
+  @include clearfix;
+  .rewards-chart-item {
+    padding: .6rem 1rem;
+    position: relative;
+  }
+  .rewards-chart-item + .rewards-chart-item {
+    border-top: 1px solid $color-black;
+  }
+  .rewards-chart-total {
+    display: block;
+    background-color: lighten($color-gray-light, 5%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+  }
+  .rewards-chart-label {
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  @media screen and (min-width: 768px) {
+    .rewards-chart-item {
+      width: 25%;
+      float: left;
+    }
+    .rewards-chart-item + .rewards-chart-item {
+      border-top: 0;
+      border-left: 1px solid $color-black;
+    }
+  }
+
+}
+
+.page-recall {
+  text-align: center;
+  h1 {
+    color: $color-red;
+    @media screen and (min-width: 768px) {
+      font-size: 5.4rem;
+    }
+  }
+  .lead strong {
+    text-transform: uppercase;
+  }
+  .alert {
+    background: $color-black;
+    color: #fff;
+    p {
+      margin-bottom: 1rem;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+  }
+  img {
+    margin: 0 auto;
+  }
+  .recall-imgs {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+}

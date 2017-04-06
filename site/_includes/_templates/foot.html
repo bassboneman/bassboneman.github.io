@@ -1,0 +1,81 @@
+{% comment %}
+this font toggle was never really used and is getting in the way of elements in the footer
+<style>
+  .font-switcher {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    background: rgba(0,0,0,0.85);
+  }
+  .font-switcher a {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+  }
+</style>
+<div class="font-switcher">
+  <select name="" id="font-select">
+    <option value="default">Default</option>
+    <option value="georgia">Georgia</option>
+    <option value="arial">Arial</option>
+  </select>
+</div>
+{% endcomment %}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+{% comment %}<script src="{{ site.baseurl }}/web_assets/js/vendor/bootstrap.min.js"></script>{% endcomment %}
+{% comment %}
+These scripts have been added to web_assets/js/dist/scripts.js via grunt. Look for the libs and partials files to update.
+<script src="{{ site.baseurl }}/web_assets/js/vendor/jquery.mobile.custom.min.js"></script>
+<script src="{{ site.baseurl }}/web_assets/js/vendor/jquery.zoom.min.js"></script>
+<script src="{{ site.baseurl }}/web_assets/js/vendor/bootstrap-select.min.js"></script>
+<script src="{{ site.baseurl }}/web_assets/js/vendor/jquery.autotab.min.js"></script>
+<script src="{{ site.baseurl }}/web_assets/js/vendor/typeahead.jquery.min.js"></script>
+<script src="{{ site.baseurl }}/web_assets/js/vendor/picturefill.min.js"></script>
+<script src="{{ site.baseurl }}/web_assets/js/vendor/jquery.sharrre.js"></script>{% endcomment %}
+
+<script src="{{ site.baseurl }}/web_assets/js/dist/scripts.js"></script>
+
+{% if page.brand == 'soma' %}
+<script src="{{ site.baseurl }}/web_assets/js/soma/scripts.js"></script>
+{% endif %}
+
+{% if page.user %}
+<script src="{{ site.baseurl }}/team/{{ page.user }}/assets/js/scripts.js"></script>
+{% endif %}
+
+{% comment %}
+{% if page.title == 'Special Features' %}
+  <script>
+    // opens the header promo for 5 seconds on page load
+    // view it at local
+    $(window).load(function() {
+      $('#header-promo-wrap').toggleClass('promo-open');
+      $('#header-promo').slideDown(400, function(){
+        $('#header-promo-inner').animate(
+          {opacity: 1},
+          {duration: 400}
+        );
+      });
+      $('#promo-carousel').carousel('pause');
+      $('[data-toggle="header-promo"]').attr('aria-expanded', 'true');
+      carouselNormalization();
+    }); 
+    $(function() {
+      setTimeout(function(){
+        $('#header-promo-wrap').toggleClass('promo-open');
+        $('#header-promo').slideUp(400);
+        $('#header-promo-inner').animate(
+          {opacity: 0},
+          {duration: 400}
+        );
+        $('#promo-carousel').carousel('cycle');
+        $('[data-toggle="header-promo"]').attr('aria-expanded', 'false');
+      }, 5000);
+    });
+  </script>
+{% endif %}
+{% endcomment %}

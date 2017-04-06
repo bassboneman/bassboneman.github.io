@@ -1,0 +1,39 @@
+<form action="#" class="form-labels">
+  
+  <p style="margin-top: 5rem; text-align: center;">Where to ship</p>
+  {% include _molecules/checkout/blocks/shipping-multiple-where.html %}
+
+  <p style="margin-top: 5rem; text-align: center;">Order review with multi-ship</p>
+  {% include _molecules/checkout/blocks/review-order.html type='multi-ship' id='3' %}
+
+  <p style="margin-top: 5rem; text-align: center;">Order review with gifting messages</p>
+  {% include _molecules/checkout/blocks/review-order.html giftMessage='yes' id='5' %}
+
+  <p style="margin-top: 5rem; text-align: center;">Order review with single gifting message</p>
+  {% include _molecules/checkout/blocks/review-order.html giftMessage='yes' giftTogether='yes' id='6' %}
+
+  <p style="margin-top: 5rem; text-align: center;">Order review (multi) with single gifting message</p>
+  {% include _molecules/checkout/blocks/review-order.html type='multi-ship' giftMessage='yes' singleGift='yes' id='7' %}
+
+
+</form>
+
+<hr>
+
+<p>{% include _atoms/buttons/button.html btnLink='#' btnClass='btn-sm btn-primary' btnLabel='Address' btnExtra='data-toggle="modal" data-target="#modal-address-no-billing"' %}</p>
+
+<p>{% include _atoms/buttons/button.html btnLink='#' btnClass='btn-sm btn-primary' btnLabel='Shipping Options' btnExtra='data-toggle="modal" data-target="#modal-shipping-options"' %}</p>
+
+<p>{% include _atoms/buttons/button.html btnLink='#' btnClass='btn-sm btn-primary' btnLabel='Address with Options' btnExtra='data-toggle="modal" data-target="#modal-address-multi"' %}</p>
+
+<p>{% include _atoms/buttons/button.html btnLink='#' btnClass='btn-sm btn-primary' btnLabel='Address Select' btnExtra='data-toggle="modal" data-target="#modal-address-multi-select"' %}</p>
+
+{% comment %}
+<p>{% include _atoms/buttons/button.html btnLink='#' btnClass='btn-sm btn-primary' btnLabel='Address with No Billing' btnExtra='data-toggle="modal" data-target="#modal-address-no-billing"' %}</p>
+
+<p>{% include _atoms/buttons/button.html btnLink='#' btnClass='btn-sm btn-primary' btnLabel='Gifting' btnExtra='data-toggle="modal" data-target="#modal-gift-select"' %}</p>
+
+<p>{% include _atoms/buttons/button.html btnLink='#' btnClass='btn-sm btn-primary' btnLabel='Gifting Together' btnExtra='data-toggle="modal" data-target="#modal-gift-message-together"' %}</p>
+{% endcomment %}
+
+<p>{% include _atoms/buttons/button.html btnLink='#' btnClass='btn-sm btn-primary' btnLabel='Payment Options' btnExtra='data-toggle="modal" data-target="#modal-payment-options"' %}</p>

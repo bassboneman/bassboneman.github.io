@@ -1,0 +1,623 @@
+<section class="example-wrap">
+  <header>
+    <h2 id="text-primary-fonts">Primary Fonts</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/primary-fonts.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/primary-fonts.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-serif-fonts">Serif Fonts</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/serif-fonts.html %}
+      {% if page.brand == 'whbm' %}
+        <p class="alert alert-info">Didot bold isn't very discernable on smaller fonts.</p>
+      {% endif %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/serif-fonts.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-headings">Default Headings</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/headings.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/headings.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-heading-stylized">Stylized Heading</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="alert alert-info">
+        <strong>Note:</strong> The following is used in shelf headers. It can/should be adjusted depending on copy 
+        and imagery requirements. Content module parent classes should be used to set the font size and other styles.
+        See <a href="{{ site.baseurl }}/molecules/#modules">Content Modules</a> for examples.
+      </div>
+      {% include _atoms/text/heading-stylized.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/heading-stylized.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-heading-collection">Collection Name</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/heading-collection.html collectionName='Travelers Collection' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/heading-collection.html collectionName='Travelers Collection' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-heading-has-line">Heading with Line</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/heading-has-line.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/heading-has-line.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-body">Body</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/body.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/body.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-style">Styles</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/style.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/style.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-lead">Lead Copy</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/lead.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/lead.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-small">Small Copy</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/small.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/small.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-strikethrough">Strikethrough</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/strikethrough.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/strikethrough.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-alignment">Alignment</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/alignment.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/alignment.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-transform">Transformation</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/transform.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/transform.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-address">Address</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/address.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/address.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-alerts">Alerts</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/alerts.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/alerts.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-alert">Text alert</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/text-alert.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/text-alert.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-well">Well</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/well.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/well.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-hr-mobile">Search Messaging</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/search-msg.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/search-msg.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-product-group">Product Group (PDP display)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="product-wrap">
+        {% include _atoms/text/product-group.html %}
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/product-group.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-product-name">Product Name</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="product-wrap">
+        {% include _atoms/text/product-name.html %}
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/product-name.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-product-style-id">Product Style ID</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/product-style-id.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/product-style-id.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-product-size-tools">Product Size Tools</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/product-size-tools.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/product-size-tools.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-product-remove">Product Remove</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/product-remove.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/product-remove.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-product-message">Product Message</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/product-message.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/product-message.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-product-full-link">Product Link (within modal)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/product-full-link.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/product-full-link.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-product-price-final-sale">Product Price: Final Sale</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/product-price-final-sale.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/product-price-final-sale.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-product-price-final-sale-long">Product Price: Long Label</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/product-price-final-sale.html longLabel='yes' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/product-price-final-sale.html longLabel='yes' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-product-price-final-sale-tooltip">Product Price: Final Sale (w/ tooltip)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/product-price-final-sale.html longLabel='yes' tooltip='yes' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/product-price-final-sale.html longLabel='yes' tooltip='yes' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-facet-heading">Facet Heading</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/facet-heading.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/facet-heading.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-facet-label">Facet Label</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/facet-label.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/facet-label.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-buy-more">Buy More</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/buy-more.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/buy-more.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-info-link">Info Link</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/info-link.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/info-link.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-details-heading">Details Heading</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/detail-heading.html detailLabel='Order Summary' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/detail-heading.html detailLabel='Order Summary' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-coupon-code">Coupon Code</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/coupon-code.html codeCopy='Use Promo Code: TK421' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/coupon-code.html codeCopy='Use Promo Code: TK421' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-hr">Horizontal Rule</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/hr.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/hr.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="text-hr-mobile">Horizontal Rule (Mobile Only)</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/text/hr-mobile.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/text/hr-mobile.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>

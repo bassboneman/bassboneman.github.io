@@ -1,0 +1,34 @@
+{% capture placement %}{{ include.placement }}{% endcapture %}
+{% capture modal %}{{ include.modal }}{% endcapture %}
+{% capture status %}{{ include.status }}{% endcapture %}
+
+{% if include.status == 'message-entered' %}
+<div id="{{ include.id }}" class="checkbox gift-message-entered {{ include.class }}">
+{% else %}
+<div id="{{ include.id }}" class="checkbox checkout-toggle">
+  <label>
+{% endif %}
+    <div class="media">
+      <div class="media-left media-middle">
+        {% if include.status == 'message-entered' %}
+          <svg class="checkmark"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use></svg>
+        {% else %}
+          <input type="checkbox" value="{{ include.checkID }}" id="{{ include.checkID }}" styled='yes'>
+          <span class="input-styled"></span>
+        {% endif %}
+      </div>
+      <div class="media-body">
+        {% if include.noEdit %}
+          {% include _molecules/blocks/product-details-checkout.html placement=placement modal=modal status=status noEdit='true' %}
+        {% else %}
+          {% include _molecules/blocks/product-details-checkout.html placement=placement modal=modal status=status %}          
+        {% endif %}
+      </div><!-- .media-body -->
+    </div><!-- .media -->
+{% if include.status != 'message-entered' %}
+  </label>
+  <div id="checkout-{{ include.checkID }}" class="checkout-toggle-content toggle-hidden toggle-gifting">
+    {% include _molecules/checkout/forms/gift-message.html %}
+  </div><!-- .checkout-toggle-content -->
+{% endif %}
+</div><!-- .checkbox -->

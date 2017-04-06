@@ -1,0 +1,49 @@
+<!-- not sure whether to add editing, complete, etc. to this one -->
+<section id="checkout-save-info" class="checkout-block first not-started">
+  <header>
+    <a href="#" class="checkout-btn-change" data-toggle="checkout-edit">Change</a>
+    <h2>4. Save My Information <small><em>(optional)</em></small></h2>
+  </header>
+  <div class="checkout-block-body">
+    <div class="checkout-section-form">
+      <h3>Why Create An Account?</h3>
+      <ul>
+        <li>Get faster checkout on future orders</li>
+        <li>Save your preferred shipping and billing information</li>
+        <li>Add items to your Wish List for later</li>
+        <li>Quality for members-only discounts and events</li>
+      </ul>
+      <div class="row row-tight">
+        <div class="col-sm-6">
+          <div class="field-wrap">
+            {% include _atoms/forms/input.html class="input-lg" labelName='Password' labelID='password' inputType='password' %}
+          </div><!-- .field-wrap -->
+        </div><!-- .col-sm-6 -->
+        <div class="col-sm-6">
+          <div class="field-wrap">
+            {% include _atoms/forms/input.html class="input-lg" labelName='Confirm Password' labelID='password-confirm' inputType='password' %}
+          </div><!-- .field-wrap -->
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->
+      <div class="row row-tight">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="p">
+            {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-primary btn-lg btn-block btn-checkout btn-width' btnLabel='Save &amp; Continue' btnExtra='data-saved-info="yes" data-checkout="review-order"' %}
+          </div><!-- .p -->
+          <div class="text-center">
+            {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-link btn-checkout' btnLabel='Skip' btnExtra='data-saved-info="no" data-checkout="review-order"' %}
+          </div>
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->
+    </div><!-- .checkout-section-form -->
+
+    <div class="checkout-section-entry">
+      <div class="info-saved-copy">
+        Your Soma.com account <strong>will be created</strong> when your order is placed, and your information will be saved on our website for future orders. 
+      </div>
+      <div class="info-not-saved-copy">      
+        You have chosen to <strong>NOT</strong> create a Soma.com account. Your information will not be saved on our website.
+      </div>
+    </div>
+  </div><!-- .checkout-block-body -->
+</section><!-- .checkout-block -->

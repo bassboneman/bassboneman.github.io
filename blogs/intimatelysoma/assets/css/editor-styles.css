@@ -1,0 +1,227 @@
+@charset "UTF-8";
+.story {
+  margin-bottom: 30px; }
+  .story h2 {
+    font-size: 18px; }
+  .story h3 {
+    font-size: 16px;
+    text-align: center; }
+  .story p {
+    font-size: 13px; }
+  .story h2, .story h3, .story p {
+    margin-bottom: 5px; }
+  .story .story-img {
+    display: block;
+    margin-bottom: 15px; }
+  .story .excerpt {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    color: #585858; }
+  .story a {
+    font-weight: 700;
+    color: #000; }
+  @media (min-width: 768px) {
+    .story.search-item {
+      margin-bottom: 80px; }
+      .story.search-item h2 {
+        font-size: 28px;
+        margin-bottom: 40px; }
+      .story.search-item p {
+        font-size: 16px;
+        margin-bottom: 20px; } }
+
+.article {
+  max-width: 750px;
+  margin: 0 auto; }
+
+.article-header {
+  margin-bottom: 30px;
+  text-align: center; }
+  .article-header h1 {
+    margin: 0;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .article-header hr {
+    width: 80px;
+    border-color: #000; }
+  .article-header time {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px; }
+
+.article-body {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.5; }
+
+.article-cat {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase; }
+  .article-cat a {
+    color: #000; }
+    .article-cat a:hover {
+      text-decoration: underline; }
+
+.intro {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  border-bottom: 1px solid #000; }
+  .intro > *:last-child {
+    margin-bottom: 0; }
+
+.article blockquote {
+  width: 75%;
+  margin: 60px auto 20px auto;
+  padding: 0;
+  font-size: 24px;
+  text-align: center;
+  font-style: italic;
+  border: 0;
+  quotes: "“" "”" "‘" "’"; }
+  .article blockquote:before, .article blockquote:after {
+    display: block;
+    content: open-quote;
+    font-size: 72px;
+    line-height: 0.1em; }
+  .article blockquote:after {
+    content: close-quote;
+    padding-top: 40px; }
+
+.article-labels {
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #939598; }
+  .article-labels span {
+    text-transform: uppercase;
+    color: #000; }
+  .article-labels a {
+    color: #939598; }
+
+.wp-caption {
+  margin-bottom: 20px; }
+
+.wp-caption-text {
+  margin-top: 5px;
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+  color: #939598; }
+
+.alignleft {
+  float: left;
+  margin: 0 20px 20px 0; }
+
+.alignright {
+  float: right;
+  margin: 0 0 20px 20px; }
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto; }
+
+@media (max-width: 767px) {
+  .alignleft,
+  .alignright {
+    display: block;
+    margin: 0 auto 20px auto; } }
+.article-nav {
+  margin-bottom: 50px;
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid #b6b6b6;
+  border-width: 1px 0; }
+  .article-nav a {
+    color: #939598; }
+  .article-nav .article-nav-cat {
+    text-align: center; }
+  .article-nav .article-nav-next {
+    text-align: right; }
+  @media (max-width: 767px) {
+    .article-nav .article-nav-prev,
+    .article-nav .article-nav-next {
+      text-align: center; } }
+
+.story-related {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #b6b6b6; }
+  .story-related h2 {
+    font-size: 21px; }
+
+.story-block,
+.story-related {
+  margin-bottom: 30px; }
+  @media (max-width: 776px) {
+    .story-block,
+    .story-related {
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto; } }
+
+.hr-top {
+  margin-top: 0;
+  margin-bottom: 30px;
+  border-top: 1px solid #b6b6b6; }
+
+.hrecipe .fn {
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  text-align: center; }
+.hrecipe h3 {
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px; }
+.hrecipe .details {
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+.hrecipe .ingredients {
+  margin-bottom: 30px;
+  padding: 0 0 0 25px;
+  list-style: none;
+  border-left: 2px solid #b2b2b2; }
+  .hrecipe .ingredients li {
+    line-height: 1.7; }
+.hrecipe .instructions {
+  margin-bottom: 30px;
+  padding: 0 0 0 25px; }
+  .hrecipe .instructions li {
+    line-height: 1.7; }
+
+.row {
+  width: 750px; }
+  .row .col-sm-2 {
+    float: left;
+    margin-right: 2px;
+    width: 123px; }
+    .row .col-sm-2 p {
+      width: 100%; }
+  .row .col-sm-3 {
+    float: left;
+    margin-right: 2px;
+    width: 185px; }
+    .row .col-sm-3 p {
+      width: 100%; }
+  .row .col-sm-4 {
+    float: left;
+    margin-right: 2px;
+    width: 247px; }
+    .row .col-sm-4 p {
+      width: 100%; }
+  .row .col-sm-6 {
+    float: left;
+    margin-right: 2px;
+    width: 371px; }
+    .row .col-sm-6 p {
+      width: 100%; }
+
+/*# sourceMappingURL=editor-styles.css.map */

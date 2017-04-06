@@ -1,0 +1,19 @@
+#logo {
+  position: absolute;
+  left: 50%;
+  display: block;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  @include logo;
+  @include transition(transform, 0.2s);
+  svg {
+    display: block;
+  }
+  @media screen and (max-width: $break-sm-max) {
+    @include logo-medium;
+  }
+  @media screen and (max-width: $break-xs-max) {
+    @include logo-mobile;
+  }
+}

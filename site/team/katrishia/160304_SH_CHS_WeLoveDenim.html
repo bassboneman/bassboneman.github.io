@@ -1,0 +1,24 @@
+---
+layout: page-collection
+title: Sandbox
+top-link: pages
+brand: chicos
+user: katrishia
+---
+
+
+{% comment %}
+All other content modules should use the following container. You don't have to include .content and .container-fluid for each module. 
+Those parent elements can wrap all modules.
+{% endcomment %}
+<div class="content">
+  <div class="container-fluid">
+	
+		{% comment %}text left, image right, full-width image{% endcomment %}
+	    {% include _molecules/modules/shelf.html moduleClass='' moduleLayout='module-copy-white' moduleImage='assets/imgs/160304_SH_CHS_WeLoveDenim/160304_SH_CHS_WeLoveDenim_2400x900.jpg' moduleImageMobile='assets/imgs/160304_SH_CHS_WeLoveDenim/160304_SH_CHS_WeLoveDenim_767x767.jpg' moduleHeading='More Reasons <br>We Love Denim' moduleCopy='<p> It’s so easy to accessorize. We can wear it all day <br>(without looking like we’ve been wearing it all day). <br><em>These new arrivals deserve some love, too...</em></p>' moduleLinkUrl='#' buttonLabel='Shop All New Arrivals' buttonClass='btn-responsive' %}
+	
+  </div><!-- .container-fluid -->
+</div><!-- .content -->
+
+{% comment %}The following is the quick view modal used by various content module molecules.{% endcomment %}
+{% include _molecules/modals/modal-quick-view.html %}

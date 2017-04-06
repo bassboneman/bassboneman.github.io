@@ -1,0 +1,32 @@
+#footer-checkout {
+  padding: 5rem 1.5rem 3rem 1.5rem;
+  font-size: 0;
+  text-align: center;
+  text-transform: uppercase;
+  .copyright {
+    font-size: 1.4rem;
+  }
+  .footer-links {
+    span {
+      padding-left: 1rem;
+      font-size: 1.4rem;
+      &:before {
+        content: '|';
+        padding-right: 1rem;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .footer-links {
+      display: block;
+      margin-top: 1rem;
+      span:first-child {
+        padding: 0;
+        &:before {
+          content: '';
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

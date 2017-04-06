@@ -1,0 +1,11 @@
+// set global variables
+@import 'modules/config';
+
+// set brand-specific variables
+@import 'themes/soma/config';
+@import 'themes/soma/fonts';
+
+// // global styles
+@import 'application-checkout'; 
+@import 'partials/header-checkout';
+@import 'partials/footer-checkout';

@@ -1,0 +1,40 @@
+<nav class="nav-secondary">
+  <div class="hidden-xs hidden-sm">
+    <h4>Customer Care</h4>
+    <ul>
+      <li class="{% if page.title == "Contact Us" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/contact-us.html">Contact Us</a></li>
+      <li class="{% if page.title == "FAQ's" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/faq.html">FAQ's</a></li>
+      <li class="{% if page.title == "Sizes Made Simple" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/size-charts.html">Size Charts</a></li>
+      <li class="{% if page.title == "Shipping &amp; Handling" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/shipping-handling.html">Shipping &amp; Handling</a></li>
+      <li class="{% if page.title == "No Hassle Returns" or page.title == "Returns" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/returns.html">Returns</a></li>
+      <li class="{% if page.title == "Sales Tax" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/sales-tax.html">Sales Tax</a></li>
+      <li><a href="http://www.chicosfas.com/" target="_blank">Investor Relations</a></li>
+      <li><a href="http://jobs.chicos.com/" target="_blank">Careers</a></li>
+      <li class="{% if page.title == "Our Story" or page.title == "About Us" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/about-us.html">About Us</a></li>
+      <li class="{% if page.title == "Privacy Policy" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/privacy-policy.html">Privacy Policy</a></li>
+      <li class="{% if page.title == "Terms of Use" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/terms.html">Terms of Use</a></li>
+      <li class="{% if page.nav == 'coupons' %}active{% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/coupons.html">Coupons &amp; Promotions</a></li>
+      <li><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}account/login.html">Order &amp; Account Information</a> </li>
+      <li class="{% if page.title == "Chico's Charitable Giving Philosophy/Process" %} active {% endif %}"><a href="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/giving.html">Charitable Giving</a></li>
+    </ul>
+  </div>
+  <div class="visible-xs visible-sm">
+    <select class="form-control selectpicker" onchange="location = this.options[this.selectedIndex].value;">
+      <option value="" selected="selected">Customer Care</option> 
+      <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/contact-us.html">Contact Us</option>
+      <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/faq.html">FAQ's</option>
+      <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/size-charts.html">Size Charts</option>
+      <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/shipping-handling.html">Shipping &amp; Handling</option>
+      <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/returns.html">Returns</option>
+      <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/sales-tax.html">Sales Tax</option>
+      <option value="http://www.chicosfas.com/">Investor Relations</option>
+      <option value="http://jobs.chicos.com">Careers</option>
+      <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/about-us.html">About Us</option>
+      <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/privacy-policy.html">Privacy Policy</option>
+      <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/terms.html">Terms of Use</option>
+      <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/coupons.html">Coupons &amp; Promotions</option>
+      <option value="../account/login.html">Order &amp; Account Information</option>
+      <option value="../{% if page.top-link == "molecules" %}pages/{% endif %}customer-care/giving.html">Charitable Giving</option>
+    </select>
+  </div>
+</nav>

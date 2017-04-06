@@ -1,0 +1,91 @@
+{% if page.brand == 'soma' %}
+  {% capture default_payment %}Preferred Payment{% endcapture %}
+  {% capture make_default %}Make This My Preferred Payment{% endcapture %}
+{% else %}
+  {% capture default_payment %}My Default{% endcapture %}
+  {% capture make_default %}Make this my default{% endcapture %}
+{% endif %}
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="account-detail default">
+      <h4><i class="fa fa-fw fa-check-circle"></i> {{ default_payment }}</h4>
+      <dl>
+        <dt>Visa - 0007</dt>
+        <dd>Expires 1/2020</dd>
+        <dt>Liz Hamilton</dt>
+        <dd>
+          123 Main Street<br>
+          Somewhere, VA 22222<br>
+          505-258-4975
+        </dd>
+      </dl>
+      <p>
+        <strong><a href="#" data-toggle="modal" data-target="#modal-cc">Edit</a></strong> | <strong><a href="">Delete</a></strong>
+      </p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="account-detail">
+      <h4><a href="">{{ make_default }}</a></h4>
+      <dl>
+        <dt>Visa - 0007</dt>
+        <dd>Expires 1/2020</dd>
+        <dt>Liz Hamilton</dt>
+        <dd>
+          123 Main Street<br>
+          Somewhere, VA 22222<br>
+          505-258-4975
+        </dd>
+      </dl>
+      <p>
+        <strong><a href="#" data-toggle="modal" data-target="#modal-cc">Edit</a></strong> | <strong><a href="">Delete</a></strong>
+        </p>
+    </div>
+  </div>
+{% if page.brand == 'soma' %}
+  <div class="col-md-4">
+    <div class="account-detail">
+      <h4><a href="">{{ make_default }}</a></h4>
+      <dl>
+        <dt>Visa - 0007</dt>
+        <dd>Expires 1/2020</dd>
+        <dt>Liz Hamilton</dt>
+        <dd>
+          123 Main Street<br>
+          Somewhere, VA 22222<br>
+          505-258-4975
+        </dd>
+      </dl>
+      <p>
+        <strong><a href="#" data-toggle="modal" data-target="#modal-cc">Edit</a></strong> | <strong><a href="">Delete</a></strong>
+        </p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="account-detail">
+      <h4><a href="">{{ make_default }}</a></h4>
+      <dl>
+        <dt>Visa - 0007</dt>
+        <dd>Expires 1/2020</dd>
+        <dt>Liz Hamilton</dt>
+        <dd>
+          123 Main Street<br>
+          Somewhere, VA 22222<br>
+          505-258-4975
+        </dd>
+      </dl>
+      <p>
+        <strong><a href="#" data-toggle="modal" data-target="#modal-cc">Edit</a></strong> | <strong><a href="">Delete</a></strong>
+        </p>
+    </div>
+  </div>
+</div><!-- .row -->
+<p><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal-cc">Add a New Credit Card</a></p>
+{% else %}
+  <div class="col-md-4">
+    <p class="small"><a href="#" data-toggle="modal" data-target="#modal-cc">+Add new credit card</a></p>
+  </div>
+</div><!-- .row -->
+{% endif %}
+{% include _molecules/modals/modal-cc.html %}

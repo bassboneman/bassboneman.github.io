@@ -1,0 +1,235 @@
+// article element used on category pages
+.story {
+  margin-bottom: 30px;
+  h2 {
+    font-family: $font-serif;
+    font-size: 18px;
+    // font-size: 17px;
+    line-height: 1.3;
+    letter-spacing: $letter-spacing;
+  }
+  h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+  p {
+    font-size: 13px;
+  }
+  h2, h3, p {
+    margin-bottom: 5px;
+  }
+  .story-img {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .excerpt {
+    // font-family: $font-serif;
+    font-size: 13px;
+    color: $color-black;
+  }
+  a {
+    // font-weight: 700;
+    color: $color-black;
+  }
+  @media (min-width: 768px) {
+    &.search-item {
+      margin-bottom: 80px;
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  [class*='col-']:nth-child(3) {
+    clear: left;
+  }
+}
+
+.article {
+  max-width: 750px;
+  margin: 0 auto;
+}
+.article-header {
+  margin-bottom: 30px;
+  text-align: center;
+  h1 {
+    margin: 0;
+    font-size: 25px;
+    font-family: $font-serif;
+    font-weight: 400;
+    // text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  hr {
+    width: 80px;
+    margin-bottom: 15px;
+    border-color: #000;
+  }
+  time {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
+.article-body {
+  // font-family: $font-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.article-cat {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  a {
+    color: $color-black;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.intro {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  // font-family: $font-base;
+  // font-size: 24px;
+  font-style: italic;
+  letter-spacing: .5px;
+  border-bottom: 1px solid $color-black;
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+.article {
+  blockquote {
+    width: 75%;
+    margin: 60px auto 20px auto;
+    padding: 0;
+    font-size: 24px;
+    text-align: center;
+    font-style: italic;
+    border: 0;
+    quotes: "“" "”" "‘" "’";
+    &:before,
+    &:after {
+      display: block;
+      content: open-quote;
+      font-size: 72px;
+      line-height: 0.1em;
+      // vertical-align: -0.4em;
+    }
+    &:before {
+      // margin-top: 40px;
+    }
+    &:after {
+      content: close-quote;
+      padding-top: 40px;
+      // vertical-align: -0.4em;
+    }
+  }
+}
+.article-labels {
+  margin-bottom: 30px;
+  text-align: center;
+  color: $color-oslo-gray;
+  span {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+  a {
+    color: $color-oslo-gray;
+  }
+}
+
+.wp-caption {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.wp-caption-text {
+  margin-top: 5px;
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+  color: $color-oslo-gray;
+}
+
+.alignleft {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+.alignright {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto 30px auto;
+}
+@media (max-width: 767px) {
+  .alignleft,
+  .alignright {
+    display: block;
+    margin: 0 auto 30px auto;
+  }
+}
+
+.article-nav {
+  margin-bottom: 50px;
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid $color-border-dark;
+  border-width: 1px 0;
+  a {
+    color: $color-black;
+  }
+  .article-nav-cat {
+    text-align: center;
+  }
+  .article-nav-next {
+    text-align: right;
+  }
+  @media (max-width: 767px) {
+    .article-nav-prev,
+    .article-nav-next {
+      text-align: center;
+    }
+  }
+}
+
+.story-related {
+  margin-bottom: 30px;
+  border-bottom: 1px solid $color-border-dark;
+  h2 {
+    font-size: 21px;
+  }
+}
+
+.story-block,
+.story-related {
+  margin-bottom: 30px;
+  @media (max-width: 767px) {
+    .story {
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+
+.hr-top {
+  margin-top: 0;
+  margin-bottom: 30px;
+  border-top: 1px solid $color-border-dark;
+}

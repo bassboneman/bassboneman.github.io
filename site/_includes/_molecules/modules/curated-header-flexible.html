@@ -1,0 +1,65 @@
+<div class="curated-header">
+  <img src="{{ site.baseurl }}/web_assets/imgs/modules/curated-banner-lg.png" class="img-responsive hidden-xs" alt="">
+  <img src="{{ site.baseurl }}/web_assets/imgs/modules/curated-banner-sm.png" class="img-responsive visible-xs" alt="">
+  <div class="curated-header-content">
+    <div class="curated-header-content-inner">
+      <h1><em>The</em> Jean <em>Guide</em></h1>
+      {% include _atoms/text/heading-has-line.html headingLabel="Find Your Fit" %}
+      <div class="hidden-xs">
+        <div class="flex-col">
+          <a class="curated-header-cat-link" href="#curated-1">
+            <span class="curated-header-cat">So Lifting&trade;</span> <span class="curated-header-product">Slim Leg</span>
+          </a>
+        </div>
+        <div class="flex-col">
+          <a class="curated-header-cat-link" href="#curated-2">
+            <span class="curated-header-cat">Platinum</span> <span class="curated-header-product">Jegging</span>
+          </a>
+        </div>
+        <div class="flex-col">
+          <a class="curated-header-cat-link" href="#curated-3">
+            <span class="curated-header-cat">Platinum</span> <span class="curated-header-product">Barely Boot</span>
+          </a>
+        </div>
+        <div class="flex-col">
+          <a class="curated-header-cat-link" href="#curated-4">
+            <span class="curated-header-cat">So Perfect</span> <span class="curated-header-product">Legging</span>
+          </a>
+        </div>
+        <div class="flex-col">
+          <a class="curated-header-cat-link" href="#curated-5">
+            <span class="curated-header-cat">So Lifting&trade;</span> <span class="curated-header-product">Slim Leg</span>
+          </a>
+        </div>
+        <div class="flex-col">
+          <a class="curated-header-cat-link" href="#curated-6">
+            <span class="curated-header-cat">Platinum</span> <span class="curated-header-product">Jegging</span>
+          </a>
+        </div>
+        <div class="flex-col">
+          <a class="curated-header-cat-link" href="#curated-7">
+            <span class="curated-header-cat">Platinum</span> <span class="curated-header-product">Barely Boot</span>
+          </a>
+        </div>
+        <div class="flex-col">
+          <a class="curated-header-cat-link" href="#curated-8">
+            <span class="curated-header-cat">So Perfect</span> <span class="curated-header-product">Legging</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- curated-header -->
+<div class="curated-nav-mobile">
+  <select class="form-control selectpicker" onchange="location = this.options[this.selectedIndex].value;">
+    <option value="#curated-1">So Lifting&trade; Slim Leg</option>
+    <option value="#curated-2">Platinum Jegging</option>
+    <option value="#curated-3">Platinum Barely Boot</option>
+    <option value="#curated-4">So Perfect Legging</option>
+    <option value="#curated-5">So Lifting&trade; Slim Leg</option>
+    <option value="#curated-6">Platinum Jegging</option>
+    <option value="#curated-7">Platinum Barely Boot</option>
+    <option value="#curated-8">So Perfect Legging</option>
+  </select>
+  {% comment %}{% include _atoms/forms/select.html labelName='Choose Collection' labelHidden='hidden' labelID='collection' selectOptions='<option value="">So Lifting&trade; Slim Leg</option><option value="">Platinum Jegging</option><option value="">Platinum Barely Boot</option><option value="">So Perfect Legging</option><option value="">So Lifting&trade; Slim Leg</option><option value="">Platinum Jegging</option><option value="">Platinum Barely Boot</option><option value="">So Perfect Legging</option>' %}{% endcomment %}
+</div>

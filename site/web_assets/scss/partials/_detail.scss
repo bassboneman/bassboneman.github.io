@@ -1,0 +1,149 @@
+// These are the various elements on order pages that contain order and/or user details. They can contain bootstrap columns, responsive tables, or inline definition lists.
+
+.detail-wrap {
+  margin-bottom: $dimension-base;
+  // border: 1px solid $color-border;
+}
+.detail-heading,
+.coupon-code {
+  margin-bottom: 0;
+  padding: 5px 10px;
+  font-size: $font-size-h4;
+  font-weight: $font-weight-base;
+  // text-transform: uppercase;
+  @include detail-heading;
+}
+.detail {
+  padding: $dimension-small;
+  > *:last-child {
+    margin-bottom: $dimension-none;
+  }
+  h3 {
+    margin-bottom: $dimension-xsmall;
+  }
+}
+
+// .detail-dl {
+//   dt {
+//     margin-bottom: $dimension-xsmall;
+//     font-size: $font-size-h3;
+//     line-height: $line-height-heading;
+//   }
+//   dd {
+//     font-size: $font-size-small;
+//     color: $color-gray;
+//   }
+// }
+
+.detail-sidebar,
+.detail-summary {
+  h2.detail-heading {
+    padding: 5px 15px;
+  }
+  h3,
+  .detail-price {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.1;
+  }
+  .detail {
+    padding: 15px;
+    font-size: 12px;
+  }
+  .detail-highlight {
+    border: 1px solid $color-border;
+    border-width: 1px 0;
+    @include detail-highlight;
+  }
+  .detail-highlight:last-child {
+    border-bottom: 0;
+  }
+}
+.detail-sidebar {
+  @include detail-sidebar;
+  .detail-highlight {
+    .form-inline {
+      margin-bottom: 0;
+    }
+  }
+}
+.detail-table {
+  .detail {
+    padding: 0;
+    .table-responsive {
+      border: 0;
+    }
+    .table {
+      margin: 0;
+    }
+  }
+}
+
+.dl-wrap,
+.detail-wrap {
+  font-size: 1.3rem;
+}
+
+// this wraps an h4 and a horizontal dl containing order or buyer details
+// .dl-wrap { 
+//   > h4 {
+//     margin-bottom: $dimension-small;
+//   }
+//   .dl-horizontal {
+//     dt {
+//       float: left;
+//       font-weight: $font-weight-base;
+//       color: $color-gray;
+//       width: 65px;
+//     }
+//     .dt-divider {
+//       margin-top: $dimension-small;
+//       padding-top: $dimension-small;
+//       border-top: 1px solid $color-border;
+//       + dd {
+//         margin-top: $dimension-small;
+//         padding-top: $dimension-small;
+//         border-top: 1px solid $color-border;
+//       }
+//     }
+//     dt,
+//     dd {
+//       margin-bottom: $dimension-none;
+//     }
+//     dd {
+//       margin-left: 65px;
+//       padding-left: 20px;
+//     }
+//     @media (max-width: 540px) {
+//       dt {
+//         float: none;
+//         width: auto;
+//       }
+//       dd {
+//         margin: 0 0 $dimension-small 0;
+//         padding: 0;
+//       }
+//       .dt-divider {
+//         + dd {
+//           margin-top: 0;
+//           padding-top: 0;
+//           border-top: 0;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .item-cc {
+//   padding: $dimension-small;
+//   background: $color-bg-light;
+//   border: 1px solid $color-border;
+//   h4 {
+//     // color: $color-red;
+//     text-transform: uppercase;
+//   }
+//   dd {
+//     color: $color-gray;
+//   }
+// }

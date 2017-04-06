@@ -1,0 +1,106 @@
+<!-- this file's contents served to template files as well as the living style guide -->
+
+<title>
+  {% if page.layout == "home" %}
+  {{ page.title }}
+  {% else %}
+  {{ page.title }}
+  {% endif %}
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css"> form.asyncForm { display: none; } </style><!-- ? -->
+
+
+{% if page.layout == 'checkout' %}
+  {% if page.brand == "soma" %}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.baseurl }}/web_assets/css/soma-checkout.css">
+  {% elsif page.brand == "whbm" %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/web_assets/css/whbm-checkout.css">
+  {% else %}
+    <script src="//use.typekit.net/rtt2dkh.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="{{ site.baseurl }}/web_assets/css/chicos-checkout.css">
+  {% endif %}
+{% else %}
+  {% if page.brand == "soma" %}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link data-css="brand-css" rel="stylesheet" href="{{ site.baseurl }}/web_assets/css/soma.css">
+  {% elsif page.brand == "whbm" %}
+    <link data-css="brand-css" rel="stylesheet" href="{{ site.baseurl }}/web_assets/css/whbm.css">
+  {% else %}
+    <script src="//use.typekit.net/rtt2dkh.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link data-css="brand-css" rel="stylesheet" href="{{ site.baseurl }}/web_assets/css/chicos.css">
+  {% endif %}
+{% endif %}
+
+
+{% if page.user %}
+<link rel="stylesheet" href="{{ site.baseurl }}/team/{{ page.user }}/assets/css/styles.css">    
+{% endif %}
+
+{% if page.brand == "chicos" %}
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/apple-touch-icon-57x57.png?v=4">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/apple-touch-icon-60x60.png?v=4">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/apple-touch-icon-72x72.png?v=4">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/apple-touch-icon-76x76.png?v=4">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/apple-touch-icon-114x114.png?v=4">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/apple-touch-icon-120x120.png?v=4">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/apple-touch-icon-144x144.png?v=4">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/apple-touch-icon-152x152.png?v=4">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/apple-touch-icon-180x180.png?v=4">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/favicon-32x32.png?v=4" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/favicon-194x194.png?v=4" sizes="194x194">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/favicon-96x96.png?v=4" sizes="96x96">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/android-chrome-192x192.png?v=4" sizes="192x192">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/favicon-16x16.png?v=4" sizes="16x16">
+  <link rel="manifest" href="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="{{ site.baseurl }}/web_assets/imgs/chicos/favicons/mstile-144x144.png?v=4">
+  <meta name="theme-color" content="#ffffff">
+
+{% elsif page.brand == "soma" %}
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/apple-touch-icon-57x57.png?v=4">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/apple-touch-icon-60x60.png?v=4">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/apple-touch-icon-72x72.png?v=4">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/apple-touch-icon-76x76.png?v=4">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/apple-touch-icon-114x114.png?v=4">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/apple-touch-icon-120x120.png?v=4">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/apple-touch-icon-144x144.png?v=4">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/apple-touch-icon-152x152.png?v=4">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/apple-touch-icon-180x180.png?v=4">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/favicon-32x32.png?v=4" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/favicon-194x194.png?v=4" sizes="194x194">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/favicon-96x96.png?v=4" sizes="96x96">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/android-chrome-192x192.png?v=4" sizes="192x192">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/favicon-16x16.png?v=4" sizes="16x16">
+  <link rel="manifest" href="{{ site.baseurl }}/web_assets/imgs/soma/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="{{ site.baseurl }}/web_assets/imgs/soma/favicons/mstile-144x144.png?v=4">
+  <meta name="theme-color" content="#ffffff">
+
+{% elsif page.brand == 'whbm' %}
+  <!-- be sure to update browserconfig.xml and manifest.json with the correct path once you move this to WHBM servers -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/web_assets/imgs/whbm/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/whbm/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/web_assets/imgs/whbm/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="{{ site.baseurl }}/web_assets/imgs/whbm/favicons/manifest.json">
+  <link rel="mask-icon" href="{{ site.baseurl }}/web_assets/imgs/whbm/favicons/safari-pinned-tab.svg" color="#000000">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/web_assets/imgs/whbm/favicons/favicon.ico">
+  <meta name="msapplication-config" content="{{ site.baseurl }}/web_assets/imgs/whbm/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+{% endif %}
+
+{% if page.layout != 'checkout' %}
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+{% endif %}
+
+{% if page.layout == "index" %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/web_assets/library.css">
+{% endif %}
+
+{% comment %}
+<link id="font-switcher" rel="stylesheet" href="/lib_assets/css/fonts/default.css">
+{% endcomment %}

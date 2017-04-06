@@ -1,0 +1,26 @@
+<div class="row row-tight">
+  <div class="{% if include.stacked %}col-xs-12{% else %}col-sm-6{% endif %}">
+    <div class="field-wrap">
+      {% include _atoms/forms/input.html class="input-lg" labelName='To' labelID='gift-to' inputType='text' %}
+    </div><!-- .field-wrap -->          
+    <div class="field-wrap">
+      {% include _atoms/forms/input.html class="input-lg" labelName='From' labelID='gift-from' inputType='text' %}
+    </div><!-- .field-wrap -->          
+  </div><!-- .col -->
+  <div class="{% if include.stacked %}col-xs-12{% else %}col-sm-6{% endif %}">
+    <div class="field-wrap">
+      {% include _atoms/forms/textarea.html class='countit' labelID='gift-message' labelName='Gift Message' rows='6' counter='150' %}
+    </div><!-- .field-wrap -->
+
+    {% if include.hideButton != 'yes' %}
+      <div class="p">
+        {% if page.setting == 'flow' %}
+          {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-primary gift-product-toggle' btnLabel='Save' %}
+        {% else %}
+          {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-primary' btnLabel='Save' %}
+        {% endif %}
+      </div>
+    {% endif %}
+
+  </div><!-- .col -->
+</div><!-- .row -->

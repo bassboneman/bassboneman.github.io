@@ -1,0 +1,99 @@
+#utility {
+  padding: 10px 0;
+  font-size: 15px;
+  line-height: 1.2;
+  background: $color-gallery;
+  #utility-inner {
+    @include max-width-block;
+  }
+  a {
+    color: $color-black;
+  }
+  a.link-proper {
+    font-weight: 700;
+    text-transform: uppercase;
+  } 
+  .dropdown-menu { // used on chicos proper
+    margin: 10px 0 0 0;
+    background: #fff;
+    padding: 20px 10px 10px 10px;
+    border: 1px solid $color-black;
+    border-top-width: 3px;
+    min-width: 320px;
+    text-align: center;
+    @include radius(0);
+    @include box-shadow-none;
+    hr {
+      width: 50%;
+      margin: 25px auto;
+      border-top-color: $color-black;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 12px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      li {
+        // margin-bottom: $dimension-base;
+      }
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+    .svg-logo {
+      display: inline-block;
+      width: 73px;
+      height: 15px;
+      margin: 0 3px;
+    }
+  }
+  @media (max-width: 540px) {
+    .dropdown-menu {
+      left: 0;
+      right: 0;
+      min-width: 0;
+    }
+    .dropdown {
+      position: static;
+    }
+  }
+
+
+  #utility-right {
+    .utility-label {
+      display: inline-block;
+      font-weight: 400;
+      // color: $color-oslo-gray;
+      &:after {
+        content: "|";
+        padding-left: 12px;
+      }
+    }
+    text-align: right;
+    ul {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        padding-left: 12px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    text-align: center;
+    #utility-right {
+      margin-top: 5px;
+      text-align: center;
+    }
+  }
+}

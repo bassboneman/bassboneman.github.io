@@ -1,0 +1,44 @@
+<section class="module">
+  <div class="collection-promo-static-heading {% if include.promoType="carouselPromo" %}module-carousel{% endif %}">
+    <div class="module-inner">
+      {% if include.promoType == "singlePromo" %}
+        <div class="collection-promo">
+          <div class="module-heading">
+            <h2>{{ include.moduleHeading }}</h2>
+          </div>
+          <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading | strip_html }}" class="img-responsive">
+        </div>
+      {% elsif include.promoType == "carouselPromo" %}
+        <div id="carousel-collection-promo-static-heading" class="carousel slide carousel-collection-promo collection-promo-split {{ include.carouselClass }}" data-ride="carousel" data-interval="false" aria-live="polite">
+          <div class="carousel-inner">
+            <div class="module-heading">
+              <h2>{{ include.moduleHeading }}</h2>
+            </div>
+            <div class="item active">
+              <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading | strip_html }}">
+            </div>
+            <div class="item">
+              <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading | strip_html }}">
+            </div>
+            <div class="item">
+              <img src="{{ include.moduleImage }}" alt="{{ include.moduleHeading | strip_html }}">
+            </div>
+          </div><!-- .carousel-inner -->
+          <a class="left carousel-control" href="#carousel-collection-promo-static-heading" data-slide="prev" arial-label="Previous">
+            <svg class="icon-arrow-left" role="presentation">
+              <use xlink:href="#icon-promo-left"></use>
+            </svg>
+          </a>
+          <a class="right carousel-control" href="#carousel-collection-promo-static-heading" data-slide="next"  arial-label="Previous">
+            <svg class="icon-arrow-right" role="presentation">
+              <use xlink:href="#icon-promo-right"></use>
+            </svg>
+          </a>
+        </div><!-- .carousel -->
+      {% endif %}
+      <div class="after-carousel-cta">
+        <a href="#">Shop Now</a>
+      </div>
+    </div>
+  </div><!-- .collection-promo-static-heading -->
+</section><!-- .module -->

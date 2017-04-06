@@ -1,0 +1,115 @@
+.form-control {
+  @include form-control;
+  &:focus {
+    @include box-shadow-none;
+  }
+}
+
+.form-phone {
+  .form-control {
+    display: inline-block;
+    width: 50px;
+  }
+  .form-control:last-child {
+    width: 70px;
+  }
+}
+@media screen and (max-width: $break-xs-max) {
+  .form-group-max-width {
+    max-width: 15rem;
+    .bootstrap-select {
+      max-width: 15rem;
+    }
+  }
+}
+
+.login-wrap {
+  @include login-wrap;
+  max-width: 80%;
+  margin: 10rem auto 10rem auto;
+  .login-block {
+    margin-bottom: $dimension-large;
+  }
+}
+.login-info {
+  margin-top: 4rem;
+}
+@media screen and (max-width: $break-xs-max) {
+  .login-wrap {
+    max-width: 100%;
+    margin: 3rem 0;
+  }
+  .login-info-logo {
+    max-width: 20rem;
+    margin: 0 auto 2rem auto;
+  }
+}
+
+// when extra space is needed above the checkbox. used in the "options" form molecule
+.checkbox-margin-top {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .form-inline {
+    .form-group {
+      margin-right: 15px;
+    }
+  }
+}
+
+// form used in signup modal
+.form-stylized {
+  .form-stylized-h2 {
+    margin: 2rem 0 1rem 0;
+    font-family: $font-family-serif;
+    font-size: 5rem;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    @media screen and (max-width: $break-xs-max) {
+      font-size: 3.2rem;
+    }
+    &.heading-lg {
+      font-size: 7.2rem;
+      @media screen and (max-width: $break-xs-max) {
+        font-size: 4rem;
+      }
+    }
+  }
+  .form-stylized-copy {
+    margin: 2rem 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  // .input-group {
+    // margin-bottom: 4rem;
+  // }
+  .small {
+    margin: 4rem 0 .5rem 0;
+    font-size: 1.2rem;
+  }
+  .form-control::-webkit-input-placeholder {font-style: italic;}
+  .form-control::-moz-placeholder {font-style: italic;}
+  .form-control:-ms-input-placeholder {font-style: italic;}
+  .form-control:-moz-placeholder {font-style: italic;}
+}
+
+// this will minimize the visual difference between the select box and the replacement button
+.selectpicker {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+// forms used in cheetahmail
+.form-email {
+  @include form-email;
+}
+.form-email-heading-alt {
+  margin-top: 2rem !important;
+}
+
+.message-count {
+  margin-top: .8rem;
+  @include message-count;
+}

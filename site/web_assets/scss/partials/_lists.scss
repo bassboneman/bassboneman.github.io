@@ -1,0 +1,38 @@
+.store-results {
+  padding: $dimension-none;
+  list-style: none;
+  li {
+    margin-bottom: $dimension-base;
+    font-size: $font-size-medium;
+    span {
+      display: block;
+    }
+  }
+  .store-city {
+    font-size: 1.4rem;
+    font-weight: $font-weight-bold;
+    @include store-city;
+  }
+  .store-location {
+    margin-bottom: $dimension-xsmall;
+    font-weight: $font-weight-bold;
+    @include store-location;
+}
+  .store-hours {
+    margin-bottom: $dimension-xsmall;
+    font-size: $font-size-small;
+    color: $color-gray;
+  }
+  address {
+    margin-bottom: $dimension-none;
+  }
+  .store-phone {
+    margin-bottom: $dimension-small;
+  }
+  &.store-results-tab {
+    li + li {
+      padding-top: $dimension-base;
+      border-top: 1px solid $color-border;
+    }
+  }
+}

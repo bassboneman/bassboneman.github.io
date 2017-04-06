@@ -1,0 +1,364 @@
+// Hot Spot Hero
+// (I think that sounds like an 80s hair band song)
+.module-hot-spot {
+  margin: 0 -15px;
+
+  .hot-spot-left-panel {
+    float: left;
+    width: 45.417%;
+    position: relative;
+
+    @media screen and (max-width: $break-sm-max) {
+      float: none;
+      width: 100%;
+      margin-bottom: 4px;
+    }
+  }
+
+  .hot-spot-caption {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    color: white;
+    // Flexbox prefix city
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 3.5rem;
+      letter-spacing: 0.6em;
+      font-family: $font-family-base;
+      margin-left: 13px;
+      margin-top: 20px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.17);
+
+      @media screen and (max-width: $break-md-max) {
+        font-size: 3rem;
+      }
+
+      @media screen and (max-width: $break-sm-max) {
+        font-size: 7vw;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.17);
+    }
+  }
+
+  .hot-spot-right-panel {
+    float: right;
+    width: 53.734%;
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: $break-sm-max) {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .hot-spot-left-panel, .hot-spot-right-panel {
+    > img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.hot-spots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 997;
+}
+
+
+// Note! It came up in the meetings that the 'plus' icon wasn't always centered
+// in the circle. I'm guessing that this has to do with screen size, subpixel 
+// rendering, half-pixels, etc. You'll note the odd padding size below; I was
+// going for a 24px-wide circle total, but perhaps that causes more trouble than
+// it's worth.
+.hot-spot {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 20px;
+  padding: 1.29px 7px;
+
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-transition-property: padding, margin, background-color;
+  transition-property: padding, margin, background-color;
+
+  svg {
+    opacity: 0.65;
+    width: 9px;
+    position: relative;
+    top: 1px;
+
+    -webkit-transition: fill 0.75s, opacity 0.75s;
+    transition: fill 0.75s, opacity 0.75s;
+  }
+
+  &:hover {
+    padding: 3.29px 9px;
+    margin: -2px;
+    background-color: rgba(0, 0, 0, 0.65);
+
+    svg {
+      opacity: 1;
+      fill: white;
+    }
+  }
+
+  &:hover.alt-hover {
+    background-color: rgba(255, 255, 255, 0.65);
+  }
+}
+
+// There was a little scope creep here - this started with simply throwing in a
+// white SVG. Then I was asked to throw in a black hover, and at that point it
+// was simplest to make the SVG black and swap them. Then I was asked to animate.
+// This is probably better accomplished with transitioning the fill style, if the
+// SVG is inserted in that way.
+.style-note {
+  position: absolute;
+  width: 52px; // Added width and height to prevent hover issues
+  height: 30px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-transition: 0.25s opacity;
+    transition: 0.25s opacity;
+  }
+
+  img.default {
+    opacity: 1;
+    z-index: 989;
+  }
+  img.hovered {
+    opacity: 0;
+    z-index: 990;
+  }
+
+  &:hover {
+    img.default {
+      opacity: 0;
+    }
+    img.hovered {
+      opacity: 1;
+    }
+  }
+}
+
+.style-note-tooltip {
+  width: 310px;
+  background-color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.12em;
+  padding: 25px;
+  position: absolute;
+  z-index: 999;
+
+  p {
+    font-size: 1.2rem;
+    text-transform: normal;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .price {
+    letter-spacing: 0.12em;
+    font-size: 1.2rem;
+  }
+
+  .dismiss {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    cursor: pointer;
+  }
+}
+
+// Hot Spot Collection
+.whbm-hot-spot-collection {
+  section.module {
+    border-bottom: 1px solid #888;
+    // Quick (probably not ideal) way to get a true 1200px wide experience
+    width: calc(100% + 30px);
+    margin: 0px -15px 2rem;
+    // otherwise get rid of that stuff above and use this.
+    // margin-bottom: 2rem;
+    position: relative;
+
+    > div {
+      margin-bottom: 0;
+    }
+
+    .btn {
+      position: absolute;
+      bottom: -2px;
+      right: 0px;
+      color: black;
+      background-color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 0.12em;
+      z-index: 998;
+      border: 0;
+
+      svg {
+        width: 1rem;
+        top: 2px;
+        position: relative;
+        margin-left: 5px;
+      }
+
+      .icon-arrow-down {
+        display: inline-block;
+      }
+      .icon-arrow-up {
+        display: none;
+      }
+
+      &.expanded .icon-arrow-down {
+        display: none;
+      }
+      &.expanded .icon-arrow-up {
+        display: inline-block;
+      }
+
+      @media screen and (max-width: $break-sm-max) {
+        border: 1px solid #888;
+      }
+    }
+
+    .module-sh {
+      @media screen and (max-width: $break-sm-max) {
+        margin: 0;
+      }
+    }
+
+    .module-sh-right .module-sh-copy {
+      text-align: right;
+    }
+    
+    .module-sh-left .module-sh-copy {
+      text-align: left;
+    }
+
+    
+
+    .module-sh-img {
+      position: relative;
+    }
+
+    .module-sh-copy {
+      top: 60%;
+
+      &.has-intro {
+        top: 70%;
+      }
+
+      @media screen and (max-width: $break-xs-max) {
+        padding: 20px 10px 40px;
+        text-align: left!important;
+      }
+    }
+
+    .module-sh-copy {
+      h3 {
+        font-family: "Didot 24 A", "Didot 24 B", serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        letter-spacing: 0.05em;
+
+        .number {
+          font-family: "Whitney A", "Whitney B", sans-serif;
+          font-size: 2rem;
+          // semibold alert!
+          font-weight: 600;
+          letter-spacing: 0.12em;
+          margin-right: 7px;
+        }
+      }
+
+      p {
+        font-size: 1.5rem;
+        letter-spacing: 0.15em; 
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-size: 3rem;
+        letter-spacing: 0.5em;
+        font-weight: 700;
+
+        .not-bold {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+.hot-spot-intro-copy {
+  text-align: center;
+  margin: 35px auto;
+
+  p {
+    font-size: 1.5rem;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 6.2rem;
+    font-weight: 500;
+    font-family: "Didot 64 A", "Didot 64 B", serif;
+    margin-bottom: 0;
+
+    @media screen and (max-width: $break-xs-max) {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.shop-collection-cta {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 8rem;
+  padding: 11px 50px;
+}

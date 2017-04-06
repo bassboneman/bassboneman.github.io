@@ -1,0 +1,42 @@
+<div class="product-wrap">
+  <div class="product-wrap-inner">
+    {% include _molecules/products/heading.html %}
+    {% if page.title == "Product Page (Donations)" or page.title == "Product Page (Gift Card)" or page.title == "Product Page (e-Gift Card)" or page.title == "Locate in Store (PDP)" %}
+    {% else %}
+      {% include _molecules/products/rating-pdp.html %}
+    {% endif  %}
+    {% if page.title == "Locate in Store (PDP)" %}
+      {% include _molecules/products/fieldset.html %}
+      {% include _molecules/forms/store-locator-pdp.html %}
+      {% comment %} if out-of-stock or in need of another alert message, use the following 
+        <div class="alert alert-warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates eos, quod perferendis dignissimos impedit, fugiat libero nulla nobis natus veritatis amet, quidem, officia eius ipsum repellendus doloribus distinctio necessitatibus facilis.</div>    
+      {% endcomment %}
+      {% comment %} if form not filled out correctly 
+        <div class="alert alert-danger">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates eos, quod perferendis dignissimos impedit, fugiat libero nulla nobis natus veritatis amet, quidem, officia eius ipsum repellendus doloribus distinctio necessitatibus facilis.</div>    
+      {% endcomment %}
+      <div class="text-right">
+        <a href="" class="btn btn-primary">Locate in Stores</a>
+      </div>
+    {% elsif page.title == "Product Page (No Inventory)" %}
+      {% include _molecules/products/product-no-inventory.html %}
+      {% include _molecules/products/description.html %}
+    {% else %}
+      {% if page.title == "Product Page (Single Size)" or page.title == "Product Page (Donations)" or page.title == "Product Page (Gift Card)" or page.title == "Product Page (e-Gift Card)" %}
+        {% include _molecules/products/fieldset.html %}
+      {% elsif page.title == "Product Page (2 Fieldsets)" %}
+        {% include _molecules/products/fieldset.html %}
+        {% include _molecules/products/fieldset.html %}
+      {% else %}
+        {% include _molecules/products/fieldset.html %}
+      {% endif %}
+      {% include _molecules/products/controls.html %}
+    </div><!-- .product-wrap-inner -->
+    {% if page.brand == 'soma' %}
+    {% else %}
+    <hr>
+    {% include _atoms/text/product-message.html %}
+    {% endif %}
+    {% include _molecules/products/description.html %}
+    {% include _molecules/components/share.html %}
+  {% endif %}
+</div><!-- .product-wrap -->

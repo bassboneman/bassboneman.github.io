@@ -1,0 +1,62 @@
+<section class="module module-carousel">
+  <div class="module-inner">
+    <div id="carousel-jumbo" class="carousel slide carousel-lg carousel-copy-left {{ include.carouselClass }}" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-jumbo" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-jumbo" data-slide-to="1" class=""></li>
+        <li data-target="#carousel-jumbo" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="{{ include.carouselImage }}" alt="{{ include.carouselHeading }}" class="hidden-xs">
+          <img src="{{ include.carouselImageMobile }}" alt="{{ include.carouselHeading }}" class="visible-xs">
+          <div class="carousel-caption">
+            <h2 class="
+              {% if include.carouselHeadingStyle %}
+                {{ include.carouselHeadingStyle }}
+              {% else %}
+                heading-serif
+              {% endif %}
+            ">
+              {{ include.carouselHeading }}
+            </h2>
+            {% if include.carouselCopy %}
+              {{ include.carouselCopy }}
+            {% endif %}
+            {% if include.btnLabel %}
+              <p><a href="{{include.btnLink}}" class="btn {{include.btnClass}}" {{include.btnExtra}}>{{include.btnLabel}}</a></p>
+            {% endif %}
+          </div><!-- .carousel-caption -->
+        </div>
+        <div class="item">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+3360x1200&w=3360&h=1200" class="hidden-xs">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+767x767&w=767&h=767" class="visible-xs">            
+          <div class="carousel-caption">
+            <h2 class="heading-serif">Zenergy<sup>&reg;</sup></h2>
+            <p>Activewear that goes anywhere.</p>
+            <p><a href="#" class="btn btn-primary">Shop Now</a></p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+3360x1200&w=3360&h=1200" class="hidden-xs">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+767x767&w=767&h=767" class="visible-xs">            
+          <div class="carousel-caption">
+            <h2 class="heading-serif">Zenergy<sup>&reg;</sup></h2>
+            <p>Activewear that goes anywhere.</p>
+            <p><a href="#" class="btn btn-primary">Shop Now</a></p>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#carousel-jumbo" data-slide="prev" aria-label="previous">
+        <svg class="icon-arrow-left" role="presentation">
+          <use xlink:href="#icon-arrow-left"></use>
+        </svg>
+      </a>
+      <a class="right carousel-control" href="#carousel-jumbo" data-slide="next" aria-label="next">
+        <svg class="icon-arrow-right" role="presentation">
+          <use xlink:href="#icon-arrow-right"></use>
+        </svg>
+      </a>
+    </div><!-- #carousel-jumbo -->
+  </div>
+</section><!-- .module -->

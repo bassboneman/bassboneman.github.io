@@ -1,0 +1,88 @@
+{% comment %} This template is identical to login-success.html but with the addition of phone number messaging. {% endcomment %}
+
+
+<div class="rewards-block">
+  <h2 class="rewards-heading-alt">Richard's Welcome Status</h2>
+  <p class="rewards-status">Member #7AD2013958PCD</p>
+  <h3 class="rewards-heading-alt">
+    You have reached the highest level of membership!
+  </h3>
+  <p class="rewards-status">Your exclusive Platinum phone number is 844.256.9426</p>
+  <div class="rewards-chart">
+    <div class="rewards-chart-item">
+      <span class="rewards-chart-total" style="width: 100%;"></span>
+      <span class="rewards-chart-label">Welcome!</span>
+    </div>
+    <div class="rewards-chart-item">
+      <span class="rewards-chart-total" style="width: 100%;"></span>
+      <span class="rewards-chart-label">Silver</span>
+    </div>
+    <div class="rewards-chart-item">
+      <span class="rewards-chart-total" style="width: 100%;"></span>
+      <span class="rewards-chart-label">Gold</span>
+    </div>
+    <div class="rewards-chart-item">
+      <span class="rewards-chart-total" style="width: 100%;"></span>
+      <span class="rewards-chart-label">Platinum</span>
+    </div>
+  </div>
+</div>
+<h2 class="rewards-heading-alt text-center">Your Benefits</h2>
+<div class="rewards-benefits-wrap">
+  <div class="rewards-benefits-row">
+    <div class="rewards-benefits-level">
+      <h3>Silver</h3>
+    </div>
+    <div class="rewards-benefits-items">
+      <ul class="list-unstyled">
+        <li>5% off every purchase</li>
+        <li>Free standard shipping discounted expedited shipping - New</li>
+        <li>$10 birthday reward</li>
+        <li>Access to a personal stylist - New</li>
+        <li>Exclusive Silver offers</li>
+      </ul>
+      <p>Unlock Silver status by spending $500 or more annually. Plus, once you've achieved Silver status, you'll never lose it! There's no need to requalify.</p>
+    </div>
+  </div>
+  <div class="rewards-benefits-row">
+    <div class="rewards-benefits-level">
+      <h3>
+        Gold
+      </h3>
+    </div>
+    <div class="rewards-benefits-items">
+      <ul class="list-unstyled">
+        <li>All Silver benefits, plus:</li>
+        <li>Upgrade to a $15 birthday reward</li>
+        <li>$25 reward twice a year</li>
+        <li>Exclusive pre-orders of new collections - New</li>
+        <li>Exclusive gold offers</li>
+      </ul>
+      <p>Unlock Gold status by spending $1,000 or more annually.</p>
+    </div>
+  </div>
+  <div class="rewards-benefits-row">
+    <div class="rewards-benefits-level">
+      <h3>
+        Platinum
+      </h3>
+    </div>
+    <div class="rewards-benefits-items">
+      <ul class="list-unstyled">
+        <li>Gold benefits, plus:</li>
+        <li>Upgrade to a $20 birthday reward</li>
+        <li>Upgrade to a $50 reward twice a year</li>
+        <li>Exclusive platinum customer service phone number – New<br>
+          <span class="normal">(find it on your 'my account' page)</span></li>
+        <li>Exclusive platinum offers</li>
+      </ul>
+      <p>Unlock Platinum status by spending $2,000 or more annually.</p>
+    </div>
+  </div>
+</div>
+<p class="text-center">
+  <a class="btn btn-link" href="#" data-toggle="modal" data-target="#modal-rewards-faq">FAQs</a>
+  <a class="btn btn-link" href="#" data-toggle="modal" data-target="#modal-rewards-terms">Terms</a>
+</p>
+{% include _molecules/modals/modal-whbm-rewards-faq.html %}
+{% include _molecules/modals/modal-whbm-rewards-terms.html %}

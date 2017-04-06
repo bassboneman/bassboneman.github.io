@@ -1,0 +1,14 @@
+<a href="#" id="logo">
+  <svg>
+    {% if page.brand == "whbm" %}
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-whbm"></use>
+      <span class="sr-only">White House Black Market</span>
+    {% elsif page.brand == "soma" %}
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-soma"></use>
+      <span class="sr-only">Soma</span>
+    {% else %}
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo"></use>
+      <span class="sr-only">Chicos</span>
+    {% endif %}
+  </svg>
+</a>

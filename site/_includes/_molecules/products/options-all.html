@@ -1,0 +1,41 @@
+<div class="product-options">
+  {% comment %} if size calculator is available {% endcomment %}
+  {% if include.completeLook %}
+  {% else %}
+    {% include _atoms/text/product-size-tools.html %}
+  {% endif %}
+  <div class="pdp-selects">
+    {% comment %} if size category is required {% endcomment %}
+    <div class="row row-tight">
+      <div class="col-sm-12">
+        {% include _atoms/forms/select-size-type.html %}
+      </div>
+    </div>
+    {% comment %} end if {% endcomment %}
+    <div class="row row-tight">
+      <div class="col-sm-8 col-xs-7">
+        {% include _atoms/forms/select-size.html %}
+      </div>
+      <div class="col-sm-4 col-xs-5">
+        {% include _atoms/forms/select-product-total.html %}
+      </div>
+    </div>
+
+    {% comment %}
+    Is outfitLayout needed anymore now that Complete the Look is on Chicos, WHBM, and Soma?
+    {% endcomment %}
+    {% if include.outfitLayout %}
+      <p class="outfit-details"><a href="#">View full details</a></p>
+    {% elsif include.completeLook %}
+    {% else %}
+      {% include _atoms/text/buy-more.html %}
+    {% endif %}
+
+    {% if page.title == "Product Page (with errors)" %}
+      <div class="alert alert-danger">
+        Select size
+      </div>
+    {% endif %}
+    
+  </div><!-- .pdp-selects -->
+</div><!-- .product-options -->

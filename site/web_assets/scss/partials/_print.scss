@@ -1,0 +1,37 @@
+@media print {
+  #header-promo-wrap,
+  #menu,
+  #menu-utility,
+  #footer,
+  .back-link,
+  .breadcrumb,
+  .chat-wrap,
+  .footer-chat,
+  .footer-promo,
+  .cta-wrap {
+    display: none;
+  }
+
+  .sticky {
+    #header {
+      position: relative;
+    }
+  }
+}
+
+
+// anything with this body class will display in the browser as it should when printed
+.print-page {
+  .chat-wrap,
+  .cta-wrap,
+  .hidden-print {
+    display: none;
+  }
+  header {
+    padding: 3rem 0;
+    svg {
+      width: 200px;
+      height: 60px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{% if page.title == "Product Page (with errors)" %}     
+  <div class="has-error">
+{% endif %}
+{% if page.title == "Shop By Look" %}
+  {% include _atoms/forms/select.html formClass='select-size' labelName='Select Size' labelID='select-size' selectOptions='<option value="">Select Size</option><option value="6">6</option><option value="8">8</option>' %}
+{% else %}
+  {% include _atoms/forms/select.html labelName='Select Size' labelID='select-size' selectOptions='<option value="">Select Size</option><option value="6">6</option><option value="8">8</option>' %}
+{% endif %}
+{% if page.title == "Product Page (with errors)" %}     
+  </div>
+{% endif %}

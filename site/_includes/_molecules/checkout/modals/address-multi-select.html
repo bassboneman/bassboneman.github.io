@@ -1,0 +1,67 @@
+<div class="modal fade modal-checkout" id="modal-address-multi-select" tabindex="-1" role="dialog" aria-labelledby="modal-address-multi-selectLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-address-multi-selectLabel">Select a Shipping Address</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row row-tight">
+          <div class="col-sm-6">
+            <p>
+              {% if page.flow == 'three' %}
+                {% include _atoms/buttons/button.html btnLink='checkout-2.html' btnClass='btn-alt btn-lg btn-block btn-has-arrow btn-width' btnLabel='Ship to Multiple Addresses' %}
+              {% elsif page.flow == 'three-two' %}
+              {% else %}
+                {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-alt btn-lg btn-block btn-has-arrow' btnLabel='Ship to Multiple Addresses' btnExtra='data-dismiss="modal"' %}
+              {% endif %}
+            </p>
+          </div><!-- .col -->
+        </div><!-- .row -->
+
+        <form action="#" class="form-labels">
+          <div class="radio-media-list">
+            {% include _molecules/checkout/radios/address.html radioSet='address-options' radioID='address-option-1' checked='checked' %}
+
+            {% if page.flow != 'three-two' %}
+              {% include _molecules/checkout/radios/address.html radioSet='address-options' radioID='address-option-2' %}
+            {% endif %}
+          </div><!-- .radio-media-list -->
+          <div class="row row-tight">
+            <div class="col-sm-6">
+              {% include _atoms/buttons/button.html btnLink='#' btnClass='btn-alt btn-lg btn-block btn-has-plus' btnLabel='Add a New Address' btnExtra='data-toggle="checkout-block" data-target="address-new" data-hide="true"' %}
+            </div><!-- .col-sm-6 -->
+          </div><!-- .row -->
+
+          <div id="checkout-address-new" class="checkout-hidden">
+            <h3>Add a New Address</h3>
+            {% include _molecules/checkout/forms/address.html %}
+
+
+            <hr class="hr-dark">
+            <h3>Select a Shipping Option</h3>
+            <div class="radio-media-list">
+              {% include _molecules/checkout/radios/shipping.html shipping='standard' radioSet='shipping-options' radioID='shipping-option-1' checked='yes' %}
+              {% include _molecules/checkout/radios/shipping.html shipping='express' radioSet='shipping-options' radioID='shipping-option-2' %}
+              {% include _molecules/checkout/radios/shipping.html shipping='twoday' radioSet='shipping-options' radioID='shipping-option-3' %}
+              {% include _molecules/checkout/radios/shipping.html shipping='nextday' radioSet='shipping-options' radioID='shipping-option-4' %}
+            </div><!-- .radio-media-list -->
+
+
+          </div><!-- .checkout-hidden -->        
+        </form>
+      </div><!-- .modal-body -->
+
+      {% comment %}remove this conditional once usability btesting is done{% endcomment %}
+      {% if page.setting == 'flow' %}
+        <div class="modal-footer">
+          <button type="button" class="btn btn-alt" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" data-swap="address" data-address="Samantha Hamilton-Jones&#x2028;&#x3C;br&#x3E;123 Main Street, Elsewhere, FL 11111">Save &amp; Continue</button>
+        </div>
+      {% else %}
+        {% include _molecules/checkout/modals/footer.html %}
+      {% endif %}
+
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal #modal-address -->

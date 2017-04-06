@@ -1,0 +1,21 @@
+<p class="alert alert-warning">
+  Could not find a wishlist matching the email/password entered. Please try again.
+</p>
+
+<h2>The perfect gift is just a click away!</h2>
+<p>Grant a Wish of {% if page.brand == 'soma' %}Soma{% elsif page.brand == 'whbm' %}White House | Black Market{% else %}Chico's{% endif %} and your gift giving will be as flawless as your style.</p>
+<p>To locate a friend's Wish List, enter the e-mail your invitation was sent to and the password included in the email invitation below:</p>
+
+<div class="row">
+  <div class="col-md-6">
+    <form action="">
+      {% include _atoms/forms/input.html labelName='Email Address' labelID='email-address' inputType='email' %}
+      {% include _atoms/forms/input.html labelName='Password' labelID='password' inputType='password' %}
+      <div class="form-group">
+        {% include _atoms/buttons/button.html btnClass='btn-default' btnLabel='View Wish List' %}
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="alert alert-info">Please note: You must be on the registrant's authorized gift giver list in order to shop for this person. You will need to be logged into your {% if page.brand == 'soma' %}Soma{% elsif page.brand == 'whbm' %}White House | Black Market{% else %}Chico's{% endif %} online account in order to purchase from this list. If you do not already have an account, you can register for a new account from the sign in page.</div>

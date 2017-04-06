@@ -1,0 +1,102 @@
+.table {
+  border-bottom: 1px solid $color-border;
+  > thead {
+    > tr {
+      > th {
+        // text-align: center;
+        text-align: left;
+      }
+    }
+  }
+  dl,
+  dd {
+    margin-bottom: $dimension-none;
+  }
+  img {
+    max-width: 150px;
+  }
+  th.text-right,
+  td.text-right {
+    text-align: right;
+  }
+  border-color: $color-border;
+  > tbody > tr,
+  > tfoot > tr,
+  > thead > tr {
+    > td,
+    > th {
+      border-color: $color-border;
+    }
+  }
+  th {
+    font-weight: $font-weight-base;
+    text-align: left;
+  }
+  p {
+    margin-bottom: $dimension-small;
+  }
+  &.table-striped {
+    > tbody {
+      > tr:nth-of-type(odd) {
+        background-color: $color-table-alt;
+      }
+    }
+  }
+}
+
+
+.table-bag {
+  margin: 0;
+  border: 0;
+  > tbody > tr > td {
+    border: 0;
+    padding-top: 0;
+    &.cell-bottom {
+      vertical-align: bottom;
+    }
+  }
+}
+
+// Firefox has some awkward fieldset styling involving width that terferes with the responsive table. This cannot be overriden without a Firefox-specific hack (not provided in Bootstrap):
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+
+@media screen and (max-width: $break-xs-max) {
+  table {
+    td, th {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+
+// table cell highlights
+.table-highlight {
+  tr:hover {
+    background-color: rgba(0,0,0,0.05);
+  }
+  td, th {
+    position: relative;
+  }
+  th:hover::after,
+  td:hover::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.05);
+    left: 0;
+    top: -500rem;
+    height: 1000rem;
+    width: 100%;
+    z-index: -1;
+  }
+  @media screen and (min-width: 768px) {
+    overflow: hidden;
+  }
+}
+
+.table {
+  .attention {
+    @include table-attention;
+  }
+}

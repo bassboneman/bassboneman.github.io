@@ -1,0 +1,110 @@
+---
+layout: page-collection
+title: Sandbox
+top-link: pages
+brand: chicos
+user: sarah
+---
+
+<div class="content content-wide">
+  <div class="container-fluid">
+
+
+
+
+
+
+    
+    
+
+    <section class="module module-sh-home-lead">
+      <div class="module-sh">
+        <div class="module-inner">
+          
+            <div class="module-sh-img">
+              <img src="https://www.chicos.com/web_assets/flex/img/alpha/hp_art_of_style.jpg?resize=1680px:*&output-quality=85" alt="Art <em>of</em> Style" class="img-responsive hidden-xs">
+              <img src="https://www.chicos.com/web_assets/flex/img/alpha/hp_art_of_style_mobile.jpg?resize=767px:*&output-quality=85" alt="Art <em>of</em> Style" class="img-responsive visible-xs">            
+            </div>
+            <div class="module-sh-copy">
+              <h1 class="">
+                Art <em>of</em> Style
+              </h1>
+              <hr>
+              <p>Ignore the rules. Wear what you love and love what you wear. <span>Personal style is an art that starts with you.</span></p>
+              <a href="#" class="btn btn-primary btn-responsive">Shop new arrivals</a>
+            </div><!-- .module-sh-copy -->
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+    <hr class="hr-mobile">
+  </div><!-- .container-fluid -->
+</div><!-- .content.content-wide -->
+
+
+<div class="content">
+  <div class="container-fluid">
+
+
+    {% include _molecules/modules/shelf-header-text.html moduleClass='module-home-text' moduleHeading='<span class="module-subheading">BUY ONE, GET ONE </span><span class="percent-off">50% Off</span> <span class="module-subheading">FULL-PRICED STYLES</span>' moduleCopy='<div></div><div class="module-code">Use code <span>80050</span></div>' buttonLabel='Shop Now' buttonClass='btn-responsive' moduleExtra='<a href="#" data-toggle="modal" data-target="#modal-details">Details</a>' %}
+
+    {% include _molecules/modules/shelf.html moduleClass='module-sh-home-coats' moduleLayout='module-sh-right' moduleImage='https://www.chicos.com/web_assets/flex/img/alpha/hp_coats.jpg?resize=1200px:*&output-quality=85' moduleImageMobile='https://www.chicos.com/web_assets/flex/img/alpha/hp_coats_mobile.jpg?output-quality=70' moduleHeading='Fresh Coats' moduleCopy='<p>Swing into spring in the season’s chicest details. (Think: fringe, prints and touchable textures.)</p>' buttonLabel='Shop Jackets' buttonClass='btn-responsive' %}
+
+    <hr class="hr-mobile">
+
+    {% include _molecules/modules/shelf-header-text.html moduleClass='module-home-text' moduleHeading='<span class="module-subheading">WE\'VE TAKEN AN EXTRA</span><span class="percent-off"> 30% OFF</span><span class="module-subheading"> ALREADY-REDUCED STYLES</span>' buttonLabel='Shop the Sale' buttonClass='btn-responsive' moduleExtra='<a href="#" data-toggle="modal" data-target="#modal-details">Details</a>' %}
+
+
+
+    <div class="row">
+      <div class="col-sm-6">
+        {% include _molecules/modules/img-overlay.html moduleClass='home-combo module-copy-white' moduleLayout='module-img-overlay-bot' moduleHeading='Make a Bold Statement' moduleLink='Shop Jewelry' moduleImage='https://www.chicos.com/web_assets/flex/img/alpha/hp_jewelry.jpg?resize=767px:*&output-quality=70' %}
+
+      </div>
+      <div class="col-sm-6">
+        {% include _molecules/modules/img.html moduleClass='home-combo' moduleHeading='Explore the new chicos.com' moduleCopy='<p>More simple. More new. More spectacular.</p>' moduleImage='https://www.chicos.com/web_assets/flex/img/alpha/hp_chicos_web.jpg?output-quality=80' moduleLink='Watch the Video' %}
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        {% include _molecules/modules/img.html moduleClass='home-combo' moduleHeading='Our Most Elevated Collection' moduleImage='https://www.chicos.com/web_assets/flex/img/alpha/hp_black_label.jpg?resize=767px:*&output-quality=75' moduleLink='Shop Black Label' %}
+
+      </div>
+      <div class="col-sm-6">
+        {% include _molecules/modules/img-overlay.html moduleClass='home-combo module-copy-white' moduleLayout='module-img-overlay-bot' moduleHeading='Make Some Waves' moduleCopy='<p>Go from sea to scene with ease.</p>' moduleLink='Shop Swim Boutique' moduleImage='https://www.chicos.com/web_assets/flex/img/alpha/hp_swim_boutique.jpg?&output-quality=70' %}
+
+      </div>
+    </div>
+
+
+    {% include _molecules/carousels/product-grid.html moduleTitle='New Arrivals' %}
+
+    {% include _molecules/modules/social.html moduleTitle='Connect with Us' moduleLabel1='Facebook' moduleLabel2='Pinterest' moduleLabel3='Instagram' moduleLabel4='YouTube' moduleImage1='https://www.chicos.com/web_assets/flex/img/alpha/hp_facebook.jpg?resize=480px:*&output-quality=75' moduleImage2='https://www.chicos.com/web_assets/flex/img/alpha/hp_pinterest.jpg?resize=480px:*&output-quality=75' moduleImage3='https://www.chicos.com/web_assets/flex/img/alpha/hp_instagram.jpg?resize=480px:*&output-quality=75' moduleImage4='https://www.chicos.com/web_assets/flex/img/alpha/hp_youtube.jpg?resize=480px:*&output-quality=75' %}
+
+    {% include _molecules/modules/blog.html %}
+
+
+   
+  </div><!-- .container-fluid -->
+</div><!-- .content -->
+
+
+<div class="modal fade" id="modal-details" tabindex="-1" role="dialog" aria-labelledby="modal-text" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close close-corner" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa rerum a perferendis minima quidem vero id dolorum, consequatur voluptate, vel recusandae corporis aliquid illo repellat facilis autem laudantium cumque, rem.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

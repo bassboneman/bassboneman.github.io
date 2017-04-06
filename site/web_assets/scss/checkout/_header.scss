@@ -1,0 +1,119 @@
+#header-checkout {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5.2rem;
+  background-color: #fff;
+  border-bottom: .1rem solid $color-border;
+  .header-inner {
+    position: relative;
+    max-width: $max-width;
+    height: 5.2rem;
+    margin: 0 auto;
+  }
+  .nav-account {
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 1.2rem;
+      line-height: 5.2rem;
+      li {
+        display: inline-block;
+        & + li {
+          margin-left: 2rem;
+        }
+        a {
+          text-transform: uppercase;
+        }
+      }
+    }
+    @media screen and (max-width: 767px) {
+      display: none;      
+    }
+  }
+}
+
+
+#logo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 8rem; // soma
+  height: 2.5rem; // soma
+  // @include logo;
+  svg {
+    display: block;
+    width: 8rem; // soma
+    height: 2.5rem; // soma
+  }
+  // @media screen and (max-width: $break-sm-max) {
+  //   @include logo-medium;
+  // }
+  // @media screen and (max-width: $break-xs-max) {
+  //   @include logo-mobile;
+  // }
+}
+
+.summary-toggle {
+  position: absolute;
+  right: 1.5rem;
+  top: 0;
+  height: 5.2rem;
+  text-align: right;
+  > a {
+    display: block;
+    margin-top: 1.1rem;
+    // position: absolute;
+    // right: 0;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    text-align: right;
+    text-decoration: none;
+    // @include vertical-align;
+    > span {
+      display: block;
+      font-weight: 700;
+    }
+  }
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+    min-width: 35rem;
+    margin-top: 0;
+    text-align: left;
+    border-top: 0;
+    padding: 1.5rem;
+    border-radius: 0;
+    @media screen and (max-width: 480px) {
+      min-width: calc(100vw - 3rem);
+    }
+  }
+  &.open {
+    .caret {
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+  }
+  @media screen and (min-width: 992px) {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

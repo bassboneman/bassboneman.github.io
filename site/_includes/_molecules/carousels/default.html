@@ -1,0 +1,60 @@
+{% capture carouselID %}{% if include.moduleID %}{{ include.moduleID }}{% else %}carousel-default{% endif %}{% endcapture %}
+{% capture carouselClass %}{% if include.carouselClass %}{{ include.carouselClass }}{% else %}carousel-lg carousel-copy-right{% endif %}{% endcapture %}
+{% capture carouselImg %}{% if include.image %}{{ include.image }}{% else %}https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+2400x1100&w=2400&h=1100{% endif %}{% endcapture %}
+{% capture carouselImgMobile %}{% if include.imageMobile %}{{ include.imageMobile }}{% else %}https://placeholdit.imgix.net/~text?txtsize=33&txt=Actual+Size:+767x767&w=767&h=767{% endif %}{% endcapture %}
+{% capture carouselHeading %}{% if include.moduleHeading %}{{ include.moduleHeading }}{% else %}Gotta Have It{% endif %}{% endcapture %}
+{% capture carouselHeadingClass %}{% if include.moduleHeadingClass %}{{ include.moduleHeadingClass }}{% else %}heading-serif heading-caps{% endif %}{% endcapture %}
+{% capture carouselCopy %}{% if include.moduleCopy %}{{ include.moduleCopy }}{% else %}<p>The pieces we can't wait to wear.</p>{% endif %}{% endcapture %}
+{% capture carouselBtnLabel %}{% if include.btnLabel %}{{ include.btnLabel }}{% else %}Shop New Arrivals{% endif %}{% endcapture %}
+{% capture carouselBtnClass %}{% if include.btnClass %}{{ include.btnClass }}{% else %}{% endif %}{% endcapture %}
+
+<section class="module module-carousel">
+  <div class="module-inner">
+    <div id="{{ carouselID }}" class="carousel slide {{ carouselClass }}" data-ride="carousel" data-interval="false" aria-live="polite">
+      <ol class="carousel-indicators">
+        <li data-target="#{{ carouselID }}" data-slide-to="0" class="active"></li>
+        <li data-target="#{{ carouselID }}" data-slide-to="1" class=""></li>
+        <li data-target="#{{ carouselID }}" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="{{ carouselImg }}" class="hidden-xs">
+          <img src="{{ carouselImgMobile }}" class="visible-xs">            
+          <div class="carousel-caption">
+            <h2 class="{{ carouselHeadingClass }}">{{ carouselHeading }}</h2>
+            {{ carouselCopy }}
+            {% if include.noBtn %}{% else %}<p><a href="#" class="btn btn-primary {{ carouselBtnClass }}">{{ carouselBtnLabel }}</a></p>{% endif %}
+          </div><!-- .carousel-caption -->
+        </div><!-- .item -->
+        <div class="item">
+          <img src="{{ carouselImg }}" class="hidden-xs">
+          <img src="{{ carouselImgMobile }}" class="visible-xs">            
+          <div class="carousel-caption">
+            <h2 class="{{ carouselHeadingClass }}">{{ carouselHeading }}</h2>
+            {{ carouselCopy }}
+            {% if include.noBtn %}{% else %}<p><a href="#" class="btn btn-primary {{ carouselBtnClass }}">{{ carouselBtnLabel }}</a></p>{% endif %}
+          </div><!-- .carousel-caption -->
+        </div><!-- .item -->
+        <div class="item">
+          <img src="{{ carouselImg }}" class="hidden-xs">
+          <img src="{{ carouselImgMobile }}" class="visible-xs">            
+          <div class="carousel-caption">
+            <h2 class="{{ carouselHeadingClass }}">{{ carouselHeading }}</h2>
+            {{ carouselCopy }}
+            {% if include.noBtn %}{% else %}<p><a href="#" class="btn btn-primary {{ carouselBtnClass }}">{{ carouselBtnLabel }}</a></p>{% endif %}
+          </div><!-- .carousel-caption -->
+        </div><!-- .item -->
+      </div><!-- .carousel-inner -->
+      <a class="left carousel-control" href="#{{ carouselID }}" data-slide="prev" aria-label="previous">
+        <svg class="icon-arrow-left" role="presentation">
+          <use xlink:href="#icon-arrow-left"></use>
+        </svg>
+      </a>
+      <a class="right carousel-control" href="#{{ carouselID }}" data-slide="next" aria-label="next">
+        <svg class="icon-arrow-right" role="presentation">
+          <use xlink:href="#icon-arrow-right"></use>
+        </svg>
+      </a>
+    </div><!-- #{{ carouselID }} -->
+  </div><!-- .module-inner -->
+</section><!-- .module -->

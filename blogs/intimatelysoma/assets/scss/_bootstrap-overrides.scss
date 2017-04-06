@@ -1,0 +1,12 @@
+// alternate row/column spacing
+.row-tight {
+  margin-left: -4px;
+  margin-right: -4px;
+  [class*="col-"] {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+.embed-responsive {
+  margin: 30px 0;
+}

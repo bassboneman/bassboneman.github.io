@@ -1,0 +1,11 @@
+{% include _templates/header.html %}
+
+<main role="main">
+  {% comment %}This page layout file can't have the typical wrapper as it has elements that stretch across the entire viewable area{% endcomment %}
+  {{content}}
+</main>
+
+{% include _molecules/modals/modal-size.html %}
+{% include _molecules/modals/modal-size-calculator.html %}
+
+{% include _templates/footer.html %}

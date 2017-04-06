@@ -1,0 +1,317 @@
+<!-- Section Begin -->
+
+<h2 class="pageName" id="top">Soma Home Page</h2>
+
+<section>
+
+    <div class="sectionContent">
+
+        <div class="sectionHead">
+
+            <p class="issue">&lt;HTML&gt; element must have a valid lang attribute</p>
+
+            <p class="issueHeader">Disabilities Affected:</p>
+
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+                <li>Cognitive</li>
+
+            </ul>
+
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+            </ul>
+
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>3.1.1 Language of Page</li>
+            </ul>
+
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+
+                <li></li>
+
+            </ul>
+
+        </div>
+
+        <!-- begin solution -->
+        <div class="proposedSolution">
+
+            <h3>Fix any of the following:</h3>
+            <p><span class="code"></span></p>
+
+            <ul>
+
+                <li>The &lt;html&gt; element does not have a lang attribute</li>
+
+            </ul>
+
+        </div>
+        <!-- end solution -->
+
+
+        <!-- Section End -->
+
+        <!-- Section Begin -->
+
+        <div class="sectionHead">
+
+            <p class="issue">Images must have alternate text</p>
+
+            <p class="issueHeader">Disabilities Affected:</p>
+
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+
+            </ul>
+
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+                <li>Section 508: MUST</li>
+            </ul>
+
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.1.1 Non-text Content</li>
+
+            </ul>
+
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+
+                <li>1194.22 (a) Text equivalent for non-text elements</li>
+                <li>1194.21 (a) Programmatically-discernable text</li>
+
+            </ul>
+
+        </div>
+
+        <!-- begin sample code -->
+        <div class="sampleHTML">
+
+            <h3>HTML:</h3>
+
+            <p class="comment">Did not include 3rd party tracking pixels in this audit.</p>
+
+            <span class="code">&lt;img src=&quot;/store/ibf/images/flags/USA.jpg&quot;&gt;</span>
+            <span class="code">&lt;img src=&quot;/web_assets/img/20160302/hp_poster.jpg&quot;&gt;</span>
+            <span class="code">&lt;img src=&quot;/web_assets/footer/footer_social.gif&quot; width=&quot;350&quot; height=&quot;58&quot; border=&quot;0&quot; usemap=&quot;#socialMediafooterMap&quot;&gt;</span>
+
+        </div>
+        <!-- end smaple code -->
+
+
+        <!-- begin solution -->
+        <div class="proposedSolution">
+
+            <h3>Fix any of the following:</h3>
+            <p><span class="code"></span></p>
+
+            <ul>
+
+                <li>Element does not have an alt attribute</li>
+                <li>aria-label attribute does not exist or is empty</li>
+                <li>aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty or not visible</li>
+                <li>Element has no title attribute or the title attribute is empty</li>
+                <li>Element's default semantics were not overridden with role="presentation"</li>
+                <li>Element's default semantics were not overridden with role="none"</li>
+
+            </ul>
+
+        </div>
+        <!-- end solution -->
+
+        <div class="sectionHead">
+
+            <p class="issue">&lt;ul&gt; and &lt;ol&gt; must only directly contain &lt;li&gt;, &lt;script&gt; or &lt;template&gt; elements</p>
+            <p class="explanation">Lists must be marked up correctly, meaning they must contain at only &lt;li elements and script supporting elements (&lt;script&gt; and &lt;template&gt;).</p>
+
+            <p class="issueHeader">Disabilities Affected:</p>
+
+            <ul>
+                <li>Blindness</li>
+                <li>Deafblindness</li>
+
+            </ul>
+
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (A): MUST</li>
+
+            </ul>
+
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.3.1 Info and Relationships</li>
+
+            </ul>
+
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+
+                <li></li>
+
+            </ul>
+
+        </div>
+
+        <!-- begin sample code -->
+        <div class="sampleHTML">
+
+            <h3>HTML:</h3>
+
+            <p class="comment"></p>
+
+            <span class="code">&lt;ul id=&quot;menu&quot;&gt;</span>
+
+        </div>
+        <!-- end smaple code -->
+
+        <!-- begin solution -->
+        <div class="proposedSolution">
+
+            <h3>Fix any of the following:</h3>
+            <p><span class="code"></span></p>
+
+            <ul>
+
+                <li>List element has children that are not &lt;li&gt;, &lt;script&gt; or &lt;template&gt; elements</li>
+
+            </ul>
+
+        </div>
+        <!-- end solution -->
+
+        <div class="sectionHead">
+
+            <p class="issue">&lt;video&gt; elements must have a &lt;track&gt; for captions</p>
+
+            <p class="issueHeader">Disabilities Affected:</p>
+
+            <ul>
+                <li>Deafness</li>
+
+            </ul>
+
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+
+                <li>WCAG 2.0 (AA): MUST</li>
+                <li>Section 508: MUST</li>
+
+            </ul>
+
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.2.2 Captions (Prerecorded)</li>
+
+            </ul>
+
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+
+                <li>1194.22 (a) Text equivalent for non-text elements</li>
+                <li>1194.22 (b) Multimedia presentation alternatives synchronization</li>
+
+            </ul>
+
+        </div>
+
+        <!-- begin sample code -->
+        <div class="sampleHTML">
+
+            <h3>HTML:</h3>
+
+            <p class="comment"></p>
+
+            <span class="code">&lt;video tabindex=&quot;-1&quot; class=&quot;video-stream html5-main-video&quot; style=&quot;width: 994px; height: 559px; left: 0px; top: 0px; transform: none;&quot; src=&quot;blob:https%3A//www.youtube.com/b701e3c0-45ea-4af6-9aad-d8ba7564bfea&quot;&gt;&lt;/video&gt;</span>
+
+        </div>
+        <!-- end smaple code -->
+
+        <!-- begin solution -->
+        <div class="proposedSolution">
+
+            <h3>Fix any of the following:</h3>
+            <p><span class="code"></span></p>
+
+            <ul>
+
+                <li>The multimedia element does not have a captions track</li>
+
+            </ul>
+
+        </div>
+        <!-- end solution -->
+
+        <div class="sectionHead">
+
+            <p class="issue">&lt;video&gt; elements must have an audio description track</p>
+
+            <p class="issueHeader">Disabilities Affected:</p>
+
+            <ul>
+                <li>Blindness</li>
+
+            </ul>
+
+            <p class="issueHeader">Issue Type:</p>
+            <ul>
+                <li>WCAG 2.0 (AA): MUST</li>
+
+            </ul>
+
+            <p class="issueHeader">WCAG Success Criteria:</p>
+            <ul>
+                <li>1.2.5 Audio Description (Prerecorded)</li>
+
+            </ul>
+
+            <p class="issueHeader">Section 508 Guidelines:</p>
+            <ul>
+
+                <li>1194.22 (a) Text equivalent for non-text elements</li>
+                <li>1194.21 (a) Programmatically-discernable text</li>
+
+            </ul>
+
+        </div>
+
+        <!-- begin sample code -->
+        <div class="sampleHTML">
+
+            <h3>HTML:</h3>
+
+            <p class="comment"></p>
+
+            <span class="code">&lt;video tabindex=&quot;-1&quot; class=&quot;video-stream html5-main-video&quot; style=&quot;width: 994px; height: 559px; left: 0px; top: 0px; transform: none;&quot; src=&quot;blob:https%3A//www.youtube.com/b701e3c0-45ea-4af6-9aad-d8ba7564bfea&quot;&gt;&lt;/video&gt;</span>
+
+        </div>
+        <!-- end smaple code -->
+
+        <!-- begin solution -->
+        <div class="proposedSolution">
+
+            <h3>Fix all of the following:</h3>
+            <p><span class="code"></span></p>
+
+            <ul>
+
+                <li>The multimedia element does not have an audio description track</li>
+
+            </ul>
+
+        </div>
+        <!-- end solution -->
+
+
+    </div>
+
+</section>
+<!-- Section End -->

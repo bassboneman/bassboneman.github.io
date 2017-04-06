@@ -1,0 +1,134 @@
+<section class="example-wrap">
+  <header>
+    <h2 id="buttons-options">Options</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/buttons/button.html btnClass='btn-default' btnLabel='Default' %}
+      {% include _atoms/buttons/button.html btnClass='btn-primary' btnLabel='Primary' %}
+      {% if page.brand == 'soma' %}
+        {% include _atoms/buttons/button.html btnClass='btn-alt' btnLabel='Alternate' %}    
+      {% endif %}
+      {% include _atoms/buttons/button.html btnClass='btn-link' btnLabel='Link' %}
+      {% include _atoms/buttons/button.html btnClass='btn-default' btnLabel='Disabled' btnExtra='disabled' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/buttons/button.html btnClass='btn-default' btnLabel='Default' %}
+      {% include _atoms/buttons/button.html btnClass='btn-primary' btnLabel='Primary' %}
+      {% if page.brand == 'soma' %}
+        {% include _atoms/buttons/button.html btnClass='btn-alt' btnLabel='Alternate' %}    
+      {% endif %}
+      {% include _atoms/buttons/button.html btnClass='btn-link' btnLabel='Link' %}
+      {% include _atoms/buttons/button.html btnClass='btn-default' btnLabel='Disabled' btnExtra='disabled' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="buttons-sizes">Sizes</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/buttons/button.html btnClass='btn-default btn-lg' btnLabel='Large' %}
+      {% include _atoms/buttons/button.html btnClass='btn-default' btnBlock='' btnLabel='Default' %}
+      {% include _atoms/buttons/button.html btnClass='btn-default btn-sm' btnLabel='Small' %}
+      {% include _atoms/buttons/button.html btnClass='btn-default btn-xs' btnLabel='Extra Small' %}
+      {% include _atoms/buttons/button.html btnClass='btn-default btn-responsive' btnLabel='Responsive' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/buttons/button.html btnClass='btn-default btn-lg' btnLabel='Large' %}
+      {% include _atoms/buttons/button.html btnClass='btn-default' btnBlock='' btnLabel='Default' %}
+      {% include _atoms/buttons/button.html btnClass='btn-default btn-sm' btnLabel='Small' %}
+      {% include _atoms/buttons/button.html btnClass='btn-default btn-xs' btnLabel='Extra Small' %}
+      {% include _atoms/buttons/button.html btnClass='btn-default btn-responsive' btnLabel='Responsive' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="buttons-block-level">Block Level</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/buttons/button.html btnClass='btn-default btn-lg btn-block' btnLabel='Block Level Button' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+      {% include _atoms/buttons/button.html btnClass='btn-default btn-lg btn-block' btnLabel='Block Level Button' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="buttons-buy">Add to Bag</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/buttons/button.html btnClass='btn-buy btn-lg btn-block' btnLabel='Add to Bag' %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+        {% include _atoms/buttons/button.html btnClass='btn-buy btn-lg btn-block' btnLabel='Add to Bag' %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="example-wrap">
+  <header>
+    <h2 id="buttons-pdp-secondary">PDP Secondary Buttons</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      <div class="col-sm-6 product-controls-secondary">
+        {% include _atoms/buttons/wrapped.html %}
+      </div>
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+        <div class="col-sm-6 product-controls-secondary">
+          {% include _atoms/buttons/wrapped.html %}
+        </div>
+      {% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .btn-close-panel {
+    position: static;
+    margin-bottom: 0;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+</style>
+<section class="example-wrap">
+  <header>
+    <h2 id="buttons-close-panel">Close Menu Panel</h2>
+    <p><a class="toggle-code-example" href="#"><i class="fa fa-code"></i></a></p>
+  </header>
+  <div class="example">
+    <div class="example-display">
+      {% include _atoms/buttons/button-close-panel.html %}
+    </div>
+    <div class="example-code">
+      {% highlight html %}
+        {% include _atoms/buttons/button-close-panel.html %}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>

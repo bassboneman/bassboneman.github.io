@@ -1,0 +1,43 @@
+{% include _templates/header.html %}
+
+<main role="main">
+  <div class="content content-pad">
+    <div class="container-fluid">
+      {% if page.special == 'noTitle' %}
+        <article>
+          {{content}}
+        </article>
+      {% elsif page.title == 'Sign Up!' or page.title == "Sign Up" or page.title == 'Associate Registration' or page.secondary-nav == 'none' %}
+        <h1 {% if page.special == 'whbm-rewards' %}class="register-heading"{% endif %}>{{page.title}}</h1>
+        <article>
+          {{content}}
+        </article>
+      {% else %}
+        <div class="row">
+          {% if page.accountTemplate != 'single-col' %}
+            <div class="col-sm-2">
+              {% include _molecules/navigation/secondary-account.html %}
+            </div>
+          {% endif %}
+          {% if page.accountTemplate == 'single-col' %}
+            <div class="col-sm-12">
+          {% else %}
+            <div class="col-sm-10">
+          {% endif %}
+            {% if page.title == 'WHBM Rewards' %}
+              <h1 class="rewards-heading">{{page.title}}</h1>
+            {% elsif page.special == 'hideTitle' %}
+            {% else %}
+              <h1>{{page.title}}</h1>
+            {% endif %}
+            <article>
+                {{content}}
+            </article>
+          </div>
+        </div>
+      {% endif %}
+    </div><!-- .container-fluid -->
+  </div><!-- .content -->
+</main>
+
+{% include _templates/footer.html %}

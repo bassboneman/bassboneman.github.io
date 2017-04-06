@@ -1,0 +1,27 @@
+<header id="header-checkout">
+  <div class="header-inner">
+    <nav class="nav-account">
+      <ul>
+        <li><a href="#">My Account</a></li>
+        <li><a href="">Live Help</a> or Call 1.866.768.7662</li>
+      </ul>
+    </nav> 
+    {% include _content/header/logo.html %}
+
+    {% if page.checkoutPage != 'confirmation' %}
+      <div class="summary-toggle dropdown">
+        <a id="checkout-summary" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Est. Total
+          <span class="total">$232.32 <span class="caret"></span></span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="checkout-summary">
+          {% include _molecules/checkout/summary.html placement='header' %}
+          <a href="#">
+            <img src="http://placeholdit.imgix.net/~text?txtsize=33&txt=Checkout+Promo&w=400&h=200" alt="Sidebar Promo" class="img-responsive">
+          </a>
+        </div><!-- .dropdown-menu -->
+      </div><!-- .checkout-total.dropdown -->
+    {% endif %}
+    
+  </div><!-- .header-inner -->
+</header><!-- #header-checkout -->

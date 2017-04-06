@@ -1,0 +1,337 @@
+<nav id="menu">
+  <div class="menu-header-mobile">
+    <div class="text-right">
+      <a class="menu-close" href="#" data-toggle="offcanvas">
+        <svg class="icon-close">
+          <use xlink:href="#icon-close-large"></use>
+        </svg>
+      </a>
+    </div>
+    {% comment %}if logged in{% endcomment %}
+    <h3>Hi, Jenny!</h3>
+    {% comment %}<p>You are a(n) (Introductory) Passport Member</p>{% endcomment %}
+    <div class="customer-links">
+      <a href="#">My Account</a>
+      <a href="#">Sign Out</a>
+    </div>
+    {% comment %}else{% endcomment %}
+    <!-- <a href="#" class="text-uppercase link-no-underline">Sign In</a> -->
+    {% comment %}endif{% endcomment %}
+  </div>
+  <div class="ship-to visible-sm visible-xs">
+    Ship to: <a href="#"><img src="{{ site.baseurl }}/web_assets/imgs/flags/usa.png" alt="USA"></a>
+  </div>  
+  <ul>
+    <li class="dropdown" id="menu-new-arrivals" data-menu="menu-new-arrivals">
+      <a href="/pages/chicos/collection.html" class="top-nav-cat"><h2><span>New Arrivals</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3 col-border">
+              <h3>Categories</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Sweaters</a></li>
+                <li><a href="#">Jackets</a></li>
+                <li><a href="#">Dresses &amp; Skirts</a></li>
+                <li><a href="#">Pants &amp; Shorts</a></li>
+                <li><a href="#">Denim</a></li>
+                <li><a href="#">Swim</a></li>
+                <li><a href="#">Jewelry </a></li>
+                <li><a href="#">Accessories </a></li>
+                <li><a href="#">Petites </a></li>
+                <li><a href="#">Online </a></li>
+                <li><a href="#">Exclusives</a></li>
+                <li><a href="#">Gift Cards</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Zenergy</a></li>
+                <li><a href="#">Travelers</a></li>
+                <li><a href="#">Black Label</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown" id="menu-clothing" data-menu="menu-clothing">
+      <a href="/pages/chicos/collection.html" class="top-nav-cat"><h2><span>Clothing</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3 col-border">
+              <h3>Categories</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Sweaters</a></li>
+                <li><a href="#">Jackets</a></li>
+                <li><a href="#">Dresses &amp; Skirts</a></li>
+                <li><a href="#">Pants &amp; Shorts</a></li>
+                <li><a href="#">Denim</a></li>
+                <li><a href="#">Swim</a></li>
+                <li><a href="#">Online</a></li>
+                <li><a href="#">Exclusives</a></li>
+                <li><a href="#">Gift Cards</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Editorial Feature</a></li>
+                <li><a href="#">Editorial Feature</a></li>
+                <li><a href="#">Editorial Feature</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown" id="menu-jewelry" data-menu="menu-jewelry">
+      <a href="/pages/chicos/collection.html" class="top-nav-cat"><h2><span>Jewelry</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3 col-border">
+              <h3>Categories</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">Necklaces</a></li>
+                <li><a href="#">Bracelets</a></li>
+                <li><a href="#">Earrings</a></li>
+                <li><a href="#">Watches</a></li>
+                <li><a href="#">Rings &amp; Pins</a></li>
+                <li><a href="#">Collectibles </a></li>
+                <li><a href="#">Online</a></li>
+                <li><a href="#">Exclusives</a></li>
+                <li><a href="#">Gift Cards</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Editorial Feature</a></li>
+                <li><a href="#">Editorial Feature</a></li>
+                <li><a href="#">Editorial Feature</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown" id="menu-accessories" data-menu="menu-accessories">
+      <a href="/pages/chicos/collection.html" class="top-nav-cat"><h2><span>Accessories</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3 col-border">
+              <h3>Categories</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">Wraps &amp; Scarves</a></li>
+                <li><a href="#">Hats</a></li>
+                <li><a href="#">Bags</a></li>
+                <li><a href="#">Eyewear</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Belts</a></li>
+                <li><a href="#">Gift Cards</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Editorial Feature</a></li>
+                <li><a href="#">Editorial Feature</a></li>
+                <li><a href="#">Editorial Feature</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown" id="menu-collections" data-menu="menu-collections">
+      <a href="/pages/chicos/collection.html" class="top-nav-cat"><h2><span>Collections</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3 col-border">
+              <h3>Collections</h3>
+              <ul>
+                <li><a href="#">Black Label</a></li>
+                <li><a href="#">Travelers</a></li>
+                <li><a href="#">Zenergy</a></li>
+                <li><a href="#">Zenergy Golf</a></li>
+                <li><a href="#">So Slimming</a></li>
+                <li><a href="#">Swim Shop</a></li>
+                <li><a href="#">Knit Kit</a></li>
+                <li><a href="#">Online</a></li>
+                <li><a href="#">Exclusives</a></li>
+                <li><a href="#">Gift Cards</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Lorem</h3>
+              <ul>
+                <li><a href="#">Dolor</a></li>
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Amet</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown" id="menu-petites" data-menu="menu-petites">
+      <a href="/pages/chicos/collection.html" class="top-nav-cat"><h2><span>Petites</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3 col-border">
+              <h3>Petites</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">Black Label</a></li>
+                <li><a href="#">Travelers</a></li>
+                <li><a href="#">Zenergy</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Sweaters</a></li>
+                <li><a href="#">Jackets</a></li>
+                <li><a href="#">Dresses &amp; Skirts</a></li>
+                <li><a href="#">Pants &amp; Shorts</a></li>
+                <li><a href="#">Denim</a></li>
+                <li><a href="#">Gift Cards</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Lorem</h3>
+              <ul>
+                <li><a href="#">Dolor</a></li>
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Amet</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="http://insidechic.chicos.com" class="top-nav-cat"><h2><span>Inside Chic</span></h2></a>
+    </li>
+    <li class="dropdown">
+      <a href="/pages/chicos/collection.html" class="menu-sale" data-nav-type="top-nav"><h2><span>Sale</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <div class="row">
+            <div class="col-md-3 col-border">
+              <h3>Sale</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Travelers</a></li>
+                <li><a href="#">Zenergy</a></li>
+                <li><a href="#">Jewelry</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Denim</a></li>
+                <li><a href="#">Petites</a></li>
+                <li><a href="#">New Debuts</a></li>
+                <li><a href="#">Black Label </a></li>
+                <li><a href="#">Sweaters </a></li>
+                <li><a href="#">Jackets </a></li>
+                <li><a href="#">Dresses &amp; Shorts</a></li>
+                <li><a href="#">Swim</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Final Sale</h3>
+              <ul>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Travelers</a></li>
+                <li><a href="#">Zenergy</a></li>
+                <li><a href="#">Travelers</a></li>
+                <li><a href="#">Jewelry</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Denim</a></li>
+                <li><a href="#">Petites</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+            <div class="col-md-3 hidden-xs">
+              <img class="img-responsive" src="http://placehold.it/400x400&text=Editorial+or+Promo" alt="Editorial or Promo">
+            </div>
+          </div>
+        </div>
+        {% include _atoms/buttons/button-close-panel.html %}
+      </div>
+    </li>
+    <li class="search-toggle-wrap">
+      <a href="#" class="search-toggle" data-toggle="search" aria-controls="search-wrap" aria-expanded="false">
+        <h2>
+          <svg class="icon-search">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+          Search
+        </h2>
+      </a>
+    </li>
+    <li class="dropdown visible-sm visible-xs">
+      <a href="#"><h2><span>Customer Support</span></h2></a>
+      <div class="dropdown-menu">
+        <div class="container-fluid dropdown-inner">
+          <ul>
+            <li><a href="tel:8888554986">Call Us 888-855-4986</a></li>
+            <li><a href="mailto:something@chicos.com">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>

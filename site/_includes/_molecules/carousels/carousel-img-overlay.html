@@ -1,0 +1,109 @@
+<section class="module {{ include.moduleClass }}">
+  <div class="module-carousel module-img module-img-overlay">
+    <div class="module-inner">
+      <div id="carousel-collection-promo-lg" class="carousel slide carousel-collection-promo-lg {{ include.carouselClass }}" data-ride="carousel" data-interval="false" aria-live="polite">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-collection-promo-lg" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-collection-promo-lg" data-slide-to="1" class=""></li>
+          <li data-target="#carousel-collection-promo-lg" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="{{ include.moduleImage }}" class="img-responsive" alt="{{ include.moduleHeading | strip_html }}">
+            <div class="module-img-copy">
+              {% if include.moduleCollection %}
+                {% include _atoms/text/heading-collection.html %}
+              {% endif %}
+
+              {% if include.moduleHeading %}
+                <h3>{{ include.moduleHeading }}</h3>
+              {% endif %}
+
+              {% if include.moduleSubCopy %}
+                {{ include.moduleSubCopy }}
+              {% endif %}
+
+              {% if include.moduleLink %}
+                <a href="#" class="shop-now">{{ include.moduleLink }}</a>
+              {% endif %}
+            </div>
+          </div>
+          {% if include.promoType != "singleCarouselPromo" %}
+            <div class="item">
+              <img src="{{ include.moduleImage }}" class="img-responsive" alt="{{ include.moduleHeading | strip_html }}">
+              <div class="module-img-copy">
+                {% if include.moduleCollection %}
+                  {% include _atoms/text/heading-collection.html %}
+                {% endif %}
+
+                {% if include.moduleHeading %}
+                  <h3>{{ include.moduleHeading }}</h3>
+                {% endif %}
+
+                {% if include.moduleSubCopy %}
+                  {{ include.moduleSubCopy }}
+                {% endif %}
+
+                {% if include.moduleLink %}
+                  <a href="#" class="shop-now">{{ include.moduleLink }}</a>
+                {% endif %}
+              </div>
+            </div>
+            <div class="item">
+              <img src="{{ include.moduleImage }}" class="img-responsive" alt="{{ include.moduleHeading | strip_html }}">
+              <div class="module-img-copy">
+                {% if include.moduleCollection %}
+                  {% include _atoms/text/heading-collection.html %}
+                {% endif %}
+
+                {% if include.moduleHeading %}
+                  <h3>{{ include.moduleHeading }}</h3>
+                {% endif %}
+
+                {% if include.moduleSubCopy %}
+                  {{ include.moduleSubCopy }}
+                {% endif %}
+
+                {% if include.moduleLink %}
+                  <a href="#" class="shop-now">{{ include.moduleLink }}</a>
+                {% endif %}
+              </div>
+            </div>
+            <div class="item">
+              <img src="{{ include.moduleImage }}" class="img-responsive" alt="{{ include.moduleHeading | strip_html }}">
+              <div class="module-img-copy">
+                {% if include.moduleCollection %}
+                  {% include _atoms/text/heading-collection.html %}
+                {% endif %}
+
+                {% if include.moduleHeading %}
+                  <h3>{{ include.moduleHeading }}</h3>
+                {% endif %}
+
+                {% if include.moduleSubCopy %}
+                  {{ include.moduleSubCopy }}
+                {% endif %}
+
+                {% if include.moduleLink %}
+                  <a href="#" class="shop-now">{{ include.moduleLink }}</a>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+        {% if include.promoType != "singleCarouselPromo" %}
+          <a class="left carousel-control" href="#carousel-collection-promo-lg" data-slide="prev" aria-label="previous">
+            <svg class="icon-arrow-left" role="presentation">
+              <use xlink:href="#icon-promo-left"></use>
+            </svg>
+          </a>
+          <a class="right carousel-control" href="#carousel-collection-promo-lg" data-slide="next" aria-label="next">
+            <svg class="icon-arrow-right" role="presentation">
+              <use xlink:href="#icon-promo-right"></use>
+            </svg>
+          </a>
+        {% endif %}
+      </div><!-- #carousel-default -->
+    </div>
+  </div><!-- .module-carousel -->
+</section><!-- .module -->

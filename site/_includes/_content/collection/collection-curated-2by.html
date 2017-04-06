@@ -1,0 +1,31 @@
+<div class="content content-wide">
+  <div class="container-fluid">
+    <section class="module">
+      {% include _molecules/modules/curated-header-flexible.html %}
+    </section>
+  </div><!-- .container-fluid -->
+</div><!-- .content.content-wide -->
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="collection-nav">
+      {% include _molecules/navigation/breadcrumb.html breadLvl2='Clothing' breadLvl3='Dresses &amp; Skirts' searchMsg='yes' %}
+    </div>
+    <div class="collection">
+
+      {% include _molecules/collection/curated.html moduleHeading='So Lifting&trade; Slim Leg' moduleID='1' promoType='contentModuleTwoBy' %}
+      {% include _molecules/collection/curated.html moduleHeading='Platinum Jegging' moduleID='2' promoType='contentModuleTwoBy' %}
+      {% include _molecules/collection/curated.html moduleHeading='Platinum Barely Boot' moduleID='3' promoType='contentModuleTwoBy' %}
+      {% include _molecules/collection/curated.html moduleHeading='So Perfect Legging' moduleID='4' promoType='contentModuleTwoBy' %}
+      {% include _molecules/collection/curated.html moduleHeading='So Lifting&trade; Slim Leg' moduleID='5' promoType='contentModuleTwoBy' %}
+      {% include _molecules/collection/curated.html moduleHeading='Platinum Jegging' moduleID='6' promoType='contentModuleTwoBy' %}
+      {% include _molecules/collection/curated.html moduleHeading='Platinum Barely Boot' moduleID='7' promoType='contentModuleTwoBy' %}
+      {% include _molecules/collection/curated.html moduleHeading='So Perfect Legging' moduleID='8' promoType='contentModuleTwoBy' %}
+
+    </div><!-- .collection -->
+  </div><!-- .container-fluid -->
+</div><!-- .content -->
+
+{% include _molecules/modals/modal-quick-view.html %}
+{% include _molecules/modals/modal-gallery.html %}
+{% include _molecules/navigation/top-link.html %}

@@ -1,0 +1,15 @@
+<h1 class="product-name">
+  {% if page.title == "Product Page (Gift Card)" %}
+    Gift Cards
+  {% elsif page.title == "Product Page (e-Gift Card)" %}
+    E-Gift Card
+  {% else %}
+    {% if page.title == "Product Page (Donations)" %}
+      Product Name
+    {% elsif page.brand == 'soma' %}
+      Full Coverage Front Close Lace Bra
+    {% else %}
+      Chevron Jacquard Moto Jacket
+    {% endif %}
+  {% endif %}
+</h1>

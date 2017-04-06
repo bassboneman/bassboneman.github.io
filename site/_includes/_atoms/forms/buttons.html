@@ -1,0 +1,7 @@
+{% if page.title == "Address Book" %}
+  {% include _atoms/buttons/button.html href='#' btnClass='btn-primary' btnLabel='Add Shipping Address' %}
+{% else %}
+  {% include _atoms/buttons/button.html href='#' btnClass='btn-primary' btnLabel='Add Credit Card' %}
+{% endif %}
+
+{% include _atoms/buttons/button-link.html href='#' btnClass='btn-link' btnLabel='Cancel' btnExtra='data-dismiss="modal"' %}

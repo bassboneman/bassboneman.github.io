@@ -1,0 +1,95 @@
+/*
+This CSS resource incorporates links to font software which is 
+the valuable copyrighted property of WebType LLC, The Font Bureau 
+and/or their suppliers. You may not 
+attempt to copy, install, redistribute, convert, modify or reverse 
+engineer this font software. Please contact WebType with any 
+questions: http://www.webtype.com 
+*/
+
+// new
+@font-face {
+  font-family: "BentonModernDisp";
+  src: url("../fonts/soma/58eb3312-f28a-4514-a563-d42faa3f7c5b-2.eot");
+  src: url("../fonts/soma/58eb3312-f28a-4514-a563-d42faa3f7c5b-2.eot?") format("embedded-opentype"),
+       url("../fonts/soma/58eb3312-f28a-4514-a563-d42faa3f7c5b-3.woff") format("woff"),
+       url("../fonts/soma/58eb3312-f28a-4514-a563-d42faa3f7c5b-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+// call locally
+// @font-face {
+//   font-family: "BentonModern";
+//   src: url("../fonts/soma/54c171f9-586a-486d-9b33-d83a361c6e1b-2.eot");
+//   src: url("../fonts/soma/54c171f9-586a-486d-9b33-d83a361c6e1b-2.eot?") format("embedded-opentype"),
+//        url("../fonts/soma/54c171f9-586a-486d-9b33-d83a361c6e1b-3.woff") format("woff"),
+//        url("../fonts/soma/54c171f9-586a-486d-9b33-d83a361c6e1b-1.ttf") format("truetype");
+//   font-style: normal;
+//   font-weight: normal;
+// }
+// @font-face {
+//   font-family: "BentonModern";
+//   src: url("../fonts/soma/e9b51f4d-44c2-4b20-ba40-6117e07aa439-2.eot");
+//   src: url("../fonts/soma/e9b51f4d-44c2-4b20-ba40-6117e07aa439-2.eot?") format("embedded-opentype"),
+//        url("../fonts/soma/e9b51f4d-44c2-4b20-ba40-6117e07aa439-3.woff") format("woff"),
+//        url("../fonts/soma/e9b51f4d-44c2-4b20-ba40-6117e07aa439-1.ttf") format("truetype");
+//   font-style: normal;
+//   font-weight: bold;
+// }
+// @font-face {
+//   font-family: "BentonModern";
+//   src: url("../fonts/soma/d65fb8c5-0507-4f22-b843-a0b480522e8e-2.eot");
+//   src: url("../fonts/soma/d65fb8c5-0507-4f22-b843-a0b480522e8e-2.eot?") format("embedded-opentype"),
+//        url("../fonts/soma/d65fb8c5-0507-4f22-b843-a0b480522e8e-3.woff") format("woff"),
+//        url("../fonts/soma/d65fb8c5-0507-4f22-b843-a0b480522e8e-1.ttf") format("truetype");
+//   font-style: italic;
+//   font-weight: normal;
+// }
+// @font-face {
+//   font-family: "BentonModern";
+//   src: url("../fonts/soma/33835a29-b5c8-4ccc-bce8-1395819f4e13-2.eot");
+//   src: url("../fonts/soma/33835a29-b5c8-4ccc-bce8-1395819f4e13-2.eot?") format("embedded-opentype"),
+//        url("../fonts/soma/33835a29-b5c8-4ccc-bce8-1395819f4e13-3.woff") format("woff"),
+//        url("../fonts/soma/33835a29-b5c8-4ccc-bce8-1395819f4e13-1.ttf") format("truetype");
+//   font-style: italic;
+//   font-weight: bold;
+// }
+
+// // call from soma servers
+// @font-face {
+//   font-family: "BentonModern";
+//   src: url("https://www.soma.com/web_assets/fonts/core/54c171f9-586a-486d-9b33-d83a361c6e1b-2.eot");
+//   src: url("https://www.soma.com/web_assets/fonts/core/54c171f9-586a-486d-9b33-d83a361c6e1b-2.eot?") format("embedded-opentype"),
+//        url("https://www.soma.com/web_assets/fonts/core/54c171f9-586a-486d-9b33-d83a361c6e1b-3.woff") format("woff"),
+//        url("https://www.soma.com/web_assets/fonts/core/54c171f9-586a-486d-9b33-d83a361c6e1b-1.ttf") format("truetype");
+//   font-style: normal;
+//   font-weight: normal;
+// }
+// @font-face {
+//   font-family: "BentonModern";
+//   src: url("https://www.soma.com/web_assets/fonts/core/e9b51f4d-44c2-4b20-ba40-6117e07aa439-2.eot");
+//   src: url("https://www.soma.com/web_assets/fonts/core/e9b51f4d-44c2-4b20-ba40-6117e07aa439-2.eot?") format("embedded-opentype"),
+//        url("https://www.soma.com/web_assets/fonts/core/e9b51f4d-44c2-4b20-ba40-6117e07aa439-3.woff") format("woff"),
+//        url("https://www.soma.com/web_assets/fonts/core/e9b51f4d-44c2-4b20-ba40-6117e07aa439-1.ttf") format("truetype");
+//   font-style: normal;
+//   font-weight: bold;
+// }
+// @font-face {
+//   font-family: "BentonModern";
+//   src: url("https://www.soma.com/web_assets/fonts/core/d65fb8c5-0507-4f22-b843-a0b480522e8e-2.eot");
+//   src: url("https://www.soma.com/web_assets/fonts/core/d65fb8c5-0507-4f22-b843-a0b480522e8e-2.eot?") format("embedded-opentype"),
+//        url("https://www.soma.com/web_assets/fonts/core/d65fb8c5-0507-4f22-b843-a0b480522e8e-3.woff") format("woff"),
+//        url("https://www.soma.com/web_assets/fonts/core/d65fb8c5-0507-4f22-b843-a0b480522e8e-1.ttf") format("truetype");
+//   font-style: italic;
+//   font-weight: normal;
+// }
+// @font-face {
+//   font-family: "BentonModern";
+//   src: url("https://www.soma.com/web_assets/fonts/core/33835a29-b5c8-4ccc-bce8-1395819f4e13-2.eot");
+//   src: url("https://www.soma.com/web_assets/fonts/core/33835a29-b5c8-4ccc-bce8-1395819f4e13-2.eot?") format("embedded-opentype"),
+//        url("https://www.soma.com/web_assets/fonts/core/33835a29-b5c8-4ccc-bce8-1395819f4e13-3.woff") format("woff"),
+//        url("https://www.soma.com/web_assets/fonts/core/33835a29-b5c8-4ccc-bce8-1395819f4e13-1.ttf") format("truetype");
+//   font-style: italic;
+//   font-weight: bold;
+// }

@@ -1,0 +1,33 @@
+<div class="content shop-by-look-{{ page.brand }}">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+
+        {% include _molecules/products/outfit.html outfitLayout='yes' carouselID='1' %}
+
+        {% include _molecules/products/outfit.html outfitLayout='yes' carouselID='2' %}
+
+        {% include _molecules/products/outfit.html outfitLayout='yes' carouselID='3' %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <footer class="footer navbar-fixed-bottom shop-by-look-footer hide-footer"> -->
+<footer class="shop-footer-wrap hide-footer">
+  <div class="shop-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="row">
+            <div class="col-md-7 col-md-offset-5">
+              <a class="btn btn-primary">Add <span class="sticky-footer-counter">1</span> Item<span class="sticky-footer-plural">s</span> to Bag</a>
+              <a class="footer-print-link" href="javascript:window.print();">Print Shopping List</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,207 @@
+// #share {
+//   margin-bottom: 30px;
+//   padding: 8px 0;
+//   font-size: 0;
+//   text-align: center;
+//   border: 1px solid $color-border-dark;
+//   border-width: 1px 0;
+// }
+
+// .gig-bar-container {
+//   max-width: 150px;
+//   margin: 0 auto;
+// }
+// *.gig-bar-container img {
+//   width: 20px;
+//   height: 20px;
+//   @include transition(all);
+//   &:hover {
+//     transform: scale(1.2);
+//   }
+// }
+// div.gig-button-container {
+//   margin: 0 !important;
+// }
+
+
+.share {
+  margin-bottom: 30px;
+  padding: 4px 0;
+  font-size: 0;
+  text-align: center;
+  border: 1px solid $color-border-dark;
+  border-width: 1px 0;
+
+  [class*='share-widget-'] {
+    vertical-align: top;
+    display: inline-block;
+    min-width: 60px;
+    margin: 0 2px;
+    border-radius: 2px;
+    text-align: center;
+    @include transition(background);
+    .fa {
+      display: block;
+      // height: 2.8rem;
+      margin: 0 auto;
+      font-size: 2.6rem;
+      line-height: 2.8rem;
+    }
+    a {
+      display: block;
+      padding: 4px;
+      color: #fff;
+      text-decoration: none;
+    }
+    span {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.8rem;
+      text-transform: uppercase;
+    }
+  }
+}
+.share-widget-facebook {background: #2a5e9d;}
+.share-widget-twitter {background: #00c2f5;}
+.share-widget-pinterest {background: #cc1e22;}
+.share-widget-comment {background: #9cd162;}
+.share-widget-email {background: #7a7a7a;}
+
+.share-widget-facebook:hover {background: darken(#2a5e9d, 7.5%);}
+.share-widget-twitter:hover {background: darken(#00c2f5, 7.5%);}
+.share-widget-pinterest:hover {background: darken(#cc1e22, 7.5%);}
+.share-widget-comment:hover {background: darken(#9cd162, 7.5%);}
+.share-widget-email:hover {background: darken(#7a7a7a, 7.5%);}
+
+.share-count {
+  height: 54px;
+  margin-right: 6px;
+  padding-right: 6px;
+  border-right: 2px solid #000;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  span {
+    display: block;
+  }
+  .share-total {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+  }
+  .share-label {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .share {
+    padding: 2px 0;
+  }
+  .share-count {
+    display: none;
+    // margin: 0 0 6px 0;
+    // text-align: center;
+    // border: 0;
+  }
+  .share-label {
+    display: none;
+  }
+  .share {
+    [class*='share-widget-'] {
+      min-width: 0;
+      margin: 2px;
+      .fa {
+        font-size: 2.0rem;
+        line-height: 2.0rem;
+      }
+      a {
+        padding: 8px;
+      }
+      span {
+        display: none;
+      }
+    }
+    // [class*='share-widget-'] {
+    //   span {
+    //     display: none;
+    //   }
+    // }
+  }
+}
+
+
+
+// [class*='share-'] {
+//   display: inline-block;
+//   min-width: 80px;
+//   // height: 22px;
+//   margin: 0;
+//   padding: 0;
+//   // text-align: right;
+//   color: #fff;
+//   // font-size: 14px;
+//   @include radius(4px);
+// }
+
+// [class*="label-"] {
+//   display: inline-block;
+//   vertical-align: top;
+//   width: 28px;
+//   height: 22px;
+//   color: #fff;
+//   text-align: center;
+//   line-height: 22px;
+// }
+
+
+// .count {
+//   position: relative;
+//   display: inline-block;
+//   text-align: center;
+//   vertical-align: top;
+//   left: 7px;
+//   top: 1px;
+//   padding: 3px 5px;
+//   margin: 0;
+//   line-height: 12px;
+//   border: 1px solid $color-border;
+//   color: #666;
+//   background: #fff;
+//   @include radius(3px);
+//   &:before {
+//     display: block;
+//     width: 0;
+//     content: "";
+//     position: absolute;
+//     bottom: auto;
+//     top: 6px;
+//     left: -7px;
+//     border-width: 3px 6px 3px 0;
+//     border-style: solid;
+//     border-color: transparent #ccc;
+//   }
+//   &:after{
+//     content: "";
+//     position: absolute;
+//     top: 6px;
+//     bottom: auto;
+//     left: -5px;
+//     border-width: 3px 6px 3px 0;
+//     border-style: solid;
+//     border-color: transparent #fff;
+//     display: block;
+//     width: 0;
+//   }
+// }
+// a.box {
+//   display: inline-block;
+//   width: 70px;
+//   margin-right: 20px;
+//   .count {
+//     font-size: 10px;
+//     text-decoration: none;
+//   }
+// }

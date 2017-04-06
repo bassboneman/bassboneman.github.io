@@ -1,0 +1,1431 @@
+// colors: base
+// $color-brand-light: #ecd5ce;
+// $color-brand-medium: #f5e7da;
+$color-brand-light: #eee;
+$color-brand-medium: #eee;
+// $color-btn-primary-hover: #e1bcaa;
+// $color-btn-default-hover: #e1bcaa;
+$color-btn-primary-hover: #444;
+$color-btn-default-hover: #444;
+$color-border-menu: #ddd;
+$color-border: #ddd;
+$color-email: $color-btn-primary-hover;
+$color-gray: #696969;
+$color-red: #ce072a;
+$color-red-dark: $color-red;
+$color-error: $color-red;
+$color-sale: $color-red;
+
+$color-dovegray: $color-gray; 
+$color-bg-light: $color-brand-medium;
+
+$color-footer-border: $color-black;
+// $color-table-alt: lighten($color-bg-light, 5%);
+$color-table-alt: #eee;
+$color-form-default: $color-black;
+$color-select-open: $color-white;
+
+$color-mobile-utility-bg: #fff;
+$color-mobile-utility-border: transparent;
+
+// $color-dropdown-li-hover: #f5e7da;
+$color-dropdown-li-selected: #eee;
+
+// @mixin select-button {
+//   .btn {
+//     letter-spacing: 0.03em;
+//   }
+// }
+
+@mixin bootstrap-select {
+  .btn {
+    @include l2;
+    letter-spacing: 0;
+  }
+  .dropdown-menu > li > a {
+    @include l2;
+  }
+}
+
+@mixin button-link {
+  text-transform: uppercase;
+  // font-weight: 700;
+  letter-spacing: 0;
+}
+
+
+// typography
+$font-family-base: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: "BentonModernDisp", serif;
+$font-size-base: 1.3rem;
+$font-size-h1: 2.8rem;
+$font-size-h2: 2.2rem;
+$font-size-h3: 1.8rem;
+$font-size-h4: 1.6rem;
+$font-size-h5-h6: 1.6rem;
+@mixin alert {
+  // padding: 1.2rem 1.5rem;
+  font-size: 1.3rem;
+  background: #fff;
+  .product-details & {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    font-size: 1.3rem;
+  }
+  .product-wrap & {
+    margin-top: 2rem;
+    padding: 0.8rem;
+    text-transform: uppercase;
+  }
+  &.alert-success {
+    border-color: #9dba93;
+  }
+  &.alert-info {
+    border-color: $color-border;
+  }
+  &.alert-warning,
+  &.alert-danger {
+    font-weight: 400;
+    color: #fff;
+    background-color: $color-red;
+    // background-color: #f2e6e6; not using because it's not the default red
+    border-color: transparent;
+    a, a:hover {
+      color: #fff;
+    }
+  }
+}
+
+@mixin heading-has-line {}
+
+$font-weight-base: 300;
+$font-weight-bold: 600;
+
+@mixin longform {
+  h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@mixin l1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@mixin cat-head {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@mixin l2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+@mixin pdp-cta {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+@mixin pdp-copy {
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+@mixin chat-heading {
+  font-size: $font-size-h1;
+  font-weight: 400;
+}
+
+@mixin subnav-fonts {
+  // font-size: 1.3rem;
+  padding-top: 1.1rem;
+}
+
+@mixin form-control {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+@mixin message-count {
+  font-weight: 300;
+}
+
+// products 
+@mixin product-group {
+  // font-family: $font-family-base;
+  font-weight: 400;
+}
+@mixin product-name {
+  // font-family: $font-family-serif;
+  // font-size: 2.2rem;
+  // font-weight: 500;
+  // line-height: 2.6rem;
+  text-transform: none;
+  // letter-spacing: 0.03em;
+}
+@mixin product-style-id {
+  font-family: $font-family-base;
+}
+@mixin product-size-tools {
+  a {
+    // @include pdp-cta;
+    @include l2;
+    text-decoration: none; 
+  }
+}
+@mixin product-full-link {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+@mixin product-price {
+  font-size: 2.2rem;
+  font-weight: 600;
+  .product-price-regular {
+    margin-right: 0.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-gray;
+  }
+  .product-price-msg {
+    font-size: 1.2rem;
+    color: $color-gray;
+  }
+}
+@mixin product-rating {
+  // font-weight: 600;
+  @include l2;
+  .icon-star {
+    position: relative;
+    top: .2rem;
+    width: 1.3rem;
+    height: 1.2rem;
+    margin-left: -.1rem;
+    fill: #dfdfdf; // fill. see http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/ for details
+    color: #333; // border
+    &.rating-liked {
+      fill: $color-black; // fill. see http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/ for details
+      color: $color-black; // border
+    }
+  }
+}
+
+@mixin buy-more {
+  // @include pdp-cta;
+  @include l2;
+  text-decoration: none;
+}
+
+@mixin product-msg {
+  @include pdp-copy;
+}
+@mixin product-inner-msg {}
+@mixin table-attention {
+  font-weight: 700;
+}
+
+
+
+@mixin product-no-inventory {
+  margin-top: 3rem;
+  padding: 3rem 3rem 3rem 0;
+  // text-align: left;
+  border-top: .1rem solid $color-border;
+  // h2 {
+  //   font-weight: 300;
+  // }
+  p {
+    font-weight: 300;
+  }
+}
+
+
+// margin-top: 3rem;
+// padding: 3rem 3rem 3rem 0rem;
+// text-align: left;
+// border-top: 0.1rem solid #ddd;
+// font-weight: 300;
+
+// buttons
+$font-weight-button: 600;
+
+// footer
+$copyright-font-weight: 300;
+
+// typography
+$letter-spacing: .02em;
+$letter-spacing-button: .18rem;
+
+@mixin menu-open-item {
+  font-weight: 500;
+}
+// @mixin menu-inactive {
+//   @include opacity(0.7);
+// }
+
+@mixin h2-h6-margins {
+  margin: 3rem 0 1rem 0;
+}
+@mixin h1 {
+  margin: 0 0 2rem 0;
+  font-family: $font-family-serif;
+  font-size: $font-size-h1;
+  font-weight: 400;
+  line-height: 1.1;
+}
+@mixin h2 {
+  font-family: $font-family-base;
+  font-size: $font-size-h2;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+@mixin h3 {
+  font-family: $font-family-base;
+  font-size: $font-size-h3;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+@mixin h4 {
+  font-family: $font-family-base;
+  font-size: $font-size-h4;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+@mixin h5-h6 {
+  font-family: $font-family-base;
+  font-size: $font-size-h5-h6;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+$height-header: 9rem;
+// $height-header-mobile: 10rem;
+// $height-header-inner-mobile: 5.4rem;
+// $height-menu-mobile: 5.6rem;
+// these two should equal 9rem
+$height-header-inner: 5.8rem;
+$height-menu: 3.2rem;
+
+
+
+// header promo
+@mixin promo-label-styles {
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+@mixin promo-toggle-icon {
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  #header-promo-wrap.promo-open & {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+
+// // header
+// $header-inner-padding: 4rem 1.5rem 3.0rem 1.5rem;
+// $header-inner-padding-sticky: 1rem 1.5rem 1rem 1.5rem;
+// $header-height: 15.1rem;
+// $header-height-sticky: 11rem;
+// $header-height-mobile: 12rem;
+// $header-height-mobile-sticky: 5.2rem;
+
+// // these two should equal 8rem
+// $height-header-inner: 4.8rem;
+// $height-menu: 3.2rem;
+
+@mixin menu-bag-placement {
+  right: 1.5rem;
+  bottom: .8rem;    
+}
+@mixin bag-number {
+  top: .5rem;
+}
+
+
+@mixin logo {
+  top: 1.7rem;
+  width: 9.2rem;
+  height: 3rem;
+  svg {
+    width: 9.2rem;
+    height: 3rem;
+  }
+}
+@mixin logo-medium {
+  top: .9rem;
+  width: 8rem;
+  height: 2.6rem;
+  svg {
+    width: 8rem;
+    height: 2.6rem;
+  }
+}
+@mixin logo-mobile {}
+
+// utility menu
+$font-size-menu-utility: 1.2rem;
+$font-weight-menu-utility: 300;
+$menu-bag-font-weight: 600;
+
+
+@mixin menu-utility {
+  > li {
+    @include l2;
+  }
+}
+
+@mixin menu-utility-font {
+  letter-spacing: 0.04em;
+  @media screen and (min-width: 992px) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+$menu-bag-font-size: 1.2rem;
+
+@mixin menu-utility-bag-number {
+  top: 1.1rem;
+  width: 30.5px;
+}
+@mixin menu-utility-bag-wrap {
+  width: 3rem;
+  height: 3.1rem;
+  margin-top: -1.2rem;
+  @media screen and (max-width: $break-sm-max) {
+    margin: -1rem auto 0 auto;
+  }
+  .icon-bag {
+    width: 3rem;
+    height: 3.1rem;
+    fill: $color-black;
+  }
+  &:hover {
+    .icon-bag {
+      fill: $color-black;
+    }
+  }
+}
+
+// search
+$color-search-wrap-bg: #fcf8f4;
+$color-search-close: $color-black;
+$color-search-close-hover: $color-black;
+
+@mixin search-wrap {
+  padding: .8rem 0;
+}
+
+@mixin search-form-control {
+  color: $color-black;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  &::-webkit-input-placeholder { // WebKit, Blink, Edge
+    color: $color-black;
+  }
+  &:-moz-placeholder { // Mozilla Firefox 4 to 18
+    color: $color-black;
+  }
+  &::-moz-placeholder { // Mozilla Firefox 19+
+    color: $color-black;
+  }
+  &:-ms-input-placeholder { // Internet Explorer 10-11
+    color: $color-black;
+  }
+}
+@mixin search-msg {
+  color: $color-black;
+}
+@mixin search-btn {
+  // letter-spacing: $letter-spacing;
+  // &:hover {
+  //   background-color: rgba(255,255,255,0.9);
+  // }
+}
+@mixin search-placeholder {
+  top: -.3rem;
+  font-weight: normal;
+  font-family: $font-family-base;
+}
+
+// mobile menu
+@mixin ship-to-mobile {
+  padding: 1.6rem 1.5rem;
+  font-size: 1.4rem;
+  // letter-spacing: 0.12em;
+}
+@mixin menu-header-mobile {
+  h3 {
+    // margin: 0 0 1rem 0;
+    // font-family: $font-family-serif;
+    // font-size: 1.4rem;
+    // line-height: 1.8rem;
+    // font-weight: 300;
+    // letter-spacing: 0.04em;
+  }
+  p {
+    // font-size: 2.0rem;
+    // line-height: 2.2rem;
+    // font-weight: 600;
+    // letter-spacing: 0.04em;
+    @include l2;
+  }
+  .customer-links {
+    a {
+      font-weight: 500;
+      letter-spacing: $letter-spacing;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// menu
+
+// $mobile-menu-h2-font-size: 1.7rem;
+@mixin menu-ul {
+  @media screen and (max-width: 991px) {
+    padding: 1.5rem 0 0 2rem;  
+  }
+}
+@mixin menu-li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  @media screen and (max-width: 991px) {
+    margin-bottom: 2rem;
+  }
+}
+@mixin menu-li-a {
+  padding: 0 2.5rem;
+  text-transform: uppercase;
+  @media screen and (max-width: $break-sm-max) {
+    padding: .8rem 1.5rem;
+  }
+  @media (max-width: 1100px) {
+    padding: 0 1.5rem;
+  }
+}
+@mixin menu-li-h2 {
+  line-height: 3.2rem;
+  letter-spacing: 0.05em;
+  @include l1;
+}
+$menu-sticky-line-height: 4rem;
+@mixin menu-sale {
+  color: #f00;
+  &:hover {
+    color: #f00;
+  }
+}
+
+$mobile-menu-h2-font-size: 1.7rem;
+$menu-sticky-line-height: 3rem;
+$menu-height: 3.2rem;
+
+@mixin dropdown-li-link {
+  color: $color-black;
+  letter-spacing: 0.04em;
+  @media screen and (max-width: $break-sm-max) {
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    color: $color-dovegray;
+    font-weight: 500;
+  }
+}
+
+
+@mixin dropdown-li-heading {
+  margin-bottom: 1.6rem;
+  // font-family: $font-family-base;
+  // font-size: 1.3rem;
+  // font-weight: 500;
+  // text-transform: uppercase;
+  @include cat-head;
+  // letter-spacing: 0.05em;
+  color: $color-black;
+  @media screen and (max-width: $break-sm-max) {
+    color: $color-black;
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
+  }
+}
+
+@mixin menu-dropdown {
+  padding: 3rem 0 2rem 0;
+  background: rgba(255,255,255,0.95);
+  @include box-shadow(0,1px,3px,0,rgba(0,0,0,0.1));
+  @media screen and (max-width: $break-sm-max) {
+    background-color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+  @media screen and (min-width: 992px) {
+    .dropdown-inner {
+      > div {
+        overflow: hidden;
+      }
+      > div > div {
+        border-right: 1px solid #e5e2e0;
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+}
+@mixin menu-triangles {
+  > h2 > a {
+    z-index: 9999; // arbitrary
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 0; 
+      height: 0; 
+    }
+    &:before {
+      bottom: -.6rem;
+      border-top: .6rem solid $color-border-menu;
+      border-right: 1.2rem solid transparent; 
+      border-left: 1.2rem solid transparent;
+      left: calc(50% - 1.2rem);
+    }
+    &:after {
+      bottom: -5px;
+      left: calc(50% - 1rem);
+      border-top: .5rem solid white;
+      border-right: 1rem solid transparent; 
+      border-left: 1rem solid transparent;
+    }
+  }
+  &:first-child {
+    > h2 > a:after {
+      @media screen and (min-width: $break-md-min) {
+        left: calc(50% - 1rem - 2rem); // Compensate for first list item not having a left margin
+      }
+      @media screen and (min-width: $break-lg-min) {
+        left: calc(50% - 1rem - 2.75rem);
+      }      
+    }
+  }
+  &:first-child {
+    > h2 > a:before {
+      @media screen and (min-width: $break-md-min) {
+        left: calc(50% - 1.2rem - 2rem); // Compensate for first list item not having a left margin
+      }
+      @media screen and (min-width: $break-lg-min) {
+        left: calc(50% - 1.2rem - 2.75rem);
+      }
+    }
+  }
+}
+
+
+
+@mixin module-heading {
+  h1 {
+    font-family: $font-family-serif;
+    font-size: 6.2rem;
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      margin: 1rem;
+      font-size: 4rem;
+    }
+  }
+  p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+  }
+}
+
+@mixin product-outfit {
+  letter-spacing: $letter-spacing;
+  .product-size-tools {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+}
+$color-outfit-price: #cc3354;
+@mixin product-img-wrap {
+  .btn {
+    letter-spacing: $letter-spacing;
+    font-weight: 300;
+  }
+}
+
+// special collections page
+@mixin c-sp-social {
+  bottom: 1.5rem;
+  [class*='icon-'] {
+    fill: #999;
+  }
+  @media screen and (max-width: 767px) {
+    left: 1.5rem;
+    right: auto;
+    top: 1.5rem;
+    bottom: auto;
+  }
+}
+@mixin c-sp-header {
+  letter-spacing: $letter-spacing;
+  h1 {
+    display: inline;
+    margin: 0 1.2rem 0 0;
+    font-family: $font-family-serif;
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: $letter-spacing;
+    // text-transform: uppercase;
+    // letter-spacing: 0.05em;
+    // letter-spacing: $letter-spacing;
+    vertical-align: middle;
+    @media screen and (max-width: 991px) {
+      display: block;
+      font-size: 3.5rem;
+      margin: 0;
+    }
+  }
+}
+@mixin c-sp-footer {}
+@mixin c-sp-wrap {
+  margin-bottom: 1rem;
+  .module-sh-copy {
+    left: 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-family: $font-family-serif;
+    h2 {
+      font-weight: 400;
+      letter-spacing: $letter-spacing;
+      @media screen and (min-width: 991px) {
+        font-size: 7.5rem;
+        line-height: 7rem;
+      }
+    }
+    p {
+      font-size: 2.4rem;
+      font-style: italic;
+      line-height: 3rem;
+      letter-spacing: $letter-spacing;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 1.5rem 0;
+      p {
+        font-size: 1.7rem;
+        line-height: 1.4;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .module-sh-copy {
+      width: 33.3333%;
+      text-align: left;
+    }
+    .module-sh-center {
+      .module-sh-copy {
+        left: 33.3333%;
+      }
+    }
+    .module-sh-right {
+      .module-sh-copy {
+        left: 66.6666%;
+      }
+    }
+  }
+}
+
+@mixin c-sp-click {
+  position: fixed;
+  z-index: 10;
+  top: 8.5rem;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing;
+  color: #fff;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+  @include transition(opacity);
+  @media screen and (max-width: 991px) {
+    top: 4.4rem;
+    padding: 0.3rem;
+    width: 250px;
+    margin-left: -125px;
+  }
+}
+
+@mixin footer-promo {
+  // display: block;
+  background: url(../imgs/soma/footer-ribbon.png) no-repeat 50% 100%;
+  background-size: 800px 38px;
+  @include box-shadow-none;
+  a {
+    color: #fff;
+  }
+  .footer-promo-heading {
+    font-size: 2.4rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-family: $font-family-serif;
+    display: inline-block;
+    margin-right: 1rem;
+    text-decoration: none;
+  }
+  .footer-promo-link {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+  @media screen and (max-width: $break-sm-max) {
+    display: none;
+  }
+}
+@mixin footer-chat {
+  // font-family: $font-family-serif;
+  // text-transform: none;
+  // font-weight: 400;
+  // font-size: 1.6rem;
+  // letter-spacing: 0.04em;
+  @include cat-head;
+  background: #fff;
+  @include box-shadow(1px,0,3px,0,rgba(0,0,0,0.2));
+  .icon-chat {
+    // height: 2.1rem;
+  }
+}
+
+@mixin editorial-promo {
+  h4 {
+    margin: 1.5rem 0 .3rem 0;
+    // font-family: $font-family-base;
+    // font-size: 1.7rem;
+    // font-weight: 500;
+    // letter-spacing: 0.05em;
+    // color: $color-black;
+    @include cat-head;
+  }
+  a {
+    @include l2;
+    // font-size: 1.2rem;
+    // font-weight: 300;
+    // letter-spacing: 0.04em;
+    // text-decoration: underline;
+    // text-transform: uppercase;
+    // color: #ce9f91 !important;
+    color: $color-black;
+    text-decoration: none;
+  }
+}
+
+
+// header promo
+// $color-header-promo: $color-brand-light;
+$color-header-promo: #fff;
+@mixin header-promo-icons {
+  width: 30px;
+  height: 30px;
+}
+
+
+// footer 
+@mixin footer-headings {
+  margin-bottom: 1.6rem;
+  // font-family: $font-family-base;
+  // font-size: 1.3rem;
+  // font-weight: 400;
+  // letter-spacing: 0.05em;
+  // text-transform: uppercase;
+  color: $color-black;
+  @include cat-head;
+}
+@mixin footer-lists {
+  margin-bottom: 1.2rem;
+  // font-size: 1.3rem;
+  // font-weight: 300;
+  // letter-spacing: 0.04rem;
+  @include l2;
+  a {
+    color: $color-black;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+@mixin footer-newsletter {
+  label {
+    // font-size: 1.3rem;
+    // color: $color-black;
+  }
+  // .form-control {
+  //   // font-size: 1.3rem;
+  //   // letter-spacing: 0.06em;
+  //   // text-transform: uppercase;
+  //   // border-color: $color-black;
+  // }
+  .input-group {
+    margin-bottom: 4rem;
+  }
+  @media screen and (max-width: 991px) {
+    text-align: center;
+    // background: $color-search-wrap-bg;
+  }
+}
+@mixin social {
+  a {
+    margin-right: 2rem;
+    // after an icon was removed, we had space to have the same margin on all devices. revisit if new icons are added.
+    // @media screen and (min-width: 1200px) {
+      // margin-right: 2rem;
+    // }
+  }
+}
+@mixin social-pdp {
+  margin-left: -1rem; // this aligns the Facebook "F" with the left margin of the parent container
+  a {
+    svg {
+      fill: $color-black;
+    }
+    // &.social-google-plus:hover svg {fill: $color-google-plus;}
+    &.social-pinterest:hover svg {fill: $color-pinterest;}
+    &.social-facebook:hover svg {fill: $color-fb;}
+    &.social-twitter:hover svg {fill: $color-twitter;}
+    &.social-email:hover svg {fill: $color-email;}
+  }
+}
+
+@mixin menu-utility-mobile {
+  background: $color-search-wrap-bg;
+  > ul > li > a {
+    font-size: 1.3rem;
+    letter-spacing: 0.04em;
+  }
+}
+
+@mixin customer-links {
+  margin: 2rem 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: $letter-spacing;
+}
+@mixin mobile-menu-heading {
+  padding: 1.8rem 1.5rem 1.4rem 1.5rem;
+  font-size: 1.7rem;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin menu-li {
+  margin-bottom: 0.7rem;
+  a {
+    @include l2;
+  }
+  @media screen and (max-width: 991px) {
+    a {
+      padding: 0.2rem 0;
+      font-size: 1.4rem;
+      color: $color-black;
+    }
+  }
+}
+
+@mixin copyright {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  // letter-spacing: 0.04em;
+  color: #757575;
+  a {
+    color: #737373 !important;
+  }
+}
+@mixin ship-to {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+@mixin mobile-contact {
+  div {
+    // font-size: 1.7rem;
+    // font-weight: 400;
+    // text-transform: none;
+    @include cat-head;  
+  }
+}
+
+@mixin footer {
+  @media screen and (max-width: 991px) {
+    border-top: 1px solid $color-black;
+  }
+}
+
+@mixin footer-menu-block-mobile {
+  h4 {
+    font-size: 1.7rem;
+  }
+}
+
+@mixin dropdown-signin {
+  h3 {
+    // margin: 1rem 0 0 0;
+    // font-family: $font-family-serif;
+    // font-size: 1.2rem;
+    // font-weight: 400;
+    // letter-spacing: 0.04em;
+    // text-transform: none;
+  }
+  p {
+    // font-size: 1.6rem;
+    // font-weight: 600;
+  }
+  ul {
+    margin-top: 2rem;
+    li {
+      margin-bottom: 2rem;
+      // font-size: 1.3rem;
+      // letter-spacing: 0.1em;
+      @include l2;
+    }
+    a {
+      // font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@mixin persistent-cart {
+  .dropdown-inner {
+    h3 {
+      font-family: $font-family-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+
+// filters 
+@mixin breadcrumb {
+  // font-size: 1.3rem;
+  // text-transform: uppercase;
+  // letter-spacing: 0.04em;
+  @include l2;
+}
+@mixin back-link {
+  a {
+    @include l2;
+    // letter-spacing: 0.04em;
+    // font-size: 13px
+  }
+}
+@mixin label {
+  @include l2;
+  // text-transform: uppercase; // universal for all other labels unless I hear otherwise
+}
+@mixin selector-label {
+  @include l2;
+}
+@mixin selector-toggle {
+  @media screen and (min-width: 992px) {
+    padding: 0.7rem 0px;
+  }
+  &:hover {
+    .selector.box {
+      background-color: #eee;
+      @include box-shadow(0,0,0,1px,rgb(255,255,255), inset);
+    }
+  }
+  &.selected {
+    .selector.box {
+      border-width: .2rem;
+      background-color: #e1bcaa;
+    }
+    .selector.swatch {
+      border-width: .2rem;
+    }
+    .selector-label {
+      font-weight: 700;
+    }
+    &:hover {
+      .selector.swatch {
+        border-width: .2rem;
+      }
+    }
+  }
+}
+
+// soma had initially opted for a double arrow, but decided to go back to the single arrow used by the other brands 
+// @mixin select-caret {
+//   width: .8rem;
+//   height: 1.4rem;
+//   margin-top: -0.7rem;
+//   background: url(../svg/arrows-double.svg) 50% 50% no-repeat;
+//   background-size: .7rem 1.4rem;
+// }
+// @mixin select-caret-up {} // remove if the double arrow goes global
+
+@mixin filter-tag {
+  // font-size: 1.3rem;
+  // letter-spacing: 0.1em;
+  // text-transform: capitalize;
+  @include l2;
+  color: #595959;
+  // background-color: rgba(245, 231, 218, 0.3);
+  background-color: $color-dropdown-li-selected;
+}
+@mixin filters-default {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-black;
+}
+@mixin filters-default-overrides {
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+}
+@mixin filter-refine-sort {
+  border-bottom: 1px solid $color-border;
+  @media screen and (max-width: 991px) {
+    border: 0;
+  }
+}
+@mixin filter-tools-mobile-head {} // override h3 text style
+@mixin filter-dropdown {
+  .dropdown-menu {
+    > li {
+      > a {
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-transform: none;
+        color: #595959;
+      }
+    }
+    > li.dropdown-header {
+      padding: 2rem 1rem 0.7rem 1rem;
+      font-weight: 700;
+      text-transform: none;
+    }
+  }
+}
+@mixin filter-dropdown-menu {
+  border: 2px solid #fff;
+  > li.dropdown-header {
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: $color-black;
+    text-transform: uppercase;
+  }
+  li {
+    text-transform: none;
+  }
+  > li > a {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: #595959;
+  }
+}
+@mixin filter-icon-opacity-mobile {
+  @include opacity(1);
+}
+
+// used on collection pages
+@mixin c-product-name {
+  margin: 1.2rem 0 0 0;
+  font-size: 1.3rem;
+  font-weight: normal;
+  line-height: 2rem;
+  letter-spacing: 0.03em;
+  // text-transform: none;
+}
+@mixin c-product-price {
+  margin-bottom: .3rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+@mixin c-product-msg {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  letter-spacing: 0.04em;
+  color: #595959;
+  &.product-msg-special {
+    font-weight: 500;
+    font-style: italic;
+    color: $color-black;
+    // span {
+    //   font-weight: 700;
+    //   // color: #dfbbab;
+    // }
+  }
+}
+
+@mixin btn-wrapped {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  // font-size: 1.5rem;
+  // font-weight: 400;
+  // letter-spacing: 0.03em;
+  letter-spacing: 0;
+  @include pdp-cta;
+  @media screen and (min-width: 768px) {
+    &:first-child {
+      padding-right: 2.8rem;
+    }
+    &:last-child {
+      padding-left: 2.8rem;
+    }
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin product-description {
+  max-width: 34rem;
+  margin-bottom: 2rem;
+  @include clearfix;
+  p, ul {
+    margin-bottom: 1rem;
+    @include pdp-copy;
+  }
+}
+@mixin product-description-more {
+  @include pdp-copy;
+}
+@mixin heading-styled {
+  // font-family: $font-family-serif;
+  // font-size: 1.9rem;
+  // letter-spacing: 0.04em;
+  font-weight: 500; // matching h3 default
+}
+@mixin facet-label {
+  @include l2;
+}
+
+@mixin swatch {
+  .swatch {
+    &.selected,
+    &:hover {
+      border-width: 2px;
+      img {
+        border-width: 2px;
+        width: 2.6rem;
+        height: 2.6rem;
+      }
+    }
+  }
+}
+
+@mixin quick-view {
+  .quick-view-touch {
+    // border-color: $color-border;
+    background: rgba(0,0,0,0.6);
+  }
+}
+
+@mixin quick-view-icon {
+  .icon-plus {
+    fill: #fff;
+  }
+}
+
+@mixin well {
+  padding: 1.2rem 1.5rem;
+  // letter-spacing: 0.01em;
+  background: $color-brand-light;
+  border-color: transparent;
+}
+
+@mixin heading-serif {
+  letter-spacing: 0.02em;
+}
+@mixin info-link {
+  font-size: 1rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: $color-black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin nav-tabs {
+  border-bottom: 1px solid $color-black;
+  > li {
+    position: relative;
+    > a {
+      margin-right: 0;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      color: #595959;
+      border: 1px solid #b3b3b3;
+      border-bottom: 0;
+      &:hover {
+        background-color: #f5e9da;
+        border: 1px solid #b3b3b3;
+        border-bottom: 0;
+      }
+    }
+    &.active {
+      z-index: 10;
+      > a,
+      > a:hover,
+      > a:focus {
+        color: $color-black;
+        background-color: #fff;
+        border: 1px solid $color-black;
+        border-bottom-color: transparent;
+        // z-index: 1;
+      }
+    }
+    & + li {
+      margin-left: -2px;
+    }
+  }
+}
+
+@mixin curated-link {
+  a {
+    display: inline-block;
+    padding-top: 1rem;
+    vertical-align: bottom;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;      
+    }
+    @media screen and (max-width: 767px) {
+      padding-top: 0;
+    }
+  }
+}
+
+@mixin account-detail {
+  h4 {
+    margin: -2rem -2rem 1rem -2rem;
+    padding: 1rem 2rem;
+  }
+  &.default {
+    border-color: $color-black;
+    @include box-shadow(0,0,0,.5rem, rgba(0,0,0,1), inset);
+    h4 {
+      color: #fff;
+      background-color: $color-black;
+    }
+  }
+  dt, a {
+    text-transform: uppercase;
+  }
+}
+
+@mixin header-promo-heading {
+  font-family: $font-family-base;
+}
+@mixin cta-wrap {} // no border on soma
+
+@mixin nav-tabs {
+  > li > a {
+    @include l2;
+  }
+}
+
+@mixin nav-secondary {
+  h4 {
+    @include cat-head;
+  }
+  ul {
+    li {
+      @include l2;
+    }
+  }
+}
+
+@mixin store-city {
+  text-transform: uppercase;
+}
+@mixin store-location {
+  text-transform: uppercase;
+}
+@mixin frameless-copyright {
+  text-transform: uppercase;
+}
+@mixin product-count {}
+@mixin copyright-mobile {}
+@mixin product-details {
+  text-transform: uppercase;
+  dt,
+  label {
+    font-weight: 500;
+    // color: $color-gray;
+  }
+}
+@mixin edit-remove {
+  font-weight: 400;
+}
+@mixin detail-heading {
+  font-weight: 500;
+  // background-color: $color-border;
+  // .detail-sidebar & {
+  //   background: none;
+  // }
+}
+@mixin detail-sidebar {
+  a {
+    text-transform: uppercase;
+  }
+}
+@mixin detail-highlight {}
+@mixin sidebar-item {
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+@mixin sidebar-item {
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@mixin grid-trigger {
+  // letter-spacing: 0.12em;
+}

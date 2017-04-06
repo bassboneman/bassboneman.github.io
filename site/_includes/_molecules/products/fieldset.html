@@ -1,0 +1,24 @@
+<fieldset class="product-fieldset">
+  {% if page.title == "Product Page (Donations)" %}
+    {% include _molecules/products/options-donations.html %}
+  {% elsif page.title == "Product Page (Gift Card)" %}
+    {% include _molecules/products/options-gift-card.html %}
+  {% elsif page.title == "Product Page (e-Gift Card)"%}
+    {% include _molecules/products/options-e-gift-card.html %}
+  {% elsif page.title == "Locate in Store (PDP)" %}
+    {% include _molecules/products/price.html %}
+    {% include _molecules/components/product-swatches.html %}
+  {% else %}
+    {% include _atoms/text/product-remove.html %}
+    {% include _molecules/products/price.html %}
+    {% if include.productMessage != 'no' %}
+      {% include _atoms/text/product-message.html %}  
+    {% endif %}
+    {% include _molecules/components/product-swatches.html %}
+    {% if page.title == "Product Page (Single Size)" %}
+      {% include _molecules/products/options-single-size.html %}
+    {% else %}
+      {% include _molecules/products/options-all.html %}
+    {% endif %}
+  {% endif %}
+</fieldset>
