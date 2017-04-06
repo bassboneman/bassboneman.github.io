@@ -8,3 +8,4 @@ highlighter:      rouge
 baseurl:          
 
 exclude: [node_modules]
+theme: jekyll-theme-leap-day
